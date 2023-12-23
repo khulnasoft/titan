@@ -1,3 +1,3 @@
 module.exports = {
-    extends: ["@titan/eslint-config/library"],
-  };
+  extends: ["@titan/eslint-config/library"],
+};

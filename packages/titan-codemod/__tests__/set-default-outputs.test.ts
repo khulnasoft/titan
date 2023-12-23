@@ -20,7 +20,7 @@ describe("set-default-outputs", () => {
     });
 
     expect(JSON.parse(read("titan.json") || "{}")).toStrictEqual({
-      $schema: "https://titan.build/schema.json",
+      $schema: "https://turbo.build/schema.json",
       pipeline: {
         "build-one": {
           outputs: ["foo"],
@@ -57,7 +57,7 @@ describe("set-default-outputs", () => {
     });
 
     expect(readJson("titan.json") || "{}").toStrictEqual({
-      $schema: "https://titan.build/schema.json",
+      $schema: "https://turbo.build/schema.json",
       pipeline: {
         "build-one": {
           outputs: ["foo"],
@@ -70,7 +70,7 @@ describe("set-default-outputs", () => {
     });
 
     expect(readJson("apps/docs/titan.json") || "{}").toStrictEqual({
-      $schema: "https://titan.build/schema.json",
+      $schema: "https://turbo.build/schema.json",
       extends: ["//"],
       pipeline: {
         build: {
@@ -80,7 +80,7 @@ describe("set-default-outputs", () => {
     });
 
     expect(readJson("apps/web/titan.json") || "{}").toStrictEqual({
-      $schema: "https://titan.build/schema.json",
+      $schema: "https://turbo.build/schema.json",
       extends: ["//"],
       pipeline: {
         build: {},
@@ -88,7 +88,7 @@ describe("set-default-outputs", () => {
     });
 
     expect(readJson("packages/ui/titan.json") || "{}").toStrictEqual({
-      $schema: "https://titan.build/schema.json",
+      $schema: "https://turbo.build/schema.json",
       extends: ["//"],
       pipeline: {
         "build-three": {
@@ -166,7 +166,7 @@ describe("set-default-outputs", () => {
     });
 
     expect(JSON.parse(read("titan.json") || "{}")).toStrictEqual({
-      $schema: "https://titan.build/schema.json",
+      $schema: "https://turbo.build/schema.json",
       pipeline: {
         "build-one": {
           outputs: ["foo"],
@@ -232,7 +232,7 @@ describe("set-default-outputs", () => {
     });
 
     expect(JSON.parse(read("titan.json") || "{}")).toStrictEqual({
-      $schema: "https://titan.build/schema.json",
+      $schema: "https://turbo.build/schema.json",
       pipeline: {
         "build-one": {
           outputs: ["foo"],
@@ -293,7 +293,7 @@ describe("set-default-outputs", () => {
     });
 
     expect(JSON.parse(read("titan.json") || "{}")).toStrictEqual({
-      $schema: "https://titan.build/schema.json",
+      $schema: "https://turbo.build/schema.json",
       globalDependencies: ["$NEXT_PUBLIC_API_KEY", "$STRIPE_API_KEY", ".env"],
       pipeline: {},
     });
@@ -323,7 +323,7 @@ describe("set-default-outputs", () => {
     });
 
     expect(JSON.parse(read("titan.json") || "{}")).toStrictEqual({
-      $schema: "https://titan.build/schema.json",
+      $schema: "https://turbo.build/schema.json",
       pipeline: {
         "build-one": {
           dependsOn: ["build-two"],

@@ -387,7 +387,7 @@ func Test_LoadTitanConfig_Legacy(t *testing.T) {
 	}
 
 	_, titanJSONReadErr := LoadTitanConfig(testDir, rootPackageJSON, false)
-	expectedErrorMsg := "Could not find titan.json. Follow directions at https://titan.build/repo/docs to create one: file does not exist"
+	expectedErrorMsg := "Could not find titan.json. Follow directions at https://turbo.build/repo/docs to create one: file does not exist"
 	assert.EqualErrorf(t, titanJSONReadErr, expectedErrorMsg, "Error should be: %v, got: %v", expectedErrorMsg, titanJSONReadErr)
 }
 

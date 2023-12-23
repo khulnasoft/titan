@@ -20,7 +20,7 @@ describe.only("transform-env-literals-to-wildcards", () => {
     });
 
     expect(JSON.parse(read("titan.json") || "{}")).toStrictEqual({
-      $schema: "https://titan.build/schema.json",
+      $schema: "https://turbo.build/schema.json",
       globalEnv: [],
       globalPassThroughEnv: [],
       pipeline: {
@@ -56,7 +56,7 @@ describe.only("transform-env-literals-to-wildcards", () => {
     });
 
     expect(JSON.parse(read("titan.json") || "{}")).toStrictEqual({
-      $schema: "https://titan.build/schema.json",
+      $schema: "https://turbo.build/schema.json",
       pipeline: {
         build: {},
       },
@@ -87,7 +87,7 @@ describe.only("transform-env-literals-to-wildcards", () => {
     });
 
     expect(JSON.parse(read("titan.json") || "{}")).toStrictEqual({
-      $schema: "https://titan.build/schema.json",
+      $schema: "https://turbo.build/schema.json",
       globalEnv: ["NO!", "\\!!!", "\\!!!"],
       globalPassThroughEnv: ["DOES", "\\*\\*BOLD\\*\\*", "WORK"],
       pipeline: {
@@ -123,7 +123,7 @@ describe.only("transform-env-literals-to-wildcards", () => {
     });
 
     expect(JSON.parse(read("titan.json") || "{}")).toStrictEqual({
-      $schema: "https://titan.build/schema.json",
+      $schema: "https://turbo.build/schema.json",
       globalEnv: ["\\!\\*!\\*"],
       globalPassThroughEnv: ["\\!\\*!\\*"],
       pipeline: {

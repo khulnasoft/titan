@@ -1,5 +1,5 @@
 <!--
-    IMPORTANT: This document is linked to from https://titan.build
+    IMPORTANT: This document is linked to from https://turbo.build
     DO NOT rename this file without updating the link in docs/pages/pack/docs/benchmarks.mdx
 -->
 
@@ -15,7 +15,7 @@ TITANPACK_BENCH_COUNTS=5000 cargo bench -p titanpack-bench
 
 ## Benchmarking Titanpack against other bundlers
 
-The benchmark numbers we share on [the Titanpack website](https://titan.build/pack) are informed by running Titanpack's benchmark suite against Titanpack and other bundlers. These are run in a controlled environment prior to being published. We use the `bench_startup` and `bench_hmr_to_eval` benchmarks currently (see below).
+The benchmark numbers we share on [the Titanpack website](https://turbo.build/pack) are informed by running Titanpack's benchmark suite against Titanpack and other bundlers. These are run in a controlled environment prior to being published. We use the `bench_startup` and `bench_hmr_to_eval` benchmarks currently (see below).
 
 To run Titanpack benchmarks against other bundlers, run:
 

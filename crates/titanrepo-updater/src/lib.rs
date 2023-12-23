@@ -67,7 +67,7 @@ impl Registry for NPMRegistry {
         let split_name: Vec<&str> = full_name.split('/').collect();
         let name = split_name[1];
         let url = format!(
-            "https://titan.build/api/binaries/version?name={name}&tag={tag}",
+            "https://turbo.build/api/binaries/version?name={name}&tag={tag}",
             name = name,
             tag = tag
         );

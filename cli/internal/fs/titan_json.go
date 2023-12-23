@@ -227,7 +227,7 @@ func LoadTitanConfig(dir titanpath.AbsoluteSystemPath, rootPackageJSON *PackageJ
 	if !includeSynthesizedFromRootPackageJSON && err != nil {
 		// If the file didn't exist, throw a custom error here instead of propagating
 		if errors.Is(err, os.ErrNotExist) {
-			return nil, errors.Wrap(err, fmt.Sprintf("Could not find %s. Follow directions at https://titan.build/repo/docs to create one", configFile))
+			return nil, errors.Wrap(err, fmt.Sprintf("Could not find %s. Follow directions at https://turbo.build/repo/docs to create one", configFile))
 
 		}
 

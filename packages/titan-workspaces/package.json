@@ -2,7 +2,7 @@
   "name": "@titan/workspaces",
   "version": "1.11.3-canary.1",
   "description": "Tools for working with package managers",
-  "homepage": "https://titan.build/repo",
+  "homepage": "https://turbo.build/repo",
   "license": "MPL-2.0",
   "repository": {
     "type": "git",

@@ -100,4 +100,4 @@ When deploying on [Vercel](https://vercel.com), `titan-ignore` can make a more a
 
 ---
 
-For more information about Titanrepo, visit [titan.build](https://titan.build) and follow us on X ([@titanrepo](https://x.com/titanrepo))!
+For more information about Titanrepo, visit [turbo.build](https://turbo.build) and follow us on X ([@titanrepo](https://x.com/titanrepo))!

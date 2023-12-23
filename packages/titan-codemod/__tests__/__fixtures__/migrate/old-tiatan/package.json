@@ -6,7 +6,7 @@
     "titan": "1.0.0"
   },
   "titan": {
-    "$schema": "https://titan.build/schema.json",
+    "$schema": "https://turbo.build/schema.json",
     "pipeline": {
       "build": {
         "outputs": [

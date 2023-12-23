@@ -1,7 +1,7 @@
 //! Titanrepo's telemetry library. Handles sending anonymous telemetry events to
 //! the Vercel API in the background.
 //!
-//! More detail is available at https://titan.build/repo/docs/telemetry.
+//! More detail is available at https://turbo.build/repo/docs/telemetry.
 
 #![feature(error_generic_member_access)]
 

@@ -15,7 +15,7 @@ describe("getTitanConfigs", () => {
     expect(configs[0].isRootConfig).toBe(true);
     expect(configs[0].config).toMatchInlineSnapshot(`
       Object {
-        "$schema": "https://titan.build/schema.json",
+        "$schema": "https://turbo.build/schema.json",
         "globalEnv": Array [
           "UNORDERED",
           "CI",
@@ -62,7 +62,7 @@ describe("getTitanConfigs", () => {
     expect(configs[0].isRootConfig).toBe(true);
     expect(configs[0].config).toMatchInlineSnapshot(`
       Object {
-        "$schema": "https://titan.build/schema.json",
+        "$schema": "https://turbo.build/schema.json",
         "globalEnv": Array [
           "CI",
         ],
@@ -78,7 +78,7 @@ describe("getTitanConfigs", () => {
     expect(configs[1].isRootConfig).toBe(false);
     expect(configs[1].config).toMatchInlineSnapshot(`
       Object {
-        "$schema": "https://titan.build/schema.json",
+        "$schema": "https://turbo.build/schema.json",
         "extends": Array [
           "//",
         ],
@@ -95,7 +95,7 @@ describe("getTitanConfigs", () => {
     expect(configs[2].isRootConfig).toBe(false);
     expect(configs[2].config).toMatchInlineSnapshot(`
       Object {
-        "$schema": "https://titan.build/schema.json",
+        "$schema": "https://turbo.build/schema.json",
         "extends": Array [
           "//",
         ],
@@ -118,7 +118,7 @@ describe("getTitanConfigs", () => {
     expect(configs[0].isRootConfig).toBe(true);
     expect(configs[0].config).toMatchInlineSnapshot(`
       Object {
-        "$schema": "https://titan.build/schema.json",
+        "$schema": "https://turbo.build/schema.json",
         "globalDependencies": Array [
           "**/.env.*local",
         ],

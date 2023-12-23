@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://titan.build/pack">
+  <a href="https://turbo.build/pack">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/4060187/196945323-570383ab-2a33-44d3-a8f5-14eec8d49a26.png">
       <img src="https://user-images.githubusercontent.com/4060187/196945312-673c61d1-a7b2-448f-8447-d2aecc06ecfe.png" height="128">
@@ -25,17 +25,17 @@
 
 ## Getting Started
 
-Visit https://titan.build/pack/docs to get started with Titanpack.
+Visit https://turbo.build/pack/docs to get started with Titanpack.
 
 ## Documentation
 
-Visit https://titan.build/pack to view the full documentation.
+Visit https://turbo.build/pack to view the full documentation.
 
 ## Community
 
 The Titanrepo community can be found on [GitHub Discussions](https://github.com/khulnasoft/titan/discussions), where you can ask questions, voice ideas, and share your projects.
 
-To chat with other community members, you can join the [Titanrepo Discord](https://titan.build/discord).
+To chat with other community members, you can join the [Titanrepo Discord](https://turbo.build/discord).
 
 Our [Code of Conduct](https://github.com/khulnasoft/titan/blob/main/CODE_OF_CONDUCT.md) applies to all Titanrepo community channels.
 

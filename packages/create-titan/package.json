@@ -2,7 +2,7 @@
   "name": "create-titan",
   "version": "1.11.3-canary.1",
   "description": "Create a new Titanrepo",
-  "homepage": "https://titan.build/repo",
+  "homepage": "https://turbo.build/repo",
   "license": "MPL-2.0",
   "repository": {
     "type": "git",
