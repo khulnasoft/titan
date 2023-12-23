@@ -1,0 +1,35 @@
+id: no-context
+message: Don't name variables `context`.
+note: Use a more specific name, such as chunking_context, asset_context, etc.
+severity: error
+language: Rust
+rule:
+  regex: \bcontext\b
+  any:
+    - all:
+        - inside:
+            any:
+              - kind: closure_parameters
+              - kind: parameter
+              - kind: function_item
+              - kind: let_declaration
+        - kind: identifier
+    - all:
+        - kind: field_identifier
+        - inside:
+            kind: field_declaration
+ignores:
+  - "./crates/titanpack-css/**"
+  - "./crates/titanpack-dev-server/**"
+  - "./crates/titanpack-dev/**"
+  - "./crates/titanpack-ecmascript-hmr-protocol/**"
+  - "./crates/titanpack-ecmascript-plugins/**"
+  - "./crates/titanpack-ecmascript-runtime/**"
+  - "./crates/titanpack-json/**"
+  - "./crates/titanpack-mdx/**"
+  - "./crates/titanpack-node/**"
+  - "./crates/titanpack-static/**"
+  - "./crates/titanpack-tests/**"
+  - "./crates/titanpack/**"
+  - "./crates/titanrepo-cache/**"
+  - "./crates/titanrepo-scm/**"

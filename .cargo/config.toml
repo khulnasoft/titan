@@ -1,0 +1,31 @@
+[env]
+CARGO_WORKSPACE_DIR = { value = "", relative = true }
+TITAN_PNPM_WORKSPACE_DIR = { value = "", relative = true }
+
+[build]
+rustflags = ["--cfg", "tokio_unstable"]
+rustdocflags = ["-Znormalize-docs"]
+
+[target.x86_64-pc-windows-msvc]
+linker = "rust-lld"
+
+[alias]
+xtask = "run --package xtask --"
+tr-build = "build -p titan"
+tr-run = "run -p titan"
+tr-test = "groups test titanrepo"
+tr-check = "groups check titanrepo"
+# Builds all test code to check for compiler errors before running
+tp-pre-test = "nextest run --no-run --workspace --release --exclude titan --exclude titanrepo-* --exclude titanpath --exclude wax --exclude globwalk --exclude globwatch --exclude pidlock"
+tp-test = "nextest run --workspace --release --no-fail-fast --exclude titan --exclude titanrepo-* --exclude titanpath --exclude wax --exclude globwalk --exclude globwatch --exclude pidlock"
+tp-bench-test = "test --benches --workspace --release --no-fail-fast --exclude titanpack-bench --exclude titan --exclude titanrepo-* --exclude titanpath --exclude wax --exclude globwalk --exclude globwatch --exclude pidlock"
+tp-check = "check --workspace --exclude titan --exclude titanrepo-* --exclude titanpath --exclude wax --exclude globwalk --exclude globwatch --exclude pidlock"
+tp-clippy = "clippy --workspace --exclude titan --exclude titanrepo-* --exclude titanpath --exclude wax --exclude globwalk --exclude globwatch --exclude pidlock"
+
+[target.'cfg(all())']
+rustflags = [
+  "--cfg",
+  "tokio_unstable",
+  "-Zshare-generics=y",
+  "-Csymbol-mangling-version=v0",
+]
