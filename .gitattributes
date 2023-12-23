@@ -1,0 +1,3 @@
+.config/ast-grep/rule-tests/__snapshots__/** linguist-generated=true
+crates/titanpack-tests/tests/snapshot/**/output/** linguist-generated=true
+crates/titanrepo-lockfiles/fixtures/*.lock text eol=lf
