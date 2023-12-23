@@ -152,7 +152,7 @@ impl TelemetryConfig {
                     ui,
                     UNDERLINE,
                     "{}",
-                    color!(ui, GREY, "{}", "https://turbo.build/repo/docs/telemetry")
+                    color!(ui, GREY, "{}", "https://titan.build/repo/docs/telemetry")
                 ),
             );
 

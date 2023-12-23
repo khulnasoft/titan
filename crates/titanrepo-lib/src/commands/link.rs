@@ -94,7 +94,7 @@ pub(crate) const REMOTE_CACHING_INFO: &str = "  Remote Caching shares your cache
   with other services that enable Remote Caching, like CI/CD systems.
   This results in faster build times and deployments for your team.";
 pub(crate) const REMOTE_CACHING_URL: &str =
-    "https://turbo.build/repo/docs/core-concepts/remote-caching";
+    "https://titan.build/repo/docs/core-concepts/remote-caching";
 pub(crate) const SPACES_URL: &str = "https://vercel.com/docs/workflow-collaboration/vercel-spaces";
 
 /// Verifies that caching status for a team is enabled, or prompts the user to

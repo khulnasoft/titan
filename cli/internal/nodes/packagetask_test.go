@@ -10,15 +10,15 @@ func TestLogFilename(t *testing.T) {
 	testCases := []struct{ input, want string }{
 		{
 			"build",
-			"turbo.build.log",
+			"titan-build.log",
 		},
 		{
 			"build:prod",
-			"turbo.build$colon$prod.log",
+			"titan-build$colon$prod.log",
 		},
 		{
 			"build:prod:extra",
-			"turbo.build$colon$prod$colon$extra.log",
+			"titan-build$colon$prod$colon$extra.log",
 		},
 	}
 

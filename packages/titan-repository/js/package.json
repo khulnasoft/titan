@@ -3,7 +3,7 @@
   "version": "0.0.1-canary.2",
   "description": "",
   "bugs": "https://github.com/khulnasoft/titan/issues",
-  "homepage": "https://turbo.build/repo",
+  "homepage": "https://titan.build/repo",
   "license": "MPL-2.0",
   "main": "dist/index.js",
   "scripts": {

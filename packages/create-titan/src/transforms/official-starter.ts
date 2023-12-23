@@ -33,7 +33,7 @@ export async function transform(args: TransformInput): TransformResult {
   const rootMetaJsonPath = path.join(prompts.root, "meta.json");
   const hasPackageJson = existsSync(rootPackageJsonPath);
 
-  // 1. remove meta file (used for generating the examples page on turbo.build)
+  // 1. remove meta file (used for generating the examples page on titan.build)
   try {
     rmSync(rootMetaJsonPath, { force: true });
   } catch (_err) {

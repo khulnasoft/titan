@@ -392,7 +392,7 @@ describe("migrate-env-var-dependencies", () => {
       });
 
       expect(JSON.parse(read("titan.json") || "{}")).toStrictEqual({
-        $schema: "https://turbo.build/schema.json",
+        $schema: "https://titan.build/schema.json",
         globalDependencies: [".env"],
         globalEnv: ["NEXT_PUBLIC_API_KEY", "STRIPE_API_KEY"],
         pipeline: {
@@ -442,7 +442,7 @@ describe("migrate-env-var-dependencies", () => {
       });
 
       expect(readJson("titan.json") || "{}").toStrictEqual({
-        $schema: "https://turbo.build/schema.json",
+        $schema: "https://titan.build/schema.json",
         globalDependencies: [".env"],
         globalEnv: ["NEXT_PUBLIC_API_KEY", "STRIPE_API_KEY"],
         pipeline: {
@@ -468,7 +468,7 @@ describe("migrate-env-var-dependencies", () => {
       });
 
       expect(readJson("apps/web/titan.json") || "{}").toStrictEqual({
-        $schema: "https://turbo.build/schema.json",
+        $schema: "https://titan.build/schema.json",
         extends: ["//"],
         pipeline: {
           build: {
@@ -481,7 +481,7 @@ describe("migrate-env-var-dependencies", () => {
       });
 
       expect(readJson("packages/ui/titan.json") || "{}").toStrictEqual({
-        $schema: "https://turbo.build/schema.json",
+        $schema: "https://titan.build/schema.json",
         extends: ["//"],
         pipeline: {
           build: {
@@ -526,7 +526,7 @@ describe("migrate-env-var-dependencies", () => {
       });
 
       expect(JSON.parse(read("titan.json") || "{}")).toStrictEqual({
-        $schema: "https://turbo.build/schema.json",
+        $schema: "https://titan.build/schema.json",
         globalDependencies: [".env"],
         globalEnv: ["NEXT_PUBLIC_API_KEY", "STRIPE_API_KEY"],
         pipeline: {
@@ -622,7 +622,7 @@ describe("migrate-env-var-dependencies", () => {
       });
 
       expect(JSON.parse(read("titan.json") || "{}")).toStrictEqual({
-        $schema: "https://turbo.build/schema.json",
+        $schema: "https://titan.build/schema.json",
         globalEnv: ["NEXT_PUBLIC_API_KEY", "STRIPE_API_KEY"],
         globalDependencies: [".env"],
         pipeline: {

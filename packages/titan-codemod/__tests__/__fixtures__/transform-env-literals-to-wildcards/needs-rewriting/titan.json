@@ -1,5 +1,5 @@
 {
-  "$schema": "https://turbo.build/schema.json",
+  "$schema": "https://titan.build/schema.json",
   "globalEnv": ["NO!", "!!!", "!!!"],
   "globalPassThroughEnv": ["DOES", "**BOLD**", "WORK"],
   "pipeline": {

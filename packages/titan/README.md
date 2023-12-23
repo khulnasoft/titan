@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://turbo.build/repo">
+  <a href="https://titan.build/repo">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/4060187/196936123-f6e1db90-784d-4174-b774-92502b718836.png">
       <img src="https://user-images.githubusercontent.com/4060187/196936104-5797972c-ab10-4834-bd61-0d1e5f442c9c.png" height="128">
@@ -25,19 +25,19 @@
 
 ## Getting Started
 
-Visit https://turbo.build/repo/docs to get started with Titanrepo and read the documentation.
+Visit https://titan.build/repo/docs to get started with Titanrepo and read the documentation.
 
 ## Community
 
 The Titanrepo community can be found on [GitHub Discussions](https://github.com/khulnasoft/titan/discussions), where you can ask questions, voice ideas, and share your projects.
 
-To chat with other community members, you can join the [Titanrepo Discord](https://turbo.build/discord)
+To chat with other community members, you can join the [Titanrepo Discord](https://titan.build/discord)
 
 Our [Code of Conduct](https://github.com/khulnasoft/titan/blob/main/CODE_OF_CONDUCT.md) applies to all Titanrepo community channels.
 
 ## Who is using Titan?
 
-Titan is used by the world's leading companies. Check out the [Titan Showcase](https://turbo.build/showcase) to learn more.
+Titan is used by the world's leading companies. Check out the [Titan Showcase](https://titan.build/showcase) to learn more.
 
 ## Updates
 

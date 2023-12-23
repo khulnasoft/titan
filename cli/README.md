@@ -1,3 +1,3 @@
 # `titan` CLI
 
-Visit https://turbo.build/repo to view the full documentation.
+Visit https://titan.build/repo to view the full documentation.

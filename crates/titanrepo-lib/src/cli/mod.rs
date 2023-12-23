@@ -524,7 +524,7 @@ pub struct RunArgs {
     /// Use the given selector to specify package(s) to act as
     /// entry points. The syntax mirrors pnpm's syntax, and
     /// additional documentation and examples can be found in
-    /// titan's documentation https://turbo.build/repo/docs/reference/command-line-reference/run#--filter
+    /// titan's documentation https://titan.build/repo/docs/reference/command-line-reference/run#--filter
     #[clap(short = 'F', long, action = ArgAction::Append)]
     pub filter: Vec<String>,
     /// Ignore the existing cache (to force execution)

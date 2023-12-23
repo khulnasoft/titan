@@ -4,7 +4,7 @@
   "description": "The {{Os}}-{{Arch}} binary for titan, a monorepo build system.",
   "repository": "https://github.com/khulnasoft/titan",
   "bugs": "https://github.com/khulnasoft/titan/issues",
-  "homepage": "https://turbo.build/repo",
+  "homepage": "https://titan.build/repo",
   "license": "MPL-2.0",
   "os": ["{{Os}}"],
   "cpu": ["{{Arch}}"],

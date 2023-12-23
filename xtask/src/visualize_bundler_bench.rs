@@ -313,7 +313,7 @@ fn generate_scaling(output_path: PathBuf, by_bench: &ByBench) -> Result<()> {
                     });
             }
 
-            // This is the font used by the turbo.build website.
+            // This is the font used by the titan.build website.
             let font = r#"ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji""#;
 
             chart

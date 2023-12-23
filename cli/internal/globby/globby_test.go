@@ -240,7 +240,7 @@ func TestGlobFilesFs(t *testing.T) {
 				"/external/file.txt",
 				"/repos/some-app/src/index.js",
 				"/repos/some-app/public/src/css/index.css",
-				"/repos/some-app/.titan/turbo.build.log",
+				"/repos/some-app/.titan/titan-build.log",
 				"/repos/some-app/.titan/somebody-touched-this-file-into-existence.txt",
 				"/repos/some-app/.next/log.txt",
 				"/repos/some-app/.next/cache/db6a76a62043520e7aaadd0bb2104e78.txt",
@@ -253,7 +253,7 @@ func TestGlobFilesFs(t *testing.T) {
 			},
 			args: args{
 				basePath:        "/repos/some-app/",
-				includePatterns: []string{".titan/turbo.build.log", "dist/**", ".next/**", "public/dist/**"},
+				includePatterns: []string{".titan/titan-build.log", "dist/**", ".next/**", "public/dist/**"},
 				excludePatterns: []string{},
 			},
 			wantAll: []string{
@@ -261,7 +261,7 @@ func TestGlobFilesFs(t *testing.T) {
 				"/repos/some-app/.next/cache",
 				"/repos/some-app/.next/cache/db6a76a62043520e7aaadd0bb2104e78.txt",
 				"/repos/some-app/.next/log.txt",
-				"/repos/some-app/.titan/turbo.build.log",
+				"/repos/some-app/.titan/titan-build.log",
 				"/repos/some-app/dist",
 				"/repos/some-app/dist/index.html",
 				"/repos/some-app/dist/js",
@@ -278,7 +278,7 @@ func TestGlobFilesFs(t *testing.T) {
 			wantFiles: []string{
 				"/repos/some-app/.next/cache/db6a76a62043520e7aaadd0bb2104e78.txt",
 				"/repos/some-app/.next/log.txt",
-				"/repos/some-app/.titan/turbo.build.log",
+				"/repos/some-app/.titan/titan-build.log",
 				"/repos/some-app/dist/index.html",
 				"/repos/some-app/dist/js/index.js",
 				"/repos/some-app/dist/js/lib.js",

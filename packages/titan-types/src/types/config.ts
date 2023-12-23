@@ -2,14 +2,14 @@
 export type Schema = RootSchema | WorkspaceSchema;
 
 export interface BaseSchema {
-  /** @defaultValue https://turbo.build/schema.json */
+  /** @defaultValue https://titan.build/schema.json */
   $schema?: string;
   /**
    * An object representing the task dependency graph of your project. titan interprets
    * these conventions to schedule, execute, and cache the outputs of tasks in
    * your project.
    *
-   * Documentation: https://turbo.build/repo/docs/reference/configuration#pipeline
+   * Documentation: https://titan.build/repo/docs/reference/configuration#pipeline
    *
    * @defaultValue `{}`
    */
@@ -55,7 +55,7 @@ export interface RootSchema extends BaseSchema {
    * that are not represented in the traditional dependency graph
    * (e.g. a root tsconfig.json, jest.config.js, .eslintrc, etc.)
    *
-   * Documentation: https://turbo.build/repo/docs/reference/configuration#globaldependencies
+   * Documentation: https://titan.build/repo/docs/reference/configuration#globaldependencies
    *
    * @defaultValue []
    */
@@ -66,7 +66,7 @@ export interface RootSchema extends BaseSchema {
    *
    * The variables included in this list will affect all task hashes.
    *
-   * Documentation: https://turbo.build/repo/docs/reference/configuration#globalenv
+   * Documentation: https://titan.build/repo/docs/reference/configuration#globalenv
    *
    * @defaultValue []
    */
@@ -76,7 +76,7 @@ export interface RootSchema extends BaseSchema {
    * An allowlist of environment variables that should be made to all tasks, but
    * should not contribute to the task's cache key, e.g. `AWS_SECRET_KEY`.
    *
-   * Documentation: https://turbo.build/repo/docs/reference/configuration#globalPassThroughEnv
+   * Documentation: https://titan.build/repo/docs/reference/configuration#globalPassThroughEnv
    *
    * @defaultValue null
    * @deprecated use `globalPassThroughEnv` instead
@@ -87,7 +87,7 @@ export interface RootSchema extends BaseSchema {
    * An allowlist of environment variables that should be made to all tasks, but
    * should not contribute to the task's cache key, e.g. `AWS_SECRET_KEY`.
    *
-   * Documentation: https://turbo.build/repo/docs/reference/configuration#globalPassThroughEnv
+   * Documentation: https://titan.build/repo/docs/reference/configuration#globalPassThroughEnv
    *
    * @defaultValue null
    */
@@ -97,7 +97,7 @@ export interface RootSchema extends BaseSchema {
    * A priority-ordered (most-significant to least-significant) array of project-anchored
    * Unix-style paths to `.env` files to include in the global hash.
    *
-   * Documentation: https://turbo.build/repo/docs/reference/configuration#globalDotEnv
+   * Documentation: https://titan.build/repo/docs/reference/configuration#globalDotEnv
    *
    * @defaultValue null
    */
@@ -106,7 +106,7 @@ export interface RootSchema extends BaseSchema {
   /**
    * Configuration options that control how titan interfaces with the remote cache.
    *
-   * Documentation: https://turbo.build/repo/docs/core-concepts/remote-caching
+   * Documentation: https://titan.build/repo/docs/core-concepts/remote-caching
    *
    * @defaultValue `{}`
    */
@@ -126,7 +126,7 @@ export interface Pipeline {
    * same package (e.g. "A package's test and lint commands depend on its own build being
    * completed first.")
    *
-   * Documentation: https://turbo.build/repo/docs/reference/configuration#dependson
+   * Documentation: https://titan.build/repo/docs/reference/configuration#dependson
    *
    * @defaultValue []
    */
@@ -140,7 +140,7 @@ export interface Pipeline {
    * You no longer need to use the $ prefix.
    * (e.g. $GITHUB_TOKEN → GITHUB_TOKEN)
    *
-   * Documentation: https://turbo.build/repo/docs/reference/configuration#env
+   * Documentation: https://titan.build/repo/docs/reference/configuration#env
    *
    * @defaultValue []
    */
@@ -151,7 +151,7 @@ export interface Pipeline {
    * task's environment, but should not contribute to the task's cache key,
    * e.g. `AWS_SECRET_KEY`.
    *
-   * Documentation: https://turbo.build/repo/docs/reference/configuration#passThroughEnv
+   * Documentation: https://titan.build/repo/docs/reference/configuration#passThroughEnv
    *
    * @defaultValue null
    * @deprecated use `passThroughEnv` instead
@@ -163,7 +163,7 @@ export interface Pipeline {
    * task's environment, but should not contribute to the task's cache key,
    * e.g. `AWS_SECRET_KEY`.
    *
-   * Documentation: https://turbo.build/repo/docs/reference/configuration#passThroughEnv
+   * Documentation: https://titan.build/repo/docs/reference/configuration#passThroughEnv
    *
    * @defaultValue null
    */
@@ -173,7 +173,7 @@ export interface Pipeline {
    * A priority-ordered (most-significant to least-significant) array of workspace-anchored
    * Unix-style paths to `.env` files to include in the task hash.
    *
-   * Documentation: https://turbo.build/repo/docs/reference/configuration#dotEnv
+   * Documentation: https://titan.build/repo/docs/reference/configuration#dotEnv
    *
    * @defaultValue null
    */
@@ -186,7 +186,7 @@ export interface Pipeline {
    * produce no artifacts other than logs (such as linters). Logs are always treated as a
    * cacheable artifact and never need to be specified.
    *
-   * Documentation: https://turbo.build/repo/docs/reference/configuration#outputs
+   * Documentation: https://titan.build/repo/docs/reference/configuration#outputs
    *
    * @defaultValue []
    */
@@ -197,7 +197,7 @@ export interface Pipeline {
    *
    * Setting cache to false is useful for long-running "watch" or development mode tasks.
    *
-   * Documentation: https://turbo.build/repo/docs/reference/configuration#cache
+   * Documentation: https://titan.build/repo/docs/reference/configuration#cache
    *
    * @defaultValue true
    */
@@ -214,7 +214,7 @@ export interface Pipeline {
    *
    * If omitted or empty, all files in the package are considered as inputs.
    *
-   * Documentation: https://turbo.build/repo/docs/reference/configuration#inputs
+   * Documentation: https://titan.build/repo/docs/reference/configuration#inputs
    *
    * @defaultValue []
    */
@@ -233,7 +233,7 @@ export interface Pipeline {
    *
    * "none": Hides all task output
    *
-   * Documentation: https://turbo.build/repo/docs/reference/command-line-reference#--output-logs
+   * Documentation: https://titan.build/repo/docs/reference/command-line-reference#--output-logs
    *
    * @defaultValue full
    */
@@ -244,7 +244,7 @@ export interface Pipeline {
    * titan that this is a long-running task and will ensure that other tasks
    * cannot depend on it.
    *
-   * Documentation: https://turbo.build/repo/docs/reference/configuration#persistent
+   * Documentation: https://titan.build/repo/docs/reference/configuration#persistent
    *
    * @defaultValue false
    */
@@ -266,7 +266,7 @@ export interface RemoteCache {
    * Indicates if the remote cache is enabled. When `false`, Titanrepo will disable
    * all remote cache operations, even if the repo has a valid token. If true, remote caching
    * is enabled, but still requires the user to login and link their repo to a remote cache.
-   * Documentation: https://turbo.build/repo/docs/core-concepts/remote-caching
+   * Documentation: https://titan.build/repo/docs/core-concepts/remote-caching
    *
    * @defaultValue true
    */

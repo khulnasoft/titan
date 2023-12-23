@@ -20,7 +20,7 @@ describe.only("stabilize-env-mode", () => {
     });
 
     expect(JSON.parse(read("titan.json") || "{}")).toStrictEqual({
-      $schema: "https://turbo.build/schema.json",
+      $schema: "https://titan.build/schema.json",
       globalPassThroughEnv: [
         "EXPERIMENTAL_GLOBAL_PASSTHROUGH",
         "GLOBAL_PASSTHROUGH",
@@ -57,7 +57,7 @@ describe.only("stabilize-env-mode", () => {
     });
 
     expect(JSON.parse(read("titan.json") || "{}")).toStrictEqual({
-      $schema: "https://turbo.build/schema.json",
+      $schema: "https://titan.build/schema.json",
       globalPassThroughEnv: [
         "DUPLICATE_GLOBAL",
         "EXPERIMENTAL_GLOBAL_PASSTHROUGH",
@@ -99,7 +99,7 @@ describe.only("stabilize-env-mode", () => {
     });
 
     expect(JSON.parse(read("titan.json") || "{}")).toStrictEqual({
-      $schema: "https://turbo.build/schema.json",
+      $schema: "https://titan.build/schema.json",
       globalPassThroughEnv: [],
       pipeline: {
         build: {
@@ -133,7 +133,7 @@ describe.only("stabilize-env-mode", () => {
     });
 
     expect(JSON.parse(read("titan.json") || "{}")).toStrictEqual({
-      $schema: "https://turbo.build/schema.json",
+      $schema: "https://titan.build/schema.json",
       pipeline: {
         build: {},
       },
@@ -164,7 +164,7 @@ describe.only("stabilize-env-mode", () => {
     });
 
     expect(JSON.parse(read("titan.json") || "{}")).toStrictEqual({
-      $schema: "https://turbo.build/schema.json",
+      $schema: "https://titan.build/schema.json",
       globalPassThroughEnv: ["GLOBAL_PASSTHROUGH"],
       pipeline: {
         build: {
@@ -198,7 +198,7 @@ describe.only("stabilize-env-mode", () => {
     });
 
     expect(JSON.parse(read("titan.json") || "{}")).toStrictEqual({
-      $schema: "https://turbo.build/schema.json",
+      $schema: "https://titan.build/schema.json",
       globalPassThroughEnv: ["GLOBAL_PASSTHROUGH"],
       pipeline: {
         build: {
@@ -232,7 +232,7 @@ describe.only("stabilize-env-mode", () => {
     });
 
     expect(JSON.parse(read("titan.json") || "{}")).toStrictEqual({
-      $schema: "https://turbo.build/schema.json",
+      $schema: "https://titan.build/schema.json",
       globalPassThroughEnv: [
         "EXPERIMENTAL_GLOBAL_PASSTHROUGH",
         "GLOBAL_PASSTHROUGH",

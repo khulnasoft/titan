@@ -2,7 +2,7 @@
   "name": "@titan/codemod",
   "version": "1.11.3-canary.1",
   "description": "Provides Codemod transformations to help upgrade your Titanrepo codebase when a feature is deprecated.",
-  "homepage": "https://turbo.build/repo",
+  "homepage": "https://titan.build/repo",
   "license": "MPL-2.0",
   "repository": {
     "type": "git",

@@ -183,7 +183,7 @@ mod test {
             TaskOutputs {
                 inclusions: vec![
                     format!("{relative_prefix}.next/**/*"),
-                    format!("{relative_prefix}.titan/turbo.build.log"),
+                    format!("{relative_prefix}.titan/titan.build.log"),
                 ],
                 exclusions: vec![format!("{relative_prefix}.next/bad-file")],
             }
@@ -194,20 +194,20 @@ mod test {
     fn test_escape_log_file() {
         let build_log = TaskDefinition::workspace_relative_log_file("build");
         let build_expected =
-            AnchoredSystemPathBuf::from_raw([".titan", "turbo.build.log"].join(MAIN_SEPARATOR_STR))
+            AnchoredSystemPathBuf::from_raw([".titan", "titan.build.log"].join(MAIN_SEPARATOR_STR))
                 .unwrap();
         assert_eq!(build_log, build_expected);
 
         let build_log = TaskDefinition::workspace_relative_log_file("build:prod");
         let build_expected = AnchoredSystemPathBuf::from_raw(
-            [".titan", "turbo.build$colon$prod.log"].join(MAIN_SEPARATOR_STR),
+            [".titan", "titan.build$colon$prod.log"].join(MAIN_SEPARATOR_STR),
         )
         .unwrap();
         assert_eq!(build_log, build_expected);
 
         let build_log = TaskDefinition::workspace_relative_log_file("build:prod:extra");
         let build_expected = AnchoredSystemPathBuf::from_raw(
-            [".titan", "turbo.build$colon$prod$colon$extra.log"].join(MAIN_SEPARATOR_STR),
+            [".titan", "titan.build$colon$prod$colon$extra.log"].join(MAIN_SEPARATOR_STR),
         )
         .unwrap();
         assert_eq!(build_log, build_expected);

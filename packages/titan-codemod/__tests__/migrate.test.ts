@@ -76,7 +76,7 @@ describe("migrate", () => {
       version: "1.0.0",
     });
     expect(readJson("titan.json")).toStrictEqual({
-      $schema: "https://turbo.build/schema.json",
+      $schema: "https://titan.build/schema.json",
       pipeline: {
         build: {
           outputs: [".next/**", "!.next/cache/**"],
@@ -233,7 +233,7 @@ describe("migrate", () => {
       version: "1.0.0",
     });
     expect(readJson("titan.json")).toStrictEqual({
-      $schema: "https://turbo.build/schema.json",
+      $schema: "https://titan.build/schema.json",
       pipeline: {
         build: {
           outputs: [".next/**", "!.next/cache/**"],
@@ -318,7 +318,7 @@ describe("migrate", () => {
       version: "1.0.0",
     });
     expect(readJson("titan.json")).toStrictEqual({
-      $schema: "https://turbo.build/schema.json",
+      $schema: "https://titan.build/schema.json",
       pipeline: {
         build: {
           outputs: [".next/**", "!.next/cache/**"],
@@ -524,7 +524,7 @@ describe("migrate", () => {
       version: "1.0.0",
     });
     expect(readJson("titan.json")).toStrictEqual({
-      $schema: "https://turbo.build/schema.json",
+      $schema: "https://titan.build/schema.json",
       pipeline: {
         build: {
           outputs: [".next/**", "!.next/cache/**"],
@@ -632,7 +632,7 @@ describe("migrate", () => {
       version: "1.0.0",
     });
     expect(readJson("titan.json")).toStrictEqual({
-      $schema: "https://turbo.build/schema.json",
+      $schema: "https://titan.build/schema.json",
       pipeline: {
         build: {
           outputs: [".next/**", "!.next/cache/**"],

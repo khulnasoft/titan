@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "",
   "bugs": "https://github.com/khulnasoft/titan/issues",
-  "homepage": "https://turbo.build/repo",
+  "homepage": "https://titan.build/repo",
   "scripts": {
     "build": "napi build --platform -p titanrepo-napi --cargo-cwd ../../ --cargo-name titanrepo_napi native --js false --dts ../js/index.d.ts && mkdir -p js/dist && cp js/index.js js/dist/index.js && cp js/index.d.ts js/dist/index.d.ts",
     "build:release": "napi build --release --platform -p titanrepo-napi --cargo-cwd ../../ --cargo-name titanrepo_napi native --js false",
