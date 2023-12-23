@@ -1,0 +1,28 @@
+[package]
+name = "titanpack-static"
+version = "0.1.0"
+description = "TBD"
+license = "MPL-2.0"
+edition = "2021"
+autobenches = false
+
+[lib]
+bench = false
+
+[lints]
+workspace = true
+
+[dependencies]
+anyhow = { workspace = true }
+
+titan-tasks = { workspace = true }
+titan-tasks-fs = { workspace = true }
+titan-tasks-hash = { workspace = true }
+titanpack-core = { workspace = true }
+titanpack-css = { workspace = true }
+titanpack-ecmascript = { workspace = true }
+
+serde = { workspace = true }
+
+[build-dependencies]
+titan-tasks-build = { workspace = true }

@@ -1,0 +1,236 @@
+[package]
+name = "titanpack-binding"
+version = "0.1.0"
+edition = "2021"
+license = "MPL-2.0"
+autobenches = false
+
+[lib]
+bench = false
+
+[features]
+__swc = []
+__swc_core = ["__swc"]
+__swc_core_next_core = [
+  "__swc_core",
+  "swc_core/common_concurrent",
+  "swc_core/ecma_ast",
+  "swc_core/ecma_visit",
+  "swc_core/ecma_loader_node",
+  "swc_core/ecma_loader_lru",
+  "swc_core/ecma_utils",
+  "swc_core/ecma_minifier",
+  "swc_core/ecma_transforms",
+  "swc_core/ecma_transforms_react",
+  "swc_core/ecma_transforms_typescript",
+  "swc_core/ecma_transforms_optimization",
+  "swc_core/ecma_parser",
+  "swc_core/ecma_parser_typescript",
+  "swc_core/cached",
+  "swc_core/base",
+]
+
+__swc_core_binding_napi = [
+  "__swc_core",
+  "swc_core/base_concurrent",
+  "swc_core/base_node",
+  "swc_core/common_concurrent",
+  "swc_core/ecma_ast",
+  "swc_core/ecma_loader_node",
+  "swc_core/ecma_loader_lru",
+  "swc_core/bundler",
+  "swc_core/bundler_concurrent",
+  "swc_core/ecma_codegen",
+  "swc_core/ecma_minifier",
+  "swc_core/ecma_parser",
+  "swc_core/ecma_parser_typescript",
+  "swc_core/ecma_transforms",
+  "swc_core/ecma_transforms_optimization",
+  "swc_core/ecma_transforms_react",
+  "swc_core/ecma_transforms_typescript",
+  "swc_core/ecma_utils",
+  "swc_core/ecma_visit",
+]
+__swc_core_binding_napi_plugin = [
+  "swc_core/plugin_transform_host_native",
+  "titanpack-ecmascript-plugins/swc_ecma_transform_plugin",
+]
+__swc_core_binding_napi_plugin_filesystem_cache = [
+  "swc_core/plugin_transform_host_native_filesystem_cache",
+]
+__swc_core_binding_napi_plugin_shared_runtime = [
+  "swc_core/plugin_transform_host_native_shared_runtime",
+]
+__swc_core_binding_napi_allocator = ["swc_core/allocator_node"]
+
+__swc_core_binding_wasm = [
+  "__swc_core",
+  "swc_core/common_concurrent",
+  "swc_core/binding_macro_wasm",
+  "swc_core/ecma_codegen",
+  "swc_core/ecma_minifier",
+  "swc_core/ecma_transforms",
+  "swc_core/ecma_transforms_typescript",
+  "swc_core/ecma_transforms_optimization",
+  "swc_core/ecma_transforms_react",
+  "swc_core/ecma_parser",
+  "swc_core/ecma_parser_typescript",
+  "swc_core/ecma_utils",
+  "swc_core/ecma_visit",
+]
+__swc_core_binding_wasm_plugin = ["swc_core/plugin_transform_host_js"]
+
+__swc_core_testing_transform = ["swc_core/testing_transform"]
+
+__titan = []
+__titan_tasks_malloc = ["__titan", "titan-tasks-malloc"]
+__titan_tasks_malloc_custom_allocator = ["titan-tasks-malloc/custom_allocator"]
+__titan_tasks = ["__titan", "titan-tasks"]
+__titan_tasks_tokio_tracing = ["titan-tasks/tokio_tracing"]
+__titan_tasks_build = ["__titan", "titan-tasks-build"]
+__titan_tasks_bytes = ["__titan", "titan-tasks-bytes"]
+__titan_tasks_env = ["__titan", "titan-tasks-env"]
+__titan_tasks_fetch = ["__titan", "titan-tasks-fetch"]
+__titan_tasks_fetch_native-tls = ["__titan", "titan-tasks-fetch/native-tls"]
+__titan_tasks_fetch_rustls-tls = ["__titan", "titan-tasks-fetch/rustls-tls"]
+__titan_tasks_fs = ["__titan", "titan-tasks-fs"]
+__titan_tasks_fs_dynamic_embed_contents = [
+  "titan-tasks-fs/dynamic_embed_contents",
+]
+__titan_tasks_hash = ["__titan", "titan-tasks-hash"]
+__titan_tasks_macros = ["__titan", "titan-tasks-macros"]
+__titan_tasks_macros_shared = ["__titan", "titan-tasks-macros-shared"]
+__titan_tasks_memory = ["__titan", "titan-tasks-memory"]
+__titan_tasks_memory_print_task_invalidation = [
+  "__titan_tasks_memory",
+  "titan-tasks-memory/print_task_invalidation",
+]
+__titan_tasks_testing = ["__titan", "titan-tasks-testing"]
+__titan_updater = ["__titan", "titan-updater"]
+
+__titanpack = ["titanpack"]
+__titanpack_bench = ["__titanpack", "titanpack-bench"]
+__titanpack_build = ["__titanpack", "titanpack-build"]
+__titanpack_build_dynamic_embed_contents = [
+  "titanpack-build/dynamic_embed_contents",
+]
+__titanpack_cli_utils = ["__titanpack", "titanpack-cli-utils"]
+__titanpack_core = ["__titanpack", "titanpack-core"]
+__titanpack_core_issue_path = ["titanpack-core/issue_path"]
+__titanpack_create_test_app = ["__titanpack", "titanpack-create-test-app"]
+__titanpack_css = ["__titanpack", "titanpack-css"]
+__titanpack_dev = ["__titanpack", "titanpack-dev"]
+__titanpack_dev_dynamic_embed_contents = [
+  "titanpack-dev/dynamic_embed_contents",
+]
+__titanpack_dev_server = ["__titanpack", "titanpack-dev-server"]
+__titanpack_ecmascript = ["__titanpack", "titanpack-ecmascript"]
+# [Note]: currently all of the transform features are enabled by default
+__titanpack_ecmascript_plugin = [
+  "__titanpack",
+  "titanpack-ecmascript-plugins",
+  "titanpack-ecmascript-plugins/transform_emotion",
+]
+__titanpack_ecmascript_runtime = ["__titanpack", "titanpack-ecmascript-runtime"]
+__titanpack_ecmascript_hmr_protocol = [
+  "__titanpack",
+  "titanpack-ecmascript-hmr-protocol",
+]
+__titanpack_trace_utils = ["__titanpack", "titanpack-trace-utils"]
+
+__titanpack_env = ["__titanpack", "titanpack-env"]
+__titanpack_image = ["__titanpack", "titanpack-image"]
+__titanpack_image_avif = ["titanpack-image/avif"]
+__titanpack_image_webp = ["titanpack-image/webp"]
+__titanpack_json = ["__titanpack", "titanpack-json"]
+__titanpack_mdx = ["__titanpack", "titanpack-mdx"]
+__titanpack_node = ["__titanpack", "titanpack-node"]
+__titanpack_node_dynamic_embed_contents = [
+  "titanpack-node/dynamic_embed_contents",
+]
+__titanpack_static = ["__titanpack", "titanpack-static"]
+__titanpack_swc_utils = ["__titanpack", "titanpack-swc-utils"]
+__titanpack_test_utils = ["__titanpack", "titanpack-test-utils"]
+__titanpack_tests = ["__titanpack", "titanpack-tests"]
+
+__features = []
+__feature_mdx_rs = ["__features", "mdxjs/serializable"]
+__feature_node_file_trace = ["__features", "node-file-trace/node-api"]
+__feature_node_file_trace_cli = ["node-file-trace/cli"]
+__feature_node_file_trace_custom_allocator = [
+  "node-file-trace/custom_allocator",
+]
+__feature_auto_hash_map = ["__features", "auto-hash-map"]
+__feature_swc_ast_explorer = ["__features", "swc-ast-explorer"]
+__feature_tracing_signpost = ["__features", "tracing-signpost"]
+
+__swc_custom_transform = []
+__swc_transform_styled_components = [
+  "__swc",
+  "__swc_custom_transform",
+  "styled_components",
+]
+__swc_transform_styled_jsx = ["__swc", "__swc_custom_transform", "styled_jsx"]
+__swc_transform_emotion = ["__swc", "__swc_custom_transform", "swc_emotion"]
+__swc_transform_relay = ["__swc", "__swc_custom_transform", "swc_relay"]
+__swc_transform_modularize_imports = [
+  "__swc",
+  "__swc_custom_transform",
+  "modularize_imports",
+]
+__swc_testing = ["__swc", "testing"]
+
+[lints]
+workspace = true
+
+[dependencies]
+mdxjs = { optional = true, workspace = true }
+modularize_imports = { optional = true, workspace = true }
+styled_components = { optional = true, workspace = true }
+styled_jsx = { optional = true, workspace = true }
+swc_core = { optional = true, workspace = true }
+swc_emotion = { optional = true, workspace = true }
+swc_relay = { optional = true, workspace = true }
+testing = { optional = true, workspace = true }
+
+auto-hash-map = { optional = true, workspace = true }
+swc-ast-explorer = { optional = true, workspace = true }
+tracing-signpost = { optional = true, workspace = true }
+
+node-file-trace = { optional = true, workspace = true }
+titan-tasks = { optional = true, workspace = true }
+titan-tasks-build = { optional = true, workspace = true }
+titan-tasks-bytes = { optional = true, workspace = true }
+titan-tasks-env = { optional = true, workspace = true }
+titan-tasks-fetch = { optional = true, workspace = true }
+titan-tasks-fs = { optional = true, workspace = true }
+titan-tasks-hash = { optional = true, workspace = true }
+titan-tasks-macros = { optional = true, workspace = true }
+titan-tasks-macros-shared = { optional = true, workspace = true }
+titan-tasks-malloc = { optional = true, workspace = true, default-features = false }
+titan-tasks-memory = { optional = true, workspace = true }
+titan-tasks-testing = { optional = true, workspace = true }
+titan-updater = { optional = true, workspace = true }
+titanpack = { optional = true, workspace = true }
+titanpack-bench = { optional = true, workspace = true }
+titanpack-build = { optional = true, workspace = true }
+titanpack-cli-utils = { optional = true, workspace = true }
+titanpack-core = { optional = true, workspace = true }
+titanpack-create-test-app = { optional = true, workspace = true }
+titanpack-css = { optional = true, workspace = true }
+titanpack-dev = { optional = true, workspace = true }
+titanpack-dev-server = { optional = true, workspace = true }
+titanpack-ecmascript = { optional = true, workspace = true }
+titanpack-ecmascript-hmr-protocol = { optional = true, workspace = true }
+titanpack-ecmascript-plugins = { optional = true, workspace = true, default-features = false }
+titanpack-ecmascript-runtime = { optional = true, workspace = true }
+titanpack-env = { optional = true, workspace = true }
+titanpack-image = { optional = true, workspace = true }
+titanpack-json = { optional = true, workspace = true }
+titanpack-mdx = { optional = true, workspace = true }
+titanpack-node = { optional = true, workspace = true }
+titanpack-static = { optional = true, workspace = true }
+titanpack-swc-utils = { optional = true, workspace = true }
+titanpack-test-utils = { optional = true, workspace = true }
+titanpack-tests = { optional = true, workspace = true }
+titanpack-trace-utils = { optional = true, workspace = true }

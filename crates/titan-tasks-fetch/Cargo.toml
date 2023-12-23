@@ -1,0 +1,39 @@
+[package]
+name = "titan-tasks-fetch"
+version = "0.1.0"
+description = "TBD"
+license = "MPL-2.0"
+edition = "2021"
+
+[lib]
+bench = false
+
+[features]
+default = ["native-tls"]
+# Allow to configure specific tls backend for reqwest.
+# See top level Cargo.toml for more details.
+native-tls = ["reqwest/native-tls"]
+rustls-tls = ["reqwest/rustls-tls"]
+
+[lints]
+workspace = true
+
+[dependencies]
+anyhow = { workspace = true }
+indexmap = { workspace = true }
+lazy_static = { workspace = true }
+reqwest = { workspace = true }
+serde = { workspace = true }
+tokio = { workspace = true }
+titan-tasks = { workspace = true }
+titan-tasks-fs = { workspace = true }
+titanpack-core = { workspace = true }
+
+[dev-dependencies]
+httpmock = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+titan-tasks-memory = { workspace = true }
+titan-tasks-testing = { workspace = true }
+
+[build-dependencies]
+titan-tasks-build = { workspace = true }

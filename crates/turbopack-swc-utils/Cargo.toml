@@ -1,0 +1,27 @@
+[package]
+name = "titanpack-swc-utils"
+version = "0.1.0"
+description = "TBD"
+license = "MPL-2.0"
+edition = "2021"
+autobenches = false
+
+[lib]
+bench = false
+
+[lints]
+workspace = true
+
+[dependencies]
+titan-tasks = { workspace = true }
+titanpack-core = { workspace = true }
+
+swc_core = { workspace = true, features = [
+  "base",
+  "common",
+  "common_concurrent",
+  "common_sourcemap",
+] }
+
+[build-dependencies]
+titan-tasks-build = { workspace = true }

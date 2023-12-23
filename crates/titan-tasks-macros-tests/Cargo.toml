@@ -1,0 +1,18 @@
+[package]
+name = "titan-tasks-macros-tests"
+version = "0.1.0"
+description = "TBD"
+license = "MPL-2.0"
+edition = "2021"
+
+[dev-dependencies]
+anyhow = { workspace = true }
+tokio = { workspace = true }
+titan-tasks = { workspace = true }
+titan-tasks-memory = { workspace = true }
+titan-tasks-testing = { workspace = true }
+# TODO: titan-tasks-testing uses a macro that requires us to depend on lazy-static.
+lazy_static = { workspace = true }
+
+[build-dependencies]
+titan-tasks-build = { workspace = true }

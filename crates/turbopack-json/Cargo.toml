@@ -1,0 +1,27 @@
+[package]
+name = "titanpack-json"
+version = "0.1.0"
+description = "TBD"
+license = "MPL-2.0"
+edition = "2021"
+autobenches = false
+
+[lib]
+bench = false
+
+[lints]
+workspace = true
+
+[dependencies]
+anyhow = { workspace = true }
+
+titan-tasks = { workspace = true }
+titan-tasks-fs = { workspace = true }
+titanpack-core = { workspace = true }
+titanpack-ecmascript = { workspace = true }
+
+serde = { workspace = true }
+serde_json = { workspace = true }
+
+[build-dependencies]
+titan-tasks-build = { workspace = true }

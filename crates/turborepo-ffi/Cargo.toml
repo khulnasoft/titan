@@ -1,0 +1,27 @@
+[package]
+name = "titanrepo-ffi"
+version = "0.1.0"
+edition = "2021"
+license = "MPL-2.0"
+
+[lib]
+crate-type = ["staticlib"]
+
+[lints]
+workspace = true
+
+[dependencies]
+directories = "4.0.1"
+globwalk = { version = "0.1.0", path = "../titanrepo-globwalk" }
+prost = "0.11.6"
+thiserror = { workspace = true }
+titanpath = { workspace = true }
+titanrepo-cache = { workspace = true }
+titanrepo-env = { workspace = true }
+titanrepo-fs = { workspace = true }
+titanrepo-lockfiles = { workspace = true }
+titanrepo-scm = { workspace = true }
+
+[build-dependencies]
+cbindgen = "0.24.3"
+prost-build = "0.11.6"

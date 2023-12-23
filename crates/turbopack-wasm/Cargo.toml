@@ -1,0 +1,29 @@
+[package]
+name = "titanpack-wasm"
+version = "0.1.0"
+description = "TBD"
+license = "MPL-2.0"
+edition = "2021"
+autobenches = false
+
+[lib]
+bench = false
+
+[lints]
+workspace = true
+
+[dependencies]
+anyhow = { workspace = true }
+indexmap = { workspace = true }
+indoc = { workspace = true }
+serde = { workspace = true }
+titan-tasks = { workspace = true }
+titan-tasks-fs = { workspace = true }
+titan-tasks-hash = { workspace = true }
+titanpack-core = { workspace = true }
+titanpack-ecmascript = { workspace = true }
+wasmparser = "0.110.0"
+wat = "1.0.69"
+
+[build-dependencies]
+titan-tasks-build = { workspace = true }

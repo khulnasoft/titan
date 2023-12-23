@@ -1,0 +1,30 @@
+[package]
+name = "titanpack-cli-utils"
+version = "0.1.0"
+description = "TBD"
+license = "MPL-2.0"
+edition = "2021"
+autobenches = false
+
+[lib]
+bench = false
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lints]
+workspace = true
+
+[dependencies]
+anyhow = { workspace = true }
+clap = { workspace = true, features = ["derive"] }
+crossterm = "0.26.0"
+once_cell = { workspace = true }
+owo-colors = { workspace = true }
+serde = { workspace = true, features = ["derive"] }
+titan-tasks = { workspace = true }
+titan-tasks-fs = { workspace = true }
+titanpack-core = { workspace = true }
+titanpack-ecmascript = { workspace = true }
+
+[build-dependencies]
+titan-tasks-build = { workspace = true }

@@ -1,0 +1,17 @@
+{
+  "name": "@khulnasoft/titanpack-cli",
+  "version": "0.0.0",
+  "description": "Titanpack-cli runtime",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@next/react-refresh-utils": "^13.0.6",
+    "@khulnasoft/titanpack-ecmascript-runtime": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.11"
+  }
+}

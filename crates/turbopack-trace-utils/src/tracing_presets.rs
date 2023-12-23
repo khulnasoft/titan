@@ -1,0 +1,75 @@
+use once_cell::sync::Lazy;
+
+pub static TRACING_OVERVIEW_TARGETS: Lazy<Vec<&str>> = Lazy::new(|| {
+    vec![
+        "titan_tasks=info",
+        "titanpack=info",
+        "titanpack_binding=info",
+        "titanpack_build=info",
+        "titanpack_cli=info",
+        "titanpack_cli_utils=info",
+        "titanpack_core=info",
+        "titanpack_css=info",
+        "titanpack_dev=info",
+        "titanpack_dev_server=info",
+        "titanpack_ecmascript=info",
+        "titanpack_ecmascript_hmr_protocol=info",
+        "titanpack_ecmascript_plugins=info",
+        "titanpack_ecmascript_runtime=info",
+        "titanpack_env=info",
+        "titanpack_image=info",
+        "titanpack_json=info",
+        "titanpack_mdx=info",
+        "titanpack_node=info",
+        "titanpack_static=info",
+        "titanpack_swc_utils=info",
+        "titanpack_wasm=info",
+    ]
+});
+pub static TRACING_TITANPACK_TARGETS: Lazy<Vec<&str>> = Lazy::new(|| {
+    [
+        &TRACING_OVERVIEW_TARGETS[..],
+        &[
+            "titan_tasks=info",
+            "titanpack=trace",
+            "titanpack_binding=trace",
+            "titanpack_build=trace",
+            "titanpack_cli=trace",
+            "titanpack_cli_utils=trace",
+            "titanpack_core=trace",
+            "titanpack_css=trace",
+            "titanpack_dev=trace",
+            "titanpack_dev_server=trace",
+            "titanpack_ecmascript=trace",
+            "titanpack_ecmascript_hmr_protocol=trace",
+            "titanpack_ecmascript_plugins=trace",
+            "titanpack_ecmascript_runtime=trace",
+            "titanpack_env=trace",
+            "titanpack_image=trace",
+            "titanpack_json=trace",
+            "titanpack_mdx=trace",
+            "titanpack_node=trace",
+            "titanpack_static=trace",
+            "titanpack_swc_utils=trace",
+            "titanpack_wasm=trace",
+        ],
+    ]
+    .concat()
+});
+pub static TRACING_TITAN_TASKS_TARGETS: Lazy<Vec<&str>> = Lazy::new(|| {
+    [
+        &TRACING_TITANPACK_TARGETS[..],
+        &[
+            "titan_tasks=trace",
+            "titan_tasks_auto_hash_map=trace",
+            "titan_tasks_build=trace",
+            "titan_tasks_bytes=trace",
+            "titan_tasks_env=trace",
+            "titan_tasks_fetch=trace",
+            "titan_tasks_fs=trace",
+            "titan_tasks_hash=trace",
+            "titan_tasks_memory=trace",
+        ],
+    ]
+    .concat()
+});

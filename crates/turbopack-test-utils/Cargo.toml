@@ -1,0 +1,28 @@
+[package]
+name = "titanpack-test-utils"
+version = "0.1.0"
+description = "TBD"
+license = "MPL-2.0"
+edition = "2021"
+autobenches = false
+
+[lib]
+bench = false
+
+[lints]
+workspace = true
+
+[dependencies]
+anyhow = { workspace = true }
+once_cell = { workspace = true }
+regex = { workspace = true, features = ["pattern"] }
+serde = { workspace = true }
+similar = "2.2.0"
+titan-tasks = { workspace = true }
+titan-tasks-fs = { workspace = true }
+titan-tasks-hash = { workspace = true }
+titanpack-cli-utils = { workspace = true }
+titanpack-core = { workspace = true }
+
+[build-dependencies]
+titan-tasks-build = { workspace = true }
