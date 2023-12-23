@@ -1,0 +1,26 @@
+{
+  "name": "no-titan-json",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "titan": "1.0.0"
+  },
+  "titan": {
+    "$schema": "https://titan.build/schema.json",
+    "pipeline": {
+      "build": {
+        "outputs": [
+          ".next/**",
+          "!.next/cache/**"
+        ]
+      },
+      "lint": {
+        "outputs": []
+      },
+      "test": {},
+      "dev": {
+        "cache": false
+      }
+    }
+  }
+}

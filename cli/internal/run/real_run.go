@@ -383,7 +383,7 @@ func (ec *execContext) exec(ctx gocontext.Context, packageTask *nodes.PackageTas
 	passThroughArgs := ec.rs.ArgsForTask(packageTask.Task)
 	hash := packageTask.Hash
 	ec.logger.Debug("task hash", "value", hash)
-	// TODO(gsoltis): if/when we fix https://github.com/vercel/titan/issues/937
+	// TODO(gsoltis): if/when we fix https://github.com/khulnasoft/titan/issues/937
 	// the following block should never get hit. In the meantime, keep it after hashing
 	// so that downstream tasks can count on the hash existing
 	//

@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "titan run build"
+  },
+  "devDependencies": {
+    "titan": "latest"
+  },
+  "packageManager": "yarn@1.22.19"
+}

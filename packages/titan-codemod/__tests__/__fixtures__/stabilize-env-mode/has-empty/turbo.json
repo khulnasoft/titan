@@ -1,0 +1,9 @@
+{
+  "$schema": "https://titan.build/schema.json",
+  "experimentalGlobalPassThroughEnv": [],
+  "pipeline": {
+    "build": {
+      "experimentalPassThroughEnv": []
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "extends": "@titan/tsconfig/library.json",
+  "compilerOptions": {
+    "rootDir": "."
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "has-package-manager",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {},
+  "packageManager": "titan@1.7.0"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "titan-ignore",
+  "version": "1.11.3-canary.1",
+  "description": "",
+  "homepage": "https://titan.build/repo",
+  "keywords": [],
+  "author": "Jared Palmer",
+  "license": "MPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasoft/titan",
+    "directory": "packages/titan-ignore"
+  },
+  "bugs": {
+    "url": "https://github.com/khulnasoft/titan/issues"
+  },
+  "files": [
+    "dist"
+  ],
+  "bin": "dist/cli.js",
+  "scripts": {
+    "build": "tsup",
+    "test": "jest",
+    "lint": "eslint src/",
+    "check-types": "tsc --noEmit",
+    "lint:prettier": "prettier -c . --cache --ignore-path=../../.prettierignore"
+  },
+  "devDependencies": {
+    "@titan/eslint-config": "workspace:*",
+    "@titan/test-utils": "workspace:*",
+    "@titan/tsconfig": "workspace:*",
+    "@titan/types": "workspace:*",
+    "@titan/utils": "workspace:*",
+    "@types/jest": "^27.4.0",
+    "@types/node": "^18.17.2",
+    "commander": "^11.0.0",
+    "jest": "^27.4.3",
+    "ts-jest": "^27.1.1",
+    "tsup": "^5.12.1",
+    "typescript": "5.3.3"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "@titan/exe-stub",
+  "description": "Stub for titan.exe",
+  "private": true,
+  "scripts": {
+    "build": "bash build.sh"
+  }
+}

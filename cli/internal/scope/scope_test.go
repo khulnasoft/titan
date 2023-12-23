@@ -392,7 +392,7 @@ func TestResolvePackages(t *testing.T) {
 		},
 		{
 			// make sure multiple apps with the same prefix are handled separately.
-			// prevents this issue: https://github.com/vercel/titan/issues/1528
+			// prevents this issue: https://github.com/khulnasoft/titan/issues/1528
 			name:     "Two apps with an overlapping prefix changed",
 			changed:  []string{"app/app2/src/index.js", "app/app2-a/src/index.js"},
 			expected: []string{"app2", "app2-a"},

@@ -1,0 +1,7 @@
+{
+  "$schema": "https://titan.build/schema.json",
+  "extends": ["//"],
+  "pipeline": {
+    "build": {}
+  }
+}

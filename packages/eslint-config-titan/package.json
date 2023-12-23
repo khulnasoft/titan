@@ -1,0 +1,37 @@
+{
+  "name": "eslint-config-titan",
+  "version": "1.11.3-canary.1",
+  "description": "ESLint config for Titanrepo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasoft/titan",
+    "directory": "packages/eslint-config-titan"
+  },
+  "bugs": {
+    "url": "https://github.com/khulnasoft/titan/issues"
+  },
+  "scripts": {
+    "lint": "eslint ./index.js",
+    "lint:prettier": "prettier -c . --cache --ignore-path=../../.prettierignore"
+  },
+  "keywords": [
+    "titan",
+    "eslint",
+    "titanrepo",
+    "eslintconfig",
+    "eslint-config"
+  ],
+  "main": "index.js",
+  "author": "Vercel",
+  "dependencies": {
+    "eslint-plugin-titan": "workspace:*"
+  },
+  "peerDependencies": {
+    "eslint": ">6.6.0"
+  },
+  "license": "MPL-2.0",
+  "devDependencies": {
+    "@titan/eslint-config": "workspace:*",
+    "@types/eslint": "^8.44.2"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "@titan/repository-darwin-x64",
+  "version": "0.0.1-canary.2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasoft/titan",
+    "directory": "packages/titan-repository/npm/darwin-x64"
+  },
+  "os": [
+    "darwin"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "main": "repository.darwin-x64.node",
+  "files": [
+    "repository.darwin-x64.node"
+  ],
+  "license": "MPL-2.0",
+  "engines": {
+    "node": ">= 10"
+  }
+}

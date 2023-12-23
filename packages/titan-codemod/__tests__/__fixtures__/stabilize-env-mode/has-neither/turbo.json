@@ -1,0 +1,6 @@
+{
+  "$schema": "https://titan.build/schema.json",
+  "pipeline": {
+    "build": {}
+  }
+}

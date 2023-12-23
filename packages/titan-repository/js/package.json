@@ -1,0 +1,25 @@
+{
+  "name": "@titan/repository",
+  "version": "0.0.1-canary.2",
+  "description": "",
+  "bugs": "https://github.com/khulnasoft/titan/issues",
+  "homepage": "https://titan.build/repo",
+  "license": "MPL-2.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "mkdir -p dist && cp index.js dist/index.js && cp index.d.ts dist/index.d.ts"
+  },
+  "files": [
+    "dist/index.js",
+    "dist/index.d.ts"
+  ],
+  "types": "dist/index.d.ts",
+  "optionalDependencies": {
+    "@titan/repository-darwin-x64": "0.0.1-canary.2",
+    "@titan/repository-darwin-arm64": "0.0.1-canary.2",
+    "@titan/repository-linux-x64-gnu": "0.0.1-canary.2",
+    "@titan/repository-linux-arm64-gnu": "0.0.1-canary.2",
+    "@titan/repository-win32-x64-msvc": "0.0.1-canary.2",
+    "@titan/repository-win32-arm64-msvc": "0.0.1-canary.2"
+  }
+}
