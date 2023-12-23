@@ -2,9 +2,6 @@ use std::pin::Pin;
 
 use anyhow::Result;
 use futures::{prelude::*, Stream};
-use tokio::sync::mpsc::Sender;
-use tokio_stream::wrappers::ReceiverStream;
-use tracing::Instrument;
 use titan_tasks::{IntoTraitRef, ReadRef, TransientInstance, Vc};
 use titan_tasks_fs::{FileSystem, FileSystemPath};
 use titanpack_core::{
@@ -19,6 +16,9 @@ use titanpack_core::{
         VersionedContent,
     },
 };
+use tokio::sync::mpsc::Sender;
+use tokio_stream::wrappers::ReceiverStream;
+use tracing::Instrument;
 
 use crate::source::{resolve::ResolveSourceRequestResult, ProxyResult};
 

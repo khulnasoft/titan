@@ -9,8 +9,8 @@ use futures::Future;
 use indexmap::IndexMap;
 use once_cell::sync::Lazy;
 use regex::Regex;
-use tracing::Level;
 use titan_tasks::{ReadRef, TryJoinIterExt, ValueToString, Vc};
+use tracing::Level;
 
 use super::{AsyncModuleInfo, Chunk, ChunkItem, ChunkType, ChunkingContext};
 use crate::output::OutputAssets;

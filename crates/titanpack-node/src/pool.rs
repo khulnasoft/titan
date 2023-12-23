@@ -15,6 +15,9 @@ use futures::join;
 use indexmap::IndexSet;
 use owo_colors::{OwoColorize, Style};
 use serde::{de::DeserializeOwned, Serialize};
+use titan_tasks::Vc;
+use titan_tasks_fs::{json::parse_json_with_source_context, FileSystemPath};
+use titanpack_ecmascript::magic_identifier::unmangle_identifiers;
 use tokio::{
     io::{
         stderr, stdout, AsyncBufReadExt, AsyncRead, AsyncReadExt, AsyncWrite, AsyncWriteExt,
@@ -26,9 +29,6 @@ use tokio::{
     sync::{OwnedSemaphorePermit, Semaphore},
     time::{sleep, timeout},
 };
-use titan_tasks::Vc;
-use titan_tasks_fs::{json::parse_json_with_source_context, FileSystemPath};
-use titanpack_ecmascript::magic_identifier::unmangle_identifiers;
 
 use crate::{source_map::apply_source_mapping, AssetsForSourceMapping};
 

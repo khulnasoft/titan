@@ -6,13 +6,13 @@ use std::{
 use rayon::prelude::*;
 use serde::Serialize;
 use thiserror::Error;
-use tracing::{debug, Span};
 use titanpath::{AbsoluteSystemPath, AnchoredSystemPath, AnchoredSystemPathBuf};
 use titanrepo_cache::CacheHitMetadata;
 use titanrepo_env::{BySource, DetailedMap, EnvironmentVariableMap, ResolvedEnvMode};
 use titanrepo_repository::package_graph::{WorkspaceInfo, WorkspaceName};
 use titanrepo_scm::SCM;
 use titanrepo_telemetry::events::task::PackageTaskEventBuilder;
+use tracing::{debug, Span};
 
 use crate::{
     engine::TaskNode,

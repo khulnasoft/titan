@@ -1,6 +1,6 @@
-use tracing::error;
 use titanrepo_auth::{logout as auth_logout, read_or_create_auth_file, AuthToken};
 use titanrepo_telemetry::events::command::CommandEventBuilder;
+use tracing::error;
 
 use crate::{cli::Error, commands::CommandBase};
 

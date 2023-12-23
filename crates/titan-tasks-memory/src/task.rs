@@ -25,13 +25,13 @@ use parking_lot::{Mutex, RwLock};
 use rustc_hash::FxHasher;
 use smallvec::SmallVec;
 use stats::TaskStats;
-use tokio::task_local;
 use titan_tasks::{
     backend::{PersistentTaskType, TaskExecutionSpec},
     event::{Event, EventListener},
     get_invalidator, registry, CellId, Invalidator, RawVc, StatsType, TaskId, TaskIdSet,
-    TraitTypeId, TitanTasksBackendApi, ValueTypeId,
+    TitanTasksBackendApi, TraitTypeId, ValueTypeId,
 };
+use tokio::task_local;
 
 use crate::{
     aggregation_tree::{aggregation_info, ensure_thresholds},

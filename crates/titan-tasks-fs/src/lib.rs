@@ -53,17 +53,17 @@ use read_glob::read_glob;
 pub use read_glob::ReadGlobResult;
 use serde::{Deserialize, Serialize};
 use serde_json::Value;
+use titan_tasks::{
+    mark_stateful, spawn_thread, trace::TraceRawVcs, Completion, InvalidationReason, Invalidator,
+    ReadRef, ValueToString, Vc,
+};
+use titan_tasks_hash::{hash_xxh3_hash64, DeterministicHash, DeterministicHasher};
 use tokio::{
     fs,
     io::{AsyncBufReadExt, AsyncReadExt, BufReader},
     sync::{RwLock, RwLockReadGuard},
 };
 use tracing::{instrument, Instrument, Level};
-use titan_tasks::{
-    mark_stateful, spawn_thread, trace::TraceRawVcs, Completion, InvalidationReason, Invalidator,
-    ReadRef, ValueToString, Vc,
-};
-use titan_tasks_hash::{hash_xxh3_hash64, DeterministicHash, DeterministicHasher};
 use util::{extract_disk_access, join_path, normalize_path, sys_to_unix, unix_to_sys};
 pub use virtual_fs::VirtualFileSystem;
 

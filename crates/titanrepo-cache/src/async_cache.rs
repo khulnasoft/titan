@@ -1,14 +1,14 @@
 use std::sync::{atomic::AtomicU8, Arc};
 
 use futures::{stream::FuturesUnordered, StreamExt};
+use titanpath::{AbsoluteSystemPath, AbsoluteSystemPathBuf, AnchoredSystemPathBuf};
+use titanrepo_analytics::AnalyticsSender;
+use titanrepo_api_client::{APIAuth, APIClient};
 use tokio::{
     sync::{mpsc, Semaphore},
     task::JoinHandle,
 };
 use tracing::warn;
-use titanpath::{AbsoluteSystemPath, AbsoluteSystemPathBuf, AnchoredSystemPathBuf};
-use titanrepo_analytics::AnalyticsSender;
-use titanrepo_api_client::{APIAuth, APIClient};
 
 use crate::{multiplexer::CacheMultiplexer, CacheError, CacheHitMetadata, CacheOpts};
 

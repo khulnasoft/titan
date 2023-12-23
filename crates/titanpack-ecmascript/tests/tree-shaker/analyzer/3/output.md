@@ -6,7 +6,6 @@ Count: 15
 
 ```js
 function d1() {}
-
 ```
 
 - Hoisted
@@ -16,7 +15,6 @@ function d1() {}
 
 ```js
 function d2() {}
-
 ```
 
 - Hoisted
@@ -26,7 +24,6 @@ function d2() {}
 
 ```js
 function d3() {}
-
 ```
 
 - Hoisted
@@ -36,9 +33,8 @@ function d3() {}
 
 ```js
 export function c1_1() {
-    return c1_2();
+  return c1_2();
 }
-
 ```
 
 - Hoisted
@@ -49,9 +45,8 @@ export function c1_1() {
 
 ```js
 function c1_2() {
-    return c1_3(d1);
+  return c1_3(d1);
 }
-
 ```
 
 - Hoisted
@@ -62,9 +57,8 @@ function c1_2() {
 
 ```js
 export function c1_3() {
-    return c1_1(d2);
+  return c1_1(d2);
 }
-
 ```
 
 - Hoisted
@@ -75,9 +69,8 @@ export function c1_3() {
 
 ```js
 function c2_1() {
-    return c2_2(d3);
+  return c2_2(d3);
 }
-
 ```
 
 - Hoisted
@@ -88,9 +81,8 @@ function c2_1() {
 
 ```js
 export function c2_2() {
-    return c2_3();
+  return c2_3();
 }
-
 ```
 
 - Hoisted
@@ -101,9 +93,8 @@ export function c2_2() {
 
 ```js
 function c2_3() {
-    return c2_1();
+  return c2_1();
 }
-
 ```
 
 - Hoisted
@@ -114,7 +105,6 @@ function c2_3() {
 
 ```js
 c1_3();
-
 ```
 
 - Side effects
@@ -124,13 +114,13 @@ c1_3();
 
 ```js
 c2_2();
-
 ```
 
 - Side effects
 - Reads: `c2_2`
 
 # Phase 1
+
 ```mermaid
 graph TD
     Item1;
@@ -153,7 +143,9 @@ graph TD
     Item15;
     Item15["export c2_2"];
 ```
+
 # Phase 2
+
 ```mermaid
 graph TD
     Item1;
@@ -195,7 +187,9 @@ graph TD
     Item11 -.-> Item9;
     Item11 -.-> Item7;
 ```
+
 # Phase 3
+
 ```mermaid
 graph TD
     Item1;
@@ -246,7 +240,9 @@ graph TD
     Item8 --> Item9;
     Item9 --> Item7;
 ```
+
 # Phase 4
+
 ```mermaid
 graph TD
     Item1;
@@ -302,7 +298,9 @@ graph TD
     Item14 --> Item6;
     Item15 --> Item8;
 ```
+
 # Final
+
 ```mermaid
 graph TD
     N0["Items: [ItemId(ModuleEvaluation), ItemId(9, Normal), ItemId(10, Normal)]"];
@@ -326,8 +324,11 @@ graph TD
     N4 --> N7;
     N5 --> N8;
 ```
+
 # Modules (dev)
+
 ## Part 0
+
 ```js
 import { c1_3 } from "entry.js" assert {
     __titanpack_chunk__: 4
@@ -349,7 +350,9 @@ c1_3();
 c2_2();
 
 ```
+
 ## Part 1
+
 ```js
 import { c1_1 } from "entry.js" assert {
     __titanpack_chunk__: 4
@@ -357,7 +360,9 @@ import { c1_1 } from "entry.js" assert {
 export { c1_1 };
 
 ```
+
 ## Part 2
+
 ```js
 import { c1_3 } from "entry.js" assert {
     __titanpack_chunk__: 4
@@ -365,7 +370,9 @@ import { c1_3 } from "entry.js" assert {
 export { c1_3 };
 
 ```
+
 ## Part 3
+
 ```js
 import { c2_2 } from "entry.js" assert {
     __titanpack_chunk__: 5
@@ -373,7 +380,9 @@ import { c2_2 } from "entry.js" assert {
 export { c2_2 };
 
 ```
+
 ## Part 4
+
 ```js
 import { d1 } from "entry.js" assert {
     __titanpack_chunk__: 6
@@ -392,7 +401,9 @@ function c1_3() {
 }
 
 ```
+
 ## Part 5
+
 ```js
 import { d3 } from "entry.js" assert {
     __titanpack_chunk__: 8
@@ -408,51 +419,58 @@ function c2_3() {
 }
 
 ```
+
 ## Part 6
+
 ```js
 function d1() {}
-
 ```
+
 ## Part 7
+
 ```js
 function d2() {}
-
 ```
+
 ## Part 8
+
 ```js
 function d3() {}
-
 ```
+
 ## Merged (module eval)
+
 ```js
 function d1() {}
 function d2() {}
 function c1_1() {
-    return c1_2();
+  return c1_2();
 }
 function c1_2() {
-    return c1_3(d1);
+  return c1_3(d1);
 }
 function c1_3() {
-    return c1_1(d2);
+  return c1_1(d2);
 }
 function d3() {}
 function c2_1() {
-    return c2_2(d3);
+  return c2_2(d3);
 }
 function c2_2() {
-    return c2_3();
+  return c2_3();
 }
 function c2_3() {
-    return c2_1();
+  return c2_1();
 }
-"module evaluation";
+("module evaluation");
 c1_3();
 c2_2();
-
 ```
+
 # Modules (prod)
+
 ## Part 0
+
 ```js
 import { c1_3 } from "entry.js" assert {
     __titanpack_chunk__: 4
@@ -465,7 +483,9 @@ c1_3();
 c2_2();
 
 ```
+
 ## Part 1
+
 ```js
 import { c1_1 } from "entry.js" assert {
     __titanpack_chunk__: 4
@@ -473,7 +493,9 @@ import { c1_1 } from "entry.js" assert {
 export { c1_1 };
 
 ```
+
 ## Part 2
+
 ```js
 import { c1_3 } from "entry.js" assert {
     __titanpack_chunk__: 4
@@ -481,7 +503,9 @@ import { c1_3 } from "entry.js" assert {
 export { c1_3 };
 
 ```
+
 ## Part 3
+
 ```js
 import { c2_2 } from "entry.js" assert {
     __titanpack_chunk__: 5
@@ -489,7 +513,9 @@ import { c2_2 } from "entry.js" assert {
 export { c2_2 };
 
 ```
+
 ## Part 4
+
 ```js
 import { d1 } from "entry.js" assert {
     __titanpack_chunk__: 6
@@ -508,7 +534,9 @@ function c1_3() {
 }
 
 ```
+
 ## Part 5
+
 ```js
 import { d3 } from "entry.js" assert {
     __titanpack_chunk__: 8
@@ -524,89 +552,95 @@ function c2_3() {
 }
 
 ```
+
 ## Part 6
+
 ```js
 function d1() {}
-
 ```
+
 ## Part 7
+
 ```js
 function d2() {}
-
 ```
+
 ## Part 8
+
 ```js
 function d3() {}
-
 ```
+
 ## Merged (module eval)
+
 ```js
 function d1() {}
 function d2() {}
 function c1_1() {
-    return c1_2();
+  return c1_2();
 }
 function c1_2() {
-    return c1_3(d1);
+  return c1_3(d1);
 }
 function c1_3() {
-    return c1_1(d2);
+  return c1_1(d2);
 }
 function d3() {}
 function c2_1() {
-    return c2_2(d3);
+  return c2_2(d3);
 }
 function c2_2() {
-    return c2_3();
+  return c2_3();
 }
 function c2_3() {
-    return c2_1();
+  return c2_1();
 }
-"module evaluation";
+("module evaluation");
 c1_3();
 c2_2();
-
 ```
+
 ## Merged (c1_3)
+
 ```js
 function d1() {}
 function d2() {}
 function c1_1() {
-    return c1_2();
+  return c1_2();
 }
 function c1_2() {
-    return c1_3(d1);
+  return c1_3(d1);
 }
 function c1_3() {
-    return c1_1(d2);
+  return c1_1(d2);
 }
 export { c1_3 };
-
 ```
+
 ## Merged (c1_3,c2_2)
+
 ```js
 function d1() {}
 function d2() {}
 function c1_1() {
-    return c1_2();
+  return c1_2();
 }
 function c1_2() {
-    return c1_3(d1);
+  return c1_3(d1);
 }
 function c1_3() {
-    return c1_1(d2);
+  return c1_1(d2);
 }
 export { c1_3 };
 function d3() {}
 function c2_1() {
-    return c2_2(d3);
+  return c2_2(d3);
 }
 function c2_2() {
-    return c2_3();
+  return c2_3();
 }
 function c2_3() {
-    return c2_1();
+  return c2_1();
 }
 export { c2_2 };
-
 ```

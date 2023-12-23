@@ -1,5 +1,4 @@
 use anyhow::{bail, Context, Result};
-use tracing::Instrument;
 use titan_tasks::{Value, ValueToString, Vc};
 use titan_tasks_fs::FileSystemPath;
 use titanpack_core::{
@@ -18,6 +17,7 @@ use titanpack_ecmascript::{
     manifest::{chunk_asset::ManifestAsyncModule, loader_item::ManifestLoaderChunkItem},
 };
 use titanpack_ecmascript_runtime::RuntimeType;
+use tracing::Instrument;
 
 use crate::ecmascript::{
     chunk::EcmascriptDevChunk,

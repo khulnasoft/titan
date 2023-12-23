@@ -3,8 +3,8 @@ use std::{
     io::{BufRead, BufReader, BufWriter, Write},
 };
 
-use tracing::{debug, warn};
 use titanpath::AbsoluteSystemPath;
+use tracing::{debug, warn};
 
 use crate::{prefixed::PrefixedUI, Error, PrefixedWriter};
 

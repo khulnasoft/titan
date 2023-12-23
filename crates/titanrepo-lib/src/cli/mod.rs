@@ -8,7 +8,6 @@ use clap::{
 use clap_complete::{generate, Shell};
 pub use error::Error;
 use serde::{Deserialize, Serialize};
-use tracing::{debug, error};
 use titanpath::AbsoluteSystemPathBuf;
 use titanrepo_api_client::AnonAPIClient;
 use titanrepo_repository::inference::{RepoMode, RepoState};
@@ -21,6 +20,7 @@ use titanrepo_telemetry::{
     init_telemetry, TelemetryHandle,
 };
 use titanrepo_ui::UI;
+use tracing::{debug, error};
 
 use crate::{
     commands::{

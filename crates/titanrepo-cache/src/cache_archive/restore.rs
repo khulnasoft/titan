@@ -190,8 +190,8 @@ mod tests {
     use tar::Header;
     use tempfile::{tempdir, TempDir};
     use test_case::test_case;
-    use tracing::debug;
     use titanpath::{AbsoluteSystemPath, AbsoluteSystemPathBuf, AnchoredSystemPathBuf};
+    use tracing::debug;
 
     use crate::cache_archive::{restore::CacheReader, restore_symlink::canonicalize_linkname};
 

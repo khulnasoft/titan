@@ -20,6 +20,6 @@ dialoguer = { workspace = true, features = ["fuzzy-select"] }
 indicatif = { workspace = true }
 lazy_static = { workspace = true }
 thiserror = { workspace = true }
-tracing = { workspace = true }
 titanpath = { workspace = true }
 titanrepo-ci = { workspace = true }
+tracing = { workspace = true }

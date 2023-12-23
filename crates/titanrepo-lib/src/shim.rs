@@ -17,7 +17,6 @@ use semver::Version;
 use serde::Deserialize;
 use thiserror::Error;
 use tiny_gradient::{GradientStr, RGB};
-use tracing::debug;
 use titan_updater::check_for_updates;
 use titanpath::{AbsoluteSystemPath, AbsoluteSystemPathBuf};
 use titanrepo_repository::{
@@ -25,6 +24,7 @@ use titanrepo_repository::{
     package_json::PackageJson,
 };
 use titanrepo_ui::UI;
+use tracing::debug;
 
 use crate::{cli, get_version, spawn_child, tracing::TitanSubscriber, Payload};
 

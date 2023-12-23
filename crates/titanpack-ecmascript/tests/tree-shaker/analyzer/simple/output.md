@@ -6,7 +6,6 @@ Count: 7
 
 ```js
 const dog = "dog";
-
 ```
 
 - Declares: `dog`
@@ -16,7 +15,6 @@ const dog = "dog";
 
 ```js
 const cat = "cat";
-
 ```
 
 - Declares: `cat`
@@ -26,7 +24,6 @@ const cat = "cat";
 
 ```js
 export const DOG = dog;
-
 ```
 
 - Declares: `DOG`
@@ -37,7 +34,6 @@ export const DOG = dog;
 
 ```js
 export const CHIMERA = cat + dog;
-
 ```
 
 - Declares: `CHIMERA`
@@ -45,6 +41,7 @@ export const CHIMERA = cat + dog;
 - Write: `CHIMERA`
 
 # Phase 1
+
 ```mermaid
 graph TD
     Item1;
@@ -58,7 +55,9 @@ graph TD
     Item7;
     Item7["export CHIMERA"];
 ```
+
 # Phase 2
+
 ```mermaid
 graph TD
     Item1;
@@ -75,7 +74,9 @@ graph TD
     Item4 --> Item2;
     Item4 --> Item1;
 ```
+
 # Phase 3
+
 ```mermaid
 graph TD
     Item1;
@@ -92,7 +93,9 @@ graph TD
     Item4 --> Item2;
     Item4 --> Item1;
 ```
+
 # Phase 4
+
 ```mermaid
 graph TD
     Item1;
@@ -111,7 +114,9 @@ graph TD
     Item6 --> Item3;
     Item7 --> Item4;
 ```
+
 # Final
+
 ```mermaid
 graph TD
     N0["Items: [ItemId(ModuleEvaluation)]"];
@@ -121,13 +126,17 @@ graph TD
     N1 --> N3;
     N2 --> N3;
 ```
+
 # Modules (dev)
+
 ## Part 0
+
 ```js
 "module evaluation";
-
 ```
+
 ## Part 1
+
 ```js
 import { dog } from "entry.js" assert {
     __titanpack_chunk__: 3
@@ -137,7 +146,9 @@ const DOG = dog;
 export { DOG };
 
 ```
+
 ## Part 2
+
 ```js
 import { dog } from "entry.js" assert {
     __titanpack_chunk__: 3
@@ -149,24 +160,30 @@ export { cat };
 export { CHIMERA };
 
 ```
+
 ## Part 3
+
 ```js
 const dog = "dog";
 export { dog };
-
 ```
+
 ## Merged (module eval)
+
 ```js
 "module evaluation";
-
 ```
+
 # Modules (prod)
+
 ## Part 0
+
 ```js
 "module evaluation";
-
 ```
+
 ## Part 1
+
 ```js
 import { dog } from "entry.js" assert {
     __titanpack_chunk__: 3
@@ -176,7 +193,9 @@ const DOG = dog;
 export { DOG };
 
 ```
+
 ## Part 2
+
 ```js
 import { dog } from "entry.js" assert {
     __titanpack_chunk__: 3
@@ -188,14 +207,16 @@ export { cat };
 export { CHIMERA };
 
 ```
+
 ## Part 3
+
 ```js
 const dog = "dog";
 export { dog };
-
 ```
+
 ## Merged (module eval)
+
 ```js
 "module evaluation";
-
 ```

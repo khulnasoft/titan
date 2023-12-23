@@ -4,10 +4,10 @@ use std::{
     str::FromStr,
 };
 
-use tracing::debug;
 use titanpath::{AbsoluteSystemPath, AnchoredSystemPathBuf};
 use titanrepo_repository::package_graph::{self, PackageGraph, WorkspaceName};
 use titanrepo_scm::SCM;
+use tracing::debug;
 use wax::Pattern;
 
 use super::{

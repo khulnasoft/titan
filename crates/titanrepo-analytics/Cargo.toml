@@ -13,8 +13,8 @@ workspace = true
 async-trait = { workspace = true }
 futures.workspace = true
 thiserror = { workspace = true }
-tokio = { workspace = true, features = ["full", "time"] }
-tracing = { workspace = true }
 titanrepo-api-client = { workspace = true }
 titanrepo-vercel-api = { workspace = true }
+tokio = { workspace = true, features = ["full", "time"] }
+tracing = { workspace = true }
 uuid = { version = "1.5.0", features = ["v4"] }

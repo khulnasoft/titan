@@ -47,7 +47,6 @@ use swc_core::{
         },
     },
 };
-use tracing::Instrument;
 use titan_tasks::{TryJoinIterExt, Upcast, Value, ValueToString, Vc};
 use titan_tasks_fs::{FileJsonContent, FileSystemPath};
 use titanpack_core::{
@@ -69,6 +68,7 @@ use titanpack_core::{
     source_map::{GenerateSourceMap, OptionSourceMap, SourceMap},
 };
 use titanpack_swc_utils::emitter::IssueEmitter;
+use tracing::Instrument;
 use unreachable::Unreachable;
 
 use self::{

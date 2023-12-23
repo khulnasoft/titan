@@ -1,8 +1,8 @@
 use std::sync::Arc;
 
-use tokio::sync::watch::Receiver;
 use titanpath::AbsoluteSystemPathBuf;
 use titanrepo_repository::discovery::{DiscoveryResponse, Error, PackageDiscovery, WorkspaceData};
+use tokio::sync::watch::Receiver;
 
 use crate::daemon::{proto::PackageManager, DaemonClient, FileWatching};
 

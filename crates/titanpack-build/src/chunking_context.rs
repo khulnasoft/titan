@@ -2,7 +2,6 @@ use std::iter::once;
 
 use anyhow::{bail, Context, Result};
 use serde::{Deserialize, Serialize};
-use tracing::Instrument;
 use titan_tasks::{trace::TraceRawVcs, TaskInput, Value, ValueToString, Vc};
 use titan_tasks_fs::FileSystemPath;
 use titan_tasks_hash::DeterministicHash;
@@ -22,6 +21,7 @@ use titanpack_ecmascript::{
     manifest::{chunk_asset::ManifestAsyncModule, loader_item::ManifestLoaderChunkItem},
 };
 use titanpack_ecmascript_runtime::RuntimeType;
+use tracing::Instrument;
 
 use crate::ecmascript::node::{
     chunk::EcmascriptBuildNodeChunk, entry::chunk::EcmascriptBuildNodeEntryChunk,

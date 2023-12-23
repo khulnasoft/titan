@@ -1,9 +1,9 @@
 use std::sync::atomic::{AtomicBool, Ordering};
 
-use tracing::{debug, warn};
 use titanpath::{AbsoluteSystemPath, AnchoredSystemPathBuf};
 use titanrepo_analytics::AnalyticsSender;
 use titanrepo_api_client::{APIAuth, APIClient};
+use tracing::{debug, warn};
 
 use crate::{fs::FSCache, http::HTTPCache, CacheError, CacheHitMetadata, CacheOpts};
 

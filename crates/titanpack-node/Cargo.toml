@@ -32,8 +32,6 @@ regex = { workspace = true }
 serde = { workspace = true }
 serde_json = { workspace = true }
 serde_qs = { workspace = true }
-tokio = { workspace = true, features = ["full"] }
-tracing = { workspace = true }
 titan-tasks = { workspace = true }
 titan-tasks-bytes = { workspace = true }
 titan-tasks-env = { workspace = true }
@@ -42,6 +40,8 @@ titanpack-cli-utils = { workspace = true }
 titanpack-core = { workspace = true }
 titanpack-dev-server = { workspace = true }
 titanpack-ecmascript = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+tracing = { workspace = true }
 url = { workspace = true }
 urlencoding = { workspace = true }
 

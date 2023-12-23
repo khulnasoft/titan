@@ -1,6 +1,6 @@
 use serde::Serialize;
-use tracing::trace;
 use titanrepo_repository::{package_json::PackageJson, package_manager::PackageManager};
+use tracing::trace;
 
 use crate::{cli::Args, commands::CommandBase, config::ConfigurationOptions, run};
 

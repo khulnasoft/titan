@@ -2,10 +2,10 @@ use std::{backtrace::Backtrace, ffi::OsString};
 
 use camino::Utf8Component;
 use tar::Header;
-use tracing::debug;
 use titanpath::{
     AbsoluteSystemPath, AbsoluteSystemPathBuf, AnchoredSystemPath, AnchoredSystemPathBuf,
 };
+use tracing::debug;
 
 use crate::CacheError;
 

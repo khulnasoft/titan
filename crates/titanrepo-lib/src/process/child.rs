@@ -442,12 +442,12 @@ mod test {
     use std::{assert_matches::assert_matches, process::Stdio, time::Duration};
 
     use futures::{stream::FuturesUnordered, StreamExt};
+    use titanpath::AbsoluteSystemPathBuf;
     use tokio::{
         io::{AsyncReadExt, AsyncWriteExt},
         process::Command,
     };
     use tracing_test::traced_test;
-    use titanpath::AbsoluteSystemPathBuf;
 
     use super::{Child, ChildState};
     use crate::process::child::{ChildExit, ShutdownStyle};

@@ -7,9 +7,9 @@ use std::{
 
 use notify::Event;
 use thiserror::Error;
+use titanpath::{AbsoluteSystemPath, AbsoluteSystemPathBuf, RelativeUnixPath};
 use tokio::sync::{broadcast, mpsc, oneshot};
 use tracing::warn;
-use titanpath::{AbsoluteSystemPath, AbsoluteSystemPathBuf, RelativeUnixPath};
 use wax::{Any, Glob, Pattern};
 
 use crate::{

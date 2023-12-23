@@ -1,12 +1,12 @@
 function x(a) {
   return function y(b) {
     return a + b;
-  }
+  };
 }
 const v1 = x(1)(2);
 
 function r(a) {
-  if(a % 2 === 0) {
+  if (a % 2 === 0) {
     return a;
   } else {
     return r(a + 1) + 1;
@@ -19,6 +19,6 @@ function outer(a) {
     return a + b;
   }
 
-  return inner("b")
+  return inner("b");
 }
 const v3 = outer("a");

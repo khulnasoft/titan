@@ -1,11 +1,11 @@
 use std::{backtrace::Backtrace, io::Write};
 
-use tracing::debug;
 use titanpath::{AbsoluteSystemPath, AbsoluteSystemPathBuf, AnchoredSystemPathBuf};
 use titanrepo_analytics::AnalyticsSender;
 use titanrepo_api_client::{
     analytics, analytics::AnalyticsEvent, APIAuth, APIClient, Client, Response,
 };
+use tracing::debug;
 
 use crate::{
     cache_archive::{CacheReader, CacheWriter},

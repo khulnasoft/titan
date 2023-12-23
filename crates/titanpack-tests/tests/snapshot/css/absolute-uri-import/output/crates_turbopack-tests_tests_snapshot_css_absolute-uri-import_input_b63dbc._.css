@@ -1,5 +1,5 @@
 @import "https://example.com/stylesheet1.css";
-@import "https://example.com/withquote\".css";
+@import 'https://example.com/withquote".css';
 @import "https://example.com/stylesheet2.css";
 /* [project]/crates/titanpack-tests/tests/snapshot/css/absolute-uri-import/input/other.css [test] (css) */
 .foo {

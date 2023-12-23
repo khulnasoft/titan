@@ -4,11 +4,11 @@ use anyhow::Result;
 use lazy_static::lazy_static;
 use regex::Regex;
 use serde::{Deserialize, Serialize};
-use tracing::Instrument;
 use titan_tasks::{trace::TraceRawVcs, Value, ValueToString, Vc};
 use titan_tasks_fs::{
     DirectoryContent, DirectoryEntry, FileSystemEntryType, FileSystemPath, LinkContent, LinkType,
 };
+use tracing::Instrument;
 
 #[titan_tasks::value(shared, serialization = "auto_for_input")]
 #[derive(PartialOrd, Ord, Hash, Clone, Debug, Default)]

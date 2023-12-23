@@ -6,7 +6,7 @@ use std::{
 };
 
 use anyhow::{bail, Context, Result};
-use titan_tasks::{TransientInstance, TryJoinIterExt, TitanTasks, Value, Vc};
+use titan_tasks::{TitanTasks, TransientInstance, TryJoinIterExt, Value, Vc};
 use titan_tasks_fs::FileSystem;
 use titan_tasks_memory::MemoryBackend;
 use titanpack::ecmascript::EcmascriptModuleAsset;

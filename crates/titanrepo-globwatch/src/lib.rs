@@ -37,13 +37,13 @@ use merge_streams::MergeStreams;
 pub use notify::{Event, Watcher};
 pub use stop_token::{stream::StreamExt, StopSource, StopToken, TimedOutError};
 use thiserror::Error;
+use titanpath::{AbsoluteSystemPath, AbsoluteSystemPathBuf, PathError};
 use tokio::sync::{
     mpsc::{UnboundedReceiver, UnboundedSender},
     watch,
 };
 use tokio_stream::wrappers::UnboundedReceiverStream;
 use tracing::{error, event, span, trace, warn, Level};
-use titanpath::{AbsoluteSystemPath, AbsoluteSystemPathBuf, PathError};
 
 /// WatchError wraps errors produced by GlobWatcher
 #[derive(Debug, Error)]

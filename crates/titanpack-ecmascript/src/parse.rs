@@ -19,7 +19,6 @@ use swc_core::{
         visit::VisitMutWith,
     },
 };
-use tracing::Instrument;
 use titan_tasks::{util::WrapFuture, Value, ValueToString, Vc};
 use titan_tasks_fs::{FileContent, FileSystemPath};
 use titan_tasks_hash::hash_xxh3_hash64;
@@ -32,6 +31,7 @@ use titanpack_core::{
     SOURCE_MAP_ROOT_NAME,
 };
 use titanpack_swc_utils::emitter::IssueEmitter;
+use tracing::Instrument;
 
 use super::EcmascriptModuleAssetType;
 use crate::{

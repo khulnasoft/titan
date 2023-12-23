@@ -27,7 +27,7 @@ use titan_tasks::{
         PersistedGraphApi, ReadTaskState, TaskCell, TaskData,
     },
     util::{IdFactory, NoMoveVec, SharedError},
-    CellId, RawVc, TaskId, TaskIdSet, TraitTypeId, TitanTasksBackendApi, Unused,
+    CellId, RawVc, TaskId, TaskIdSet, TitanTasksBackendApi, TraitTypeId, Unused,
 };
 
 type RootTaskFn =

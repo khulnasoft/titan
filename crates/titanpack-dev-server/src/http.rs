@@ -10,7 +10,6 @@ use hyper::{
 };
 use mime::Mime;
 use mime_guess::mime;
-use tokio_util::io::{ReaderStream, StreamReader};
 use titan_tasks::{util::SharedError, CollectiblesSource, ReadRef, TransientInstance, Vc};
 use titan_tasks_bytes::Bytes;
 use titan_tasks_fs::FileContent;
@@ -19,6 +18,7 @@ use titanpack_core::{
     issue::{handle_issues, IssueReporter, IssueSeverity},
     version::VersionedContent,
 };
+use tokio_util::io::{ReaderStream, StreamReader};
 
 use crate::source::{
     request::SourceRequest,

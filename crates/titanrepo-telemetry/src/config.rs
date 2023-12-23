@@ -6,8 +6,8 @@ use hex;
 use serde::{Deserialize, Serialize};
 use serde_json;
 use sha2::{Digest, Sha256};
-use tracing::{debug, error};
 use titanrepo_ui::{color, BOLD, GREY, UI, UNDERLINE};
+use tracing::{debug, error};
 use uuid::Uuid;
 
 // Telemetry ships disabled by default until we can announce it publicly, this

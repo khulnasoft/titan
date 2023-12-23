@@ -9,8 +9,6 @@ use const_format::concatcp;
 pub use content_source::NextSourceMapTraceContentSource;
 use once_cell::sync::Lazy;
 use regex::Regex;
-pub use trace::{SourceMapTrace, StackFrame, TraceResult};
-use tracing::{instrument, Level};
 use titan_tasks::{ReadRef, Vc};
 use titan_tasks_fs::{
     source_context::get_source_context, to_sys_path, FileLinesContent, FileSystemPath,
@@ -21,6 +19,8 @@ use titanpack_core::{
     SOURCE_MAP_ROOT_NAME,
 };
 use titanpack_ecmascript::magic_identifier::unmangle_identifiers;
+pub use trace::{SourceMapTrace, StackFrame, TraceResult};
+use tracing::{instrument, Level};
 
 use crate::{internal_assets_for_source_mapping, pool::FormattingMode, AssetsForSourceMapping};
 

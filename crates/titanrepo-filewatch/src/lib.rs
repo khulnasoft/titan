@@ -21,9 +21,9 @@ use notify::event::EventKind;
 use notify::{Config, RecommendedWatcher};
 use notify::{Event, EventHandler, RecursiveMode, Watcher};
 use thiserror::Error;
+use titanpath::{AbsoluteSystemPath, AbsoluteSystemPathBuf, PathRelation};
 use tokio::sync::{broadcast, mpsc};
 use tracing::{debug, warn};
-use titanpath::{AbsoluteSystemPath, AbsoluteSystemPathBuf, PathRelation};
 #[cfg(feature = "manual_recursive_watch")]
 use {
     notify::{
@@ -414,8 +414,8 @@ mod test {
     #[cfg(not(target_os = "windows"))]
     use notify::event::RenameMode;
     use notify::{event::ModifyKind, Event, EventKind};
-    use tokio::sync::broadcast;
     use titanpath::{AbsoluteSystemPath, AbsoluteSystemPathBuf};
+    use tokio::sync::broadcast;
 
     use crate::{FileSystemWatcher, NotifyError};
 

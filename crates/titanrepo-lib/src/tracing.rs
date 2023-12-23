@@ -5,6 +5,7 @@ use owo_colors::{
     colors::{Black, Default, Red, Yellow},
     Color, OwoColorize,
 };
+use titanrepo_ui::UI;
 use tracing::{field::Visit, metadata::LevelFilter, trace, Event, Level, Subscriber};
 use tracing_appender::{non_blocking::NonBlocking, rolling::RollingFileAppender};
 use tracing_chrome::ChromeLayer;
@@ -22,7 +23,6 @@ use tracing_subscriber::{
     reload::{self, Handle},
     EnvFilter, Layer, Registry,
 };
-use titanrepo_ui::UI;
 
 // a lot of types to make sure we record the right relationships
 

@@ -5,7 +5,6 @@ use std::path::Path;
 
 use anyhow::{Context, Result};
 use clap::Parser;
-use tracing_subscriber::{layer::SubscriberExt, util::SubscriberInitExt, EnvFilter, Registry};
 use titanpack_cli::{arguments::Arguments, register};
 use titanpack_trace_utils::{
     exit::ExitGuard,
@@ -15,6 +14,7 @@ use titanpack_trace_utils::{
         TRACING_OVERVIEW_TARGETS, TRACING_TITANPACK_TARGETS, TRACING_TITAN_TASKS_TARGETS,
     },
 };
+use tracing_subscriber::{layer::SubscriberExt, util::SubscriberInitExt, EnvFilter, Registry};
 
 #[global_allocator]
 static ALLOC: titan_tasks_malloc::TitanMalloc = titan_tasks_malloc::TitanMalloc;

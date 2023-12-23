@@ -9,8 +9,8 @@ mod traits;
 use std::collections::HashMap;
 
 use capnp::message::{Builder, HeapAllocator};
-pub use traits::TitanHash;
 use titanrepo_env::{EnvironmentVariablePairs, ResolvedEnvMode};
+pub use traits::TitanHash;
 
 use crate::{cli::EnvMode, task_graph::TaskOutputs};
 

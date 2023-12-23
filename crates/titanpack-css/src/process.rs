@@ -24,7 +24,6 @@ use swc_core::{
         visit::{VisitMut, VisitMutWith},
     },
 };
-use tracing::Instrument;
 use titan_tasks::{ValueToString, Vc};
 use titan_tasks_fs::{FileContent, FileSystemPath};
 use titanpack_core::{
@@ -37,6 +36,7 @@ use titanpack_core::{
     source_map::{GenerateSourceMap, OptionSourceMap},
 };
 use titanpack_swc_utils::emitter::IssueEmitter;
+use tracing::Instrument;
 
 use crate::{
     lifetime_util::stylesheet_into_static,

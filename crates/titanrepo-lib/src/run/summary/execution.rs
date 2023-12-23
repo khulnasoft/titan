@@ -2,9 +2,9 @@ use std::fmt;
 
 use chrono::{DateTime, Local};
 use serde::Serialize;
-use tokio::sync::mpsc;
 use titanpath::{AbsoluteSystemPathBuf, AnchoredSystemPath};
 use titanrepo_ui::{color, cprintln, BOLD, BOLD_GREEN, BOLD_RED, MAGENTA, UI, YELLOW};
+use tokio::sync::mpsc;
 
 use super::TitanDuration;
 use crate::run::{summary::task::TaskSummary, task_id::TaskId};

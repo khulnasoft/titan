@@ -5,11 +5,11 @@
 
 /* [project]/crates/titanpack-tests/tests/snapshot/css/css/input/imported.css [test] (css) */
 @layer layer {
-@media print {
-.imported {
-  color: cyan;
-}
-}
+  @media print {
+    .imported {
+      color: cyan;
+    }
+  }
 }
 
 /* [project]/crates/titanpack-tests/tests/snapshot/css/css/input/style.css [test] (css) */
@@ -21,7 +21,7 @@
 .module-style__style__9bcf751c {
   color: magenta;
 }
-.module-style__style__9bcf751c > h1, 
+.module-style__style__9bcf751c > h1,
 .module-style__style__9bcf751c + .inner__style__9bcf751c {
   background: purple;
 }

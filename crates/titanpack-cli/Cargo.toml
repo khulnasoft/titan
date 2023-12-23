@@ -50,9 +50,6 @@ once_cell = { workspace = true }
 owo-colors = { workspace = true }
 serde = { workspace = true }
 serde_json = { workspace = true }
-tokio = { workspace = true, features = ["full"] }
-tracing = { workspace = true }
-tracing-subscriber = { workspace = true, features = ["env-filter", "json"] }
 titan-tasks = { workspace = true }
 titan-tasks-env = { workspace = true }
 titan-tasks-fetch = { workspace = true, default-features = false }
@@ -72,6 +69,9 @@ titanpack-ecmascript-runtime = { workspace = true }
 titanpack-env = { workspace = true }
 titanpack-node = { workspace = true }
 titanpack-trace-utils = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true, features = ["env-filter", "json"] }
 webbrowser = { workspace = true }
 
 [dev-dependencies]

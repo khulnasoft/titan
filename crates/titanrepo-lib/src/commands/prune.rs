@@ -3,7 +3,6 @@ use std::os::unix::fs::PermissionsExt;
 use std::sync::OnceLock;
 
 use lazy_static::lazy_static;
-use tracing::trace;
 use titanpath::{
     AbsoluteSystemPathBuf, AnchoredSystemPath, AnchoredSystemPathBuf, RelativeUnixPath,
 };
@@ -13,6 +12,7 @@ use titanrepo_repository::{
 };
 use titanrepo_telemetry::events::command::CommandEventBuilder;
 use titanrepo_ui::BOLD;
+use tracing::trace;
 
 use super::CommandBase;
 use crate::config::RawTitanJson;

@@ -29,8 +29,8 @@ rustc_version_runtime = "0.2.1"
 serde = { workspace = true }
 serde_json = { workspace = true }
 thiserror = { workspace = true }
-tokio = { workspace = true, features = ["full"] }
 titanpath = { workspace = true }
 titanrepo-ci = { workspace = true }
 titanrepo-vercel-api = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
 url = { workspace = true }

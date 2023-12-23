@@ -10,9 +10,9 @@ use globwatch::{ConfigError, GlobWatcher, StopToken, WatchConfig, WatchError, Wa
 use itertools::Itertools;
 use notify::{EventKind, RecommendedWatcher};
 use thiserror::Error;
+use titanpath::{AbsoluteSystemPath, AbsoluteSystemPathBuf, PathError};
 use tokio::time::timeout;
 use tracing::{trace, warn};
-use titanpath::{AbsoluteSystemPath, AbsoluteSystemPathBuf, PathError};
 use wax::{Glob as WaxGlob, Pattern};
 
 // these aliases are for readability, but they're just strings. it may make
@@ -373,8 +373,8 @@ mod test {
     use std::{sync::Arc, time::Duration};
 
     use globwatch::StopSource;
-    use tokio::time::timeout;
     use titanpath::{AbsoluteSystemPath, AbsoluteSystemPathBuf, RelativeUnixPathBuf};
+    use tokio::time::timeout;
 
     fn temp_dir() -> (AbsoluteSystemPathBuf, tempfile::TempDir) {
         let tmp = tempfile::tempdir().unwrap();

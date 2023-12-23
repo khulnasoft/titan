@@ -16,14 +16,14 @@ use events::TelemetryEvent;
 use futures::{stream::FuturesUnordered, StreamExt};
 use once_cell::sync::OnceCell;
 use thiserror::Error;
+use titanrepo_api_client::telemetry;
+use titanrepo_ui::{color, BOLD, GREY, UI};
 use tokio::{
     select,
     sync::{mpsc, oneshot},
     task::{JoinError, JoinHandle},
 };
 use tracing::{debug, error};
-use titanrepo_api_client::telemetry;
-use titanrepo_ui::{color, BOLD, GREY, UI};
 use uuid::Uuid;
 
 const BUFFER_THRESHOLD: usize = 10;
@@ -257,13 +257,13 @@ mod tests {
     };
 
     use async_trait::async_trait;
+    use titanrepo_api_client::telemetry::TelemetryClient;
+    use titanrepo_ui::UI;
+    use titanrepo_vercel_api::{TelemetryEvent, TelemetryGenericEvent};
     use tokio::{
         select,
         sync::{mpsc, mpsc::UnboundedReceiver},
     };
-    use titanrepo_api_client::telemetry::TelemetryClient;
-    use titanrepo_ui::UI;
-    use titanrepo_vercel_api::{TelemetryEvent, TelemetryGenericEvent};
 
     use crate::init;
 

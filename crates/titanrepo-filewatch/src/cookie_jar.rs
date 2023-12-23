@@ -8,12 +8,12 @@ use std::{
 
 use notify::{Event, EventKind};
 use thiserror::Error;
+use titanpath::{AbsoluteSystemPath, AbsoluteSystemPathBuf, PathRelation};
 use tokio::{
     sync::{broadcast, oneshot},
     time::error::Elapsed,
 };
 use tracing::{debug, trace};
-use titanpath::{AbsoluteSystemPath, AbsoluteSystemPathBuf, PathRelation};
 
 use crate::NotifyError;
 
@@ -192,8 +192,8 @@ mod test {
     use std::{assert_matches::assert_matches, sync::Arc, time::Duration};
 
     use notify::{event::CreateKind, ErrorKind, Event, EventKind};
-    use tokio::{sync::broadcast, time};
     use titanpath::{AbsoluteSystemPath, AbsoluteSystemPathBuf};
+    use tokio::{sync::broadcast, time};
 
     use crate::{
         cookie_jar::{CookieError, CookieJar, WatchError},

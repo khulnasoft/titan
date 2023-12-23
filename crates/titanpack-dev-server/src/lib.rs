@@ -29,8 +29,6 @@ use hyper::{
 };
 use parking_lot::Mutex;
 use socket2::{Domain, Protocol, Socket, Type};
-use tokio::task::JoinHandle;
-use tracing::{event, info_span, Instrument, Level, Span};
 use titan_tasks::{
     run_once_with_reason, trace::TraceRawVcs, util::FormatDuration, TitanTasksApi, Vc,
 };
@@ -38,6 +36,8 @@ use titanpack_core::{
     error::PrettyPrintError,
     issue::{handle_issues, IssueReporter, IssueSeverity},
 };
+use tokio::task::JoinHandle;
+use tracing::{event, info_span, Instrument, Level, Span};
 
 use self::{source::ContentSource, update::UpdateServer};
 use crate::{

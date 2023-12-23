@@ -8,12 +8,12 @@ use std::{
 
 use anyhow::{anyhow, bail, Result};
 use serde_json::Value as JsonValue;
-use tracing::{Instrument, Level};
 use titan_tasks::{TryJoinIterExt, Value, ValueToString, Vc};
 use titan_tasks_fs::{
     util::{normalize_path, normalize_request},
     FileSystemEntryType, FileSystemPath, RealPathResult,
 };
+use tracing::{Instrument, Level};
 
 use self::{
     options::{

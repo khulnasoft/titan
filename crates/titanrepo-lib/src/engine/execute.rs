@@ -1,9 +1,9 @@
 use std::sync::{Arc, Mutex};
 
 use futures::{stream::FuturesUnordered, StreamExt};
+use titanrepo_graph_utils::Walker;
 use tokio::sync::{mpsc, oneshot, Semaphore};
 use tracing::log::debug;
-use titanrepo_graph_utils::Walker;
 
 use super::{Engine, TaskNode};
 use crate::run::task_id::TaskId;

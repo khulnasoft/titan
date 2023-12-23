@@ -12,8 +12,8 @@ use std::{
 use itertools::Itertools;
 use path_slash::PathExt;
 use regex::Regex;
-use tracing::{info_span, Span};
 use titanpath::{AbsoluteSystemPath, AbsoluteSystemPathBuf, PathError};
+use tracing::{info_span, Span};
 use wax::{BuildError, Glob, Pattern};
 
 #[derive(Debug, PartialEq, Clone, Copy)]

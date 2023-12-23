@@ -1,8 +1,8 @@
 use std::collections::HashMap;
 
 use itertools::{Either, Itertools};
-use tracing::debug;
 use titanpath::{AbsoluteSystemPath, AnchoredSystemPath, PathError, RelativeUnixPathBuf};
+use tracing::debug;
 
 use crate::{hash_object::hash_objects, Error, Git, SCM};
 

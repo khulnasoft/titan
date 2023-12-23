@@ -1,4 +1,3 @@
+export * from "./exported.cjs";
 
-export * from './exported.cjs'
-
-console.log('Hoist test')
+console.log("Hoist test");

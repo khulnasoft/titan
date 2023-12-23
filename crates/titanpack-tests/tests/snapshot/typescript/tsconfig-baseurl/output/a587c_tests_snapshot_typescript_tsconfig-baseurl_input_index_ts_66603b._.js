@@ -1,11 +1,12 @@
 (globalThis.TITANPACK = globalThis.TITANPACK || []).push([
-    "output/a587c_tests_snapshot_typescript_tsconfig-baseurl_input_index_ts_66603b._.js",
-    {},
+  "output/a587c_tests_snapshot_typescript_tsconfig-baseurl_input_index_ts_66603b._.js",
+  {},
 ]);
-(globalThis.TITANPACK_CHUNK_LISTS = globalThis.TITANPACK_CHUNK_LISTS || []).push({
-  "path": "output/a587c_tests_snapshot_typescript_tsconfig-baseurl_input_index_ts_66603b._.js",
-  "chunks": [
-    "output/crates_titanpack-tests_tests_snapshot_typescript_tsconfig-baseurl_input_7bf5e3._.js"
+(globalThis.TITANPACK_CHUNK_LISTS =
+  globalThis.TITANPACK_CHUNK_LISTS || []).push({
+  path: "output/a587c_tests_snapshot_typescript_tsconfig-baseurl_input_index_ts_66603b._.js",
+  chunks: [
+    "output/crates_titanpack-tests_tests_snapshot_typescript_tsconfig-baseurl_input_7bf5e3._.js",
   ],
-  "source": "entry"
+  source: "entry",
 });

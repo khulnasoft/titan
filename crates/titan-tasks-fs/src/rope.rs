@@ -14,8 +14,8 @@ use anyhow::{Context, Result};
 use bytes::{Buf, Bytes};
 use futures::Stream;
 use serde::{Deserialize, Deserializer, Serialize, Serializer};
-use tokio::io::{AsyncRead, ReadBuf};
 use titan_tasks_hash::{DeterministicHash, DeterministicHasher};
+use tokio::io::{AsyncRead, ReadBuf};
 use RopeElem::{Local, Shared};
 
 static EMPTY_BUF: &[u8] = &[];

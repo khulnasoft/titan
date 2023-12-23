@@ -400,12 +400,12 @@ mod test {
     use std::{assert_matches::assert_matches, path::Path};
 
     use sysinfo::Pid;
+    use titanpath::AbsoluteSystemPathBuf;
     use tokio::{
         select,
         sync::{oneshot::Sender, Mutex},
     };
     use tracing::info;
-    use titanpath::AbsoluteSystemPathBuf;
 
     use super::*;
     use crate::daemon::proto;

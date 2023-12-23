@@ -19,12 +19,12 @@ serde = { workspace = true, features = ["derive"] }
 serde_json = { workspace = true }
 serde_yaml = { workspace = true }
 thiserror = "1.0.38"
-tokio-stream = "0.1.14"
-tokio.workspace = true
-tracing.workspace = true
 titanpath = { workspace = true }
 titanrepo-graph-utils = { path = "../titanrepo-graph-utils" }
 titanrepo-lockfiles = { workspace = true }
+tokio-stream = "0.1.14"
+tokio.workspace = true
+tracing.workspace = true
 wax = { workspace = true }
 which = { workspace = true }
 

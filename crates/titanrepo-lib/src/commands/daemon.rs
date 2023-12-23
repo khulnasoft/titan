@@ -4,9 +4,9 @@ use camino::Utf8PathBuf;
 use futures::FutureExt;
 use pidlock::PidlockError::AlreadyOwned;
 use time::{format_description, OffsetDateTime};
+use titanpath::AbsoluteSystemPathBuf;
 use tokio::signal::ctrl_c;
 use tracing::{trace, warn};
-use titanpath::AbsoluteSystemPathBuf;
 
 use super::CommandBase;
 use crate::{

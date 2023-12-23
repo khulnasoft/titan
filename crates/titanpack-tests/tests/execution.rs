@@ -9,7 +9,7 @@ use anyhow::{Context, Result};
 use dunce::canonicalize;
 use serde::{Deserialize, Serialize};
 use titan_tasks::{
-    debug::ValueDebugFormat, trace::TraceRawVcs, Completion, TryJoinIterExt, TitanTasks, Value, Vc,
+    debug::ValueDebugFormat, trace::TraceRawVcs, Completion, TitanTasks, TryJoinIterExt, Value, Vc,
 };
 use titan_tasks_bytes::stream::SingleValue;
 use titan_tasks_env::CommandLineProcessEnv;

@@ -1,34 +1,34 @@
 /* [project]/crates/titanpack-tests/tests/snapshot/css/chained-attributes/input/c.css [test] (css) */
 @layer layer.foo {
-@media print and (orientation:landscape) {
-@supports not(display: inline-grid) and font-format(woff2) {
-.imported {
-  color: red;
-}
-}
-}
+  @media print and (orientation: landscape) {
+    @supports not (display: inline-grid) and font-format(woff2) {
+      .imported {
+        color: red;
+      }
+    }
+  }
 }
 
 /* [project]/crates/titanpack-tests/tests/snapshot/css/chained-attributes/input/b.css [test] (css) */
 @layer layer {
-@media print {
-@supports not(display: inline-grid) and font-format(woff2) {
-.imported {
-  color: orange;
-}
-}
-}
+  @media print {
+    @supports not (display: inline-grid) and font-format(woff2) {
+      .imported {
+        color: orange;
+      }
+    }
+  }
 }
 
 /* [project]/crates/titanpack-tests/tests/snapshot/css/chained-attributes/input/a.css [test] (css) */
 @layer layer {
-@media print {
-@supports not(display: inline-grid) {
-.imported {
-  color: cyan;
-}
-}
-}
+  @media print {
+    @supports not (display: inline-grid) {
+      .imported {
+        color: cyan;
+      }
+    }
+  }
 }
 
 /* [project]/crates/titanpack-tests/tests/snapshot/css/chained-attributes/input/style.css [test] (css) */

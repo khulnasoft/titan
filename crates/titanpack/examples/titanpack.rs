@@ -8,7 +8,6 @@ use std::{
 };
 
 use anyhow::Result;
-use tokio::{spawn, time::sleep};
 use titan_tasks::{util::FormatDuration, TitanTasks, TitanTasksBackendApi, UpdateInfo, Value, Vc};
 use titan_tasks_fs::{DiskFileSystem, FileSystem};
 use titan_tasks_memory::{
@@ -27,6 +26,7 @@ use titanpack_core::{
     file_source::FileSource,
     PROJECT_FILESYSTEM_NAME,
 };
+use tokio::{spawn, time::sleep};
 
 #[tokio::main]
 async fn main() -> Result<()> {

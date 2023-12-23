@@ -30,20 +30,20 @@ serde_json = { workspace = true, features = ["preserve_order"] }
 serde_qs = { workspace = true }
 sourcemap = { workspace = true }
 swc_core = { workspace = true, features = ["ecma_preset_env", "common"] }
-tracing = { workspace = true }
 titan-tasks = { workspace = true }
 titan-tasks-env = { workspace = true }
 titan-tasks-fs = { workspace = true }
 titan-tasks-hash = { workspace = true }
+tracing = { workspace = true }
 
 [build-dependencies]
 titan-tasks-build = { workspace = true }
 
 [dev-dependencies]
 rstest = { workspace = true }
-tokio = { workspace = true }
 titan-tasks-memory = { workspace = true }
 titan-tasks-testing = { workspace = true }
+tokio = { workspace = true }
 
 [features]
 default = []

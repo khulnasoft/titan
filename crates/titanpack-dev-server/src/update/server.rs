@@ -8,15 +8,15 @@ use futures::{prelude::*, ready, stream::FusedStream, SinkExt};
 use hyper::{upgrade::Upgraded, HeaderMap, Uri};
 use hyper_tungstenite::{tungstenite::Message, HyperWebsocket, WebSocketStream};
 use pin_project_lite::pin_project;
-use tokio::select;
-use tokio_stream::StreamMap;
-use tracing::{instrument, Level};
-use titan_tasks::{TransientInstance, TitanTasksApi, Vc};
+use titan_tasks::{TitanTasksApi, TransientInstance, Vc};
 use titan_tasks_fs::json::parse_json_with_source_context;
 use titanpack_core::{error::PrettyPrintError, issue::IssueReporter, version::Update};
 use titanpack_ecmascript_hmr_protocol::{
     ClientMessage, ClientUpdateInstruction, Issue, ResourceIdentifier,
 };
+use tokio::select;
+use tokio_stream::StreamMap;
+use tracing::{instrument, Level};
 
 use super::stream::UpdateStream;
 use crate::{

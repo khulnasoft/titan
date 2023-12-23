@@ -27,9 +27,9 @@ pretty_assertions = { workspace = true }
 tempdir = "0.3.7"
 tempfile = { workspace = true }
 test-case = { workspace = true }
+titanrepo-vercel-api-mock = { workspace = true }
 tracing-test = { version = "0.2.4", features = ["no-env-filter"] }
 tracing.workspace = true
-titanrepo-vercel-api-mock = { workspace = true }
 
 [lints]
 workspace = true
@@ -77,15 +77,15 @@ sysinfo = "0.27.7"
 thiserror = "1.0.38"
 time = "0.3.20"
 tiny-gradient = { workspace = true }
+titanrepo-analytics = { path = "../titanrepo-analytics" }
+titanrepo-auth = { path = "../titanrepo-auth" }
+titanrepo-dirs = { path = "../titanrepo-dirs" }
 tokio = { workspace = true, features = ["full", "time"] }
 tokio-stream = { version = "0.1.12", features = ["net"] }
 tokio-util = { version = "0.7.7", features = ["compat"] }
 tonic = { version = "0.8.3", features = ["transport"] }
 tonic-reflection = { version = "0.6.0", optional = true }
 tower = "0.4.13"
-titanrepo-analytics = { path = "../titanrepo-analytics" }
-titanrepo-auth = { path = "../titanrepo-auth" }
-titanrepo-dirs = { path = "../titanrepo-dirs" }
 
 titanrepo-fs = { path = "../titanrepo-fs" }
 titanrepo-graph-utils = { path = "../titanrepo-graph-utils" }
@@ -113,10 +113,6 @@ rayon = "1.7.0"
 regex.workspace = true
 svix-ksuid = { version = "0.7.0", features = ["serde"] }
 tabwriter = "1.3.0"
-tracing-appender = "0.2.2"
-tracing-chrome = "0.7.1"
-tracing-subscriber = { version = "0.3.17", features = ["env-filter"] }
-tracing.workspace = true
 titan-updater = { workspace = true }
 titanpath = { workspace = true }
 titanrepo-api-client = { workspace = true }
@@ -128,6 +124,10 @@ titanrepo-lockfiles = { workspace = true }
 titanrepo-scm = { workspace = true }
 titanrepo-telemetry = { path = "../titanrepo-telemetry" }
 titanrepo-ui = { workspace = true }
+tracing-appender = "0.2.2"
+tracing-chrome = "0.7.1"
+tracing-subscriber = { version = "0.3.17", features = ["env-filter"] }
+tracing.workspace = true
 twox-hash = "1.6.3"
 wax = { workspace = true }
 webbrowser = { workspace = true }

@@ -13,7 +13,7 @@ use anyhow::{Context, Result};
 use owo_colors::OwoColorize;
 use titan_tasks::{
     util::{FormatBytes, FormatDuration},
-    StatsType, TransientInstance, TitanTasks, TitanTasksBackendApi, UpdateInfo, Value, Vc,
+    StatsType, TitanTasks, TitanTasksBackendApi, TransientInstance, UpdateInfo, Value, Vc,
 };
 use titan_tasks_fs::FileSystem;
 use titan_tasks_malloc::TitanMalloc;

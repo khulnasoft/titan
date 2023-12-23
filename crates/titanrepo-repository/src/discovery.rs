@@ -9,9 +9,9 @@
 //! these strategies will implement some sort of monad-style composition so that
 //! we can track areas of run that are performing sub-optimally.
 
+use titanpath::AbsoluteSystemPathBuf;
 use tokio_stream::{iter, StreamExt};
 use tracing::debug;
-use titanpath::AbsoluteSystemPathBuf;
 
 use crate::{
     package_json::PackageJson,

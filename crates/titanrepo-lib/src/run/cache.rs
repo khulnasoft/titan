@@ -1,13 +1,13 @@
 use std::{io::Write, sync::Arc, time::Duration};
 
 use console::StyledObject;
-use tracing::{debug, log::warn};
 use titanpath::{AbsoluteSystemPath, AbsoluteSystemPathBuf, AnchoredSystemPathBuf};
 use titanrepo_cache::{AsyncCache, CacheError, CacheHitMetadata, CacheSource};
 use titanrepo_repository::package_graph::WorkspaceInfo;
 use titanrepo_ui::{
     color, replay_logs, ColorSelector, LogWriter, PrefixedUI, PrefixedWriter, GREY, UI,
 };
+use tracing::{debug, log::warn};
 
 use crate::{
     cli::OutputLogsMode,

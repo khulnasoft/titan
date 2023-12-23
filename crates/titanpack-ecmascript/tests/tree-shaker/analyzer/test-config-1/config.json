@@ -1,6 +1,3 @@
 {
-    "exports":[
-        ["external1"],
-        ["external1", "external2"]
-    ]
+  "exports": [["external1"], ["external1", "external2"]]
 }

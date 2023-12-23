@@ -4,8 +4,8 @@ use std::{
 };
 
 use thiserror::Error;
-use tracing::debug;
 use titanrepo_telemetry::events::command::CommandEventBuilder;
+use tracing::debug;
 use which::which;
 
 use crate::{

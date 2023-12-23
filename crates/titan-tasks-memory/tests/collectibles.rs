@@ -4,9 +4,9 @@ use std::{collections::HashSet, time::Duration};
 
 use anyhow::Result;
 use auto_hash_map::AutoSet;
-use tokio::time::sleep;
 use titan_tasks::{emit, CollectiblesSource, ValueToString, Vc};
 use titan_tasks_testing::{register, run};
+use tokio::time::sleep;
 register!();
 
 #[tokio::test]

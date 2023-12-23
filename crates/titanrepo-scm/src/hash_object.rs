@@ -1,5 +1,5 @@
-use tracing::Span;
 use titanpath::{AbsoluteSystemPath, AnchoredSystemPathBuf, RelativeUnixPathBuf};
+use tracing::Span;
 
 use crate::{package_deps::GitHashes, Error};
 

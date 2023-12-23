@@ -10,11 +10,6 @@ use std::{
 use console::{Style, StyledObject};
 use futures::{stream::FuturesUnordered, StreamExt};
 use regex::Regex;
-use tokio::{
-    process::Command,
-    sync::{mpsc, oneshot},
-};
-use tracing::{debug, error, Span};
 use titanpath::{AbsoluteSystemPath, AbsoluteSystemPathBuf};
 use titanrepo_ci::github_header_footer;
 use titanrepo_env::{EnvironmentVariableMap, ResolvedEnvMode};
@@ -24,6 +19,11 @@ use titanrepo_repository::{
 };
 use titanrepo_telemetry::events::{task::PackageTaskEventBuilder, EventBuilder};
 use titanrepo_ui::{ColorSelector, OutputClient, OutputSink, OutputWriter, PrefixedUI, UI};
+use tokio::{
+    process::Command,
+    sync::{mpsc, oneshot},
+};
+use tracing::{debug, error, Span};
 use which::which;
 
 use crate::{

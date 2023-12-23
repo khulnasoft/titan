@@ -20,7 +20,6 @@ use anyhow::Result;
 use auto_hash_map::AutoSet;
 use indexmap::{IndexMap, IndexSet};
 use serde::{Deserialize, Serialize};
-use tracing::{info_span, Span};
 use titan_tasks::{
     debug::ValueDebugFormat,
     graph::{AdjacencyMap, GraphTraversal, GraphTraversalResult, Visit, VisitControlFlow},
@@ -29,6 +28,7 @@ use titan_tasks::{
 };
 use titan_tasks_fs::FileSystemPath;
 use titan_tasks_hash::DeterministicHash;
+use tracing::{info_span, Span};
 
 use self::availability_info::AvailabilityInfo;
 pub use self::{

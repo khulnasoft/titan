@@ -2,7 +2,6 @@ use std::io::Write as _;
 
 use anyhow::Result;
 use indexmap::IndexMap;
-use tracing::{info_span, Instrument};
 use titan_tasks::{ReadRef, TryJoinIterExt, ValueToString, Vc};
 use titanpack_core::{
     chunk::{AsyncModuleInfo, ChunkItem, ChunkItemExt, ModuleId},
@@ -13,6 +12,7 @@ use titanpack_core::{
 use titanpack_ecmascript::chunk::{
     EcmascriptChunkContent, EcmascriptChunkItem, EcmascriptChunkItemExt,
 };
+use tracing::{info_span, Instrument};
 
 /// A chunk item's content entry.
 ///

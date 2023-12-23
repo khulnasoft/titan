@@ -2,12 +2,12 @@ use std::collections::{HashMap, HashSet};
 
 use globwalk::WalkType;
 use thiserror::Error;
-use tracing::debug;
 use titanpath::{AbsoluteSystemPath, AbsoluteSystemPathBuf, RelativeUnixPathBuf};
 use titanrepo_env::{get_global_hashable_env_vars, DetailedMap, EnvironmentVariableMap};
 use titanrepo_lockfiles::Lockfile;
 use titanrepo_repository::package_manager::{self, PackageManager};
 use titanrepo_scm::SCM;
+use tracing::debug;
 
 use crate::{
     cli::EnvMode,

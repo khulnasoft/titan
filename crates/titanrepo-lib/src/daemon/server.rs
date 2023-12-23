@@ -24,13 +24,6 @@ use std::{
 use futures::Future;
 use semver::Version;
 use thiserror::Error;
-use tokio::{
-    select,
-    sync::{mpsc, oneshot, watch, Mutex as AsyncMutex},
-};
-use tonic::transport::{NamedService, Server};
-use tower::ServiceBuilder;
-use tracing::{error, info, trace, warn};
 use titanpath::{AbsoluteSystemPath, AbsoluteSystemPathBuf};
 use titanrepo_filewatch::{
     cookie_jar::CookieJar,
@@ -41,6 +34,13 @@ use titanrepo_filewatch::{
 use titanrepo_repository::discovery::{
     LocalPackageDiscoveryBuilder, PackageDiscovery, PackageDiscoveryBuilder,
 };
+use tokio::{
+    select,
+    sync::{mpsc, oneshot, watch, Mutex as AsyncMutex},
+};
+use tonic::transport::{NamedService, Server};
+use tower::ServiceBuilder;
+use tracing::{error, info, trace, warn};
 
 use super::{
     bump_timeout::BumpTimeout,
@@ -574,12 +574,12 @@ mod test {
     use futures::FutureExt;
     use semver::Version;
     use test_case::test_case;
-    use tokio::sync::oneshot;
     use titanpath::AbsoluteSystemPathBuf;
     use titanrepo_repository::{
         discovery::{DiscoveryResponse, PackageDiscovery},
         package_manager::PackageManager,
     };
+    use tokio::sync::oneshot;
 
     use super::compare_versions;
     use crate::daemon::{proto::VersionRange, CloseReason, TitanGrpcService};

@@ -2,10 +2,10 @@ use std::sync::Arc;
 
 pub use error::Error;
 use reqwest::Url;
-use tokio::sync::OnceCell;
-use tracing::warn;
 use titanrepo_api_client::Client;
 use titanrepo_ui::{start_spinner, UI};
+use tokio::sync::OnceCell;
+use tracing::warn;
 
 use crate::{convert_to_auth_token, error, ui, AuthToken, LoginServer};
 

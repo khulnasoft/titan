@@ -11,8 +11,8 @@ use std::{
 
 use anyhow::Result;
 use dunce::canonicalize as fs_canonicalize;
-use tracing::{debug, error, trace};
 use titanrepo_lib::{spawn_child, ExecutionState, Payload};
+use tracing::{debug, error, trace};
 
 use crate::panic_handler::panic_handler;
 

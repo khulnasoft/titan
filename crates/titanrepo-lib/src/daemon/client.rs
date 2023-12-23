@@ -1,9 +1,9 @@
 use std::io;
 
 use thiserror::Error;
+use titanpath::AbsoluteSystemPathBuf;
 use tonic::{Code, Status};
 use tracing::info;
-use titanpath::AbsoluteSystemPathBuf;
 
 use super::{
     connector::{DaemonConnector, DaemonConnectorError},

@@ -20,7 +20,6 @@ pub use cache::{RunCache, TaskCache};
 use chrono::{DateTime, Local};
 use itertools::Itertools;
 use rayon::iter::ParallelBridge;
-use tracing::debug;
 use titanrepo_analytics::{start_analytics, AnalyticsHandle, AnalyticsSender};
 use titanrepo_api_client::{APIAuth, APIClient};
 use titanrepo_cache::{AsyncCache, RemoteCacheOpts};
@@ -33,6 +32,7 @@ use titanrepo_repository::{
 };
 use titanrepo_scm::SCM;
 use titanrepo_ui::{cprint, cprintln, ColorSelector, BOLD_GREY, GREY};
+use tracing::debug;
 
 use self::task_id::TaskName;
 pub use crate::run::error::Error;

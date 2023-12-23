@@ -5,13 +5,13 @@ use std::{
 };
 
 use petgraph::graph::{Graph, NodeIndex};
-use tracing::warn;
 use titanpath::{
     AbsoluteSystemPath, AbsoluteSystemPathBuf, AnchoredSystemPath, AnchoredSystemPathBuf,
     RelativeUnixPathBuf,
 };
 use titanrepo_graph_utils as graph;
 use titanrepo_lockfiles::Lockfile;
+use tracing::warn;
 
 use super::{PackageGraph, WorkspaceInfo, WorkspaceName, WorkspaceNode};
 use crate::{

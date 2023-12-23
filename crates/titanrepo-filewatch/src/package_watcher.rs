@@ -9,17 +9,17 @@ use std::{
 };
 
 use notify::Event;
+use titanpath::{AbsoluteSystemPath, AbsoluteSystemPathBuf};
+use titanrepo_repository::{
+    discovery::{PackageDiscovery, WorkspaceData},
+    package_manager::{self, Error, PackageManager, WorkspaceGlobs},
+};
 use tokio::{
     join,
     sync::{
         broadcast::{self, error::RecvError},
         oneshot, watch,
     },
-};
-use titanpath::{AbsoluteSystemPath, AbsoluteSystemPathBuf};
-use titanrepo_repository::{
-    discovery::{PackageDiscovery, WorkspaceData},
-    package_manager::{self, Error, PackageManager, WorkspaceGlobs},
 };
 
 use crate::NotifyError;
@@ -334,12 +334,12 @@ mod test {
     use std::sync::{Arc, Mutex};
 
     use itertools::Itertools;
-    use tokio::sync::broadcast;
     use titanpath::AbsoluteSystemPathBuf;
     use titanrepo_repository::{
         discovery::{self, DiscoveryResponse, PackageDiscovery, WorkspaceData},
         package_manager::{self, PackageManager},
     };
+    use tokio::sync::broadcast;
 
     use super::Subscriber;
 

@@ -24,16 +24,16 @@ indexmap = { workspace = true }
 lazy_static = { workspace = true }
 reqwest = { workspace = true }
 serde = { workspace = true }
-tokio = { workspace = true }
 titan-tasks = { workspace = true }
 titan-tasks-fs = { workspace = true }
 titanpack-core = { workspace = true }
+tokio = { workspace = true }
 
 [dev-dependencies]
 httpmock = { workspace = true }
-tokio = { workspace = true, features = ["full"] }
 titan-tasks-memory = { workspace = true }
 titan-tasks-testing = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
 
 [build-dependencies]
 titan-tasks-build = { workspace = true }

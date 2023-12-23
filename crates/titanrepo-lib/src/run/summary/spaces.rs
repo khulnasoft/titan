@@ -9,14 +9,14 @@ use chrono::{DateTime, Local};
 use futures::{stream::FuturesUnordered, StreamExt};
 use itertools::Itertools;
 use serde::Serialize;
-use tokio::{sync::mpsc::Sender, task::JoinHandle};
-use tracing::debug;
 use titanrepo_api_client::{
     spaces::{CreateSpaceRunPayload, SpaceTaskSummary, SpacesCacheStatus},
     APIAuth, APIClient,
 };
 use titanrepo_cache::CacheHitMetadata;
 use titanrepo_vercel_api::SpaceRun;
+use tokio::{sync::mpsc::Sender, task::JoinHandle};
+use tracing::debug;
 
 use super::execution::TaskExecutionSummary;
 use crate::{

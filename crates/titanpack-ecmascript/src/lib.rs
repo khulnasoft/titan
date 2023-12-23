@@ -47,10 +47,6 @@ use swc_core::{
         visit::{VisitMutWith, VisitMutWithPath},
     },
 };
-pub use transform::{
-    CustomTransformer, EcmascriptInputTransform, EcmascriptInputTransforms, OptionTransformPlugin,
-    TransformContext, TransformPlugin, UnsupportedServerActionIssue,
-};
 use titan_tasks::{trace::TraceRawVcs, ReadRef, TryJoinIterExt, Value, ValueToString, Vc};
 use titan_tasks_fs::{rope::Rope, FileSystemPath};
 use titanpack_core::{
@@ -67,6 +63,10 @@ use titanpack_core::{
     resolve::{origin::ResolveOrigin, parse::Request, ModulePart},
     source::Source,
     source_map::{GenerateSourceMap, SourceMap},
+};
+pub use transform::{
+    CustomTransformer, EcmascriptInputTransform, EcmascriptInputTransforms, OptionTransformPlugin,
+    TransformContext, TransformPlugin, UnsupportedServerActionIssue,
 };
 
 use self::{

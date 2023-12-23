@@ -3,10 +3,10 @@ use std::sync::{atomic::AtomicBool, Arc};
 use std::{io::ErrorKind, sync::atomic::Ordering, time::Duration};
 
 use futures::Stream;
+use titanpath::AbsoluteSystemPath;
 use tokio::io::{AsyncRead, AsyncWrite};
 use tonic::transport::server::Connected;
 use tracing::{debug, trace};
-use titanpath::AbsoluteSystemPath;
 
 #[derive(thiserror::Error, Debug)]
 pub enum SocketOpenError {

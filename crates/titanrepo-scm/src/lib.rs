@@ -15,8 +15,8 @@ use std::{
 
 use bstr::io::BufReadExt;
 use thiserror::Error;
-use tracing::debug;
 use titanpath::{AbsoluteSystemPath, AbsoluteSystemPathBuf, PathError, RelativeUnixPathBuf};
+use tracing::debug;
 
 pub mod git;
 mod hash_object;

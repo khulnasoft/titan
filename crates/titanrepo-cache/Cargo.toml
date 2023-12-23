@@ -41,10 +41,10 @@ serde_json = { workspace = true }
 sha2 = { workspace = true }
 tar = "0.4.38"
 thiserror = { workspace = true }
-tokio = { workspace = true, features = ["full"] }
-tracing = { workspace = true }
 titanpath = { workspace = true }
 titanrepo-analytics = { workspace = true }
 titanrepo-api-client = { workspace = true }
 titanrepo-ui = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+tracing = { workspace = true }
 zstd = "0.12.3"
