@@ -1,0 +1,255 @@
+[workspace]
+resolver = "2"
+
+members = [
+  "crates/node-file-trace",
+  "crates/titan-tasks*",
+  "crates/titanpack*",
+  "crates/titanrepo*",
+  "packages/titan-repository/rust/",
+  "xtask",
+]
+
+default-members = [
+  "crates/node-file-trace",
+  "crates/titan-tasks",
+  "crates/titan-tasks-auto-hash-map",
+  "crates/titan-tasks-build",
+  "crates/titan-tasks-bytes",
+  "crates/titan-tasks-env",
+  "crates/titan-tasks-fetch",
+  "crates/titan-tasks-fs",
+  "crates/titan-tasks-hash",
+  "crates/titan-tasks-macros-shared",
+  "crates/titan-tasks-macros-tests",
+  "crates/titan-tasks-malloc",
+  "crates/titan-tasks-memory",
+  "crates/titan-tasks-signposter",
+  "crates/titan-tasks-signposter-sys",
+  "crates/titan-tasks-testing",
+  "crates/titan-tasks-tracing-signpost",
+  "crates/titanpack",
+  "crates/titanpack-bench",
+  "crates/titanpack-cli-utils",
+  "crates/titanpack-core",
+  "crates/titanpack-create-test-app",
+  "crates/titanpack-css",
+  "crates/titanpack-dev",
+  "crates/titanpack-dev-server",
+  "crates/titanpack-ecmascript",
+  "crates/titanpack-env",
+  "crates/titanpack-json",
+  "crates/titanpack-mdx",
+  "crates/titanpack-node",
+  "crates/titanpack-static",
+  "crates/titanpack-swc-ast-explorer",
+  "crates/titanpack-swc-utils",
+  "crates/titanpack-test-utils",
+  "crates/titanpack-tests",
+  "crates/titanpack-trace-server",
+  "crates/titanpack-trace-utils",
+  "crates/titanpack-wasm",
+  "xtask",
+]
+
+[workspace.metadata.groups]
+# Only the libraries, does not include the titanrepo binary.
+# That way we don't have to build the Go code
+titanrepo-libraries = ["path:crates/titanrepo-*"]
+titanrepo = ["path:crates/titanrepo*"]
+titanpack = [
+  "path:crates/titanpack*",
+  "path:crates/titan-tasks*",
+  "path:crates/node-file-trace",
+]
+
+[workspace.lints.clippy]
+too_many_arguments = "allow"
+
+[profile.dev.package.titan-tasks-macros]
+opt-level = 3
+
+# Set the settings for build scripts and proc-macros.
+[profile.dev.build-override]
+opt-level = 3
+
+[profile.release]
+lto = "off"
+
+# Declare dependencies used across workspace packages requires single version bump.
+# ref: https://doc.rust-lang.org/cargo/reference/specifying-dependencies.html#inheriting-a-dependency-from-a-workspace
+[workspace.dependencies]
+async-recursion = "1.0.2"
+# Keep consistent with preset_env_base through swc_core
+browserslist-rs = { version = "0.13.0" }
+miette = { version = "5.10.0", features = ["fancy"] }
+mdxjs = "0.1.20"
+modularize_imports = { version = "0.62.0" }
+styled_components = { version = "0.90.0" }
+styled_jsx = { version = "0.67.0" }
+swc_core = { version = "0.86.98", features = [
+  "ecma_loader_lru",
+  "ecma_loader_parking_lot",
+] }
+swc_emotion = { version = "0.66.0" }
+swc_relay = { version = "0.38.0" }
+testing = { version = "0.35.13" }
+
+auto-hash-map = { path = "crates/titan-tasks-auto-hash-map" }
+node-file-trace = { path = "crates/node-file-trace", default-features = false }
+signposter = { path = "crates/titan-tasks-signposter" }
+signposter-sys = { path = "crates/titan-tasks-signposter-sys" }
+tracing-signpost = { path = "crates/titan-tasks-tracing-signpost" }
+swc-ast-explorer = { path = "crates/titanpack-swc-ast-explorer" }
+titan-tasks-malloc = { path = "crates/titan-tasks-malloc", default-features = false }
+titan-tasks = { path = "crates/titan-tasks" }
+titan-tasks-build = { path = "crates/titan-tasks-build" }
+titan-tasks-bytes = { path = "crates/titan-tasks-bytes" }
+titan-tasks-env = { path = "crates/titan-tasks-env" }
+titan-tasks-fetch = { path = "crates/titan-tasks-fetch", default-features = false }
+titan-tasks-fs = { path = "crates/titan-tasks-fs" }
+titan-tasks-hash = { path = "crates/titan-tasks-hash" }
+titan-tasks-macros = { path = "crates/titan-tasks-macros" }
+titan-tasks-macros-shared = { path = "crates/titan-tasks-macros-shared" }
+titan-tasks-macros-tests = { path = "crates/titan-tasks-macros-tests" }
+titan-tasks-memory = { path = "crates/titan-tasks-memory" }
+titan-tasks-testing = { path = "crates/titan-tasks-testing" }
+titan-updater = { path = "crates/titanrepo-updater" }
+titanpack = { path = "crates/titanpack" }
+titanpack-bench = { path = "crates/titanpack-bench" }
+titanpack-build = { path = "crates/titanpack-build" }
+titanpack-cli = { path = "crates/titanpack-cli" }
+titanpack-cli-utils = { path = "crates/titanpack-cli-utils" }
+titanpack-core = { path = "crates/titanpack-core" }
+titanpack-create-test-app = { path = "crates/titanpack-create-test-app" }
+titanpack-css = { path = "crates/titanpack-css" }
+titanpack-dev = { path = "crates/titanpack-dev" }
+titanpack-dev-server = { path = "crates/titanpack-dev-server" }
+titanpack-ecmascript = { path = "crates/titanpack-ecmascript" }
+titanpack-ecmascript-plugins = { path = "crates/titanpack-ecmascript-plugins", default-features = false }
+titanpack-ecmascript-runtime = { path = "crates/titanpack-ecmascript-runtime" }
+titanpack-ecmascript-hmr-protocol = { path = "crates/titanpack-ecmascript-hmr-protocol" }
+titanpack-env = { path = "crates/titanpack-env" }
+titanpack-image = { path = "crates/titanpack-image" }
+titanpack-json = { path = "crates/titanpack-json" }
+titanpack-mdx = { path = "crates/titanpack-mdx" }
+titanpack-node = { path = "crates/titanpack-node" }
+titanpack-static = { path = "crates/titanpack-static" }
+titanpack-swc-utils = { path = "crates/titanpack-swc-utils" }
+titanpack-test-utils = { path = "crates/titanpack-test-utils" }
+titanpack-tests = { path = "crates/titanpack-tests" }
+titanpack-trace-utils = { path = "crates/titanpack-trace-utils" }
+titanpack-wasm = { path = "crates/titanpack-wasm" }
+titanpath = { path = "crates/titanrepo-paths" }
+titanrepo = { path = "crates/titanrepo" }
+titanrepo-analytics = { path = "crates/titanrepo-analytics" }
+titanrepo-api-client = { path = "crates/titanrepo-api-client" }
+titanrepo-cache = { path = "crates/titanrepo-cache" }
+titanrepo-ci = { path = "crates/titanrepo-ci" }
+titanrepo-env = { path = "crates/titanrepo-env" }
+titanrepo-ffi = { path = "crates/titanrepo-ffi" }
+titanrepo-fs = { path = "crates/titanrepo-fs" }
+titanrepo-lib = { path = "crates/titanrepo-lib", default-features = false }
+titanrepo-lockfiles = { path = "crates/titanrepo-lockfiles" }
+titanrepo-repository = { path = "crates/titanrepo-repository" }
+titanrepo-ui = { path = "crates/titanrepo-ui" }
+titanrepo-scm = { path = "crates/titanrepo-scm" }
+wax = { path = "crates/titanrepo-wax" }
+titanrepo-vercel-api = { path = "crates/titanrepo-vercel-api" }
+titanrepo-vercel-api-mock = { path = "crates/titanrepo-vercel-api-mock" }
+
+# Be careful when selecting tls backend, including change default tls backend.
+# If you changed, must verify with ALL build targets with next-swc to ensure
+# it works. next-swc have various platforms, some doesn't support native (using openssl-sys)
+# and some aren't buildable with rustls.
+reqwest = { version = "0.11.14", default-features = false }
+
+chromiumoxide = { version = "0.5.0", features = [
+  "tokio-runtime",
+], default-features = false }
+# For matching on errors from chromiumoxide. Keep in
+# sync with chromiumoxide's tungstenite requirement.
+tungstenite = "0.18.0"
+
+anyhow = "1.0.69"
+assert_cmd = "2.0.8"
+async-compression = { version = "0.3.13", default-features = false, features = [
+  "gzip",
+  "tokio",
+] }
+async-trait = "0.1.64"
+atty = "0.2.14"
+axum = "0.6.2"
+axum-server = "0.4.4"
+bytes = "1.1.0"
+camino = { version = "1.1.4", features = ["serde1"] }
+chrono = "0.4.23"
+clap = "4.1.6"
+clap_complete = "4.1.2"
+concurrent-queue = "2.1.0"
+console = "0.15.5"
+console-subscriber = "0.1.8"
+criterion = "0.4.0"
+crossbeam-channel = "0.5.8"
+dashmap = "5.4.0"
+dialoguer = "0.10.3"
+dunce = "1.0.3"
+futures = "0.3.26"
+futures-retry = "0.6.0"
+hex = "0.4.3"
+httpmock = { version = "0.6.8", default-features = false }
+image = { version = "0.24.6", default-features = false }
+indexmap = "1.9.2"
+indicatif = "0.17.3"
+indoc = "2.0.0"
+itertools = "0.10.5"
+lazy_static = "1.4.0"
+mime = "0.3.16"
+nohash-hasher = "0.2.0"
+once_cell = "1.17.1"
+owo-colors = "3.5.0"
+parking_lot = "0.12.1"
+path-clean = "1.0.1"
+pathdiff = "0.2.1"
+petgraph = "0.6.3"
+pin-project-lite = "0.2.9"
+port_scanner = "0.1.5"
+postcard = "1.0.4"
+predicates = "2.1.5"
+pretty_assertions = "1.3.0"
+proc-macro2 = "1.0.51"
+qstring = "0.7.2"
+quote = "1.0.23"
+rand = "0.8.5"
+regex = "1.7.0"
+rstest = "0.16.0"
+rustc-hash = "1.1.0"
+semver = "1.0.16"
+serde = { version = "1.0.152", features = ["derive"] }
+serde_json = "1.0.93"
+serde_qs = "0.11.0"
+serde_with = "2.3.2"
+serde_yaml = "0.9.17"
+sha2 = "0.10.6"
+smallvec = { version = "1.11.1", features = [
+  "serde",
+  "const_generics",
+  "union",
+  "const_new",
+] }
+sourcemap = "6.0.2"
+syn = "1.0.107"
+tempfile = "3.3.0"
+test-case = "3.0.0"
+thiserror = "1.0.48"
+tiny-gradient = "0.1.0"
+tokio = "1.25.0"
+tokio-util = { version = "0.7.7", features = ["io"] }
+tracing = "0.1.37"
+tracing-appender = "0.2.2"
+tracing-subscriber = "0.3.16"
+url = "2.2.2"
+urlencoding = "2.1.2"
+webbrowser = "0.8.7"
+which = "4.4.0"
+unicode-segmentation = "1.10.1"
