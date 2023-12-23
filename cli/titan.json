@@ -1,0 +1,29 @@
+{
+  "$schema": "../docs/public/schema.json",
+  "extends": ["//"],
+  "pipeline": {
+    "build": {
+      "env": ["RUNNER_OS"],
+      "outputs": [
+        "../target/debug/go-titan",
+        "../target/debug/go-titan.exe",
+        "../target/debug/titan",
+        "../target/debug/titan.exe",
+        "../target/release/go-titan",
+        "../target/release/go-titan.exe",
+        "../target/release/titan",
+        "../target/release/titan.exe"
+      ],
+
+      "inputs": [
+        "{internal,cmd}/**/*.go",
+        "!**/*_test.go",
+        "../crates/titanrepo*/**/*.rs", // Rust crates
+        "../crates/titanrepo*/Cargo.toml",
+        "../Cargo.toml",
+        "../Cargo.lock",
+        "!../crates/**/target"
+      ]
+    }
+  }
+}

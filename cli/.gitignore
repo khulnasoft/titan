@@ -1,0 +1,21 @@
+/internal/titandprotocol/*.go
+
+/demo/
+/dist/
+/dist-*
+
+# Built binaries.
+/titan
+/titan-new
+/titan-new.exe
+/titan.exe
+/go-titan
+/go-titan.exe
+
+testbed
+
+# Windows lib files
+titan.h
+titan.lib
+libtitan.a
+libtitan.h
