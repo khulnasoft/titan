@@ -1,0 +1,42 @@
+name: upload_test_results
+
+on:
+  workflow_dispatch:
+  schedule:
+    # "Everyday at 12:00 UTC (5:00 PT)" https://crontab.guru/#0_12_*_*_*
+    - cron: "0 12 * * *"
+
+jobs:
+ # Upload Titanpack's test results into datadog.
+  upload_test_results:
+    name: Upload Test results
+    # We have to set condition to always, since we want to upload test results for the failed tests as well.
+    if: ${{ always() }}
+    runs-on: ubuntu-latest
+    # Do not block CI if upload fails for some reason
+    continue-on-error: true
+    steps:
+      # Uploading test results does not require titanpack's src codes, but this
+      # allows datadog uploader to sync with git information.
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3.6.0
+        with:
+          node-version: 18
+
+      - name: Install datadog
+        run: npm install -g @datadog/datadog-ci@2.18.1
+
+      - name: Download test results
+        uses: actions/download-artifact@v3
+        with:
+          path: artifacts
+
+      - name: Upload
+        continue-on-error: true
+        env:
+          DATADOG_API_KEY: ${{ secrets.DD_KEY_TITANPACK }}
+        run: |
+          DD_ENV=ci datadog-ci junit upload --service Titanpack ./artifacts/test_reports/**/*.xml
