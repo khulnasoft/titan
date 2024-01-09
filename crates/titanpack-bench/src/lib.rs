@@ -15,11 +15,11 @@ use criterion::{
     BenchmarkGroup, BenchmarkId, Criterion,
 };
 use once_cell::sync::Lazy;
+use titan_tasks::util::FormatDuration;
 use tokio::{
     runtime::Runtime,
     time::{sleep, timeout},
 };
-use titan_tasks::util::FormatDuration;
 use util::{
     build_test, create_browser,
     env::{read_env, read_env_bool, read_env_list},

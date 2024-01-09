@@ -36,11 +36,11 @@ regex = { workspace = true }
 serde = { workspace = true }
 serde_json = { workspace = true }
 tempfile = { workspace = true }
-tokio = { workspace = true, features = ["full"] }
-tungstenite = { workspace = true }
 titan-tasks = { workspace = true }
 titan-tasks-testing = { workspace = true }
 titanpack-create-test-app = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+tungstenite = { workspace = true }
 url = { workspace = true }
 webbrowser = { workspace = true }
 

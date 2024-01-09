@@ -1,0 +1,50 @@
+[package]
+name = "titanpack-core"
+version = "0.1.0"
+description = "TBD"
+license = "MPL-2.0"
+edition = "2021"
+autobenches = false
+
+[lib]
+bench = false
+
+[lints]
+workspace = true
+
+[dependencies]
+anyhow = { workspace = true }
+async-recursion = { workspace = true }
+async-trait = { workspace = true }
+auto-hash-map = { workspace = true }
+browserslist-rs = { workspace = true }
+futures = { workspace = true }
+indexmap = { workspace = true }
+lazy_static = { workspace = true }
+once_cell = { workspace = true }
+patricia_tree = "0.5.5"
+qstring = { workspace = true }
+regex = { workspace = true }
+serde = { workspace = true, features = ["rc"] }
+serde_json = { workspace = true, features = ["preserve_order"] }
+serde_qs = { workspace = true }
+sourcemap = { workspace = true }
+swc_core = { workspace = true, features = ["ecma_preset_env", "common"] }
+titan-tasks = { workspace = true }
+titan-tasks-env = { workspace = true }
+titan-tasks-fs = { workspace = true }
+titan-tasks-hash = { workspace = true }
+tracing = { workspace = true }
+
+[build-dependencies]
+titan-tasks-build = { workspace = true }
+
+[dev-dependencies]
+rstest = { workspace = true }
+titan-tasks-memory = { workspace = true }
+titan-tasks-testing = { workspace = true }
+tokio = { workspace = true }
+
+[features]
+default = []
+issue_path = []

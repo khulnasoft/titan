@@ -10,6 +10,7 @@ import (
 	"github.com/khulnasoft/titan/cli/internal/fs"
 	"github.com/khulnasoft/titan/cli/internal/fs/hash"
 	"github.com/khulnasoft/titan/cli/internal/globwatcher"
+	"github.com/khulnasoft/titan/cli/internal/titandprotocol"
 	"github.com/khulnasoft/titan/cli/internal/titanpath"
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"

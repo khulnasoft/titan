@@ -7,7 +7,7 @@ use std::{
 use auto_hash_map::{map::Entry, AutoMap};
 use nohash_hasher::BuildNoHashHasher;
 use parking_lot::Mutex;
-use titan_tasks::{event::Event, RawVc, TaskId, TaskIdSet, TraitTypeId, TitanTasksBackendApi};
+use titan_tasks::{event::Event, RawVc, TaskId, TaskIdSet, TitanTasksBackendApi, TraitTypeId};
 
 use super::{meta_state::TaskMetaStateWriteGuard, TaskStateType};
 use crate::{

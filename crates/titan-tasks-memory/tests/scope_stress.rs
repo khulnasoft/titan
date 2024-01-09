@@ -1,7 +1,7 @@
 #![feature(arbitrary_self_types)]
 
 use anyhow::Result;
-use titan_tasks::{Completion, TryJoinIterExt, TitanTasks, Vc};
+use titan_tasks::{Completion, TitanTasks, TryJoinIterExt, Vc};
 use titan_tasks_memory::MemoryBackend;
 use titan_tasks_testing::register;
 

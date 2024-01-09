@@ -11,9 +11,9 @@ use criterion::{
     BenchmarkId, Criterion,
 };
 use notify::{watcher, RecursiveMode, Watcher};
-use tokio::runtime::Runtime;
 use titan_tasks::event::Event;
 use titan_tasks_fs::rope::{Rope, RopeBuilder};
+use tokio::runtime::Runtime;
 
 fn bench_file_watching(c: &mut Criterion) {
     let mut g = c.benchmark_group("titan-tasks-fs");
