@@ -3007,7 +3007,7 @@ packages:
       "@rdfjs/data-model": 1.3.4
       "@rdfjs/sink": 1.0.3
       n3: 1.16.2
-      readable-stream: 3.6.0
+      readable-stream: 3.6.2
       readable-to-readable: 0.1.3
     dev: true
 
@@ -5414,7 +5414,7 @@ packages:
       commander: 5.1.0
       pkg-dir: 5.0.0
       rdf-ext: 1.3.5
-      readable-stream: 3.6.0
+      readable-stream: 3.6.2
       string-to-stream: 3.0.1
     dev: true
 
@@ -6108,7 +6108,7 @@ packages:
     engines: { node: ">=10" }
     dependencies:
       delegates: 1.0.0
-      readable-stream: 3.6.0
+      readable-stream: 3.6.2
     dev: true
 
   /are-we-there-yet@3.0.1:
@@ -6120,7 +6120,7 @@ packages:
     requiresBuild: true
     dependencies:
       delegates: 1.0.0
-      readable-stream: 3.6.0
+      readable-stream: 3.6.2
     dev: true
     optional: true
 
@@ -6828,7 +6828,7 @@ packages:
         integrity: sha512-pvcNpa0UU69UT341rO6AYy4FVAIkUHuZXRIWbq+zHnsVcRzDDjIAhGuuYoi0d//cwIwtt4pkpKycWEfjdV+vww==,
       }
     dependencies:
-      readable-stream: 2.3.7
+      readable-stream: 2.3.8
       safe-buffer: 5.2.1
     dev: true
 
@@ -6838,7 +6838,7 @@ packages:
         integrity: sha512-6Pesp1w0DEX1N550i/uGV/TqucVL4AM/pgThFSN/Qq9si1/DF9aIHs1BxD8V/QU0HoeHO6cQRTAuYnLPKq1e4g==,
       }
     dependencies:
-      readable-stream: 2.3.7
+      readable-stream: 2.3.8
       safe-buffer: 5.2.1
     dev: true
 
@@ -6850,7 +6850,7 @@ packages:
     dependencies:
       buffer: 5.7.1
       inherits: 2.0.4
-      readable-stream: 3.6.0
+      readable-stream: 3.6.2
     dev: true
 
   /blob@0.0.5:
@@ -7135,11 +7135,9 @@ packages:
       randombytes: 2.1.0
     dev: true
 
-  /browserify-sign@4.2.1:
-    resolution:
-      {
-        integrity: sha512-/vrA5fguVAKKAVTNJjgSm1tRQDHUU6DbwO9IROu/0WAzC8PKhucDSh18J0RMvVeHAn5puMd+QHC2erPRNf8lmg==,
-      }
+  /browserify-sign@4.2.2:
+    resolution: {integrity: sha512-1rudGyeYY42Dk6texmv7c4VcQ0EsvVbLwZkA+AQB7SxvXxmcD93jcHie8bzecJ+ChDlmAm2Qyu0+Ccg5uhZXCg==}
+    engines: {node: '>= 4'}
     dependencies:
       bn.js: 5.2.1
       browserify-rsa: 4.1.0
@@ -7148,7 +7146,7 @@ packages:
       elliptic: 6.5.4
       inherits: 2.0.4
       parse-asn1: 5.1.6
-      readable-stream: 3.6.0
+      readable-stream: 3.6.2
       safe-buffer: 5.2.1
     dev: true
 
@@ -7201,7 +7199,7 @@ packages:
       punycode: 1.4.1
       querystring-es3: 0.2.1
       read-only-stream: 2.0.0
-      readable-stream: 2.3.7
+      readable-stream: 2.3.8
       resolve: 1.22.1
       shasum: 1.0.2
       shell-quote: 1.7.4
@@ -7523,7 +7521,7 @@ packages:
       }
     dependencies:
       inherits: 2.0.4
-      readable-stream: 2.3.7
+      readable-stream: 2.3.8
     dev: true
 
   /callguard@2.0.0:
@@ -8374,7 +8372,7 @@ packages:
     dependencies:
       buffer-from: 1.1.2
       inherits: 2.0.4
-      readable-stream: 2.3.7
+      readable-stream: 2.3.8
       typedarray: 0.0.6
     dev: true
 
@@ -8387,7 +8385,7 @@ packages:
     dependencies:
       buffer-from: 1.1.2
       inherits: 2.0.4
-      readable-stream: 3.6.0
+      readable-stream: 3.6.2
       typedarray: 0.0.6
     dev: true
 
@@ -8977,7 +8975,7 @@ packages:
       }
     dependencies:
       browserify-cipher: 1.0.1
-      browserify-sign: 4.2.1
+      browserify-sign: 4.2.2
       create-ecdh: 4.0.4
       create-hash: 1.2.0
       create-hmac: 1.1.7
@@ -9725,7 +9723,7 @@ packages:
         integrity: sha512-asLFVfWWtJ90ZyOUHMqk7/S2w2guQKxUI2itj3d92ADHhxUSbCMGi1f1cBcJ7xM1To+pE/Khbwo1yuNbMEPKeA==,
       }
     dependencies:
-      readable-stream: 2.3.7
+      readable-stream: 2.3.8
     dev: true
 
   /duplexer3@0.1.5:
@@ -9750,7 +9748,7 @@ packages:
     dependencies:
       end-of-stream: 1.4.4
       inherits: 2.0.4
-      readable-stream: 2.3.7
+      readable-stream: 2.3.8
       stream-shift: 1.0.1
     dev: true
 
@@ -11553,7 +11551,7 @@ packages:
       }
     dependencies:
       inherits: 2.0.4
-      readable-stream: 2.3.7
+      readable-stream: 2.3.8
     dev: true
 
   /fs-capacitor@2.0.4:
@@ -12024,7 +12022,7 @@ packages:
       is-negated-glob: 1.0.0
       ordered-read-streams: 1.0.1
       pumpify: 1.5.1
-      readable-stream: 2.3.7
+      readable-stream: 2.3.8
       remove-trailing-separator: 1.1.0
       to-absolute-glob: 2.0.2
       unique-stream: 2.3.1
@@ -12584,7 +12582,7 @@ packages:
     engines: { node: ">=4" }
     dependencies:
       inherits: 2.0.4
-      readable-stream: 3.6.0
+      readable-stream: 3.6.2
       safe-buffer: 5.2.1
     dev: true
 
@@ -17444,7 +17442,7 @@ packages:
       duplexer2: 0.1.4
       inherits: 2.0.4
       parents: 1.0.1
-      readable-stream: 2.3.7
+      readable-stream: 2.3.8
       resolve: 1.22.1
       stream-combiner2: 1.1.1
       subarg: 1.0.0
@@ -17585,7 +17583,7 @@ packages:
       minimist: 1.2.7
       mqtt-packet: 5.6.1
       pump: 3.0.0
-      readable-stream: 2.3.7
+      readable-stream: 2.3.8
       reinterval: 1.1.0
       split2: 2.2.0
       websocket-stream: 5.2.0
@@ -17675,7 +17673,7 @@ packages:
     dependencies:
       bl: 2.2.1
       inherits: 2.0.4
-      readable-stream: 2.3.7
+      readable-stream: 2.3.8
       safe-buffer: 5.2.1
     dev: true
 
@@ -17758,7 +17756,7 @@ packages:
     engines: { node: ">=8.0" }
     dependencies:
       queue-microtask: 1.2.3
-      readable-stream: 3.6.0
+      readable-stream: 3.6.2
     dev: true
 
   /nan@2.17.0:
@@ -18591,7 +18589,7 @@ packages:
         integrity: sha512-Z87aSjx3r5c0ZB7bcJqIgIRX5bxR7A4aSzvIbaxd0oTkWBCOoKfuGHiKj60CHVUgg1Phm5yMZzBdt8XqRs73Mw==,
       }
     dependencies:
-      readable-stream: 2.3.7
+      readable-stream: 2.3.8
     dev: true
 
   /os-browserify@0.3.0:
@@ -20404,7 +20402,7 @@ packages:
       "@rdfjs/dataset": 1.1.1
       "@rdfjs/to-ntriples": 1.0.2
       rdf-normalize: 1.0.0
-      readable-stream: 3.6.0
+      readable-stream: 3.6.2
     dev: true
 
   /rdf-js@4.0.2:
@@ -20481,7 +20479,7 @@ packages:
         integrity: sha512-3ALe0bjBVZtkdWKIcThYpQCLbBMd/+Tbh2CDSrAIDO3UsZ4Xs+tnyjv2MjCOMMgBG+AsUOeuP1cgtY1INISc8w==,
       }
     dependencies:
-      readable-stream: 2.3.7
+      readable-stream: 2.3.8
     dev: true
 
   /readable-error@1.0.0:
@@ -20553,7 +20551,7 @@ packages:
         integrity: sha512-G+0kz01xJM/uTuItKcqC73cifW8S6CZ7tp77NLN87lE5mrSU+GC8geoSAlfmp0NocmXckQ7W8s8ns73HYsIA3w==,
       }
     dependencies:
-      readable-stream: 3.6.0
+      readable-stream: 3.6.2
     dev: true
 
   /readdirp@2.2.1:
@@ -20565,7 +20563,7 @@ packages:
     dependencies:
       graceful-fs: 4.2.10
       micromatch: 3.1.10
-      readable-stream: 2.3.7
+      readable-stream: 2.3.8
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -22266,7 +22264,7 @@ packages:
       merge-source-map: 1.0.4
       object-inspect: 1.4.1
       quote-stream: 1.0.2
-      readable-stream: 2.3.7
+      readable-stream: 2.3.8
       shallow-copy: 0.0.1
       static-eval: 2.1.0
       through2: 2.0.5
@@ -22295,7 +22293,7 @@ packages:
       }
     dependencies:
       inherits: 2.0.4
-      readable-stream: 2.3.7
+      readable-stream: 2.3.8
     dev: true
 
   /stream-cache@0.0.2:
@@ -22312,7 +22310,7 @@ packages:
       }
     dependencies:
       duplexer2: 0.1.4
-      readable-stream: 2.3.7
+      readable-stream: 2.3.8
     dev: true
 
   /stream-combiner@0.0.2:
@@ -22362,7 +22360,7 @@ packages:
     dependencies:
       builtin-status-codes: 3.0.0
       inherits: 2.0.4
-      readable-stream: 3.6.0
+      readable-stream: 3.6.2
       xtend: 4.0.2
     dev: true
 
@@ -22394,7 +22392,7 @@ packages:
       }
     dependencies:
       inherits: 2.0.4
-      readable-stream: 2.3.7
+      readable-stream: 2.3.8
     dev: true
 
   /stream-to-string@1.2.0:
@@ -22454,7 +22452,7 @@ packages:
         integrity: sha512-Hl092MV3USJuUCC6mfl9sPzGloA3K5VwdIeJjYIkXY/8K+mUvaeEabWJgArp+xXrsWxCajeT2pc4axbVhIZJyg==,
       }
     dependencies:
-      readable-stream: 3.6.0
+      readable-stream: 3.6.2
     dev: true
 
   /string-width@1.0.2:
@@ -22847,7 +22845,7 @@ packages:
       methods: 1.1.2
       mime: 2.6.0
       qs: 6.11.0
-      readable-stream: 3.6.0
+      readable-stream: 3.6.2
       semver: 7.3.8
     transitivePeerDependencies:
       - supports-color
@@ -22973,7 +22971,7 @@ packages:
       end-of-stream: 1.4.4
       fs-constants: 1.0.0
       inherits: 2.0.4
-      readable-stream: 3.6.0
+      readable-stream: 3.6.2
     dev: true
 
   /tar@6.1.11:
@@ -23128,7 +23126,7 @@ packages:
         integrity: sha512-/mrRod8xqpA+IHSLyGCQ2s8SPHiCDEeQJSep1jqLYeEUClOFG2Qsh+4FU6G9VeqpZnGW/Su8LQGc4YKni5rYSQ==,
       }
     dependencies:
-      readable-stream: 2.3.7
+      readable-stream: 2.3.8
       xtend: 4.0.2
     dev: true
 
@@ -23148,7 +23146,7 @@ packages:
         integrity: sha512-iOqSav00cVxEEICeD7TjLB1sueEL+81Wpzp2bY17uZjZN0pWZPuo4suZ/61VujxmqSGFfgOcNuTZ85QJwNZQpw==,
       }
     dependencies:
-      readable-stream: 3.6.0
+      readable-stream: 3.6.2
     dev: true
 
   /through@2.3.4:
@@ -24683,7 +24681,7 @@ packages:
     dependencies:
       duplexify: 3.7.1
       inherits: 2.0.4
-      readable-stream: 3.6.0
+      readable-stream: 3.6.2
       safe-buffer: 5.2.1
       ws: 6.2.2
       xtend: 4.0.2
