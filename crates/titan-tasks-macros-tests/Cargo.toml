@@ -7,10 +7,10 @@ edition = "2021"
 
 [dev-dependencies]
 anyhow = { workspace = true }
-tokio = { workspace = true }
 titan-tasks = { workspace = true }
 titan-tasks-memory = { workspace = true }
 titan-tasks-testing = { workspace = true }
+tokio = { workspace = true }
 # TODO: titan-tasks-testing uses a macro that requires us to depend on lazy-static.
 lazy_static = { workspace = true }
 

@@ -1,6 +1,6 @@
 use anyhow::Result;
 use criterion::{BenchmarkId, Criterion};
-use titan_tasks::{TryJoinIterExt, TitanTasks, Vc};
+use titan_tasks::{TitanTasks, TryJoinIterExt, Vc};
 use titan_tasks_memory::MemoryBackend;
 
 use super::register;

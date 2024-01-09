@@ -16,8 +16,6 @@ use anyhow::{bail, Result};
 use auto_hash_map::AutoMap;
 use dashmap::{mapref::entry::Entry, DashMap};
 use rustc_hash::FxHasher;
-use tokio::task::futures::TaskLocalFuture;
-use tracing::trace_span;
 use titan_tasks::{
     backend::{
         Backend, BackendJobId, CellContent, PersistentTaskType, TaskExecutionSpec,
@@ -25,8 +23,10 @@ use titan_tasks::{
     },
     event::EventListener,
     util::{IdFactory, NoMoveVec},
-    CellId, RawVc, TaskId, TaskIdSet, TraitTypeId, TitanTasksBackendApi, Unused,
+    CellId, RawVc, TaskId, TaskIdSet, TitanTasksBackendApi, TraitTypeId, Unused,
 };
+use tokio::task::futures::TaskLocalFuture;
+use tracing::trace_span;
 
 use crate::{
     cell::RecomputingCell,

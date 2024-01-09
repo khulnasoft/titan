@@ -1,0 +1,30 @@
+# Used to auto generate titanrepo release notes
+
+changelog:
+  exclude:
+    labels:
+      - "owned-by: titanpack"
+      - "area: ci"
+  categories:
+    - title: Docs
+      labels:
+        - "area: docs"
+        - "area: site"
+    - title: create-titan
+      labels:
+        - "pkg: create-titan"
+    - title: titan-ignore
+      labels:
+        - "pkg: titan-ignore"
+    - title: "@titan/codemod"
+      labels:
+        - "pkg: titan-codemod"
+    - title: "eslint"
+      labels:
+        - "pkg: titan-eslint"
+    - title: Examples
+      labels:
+        - "area: examples"
+    - title: Changelog
+      labels:
+        - "*"

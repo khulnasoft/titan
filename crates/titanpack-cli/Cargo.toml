@@ -1,0 +1,85 @@
+[package]
+name = "titanpack-cli"
+version = "0.1.0"
+description = "TBD"
+license = "MPL-2.0"
+edition = "2021"
+autobenches = false
+
+[[bin]]
+name = "titanpack-cli"
+path = "src/main.rs"
+bench = false
+
+[lib]
+bench = false
+
+[[bench]]
+name = "mod"
+harness = false
+
+[features]
+# By default, we enable native-tls for reqwest via downstream transitive features.
+# This is for the convenience of running daily dev workflows, i.e running
+# `cargo xxx` without explicitly specifying features, not that we want to
+# promote this as default backend. Actual configuration is done when building titanpack-cli.
+default = ["custom_allocator", "native-tls"]
+serializable = []
+tokio_console = [
+  "dep:console-subscriber",
+  "tokio/tracing",
+  "titan-tasks/tokio_tracing",
+]
+profile = []
+custom_allocator = ["titan-tasks-malloc/custom_allocator"]
+native-tls = ["titan-tasks-fetch/native-tls"]
+rustls-tls = ["titan-tasks-fetch/rustls-tls"]
+
+[lints]
+workspace = true
+
+[dependencies]
+anyhow = { workspace = true, features = ["backtrace"] }
+clap = { workspace = true, features = ["derive", "env"] }
+console-subscriber = { workspace = true, optional = true }
+criterion = { workspace = true, features = ["async_tokio"] }
+dunce = { workspace = true }
+futures = { workspace = true }
+mime = { workspace = true }
+once_cell = { workspace = true }
+owo-colors = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+titan-tasks = { workspace = true }
+titan-tasks-env = { workspace = true }
+titan-tasks-fetch = { workspace = true, default-features = false }
+titan-tasks-fs = { workspace = true }
+titan-tasks-malloc = { workspace = true, default-features = false }
+titan-tasks-memory = { workspace = true }
+titanpack = { workspace = true }
+titanpack-build = { workspace = true }
+titanpack-cli-utils = { workspace = true }
+titanpack-core = { workspace = true }
+titanpack-dev = { workspace = true }
+titanpack-dev-server = { workspace = true }
+titanpack-ecmascript-plugins = { workspace = true, features = [
+  "transform_emotion",
+] }
+titanpack-ecmascript-runtime = { workspace = true }
+titanpack-env = { workspace = true }
+titanpack-node = { workspace = true }
+titanpack-trace-utils = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true, features = ["env-filter", "json"] }
+webbrowser = { workspace = true }
+
+[dev-dependencies]
+regex = { workspace = true }
+titanpack-bench = { workspace = true }
+
+[build-dependencies]
+titan-tasks-build = { workspace = true }
+
+[target.'cfg(target_os = "macos")'.dependencies]
+tracing-signpost = { workspace = true }
