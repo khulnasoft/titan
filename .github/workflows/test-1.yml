@@ -1,0 +1,73 @@
+name: Test
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+permissions:
+  actions: write
+  contents: read
+  pull-requests: read
+
+jobs:
+  determine_jobs:
+    name: Determine jobs to run
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Find PR Comment
+        id: comment
+        if: github.event_name == 'pull_request'
+        uses: peter-evans/find-comment@v2
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-author: "github-actions[bot]"
+          body-includes: "<!-- CI COMMENT -->"
+
+      - name: Create or update PR comment
+        if: github.event_name == 'pull_request' && steps.comment.outputs.comment-id != ''
+        uses: peter-evans/create-or-update-comment@v2
+        continue-on-error: true
+        with:
+          comment-id: ${{ steps.comment.outputs.comment-id }}
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            ## ⏳ CI is running again... ⏳
+
+            [Wait for it...](https://github.com/khulnasoft/titan/actions/runs/${{ github.run_id }})
+
+            <!-- CI COMMENT -->
+
+          edit-mode: replace
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: CI related changes
+        id: ci
+        uses: technote-space/get-diff-action@v6
+        with:
+          PATTERNS: |
+            .github/actions/**
+            .github/workflows/test.yml
+
+      - name: Root cargo related changes
+        id: cargo
+        uses: technote-space/get-diff-action@v6
+        with:
+          PATTERNS: |
+            Cargo.*
+            rust-toolchain
+
+      - name: Titanrepo version changes
+        id: titanrepo_version
+        uses: technote-space/get-diff-action@v6
+        with:
+          PATTERNS: |
+            version.txt
