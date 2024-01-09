@@ -1,0 +1,112 @@
+name: "test2"
+on:
+  workflow_dispatch:
+  schedule:
+    # "Everyday at 12:00 UTC (5:00 PT)" https://crontab.guru/#0_12_*_*_*
+    - cron: "0 12 * * *"
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    outputs:
+      has_changes: ${{ steps.status.outputs.has_changes }}
+    steps:
+      - name: Compute info
+        id: info
+        if: always()
+        run: |
+          cancelled=false
+          failure=false
+          subjob () {
+            local result=$1
+            local name=$2
+            echo "$name: $result"
+            if [ "$result" = "cancelled" ]; then
+              cancelled=true
+            elif [ "$result" != "success" ] && [ "$result" != "skipped" ]; then
+              echo "- $name" >> failures.md
+              failure=true
+            fi
+          }
+          subjob ${{needs.determine_jobs.result}} "Determining jobs"
+          subjob ${{needs.go_lint.result}} "Go lints"
+          subjob ${{needs.go_unit.result}} "Go unit tests"
+          subjob ${{needs.titanrepo_examples.result}} "Titanrepo examples"
+          subjob ${{needs.titanrepo_integration.result}} "Titanrepo integration tests"
+          subjob ${{needs.titanrepo_integration_go.result}} "Titanrepo integration tests (Go fallback)"
+          subjob ${{needs.rust_lint.result}} "Rust lints"
+          subjob ${{needs.titanrepo_rust_check.result}} "Titanrepo Rust checks"
+          subjob ${{needs.titanrepo_rust_clippy.result}} "Titanrepo Rust clippy"
+          subjob ${{needs.titanpack_rust_check.result}} "Titanpack Rust checks"
+          subjob ${{needs.titanpack_rust_clippy.result}} "Titanpack Rust clippy"
+          subjob ${{needs.titanpack_rust_test1.result}} "Titanpack Rust tests (linux)"
+          subjob ${{needs.titanpack_rust_test2.result}} "Titanpack Rust tests (mac/win, non-blocking)"
+          subjob ${{needs.titanpack_rust_test_bench1.result}} "Titanpack Rust benchmark tests (linux)"
+          subjob ${{needs.titanpack_rust_test_bench2.result}} "Titanpack Rust benchmark tests (mac/win, non-blocking)"
+          subjob ${{needs.titanpack_typescript.result}} "Titanpack Typescript checks"
+          subjob ${{needs.titanrepo_rust_test.result}} "TitanRepo Rust tests"
+          subjob ${{needs.format_lint.result}} "Formatting"
+          if [ "$cancelled" = "true" ]; then
+             echo "cancelled=true" >> $GITHUB_OUTPUT
+          elif [ "$failure" = "true" ]; then
+            echo "failure=true" >> $GITHUB_OUTPUT
+          else
+            echo "success=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Add failure prose text
+        if: steps.info.outputs.failure == 'true'
+        run: |
+          echo "## ⚠️ CI failed ⚠️" > comment.md
+          echo >> comment.md
+          echo "The following steps have failed in CI:" >> comment.md
+          echo >> comment.md
+          cat failures.md >> comment.md
+          echo >> comment.md
+          echo "See [workflow summary](https://github.com/khulnasoft/titan/actions/runs/${{ github.run_id }}) for details">> comment.md
+          echo >> comment.md
+          echo "<!-- CI COMMENT -->" >> comment.md
+
+      - name: Add success prose text
+        if: steps.info.outputs.success == 'true'
+        run: |
+          echo "## 🟢 CI successful 🟢" > comment.md
+          echo >> comment.md
+          echo "Thanks" >> comment.md
+          echo >> comment.md
+          echo "<!-- CI COMMENT -->" >> comment.md
+
+      - name: Find PR Comment
+        id: comment
+        if: always() && github.event_name == 'pull_request' && steps.info.outputs.cancelled != 'true'
+        uses: peter-evans/find-comment@v2
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-author: "github-actions[bot]"
+          body-includes: "<!-- CI COMMENT -->"
+
+      - name: Create or update PR comment
+        if: always() && github.event_name == 'pull_request' && steps.info.outputs.cancelled != 'true'
+        uses: peter-evans/create-or-update-comment@v2
+        continue-on-error: true
+        with:
+          comment-id: ${{ steps.comment.outputs.comment-id }}
+          issue-number: ${{ github.event.pull_request.number }}
+          body-file: "comment.md"
+          edit-mode: replace
+
+      - name: It's not fine
+        if: steps.info.outputs.failure == 'true'
+        run: exit 1
+
+      - name: It's fine
+        if: steps.info.outputs.success == 'true'
+        run: echo Ok
+
+  cleanup:
+    name: Cleanup
+    needs: [done]
+    if: always()
+    uses: ./.github/workflows/pr-clean-caches.yml
+    secrets: inherit
