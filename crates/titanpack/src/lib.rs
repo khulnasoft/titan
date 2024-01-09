@@ -34,7 +34,6 @@ use ecmascript::{
 use graph::{aggregate, AggregatedGraph, AggregatedGraphNodeContent};
 use module_options::{ModuleOptions, ModuleOptionsContext, ModuleRuleEffect, ModuleType};
 pub use resolve::resolve_options;
-use tracing::Instrument;
 use titan_tasks::{Completion, Value, ValueToString, Vc};
 use titan_tasks_fs::FileSystemPath;
 use titanpack_core::{
@@ -62,6 +61,7 @@ use titanpack_json::JsonModuleAsset;
 use titanpack_mdx::MdxModuleAsset;
 use titanpack_static::StaticModuleAsset;
 use titanpack_wasm::{module_asset::WebAssemblyModuleAsset, source::WebAssemblySource};
+use tracing::Instrument;
 
 use self::{
     module_options::CustomModuleType,

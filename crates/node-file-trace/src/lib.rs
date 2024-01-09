@@ -21,10 +21,9 @@ use clap::Parser;
 use serde::Deserialize;
 #[cfg(feature = "node-api")]
 use serde::Serialize;
-use tokio::sync::mpsc::channel;
 use titan_tasks::{
-    backend::Backend, util::FormatDuration, TaskId, TransientInstance, TransientValue, TitanTasks,
-    TitanTasksBackendApi, UpdateInfo, Value, Vc,
+    backend::Backend, util::FormatDuration, TaskId, TitanTasks, TitanTasksBackendApi,
+    TransientInstance, TransientValue, UpdateInfo, Value, Vc,
 };
 use titan_tasks_fs::{
     glob::Glob, DirectoryEntry, DiskFileSystem, FileSystem, FileSystemPath, ReadGlobResult,
@@ -49,6 +48,7 @@ use titanpack_core::{
     reference::all_modules,
     resolve::options::{ImportMapping, ResolvedMap},
 };
+use tokio::sync::mpsc::channel;
 
 use crate::nft_json::NftJsonAsset;
 
@@ -335,9 +335,9 @@ pub async fn start(
     } = args.common();
     #[cfg(feature = "persistent_cache")]
     if let Some(cache) = cache {
-        use tokio::time::timeout;
         use titan_tasks_memory::MemoryBackendWithPersistedGraph;
         use titan_tasks_rocksdb::RocksDbPersistedGraph;
+        use tokio::time::timeout;
 
         run(
             &args,

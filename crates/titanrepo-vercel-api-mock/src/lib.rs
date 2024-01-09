@@ -10,11 +10,11 @@ use axum::{
     Json, Router,
 };
 use futures_util::StreamExt;
-use tokio::sync::Mutex;
 use titanrepo_vercel_api::{
     AnalyticsEvent, CachingStatus, CachingStatusResponse, Membership, Role, Space, SpaceRun,
     SpacesResponse, Team, TeamsResponse, User, UserResponse, VerificationResponse,
 };
+use tokio::sync::Mutex;
 
 pub const EXPECTED_TOKEN: &str = "expected_token";
 pub const EXPECTED_USER_ID: &str = "expected_user_id";

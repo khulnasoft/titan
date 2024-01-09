@@ -21,7 +21,7 @@ use titan_tasks::{
     registry,
     test_helpers::with_titan_tasks_for_testing,
     util::{SharedError, StaticOrArc},
-    CellId, InvalidationReason, RawVc, TaskId, TraitTypeId, TitanTasksApi, TitanTasksCallApi,
+    CellId, InvalidationReason, RawVc, TaskId, TitanTasksApi, TitanTasksCallApi, TraitTypeId,
 };
 
 enum Task {

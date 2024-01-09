@@ -88,7 +88,7 @@ pub use join_iter_ext::{JoinIterExt, TryFlatJoinIterExt, TryJoinIterExt};
 pub use keyed_cell::{global_keyed_cell, keyed_cell};
 pub use manager::{
     dynamic_call, emit, get_invalidator, mark_finished, mark_stateful, run_once,
-    run_once_with_reason, spawn_blocking, spawn_thread, trait_call, titan_tasks, CurrentCellRef,
+    run_once_with_reason, spawn_blocking, spawn_thread, titan_tasks, trait_call, CurrentCellRef,
     Invalidator, StatsType, TaskIdProvider, TitanTasks, TitanTasksApi, TitanTasksBackendApi,
     TitanTasksCallApi, Unused, UpdateInfo,
 };
@@ -101,8 +101,8 @@ pub use task::{
     concrete_task_input::{ConcreteTaskInput, SharedReference, SharedValue},
     task_input::TaskInput,
 };
-pub use trait_ref::{IntoTraitRef, TraitRef};
 pub use titan_tasks_macros::{function, value, value_impl, value_trait, TaskInput};
+pub use trait_ref::{IntoTraitRef, TraitRef};
 pub use value::{TransientInstance, TransientValue, Value};
 pub use value_type::{TraitMethod, TraitType, ValueType};
 pub use vc::{

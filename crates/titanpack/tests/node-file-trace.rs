@@ -27,7 +27,6 @@ use rstest_reuse::{
     *, {self},
 };
 use serde::{Deserialize, Serialize};
-use tokio::{process::Command, time::timeout};
 use titan_tasks::{backend::Backend, ReadRef, TitanTasks, Value, ValueToString, Vc};
 use titan_tasks_fs::{DiskFileSystem, FileSystem, FileSystemPath};
 use titan_tasks_memory::MemoryBackend;
@@ -43,6 +42,7 @@ use titanpack_core::{
     output::OutputAsset,
     reference_type::ReferenceType,
 };
+use tokio::{process::Command, time::timeout};
 
 #[global_allocator]
 static ALLOC: titan_tasks_malloc::TitanMalloc = titan_tasks_malloc::TitanMalloc;
