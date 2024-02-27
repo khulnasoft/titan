@@ -44,7 +44,7 @@ export interface HandleNavigationOpts {
 }
 
 /**
- * Provides convenience methods for implementing common KhulnaSoft/Router workflows
+ * Provides convenience methods for implementing common NgRx/Router workflows
  *
  * * `navigation` handles fetching data when handling router navigation.
  * * `pessimisticUpdate` handles updating the server before or after the client has been updated.

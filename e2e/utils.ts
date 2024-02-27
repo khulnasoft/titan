@@ -65,7 +65,7 @@ export function exists(filePath: string): boolean {
   return directoryExists(filePath) || fileExists(filePath);
 }
 
-export function addKhulnaSoft(path: string): string {
+export function addNgRx(path: string): string {
   const p = JSON.parse(readFile(`${path}/package.json`));
   p['dependencies']['@ngrx/store'] = '4.0.2';
   p['dependencies']['@ngrx/effects'] = '4.0.2';

@@ -1,6 +1,6 @@
-# Titan Extensions for Angular
+# KhulnaSoft Extensions for Angular
 
-TITAN (Titan Extensions) is a set of libraries and schematics for the Angular framework.
+TITAN (KhulnaSoft Extensions) is a set of libraries and schematics for the Angular framework.
 
 
 
@@ -23,11 +23,11 @@ Add the following dependencies to your project's `package.json` and run `npm ins
 
 ## Schematics
 
-### addKhulnaSoftToModule
+### addNgRxToModule
 
 #### Root
 
-Run `schematics @khulnasoft/titan:addKhulnaSoftToModule --module=src/app/app.module.ts  --root`, and you will see the following files created:
+Run `schematics @khulnasoft/titan:addNgRxToModule --module=src/app/app.module.ts  --root`, and you will see the following files created:
 
 ```
 /src/app/+state/app.actions.ts
@@ -43,11 +43,11 @@ Also, `app.module.ts` will have `StoreModule.forRoot` and `EffectsModule.forRoot
 
 #### EmptyRoot
 
-Run `schematics @khulnasoft/titan:addKhulnaSoftToModule --module=src/app/app.module.ts  --emptyRoot` to only add the `StoreModule.forRoot` and `EffectsModule.forRoot` calls.
+Run `schematics @khulnasoft/titan:addNgRxToModule --module=src/app/app.module.ts  --emptyRoot` to only add the `StoreModule.forRoot` and `EffectsModule.forRoot` calls.
 
 #### Feature
 
-Run `schematics @khulnasoft/titan:addKhulnaSoftToModule --module=src/app/mymodule/mymodule.module.ts `, and you will see the following files created:
+Run `schematics @khulnasoft/titan:addNgRxToModule --module=src/app/mymodule/mymodule.module.ts `, and you will see the following files created:
 
 ```
 /src/app/mymodule/+state/app.actions.ts
@@ -69,7 +69,7 @@ Add `--skipImport` to generate files without adding imports to the module.
 
 ## Data Persistence
 
-Titan Extensions come with utilities to simplify data persistence (data fetching, optimistic and pessimistic updates).
+KhulnaSoft Extensions come with utilities to simplify data persistence (data fetching, optimistic and pessimistic updates).
 
 ### Optimistic Updates
 
@@ -166,6 +166,6 @@ class TodoEffects {
 
 ## Testing
 
-Titan Extensions come with utilities to simplify testing Angular applications. See `app.effects.spec.ts`. Read https://github.com/vsavkin/testing_ngrx_effects for more information.
+KhulnaSoft Extensions come with utilities to simplify testing Angular applications. See `app.effects.spec.ts`. Read https://github.com/vsavkin/testing_ngrx_effects for more information.
 
 

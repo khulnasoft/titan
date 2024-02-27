@@ -1,5 +1,5 @@
 {
-  "name": "titan",
+  "name": "khulnasoft",
   "version": "0.1",
   "schematics": {
     "application": {
@@ -22,10 +22,10 @@
       "schema": "./nglib/schema.json",
       "description": "Create an Angular library."
     },
-    "addKhulnaSoftToModule": {
-      "factory": "./addKhulnaSoftToModule",
-      "schema": "./addKhulnaSoftToModule/schema.json",
-      "description": "Add KhulnaSoft support to a module."
+    "addNgRxToModule": {
+      "factory": "./addNgRxToModule",
+      "schema": "./addNgRxToModule/schema.json",
+      "description": "Add NgRx support to a module."
     }
   }
 }
