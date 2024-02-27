@@ -1,5 +1,8 @@
 #!/bin/bash
 
 rm -rf build
-tsc
-rsync -a --exclude=*.ts src/ build/src
+ngc
+rsync -a --exclude=*.ts packages/ build/packages
+cp README.md build/packages/schematics
+cp README.md build/packages/titan
+cp README.md build/packages/bazel

@@ -10,10 +10,23 @@
     "skipLibCheck": true,
     "lib": [
       "es2017"
-    ]
+    ],
+    "declaration": true,
+    "baseUrl": ".",
+    "paths": {
+      "@khulnasoft/schematics": [
+        "./packages/schematics"
+      ]
+    }
   },
   "exclude": [
     "tmp",
-    "node_modules"
-  ]
+    "node_modules",
+    "packages/schematics/src/*/files/**/*"
+  ],
+  "angularCompilerOptions": {
+    "strictMetadataEmit": true,
+    "skipTemplateCodegen": true,
+    "annotationsAs": "decorators"
+  }
 }

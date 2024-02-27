@@ -1,171 +1,24 @@
-# KhulnaSoft Extensions for Angular
+[![Build Status](https://travis-ci.org/khulnasoft/titan.svg?branch=master)](https://travis-ci.org/khulnasoft/titan)
+[![npm version](https://badge.fury.io/js/%40khulnasoft%2Ftitan.svg)](https://www.npmjs.com/@nrw/titan)
 
-TITAN (KhulnaSoft Extensions) is a set of libraries and schematics for the Angular framework.
+# Khulnasoft Extensions for Angular
 
+<img src="https://raw.githubusercontent.com/khulnasoft/titan/master/titan-logo.png">
 
+An open source toolkit for enterprise Angular applications.
 
-## Installing
-
-Add the following dependencies to your project's `package.json` and run `npm install`:
-
-```
-{
-  dependencies: {
-    "@ngrx/store": "4.0.2",
-    "@ngrx/effects": "4.0.2",
-    "@khulnasoft/titan": "https://github.com/khulnasoft/titan-build",
-    "@angular-devkit/schematics": "0.0.17" 
-  }
-}
-```
+Titan is designed to help you create and build enterprise grade Angular applications. It provides an opinionated approach to application project structure and patterns.
 
 
+## Quick Start & Documentation
 
-## Schematics
+[Watch a 5-minute video on how to get started with Titan.](http://khulnasoft.com/titan)
 
-### addNgRxToModule
+## Examples
 
-#### Root
+[titan-examples](https://github.com/khulnasoft/titan-examples) repo has branches for different titan comments to display expected behavior and example app and libraries.
+Check out the branch (workspace, ngrx...) to see what gets created for you. More info on readme.
 
-Run `schematics @khulnasoft/titan:addNgRxToModule --module=src/app/app.module.ts  --root`, and you will see the following files created:
+## Want to help?
 
-```
-/src/app/+state/app.actions.ts
-/src/app/+state/app.effects.ts
-/src/app/+state/app.effects.spec.ts
-/src/app/+state/app.init.ts
-/src/app/+state/app.interfaces.ts
-/src/app/+state/app.reducer.ts
-/src/app/+state/app.reducer.spec.ts
-```
-
-Also, `app.module.ts` will have `StoreModule.forRoot` and `EffectsModule.forRoot` configured.
-
-#### EmptyRoot
-
-Run `schematics @khulnasoft/titan:addNgRxToModule --module=src/app/app.module.ts  --emptyRoot` to only add the `StoreModule.forRoot` and `EffectsModule.forRoot` calls.
-
-#### Feature
-
-Run `schematics @khulnasoft/titan:addNgRxToModule --module=src/app/mymodule/mymodule.module.ts `, and you will see the following files created:
-
-```
-/src/app/mymodule/+state/app.actions.ts
-/src/app/mymodule/+state/app.effects.ts
-/src/app/mymodule/+state/app.effects.spec.ts
-/src/app/mymodule/+state/app.init.ts
-/src/app/mymodule/+state/app.interfaces.ts
-/src/app/mymodule/+state/app.reducer.ts
-/src/app/mymodule/+state/app.reducer.spec.ts
-```
-
-Also, `mymodule.module.ts` will have `StoreModule.forFeature` and `EffectsModule.forFeature` configured.
-
-#### skipImport
-
-Add `--skipImport` to generate files without adding imports to the module.
-
-
-
-## Data Persistence
-
-KhulnaSoft Extensions come with utilities to simplify data persistence (data fetching, optimistic and pessimistic updates).
-
-### Optimistic Updates
-
-```typescript
-class TodoEffects {
-  @Effect() updateTodo = this.s.optimisticUpdate('UPDATE_TODO', {
-    // provides an action and the current state of the store
-    run(a: UpdateTodo, state: TodosState) {
-      return this.backend(state.user, a.payload);
-    },
-
-    undoAction(a: UpdateTodo, e: any): Action {
-      // dispatch an undo action to undo the changes in the client state
-      return ({
-        type: 'UNDO_UPDATE_TODO',
-        payload: a
-      });
-    }
-  });
-
-  constructor(private s: DataPersistence<TodosState>, private backend: Backend) {}
-}
-```
-
-### Pessimistic Updates
-
-```typescript
-@Injectable()
-class TodoEffects {
-  @Effect() updateTodo = this.s.pessimisticUpdate('UPDATE_TODO', {
-    // provides an action and the current state of the store
-    run(a: UpdateTodo, state: TodosState) {
-      // update the backend first, and then dispatch an action that will
-      // update the client side
-      return this.backend(state.user, a.payload).map(updated => ({
-        type: 'TODO_UPDATED',
-        payload: updated
-      }));
-    },
-    onError(a: UpdateTodo, e: any) {
-      // we don't need to undo the changes on the client side.
-      // we can dispatch an error, or simply log the error here and return `null`
-      return null;
-    }
-  });
-  constructor(private s: DataPersistence<TodosState>, private backend: Backend) {}
-}
-```
-
-### Date Fetching
-
-```typescript
-@Injectable()
-class TodoEffects {
-  @Effect() loadTodo = this.s.fetch('GET_TODOS', {
-    // provides an action and the current state of the store
-    run(a: GetTodos, state: TodosState) {
-      return this.backend(state.user, a.payload).map(r => ({
-        type: 'TODOS',
-        payload: r
-      });
-    },
-    onError(a: GetTodos, e: any): Action {
-      // dispatch an undo action to undo the changes in the client state
-      // return null;
-    }
-  });
-  constructor(private s: DataPersistence<TodosState>, private backend: Backend) {}
-}
-```
-
-### Date Fetching On Router Navigation
-
-```typescript
-@Injectable()
-class TodoEffects {
-  @Effect() loadTodo = this.s.navigation(TodoComponent, {
-    run: (a: ActivatedRouteSnapshot, state: TodosState) => {
-      return this.backend.fetchTodo(a.params['id']).map(todo => ({
-        type: 'TODO_LOADED',
-        payload: todo
-      }));
-    },
-    onError: (a: ActivatedRouteSnapshot, e: any) => {
-      // we can log and error here and return null
-      // we can also navigate back
-      return null;
-    }
-  });
-  constructor(private s: DataPersistence<TodosState>, private backend: Backend) {}
-}
-```
-
-
-## Testing
-
-KhulnaSoft Extensions come with utilities to simplify testing Angular applications. See `app.effects.spec.ts`. Read https://github.com/vsavkin/testing_ngrx_effects for more information.
-
-
+If you want to file a bug or submit a PR, read up on our [guidelines for contributing](https://github.com/khulnasoft/titan/blob/master/CONTRIBUTING.md).

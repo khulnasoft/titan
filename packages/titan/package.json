@@ -1,0 +1,15 @@
+{
+  "name": "@khulnasoft/titan",
+  "version": "0.0.1",
+  "description": "Khulnasoft Extensions for Angular",
+  "main": "index.js",
+  "types": "index.d.js",
+  "dependencies": {
+    "jasmine-marbles": "0.1.0"
+  },
+  "peerDependencies": {
+    "rxjs": "^5.5.0"
+  },
+  "author": "Victor Savkin",
+  "license": "MIT"
+}

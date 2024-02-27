@@ -1,0 +1,18 @@
+package(default_visibility = ["//visibility:public"])
+exports_files(["tsconfig.json"])
+
+filegroup(name = "node_modules", srcs = glob([
+    "node_modules/@angular/**/*.json",
+    "node_modules/@angular/**/*.js",
+    "node_modules/@angular/**/*.d.ts",
+
+    "node_modules/@khulnasoft/**/*.json",
+    "node_modules/@khulnasoft/**/*.js",
+    "node_modules/@khulnasoft/**/*.d.ts",
+
+    "node_modules/typescript/**/*.js",
+    "node_modules/webpack/**/*.js"
+], exclude=[
+    "node_modules/@angular/cli/**",
+    "node_modules/fileset/**"
+]))
