@@ -17,7 +17,7 @@ local_repository(
 )
 
 local_repository(
-  name = "titan",
+  name = "khulnasoft",
   path = "node_modules/@khulnasoft/titan/bazel",
 )
 

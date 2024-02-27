@@ -1,4 +1,4 @@
-import {addKhulnaSoft, checkFilesExists, cleanup, newApp, readFile, runCLI, runCommand, runSchematic, updateFile} from './utils';
+import {addNgRx, checkFilesExists, cleanup, newApp, readFile, runCLI, runCommand, runSchematic, updateFile} from './utils';
 
 describe('application', () => {
   beforeEach(cleanup);
