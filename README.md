@@ -13,7 +13,7 @@ Add the following dependencies to your project's `package.json` and run `npm ins
   dependencies: {
     "@ngrx/store": "4.0.2",
     "@ngrx/effects": "4.0.2",
-    "@khulnasoft/titan": "https://github.com/titan/titan-build",
+    "@khulnasoft/titan": "https://github.com/khulnasoft/titan-build",
     "@angular-devkit/schematics": "0.0.17" 
   }
 }

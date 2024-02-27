@@ -27,8 +27,8 @@
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
-    "@angular/cli": "https://github.com/titan/bazel-cli-build",
-    "@khulnasoft/titan": "https://github.com/titan/titan-build",
+    "@angular/cli": "https://github.com/khulnasoft/bazel-cli-build",
+    "@khulnasoft/titan": "https://github.com/khulnasoft/titan-build",
     "@angular/bazel": "angular/bazel-builds",
     "@angular/compiler-cli": "angular/compiler-cli-builds",
     "@angular/language-service": "angular/language-service-builds",
