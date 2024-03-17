@@ -5,7 +5,7 @@
     "tools-documentation-create-embeddings",
     "nx-dev",
     "nx-dev-e2e",
-    "@nx/nx-source",
+    "@titan/titan-source",
     "nx-dev-ui-markdoc",
     "nx-dev-feature-package-schema-viewer",
     "nx-dev-feature-doc-viewer",
@@ -128,7 +128,7 @@
       "e2e-web",
       "e2e-js",
       "docs",
-      "@nx/nx-source"
+      "@titan/titan-source"
     ],
     "dependencies": {
       "tools-documentation-create-embeddings": [
@@ -5172,1619 +5172,1619 @@
         }
       ],
       "docs": [],
-      "@nx/nx-source": [
+      "@titan/titan-source": [
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "jest",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@docsearch/react",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@headlessui/react",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@heroicons/react",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@markdoc/markdoc",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@monaco-editor/react",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@napi-rs/canvas",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@swc/helpers",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@tailwindcss/aspect-ratio",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@tailwindcss/forms",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@tailwindcss/line-clamp",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@tailwindcss/typography",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@types/license-checker",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@types/minimatch",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@yarnpkg/lockfile",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@yarnpkg/parsers",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@zkochan/js-yaml",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:axios",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:classnames",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:cliui",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:core-js",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:enquirer",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:fast-glob",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:framer-motion",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:glob",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:history",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:json-schema-to-typescript",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:jsonpointer",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:license-checker",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:next",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:next-seo",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:node-machine-id",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:npm-run-path",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:preact",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:react",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:react-copy-to-clipboard",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:react-dom",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:react-intersection-observer",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:react-syntax-highlighter",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:regenerator-runtime",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:send",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:string-width",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:strong-log-transformer",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:tailwind-merge",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:tailwindcss",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:tslib",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:vitest",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:weak-napi",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@actions/core",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@angular-devkit/architect",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@angular-devkit/build-angular",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@angular-devkit/core",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@angular-devkit/schematics",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@angular-eslint/eslint-plugin",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@angular-eslint/eslint-plugin-template",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@angular-eslint/template-parser",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@angular/cli",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@angular/common",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@angular/compiler",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@angular/compiler-cli",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@angular/core",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@angular/router",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@babel/core",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@babel/helper-create-regexp-features-plugin",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@babel/plugin-transform-runtime",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@babel/preset-react",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@babel/preset-typescript",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@babel/runtime",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@eslint/eslintrc",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@eslint/js",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@floating-ui/react",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@jest/reporters",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@jest/test-result",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@jest/types",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@monodon/rust",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@napi-rs/cli",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@nestjs/cli",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@nestjs/common",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@nestjs/core",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@nestjs/platform-express",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@nestjs/schematics",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@nestjs/swagger",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@nestjs/testing",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@ngrx/effects",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@ngrx/router-store",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@ngrx/store",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@nguniversal/builders",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "angular",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "cypress",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "devkit",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "esbuild",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "eslint-plugin",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "js",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "linter",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "next",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "playwright",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "react",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "storybook",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "web",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "webpack",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@parcel/watcher",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@phenomnomnominal/tsquery",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@playwright/test",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@pmmmwh/react-refresh-webpack-plugin",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@pnpm/lockfile-types",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@reduxjs/toolkit",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@rollup/plugin-babel",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@rollup/plugin-commonjs",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@rollup/plugin-image",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@rollup/plugin-json",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@rollup/plugin-node-resolve",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@rollup/plugin-url",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@schematics/angular",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@side/jest-runtime",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@storybook/addon-essentials",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@storybook/core-server",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@storybook/react",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@storybook/react-webpack5",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@storybook/types",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@supabase/supabase-js",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@svgr/rollup",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@svgr/webpack",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@swc-node/register",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@swc/cli",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@swc/core",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@swc/jest",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@testing-library/react",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@types/cytoscape",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@types/detect-port",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@types/eslint",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@types/express",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@types/flat",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@types/fs-extra",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@types/is-ci",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@types/jasmine",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@types/jasminewd2",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@types/jest",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@types/js-yaml",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@types/marked",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@types/node",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@types/prettier",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@types/react",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@types/react-dom",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@types/semver",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@types/tar-stream",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@types/tmp",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@types/yargs",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@types/yarnpkg__lockfile",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@typescript-eslint/eslint-plugin",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@typescript-eslint/parser",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@typescript-eslint/type-utils",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@typescript-eslint/utils",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@xstate/immer",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@xstate/inspect",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:@xstate/react",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:ai",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:ajv",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:autoprefixer",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:babel-jest",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:babel-loader",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:babel-plugin-transform-async-to-promises",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:browserslist",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:chalk",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:cli-cursor",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:cli-spinners",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:confusing-browser-globals",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:conventional-changelog-cli",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:convert-source-map",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:copy-webpack-plugin",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:css-minimizer-webpack-plugin",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:cypress",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:cytoscape",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:cytoscape-dagre",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:cytoscape-popper",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:cz-git",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:czg",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:detect-port",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:dotenv",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:dotenv-expand",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:ejs",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:enhanced-resolve",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:esbuild",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:eslint",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:eslint-config-next",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:eslint-config-prettier",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:eslint-plugin-cypress",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:eslint-plugin-import",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:eslint-plugin-jsx-a11y",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:eslint-plugin-playwright",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:eslint-plugin-react",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:eslint-plugin-react-hooks",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:eslint-plugin-storybook",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:express",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:fast-xml-parser",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:figures",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:file-loader",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:file-type",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:find-cache-dir",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:flat",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:fork-ts-checker-webpack-plugin",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:fs-extra",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:github-slugger",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:gpt3-tokenizer",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:handlebars",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:html-webpack-plugin",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:http-server",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:husky",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:identity-obj-proxy",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:identity-obj-proxy",
           "type": "dynamic"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:ignore",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:immer",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:import-fresh",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:injection-js",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:is-ci",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:is-windows",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:jasmine-core",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:jasmine-spec-reporter",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:jest",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:jest-config",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:jest-environment-jsdom",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:jest-environment-node",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:jest-resolve",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:jest-util",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:js-tokens",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:js-yaml",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:jsonc-eslint-parser",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:jsonc-parser",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:kill-port",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:lerna",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:less",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:less-loader",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:license-webpack-plugin",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:lines-and-columns",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:loader-utils",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:magic-string",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:markdown-factory",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:mdast-util-from-markdown",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:mdast-util-to-markdown",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:mdast-util-to-string",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:memfs",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:metro-config",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:metro-resolver",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:mini-css-extract-plugin",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:minimatch",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:next-sitemap",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:ng-packagr",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:node-fetch",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "nx",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:nx-cloud",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:octokit",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:open",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:openai",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:ora",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:parse-markdown-links",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:parse5",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:postcss",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:postcss-import",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:postcss-preset-env",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:postcss-url",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:prettier",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:prettier-plugin-tailwindcss",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:pretty-quick",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:raw-loader",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:react-markdown",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:react-redux",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:react-refresh",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:react-router-dom",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:react-textarea-autosize",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:resolve.exports",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:rollup",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:rollup-plugin-copy",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:rollup-plugin-peer-deps-external",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:rollup-plugin-postcss",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:rollup-plugin-typescript2",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:rxjs",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:sass",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:sass-loader",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:semver",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:source-map",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:source-map-loader",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:source-map-support",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:storybook-dark-mode",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:style-loader",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:styled-components",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:stylus",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:stylus-loader",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:tar-fs",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:tar-stream",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:tcp-port-used",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:terser-webpack-plugin",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:tmp",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:tree-kill",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:ts-jest",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:ts-loader",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:ts-node",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:tsconfig-paths",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:tsconfig-paths-webpack-plugin",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:tslint-to-eslint-config",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:typedoc",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:typedoc-plugin-markdown",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:typescript",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:unist-builder",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:unzipper",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:url-loader",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:use-sync-external-store",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:verdaccio",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:vite",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:webpack",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:webpack-dev-server",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:webpack-merge",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:webpack-node-externals",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:webpack-sources",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:webpack-subresource-integrity",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:xstate",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:yargs",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:yargs-parser",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "nx-dev-models-document",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "nx-dev-models-menu",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "nx-dev-models-package",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "nx-dev-data-access-packages",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "docs",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "nx-dev",
           "type": "static"
         },
         {
-          "source": "@nx/nx-source",
+          "source": "@titan/titan-source",
           "target": "npm:strip-ansi",
           "type": "static"
         }

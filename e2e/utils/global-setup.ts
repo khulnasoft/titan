@@ -19,7 +19,7 @@ export default async function (globalConfig: Config.ConfigGlobals) {
     process.env.NX_TASK_TARGET_PROJECT ?? ''
   );
   global.e2eTeardown = await startLocalRegistry({
-    localRegistryTarget: '@nx/nx-source:local-registry',
+    localRegistryTarget: '@titan/titan-source:local-registry',
     verbose: isVerbose,
     storage: storageLocation,
   });

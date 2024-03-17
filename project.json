@@ -1,5 +1,5 @@
 {
-  "name": "@nx/nx-source",
+  "name": "@titan/titan-source",
   "$schema": "node_modules/nx/schemas/project-schema.json",
   "targets": {
     "local-registry": {

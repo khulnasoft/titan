@@ -1,8 +1,8 @@
 {
-  "name": "@nx/nx-source",
+  "name": "@titan/titan-source",
   "description": "Smart Monorepos · Fast CI",
   "homepage": "https://nx.dev",
-  "private": true,
+  "private": false,
   "scripts": {
     "build": "nx run-many --target build --parallel 8 --exclude nx-dev,typedoc-theme,tools-documentation-create-embeddings",
     "commit": "czg",
@@ -14,7 +14,7 @@
     "check-codeowners": "ts-node -P ./scripts/tsconfig.scripts.json ./scripts/check-codeowners.ts",
     "nx-release": "ts-node -P ./scripts/tsconfig.release.json ./scripts/nx-release",
     "prepublishOnly": "node ./scripts/update-package-group.js",
-    "local-registry": "nx local-registry @nx/nx-source",
+    "local-registry": "nx local-registry @titan/titan-source",
     "documentation": "ts-node -P scripts/tsconfig.scripts.json ./scripts/documentation/generators/main.ts && pnpm check-documentation-map",
     "submit-plugin": "node ./scripts/submit-plugin.js",
     "prepare": "is-ci || husky install",
