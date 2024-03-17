@@ -1,24 +1,79 @@
-[![Build Status](https://travis-ci.org/khulnasoft/titan.svg?branch=master)](https://travis-ci.org/khulnasoft/titan)
-[![npm version](https://badge.fury.io/js/%40khulnasoft%2Ftitan.svg)](https://www.npmjs.com/@nrw/titan)
+<p style="text-align: center;">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-dark.svg">
+    <img alt="Nx - Smart Monorepos · Fast CI" src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-light.svg" width="100%">
+  </picture>
+</p>
 
-# Khulnasoft Extensions for Angular
+<div style="text-align: center;">
 
-<img src="https://raw.githubusercontent.com/khulnasoft/titan/master/titan-logo.png">
+[![CircleCI](https://circleci.com/gh/nrwl/nx.svg?style=svg)](https://circleci.com/gh/nrwl/nx)
+[![License](https://img.shields.io/npm/l/nx.svg?style=flat-square)]()
+[![NPM Version](https://badge.fury.io/js/nx.svg)](https://www.npmjs.com/package/nx)
+[![Semantic Release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)]()
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![Join the chat at https://gitter.im/nrwl-nx/community](https://badges.gitter.im/nrwl-nx/community.svg)](https://gitter.im/nrwl-nx/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the Official Nx Discord Server](https://img.shields.io/discord/1143497901675401286?label=discord)](https://go.nx.dev/community)
 
-An open source toolkit for enterprise Angular applications.
+</div>
 
-Titan is designed to help you create and build enterprise grade Angular applications. It provides an opinionated approach to application project structure and patterns.
+<hr>
 
+# Smart Monorepos · Fast CI
 
-## Quick Start & Documentation
+Nx is a build system with built-in tooling and advanced CI capabilities. It helps you maintain and scale monorepos, both locally and on CI.
 
-[Watch a 5-minute video on how to get started with Titan.](http://khulnasoft.com/titan)
+A few links to help you get started:
 
-## Examples
+- [Nx.Dev: Documentation, Guides, Interactive Tutorials](https://nx.dev)
+- [Nx.Dev: Core Tutorials](https://nx.dev/getting-started/intro)
+- [Recipe: Adding Nx to an Existing Monorepo](https://nx.dev/recipes/adopting-nx/adding-to-monorepo)
+- [Official Nx YouTube Channel](https://www.youtube.com/@NxDevtools)
+- [Blog Posts About Nx](https://blog.nrwl.io/nx/home)
 
-[titan-examples](https://github.com/khulnasoft/titan-examples) repo has branches for different titan comments to display expected behavior and example app and libraries.
-Check out the branch (workspace, ngrx...) to see what gets created for you. More info on readme.
+<p style="text-align: center;"><a href="https://nx.dev/#learning-materials" target="_blank" rel="noreferrer"><img src="./images/nx-courses-and-videos.svg" 
+width="100%" alt="Nx - Smart Monorepos · Fast CI"></a></p>
+
+# Engage with the Core Team and the Community
+
+- [Nx.Dev Community Page: Community Discord Channel, Newsletter, etc.](https://nx.dev/community)
+- [The Nx Show Playlist on YouTube](https://www.youtube.com/playlist?list=PLakNactNC1dE8KLQ5zd3fQwu_yQHjTmR5). It's a
+  regular YouTube stream where we talk all things Nx. Join the stream, ask questions, etc.
+- [Follow Nx on Twitter](https://twitter.com/NxDevTools)
 
 ## Want to help?
 
-If you want to file a bug or submit a PR, read up on our [guidelines for contributing](https://github.com/khulnasoft/titan/blob/master/CONTRIBUTING.md).
+If you want to file a bug or submit a PR, read up on
+our [guidelines for contributing](https://github.com/nrwl/nx/blob/master/CONTRIBUTING.md) and watch this video that will
+help you get started.
+
+<a href="https://www.youtube.com/watch?v=8LCA_4qxc08" target="_blank" rel="noreferrer">
+<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/how-to-contribute.png" width="600" alt="Nx - How to contribute video"></p>
+</a>
+
+## Core Team
+
+| Victor Savkin                                                          | Jason Jean                                                            | Benjamin Cabanes                                                            | Jack Hsu                                                          |
+| ---------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| ![Victor Savkin](https://avatars1.githubusercontent.com/u/35996?s=160) | ![Jason Jean](https://avatars2.githubusercontent.com/u/8104246?s=160) | ![Benjamin Cabanes](https://avatars2.githubusercontent.com/u/3447705?s=160) | ![Jack Hsu](https://avatars0.githubusercontent.com/u/53559?s=160) |
+| [vsavkin](https://github.com/vsavkin)                                  | [FrozenPandaz](https://github.com/FrozenPandaz)                       | [bcabanes](https://github.com/bcabanes)                                     | [jaysoo](https://github.com/jaysoo)                               |
+
+| Jo Hanna Pearce                                                           | Jon Cammisuli                                                            | Isaac Mann                                                           | Juri Strumpflohner                                                           |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------ | -------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| ![Jo Hanna Pearce](https://avatars1.githubusercontent.com/u/439121?s=160) | ![Jon Cammisuli](https://avatars2.githubusercontent.com/u/4332460?s=160) | ![Isaac Mann](https://avatars1.githubusercontent.com/u/861504?s=160) | ![Juri Strumpflohner](https://avatars1.githubusercontent.com/u/542458?s=160) |
+| [jdpearce](https://github.com/jdpearce)                                   | [cammisuli](https://github.com/cammisuli)                                | [isaacplmann](https://github.com/isaacplmann)                        | [juristr](https://github.com/juristr)                                        |
+
+| Philip Fulcher                                                            | Caleb Ukle                                                            | Katerina Skroumpelou                                                            | Colum Ferry                                                            |
+| ------------------------------------------------------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| ![Philip Fulcher](https://avatars1.githubusercontent.com/u/1536471?s=160) | ![Caleb Ukle](https://avatars.githubusercontent.com/u/23272162?s=160) | ![Katerina Skroumpelou](https://avatars0.githubusercontent.com/u/6603745?s=160) | ![Colum Ferry](https://avatars.githubusercontent.com/u/12140467?s=160) |
+| [philipjfulcher](https://github.com/philipjfulcher)                       | [barbados-clemens](https://github.com/barbados-clemens)               | [mandarini](https://github.com/mandarini)                                       | [Coly010](https://github.com/Coly010)                                  |
+
+| Emily Xiong                                                            | Miroslav Jonaš                                                          | Leosvel Pérez Espinosa                                                            | Zachary DeRose                                                           |
+| ---------------------------------------------------------------------- | ----------------------------------------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| ![Emily Xiong](https://avatars.githubusercontent.com/u/16211801?s=160) | ![Miroslav Jonaš](https://avatars.githubusercontent.com/u/881612?s=160) | ![Leosvel Pérez Espinosa](https://avatars.githubusercontent.com/u/12051310?s=160) | ![Zachary DeRose](https://avatars.githubusercontent.com/u/3788405?s=160) |
+| [xiongemi](https://github.com/xiongemi)                                | [meeroslav](https://github.com/meeroslav)                               | [leosvelperez](https://github.com/leosvelperez)                                   | [ZackDeRose](https://github.com/ZackDeRose)                              |
+
+| Craigory Coppola                                                           | Chau Tran                                                            | Nicholas Cunningham                                                          | Max Kless                                                            |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------- | ---------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| ![Craigory Coppola](https://avatars.githubusercontent.com/u/6933928?s=160) | ![Chau Tran](https://avatars.githubusercontent.com/u/25516557?s=160) | ![Nicholas Cunningham](https://avatars.githubusercontent.com/u/338948?s=160) | ![Max Kless](https://avatars.githubusercontent.com/u/34165455?s=160) |
+| [AgentEnder](https://github.com/AgentEnder)                                | [nartc](https://github.com/nartc)                                    | [ndcunningham](https://github.com/ndcunningham)                              | [MaxKless](https://github.com/MaxKless)                              |

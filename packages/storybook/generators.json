@@ -1,0 +1,31 @@
+{
+  "name": "Nx Storybook",
+  "version": "0.1",
+  "generators": {
+    "init": {
+      "factory": "./src/generators/init/init#initGeneratorInternal",
+      "schema": "./src/generators/init/schema.json",
+      "description": "Add Storybook configuration to the workspace.",
+      "aliases": ["ng-add"],
+      "hidden": true
+    },
+    "configuration": {
+      "factory": "./src/generators/configuration/configuration#configurationGeneratorInternal",
+      "schema": "./src/generators/configuration/schema.json",
+      "description": "Add Storybook configuration to a UI library or an application.",
+      "hidden": false
+    },
+    "cypress-project": {
+      "factory": "./src/generators/cypress-project/cypress-project",
+      "schema": "./src/generators/cypress-project/schema.json",
+      "description": "Add cypress e2e app to test a UI library that is set up for Storybook.",
+      "hidden": false
+    },
+    "migrate-7": {
+      "factory": "./src/generators/migrate-7/migrate-7",
+      "schema": "./src/generators/migrate-7/schema.json",
+      "description": "Migrate to Storybook version 7.",
+      "hidden": false
+    }
+  }
+}

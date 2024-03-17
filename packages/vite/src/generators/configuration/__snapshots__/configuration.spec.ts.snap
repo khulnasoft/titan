@@ -1,0 +1,345 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@nx/vite:configuration library mode should add config for building library 1`] = `
+"/// <reference types='vitest' />
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import dts from 'vite-plugin-dts';
+import * as path from 'path';
+import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
+
+export default defineConfig({
+  root: __dirname,
+  cacheDir: '../../node_modules/.vite/libs/react-lib-nonb-jest',
+
+  plugins: [
+    react(),
+    nxViteTsPaths(),
+    dts({
+      entryRoot: 'src',
+      tsConfigFilePath: path.join(__dirname, 'tsconfig.lib.json'),
+      skipDiagnostics: true,
+    }),
+  ],
+
+  // Uncomment this if you are using workers.
+  // worker: {
+  //  plugins: [ nxViteTsPaths() ],
+  // },
+
+  // Configuration for building your library.
+  // See: https://vitejs.dev/guide/build.html#library-mode
+  build: {
+    outDir: '../../dist/libs/react-lib-nonb-jest',
+    reportCompressedSize: true,
+    commonjsOptions: {
+      transformMixedEsModules: true,
+    },
+    lib: {
+      // Could also be a dictionary or array of multiple entry points.
+      entry: 'src/index.ts',
+      name: 'react-lib-nonb-jest',
+      fileName: 'index',
+      // Change this to the formats you want to support.
+      // Don't forget to update your package.json as well.
+      formats: ['es', 'cjs'],
+    },
+    rollupOptions: {
+      // External packages that should not be bundled into your library.
+      external: ['react', 'react-dom', 'react/jsx-runtime'],
+    },
+  },
+});
+"
+`;
+
+exports[`@nx/vite:configuration library mode should set up non buildable library correctly 1`] = `
+"/// <reference types='vitest' />
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import dts from 'vite-plugin-dts';
+import * as path from 'path';
+import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
+
+export default defineConfig({
+  root: __dirname,
+  cacheDir: '../../node_modules/.vite/libs/react-lib-nonb-jest',
+
+  plugins: [
+    react(),
+    nxViteTsPaths(),
+    dts({
+      entryRoot: 'src',
+      tsConfigFilePath: path.join(__dirname, 'tsconfig.lib.json'),
+      skipDiagnostics: true,
+    }),
+  ],
+
+  // Uncomment this if you are using workers.
+  // worker: {
+  //  plugins: [ nxViteTsPaths() ],
+  // },
+
+  // Configuration for building your library.
+  // See: https://vitejs.dev/guide/build.html#library-mode
+  build: {
+    outDir: '../../dist/libs/react-lib-nonb-jest',
+    reportCompressedSize: true,
+    commonjsOptions: {
+      transformMixedEsModules: true,
+    },
+    lib: {
+      // Could also be a dictionary or array of multiple entry points.
+      entry: 'src/index.ts',
+      name: 'react-lib-nonb-jest',
+      fileName: 'index',
+      // Change this to the formats you want to support.
+      // Don't forget to update your package.json as well.
+      formats: ['es', 'cjs'],
+    },
+    rollupOptions: {
+      // External packages that should not be bundled into your library.
+      external: ['react', 'react-dom', 'react/jsx-runtime'],
+    },
+  },
+
+  test: {
+    globals: true,
+    cache: {
+      dir: '../../node_modules/.vitest',
+    },
+    environment: 'jsdom',
+    include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
+
+    reporters: ['default'],
+    coverage: {
+      reportsDirectory: '../../coverage/libs/react-lib-nonb-jest',
+      provider: 'v8',
+    },
+  },
+});
+"
+`;
+
+exports[`@nx/vite:configuration library mode should set up non buildable library which already has vite.config.ts correctly 1`] = `
+"import dts from 'vite-plugin-dts';
+import * as path from 'path';
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
+
+export default defineConfig({
+  // Configuration for building your library.
+  // See: https://vitejs.dev/guide/build.html#library-mode
+  cacheDir: '../../node_modules/.vite/libs/react-lib-nonb-vitest',
+  build: {
+    outDir: '../../dist/libs/react-lib-nonb-vitest',
+    reportCompressedSize: true,
+    commonjsOptions: {
+      transformMixedEsModules: true,
+    },
+    lib: {
+      // Could also be a dictionary or array of multiple entry points.
+      entry: 'src/index.ts',
+      name: 'react-lib-nonb-vitest',
+      fileName: 'index',
+      // Change this to the formats you want to support.
+      // Don't forget to update your package.json as well.
+      formats: ['es', 'cjs'],
+    },
+    rollupOptions: {
+      // External packages that should not be bundled into your library.
+      external: ['react', 'react-dom', 'react/jsx-runtime'],
+    },
+  },
+  plugins: [
+    nxViteTsPaths(),
+    react(),
+    dts({
+      entryRoot: 'src',
+      tsConfigFilePath: path.join(__dirname, 'tsconfig.lib.json'),
+      skipDiagnostics: true,
+    }),
+  ],
+
+  test: {
+    globals: true,
+    cache: { dir: '../../node_modules/.vitest' },
+    environment: 'jsdom',
+    include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
+    reporters: ['default'],
+    coverage: {
+      reportsDirectory: '../../coverage/libs/react-lib-nonb-vitest',
+      provider: 'v8',
+    },
+  },
+});
+"
+`;
+
+exports[`@nx/vite:configuration transform React app to use Vite should create vite.config file at the root of the app 1`] = `
+"/// <reference types='vitest' />
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
+
+export default defineConfig({
+  root: __dirname,
+  cacheDir: '../../node_modules/.vite/apps/my-test-react-app',
+
+  server: {
+    port: 4200,
+    host: 'localhost',
+  },
+
+  preview: {
+    port: 4300,
+    host: 'localhost',
+  },
+
+  plugins: [react(), nxViteTsPaths()],
+
+  // Uncomment this if you are using workers.
+  // worker: {
+  //  plugins: [ nxViteTsPaths() ],
+  // },
+
+  build: {
+    outDir: '../../dist/apps/my-test-react-app',
+    reportCompressedSize: true,
+    commonjsOptions: {
+      transformMixedEsModules: true,
+    },
+  },
+});
+"
+`;
+
+exports[`@nx/vite:configuration transform React app to use Vite should move index.html to the root of the project 1`] = `
+"<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>My Test React App</title>
+    <base href="/" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+"
+`;
+
+exports[`@nx/vite:configuration transform Web app to use Vite should create vite.config file at the root of the app 1`] = `
+"/// <reference types='vitest' />
+import { defineConfig } from 'vite';
+
+import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
+
+export default defineConfig({
+  root: __dirname,
+  cacheDir: '../../node_modules/.vite/apps/my-test-web-app',
+
+  server: {
+    port: 4200,
+    host: 'localhost',
+  },
+
+  preview: {
+    port: 4300,
+    host: 'localhost',
+  },
+
+  plugins: [nxViteTsPaths()],
+
+  // Uncomment this if you are using workers.
+  // worker: {
+  //  plugins: [ nxViteTsPaths() ],
+  // },
+
+  build: {
+    outDir: '../../dist/apps/my-test-web-app',
+    reportCompressedSize: true,
+    commonjsOptions: {
+      transformMixedEsModules: true,
+    },
+  },
+});
+"
+`;
+
+exports[`@nx/vite:configuration transform Web app to use Vite should move index.html to the root of the project 1`] = `
+"<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>WebappPure</title>
+    <base href="/" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+  <body>
+    <workspace-root></workspace-root>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
+"
+`;
+
+exports[`@nx/vite:configuration vitest should create a vitest configuration if "includeVitest" is true 1`] = `
+"/// <reference types='vitest' />
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
+
+export default defineConfig({
+  root: __dirname,
+  cacheDir: '../../node_modules/.vite/apps/my-test-react-app',
+
+  server: {
+    port: 4200,
+    host: 'localhost',
+  },
+
+  preview: {
+    port: 4300,
+    host: 'localhost',
+  },
+
+  plugins: [react(), nxViteTsPaths()],
+
+  // Uncomment this if you are using workers.
+  // worker: {
+  //  plugins: [ nxViteTsPaths() ],
+  // },
+
+  build: {
+    outDir: '../../dist/apps/my-test-react-app',
+    reportCompressedSize: true,
+    commonjsOptions: {
+      transformMixedEsModules: true,
+    },
+  },
+
+  test: {
+    globals: true,
+    cache: {
+      dir: '../../node_modules/.vitest',
+    },
+    environment: 'jsdom',
+    include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
+
+    reporters: ['default'],
+    coverage: {
+      reportsDirectory: '../../coverage/apps/my-test-react-app',
+      provider: 'v8',
+    },
+  },
+});
+"
+`;
