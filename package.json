@@ -2,7 +2,7 @@
   "name": "@titan/titan-source",
   "description": "Smart Monorepos · Fast CI",
   "homepage": "https://nx.dev",
-  "private": false,
+  "private":"true",
   "scripts": {
     "build": "nx run-many --target build --parallel 8 --exclude nx-dev,typedoc-theme,tools-documentation-create-embeddings",
     "commit": "czg",
