@@ -5,7 +5,7 @@ import {
   workspaceRoot,
   type ProjectGraph,
   type ProjectGraphProjectNode,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import {
   createProjectRootMappings,
   findProjectForPath,

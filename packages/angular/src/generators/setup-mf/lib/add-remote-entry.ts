@@ -1,5 +1,5 @@
-import type { Tree } from '@nx/devkit';
-import { generateFiles, joinPathFragments } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
+import { generateFiles, joinPathFragments } from '@titan/devkit';
 import { addRoute } from '../../../utils/nx-devkit/route-utils';
 import type { Schema } from '../schema';
 

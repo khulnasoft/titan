@@ -3,7 +3,7 @@ import {
   readJson,
   TargetConfiguration,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import {
   createProjectGraphAsync,
   formatFiles,
@@ -11,7 +11,7 @@ import {
   logger,
   readProjectConfiguration,
   updateJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { tsquery } from '@phenomnomnominal/tsquery';
 import { dirname } from 'path';
 import type { StringLiteral } from 'typescript';

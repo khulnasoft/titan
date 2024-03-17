@@ -1,4 +1,4 @@
-import { workspaceRoot } from '@nx/devkit';
+import { workspaceRoot } from '@titan/devkit';
 import { lstatSync } from 'node:fs';
 import { dirname, join, relative } from 'node:path';
 import { defineConfig } from '@playwright/test';

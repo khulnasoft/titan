@@ -36,8 +36,8 @@
               "@nx/vite",
               "@nx/webpack",
               "@nx/detox",
-              "@nx/cypress",
-              "@nx/playwright",
+              "@titan/cypress",
+              "@titan/playwright",
               "ajv"
             ]
           }

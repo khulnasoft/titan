@@ -1,8 +1,8 @@
-import { getProjects, Tree, updateProjectConfiguration } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { getProjects, Tree, updateProjectConfiguration } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import libraryGenerator from '../../library/library';
 import { createComponentStories } from './component-story';
-import { Linter } from '@nx/eslint';
+import { Linter } from '@titan/eslint';
 
 describe('vue:component-story', () => {
   let appTree: Tree;

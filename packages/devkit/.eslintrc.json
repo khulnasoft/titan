@@ -22,7 +22,7 @@
                 "allowTypeImports": true
               },
               {
-                "group": ["@nx/devkit/**/*"],
+                "group": ["@titan/devkit/**/*"],
                 "message": "Use a relative import"
               }
             ]

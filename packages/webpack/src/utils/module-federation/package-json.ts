@@ -1,5 +1,5 @@
 import { existsSync } from 'fs';
-import { workspaceRoot, readJsonFile, joinPathFragments } from '@nx/devkit';
+import { workspaceRoot, readJsonFile, joinPathFragments } from '@titan/devkit';
 
 export function readRootPackageJson(): {
   dependencies?: { [key: string]: string };

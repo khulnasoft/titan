@@ -2,8 +2,8 @@ import 'nx/src/internal-testing-utils/mock-fs';
 import { vol } from 'memfs';
 import { findNpmDependencies } from './find-npm-dependencies';
 
-jest.mock('@nx/devkit', () => ({
-  ...jest.requireActual<any>('@nx/devkit'),
+jest.mock('@titan/devkit', () => ({
+  ...jest.requireActual<any>('@titan/devkit'),
   workspaceRoot: '/root',
 }));
 

@@ -1,8 +1,8 @@
-import { formatFiles, getProjects, Tree } from '@nx/devkit';
+import { formatFiles, getProjects, Tree } from '@titan/devkit';
 import {
   isEslintConfigSupported,
   updateOverrideInLintConfig,
-} from '@nx/eslint/src/generators/utils/eslint-file';
+} from '@titan/eslint/src/generators/utils/eslint-file';
 
 export default async function update(tree: Tree) {
   const projects = getProjects(tree);

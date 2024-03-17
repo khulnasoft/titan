@@ -1,7 +1,7 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import type { NormalizedSchema } from './normalized-schema';
 
-import { Linter } from '@nx/eslint';
+import { Linter } from '@titan/eslint';
 import addLintingGenerator from '../../add-linting/add-linting';
 
 export async function addLinting(host: Tree, options: NormalizedSchema) {

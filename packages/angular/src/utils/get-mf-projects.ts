@@ -1,5 +1,5 @@
-import type { Tree } from '@nx/devkit';
-import { forEachExecutorOptions } from '@nx/devkit/src/generators/executor-options-utils';
+import type { Tree } from '@titan/devkit';
+import { forEachExecutorOptions } from '@titan/devkit/src/generators/executor-options-utils';
 
 function _getMfProjects(
   tree: Tree,
@@ -45,7 +45,7 @@ export function getMFProjects(
   const projects: string[] = [];
   forEachExecutorOptions(
     tree,
-    '@nx/angular:webpack-browser',
+    '@titan/angular:webpack-browser',
     _getMfProjects(
       tree,
       CUSTOM_WEBPACK_OPTION,

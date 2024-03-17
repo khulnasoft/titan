@@ -5,11 +5,11 @@ import {
   readProjectConfiguration,
   runTasksInSerial,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 import { addStyleDependencies } from '../../utils/styles';
 import { Schema } from './schema';
-import { determineArtifactNameAndDirectoryOptions } from '@nx/devkit/src/generators/artifact-name-and-directory-utils';
+import { determineArtifactNameAndDirectoryOptions } from '@titan/devkit/src/generators/artifact-name-and-directory-utils';
 
 export async function pageGenerator(host: Tree, schema: Schema) {
   return pageGeneratorInternal(host, {
@@ -72,7 +72,7 @@ async function normalizeOptions(host: Tree, options: Schema) {
     const { project: determinedProjectName } =
       await determineArtifactNameAndDirectoryOptions(host, {
         artifactType: 'page',
-        callingGenerator: '@nx/next:page',
+        callingGenerator: '@titan/next:page',
         name: options.name,
         directory: options.directory,
       });
@@ -96,7 +96,7 @@ async function normalizeOptions(host: Tree, options: Schema) {
     directory,
   } = await determineArtifactNameAndDirectoryOptions(host, {
     artifactType: 'page',
-    callingGenerator: '@nx/next:page',
+    callingGenerator: '@titan/next:page',
     name: options.name,
     fileName: isAppRouter ? 'page' : 'index',
     directory: options.directory,

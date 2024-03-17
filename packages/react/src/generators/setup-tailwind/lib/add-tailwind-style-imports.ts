@@ -4,7 +4,7 @@ import {
   ProjectConfiguration,
   stripIndents,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import * as chalk from 'chalk';
 
 import { SetupTailwindOptions } from '../schema';

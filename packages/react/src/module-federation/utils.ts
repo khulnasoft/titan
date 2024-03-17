@@ -13,7 +13,7 @@ import {
   createProjectGraphAsync,
   ProjectGraph,
   readCachedProjectGraph,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { readCachedProjectConfiguration } from 'nx/src/project-graph/project-graph';
 
 export function getFunctionDeterminateRemoteUrl(isServer: boolean = false) {

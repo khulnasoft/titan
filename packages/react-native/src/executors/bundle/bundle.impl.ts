@@ -1,5 +1,5 @@
 import { createDirectory } from '@nx/workspace/src/utilities/fileutils';
-import { names, ExecutorContext } from '@nx/devkit';
+import { names, ExecutorContext } from '@titan/devkit';
 import { dirname, join, resolve as pathResolve } from 'path';
 import { ChildProcess, fork } from 'child_process';
 

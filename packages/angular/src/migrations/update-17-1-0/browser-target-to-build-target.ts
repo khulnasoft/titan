@@ -5,14 +5,14 @@ import {
   updateNxJson,
   updateProjectConfiguration,
   type Tree,
-} from '@nx/devkit';
-import { forEachExecutorOptions } from '@nx/devkit/src/generators/executor-options-utils';
+} from '@titan/devkit';
+import { forEachExecutorOptions } from '@titan/devkit/src/generators/executor-options-utils';
 
 export const executors = [
   '@angular-devkit/build-angular:dev-server',
   '@angular-devkit/build-angular:extract-i18n',
-  '@nx/angular:module-federation-dev-server',
-  '@nx/angular:webpack-dev-server',
+  '@titan/angular:module-federation-dev-server',
+  '@titan/angular:webpack-dev-server',
 ];
 
 export default async function (tree: Tree) {

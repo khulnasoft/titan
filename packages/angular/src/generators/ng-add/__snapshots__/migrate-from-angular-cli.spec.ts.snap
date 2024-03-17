@@ -98,7 +98,7 @@ exports[`workspace move to nx layout should create nx.json 1`] = `
     "sharedGlobals": [],
   },
   "targetDefaults": {
-    "@nx/eslint:lint": {
+    "@titan/eslint:lint": {
       "cache": true,
       "inputs": [
         "default",

@@ -1,5 +1,5 @@
-import type { Tree } from '@nx/devkit';
-import { formatFiles, updateJson, visitNotIgnoredFiles } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
+import { formatFiles, updateJson, visitNotIgnoredFiles } from '@titan/devkit';
 
 // https://github.com/angular-eslint/angular-eslint/blob/24a4de54a8991c93924abf1dfb78b132a6269aef/packages/schematics/src/migrations/update-16-0-0/update-16-0-0.ts
 export default async function (tree: Tree): Promise<void> {

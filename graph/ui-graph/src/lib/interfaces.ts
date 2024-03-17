@@ -5,7 +5,7 @@ import type {
   ProjectGraphDependency,
   ProjectGraphProjectNode,
   TaskGraph,
-} from '@nx/devkit';
+} from '@titan/devkit';
 /* eslint-enable @nx/enforce-module-boundaries */
 import { VirtualElement } from '@floating-ui/react';
 import {

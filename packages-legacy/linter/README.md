@@ -1,6 +1,6 @@
-## @nrwl/linter has been renamed to @nx/eslint!
+## @nrwl/linter has been renamed to @titan/eslint!
 
-@nrwl/linter has been renamed to [@nx/eslint](https://www.npmjs.com/package/@nx/eslint). Please use that instead.
+@nrwl/linter has been renamed to [@titan/eslint](https://www.npmjs.com/package/@titan/eslint). Please use that instead.
 
 [Read more here](https://nx.dev/recipes/other/rescope)
 

@@ -5,7 +5,7 @@ import {
   removeDependenciesFromPackageJson,
   runTasksInSerial,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { output } from 'nx/src/utils/output';
 import migrate7Generator from '@nx/storybook/src/generators/migrate-7/migrate-7';
 import { storybookMajorVersion } from '@nx/storybook/src/utils/utilities';

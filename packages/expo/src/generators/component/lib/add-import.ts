@@ -1,6 +1,6 @@
 import { findNodes } from '@nx/js';
 import * as ts from 'typescript';
-import { ChangeType, StringChange } from '@nx/devkit';
+import { ChangeType, StringChange } from '@titan/devkit';
 
 export function addImport(
   source: ts.SourceFile,

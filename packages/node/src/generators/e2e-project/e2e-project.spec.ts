@@ -1,5 +1,5 @@
-import { Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { applicationGenerator } from '../application/application';
 import { e2eProjectGenerator } from './e2e-project';
 

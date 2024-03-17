@@ -1,8 +1,8 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import {
   readProjectConfiguration,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import type { NormalizedOptions } from '../schema';
 
 export function addProject(tree: Tree, options: NormalizedOptions): void {

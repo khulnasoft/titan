@@ -1,4 +1,4 @@
-import { Tree } from '@nx/devkit';
+import { Tree } from '@titan/devkit';
 import { v2MetaGenerator } from './lib/v2.impl';
 import { MetaSchema } from './schema';
 

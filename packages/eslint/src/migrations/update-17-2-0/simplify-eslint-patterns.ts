@@ -4,7 +4,7 @@ import {
   formatFiles,
   getProjects,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 export default async function update(tree: Tree) {
   const projects = getProjects(tree);
@@ -15,7 +15,7 @@ export default async function update(tree: Tree) {
     for (const [targetName, targetConfig] of Object.entries(
       projectConfiguration.targets ?? {}
     )) {
-      if (targetConfig.executor !== '@nx/eslint:lint') {
+      if (targetConfig.executor !== '@titan/eslint:lint') {
         continue;
       }
 

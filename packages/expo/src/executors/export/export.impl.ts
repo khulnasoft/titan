@@ -3,7 +3,7 @@ import {
   joinPathFragments,
   names,
   offsetFromRoot,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { ChildProcess, fork } from 'child_process';
 import { resolve as pathResolve } from 'path';
 

@@ -1,4 +1,4 @@
-import { Tree, updateJson } from '@nx/devkit';
+import { Tree, updateJson } from '@titan/devkit';
 import { getRootTsConfigPathInTree } from '@nx/js';
 import { NormalizedGeneratorOptions } from '../schema';
 

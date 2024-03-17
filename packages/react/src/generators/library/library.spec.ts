@@ -1,20 +1,20 @@
-import { installedCypressVersion } from '@nx/cypress/src/utils/cypress-version';
+import { installedCypressVersion } from '@titan/cypress/src/utils/cypress-version';
 import {
   getProjects,
   readJson,
   readProjectConfiguration,
   Tree,
   updateJson,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { Linter } from '@nx/eslint';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { Linter } from '@titan/eslint';
 import { nxVersion } from '../../utils/versions';
 import applicationGenerator from '../application/application';
 import libraryGenerator from './library';
 import { Schema } from './schema';
 // need to mock cypress otherwise it'll use the nx installed version from package.json
 //  which is v9 while we are testing for the new v10 version
-jest.mock('@nx/cypress/src/utils/cypress-version');
+jest.mock('@titan/cypress/src/utils/cypress-version');
 describe('lib', () => {
   let tree: Tree;
   let mockedInstalledCypressVersion: jest.Mock<
@@ -38,8 +38,8 @@ describe('lib', () => {
     tree = createTreeWithEmptyWorkspace();
     updateJson(tree, '/package.json', (json) => {
       json.devDependencies = {
-        '@nx/cypress': nxVersion,
-        '@nx/jest': nxVersion,
+        '@titan/cypress': nxVersion,
+        '@titan/jest': nxVersion,
         '@nx/rollup': nxVersion,
         '@nx/vite': nxVersion,
         '@nx/webpack': nxVersion,

@@ -1,10 +1,10 @@
-import { Tree, readJson, readProjectConfiguration } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { Tree, readJson, readProjectConfiguration } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { executorGenerator } from './executor';
 import { pluginGenerator } from '../plugin/plugin';
 import { libraryGenerator as jsLibraryGenerator } from '@nx/js';
-import { setCwd } from '@nx/devkit/internal-testing-utils';
-import { Linter } from '@nx/eslint';
+import { setCwd } from '@titan/devkit/internal-testing-utils';
+import { Linter } from '@titan/eslint';
 
 describe('NxPlugin Executor Generator', () => {
   let tree: Tree;
@@ -210,7 +210,7 @@ describe('NxPlugin Executor Generator', () => {
       expect(
         tree.read('my-plugin/src/executors/my-executor/hasher.ts').toString()
       ).toMatchInlineSnapshot(`
-        "import { CustomHasher } from '@nx/devkit';
+        "import { CustomHasher } from '@titan/devkit';
 
         /**
          * This is a boilerplate custom hasher that matches

@@ -1,4 +1,4 @@
-import type { NameAndDirectoryFormat } from '@nx/devkit/src/generators/artifact-name-and-directory-utils';
+import type { NameAndDirectoryFormat } from '@titan/devkit/src/generators/artifact-name-and-directory-utils';
 
 export interface Schema {
   name: string;

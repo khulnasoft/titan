@@ -6,8 +6,8 @@ import {
   runTasksInSerial,
   Tree,
   updateNxJson,
-} from '@nx/devkit';
-import { updatePackageScripts } from '@nx/devkit/src/utils/update-package-scripts';
+} from '@titan/devkit';
+import { updatePackageScripts } from '@titan/devkit/src/utils/update-package-scripts';
 import { createNodes } from '../../plugins/plugin';
 import { nxVersion, playwrightVersion } from '../../utils/versions';
 import { InitGeneratorSchema } from './schema';
@@ -35,7 +35,7 @@ export async function initGeneratorInternal(
         tree,
         {},
         {
-          '@nx/playwright': nxVersion,
+          '@titan/playwright': nxVersion,
           '@playwright/test': playwrightVersion,
         },
         undefined,
@@ -66,12 +66,12 @@ function addPlugin(tree: Tree) {
   if (
     !nxJson.plugins.some((p) =>
       typeof p === 'string'
-        ? p === '@nx/playwright/plugin'
-        : p.plugin === '@nx/playwright/plugin'
+        ? p === '@titan/playwright/plugin'
+        : p.plugin === '@titan/playwright/plugin'
     )
   ) {
     nxJson.plugins.push({
-      plugin: '@nx/playwright/plugin',
+      plugin: '@titan/playwright/plugin',
       options: {
         targetName: 'e2e',
       },

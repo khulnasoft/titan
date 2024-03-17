@@ -134,7 +134,7 @@ As the migration runs and collects the package updates, you'll be prompted to ap
 
 Once you have skipped some optional updates, there'll come a time when you'll want to update those packages. To do so, you'll need to generate the package updates and migrations from the Nx version that contained those skipped updates.
 
-Say you skipped updating Angular to **v16.x.x**. That package update was meant to happen as part of the `@nx/angular@16.1.0` update, but you decided to skip it at the time. The recommended way to collect the migrations from such an older version is to run the following:
+Say you skipped updating Angular to **v16.x.x**. That package update was meant to happen as part of the `@titan/angular@16.1.0` update, but you decided to skip it at the time. The recommended way to collect the migrations from such an older version is to run the following:
 
 ```shell
 nx migrate latest --from=nx@16.0.0 --exclude-applied-migrations
@@ -182,9 +182,9 @@ You can see in the "Next steps" section a suggested command to run to apply the 
 
 Please note the suggested command is only based on a particular run of the `nx migrate` command. If you've skipped package updates in previous runs, you'll need to use the oldest version you've stored that you haven't yet run the migration from.
 
-If you don't have the command and need to find out from which version to run the migration, you can take a look at the `migrations.json` file of the relevant package. For example, if you skipped updating Angular to **v16.0.0**, you can take a look at the `migrations.json` file of the `@nx/angular` package and you'll find the following:
+If you don't have the command and need to find out from which version to run the migration, you can take a look at the `migrations.json` file of the relevant package. For example, if you skipped updating Angular to **v16.0.0**, you can take a look at the `migrations.json` file of the `@titan/angular` package and you'll find the following:
 
-```jsonc {% fileName="node_modules/@nx/angular/migrations.json" %}
+```jsonc {% fileName="node_modules/@titan/angular/migrations.json" %}
 {
   // ...
   "packageJsonUpdates": {
@@ -223,7 +223,7 @@ nx migrate latest --to="jest@22.0.0,cypress@3.4.0"
 By default, Nx uses currently installed packages to calculate what migrations need to run. To override them, override the version:
 
 ```shell
-nx migrate latest --to="@nx/jest@12.0.0"
+nx migrate latest --to="@titan/jest@12.0.0"
 ```
 
 {% callout type="warning" title="Overriding versions" %}

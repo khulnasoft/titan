@@ -1,15 +1,15 @@
 import type { ServerBuilderOptions } from '@angular-devkit/build-angular';
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import {
   formatFiles,
   readProjectConfiguration,
   updateProjectConfiguration,
-} from '@nx/devkit';
-import { forEachExecutorOptions } from '@nx/devkit/src/generators/executor-options-utils';
+} from '@titan/devkit';
+import { forEachExecutorOptions } from '@titan/devkit/src/generators/executor-options-utils';
 
 const executors = [
   '@angular-devkit/build-angular:server',
-  '@nx/angular:server',
+  '@titan/angular:server',
   '@nrwl/angular:server',
 ];
 

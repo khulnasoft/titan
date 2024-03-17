@@ -1,5 +1,5 @@
-import { Tree, getProjects, updateProjectConfiguration } from '@nx/devkit';
-import { forEachExecutorOptions } from '@nx/devkit/src/generators/executor-options-utils';
+import { Tree, getProjects, updateProjectConfiguration } from '@titan/devkit';
+import { forEachExecutorOptions } from '@titan/devkit/src/generators/executor-options-utils';
 import { VitestExecutorOptions } from '../../executors/test/schema';
 
 type OldVitestExecutorOptions = Omit<VitestExecutorOptions, 'testFiles'> & {

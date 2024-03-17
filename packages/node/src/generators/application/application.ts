@@ -19,16 +19,16 @@ import {
   updateJson,
   updateProjectConfiguration,
   updateTsConfigsToJs,
-} from '@nx/devkit';
-import { determineProjectNameAndRootOptions } from '@nx/devkit/src/generators/project-name-and-root-utils';
-import { configurationGenerator } from '@nx/jest';
+} from '@titan/devkit';
+import { determineProjectNameAndRootOptions } from '@titan/devkit/src/generators/project-name-and-root-utils';
+import { configurationGenerator } from '@titan/jest';
 import {
   getRelativePathToRootTsConfig,
   initGenerator as jsInitGenerator,
   tsConfigBaseOptions,
 } from '@nx/js';
 import { esbuildVersion } from '@nx/js/src/utils/versions';
-import { Linter, lintProjectGenerator } from '@nx/eslint';
+import { Linter, lintProjectGenerator } from '@titan/eslint';
 import { join } from 'path';
 import {
   expressTypingsVersion,
@@ -48,8 +48,8 @@ import { initGenerator } from '../init/init';
 import { setupDockerGenerator } from '../setup-docker/setup-docker';
 import { Schema } from './schema';
 import { hasWebpackPlugin } from '../../utils/has-webpack-plugin';
-import { addBuildTargetDefaults } from '@nx/devkit/src/generators/add-build-target-defaults';
-import { logShowProjectCommand } from '@nx/devkit/src/utils/log-show-project-command';
+import { addBuildTargetDefaults } from '@titan/devkit/src/generators/add-build-target-defaults';
+import { logShowProjectCommand } from '@titan/devkit/src/utils/log-show-project-command';
 
 export interface NormalizedSchema extends Schema {
   appProjectRoot: string;
@@ -96,7 +96,7 @@ function getEsBuildConfig(
   options: NormalizedSchema
 ): TargetConfiguration {
   return {
-    executor: '@nx/esbuild:esbuild',
+    executor: '@titan/esbuild:esbuild',
     outputs: ['{options.outputPath}'],
     defaultConfiguration: 'production',
     options: {
@@ -163,7 +163,7 @@ function addProject(tree: Tree, options: NormalizedSchema) {
   };
 
   if (options.bundler === 'esbuild') {
-    addBuildTargetDefaults(tree, '@nx/esbuild:esbuild');
+    addBuildTargetDefaults(tree, '@titan/esbuild:esbuild');
     project.targets.build = getEsBuildConfig(project, options);
   } else if (options.bundler === 'webpack') {
     if (!hasWebpackPlugin(tree)) {
@@ -312,7 +312,7 @@ function addProjectDependencies(
       '@nx/webpack': nxVersion,
     },
     esbuild: {
-      '@nx/esbuild': nxVersion,
+      '@titan/esbuild': nxVersion,
       esbuild: esbuildVersion,
     },
   };

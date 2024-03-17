@@ -1,12 +1,12 @@
 import { getTempTailwindPath } from '../../utils/ct-helpers';
-import { ExecutorContext, stripIndents } from '@nx/devkit';
+import { ExecutorContext, stripIndents } from '@titan/devkit';
 import * as executorUtils from 'nx/src/command-line/run/executor-utils';
 import * as path from 'path';
 import { installedCypressVersion } from '../../utils/cypress-version';
 import cypressExecutor, { CypressExecutorOptions } from './cypress.impl';
 
-jest.mock('@nx/devkit');
-let devkit = require('@nx/devkit');
+jest.mock('@titan/devkit');
+let devkit = require('@titan/devkit');
 jest.mock('detect-port', () => jest.fn().mockResolvedValue(4200));
 import * as detectPort from 'detect-port';
 jest.mock('../../utils/cypress-version');

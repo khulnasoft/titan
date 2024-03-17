@@ -1,6 +1,6 @@
 /* eslint-disable @nx/enforce-module-boundaries */
 // nx-ignore-next-line
-import { ProjectGraphDependency } from '@nx/devkit';
+import { ProjectGraphDependency } from '@titan/devkit';
 /* eslint-enable @nx/enforce-module-boundaries */
 
 export function trimBackSlash(value: string): string {

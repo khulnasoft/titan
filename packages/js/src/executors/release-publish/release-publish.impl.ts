@@ -1,4 +1,4 @@
-import { ExecutorContext, joinPathFragments, readJsonFile } from '@nx/devkit';
+import { ExecutorContext, joinPathFragments, readJsonFile } from '@titan/devkit';
 import { execSync } from 'child_process';
 import { env as appendLocalEnv } from 'npm-run-path';
 import { logTar } from './log-tar';

@@ -25,7 +25,7 @@
       "libs/products/product-detail-page/tsconfig.lib.json",
       "libs/products/product-detail-page/tsconfig.spec.json"
     ],
-    "external": ["external:@nx/eslint"]
+    "external": ["external:@titan/eslint"]
   },
   "products-product-detail-page:test": {
     "general": [
@@ -104,7 +104,7 @@
       "libs/products/product-detail-page/tsconfig.lib.json",
       "libs/products/product-detail-page/tsconfig.spec.json"
     ],
-    "external": ["external:@nx/jest"]
+    "external": ["external:@titan/jest"]
   },
   "shared-product-state:lint": {
     "general": [
@@ -135,7 +135,7 @@
       "libs/shared/product/state/tsconfig.lib.json",
       "libs/shared/product/state/tsconfig.spec.json"
     ],
-    "external": ["external:@nx/eslint"]
+    "external": ["external:@titan/eslint"]
   },
   "shared-product-state:test": {
     "general": [
@@ -203,7 +203,7 @@
       "libs/products/product-detail-page/tsconfig.lib.json",
       "libs/products/product-detail-page/tsconfig.spec.json"
     ],
-    "external": ["external:@nx/jest"]
+    "external": ["external:@titan/jest"]
   },
   "shared-product-types:lint": {
     "general": [
@@ -224,7 +224,7 @@
       "libs/shared/product/types/tsconfig.json",
       "libs/shared/product/types/tsconfig.lib.json"
     ],
-    "external": ["external:@nx/eslint"]
+    "external": ["external:@titan/eslint"]
   },
   "shared-product-data:lint": {
     "general": [
@@ -247,7 +247,7 @@
       "libs/shared/product/data/tsconfig.json",
       "libs/shared/product/data/tsconfig.lib.json"
     ],
-    "external": ["external:@nx/eslint"]
+    "external": ["external:@titan/eslint"]
   },
   "products-home-page:lint": {
     "general": [
@@ -275,7 +275,7 @@
       "libs/products/home-page/tsconfig.lib.json",
       "libs/products/home-page/tsconfig.spec.json"
     ],
-    "external": ["external:@nx/eslint"]
+    "external": ["external:@titan/eslint"]
   },
   "products-home-page:test": {
     "general": [
@@ -371,7 +371,7 @@
       "libs/products/home-page/tsconfig.lib.json",
       "libs/products/home-page/tsconfig.spec.json"
     ],
-    "external": ["external:@nx/jest"]
+    "external": ["external:@titan/jest"]
   },
   "shared-product-ui:lint": {
     "general": [
@@ -396,7 +396,7 @@
       "libs/shared/product/ui/tsconfig.lib.json",
       "libs/shared/product/ui/tsconfig.spec.json"
     ],
-    "external": ["external:@nx/eslint"]
+    "external": ["external:@titan/eslint"]
   },
   "shared-product-ui:test": {
     "general": [
@@ -497,7 +497,7 @@
       "libs/products/home-page/tsconfig.lib.json",
       "libs/products/home-page/tsconfig.spec.json"
     ],
-    "external": ["external:@nx/jest"]
+    "external": ["external:@titan/jest"]
   },
   "shared-cart-state:lint": {
     "general": [
@@ -528,7 +528,7 @@
       "libs/shared/cart/state/tsconfig.lib.json",
       "libs/shared/cart/state/tsconfig.spec.json"
     ],
-    "external": ["external:@nx/eslint"]
+    "external": ["external:@titan/eslint"]
   },
   "shared-cart-state:test": {
     "general": [
@@ -626,7 +626,7 @@
       "libs/shared/cart/state/tsconfig.lib.json",
       "libs/shared/cart/state/tsconfig.spec.json"
     ],
-    "external": ["external:@nx/jest"]
+    "external": ["external:@titan/jest"]
   },
   "shared-e2e-utils:lint": {
     "general": [
@@ -646,7 +646,7 @@
       "libs/shared/e2e-utils/tsconfig.json",
       "libs/shared/e2e-utils/tsconfig.lib.json"
     ],
-    "external": ["external:@nx/eslint"]
+    "external": ["external:@titan/eslint"]
   },
   "cart-cart-page:lint": {
     "general": [
@@ -671,7 +671,7 @@
       "libs/cart/cart-page/tsconfig.lib.json",
       "libs/cart/cart-page/tsconfig.spec.json"
     ],
-    "external": ["external:@nx/eslint"]
+    "external": ["external:@titan/eslint"]
   },
   "cart-cart-page:test": {
     "general": [
@@ -794,7 +794,7 @@
       "libs/cart/cart-page/tsconfig.lib.json",
       "libs/cart/cart-page/tsconfig.spec.json"
     ],
-    "external": ["external:@nx/jest"]
+    "external": ["external:@titan/jest"]
   },
   "shared-jsxify:lint": {
     "general": [
@@ -815,7 +815,7 @@
       "libs/shared/jsxify/tsconfig.json",
       "libs/shared/jsxify/tsconfig.lib.json"
     ],
-    "external": ["external:@nx/eslint"]
+    "external": ["external:@titan/eslint"]
   },
   "shared-header:lint": {
     "general": [
@@ -842,7 +842,7 @@
       "libs/shared/header/tsconfig.lib.json",
       "libs/shared/header/tsconfig.spec.json"
     ],
-    "external": ["external:@nx/eslint"]
+    "external": ["external:@titan/eslint"]
   },
   "shared-header:test": {
     "general": [
@@ -968,7 +968,7 @@
       "libs/shared/header/tsconfig.lib.json",
       "libs/shared/header/tsconfig.spec.json"
     ],
-    "external": ["external:@nx/jest"]
+    "external": ["external:@titan/jest"]
   },
   "products-e2e:e2e": {
     "general": [
@@ -1155,7 +1155,7 @@
       "apps/products-e2e/src/support/e2e.ts",
       "apps/products-e2e/tsconfig.json"
     ],
-    "external": ["external:@nx/cypress"]
+    "external": ["external:@titan/cypress"]
   },
   "products-e2e:e2e:production": {
     "general": [
@@ -1342,7 +1342,7 @@
       "apps/products-e2e/src/support/e2e.ts",
       "apps/products-e2e/tsconfig.json"
     ],
-    "external": ["external:@nx/cypress"]
+    "external": ["external:@titan/cypress"]
   },
   "products-e2e:lint": {
     "general": [
@@ -1364,7 +1364,7 @@
       "apps/products-e2e/src/support/e2e.ts",
       "apps/products-e2e/tsconfig.json"
     ],
-    "external": ["external:@nx/eslint"]
+    "external": ["external:@titan/eslint"]
   },
   "products:build": {
     "general": [
@@ -2259,7 +2259,7 @@
       "apps/products/tsconfig.json",
       "apps/products/tsconfig.spec.json"
     ],
-    "external": ["external:@nx/eslint"]
+    "external": ["external:@titan/eslint"]
   },
   "products:test": {
     "general": [
@@ -2444,7 +2444,7 @@
       "apps/products-e2e/src/support/e2e.ts",
       "apps/products-e2e/tsconfig.json"
     ],
-    "external": ["external:@nx/jest"]
+    "external": ["external:@titan/jest"]
   },
   "products:deploy": {
     "general": [
@@ -2831,7 +2831,7 @@
       "apps/cart-e2e/src/support/e2e.ts",
       "apps/cart-e2e/tsconfig.json"
     ],
-    "external": ["external:@nx/cypress"]
+    "external": ["external:@titan/cypress"]
   },
   "cart-e2e:e2e:production": {
     "general": [
@@ -3051,7 +3051,7 @@
       "apps/cart-e2e/src/support/e2e.ts",
       "apps/cart-e2e/tsconfig.json"
     ],
-    "external": ["external:@nx/cypress"]
+    "external": ["external:@titan/cypress"]
   },
   "cart-e2e:lint": {
     "general": [
@@ -3073,7 +3073,7 @@
       "apps/cart-e2e/src/support/e2e.ts",
       "apps/cart-e2e/tsconfig.json"
     ],
-    "external": ["external:@nx/eslint"]
+    "external": ["external:@titan/eslint"]
   },
   "cart:build:production": {
     "general": [
@@ -3940,7 +3940,7 @@
       "apps/cart/tsconfig.spec.json",
       "apps/cart/webpack.config.js"
     ],
-    "external": ["external:@nx/eslint"]
+    "external": ["external:@titan/eslint"]
   },
   "cart:test": {
     "general": [
@@ -4158,7 +4158,7 @@
       "apps/cart-e2e/src/support/e2e.ts",
       "apps/cart-e2e/tsconfig.json"
     ],
-    "external": ["external:@nx/jest"]
+    "external": ["external:@titan/jest"]
   },
   "cart:deploy": {
     "general": [

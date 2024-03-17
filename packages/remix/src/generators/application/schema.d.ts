@@ -1,5 +1,5 @@
-import { ProjectNameAndRootFormat } from '@nx/devkit/src/generators/project-name-and-root-utils';
-import type { Linter } from '@nx/eslint';
+import { ProjectNameAndRootFormat } from '@titan/devkit/src/generators/project-name-and-root-utils';
+import type { Linter } from '@titan/eslint';
 
 export interface NxRemixGeneratorSchema {
   name: string;

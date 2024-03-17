@@ -79,7 +79,7 @@ The following configuration creates `build` and `test` targets for Nx.
   "root": "libs/mylib/",
   "targets": {
     "test": {
-      "executor": "@nx/jest:jest",
+      "executor": "@titan/jest:jest",
       "options": {
         /* ... */
       }
@@ -153,7 +153,7 @@ Below are some more complete examples of project configuration files. For a more
       "inputs": ["default", "^production"],
       "outputs": [],
       "dependsOn": ["build"],
-      "executor": "@nx/jest:jest",
+      "executor": "@titan/jest:jest",
       "options": {}
     },
     "build": {

@@ -14,7 +14,7 @@ describe('Next.js App Router', () => {
   beforeAll(
     () =>
       (proj = newProject({
-        packages: ['@nx/next'],
+        packages: ['@titan/next'],
       }))
   );
 
@@ -25,7 +25,7 @@ describe('Next.js App Router', () => {
     const jsLib = uniq('tslib');
 
     runCLI(
-      `generate @nx/next:app ${appName} --e2eTestRunner=playwright --appDir=true`
+      `generate @titan/next:app ${appName} --e2eTestRunner=playwright --appDir=true`
     );
     runCLI(`generate @nx/js:lib ${jsLib} --no-interactive`);
 

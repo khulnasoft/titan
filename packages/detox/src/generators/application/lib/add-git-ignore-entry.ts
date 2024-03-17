@@ -1,4 +1,4 @@
-import { logger, Tree } from '@nx/devkit';
+import { logger, Tree } from '@titan/devkit';
 import { NormalizedSchema } from './normalize-options';
 
 export function addGitIgnoreEntry(host: Tree, options: NormalizedSchema) {

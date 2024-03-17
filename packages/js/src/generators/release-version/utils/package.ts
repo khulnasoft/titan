@@ -1,4 +1,4 @@
-import { joinPathFragments } from '@nx/devkit';
+import { joinPathFragments } from '@titan/devkit';
 import { PackageJson } from 'nx/src/utils/package-json';
 
 export class Package {

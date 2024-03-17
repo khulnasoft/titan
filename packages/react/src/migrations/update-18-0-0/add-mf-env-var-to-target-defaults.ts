@@ -4,7 +4,7 @@ import {
   type ProjectConfiguration,
   joinPathFragments,
   formatFiles,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { addMfEnvToTargetDefaultInputs } from '../../utils/add-mf-env-to-inputs';
 
 export default async function (tree: Tree) {

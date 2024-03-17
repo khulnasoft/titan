@@ -5,7 +5,7 @@ import {
   joinPathFragments,
   normalizePath,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import type * as ts from 'typescript';
 import {
   findExportDeclarationsForJsx,

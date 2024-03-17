@@ -1,4 +1,4 @@
-import { joinPathFragments, workspaceRoot } from '@nx/devkit';
+import { joinPathFragments, workspaceRoot } from '@titan/devkit';
 import {
   createWatchPaths,
   getRelativeDependencyPaths,

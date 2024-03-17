@@ -19,8 +19,8 @@ jest.mock('fs', () => {
   };
 });
 
-jest.mock('@nx/devkit', () => ({
-  ...jest.requireActual<any>('@nx/devkit'),
+jest.mock('@titan/devkit', () => ({
+  ...jest.requireActual<any>('@titan/devkit'),
   workspaceRoot: '/root',
 }));
 

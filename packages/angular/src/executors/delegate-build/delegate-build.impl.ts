@@ -1,5 +1,5 @@
-import type { ExecutorContext } from '@nx/devkit';
-import { joinPathFragments, parseTargetString, runExecutor } from '@nx/devkit';
+import type { ExecutorContext } from '@titan/devkit';
+import { joinPathFragments, parseTargetString, runExecutor } from '@titan/devkit';
 import {
   calculateProjectBuildableDependencies,
   checkDependentProjectsHaveBeenBuilt,

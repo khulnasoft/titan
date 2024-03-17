@@ -7,7 +7,7 @@ import {
   readProjectConfiguration,
   runTasksInSerial,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { initGenerator as jsInitGenerator } from '@nx/js';
 
 import { cypressProjectGenerator } from '../cypress-project/cypress-project';
@@ -33,7 +33,7 @@ import {
   projectIsRootProjectInStandaloneWorkspace,
   updateLintConfig,
 } from './lib/util-functions';
-import { Linter } from '@nx/eslint';
+import { Linter } from '@titan/eslint';
 import {
   findStorybookAndBuildTargetsAndCompiler,
   pleaseUpgrade,

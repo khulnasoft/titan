@@ -2,7 +2,7 @@
   "presets": [
     <% if (style === '@emotion/styled') { %>
     [
-      "@nx/next/babel",
+      "@titan/next/babel",
       {
         "preset-react": {
           "runtime": "automatic",
@@ -11,7 +11,7 @@
       }
     ]
     <% } else { %>
-    "@nx/next/babel"
+    "@titan/next/babel"
     <% } %>
   ],
   "plugins": [

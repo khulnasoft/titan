@@ -28,7 +28,7 @@ describe('buildEsbuildOptions', () => {
     root: path.join(__dirname, 'fixtures'),
     cwd: path.join(__dirname, 'fixtures'),
     target: {
-      executor: '@nx/esbuild:esbuild',
+      executor: '@titan/esbuild:esbuild',
       options: {
         outputPath: 'dist/apps/myapp',
       },

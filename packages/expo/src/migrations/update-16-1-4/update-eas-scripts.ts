@@ -6,7 +6,7 @@ import {
   logger,
   offsetFromRoot,
   updateJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { addEasScripts } from '../../generators/application/lib/add-eas-scripts';
 import { join } from 'path';
 

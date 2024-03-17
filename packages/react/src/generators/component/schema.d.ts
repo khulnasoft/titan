@@ -31,7 +31,7 @@ export interface Schema {
   skipFormat?: boolean;
   nameAndDirectoryFormat?: 'as-provided' | 'derived';
   // Used by other wrapping generators to preserve previous behavior
-  // e.g. @nx/next:component
+  // e.g. @titan/next:component
   derivedDirectory?: string;
   // Used by Next.js to determine how React should generate the page
   isNextPage?: boolean;

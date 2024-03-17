@@ -1,5 +1,5 @@
-import { addProjectConfiguration, readJson } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { addProjectConfiguration, readJson } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { installWebpackRollupDependencies } from './install-webpack-rollup-dependencies';
 
 describe('installWebpackRollupDependencies', () => {

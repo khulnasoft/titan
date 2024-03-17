@@ -1,5 +1,5 @@
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { Tree, readNxJson, updateNxJson } from '@nx/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { Tree, readNxJson, updateNxJson } from '@titan/devkit';
 import addBabelInputs from './add-babel-inputs';
 
 describe('15.0.0 migration (add-babel-inputs)', () => {

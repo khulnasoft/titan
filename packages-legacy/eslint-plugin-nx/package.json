@@ -24,12 +24,12 @@
   },
   "homepage": "https://nx.dev",
   "dependencies": {
-    "@nx/eslint-plugin": "file:../../packages/eslint-plugin"
+    "@titan/eslint-plugin": "file:../../packages/eslint-plugin"
   },
   "publishConfig": {
     "access": "public"
   },
   "nx-migrations": {
-    "migrations": "@nx/eslint-plugin/migrations.json"
+    "migrations": "@titan/eslint-plugin/migrations.json"
   }
 }

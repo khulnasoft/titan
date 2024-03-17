@@ -1,4 +1,4 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import { isNgStandaloneApp } from '../../../utils/nx-devkit/ast-utils';
 import { getInstalledAngularVersionInfo } from '../../utils/version-utils';
 import type { Schema } from '../schema';

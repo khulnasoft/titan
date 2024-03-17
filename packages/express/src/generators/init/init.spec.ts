@@ -1,7 +1,7 @@
-import { addDependenciesToPackageJson, readJson, Tree } from '@nx/devkit';
+import { addDependenciesToPackageJson, readJson, Tree } from '@titan/devkit';
 import { expressVersion } from '../../utils/versions';
 import initGenerator from './init';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 
 describe('init', () => {
   let tree: Tree;

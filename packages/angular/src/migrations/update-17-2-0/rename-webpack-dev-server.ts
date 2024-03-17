@@ -5,7 +5,7 @@ import {
   updateNxJson,
   updateProjectConfiguration,
   type Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 export default async function (tree: Tree) {
   const projects = getProjects(tree);
@@ -16,10 +16,10 @@ export default async function (tree: Tree) {
 
     for (const target of Object.values(project.targets ?? {})) {
       if (
-        target.executor === '@nx/angular:webpack-dev-server' ||
+        target.executor === '@titan/angular:webpack-dev-server' ||
         target.executor === '@nrwl/angular:webpack-dev-server'
       ) {
-        target.executor = '@nx/angular:dev-server';
+        target.executor = '@titan/angular:dev-server';
       }
     }
 
@@ -35,17 +35,17 @@ export default async function (tree: Tree) {
   for (const [targetOrExecutor, targetConfig] of Object.entries(
     nxJson.targetDefaults
   )) {
-    if (targetOrExecutor === '@nx/angular:webpack-dev-server') {
-      nxJson.targetDefaults['@nx/angular:dev-server'] = targetConfig;
-      delete nxJson.targetDefaults['@nx/angular:webpack-dev-server'];
+    if (targetOrExecutor === '@titan/angular:webpack-dev-server') {
+      nxJson.targetDefaults['@titan/angular:dev-server'] = targetConfig;
+      delete nxJson.targetDefaults['@titan/angular:webpack-dev-server'];
     } else if (targetOrExecutor === '@nrwl/angular:webpack-dev-server') {
-      nxJson.targetDefaults['@nx/angular:dev-server'] = targetConfig;
+      nxJson.targetDefaults['@titan/angular:dev-server'] = targetConfig;
       delete nxJson.targetDefaults['@nrwl/angular:webpack-dev-server'];
     } else if (
-      targetConfig.executor === '@nx/angular:webpack-dev-server' ||
+      targetConfig.executor === '@titan/angular:webpack-dev-server' ||
       targetConfig.executor === '@nrwl/angular:webpack-dev-server'
     ) {
-      targetConfig.executor = '@nx/angular:dev-server';
+      targetConfig.executor = '@titan/angular:dev-server';
     }
   }
 

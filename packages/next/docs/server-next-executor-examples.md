@@ -1,6 +1,6 @@
 ---
 title: Next.js server executor examples
-description: This page contains examples for the @nx/next:serve executor.
+description: This page contains examples for the @titan/next:serve executor.
 ---
 
 `project.json`:
@@ -15,7 +15,7 @@ description: This page contains examples for the @nx/next:serve executor.
   "targets": {
     //...
     "serve": {
-      "executor": "@nx/next:server",
+      "executor": "@titan/next:server",
       "defaultConfiguration": "production",
       "options": {
         "buildTarget": "acme:build",
@@ -38,11 +38,11 @@ nx run acme:serve
 {% tabs %}
 {% tab label="Default configuration" %}
 
-This is the default configuration for Next.js standalone projects. Our `@nx/next:server` executor is integrated to use Next.js' CLI. You can read more about the serve options at [Next.js CLI Options](https://nextjs.org/docs/app/api-reference/next-cli)
+This is the default configuration for Next.js standalone projects. Our `@titan/next:server` executor is integrated to use Next.js' CLI. You can read more about the serve options at [Next.js CLI Options](https://nextjs.org/docs/app/api-reference/next-cli)
 
 ```json
     "serve": {
-      "executor": "@nx/next:server",
+      "executor": "@titan/next:server",
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "acme:build",
@@ -78,7 +78,7 @@ Updating the build options to include `turbo`.
 
 ```json
     "serve": {
-      "executor": "@nx/next:server",
+      "executor": "@titan/next:server",
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "acme:build",
@@ -117,7 +117,7 @@ Updating the serve options to include `keepAliveTimeout`.
 
 ```json
     "serve": {
-      "executor": "@nx/next:server",
+      "executor": "@titan/next:server",
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "acme:build",

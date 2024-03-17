@@ -203,7 +203,7 @@ exports[`Host App Generator --ssr should generate the correct files 6`] = `
 `;
 
 exports[`Host App Generator --ssr should generate the correct files 7`] = `
-"const { withModuleFederationForSSR } = require('@nx/angular/module-federation');
+"const { withModuleFederationForSSR } = require('@titan/angular/module-federation');
 const config = require('./module-federation.config');
 module.exports = withModuleFederationForSSR(config);
 "
@@ -240,7 +240,7 @@ exports[`Host App Generator --ssr should generate the correct files 9`] = `
   "dependsOn": [
     "build",
   ],
-  "executor": "@nx/angular:webpack-server",
+  "executor": "@titan/angular:webpack-server",
   "options": {
     "customWebpackConfig": {
       "path": "test/webpack.server.config.js",
@@ -265,7 +265,7 @@ exports[`Host App Generator --ssr should generate the correct files 10`] = `
     },
   },
   "defaultConfiguration": "development",
-  "executor": "@nx/angular:module-federation-dev-ssr",
+  "executor": "@titan/angular:module-federation-dev-ssr",
 }
 `;
 
@@ -388,7 +388,7 @@ exports[`Host App Generator --ssr should generate the correct files for standalo
 `;
 
 exports[`Host App Generator --ssr should generate the correct files for standalone 6`] = `
-"const { withModuleFederationForSSR } = require('@nx/angular/module-federation');
+"const { withModuleFederationForSSR } = require('@titan/angular/module-federation');
 const config = require('./module-federation.config');
 module.exports = withModuleFederationForSSR(config);
 "
@@ -450,7 +450,7 @@ exports[`Host App Generator --ssr should generate the correct files for standalo
   "dependsOn": [
     "build",
   ],
-  "executor": "@nx/angular:webpack-server",
+  "executor": "@titan/angular:webpack-server",
   "options": {
     "customWebpackConfig": {
       "path": "test/webpack.server.config.js",
@@ -475,7 +475,7 @@ exports[`Host App Generator --ssr should generate the correct files for standalo
     },
   },
   "defaultConfiguration": "development",
-  "executor": "@nx/angular:module-federation-dev-ssr",
+  "executor": "@titan/angular:module-federation-dev-ssr",
 }
 `;
 
@@ -599,7 +599,7 @@ export default config;
 `;
 
 exports[`Host App Generator --ssr should generate the correct files for standalone when --typescript=true 6`] = `
-"import { withModuleFederationForSSR } from '@nx/angular/module-federation';
+"import { withModuleFederationForSSR } from '@titan/angular/module-federation';
 import config from './module-federation.config';
 
 export default withModuleFederationForSSR(config);
@@ -661,7 +661,7 @@ exports[`Host App Generator --ssr should generate the correct files for standalo
   "dependsOn": [
     "build",
   ],
-  "executor": "@nx/angular:webpack-server",
+  "executor": "@titan/angular:webpack-server",
   "options": {
     "customWebpackConfig": {
       "path": "test/webpack.server.config.ts",
@@ -686,7 +686,7 @@ exports[`Host App Generator --ssr should generate the correct files for standalo
     },
   },
   "defaultConfiguration": "development",
-  "executor": "@nx/angular:module-federation-dev-ssr",
+  "executor": "@titan/angular:module-federation-dev-ssr",
 }
 `;
 
@@ -824,7 +824,7 @@ export default config;
 `;
 
 exports[`Host App Generator --ssr should generate the correct files when --typescript=true 7`] = `
-"import { withModuleFederationForSSR } from '@nx/angular/module-federation';
+"import { withModuleFederationForSSR } from '@titan/angular/module-federation';
 import config from './module-federation.config';
 
 export default withModuleFederationForSSR(config);
@@ -861,7 +861,7 @@ exports[`Host App Generator --ssr should generate the correct files when --types
   "dependsOn": [
     "build",
   ],
-  "executor": "@nx/angular:webpack-server",
+  "executor": "@titan/angular:webpack-server",
   "options": {
     "customWebpackConfig": {
       "path": "test/webpack.server.config.ts",
@@ -886,26 +886,26 @@ exports[`Host App Generator --ssr should generate the correct files when --types
     },
   },
   "defaultConfiguration": "development",
-  "executor": "@nx/angular:module-federation-dev-ssr",
+  "executor": "@titan/angular:module-federation-dev-ssr",
 }
 `;
 
 exports[`Host App Generator should generate a host app with a remote 1`] = `
-"const { withModuleFederation } = require('@nx/angular/module-federation');
+"const { withModuleFederation } = require('@titan/angular/module-federation');
 const config = require('./module-federation.config');
 module.exports = withModuleFederation(config);
 "
 `;
 
 exports[`Host App Generator should generate a host app with a remote 2`] = `
-"const { withModuleFederation } = require('@nx/angular/module-federation');
+"const { withModuleFederation } = require('@titan/angular/module-federation');
 const config = require('./module-federation.config');
 module.exports = withModuleFederation(config);
 "
 `;
 
 exports[`Host App Generator should generate a host app with a remote when --typesscript=true 1`] = `
-"import { withModuleFederation } from '@nx/angular/module-federation';
+"import { withModuleFederation } from '@titan/angular/module-federation';
 import config from './module-federation.config';
 
 export default withModuleFederation(config);
@@ -913,7 +913,7 @@ export default withModuleFederation(config);
 `;
 
 exports[`Host App Generator should generate a host app with a remote when --typesscript=true 2`] = `
-"import { withModuleFederation } from '@nx/angular/module-federation';
+"import { withModuleFederation } from '@titan/angular/module-federation';
 import config from './module-federation.config';
 
 export default withModuleFederation(config);
@@ -921,14 +921,14 @@ export default withModuleFederation(config);
 `;
 
 exports[`Host App Generator should generate a host app with no remotes 1`] = `
-"const { withModuleFederation } = require('@nx/angular/module-federation');
+"const { withModuleFederation } = require('@titan/angular/module-federation');
 const config = require('./module-federation.config');
 module.exports = withModuleFederation(config);
 "
 `;
 
 exports[`Host App Generator should generate a host app with no remotes when --typescript=true 1`] = `
-"import { withModuleFederation } from '@nx/angular/module-federation';
+"import { withModuleFederation } from '@titan/angular/module-federation';
 import config from './module-federation.config';
 
 export default withModuleFederation(config);

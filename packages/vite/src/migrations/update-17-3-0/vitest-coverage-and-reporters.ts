@@ -4,8 +4,8 @@ import {
   formatFiles,
   getProjects,
   joinPathFragments,
-} from '@nx/devkit';
-import { forEachExecutorOptions } from '@nx/devkit/src/generators/executor-options-utils';
+} from '@titan/devkit';
+import { forEachExecutorOptions } from '@titan/devkit/src/generators/executor-options-utils';
 import { fixCoverageAndRerporters } from './lib/fix-coverage-and-reporters';
 
 export default async function fixCoverageThreshold(tree: Tree) {

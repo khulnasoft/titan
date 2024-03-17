@@ -3,10 +3,10 @@ import {
   readProjectConfiguration,
   Tree,
   updateJson,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import libraryGenerator from './library';
-import { Linter } from '@nx/eslint';
+import { Linter } from '@titan/eslint';
 import { Schema } from './schema';
 
 describe('lib', () => {
@@ -243,7 +243,7 @@ describe('lib', () => {
         "module.exports = {
           displayName: 'my-lib',
           preset: 'react-native',
-          resolver: '@nx/jest/plugins/resolver',
+          resolver: '@titan/jest/plugins/resolver',
           moduleFileExtensions: ['ts', 'js', 'html', 'tsx', 'jsx'],
           setupFilesAfterEnv: ['<rootDir>/test-setup.ts'],
           moduleNameMapper: {

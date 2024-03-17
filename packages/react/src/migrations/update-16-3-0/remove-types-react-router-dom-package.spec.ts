@@ -1,4 +1,4 @@
-import { Tree, readJson, updateJson } from '@nx/devkit';
+import { Tree, readJson, updateJson } from '@titan/devkit';
 import { createTreeWithEmptyWorkspace } from 'nx/src/devkit-testing-exports';
 import removePackage from './remove-types-react-router-dom-package';
 

@@ -27,19 +27,19 @@ Run the following command to automatically set up Nx:
 npx nx@latest init
 ```
 
-This will set up Nx for you - updating the `package.json` file and creating a new `nx.json` file with Nx configuration based on your answers during the set up process. The set up process will suggest installing Nx plugins that might be useful based on your existing repository. The example below is using the `@nx/eslint` and `@nx/next` plugins to run ESLint and Next.js tasks with Nx:
+This will set up Nx for you - updating the `package.json` file and creating a new `nx.json` file with Nx configuration based on your answers during the set up process. The set up process will suggest installing Nx plugins that might be useful based on your existing repository. The example below is using the `@titan/eslint` and `@titan/next` plugins to run ESLint and Next.js tasks with Nx:
 
 ```json {% fileName="nx.json" %}
 {
   "plugins": [
     {
-      "plugin": "@nx/eslint/plugin",
+      "plugin": "@titan/eslint/plugin",
       "options": {
         "targetName": "lint"
       }
     },
     {
-      "plugin": "@nx/next/plugin",
+      "plugin": "@titan/next/plugin",
       "options": {
         "buildTargetName": "build",
         "devTargetName": "dev",
@@ -68,7 +68,7 @@ When Nx updates your `package.json` scripts, it looks for scripts that can be re
 }
 ```
 
-The `@nx/next` plugin can run `next build` for you and set up caching correctly, so it replaces `next build` with `nx build`. Similarly, `@nx/eslint` can set up caching for `eslint ./src`. When you run `npm run build` or `npm run lint` multiple times, you'll see that caching is enabled. You can also call Nx directly from the terminal with `nx build` or `nx lint`.
+The `@titan/next` plugin can run `next build` for you and set up caching correctly, so it replaces `next build` with `nx build`. Similarly, `@titan/eslint` can set up caching for `eslint ./src`. When you run `npm run build` or `npm run lint` multiple times, you'll see that caching is enabled. You can also call Nx directly from the terminal with `nx build` or `nx lint`.
 
 The `test` script was not recognized by any Nx plugin, so it was left as is.
 
@@ -76,7 +76,7 @@ The `includedScripts` array allows you to specify `package.json` scripts that ca
 
 ## Inferred Tasks
 
-You may have noticed that `@nx/next` provides `dev` and `start` tasks in addition to the `build` task. Those tasks were created by the `@nx/next` plugin from your existing Next.js configuration. To view all available tasks, open the Project Details view with Nx Console or use the terminal to launch the project details in a browser window.
+You may have noticed that `@titan/next` provides `dev` and `start` tasks in addition to the `build` task. Those tasks were created by the `@titan/next` plugin from your existing Next.js configuration. To view all available tasks, open the Project Details view with Nx Console or use the terminal to launch the project details in a browser window.
 
 ```shell
 nx show project my-workspace --web
@@ -155,29 +155,29 @@ nx show project my-workspace --web
   "sourceMap": {
     "root": ["package.json", "nx/core/package-json-workspaces"],
     "targets": ["package.json", "nx/core/package-json-workspaces"],
-    "targets.lint": ["package.json", "@nx/eslint/plugin"],
-    "targets.lint.command": ["package.json", "@nx/eslint/plugin"],
-    "targets.lint.cache": ["package.json", "@nx/eslint/plugin"],
-    "targets.lint.options": ["package.json", "@nx/eslint/plugin"],
-    "targets.lint.inputs": ["package.json", "@nx/eslint/plugin"],
-    "targets.lint.options.cwd": ["package.json", "@nx/eslint/plugin"],
-    "targets.build": ["next.config.js", "@nx/next/plugin"],
-    "targets.build.command": ["next.config.js", "@nx/next/plugin"],
-    "targets.build.options": ["next.config.js", "@nx/next/plugin"],
-    "targets.build.dependsOn": ["next.config.js", "@nx/next/plugin"],
-    "targets.build.cache": ["next.config.js", "@nx/next/plugin"],
-    "targets.build.inputs": ["next.config.js", "@nx/next/plugin"],
-    "targets.build.outputs": ["next.config.js", "@nx/next/plugin"],
-    "targets.build.options.cwd": ["next.config.js", "@nx/next/plugin"],
-    "targets.dev": ["next.config.js", "@nx/next/plugin"],
-    "targets.dev.command": ["next.config.js", "@nx/next/plugin"],
-    "targets.dev.options": ["next.config.js", "@nx/next/plugin"],
-    "targets.dev.options.cwd": ["next.config.js", "@nx/next/plugin"],
-    "targets.start": ["next.config.js", "@nx/next/plugin"],
-    "targets.start.command": ["next.config.js", "@nx/next/plugin"],
-    "targets.start.options": ["next.config.js", "@nx/next/plugin"],
-    "targets.start.dependsOn": ["next.config.js", "@nx/next/plugin"],
-    "targets.start.options.cwd": ["next.config.js", "@nx/next/plugin"],
+    "targets.lint": ["package.json", "@titan/eslint/plugin"],
+    "targets.lint.command": ["package.json", "@titan/eslint/plugin"],
+    "targets.lint.cache": ["package.json", "@titan/eslint/plugin"],
+    "targets.lint.options": ["package.json", "@titan/eslint/plugin"],
+    "targets.lint.inputs": ["package.json", "@titan/eslint/plugin"],
+    "targets.lint.options.cwd": ["package.json", "@titan/eslint/plugin"],
+    "targets.build": ["next.config.js", "@titan/next/plugin"],
+    "targets.build.command": ["next.config.js", "@titan/next/plugin"],
+    "targets.build.options": ["next.config.js", "@titan/next/plugin"],
+    "targets.build.dependsOn": ["next.config.js", "@titan/next/plugin"],
+    "targets.build.cache": ["next.config.js", "@titan/next/plugin"],
+    "targets.build.inputs": ["next.config.js", "@titan/next/plugin"],
+    "targets.build.outputs": ["next.config.js", "@titan/next/plugin"],
+    "targets.build.options.cwd": ["next.config.js", "@titan/next/plugin"],
+    "targets.dev": ["next.config.js", "@titan/next/plugin"],
+    "targets.dev.command": ["next.config.js", "@titan/next/plugin"],
+    "targets.dev.options": ["next.config.js", "@titan/next/plugin"],
+    "targets.dev.options.cwd": ["next.config.js", "@titan/next/plugin"],
+    "targets.start": ["next.config.js", "@titan/next/plugin"],
+    "targets.start.command": ["next.config.js", "@titan/next/plugin"],
+    "targets.start.options": ["next.config.js", "@titan/next/plugin"],
+    "targets.start.dependsOn": ["next.config.js", "@titan/next/plugin"],
+    "targets.start.options.cwd": ["next.config.js", "@titan/next/plugin"],
     "sourceRoot": ["package.json", "nx/core/package-json-workspaces"],
     "name": ["package.json", "nx/core/package-json-workspaces"],
     "projectType": ["package.json", "nx/core/package-json-workspaces"],

@@ -1,5 +1,5 @@
-import type { Tree } from '@nx/devkit';
-import { joinPathFragments, names } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
+import { joinPathFragments, names } from '@titan/devkit';
 import { NormalizedNgRxFeatureStoreGeneratorOptions } from './normalize-options';
 import { ensureTypescript } from '@nx/js/src/utils/typescript/ensure-typescript';
 

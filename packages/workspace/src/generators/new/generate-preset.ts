@@ -2,7 +2,7 @@ import {
   addDependenciesToPackageJson,
   getPackageManagerCommand,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { Preset } from '../utils/presets';
 import {
   angularCliVersion,
@@ -102,7 +102,7 @@ function getPresetDependencies({
     case Preset.AngularMonorepo:
     case Preset.AngularStandalone:
       return {
-        dependencies: { '@nx/angular': nxVersion },
+        dependencies: { '@titan/angular': nxVersion },
         dev: {
           '@angular-devkit/core': angularCliVersion,
           typescript: typescriptVersion,
@@ -120,7 +120,7 @@ function getPresetDependencies({
 
     case Preset.NextJs:
     case Preset.NextJsStandalone:
-      return { dependencies: { '@nx/next': nxVersion }, dev: {} };
+      return { dependencies: { '@titan/next': nxVersion }, dev: {} };
 
     case Preset.RemixStandalone:
     case Preset.RemixMonorepo:
@@ -132,8 +132,8 @@ function getPresetDependencies({
         dependencies: {},
         dev: {
           '@nx/vue': nxVersion,
-          '@nx/cypress': e2eTestRunner === 'cypress' ? nxVersion : undefined,
-          '@nx/playwright':
+          '@titan/cypress': e2eTestRunner === 'cypress' ? nxVersion : undefined,
+          '@titan/playwright':
             e2eTestRunner === 'playwright' ? nxVersion : undefined,
           '@nx/vite': nxVersion,
         },
@@ -145,8 +145,8 @@ function getPresetDependencies({
         dependencies: {},
         dev: {
           '@nx/nuxt': nxVersion,
-          '@nx/cypress': e2eTestRunner === 'cypress' ? nxVersion : undefined,
-          '@nx/playwright':
+          '@titan/cypress': e2eTestRunner === 'cypress' ? nxVersion : undefined,
+          '@titan/playwright':
             e2eTestRunner === 'playwright' ? nxVersion : undefined,
         },
       };
@@ -157,8 +157,8 @@ function getPresetDependencies({
         dependencies: {},
         dev: {
           '@nx/react': nxVersion,
-          '@nx/cypress': e2eTestRunner !== 'none' ? nxVersion : undefined,
-          '@nx/jest': bundler !== 'vite' ? nxVersion : undefined,
+          '@titan/cypress': e2eTestRunner !== 'none' ? nxVersion : undefined,
+          '@titan/jest': bundler !== 'vite' ? nxVersion : undefined,
           '@nx/vite': bundler === 'vite' ? nxVersion : undefined,
           '@nx/webpack': bundler === 'webpack' ? nxVersion : undefined,
         },

@@ -1,4 +1,4 @@
-import { ChangeType, applyChangesToString } from '@nx/devkit';
+import { ChangeType, applyChangesToString } from '@titan/devkit';
 import { FileReplacement } from '../../../../plugins/rollup-replace-files.plugin';
 import { tsquery } from '@phenomnomnominal/tsquery';
 import { getConfigNode, notFoundWarning } from '../update-vite-config';

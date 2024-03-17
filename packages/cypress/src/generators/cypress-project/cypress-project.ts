@@ -15,14 +15,14 @@ import {
   toJS,
   Tree,
   updateJson,
-} from '@nx/devkit';
-import { determineProjectNameAndRootOptions } from '@nx/devkit/src/generators/project-name-and-root-utils';
-import { checkAndCleanWithSemver } from '@nx/devkit/src/utils/semver';
+} from '@titan/devkit';
+import { determineProjectNameAndRootOptions } from '@titan/devkit/src/generators/project-name-and-root-utils';
+import { checkAndCleanWithSemver } from '@titan/devkit/src/utils/semver';
 import {
   getRelativePathToRootTsConfig,
   initGenerator as jsInitGenerator,
 } from '@nx/js';
-import { Linter } from '@nx/eslint';
+import { Linter } from '@titan/eslint';
 import { join } from 'path';
 import { major } from 'semver';
 import { addLinterToCyProject } from '../../utils/add-linter';
@@ -34,7 +34,7 @@ import {
 } from '../../utils/versions';
 import { cypressInitGenerator } from '../init/init';
 import { Schema } from './schema';
-import { logShowProjectCommand } from '@nx/devkit/src/utils/log-show-project-command';
+import { logShowProjectCommand } from '@titan/devkit/src/utils/log-show-project-command';
 
 export interface CypressProjectSchema extends Schema {
   projectName: string;
@@ -101,7 +101,7 @@ function addProject(tree: Tree, options: CypressProjectSchema) {
       projectType: 'application',
       targets: {
         e2e: {
-          executor: '@nx/cypress:cypress',
+          executor: '@titan/cypress:cypress',
           options: {
             cypressConfig: joinPathFragments(
               options.projectRoot,
@@ -134,7 +134,7 @@ function addProject(tree: Tree, options: CypressProjectSchema) {
       projectType: 'application',
       targets: {
         e2e: {
-          executor: '@nx/cypress:cypress',
+          executor: '@titan/cypress:cypress',
           options: {
             cypressConfig: joinPathFragments(
               options.projectRoot,
@@ -277,7 +277,7 @@ async function normalizeOptions(
       projectNameAndRootFormat: isRootProject
         ? 'as-provided'
         : options.projectNameAndRootFormat,
-      callingGenerator: '@nx/cypress:cypress-project',
+      callingGenerator: '@titan/cypress:cypress-project',
     }
   );
 

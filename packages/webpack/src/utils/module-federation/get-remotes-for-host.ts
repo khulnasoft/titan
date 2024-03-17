@@ -1,4 +1,4 @@
-import { logger, type ProjectGraph } from '@nx/devkit';
+import { logger, type ProjectGraph } from '@titan/devkit';
 import { registerTsProject } from '@nx/js/src/internal';
 import { findMatchingProjects } from 'nx/src/utils/find-matching-projects';
 import * as chalk from 'chalk';

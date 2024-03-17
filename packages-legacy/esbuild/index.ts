@@ -1,1 +1,1 @@
-export * from '@nx/esbuild';
+export * from '@titan/esbuild';

@@ -1,7 +1,7 @@
-import { readNxJson, type Tree } from '@nx/devkit';
-import { determineProjectNameAndRootOptions } from '@nx/devkit/src/generators/project-name-and-root-utils';
+import { readNxJson, type Tree } from '@titan/devkit';
+import { determineProjectNameAndRootOptions } from '@titan/devkit/src/generators/project-name-and-root-utils';
 import { type NxRemixGeneratorSchema } from '../schema';
-import { Linter } from '@nx/eslint';
+import { Linter } from '@titan/eslint';
 
 export interface NormalizedSchema extends NxRemixGeneratorSchema {
   projectName: string;

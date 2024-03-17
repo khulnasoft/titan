@@ -1,1 +1,1 @@
-export * from '@nx/angular/plugins/component-testing';
+export * from '@titan/angular/plugins/component-testing';

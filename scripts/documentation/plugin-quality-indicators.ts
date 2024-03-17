@@ -202,7 +202,7 @@ async function getGithubStars(repos: { owner: string; repo: string }[]) {
 async function getNxVersion(data: any) {
   const latest = data['dist-tags'].latest;
   const nxPackages = [
-    '@nx/devkit',
+    '@titan/devkit',
     '@nrwl/devkit',
     '@nx/workspace',
     '@nrwl/workspace',
@@ -223,7 +223,7 @@ async function getNxVersion(data: any) {
       }
     }
   }
-  console.warn('- No dependency on @nx/devkit!');
+  console.warn('- No dependency on @titan/devkit!');
   return devkitVersion;
 }
 
@@ -233,7 +233,7 @@ async function findNxRange(packageName: string, devkitVersion: string) {
     .replace('>=', '')
     .replace('>', '');
   const lookupPackage = packageName.includes('@nx')
-    ? '@nx/devkit'
+    ? '@titan/devkit'
     : '@nrwl/devkit';
   const { data: devkitData } = await axios.get(
     `https://registry.npmjs.org/${lookupPackage}`

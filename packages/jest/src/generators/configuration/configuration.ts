@@ -14,7 +14,7 @@ import {
   readProjectConfiguration,
   readNxJson,
   runTasksInSerial,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { initGenerator as jsInitGenerator } from '@nx/js';
 import { JestPluginOptions } from '../../plugins/plugin';
 import { isPresetCjs } from '../../utils/config/is-preset-cjs';
@@ -101,10 +101,10 @@ export async function configurationGeneratorInternal(
   const nxJson = readNxJson(tree);
   const hasPlugin = nxJson.plugins?.some((p) => {
     if (typeof p === 'string') {
-      return p === '@nx/jest/plugin' && options.targetName === 'test';
+      return p === '@titan/jest/plugin' && options.targetName === 'test';
     } else {
       return (
-        p.plugin === '@nx/jest/plugin' &&
+        p.plugin === '@titan/jest/plugin' &&
         ((p.options as JestPluginOptions)?.targetName ?? 'test') ===
           options.targetName
       );

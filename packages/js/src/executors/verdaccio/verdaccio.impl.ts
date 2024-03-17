@@ -1,4 +1,4 @@
-import { ExecutorContext, logger } from '@nx/devkit';
+import { ExecutorContext, logger } from '@titan/devkit';
 import { existsSync, rmSync } from 'fs-extra';
 import { ChildProcess, execSync, fork } from 'child_process';
 import * as detectPort from 'detect-port';

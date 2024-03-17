@@ -1,6 +1,6 @@
 import { join } from 'path';
 import { NormalizedJestProjectSchema } from '../schema';
-import { readProjectConfiguration, Tree, updateJson } from '@nx/devkit';
+import { readProjectConfiguration, Tree, updateJson } from '@titan/devkit';
 
 export function updateTsConfig(
   host: Tree,

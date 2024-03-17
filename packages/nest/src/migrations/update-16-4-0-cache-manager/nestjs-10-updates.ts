@@ -7,7 +7,7 @@ import {
   joinPathFragments,
   updateJson,
   visitNotIgnoredFiles,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { tsquery } from '@phenomnomnominal/tsquery';
 import {
   ImportDeclaration,

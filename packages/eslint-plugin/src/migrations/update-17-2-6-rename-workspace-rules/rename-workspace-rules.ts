@@ -1,5 +1,5 @@
-import { Tree, formatFiles, visitNotIgnoredFiles } from '@nx/devkit';
-import { isBinaryPath } from '@nx/devkit/src/utils/binary-extensions';
+import { Tree, formatFiles, visitNotIgnoredFiles } from '@titan/devkit';
+import { isBinaryPath } from '@titan/devkit/src/utils/binary-extensions';
 import { WORKSPACE_PLUGIN_DIR, WORKSPACE_RULES_PATH } from '../../constants';
 
 export default async function renameWorkspaceRule(tree: Tree): Promise<void> {

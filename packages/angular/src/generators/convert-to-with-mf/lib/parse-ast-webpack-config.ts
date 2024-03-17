@@ -1,4 +1,4 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import { ensureTypescript } from '@nx/js/src/utils/typescript/ensure-typescript';
 
 export function parseASTOfWebpackConfig(

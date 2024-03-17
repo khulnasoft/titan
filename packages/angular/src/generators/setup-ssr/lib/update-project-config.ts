@@ -2,7 +2,7 @@ import type {
   BrowserBuilderOptions,
   ServerBuilderOptions,
 } from '@angular-devkit/build-angular';
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import {
   joinPathFragments,
   logger,
@@ -10,7 +10,7 @@ import {
   readProjectConfiguration,
   updateNxJson,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { getInstalledAngularVersionInfo } from '../../utils/version-utils';
 import type { Schema } from '../schema';
 import {
@@ -86,7 +86,7 @@ export function updateProjectConfigForBrowserBuilder(
     dependsOn: ['build'],
     executor: buildTarget.executor.startsWith('@angular-devkit/build-angular:')
       ? '@angular-devkit/build-angular:server'
-      : '@nx/angular:webpack-server',
+      : '@titan/angular:webpack-server',
     options: {
       outputPath: joinPathFragments(baseOutputPath, 'server'),
       main: joinPathFragments(projectConfig.root, schema.serverFileName),

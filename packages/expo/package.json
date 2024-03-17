@@ -26,7 +26,7 @@
   "main": "./index",
   "types": "index.d.ts",
   "dependencies": {
-    "@nx/devkit": "file:../devkit",
+    "@titan/devkit": "file:../devkit",
     "chalk": "^4.1.0",
     "enhanced-resolve": "^5.8.3",
     "fs-extra": "^11.1.0",
@@ -36,9 +36,9 @@
     "tslib": "^2.3.0",
     "tsconfig-paths": "^4.1.2",
     "tsconfig-paths-webpack-plugin": "^4.0.0",
-    "@nx/jest": "file:../jest",
+    "@titan/jest": "file:../jest",
     "@nx/js": "file:../js",
-    "@nx/eslint": "file:../eslint",
+    "@titan/eslint": "file:../eslint",
     "@nx/react": "file:../react",
     "@nx/web": "file:../web",
     "@nx/webpack": "file:../webpack"

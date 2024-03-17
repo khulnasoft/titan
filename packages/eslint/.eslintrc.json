@@ -35,7 +35,7 @@
             "buildTargets": ["build-base"],
             "ignoredDependencies": [
               "nx",
-              "@nx/jest",
+              "@titan/jest",
               "typescript",
               "eslint",
               "@angular-devkit/core",

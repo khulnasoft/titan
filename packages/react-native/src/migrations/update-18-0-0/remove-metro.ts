@@ -2,7 +2,7 @@ import {
   formatFiles,
   removeDependenciesFromPackageJson,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 /**
  * Remove metro-* package since it is no longer explicity required in package.json.

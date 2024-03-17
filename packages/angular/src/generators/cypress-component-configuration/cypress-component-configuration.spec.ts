@@ -1,4 +1,4 @@
-import { installedCypressVersion } from '@nx/cypress/src/utils/cypress-version';
+import { installedCypressVersion } from '@titan/cypress/src/utils/cypress-version';
 import {
   DependencyType,
   joinPathFragments,
@@ -7,17 +7,17 @@ import {
   readProjectConfiguration,
   Tree,
   updateProjectConfiguration,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { componentGenerator } from '../component/component';
 import { librarySecondaryEntryPointGenerator } from '../library-secondary-entry-point/library-secondary-entry-point';
 import { generateTestApplication, generateTestLibrary } from '../utils/testing';
 import { cypressComponentConfiguration } from './cypress-component-configuration';
 
 let projectGraph: ProjectGraph = { nodes: {}, dependencies: {} };
-jest.mock('@nx/cypress/src/utils/cypress-version');
-jest.mock('@nx/devkit', () => ({
-  ...jest.requireActual<any>('@nx/devkit'),
+jest.mock('@titan/cypress/src/utils/cypress-version');
+jest.mock('@titan/devkit', () => ({
+  ...jest.requireActual<any>('@titan/devkit'),
   createProjectGraphAsync: jest
     .fn()
     .mockImplementation(async () => projectGraph),
@@ -107,7 +107,7 @@ describe('Cypress Component Testing Configuration', () => {
       expect(
         readProjectConfiguration(tree, 'fancy-lib').targets['component-test']
       ).toEqual({
-        executor: '@nx/cypress:cypress',
+        executor: '@titan/cypress:cypress',
         options: {
           cypressConfig: 'fancy-lib/cypress.config.ts',
           devServerTarget: 'fancy-app:build',
@@ -173,7 +173,7 @@ describe('Cypress Component Testing Configuration', () => {
       expect(
         readProjectConfiguration(tree, 'fancy-lib').targets['component-test']
       ).toEqual({
-        executor: '@nx/cypress:cypress',
+        executor: '@titan/cypress:cypress',
         options: {
           cypressConfig: 'fancy-lib/cypress.config.ts',
           devServerTarget: 'fancy-app:build:development',
@@ -276,7 +276,7 @@ describe('Cypress Component Testing Configuration', () => {
       expect(
         readProjectConfiguration(tree, 'fancy-app').targets['component-test']
       ).toEqual({
-        executor: '@nx/cypress:cypress',
+        executor: '@titan/cypress:cypress',
         options: {
           cypressConfig: 'fancy-app/cypress.config.ts',
           devServerTarget: 'fancy-app:build',
@@ -343,7 +343,7 @@ describe('Cypress Component Testing Configuration', () => {
       expect(
         readProjectConfiguration(tree, 'fancy-lib').targets['component-test']
       ).toEqual({
-        executor: '@nx/cypress:cypress',
+        executor: '@titan/cypress:cypress',
         options: {
           cypressConfig: 'fancy-lib/cypress.config.ts',
           devServerTarget: 'fancy-app:build',
@@ -401,7 +401,7 @@ describe('Cypress Component Testing Configuration', () => {
 
     expect(tree.read('my-lib/cypress.config.ts', 'utf-8'))
       .toMatchInlineSnapshot(`
-      "import { nxComponentTestingPreset } from '@nx/angular/plugins/component-testing';
+      "import { nxComponentTestingPreset } from '@titan/angular/plugins/component-testing';
       import { defineConfig } from 'cypress';
 
       export default defineConfig({

@@ -4,7 +4,7 @@ import {
   normalizePath,
   readCachedProjectGraph,
   workspaceRoot,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import {
   AssetGlobPattern,
   FileReplacement,

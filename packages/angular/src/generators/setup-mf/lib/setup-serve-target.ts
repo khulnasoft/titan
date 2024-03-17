@@ -1,8 +1,8 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import {
   readProjectConfiguration,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import type { Schema } from '../schema';
 
 export function setupServeTarget(host: Tree, options: Schema) {
@@ -12,8 +12,8 @@ export function setupServeTarget(host: Tree, options: Schema) {
     ...appConfig.targets['serve'],
     executor:
       options.mfType === 'host'
-        ? '@nx/angular:module-federation-dev-server'
-        : '@nx/angular:dev-server',
+        ? '@titan/angular:module-federation-dev-server'
+        : '@titan/angular:dev-server',
     options: {
       ...appConfig.targets['serve'].options,
       port: options.port ?? undefined,

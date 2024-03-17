@@ -4,7 +4,7 @@ import {
   joinPathFragments,
   names,
   readProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { maybeJs } from '../../../utils/maybe-js';
 import { NormalizedSchema } from '../schema';
 

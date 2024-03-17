@@ -6,7 +6,7 @@ import {
   readProjectConfiguration,
   Tree,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { join } from 'path';
 import { addSwcConfig } from '../../utils/swc/add-swc-config';
 import { addSwcDependencies } from '../../utils/swc/add-swc-dependencies';

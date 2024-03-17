@@ -4,13 +4,13 @@ import {
   Tree,
   addProjectConfiguration,
   readProjectConfiguration,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import migration from './explicitly-set-projects-to-update-buildable-deps';
 
 let projectGraph: ProjectGraph;
-jest.mock('@nx/devkit', () => ({
-  ...jest.requireActual('@nx/devkit'),
+jest.mock('@titan/devkit', () => ({
+  ...jest.requireActual('@titan/devkit'),
   createProjectGraphAsync: () => Promise.resolve(projectGraph),
   formatFiles: jest.fn(),
 }));
@@ -24,9 +24,9 @@ describe('explicitly-set-projects-to-update-buildable-deps migration', () => {
   });
 
   it.each([
-    '@nx/angular:ng-packagr-lite',
+    '@titan/angular:ng-packagr-lite',
     '@nrwl/angular:ng-packagr-lite',
-    '@nx/angular:package',
+    '@titan/angular:package',
     '@nrwl/angular:package',
   ])(
     'should set updateBuildableProjectDepsInPackageJson option to "true" when not specified in target using "%s"',
@@ -47,9 +47,9 @@ describe('explicitly-set-projects-to-update-buildable-deps migration', () => {
   );
 
   it.each([
-    '@nx/angular:ng-packagr-lite',
+    '@titan/angular:ng-packagr-lite',
     '@nrwl/angular:ng-packagr-lite',
-    '@nx/angular:package',
+    '@titan/angular:package',
     '@nrwl/angular:package',
   ])(
     'should set updateBuildableProjectDepsInPackageJson option to "true" when target has no options object defined using "%s"',
@@ -70,9 +70,9 @@ describe('explicitly-set-projects-to-update-buildable-deps migration', () => {
   );
 
   it.each([
-    '@nx/angular:ng-packagr-lite',
+    '@titan/angular:ng-packagr-lite',
     '@nrwl/angular:ng-packagr-lite',
-    '@nx/angular:package',
+    '@titan/angular:package',
     '@nrwl/angular:package',
   ])(
     'should not overwrite updateBuildableProjectDepsInPackageJson option when it is specified in target using "%s"',

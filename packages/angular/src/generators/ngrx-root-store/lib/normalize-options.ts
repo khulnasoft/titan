@@ -1,11 +1,11 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import {
   joinPathFragments,
   names,
   readJson,
   readProjectConfiguration,
-} from '@nx/devkit';
-import { checkAndCleanWithSemver } from '@nx/devkit/src/utils/semver';
+} from '@titan/devkit';
+import { checkAndCleanWithSemver } from '@titan/devkit/src/utils/semver';
 import { rxjsVersion as defaultRxjsVersion } from '../../../utils/versions';
 import type { Schema } from '../schema';
 import { isNgStandaloneApp } from '../../../utils/nx-devkit/ast-utils';

@@ -17,10 +17,10 @@ import {
   readJson,
   toJS,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { getRootTsConfigPathInTree } from '@nx/js';
 import { ensureTypescript } from '@nx/js/src/utils/typescript/ensure-typescript';
-import { determineArtifactNameAndDirectoryOptions } from '@nx/devkit/src/generators/artifact-name-and-directory-utils';
+import { determineArtifactNameAndDirectoryOptions } from '@titan/devkit/src/generators/artifact-name-and-directory-utils';
 
 let tsModule: typeof import('typescript');
 

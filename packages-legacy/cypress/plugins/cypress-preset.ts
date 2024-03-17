@@ -1,1 +1,1 @@
-export * from '@nx/cypress/plugins/cypress-preset';
+export * from '@titan/cypress/plugins/cypress-preset';

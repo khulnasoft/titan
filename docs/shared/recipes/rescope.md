@@ -23,12 +23,12 @@ The following packages were not simply rescoped `@nrwl` to `@nx`.
 | Nx 15 and lower        | Nx 16 and higher  |
 | ---------------------- | ----------------- |
 | @nrwl/nx-cloud         | nx-cloud          |
-| @nrwl/eslint-plugin-nx | @nx/eslint-plugin |
+| @nrwl/eslint-plugin-nx | @titan/eslint-plugin |
 | @nrwl/nx-plugin        | @nx/plugin        |
 
 | Nx 15 and lower | Nx 16      | Nx 17      |
 | --------------- | ---------- | ---------- |
-| @nrwl/linter    | @nx/linter | @nx/eslint |
+| @nrwl/linter    | @nx/linter | @titan/eslint |
 
 ### Rescope Only
 
@@ -36,20 +36,20 @@ All other packages keep the same name, but change scope from `@nrwl` to `@nx`.
 
 | Nx 15 and lower    | Nx 16            |
 | ------------------ | ---------------- |
-| @nrwl/angular      | @nx/angular      |
+| @nrwl/angular      | @titan/angular      |
 | @nrwl/aws-lambda   | @nx/aws-lambda   |
-| @nrwl/cypress      | @nx/cypress      |
+| @nrwl/cypress      | @titan/cypress      |
 | @nrwl/detox        | @nx/detox        |
-| @nrwl/devkit       | @nx/devkit       |
-| @nrwl/esbuild      | @nx/esbuild      |
+| @nrwl/devkit       | @titan/devkit       |
+| @nrwl/esbuild      | @titan/esbuild      |
 | @nrwl/expo         | @nx/expo         |
 | @nrwl/express      | @nx/express      |
 | @nrwl/gatsby       | @nx/gatsby       |
-| @nrwl/jest         | @nx/jest         |
+| @nrwl/jest         | @titan/jest         |
 | @nrwl/js           | @nx/js           |
 | @nrwl/nest         | @nx/nest         |
 | @nrwl/netlify      | @nx/netlify      |
-| @nrwl/next         | @nx/next         |
+| @nrwl/next         | @titan/next         |
 | @nrwl/node         | @nx/node         |
 | @nrwl/react        | @nx/react        |
 | @nrwl/react-native | @nx/react-native |

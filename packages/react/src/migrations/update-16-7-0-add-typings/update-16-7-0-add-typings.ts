@@ -5,7 +5,7 @@ import {
   joinPathFragments,
   readJson,
   updateJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 export default async function addTypings(tree: Tree) {
   const projects = getProjects(tree);

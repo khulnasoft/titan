@@ -6,7 +6,7 @@ import {
   joinPathFragments,
   offsetFromRoot,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { tsquery } from '@phenomnomnominal/tsquery';
 import ts = require('typescript');
 import { getConfigNode, notFoundWarning } from '../update-vite-config';

@@ -3,7 +3,7 @@ import {
   logger,
   type GeneratorCallback,
   type Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import {
   edgeRuntimeVmVersion,
   happyDomVersion,

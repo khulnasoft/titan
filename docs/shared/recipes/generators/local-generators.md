@@ -52,7 +52,7 @@ The `schema.json` provides a description of the generator, available options, va
 The initial generator function creates a library.
 
 ```typescript
-import { Tree, formatFiles, installPackagesTask } from '@nx/devkit';
+import { Tree, formatFiles, installPackagesTask } from '@titan/devkit';
 import { libraryGenerator } from '@nx/js';
 
 export default async function (tree: Tree, schema: any) {
@@ -66,7 +66,7 @@ export default async function (tree: Tree, schema: any) {
 
 To invoke other generators, import the entry point function and run it against the tree. `async/await` can be used to make code with Promises read like procedural code. The generator function may return a callback function that is executed after changes to the file system have been applied.
 
-In the `schema.json` file for your generator, the `name` is provided as a default option. The `cli` property is set to `nx` to signal that this is a generator that uses `@nx/devkit` and not `@angular-devkit`.
+In the `schema.json` file for your generator, the `name` is provided as a default option. The `cli` property is set to `nx` to signal that this is a generator that uses `@titan/devkit` and not `@angular-devkit`.
 
 ```json {% fileName="schema.json" %}
 {
@@ -116,4 +116,4 @@ Nx uses the paths from `tsconfig.base.json` when running plugins locally, but us
 
 ## Generator Utilities
 
-The [`@nx/devkit` package](/nx-api/devkit/documents/nx_devkit) provides many utility functions that can be used in generators to help with modifying files, reading and updating configuration files, and working with an Abstract Syntax Tree (AST).
+The [`@titan/devkit` package](/nx-api/devkit/documents/nx_devkit) provides many utility functions that can be used in generators to help with modifying files, reading and updating configuration files, and working with an Abstract Syntax Tree (AST).

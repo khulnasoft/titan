@@ -1,4 +1,4 @@
-import { CustomHasher } from '@nx/devkit';
+import { CustomHasher } from '@titan/devkit';
 
 /**
  * This is a boilerplate custom hasher that matches

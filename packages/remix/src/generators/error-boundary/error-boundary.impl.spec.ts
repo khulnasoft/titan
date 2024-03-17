@@ -1,9 +1,9 @@
 jest.mock('../../utils/remix-config');
 import * as remixConfigUtils from '../../utils/remix-config';
 
-import { addProjectConfiguration } from '@nx/devkit';
-import { NameAndDirectoryFormat } from '@nx/devkit/src/generators/artifact-name-and-directory-utils';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { addProjectConfiguration } from '@titan/devkit';
+import { NameAndDirectoryFormat } from '@titan/devkit/src/generators/artifact-name-and-directory-utils';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import errorBoundaryGenerator from './error-boundary.impl';
 
 describe('ErrorBoundary', () => {

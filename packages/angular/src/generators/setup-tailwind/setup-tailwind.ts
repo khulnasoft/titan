@@ -3,7 +3,7 @@ import {
   GeneratorCallback,
   readProjectConfiguration,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import {
   addTailwindConfig,
   addTailwindConfigPathToProject,

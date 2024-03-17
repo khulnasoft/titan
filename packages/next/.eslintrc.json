@@ -80,9 +80,9 @@
             "ignoredDependencies": [
               "nx",
               "@nx/webpack",
-              "@nx/cypress",
-              "@nx/jest",
-              "@nx/playwright",
+              "@titan/cypress",
+              "@titan/jest",
+              "@titan/playwright",
               "typescript",
               "react",
               "webpack",

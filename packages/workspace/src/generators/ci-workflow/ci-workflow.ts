@@ -8,7 +8,7 @@ import {
   formatFiles,
   writeJson,
   detectPackageManager,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { deduceDefaultBase } from '../../utilities/default-base';
 import { join } from 'path';
 import { getNxCloudUrl } from 'nx/src/utils/nx-cloud-utils';
@@ -69,7 +69,7 @@ function normalizeOptions(options: Schema, tree: Tree): Substitutes {
   };
 
   const hasE2E =
-    allDependencies['@nx/cypress'] || allDependencies['@nx/playwright'];
+    allDependencies['@titan/cypress'] || allDependencies['@titan/playwright'];
 
   return {
     workflowName,

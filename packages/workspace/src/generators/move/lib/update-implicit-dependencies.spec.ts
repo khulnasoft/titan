@@ -2,8 +2,8 @@ import {
   addProjectConfiguration,
   readProjectConfiguration,
   Tree,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { NormalizedSchema } from '../schema';
 import { updateImplicitDependencies } from './update-implicit-dependencies';
 

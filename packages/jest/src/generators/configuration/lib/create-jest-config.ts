@@ -6,7 +6,7 @@ import {
   updateProjectConfiguration,
   type TargetConfiguration,
   type Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { readTargetDefaultsForTarget } from 'nx/src/project-graph/utils/project-configuration-utils';
 import { findRootJestConfig } from '../../../utils/config/find-root-jest-files';
 import type { NormalizedJestProjectSchema } from '../schema';
@@ -21,7 +21,7 @@ export async function createJestConfig(
     tree.write(
       `jest.preset.${presetExt}`,
       `
-      const nxPreset = require('@nx/jest/preset').default;
+      const nxPreset = require('@titan/jest/preset').default;
 
       module.exports = { ...nxPreset }`
     );
@@ -53,7 +53,7 @@ export async function createJestConfig(
     if (rootProject) {
       const jestTarget = Object.entries(rootProject.data?.targets ?? {}).find(
         ([_, t]) =>
-          ((t?.executor === '@nx/jest:jest' ||
+          ((t?.executor === '@titan/jest:jest' ||
             t?.executor === '@nrwl/jest:jest') &&
             t?.options?.jestConfig === rootJestPath) ||
           (t?.executor === 'nx:run-commands' && t?.options?.command === 'jest')
@@ -102,7 +102,7 @@ export async function createJestConfig(
               options: {},
             });
 
-      if (target.executor === '@nx/jest:jest') {
+      if (target.executor === '@titan/jest:jest') {
         target.options.jestConfig = jestProjectConfig;
       }
 
@@ -129,13 +129,13 @@ export async function createJestConfig(
 function generateGlobalConfig(tree: Tree, isJS: boolean) {
   const contents = isJS
     ? stripIndents`
-    const { getJestProjectsAsync } = require('@nx/jest');
+    const { getJestProjectsAsync } = require('@titan/jest');
 
     module.exports = async () => ({
       projects: await getJestProjectsAsync()
     });`
     : stripIndents`
-    import { getJestProjectsAsync } from '@nx/jest';
+    import { getJestProjectsAsync } from '@titan/jest';
 
     export default async () => ({
      projects: await getJestProjectsAsync()

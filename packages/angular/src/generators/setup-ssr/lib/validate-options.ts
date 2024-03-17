@@ -1,5 +1,5 @@
-import type { Tree } from '@nx/devkit';
-import { readProjectConfiguration, stripIndents } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
+import { readProjectConfiguration, stripIndents } from '@titan/devkit';
 import { validateProject as validateExistingProject } from '../../utils/validations';
 import type { Schema } from '../schema';
 import { getInstalledAngularVersionInfo } from '../../utils/version-utils';

@@ -5,7 +5,7 @@ import {
   ProjectGraphExternalNode,
   ProjectGraphProjectNode,
   workspaceRoot,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { isRelativePath } from 'nx/src/utils/fileutils';
 import {
   checkCircularPath,

@@ -1,9 +1,9 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import {
   joinPathFragments,
   normalizePath,
   visitNotIgnoredFiles,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import type { GeneratorOptions } from '../../schema';
 import type {
   MigrationProjectConfiguration,

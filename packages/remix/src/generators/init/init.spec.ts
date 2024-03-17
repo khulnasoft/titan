@@ -1,5 +1,5 @@
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { readJson } from '@nx/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { readJson } from '@titan/devkit';
 import initGenerator from './init';
 import { remixInitGeneratorInternal } from './init';
 

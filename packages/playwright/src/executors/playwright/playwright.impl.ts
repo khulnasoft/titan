@@ -5,7 +5,7 @@ import {
   names,
   output,
   workspaceRoot,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 export interface PlaywrightExecutorSchema {
   /*

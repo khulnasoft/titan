@@ -3,8 +3,8 @@ import {
   readNxJson,
   readProjectConfiguration,
   updateNxJson,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import removeBaseUrlFromProjectJson from './remove-baseUrl-from-project-json';
 
 describe('removeBaseUrlFromProjectJson', () => {
@@ -19,7 +19,7 @@ describe('removeBaseUrlFromProjectJson', () => {
         sourceRoot: '',
         targets: {
           e2e: {
-            executor: '@nx/playwright:playwright',
+            executor: '@titan/playwright:playwright',
           },
         },
       };
@@ -39,7 +39,7 @@ describe('removeBaseUrlFromProjectJson', () => {
                 "sourceRoot": "",
                 "targets": {
                   "e2e": {
-                    "executor": "@nx/playwright:playwright",
+                    "executor": "@titan/playwright:playwright",
                   },
                 },
               }
@@ -56,7 +56,7 @@ describe('removeBaseUrlFromProjectJson', () => {
         sourceRoot: '',
         targets: {
           e2e: {
-            executor: '@nx/playwright:playwright',
+            executor: '@titan/playwright:playwright',
             options: {
               baseUrl: 'http://localhost:4200',
             },
@@ -86,7 +86,7 @@ describe('removeBaseUrlFromProjectJson', () => {
         sourceRoot: '',
         targets: {
           e2e: {
-            executor: '@nx/playwright:playwright',
+            executor: '@titan/playwright:playwright',
             options: {
               baseUrl: 'http://localhost:4200',
             },
@@ -120,7 +120,7 @@ describe('removeBaseUrlFromProjectJson', () => {
       // ARRANGE
       const tree = createTreeWithEmptyWorkspace();
       const nxJson = readNxJson(tree);
-      nxJson.targetDefaults['@nx/playwright:playwright'] = {
+      nxJson.targetDefaults['@titan/playwright:playwright'] = {
         options: {
           baseUrl: 'http://localhost:4200',
         },
@@ -131,7 +131,7 @@ describe('removeBaseUrlFromProjectJson', () => {
         },
       };
       nxJson.targetDefaults['e2e'] = {
-        executor: '@nx/playwright:playwright',
+        executor: '@titan/playwright:playwright',
         options: {
           baseUrl: 'http://localhost:4200',
         },
@@ -150,7 +150,7 @@ describe('removeBaseUrlFromProjectJson', () => {
       const maybeUpdatedNxJson = readNxJson(tree);
       expect(maybeUpdatedNxJson.targetDefaults).toMatchInlineSnapshot(`
         {
-          "@nx/playwright:playwright": {
+          "@titan/playwright:playwright": {
             "configurations": {
               "ci": {},
             },
@@ -163,7 +163,7 @@ describe('removeBaseUrlFromProjectJson', () => {
             "configurations": {
               "ci": {},
             },
-            "executor": "@nx/playwright:playwright",
+            "executor": "@titan/playwright:playwright",
             "options": {},
           },
           "lint": {

@@ -3,14 +3,14 @@ import {
   readJson,
   readProjectConfiguration,
   Tree,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { Linter } from '@nx/eslint';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { Linter } from '@titan/eslint';
 import { PackageJson } from 'nx/src/utils/package-json';
 import pluginGenerator from '../plugin/plugin';
 import { createPackageGenerator } from './create-package';
 import { CreatePackageSchema } from './schema';
-import { setCwd } from '@nx/devkit/internal-testing-utils';
+import { setCwd } from '@titan/devkit/internal-testing-utils';
 
 const getSchema: (
   overrides?: Partial<CreatePackageSchema>

@@ -1,6 +1,6 @@
-The `@nx/angular:application` executor is very similar to the `@angular-devkit/build-angular:application` builder provided by the Angular CLI. It builds an Angular application using [esbuild](https://esbuild.github.io/) with integrated SSR and prerendering capabilities.
+The `@titan/angular:application` executor is very similar to the `@angular-devkit/build-angular:application` builder provided by the Angular CLI. It builds an Angular application using [esbuild](https://esbuild.github.io/) with integrated SSR and prerendering capabilities.
 
-In addition to the features provided by the Angular CLI builder, the `@nx/angular:application` executor also supports the following:
+In addition to the features provided by the Angular CLI builder, the `@titan/angular:application` executor also supports the following:
 
 - Providing esbuild plugins
 - Providing a function to transform the application's `index.html` file
@@ -18,7 +18,7 @@ The executor accepts a `plugins` option that allows you to provide esbuild plugi
   ...
   "targets": {
     "build": {
-      "executor": "@nx/angular:application",
+      "executor": "@titan/angular:application",
       "options": {
         ...
         "plugins": [
@@ -74,7 +74,7 @@ The executor accepts an `indexHtmlTransformer` option to provide a path to a fil
   ...
   "targets": {
     "build": {
-      "executor": "@nx/angular:application",
+      "executor": "@titan/angular:application",
       "options": {
         ...
         "indexHtmlTransformer": "apps/my-app/index-html.transformer.ts"

@@ -17,14 +17,14 @@ import {
   updateNxJson,
   updateProjectConfiguration,
   writeJson,
-} from '@nx/devkit';
-import { determineProjectNameAndRootOptions } from '@nx/devkit/src/generators/project-name-and-root-utils';
+} from '@titan/devkit';
+import { determineProjectNameAndRootOptions } from '@titan/devkit/src/generators/project-name-and-root-utils';
 import {
   getRelativePathToRootTsConfig,
   initGenerator as jsInitGenerator,
 } from '@nx/js';
 import { swcCoreVersion } from '@nx/js/src/utils/versions';
-import type { Linter } from '@nx/eslint';
+import type { Linter } from '@titan/eslint';
 import { join } from 'path';
 import {
   nxVersion,
@@ -36,8 +36,8 @@ import { webInitGenerator } from '../init/init';
 import { Schema } from './schema';
 import { getNpmScope } from '@nx/js/src/utils/package-json/get-npm-scope';
 import { hasWebpackPlugin } from '../../utils/has-webpack-plugin';
-import { addBuildTargetDefaults } from '@nx/devkit/src/generators/add-build-target-defaults';
-import { logShowProjectCommand } from '@nx/devkit/src/utils/log-show-project-command';
+import { addBuildTargetDefaults } from '@titan/devkit/src/generators/add-build-target-defaults';
+import { logShowProjectCommand } from '@titan/devkit/src/utils/log-show-project-command';
 
 interface NormalizedSchema extends Schema {
   projectName: string;
@@ -327,8 +327,8 @@ export async function applicationGeneratorInternal(host: Tree, schema: Schema) {
   }
 
   if (options.linter === 'eslint') {
-    const { lintProjectGenerator } = ensurePackage<typeof import('@nx/eslint')>(
-      '@nx/eslint',
+    const { lintProjectGenerator } = ensurePackage<typeof import('@titan/eslint')>(
+      '@titan/eslint',
       nxVersion
     );
     const lintTask = await lintProjectGenerator(host, {
@@ -347,8 +347,8 @@ export async function applicationGeneratorInternal(host: Tree, schema: Schema) {
 
   if (options.e2eTestRunner === 'cypress') {
     const { configurationGenerator } = ensurePackage<
-      typeof import('@nx/cypress')
-    >('@nx/cypress', nxVersion);
+      typeof import('@titan/cypress')
+    >('@titan/cypress', nxVersion);
     addProjectConfiguration(host, options.e2eProjectName, {
       root: options.e2eProjectRoot,
       sourceRoot: joinPathFragments(options.e2eProjectRoot, 'src'),
@@ -368,8 +368,8 @@ export async function applicationGeneratorInternal(host: Tree, schema: Schema) {
     tasks.push(cypressTask);
   } else if (options.e2eTestRunner === 'playwright') {
     const { configurationGenerator: playwrightConfigGenerator } = ensurePackage<
-      typeof import('@nx/playwright')
-    >('@nx/playwright', nxVersion);
+      typeof import('@titan/playwright')
+    >('@titan/playwright', nxVersion);
     addProjectConfiguration(host, options.e2eProjectName, {
       root: options.e2eProjectRoot,
       sourceRoot: joinPathFragments(options.e2eProjectRoot, 'src'),
@@ -394,8 +394,8 @@ export async function applicationGeneratorInternal(host: Tree, schema: Schema) {
     tasks.push(playwrightTask);
   }
   if (options.unitTestRunner === 'jest') {
-    const { configurationGenerator } = ensurePackage<typeof import('@nx/jest')>(
-      '@nx/jest',
+    const { configurationGenerator } = ensurePackage<typeof import('@titan/jest')>(
+      '@titan/jest',
       nxVersion
     );
     const jestTask = await configurationGenerator(host, {

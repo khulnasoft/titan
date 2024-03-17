@@ -9,10 +9,10 @@ import {
   runTasksInSerial,
   Tree,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { libraryGenerator as jsLibraryGenerator } from '@nx/js';
 import { addSwcDependencies } from '@nx/js/src/utils/swc/add-swc-dependencies';
-import { Linter } from '@nx/eslint';
+import { Linter } from '@titan/eslint';
 import * as path from 'path';
 import { e2eProjectGenerator } from '../e2e-project/e2e';
 import pluginLintCheckGenerator from '../lint-checks/generator';
@@ -106,10 +106,10 @@ export async function pluginGeneratorInternal(host: Tree, schema: Schema) {
     addDependenciesToPackageJson(
       host,
       {
-        '@nx/devkit': nxVersion,
+        '@titan/devkit': nxVersion,
       },
       {
-        '@nx/jest': nxVersion,
+        '@titan/jest': nxVersion,
         '@nx/js': nxVersion,
         '@nx/plugin': nxVersion,
       }

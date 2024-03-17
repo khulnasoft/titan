@@ -1,4 +1,4 @@
-import { joinPathFragments, stripIndents, workspaceRoot } from '@nx/devkit';
+import { joinPathFragments, stripIndents, workspaceRoot } from '@titan/devkit';
 import { existsSync } from 'node:fs';
 import { relative, join, resolve } from 'node:path';
 import {

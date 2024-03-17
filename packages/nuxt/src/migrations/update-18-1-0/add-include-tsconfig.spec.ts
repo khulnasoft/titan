@@ -1,6 +1,6 @@
 import addIncludeToTsConfig from './add-include-tsconfig';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { Tree, addProjectConfiguration, writeJson } from '@nx/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { Tree, addProjectConfiguration, writeJson } from '@titan/devkit';
 
 jest.mock('@nuxt/kit', () => ({
   loadNuxtConfig: jest.fn().mockImplementation(() => {

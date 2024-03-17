@@ -1,4 +1,4 @@
-# @nx/devkit
+# @titan/devkit
 
 The Nx Devkit is the underlying technology used to customize Nx to support
 different technologies and custom use-cases. It contains many utility

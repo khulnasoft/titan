@@ -1,5 +1,5 @@
-import { addProjectConfiguration, Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { addProjectConfiguration, Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { Schema } from '../schema';
 import { checkTargets } from './check-targets';
 
@@ -61,7 +61,7 @@ describe('checkTargets', () => {
       projectType: 'application',
       targets: {
         e2e: {
-          executor: '@nx/cypress:cypress',
+          executor: '@titan/cypress:cypress',
           options: {
             cypressConfig: 'apps/ng-app-e2e/cypress.json',
             tsConfig: 'apps/ng-app-e2e/tsconfig.e2e.json',

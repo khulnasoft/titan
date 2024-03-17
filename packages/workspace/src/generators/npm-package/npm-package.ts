@@ -4,11 +4,11 @@ import {
   generateFiles,
   Tree,
   writeJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import {
   determineProjectNameAndRootOptions,
   type ProjectNameAndRootFormat,
-} from '@nx/devkit/src/generators/project-name-and-root-utils';
+} from '@titan/devkit/src/generators/project-name-and-root-utils';
 import { join } from 'path';
 import { getImportPath } from '../../utilities/get-import-path';
 

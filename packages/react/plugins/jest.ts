@@ -1,5 +1,5 @@
 import * as path from 'path';
-import { names } from '@nx/devkit';
+import { names } from '@titan/devkit';
 
 const JS_SOURCE_EXTENSIONS = ['.ts', '.tsx', '.js', '.jsx', '.mjs', '.cjs'];
 

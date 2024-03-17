@@ -2,14 +2,14 @@ import {
   CreateNodes,
   CreateNodesContext,
   TargetConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { basename, dirname, extname, join, resolve } from "path";
 import { registerTsProject } from '@nx/js/src/internal';
 
 import { getRootTsConfigPath } from '@nx/js';
 
 import { readTargetDefaultsForTarget } from 'nx/src/project-graph/utils/project-configuration-utils';
-import { getNamedInputs } from '@nx/devkit/src/utils/get-named-inputs';
+import { getNamedInputs } from '@titan/devkit/src/utils/get-named-inputs';
 import { readdirSync } from 'fs';
 
 export interface <%= className %>PluginOptions {

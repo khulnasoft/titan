@@ -11,20 +11,20 @@ You could manually address these problems by splitting your e2e tests into small
 
 ## Set up
 
-To enable automatically split e2e tasks, you need to turn on [inferred tasks](/concepts/inferred-tasks#existing-nx-workspaces) for the [@nx/cypress](/nx-api/cypress) or [@nx/playwright](/nx-api/playwright) plugins. Run this command to set up inferred tasks:
+To enable automatically split e2e tasks, you need to turn on [inferred tasks](/concepts/inferred-tasks#existing-nx-workspaces) for the [@titan/cypress](/nx-api/cypress) or [@titan/playwright](/nx-api/playwright) plugins. Run this command to set up inferred tasks:
 
 {% tabs %}
 {% tab label="Cypress" %}
 
 ```shell {% skipRescope=true %}
-nx add @nx/cypress
+nx add @titan/cypress
 ```
 
 {% /tab %}
 {% tab label="Playwright" %}
 
 ```shell {% skipRescope=true %}
-nx add @nx/playwright
+nx add @titan/playwright
 ```
 
 {% /tab %}
@@ -34,7 +34,7 @@ This command will register the appropriate plugin in the `plugins` array of `nx.
 
 ## Manual Configuration
 
-If you are already using the `@nx/cypress` or `@nx/playwright` plugin, you need to manually add the appropriate configuration to the `plugins` array of `nx.json`. The configuration settings can be found on the [Cypress](/nx-api/cypress#nxcypress-configuration) or [Playwright](/nx-api/playwright#nxplaywright-configuration) plugin docs.
+If you are already using the `@titan/cypress` or `@titan/playwright` plugin, you need to manually add the appropriate configuration to the `plugins` array of `nx.json`. The configuration settings can be found on the [Cypress](/nx-api/cypress#nxcypress-configuration) or [Playwright](/nx-api/playwright#nxplaywright-configuration) plugin docs.
 
 ## Usage
 
@@ -143,7 +143,7 @@ nx show project myproject-e2e --web
           "configurations": {}
         },
         "lint": {
-          "executor": "@nx/eslint:lint",
+          "executor": "@titan/eslint:lint",
           "inputs": ["default", "{workspaceRoot}/.eslintrc.json"],
           "cache": true,
           "outputs": ["{options.outputFile}"],
@@ -165,7 +165,7 @@ nx show project myproject-e2e --web
     "targets.e2e": ["apps/admin-e2e/project.json", "nx/core/target-defaults"],
     "targets.e2e.options": [
       "apps/admin-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e.cache": [
       "apps/admin-e2e/project.json",
@@ -177,119 +177,119 @@ nx show project myproject-e2e --web
     ],
     "targets.e2e.outputs": [
       "apps/admin-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e.configurations": [
       "apps/admin-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e.executor": [
       "apps/admin-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e.options.cwd": [
       "apps/admin-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e.options.command": [
       "apps/admin-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e.configurations.production": [
       "apps/admin-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e.configurations.production.command": [
       "apps/admin-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci--src/e2e/app.cy.ts": [
       "apps/admin-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci--src/e2e/app.cy.ts.outputs": [
       "apps/admin-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci--src/e2e/app.cy.ts.inputs": [
       "apps/admin-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci--src/e2e/app.cy.ts.cache": [
       "apps/admin-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci--src/e2e/app.cy.ts.options": [
       "apps/admin-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci--src/e2e/app.cy.ts.executor": [
       "apps/admin-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci--src/e2e/app.cy.ts.options.cwd": [
       "apps/admin-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci--src/e2e/app.cy.ts.options.command": [
       "apps/admin-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci--src/e2e/login.cy.ts": [
       "apps/admin-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci--src/e2e/login.cy.ts.outputs": [
       "apps/admin-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci--src/e2e/login.cy.ts.inputs": [
       "apps/admin-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci--src/e2e/login.cy.ts.cache": [
       "apps/admin-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci--src/e2e/login.cy.ts.options": [
       "apps/admin-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci--src/e2e/login.cy.ts.executor": [
       "apps/admin-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci--src/e2e/login.cy.ts.options.cwd": [
       "apps/admin-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci--src/e2e/login.cy.ts.options.command": [
       "apps/admin-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci": [
       "apps/admin-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci.executor": [
       "apps/admin-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci.cache": [
       "apps/admin-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci.inputs": [
       "apps/admin-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci.outputs": [
       "apps/admin-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci.dependsOn": [
       "apps/admin-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e.dependsOn": [
       "apps/admin-e2e/project.json",

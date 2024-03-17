@@ -1,4 +1,4 @@
-import { type Tree, readNxJson, updateNxJson } from '@nx/devkit';
+import { type Tree, readNxJson, updateNxJson } from '@titan/devkit';
 
 export function addMfEnvToTargetDefaultInputs(tree: Tree) {
   const nxJson = readNxJson(tree);

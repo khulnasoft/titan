@@ -1,5 +1,5 @@
-import type { GeneratorCallback, Tree } from '@nx/devkit';
-import { formatFiles, runTasksInSerial } from '@nx/devkit';
+import type { GeneratorCallback, Tree } from '@titan/devkit';
+import { formatFiles, runTasksInSerial } from '@titan/devkit';
 import { libraryGenerator as jsLibraryGenerator } from '@nx/js';
 import {
   addExportsToBarrelFile,
@@ -12,7 +12,7 @@ import {
 } from './lib';
 import type { LibraryGeneratorOptions } from './schema';
 import initGenerator from '../init/init';
-import { logShowProjectCommand } from '@nx/devkit/src/utils/log-show-project-command';
+import { logShowProjectCommand } from '@titan/devkit/src/utils/log-show-project-command';
 import { ensureDependencies } from '../../utils/ensure-dependencies';
 
 export async function libraryGenerator(

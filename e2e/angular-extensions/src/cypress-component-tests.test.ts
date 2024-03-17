@@ -11,7 +11,7 @@ import {
   checkFilesExist,
   updateJson,
 } from '../../utils';
-import { names } from '@nx/devkit';
+import { names } from '@titan/devkit';
 import { join } from 'path';
 
 describe('Angular Cypress Component Tests', () => {
@@ -23,7 +23,7 @@ describe('Angular Cypress Component Tests', () => {
   beforeAll(async () => {
     projectName = newProject({
       name: uniq('cy-ng'),
-      packages: ['@nx/angular'],
+      packages: ['@titan/angular'],
     });
 
     createApp(appName);
@@ -40,7 +40,7 @@ describe('Angular Cypress Component Tests', () => {
 
   it('should test app', () => {
     runCLI(
-      `generate @nx/angular:cypress-component-configuration --project=${appName} --generate-tests --no-interactive`
+      `generate @titan/angular:cypress-component-configuration --project=${appName} --generate-tests --no-interactive`
     );
     if (runE2ETests('cypress')) {
       expect(runCLI(`component-test ${appName}`)).toContain(
@@ -51,7 +51,7 @@ describe('Angular Cypress Component Tests', () => {
 
   it('should successfully component test lib being used in app', () => {
     runCLI(
-      `generate @nx/angular:cypress-component-configuration --project=${usedInAppLibName} --generate-tests --no-interactive`
+      `generate @titan/angular:cypress-component-configuration --project=${usedInAppLibName} --generate-tests --no-interactive`
     );
     if (runE2ETests('cypress')) {
       expect(runCLI(`component-test ${usedInAppLibName}`)).toContain(
@@ -64,14 +64,14 @@ describe('Angular Cypress Component Tests', () => {
     expect(() => {
       // should error since no edge in graph between lib and app
       runCLI(
-        `generate @nx/angular:cypress-component-configuration --project=${buildableLibName} --generate-tests --no-interactive`
+        `generate @titan/angular:cypress-component-configuration --project=${buildableLibName} --generate-tests --no-interactive`
       );
     }).toThrow();
 
     updateTestToAssertTailwindIsNotApplied(buildableLibName);
 
     runCLI(
-      `generate @nx/angular:cypress-component-configuration --project=${buildableLibName} --generate-tests --build-target=${appName}:build --no-interactive`
+      `generate @titan/angular:cypress-component-configuration --project=${buildableLibName} --generate-tests --build-target=${appName}:build --no-interactive`
     );
     if (runE2ETests('cypress')) {
       expect(runCLI(`component-test ${buildableLibName}`)).toContain(
@@ -79,7 +79,7 @@ describe('Angular Cypress Component Tests', () => {
       );
     }
     // add tailwind
-    runCLI(`generate @nx/angular:setup-tailwind --project=${buildableLibName}`);
+    runCLI(`generate @titan/angular:setup-tailwind --project=${buildableLibName}`);
     updateFile(
       `${buildableLibName}/src/lib/input/input.component.cy.ts`,
       (content) => {
@@ -133,22 +133,22 @@ describe('Angular Cypress Component Tests', () => {
 
 function createApp(appName: string) {
   runCLI(
-    `generate @nx/angular:app ${appName} --bundler=webpack --project-name-and-root-format=as-provided --no-interactive`
+    `generate @titan/angular:app ${appName} --bundler=webpack --project-name-and-root-format=as-provided --no-interactive`
   );
   runCLI(
-    `generate @nx/angular:component fancy-component --project=${appName} --no-interactive`
+    `generate @titan/angular:component fancy-component --project=${appName} --no-interactive`
   );
 }
 
 function createLib(projectName: string, appName: string, libName: string) {
   runCLI(
-    `generate @nx/angular:lib ${libName} --project-name-and-root-format=as-provided --no-interactive`
+    `generate @titan/angular:lib ${libName} --project-name-and-root-format=as-provided --no-interactive`
   );
   runCLI(
-    `generate @nx/angular:component btn --project=${libName} --inlineTemplate --inlineStyle --export --no-interactive`
+    `generate @titan/angular:component btn --project=${libName} --inlineTemplate --inlineStyle --export --no-interactive`
   );
   runCLI(
-    `generate @nx/angular:component btn-standalone --project=${libName} --inlineTemplate --inlineStyle --export --standalone --no-interactive`
+    `generate @titan/angular:component btn-standalone --project=${libName} --inlineTemplate --inlineStyle --export --standalone --no-interactive`
   );
   updateFile(
     `${libName}/src/lib/btn/btn.component.ts`,
@@ -187,15 +187,15 @@ export class BtnStandaloneComponent {
 function createBuildableLib(projectName: string, libName: string) {
   // create lib
   runCLI(
-    `generate @nx/angular:lib ${libName} --buildable --project-name-and-root-format=as-provided --no-interactive`
+    `generate @titan/angular:lib ${libName} --buildable --project-name-and-root-format=as-provided --no-interactive`
   );
   // create cmp for lib
   runCLI(
-    `generate @nx/angular:component input --project=${libName} --inlineTemplate --inlineStyle --export --no-interactive`
+    `generate @titan/angular:component input --project=${libName} --inlineTemplate --inlineStyle --export --no-interactive`
   );
   // create standlone cmp for lib
   runCLI(
-    `generate @nx/angular:component input-standalone --project=${libName} --inlineTemplate --inlineStyle --export --standalone --no-interactive`
+    `generate @titan/angular:component input-standalone --project=${libName} --inlineTemplate --inlineStyle --export --standalone --no-interactive`
   );
   // update cmp implmentation to use tailwind clasasserting in tests
   updateFile(

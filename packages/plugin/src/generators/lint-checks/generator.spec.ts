@@ -1,4 +1,4 @@
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import {
   Tree,
   readProjectConfiguration,
@@ -6,10 +6,10 @@ import {
   updateJson,
   joinPathFragments,
   writeJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 import type { Linter as ESLint } from 'eslint';
-import { Linter } from '@nx/eslint';
+import { Linter } from '@titan/eslint';
 
 import generator from './generator';
 import pluginGenerator from '../plugin/plugin';

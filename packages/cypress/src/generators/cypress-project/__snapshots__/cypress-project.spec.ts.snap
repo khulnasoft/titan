@@ -40,7 +40,7 @@ exports[`Cypress Project < v7 nested should update configuration 1`] = `
         "devServerTarget": "my-dir-my-app:serve:production",
       },
     },
-    "executor": "@nx/cypress:cypress",
+    "executor": "@titan/cypress:cypress",
     "options": {
       "cypressConfig": "my-dir/my-app-e2e/cypress.json",
       "devServerTarget": "my-dir-my-app:serve",
@@ -49,7 +49,7 @@ exports[`Cypress Project < v7 nested should update configuration 1`] = `
     },
   },
   "lint": {
-    "executor": "@nx/eslint:lint",
+    "executor": "@titan/eslint:lint",
   },
 }
 `;
@@ -78,7 +78,7 @@ exports[`Cypress Project < v7 project with directory in its name should update c
         "devServerTarget": "my-dir-my-app:serve:production",
       },
     },
-    "executor": "@nx/cypress:cypress",
+    "executor": "@titan/cypress:cypress",
     "options": {
       "cypressConfig": "my-dir/my-app-e2e/cypress.json",
       "devServerTarget": "my-dir-my-app:serve",
@@ -87,7 +87,7 @@ exports[`Cypress Project < v7 project with directory in its name should update c
     },
   },
   "lint": {
-    "executor": "@nx/eslint:lint",
+    "executor": "@titan/eslint:lint",
   },
 }
 `;
@@ -95,7 +95,7 @@ exports[`Cypress Project < v7 project with directory in its name should update c
 exports[`Cypress Project < v7 should update project configuration (baseUrl) 1`] = `
 {
   "e2e": {
-    "executor": "@nx/cypress:cypress",
+    "executor": "@titan/cypress:cypress",
     "options": {
       "baseUrl": "http://localhost:3000",
       "cypressConfig": "my-app-e2e/cypress.json",
@@ -104,7 +104,7 @@ exports[`Cypress Project < v7 should update project configuration (baseUrl) 1`] 
     },
   },
   "lint": {
-    "executor": "@nx/eslint:lint",
+    "executor": "@titan/eslint:lint",
   },
 }
 `;
@@ -117,7 +117,7 @@ exports[`Cypress Project < v7 should update project configuration 1`] = `
         "devServerTarget": "my-app:serve:production",
       },
     },
-    "executor": "@nx/cypress:cypress",
+    "executor": "@titan/cypress:cypress",
     "options": {
       "cypressConfig": "my-app-e2e/cypress.json",
       "devServerTarget": "my-app:serve",
@@ -126,7 +126,7 @@ exports[`Cypress Project < v7 should update project configuration 1`] = `
     },
   },
   "lint": {
-    "executor": "@nx/eslint:lint",
+    "executor": "@titan/eslint:lint",
   },
 }
 `;
@@ -139,7 +139,7 @@ exports[`Cypress Project < v7 should update target configurations 1`] = `
         "devServerTarget": "my-app:serve:production",
       },
     },
-    "executor": "@nx/cypress:cypress",
+    "executor": "@titan/cypress:cypress",
     "options": {
       "cypressConfig": "my-app-e2e/cypress.json",
       "devServerTarget": "my-app:serve:development",
@@ -148,14 +148,14 @@ exports[`Cypress Project < v7 should update target configurations 1`] = `
     },
   },
   "lint": {
-    "executor": "@nx/eslint:lint",
+    "executor": "@titan/eslint:lint",
   },
 }
 `;
 
 exports[`Cypress Project > v10 for bundler:vite should pass the bundler info to nxE2EPreset in \`cypress.config.ts\` 1`] = `
 "import { defineConfig } from 'cypress';
-import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
+import { nxE2EPreset } from '@titan/cypress/plugins/cypress-preset';
 
 export default defineConfig({
   e2e: nxE2EPreset(__dirname, {
@@ -167,7 +167,7 @@ export default defineConfig({
 
 exports[`Cypress Project > v10 nested should set right path names in \`cypress.config.ts\` 1`] = `
 "import { defineConfig } from 'cypress';
-import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
+import { nxE2EPreset } from '@titan/cypress/plugins/cypress-preset';
 
 export default defineConfig({
   e2e: nxE2EPreset(__dirname),
@@ -197,7 +197,7 @@ exports[`Cypress Project > v10 nested should set right path names in \`tsconfig.
 
 exports[`Cypress Project > v10 should set right path names in \`cypress.config.ts\` 1`] = `
 "import { defineConfig } from 'cypress';
-import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
+import { nxE2EPreset } from '@titan/cypress/plugins/cypress-preset';
 
 export default defineConfig({
   e2e: nxE2EPreset(__dirname),

@@ -12,7 +12,7 @@
           "dependencies": true
         }
       ],
-      "executor": "@nx/playwright:playwright",
+      "executor": "@titan/playwright:playwright",
       "outputs": ["{workspaceRoot}/dist/.playwright/nx-dev/nx-dev-e2e"],
       "options": {
         "config": "nx-dev/nx-dev-e2e/playwright.config.ts",

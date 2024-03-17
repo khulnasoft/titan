@@ -1,1 +1,1 @@
-export * from '@nx/next/plugins/with-stylus';
+export * from '@titan/next/plugins/with-stylus';

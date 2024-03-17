@@ -2,8 +2,8 @@ import {
   ExecutorContext,
   parseTargetString,
   readTargetOptions,
-} from '@nx/devkit';
-import { names } from '@nx/devkit';
+} from '@titan/devkit';
+import { names } from '@titan/devkit';
 import { resolve as pathResolve } from 'path';
 import { ChildProcess, fork } from 'child_process';
 

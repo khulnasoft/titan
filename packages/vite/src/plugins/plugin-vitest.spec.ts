@@ -1,4 +1,4 @@
-import { CreateNodesContext } from '@nx/devkit';
+import { CreateNodesContext } from '@titan/devkit';
 import { createNodes } from './plugin';
 
 jest.mock('vite', () => ({

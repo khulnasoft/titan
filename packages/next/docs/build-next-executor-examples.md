@@ -1,6 +1,6 @@
 ---
 title: Next.js builder executor examples
-description: This page contains examples for the @nx/next:build executor.
+description: This page contains examples for the @titan/next:build executor.
 ---
 
 `project.json`:
@@ -15,7 +15,7 @@ description: This page contains examples for the @nx/next:build executor.
   "targets": {
     //...
     "build": {
-      "executor": "@nx/next:build",
+      "executor": "@titan/next:build",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
@@ -38,11 +38,11 @@ nx run acme:build
 {% tabs %}
 {% tab label="Default configuration" %}
 
-This is the default configuration for Next.js standalone projects. Our `@nx/next:build` executor is integrated to use Next.js' CLI. You can read more about the build options at [Next.js CLI Options](https://nextjs.org/docs/app/api-reference/next-cli)
+This is the default configuration for Next.js standalone projects. Our `@titan/next:build` executor is integrated to use Next.js' CLI. You can read more about the build options at [Next.js CLI Options](https://nextjs.org/docs/app/api-reference/next-cli)
 
 ```json
     "build": {
-      "executor": "@nx/next:build",
+      "executor": "@titan/next:build",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
@@ -72,7 +72,7 @@ Updating the build options to include `debug`.
 
 ```json
     "build": {
-      "executor": "@nx/next:build",
+      "executor": "@titan/next:build",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
@@ -108,7 +108,7 @@ Updating the build options to include `profile`.
 
 ```json
     "build": {
-      "executor": "@nx/next:build",
+      "executor": "@titan/next:build",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
@@ -146,7 +146,7 @@ Updating the build options to include `experimentalAppOnly`.
 
 ```json
     "build": {
-      "executor": "@nx/next:build",
+      "executor": "@titan/next:build",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {

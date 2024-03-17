@@ -1,5 +1,5 @@
 import * as path from 'path';
-import { generateFiles, offsetFromRoot, Tree } from '@nx/devkit';
+import { generateFiles, offsetFromRoot, Tree } from '@titan/devkit';
 import { getRelativePathToRootTsConfig } from '@nx/js';
 
 import { createTsConfig } from '../../../utils/create-ts-config';

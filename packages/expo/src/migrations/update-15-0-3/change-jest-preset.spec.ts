@@ -3,8 +3,8 @@ import {
   readJson,
   Tree,
   updateJson,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import update from './change-jest-preset';
 
 describe('Change expo jest preset', () => {

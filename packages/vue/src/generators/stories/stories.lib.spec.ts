@@ -1,7 +1,7 @@
-import { Tree } from '@nx/devkit';
+import { Tree } from '@titan/devkit';
 import storiesGenerator from './stories';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { Linter } from '@nx/eslint';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { Linter } from '@titan/eslint';
 import libraryGenerator from '../library/library';
 
 const componentContent = `<script setup lang="ts">

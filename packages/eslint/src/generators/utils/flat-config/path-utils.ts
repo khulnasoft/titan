@@ -1,4 +1,4 @@
-import { joinPathFragments } from '@nx/devkit';
+import { joinPathFragments } from '@titan/devkit';
 import type { Linter } from 'eslint';
 
 export function updateFiles(

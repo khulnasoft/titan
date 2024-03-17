@@ -1,10 +1,10 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import {
   formatFiles,
   generateFiles,
   joinPathFragments,
   readProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { getComponentProps } from '../utils/storybook-ast/storybook-inputs';
 import { getArgsDefaultValue } from './lib/get-args-default-value';
 import { getComponentSelector } from './lib/get-component-selector';

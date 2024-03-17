@@ -5,8 +5,8 @@ import {
   readProjectConfiguration,
   Tree,
   updateJson,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { Linter } from '../../../utils/lint';
 import { NormalizedSchema } from '../schema';
 import { updateEslintConfig } from './update-eslint-config';

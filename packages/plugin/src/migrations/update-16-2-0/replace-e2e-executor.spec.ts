@@ -4,9 +4,9 @@ import {
   updateJson,
   addProjectConfiguration,
   readProjectConfiguration,
-} from '@nx/devkit';
-import { assertRunsAgainstNxRepo } from '@nx/devkit/internal-testing-utils';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { assertRunsAgainstNxRepo } from '@titan/devkit/internal-testing-utils';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import replaceE2EExecutor from './replace-e2e-executor';
 
 describe('update-16-0-0-add-nx-packages', () => {
@@ -35,7 +35,7 @@ describe('update-16-0-0-add-nx-packages', () => {
     });
   });
 
-  it('should replace @nrwl/nx-plugin:e2e with @nx/jest:jest', async () => {
+  it('should replace @nrwl/nx-plugin:e2e with @titan/jest:jest', async () => {
     await replaceE2EExecutor(tree);
 
     expect(readProjectConfiguration(tree, 'proj1')).toMatchInlineSnapshot(`
@@ -57,7 +57,7 @@ describe('update-16-0-0-add-nx-packages', () => {
             "dependsOn": [
               "proj1:build",
             ],
-            "executor": "@nx/jest:jest",
+            "executor": "@titan/jest:jest",
             "options": {
               "runInBand": true,
             },

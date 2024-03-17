@@ -1,4 +1,4 @@
-import { TargetConfiguration, joinPathFragments } from '@nx/devkit';
+import { TargetConfiguration, joinPathFragments } from '@titan/devkit';
 import type { WithReactOptions } from '@nx/react';
 import type { WithNxOptions } from '@nx/webpack';
 

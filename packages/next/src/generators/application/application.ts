@@ -5,7 +5,7 @@ import {
   joinPathFragments,
   runTasksInSerial,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { initGenerator as jsInitGenerator } from '@nx/js';
 import {
   testingLibraryReactVersion,
@@ -28,7 +28,7 @@ import { customServerGenerator } from '../custom-server/custom-server';
 import { updateCypressTsConfig } from './lib/update-cypress-tsconfig';
 import { showPossibleWarnings } from './lib/show-possible-warnings';
 import { tsLibVersion } from '../../utils/versions';
-import { logShowProjectCommand } from '@nx/devkit/src/utils/log-show-project-command';
+import { logShowProjectCommand } from '@titan/devkit/src/utils/log-show-project-command';
 
 export async function applicationGenerator(host: Tree, schema: Schema) {
   return await applicationGeneratorInternal(host, {

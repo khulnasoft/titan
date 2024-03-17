@@ -1,5 +1,5 @@
-import type { Tree } from '@nx/devkit';
-import { updateJson } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
+import { updateJson } from '@titan/devkit';
 import type { NormalizedSchema } from './normalized-schema';
 
 export function enableStrictTypeChecking(

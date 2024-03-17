@@ -1,11 +1,11 @@
-import type { ExecutorContext } from '@nx/devkit';
+import type { ExecutorContext } from '@titan/devkit';
 import {
   applyChangesToString,
   ChangeType,
   stripIndents,
   workspaceLayout,
   workspaceRoot,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import * as ts from 'typescript';
 import {
   copyFileSync,
@@ -65,8 +65,8 @@ export function createNextConfigFile(
     readFileSync(configAbsolutePath)
       .toString()
       .replace(/["']@nx\/next["']/, `'./.nx-helpers/compiled.js'`)
-      // TODO(v17): Remove this once users have all migrated to new @nx scope and import from '@nx/next' not the deep import paths.
-      .replace('@nx/next/plugins/with-nx', './.nx-helpers/compiled.js')
+      // TODO(v17): Remove this once users have all migrated to new @nx scope and import from '@titan/next' not the deep import paths.
+      .replace('@titan/next/plugins/with-nx', './.nx-helpers/compiled.js')
       .replace('@nrwl/next/plugins/with-nx', './.nx-helpers/compiled.js')
   );
 

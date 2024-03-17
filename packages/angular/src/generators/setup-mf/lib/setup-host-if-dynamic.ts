@@ -1,9 +1,9 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import {
   joinPathFragments,
   readProjectConfiguration,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import type { Schema } from '../schema';
 
 export function setupHostIfDynamic(tree: Tree, options: Schema) {

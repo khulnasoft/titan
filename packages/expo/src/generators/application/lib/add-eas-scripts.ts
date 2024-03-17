@@ -1,4 +1,4 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 
 const preInstallScript = `
 /*

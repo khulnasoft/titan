@@ -3,7 +3,7 @@ import {
   getProjects,
   offsetFromRoot,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 /**
  * Remove the offset from the outputDir of the export target

@@ -9,7 +9,7 @@ import {
   Tree,
   updateJson,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { ConvertToFlatConfigGeneratorSchema } from './schema';
 import { findEslintFile } from '../utils/eslint-file';
 import { join } from 'path';
@@ -89,7 +89,7 @@ function convertProjectToFlatConfig(
     if (projectConfig.targets) {
       const eslintTargets = Object.keys(projectConfig.targets || {}).filter(
         (t) =>
-          projectConfig.targets[t].executor === '@nx/eslint:lint' ||
+          projectConfig.targets[t].executor === '@titan/eslint:lint' ||
           projectConfig.targets[t].command?.includes('eslint')
       );
       let ignorePath: string | undefined;
@@ -106,15 +106,15 @@ function convertProjectToFlatConfig(
       }
       const nxHasEsLintTargets = Object.keys(nxJson.targetDefaults || {}).some(
         (t) =>
-          (t === '@nx/eslint:lint' ||
-            nxJson.targetDefaults[t].executor === '@nx/eslint:lint' ||
+          (t === '@titan/eslint:lint' ||
+            nxJson.targetDefaults[t].executor === '@titan/eslint:lint' ||
             nxJson.targetDefaults[t].command?.includes('eslint')) &&
           projectConfig.targets?.[t]
       );
       const nxHasEsLintPlugin = (nxJson.plugins || []).some((p) =>
         typeof p === 'string'
-          ? p === '@nx/eslint/plugin'
-          : p.plugin === '@nx/eslint/plugin'
+          ? p === '@titan/eslint/plugin'
+          : p.plugin === '@titan/eslint/plugin'
       );
 
       if (nxHasEsLintTargets || nxHasEsLintPlugin || eslintTargets.length > 0) {
@@ -144,10 +144,10 @@ function updateNxJsonConfig(tree: Tree) {
         inputSet.add('{workspaceRoot}/eslint.config.js');
         json.targetDefaults.lint.inputs = Array.from(inputSet);
       }
-      if (json.targetDefaults?.['@nx/eslint:lint']?.inputs) {
-        const inputSet = new Set(json.targetDefaults['@nx/eslint:lint'].inputs);
+      if (json.targetDefaults?.['@titan/eslint:lint']?.inputs) {
+        const inputSet = new Set(json.targetDefaults['@titan/eslint:lint'].inputs);
         inputSet.add('{workspaceRoot}/eslint.config.js');
-        json.targetDefaults['@nx/eslint:lint'].inputs = Array.from(inputSet);
+        json.targetDefaults['@titan/eslint:lint'].inputs = Array.from(inputSet);
       }
       if (json.namedInputs?.production) {
         const inputSet = new Set(json.namedInputs.production);

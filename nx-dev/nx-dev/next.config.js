@@ -1,5 +1,5 @@
 // nx-ignore-next-line
-const { withNx } = require('@nx/next/plugins/with-nx');
+const { withNx } = require('@titan/next/plugins/with-nx');
 const redirectRules = require('./redirect-rules');
 
 module.exports = withNx({

@@ -1,10 +1,10 @@
-import type { ProjectConfiguration, Tree } from '@nx/devkit';
+import type { ProjectConfiguration, Tree } from '@titan/devkit';
 import {
   createProjectGraphAsync,
   formatFiles,
   readProjectConfiguration,
   visitNotIgnoredFiles,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { tsquery } from '@phenomnomnominal/tsquery';
 import type {
   CallExpression,

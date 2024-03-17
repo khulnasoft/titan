@@ -1,4 +1,4 @@
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import runCommands from './run-commands';
 import { readProjectConfiguration } from 'nx/src/generators/utils/project-configuration';
 

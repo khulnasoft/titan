@@ -28,7 +28,7 @@ export const Primary = {
               '^production',
               '{workspaceRoot}/jest.preset.js',
             ],
-            executor: '@nx/jest:jest',
+            executor: '@titan/jest:jest',
             outputs: ['{workspaceRoot}/coverage/{projectRoot}'],
             cache: true,
             options: {
@@ -104,7 +104,7 @@ export const Primary = {
               '{workspaceRoot}/.eslintrc.json',
               '{workspaceRoot}/tools/eslint-rules/**/*',
             ],
-            executor: '@nx/eslint:lint',
+            executor: '@titan/eslint:lint',
             outputs: ['{options.outputFile}'],
             cache: true,
             options: { lintFilePatterns: ['packages/jest'] },

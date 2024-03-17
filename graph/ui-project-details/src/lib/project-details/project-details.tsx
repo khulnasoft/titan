@@ -2,7 +2,7 @@
 
 /* eslint-disable @nx/enforce-module-boundaries */
 // nx-ignore-next-line
-import { ProjectGraphProjectNode } from '@nx/devkit';
+import { ProjectGraphProjectNode } from '@titan/devkit';
 
 import { EyeIcon } from '@heroicons/react/24/outline';
 import { PropertyInfoTooltip, Tooltip } from '@nx/graph/ui-tooltips';

@@ -13,12 +13,12 @@ import {
   ProjectFileMap,
   ProjectGraph,
   ProjectGraphExternalNode,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { Linter } from 'eslint';
 import { FileDataDependency } from 'nx/src/config/project-graph';
 
-jest.mock('@nx/devkit', () => ({
-  ...jest.requireActual<any>('@nx/devkit'),
+jest.mock('@titan/devkit', () => ({
+  ...jest.requireActual<any>('@titan/devkit'),
   workspaceRoot: '/root',
 }));
 

@@ -7,7 +7,7 @@ import {
   toJS,
   Tree,
   updateJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { addTsConfigPath, initGenerator as jsInitGenerator } from '@nx/js';
 import { vueInitGenerator } from '../init/init';
 import { Schema } from './schema';
@@ -18,7 +18,7 @@ import { extractTsConfigBase } from '../../utils/create-ts-config';
 import componentGenerator from '../component/component';
 import { addVite } from './lib/add-vite';
 import { ensureDependencies } from '../../utils/ensure-dependencies';
-import { logShowProjectCommand } from '@nx/devkit/src/utils/log-show-project-command';
+import { logShowProjectCommand } from '@titan/devkit/src/utils/log-show-project-command';
 
 export function libraryGenerator(tree: Tree, schema: Schema) {
   return libraryGeneratorInternal(tree, { addPlugin: false, ...schema });

@@ -9,7 +9,7 @@ Thanks for submitting your Nx Plugin to our community plugins list. Make sure to
 
 Before you submit your plugin to be listed in our registry, it needs to meet the following requirements:
 - Run some kind of automated e2e tests in your repository
-- Include `@nx/devkit` as a `dependency` in the plugin's `package.json`
+- Include `@titan/devkit` as a `dependency` in the plugin's `package.json`
 - List a `repository.url` in the plugin's `package.json`
 
 i.e.

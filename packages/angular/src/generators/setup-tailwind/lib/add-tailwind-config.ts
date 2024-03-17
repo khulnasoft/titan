@@ -4,7 +4,7 @@ import {
   ProjectConfiguration,
   stripIndents,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { relative } from 'path';
 import { GeneratorOptions } from '../schema';
 

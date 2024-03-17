@@ -1,4 +1,4 @@
-import { output, PackageManager, ProjectConfiguration } from '@nx/devkit';
+import { output, PackageManager, ProjectConfiguration } from '@titan/devkit';
 import { packageInstall, tmpProjPath } from './create-project-utils';
 import {
   detectPackageManager,
@@ -10,7 +10,7 @@ import {
   getYarnMajorVersion,
   isVerboseE2ERun,
 } from './get-env-info';
-import { TargetConfiguration } from '@nx/devkit';
+import { TargetConfiguration } from '@titan/devkit';
 import { ChildProcess, exec, execSync, ExecSyncOptions } from 'child_process';
 import { join } from 'path';
 import * as isCI from 'is-ci';
@@ -48,7 +48,7 @@ export function setMaxWorkers(projectJsonPath: string) {
       if (
         executor.startsWith('@nx/node') ||
         executor.startsWith('@nx/web') ||
-        executor.startsWith('@nx/jest')
+        executor.startsWith('@titan/jest')
       ) {
         build.options.maxWorkers = 4;
       }

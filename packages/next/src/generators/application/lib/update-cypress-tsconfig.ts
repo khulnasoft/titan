@@ -1,4 +1,4 @@
-import { Tree, updateJson } from '@nx/devkit';
+import { Tree, updateJson } from '@titan/devkit';
 import { NormalizedSchema } from './normalize-options';
 
 export function updateCypressTsConfig(host: Tree, options: NormalizedSchema) {

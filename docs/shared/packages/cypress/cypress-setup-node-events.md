@@ -14,11 +14,11 @@ export default defineConfig({
 });
 ```
 
-The Cypress preset that Nx provides (`@nx/cypress/plugins/cypress-preset`) uses `setupNodeEvents` to start the web server. Thus, if you provide your own function, then you must invoke the `setupNodeEvents` function that our preset provides.
+The Cypress preset that Nx provides (`@titan/cypress/plugins/cypress-preset`) uses `setupNodeEvents` to start the web server. Thus, if you provide your own function, then you must invoke the `setupNodeEvents` function that our preset provides.
 
 ```ts {% fileName="cypress.config.ts" highlightLines=[19] %}
 import { defineConfig } from 'cypress';
-import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
+import { nxE2EPreset } from '@titan/cypress/plugins/cypress-preset';
 
 const config = nxE2EPreset(__filename, {
   cypressDir: 'src',

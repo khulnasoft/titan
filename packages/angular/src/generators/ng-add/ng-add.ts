@@ -1,4 +1,4 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import { migrateFromAngularCli } from './migrate-from-angular-cli';
 import type { GeneratorOptions } from './schema';
 

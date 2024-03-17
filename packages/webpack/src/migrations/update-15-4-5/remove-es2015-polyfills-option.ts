@@ -1,4 +1,4 @@
-import { getProjects, Tree, updateProjectConfiguration } from '@nx/devkit';
+import { getProjects, Tree, updateProjectConfiguration } from '@titan/devkit';
 
 export default async function (tree: Tree) {
   const projects = getProjects(tree);

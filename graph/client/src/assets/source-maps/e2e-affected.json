@@ -857,11 +857,11 @@
       "nx-core-build-project-json-nodes",
       "libs/products/home-page/project.json"
     ],
-    "generators.@nx/angular:component": [
+    "generators.@titan/angular:component": [
       "nx-core-build-project-json-nodes",
       "libs/products/home-page/project.json"
     ],
-    "generators.@nx/angular:component.styleext": [
+    "generators.@titan/angular:component.styleext": [
       "nx-core-build-project-json-nodes",
       "libs/products/home-page/project.json"
     ],
@@ -955,11 +955,11 @@
       "nx-core-build-project-json-nodes",
       "libs/products/product-detail-page/project.json"
     ],
-    "generators.@nx/angular:component": [
+    "generators.@titan/angular:component": [
       "nx-core-build-project-json-nodes",
       "libs/products/product-detail-page/project.json"
     ],
-    "generators.@nx/angular:component.styleext": [
+    "generators.@titan/angular:component.styleext": [
       "nx-core-build-project-json-nodes",
       "libs/products/product-detail-page/project.json"
     ],
@@ -1087,11 +1087,11 @@
       "nx-core-build-project-json-nodes",
       "libs/shared/cart/state/project.json"
     ],
-    "generators.@nx/angular:component": [
+    "generators.@titan/angular:component": [
       "nx-core-build-project-json-nodes",
       "libs/shared/cart/state/project.json"
     ],
-    "generators.@nx/angular:component.styleext": [
+    "generators.@titan/angular:component.styleext": [
       "nx-core-build-project-json-nodes",
       "libs/shared/cart/state/project.json"
     ],
@@ -1457,11 +1457,11 @@
       "nx-core-build-project-json-nodes",
       "libs/shared/product/state/project.json"
     ],
-    "generators.@nx/angular:component": [
+    "generators.@titan/angular:component": [
       "nx-core-build-project-json-nodes",
       "libs/shared/product/state/project.json"
     ],
-    "generators.@nx/angular:component.styleext": [
+    "generators.@titan/angular:component.styleext": [
       "nx-core-build-project-json-nodes",
       "libs/shared/product/state/project.json"
     ],

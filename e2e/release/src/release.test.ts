@@ -1,4 +1,4 @@
-import { NxJsonConfiguration } from '@nx/devkit';
+import { NxJsonConfiguration } from '@titan/devkit';
 import {
   cleanupProject,
   createFile,

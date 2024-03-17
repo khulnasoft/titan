@@ -6,15 +6,15 @@ import {
   updateProjectConfiguration,
   ensurePackage,
   getPackageManagerCommand,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { type NormalizedSchema } from './normalize-options';
 import { getPackageVersion } from '../../../utils/versions';
 
 export async function addE2E(tree: Tree, options: NormalizedSchema) {
   if (options.e2eTestRunner === 'cypress') {
     const { configurationGenerator } = ensurePackage<
-      typeof import('@nx/cypress')
-    >('@nx/cypress', getPackageVersion(tree, 'nx'));
+      typeof import('@titan/cypress')
+    >('@titan/cypress', getPackageVersion(tree, 'nx'));
 
     addFileServerTarget(tree, options, 'serve-static');
 
@@ -37,8 +37,8 @@ export async function addE2E(tree: Tree, options: NormalizedSchema) {
     });
   } else if (options.e2eTestRunner === 'playwright') {
     const { configurationGenerator } = ensurePackage<
-      typeof import('@nx/playwright')
-    >('@nx/playwright', getPackageVersion(tree, 'nx'));
+      typeof import('@titan/playwright')
+    >('@titan/playwright', getPackageVersion(tree, 'nx'));
 
     addProjectConfiguration(tree, options.e2eProjectName, {
       projectType: 'application',

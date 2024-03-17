@@ -3,7 +3,7 @@ import {
   runTasksInSerial,
   type GeneratorCallback,
   type Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { addSwcDependencies } from '@nx/js/src/utils/swc/add-swc-dependencies';
 import {
   reactRefreshVersion,

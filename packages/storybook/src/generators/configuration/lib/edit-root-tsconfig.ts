@@ -1,4 +1,4 @@
-import { updateJson, type Tree } from '@nx/devkit';
+import { updateJson, type Tree } from '@titan/devkit';
 
 /**
  * This is a temporary fix for Storybook to support TypeScript configuration files.

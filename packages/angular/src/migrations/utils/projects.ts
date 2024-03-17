@@ -2,8 +2,8 @@ import type {
   ProjectConfiguration,
   ProjectGraphProjectNode,
   Tree,
-} from '@nx/devkit';
-import { createProjectGraphAsync, readProjectConfiguration } from '@nx/devkit';
+} from '@titan/devkit';
+import { createProjectGraphAsync, readProjectConfiguration } from '@titan/devkit';
 
 export async function getProjectsFilteredByDependencies(
   tree: Tree,

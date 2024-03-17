@@ -1,6 +1,6 @@
 import addMfEnvVarToTargetDefaults from './add-mf-env-var-to-target-defaults';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { addProjectConfiguration, readNxJson, updateNxJson } from '@nx/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { addProjectConfiguration, readNxJson, updateNxJson } from '@titan/devkit';
 
 describe('addMfEnvVarToTargetDefaults', () => {
   it('should add the executor and input when it does not exist', async () => {
@@ -10,7 +10,7 @@ describe('addMfEnvVarToTargetDefaults', () => {
       root: '',
       targets: {
         build: {
-          executor: '@nx/angular:webpack-browser',
+          executor: '@titan/angular:webpack-browser',
         },
       },
     });
@@ -24,7 +24,7 @@ describe('addMfEnvVarToTargetDefaults', () => {
     const nxJson = readNxJson(tree);
     expect(nxJson.targetDefaults).toMatchInlineSnapshot(`
       {
-        "@nx/angular:webpack-browser": {
+        "@titan/angular:webpack-browser": {
           "inputs": [
             "production",
             "^production",
@@ -50,7 +50,7 @@ describe('addMfEnvVarToTargetDefaults', () => {
       root: '',
       targets: {
         build: {
-          executor: '@nx/angular:module-federation-dev-server',
+          executor: '@titan/angular:module-federation-dev-server',
         },
       },
     });
@@ -79,7 +79,7 @@ describe('addMfEnvVarToTargetDefaults', () => {
       root: '',
       targets: {
         build: {
-          executor: '@nx/angular:webpack-browser',
+          executor: '@titan/angular:webpack-browser',
         },
       },
     });
@@ -90,7 +90,7 @@ describe('addMfEnvVarToTargetDefaults', () => {
       ...nxJson,
       targetDefaults: {
         ...nxJson.targetDefaults,
-        ['@nx/angular:webpack-browser']: {
+        ['@titan/angular:webpack-browser']: {
           inputs: ['^build'],
         },
       },
@@ -105,7 +105,7 @@ describe('addMfEnvVarToTargetDefaults', () => {
     nxJson = readNxJson(tree);
     expect(nxJson.targetDefaults).toMatchInlineSnapshot(`
       {
-        "@nx/angular:webpack-browser": {
+        "@titan/angular:webpack-browser": {
           "inputs": [
             "^build",
             {

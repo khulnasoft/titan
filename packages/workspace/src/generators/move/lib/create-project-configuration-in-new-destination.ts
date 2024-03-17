@@ -3,7 +3,7 @@ import {
   joinPathFragments,
   ProjectConfiguration,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { NormalizedSchema } from '../schema';
 
 export function createProjectConfigurationInNewDestination(

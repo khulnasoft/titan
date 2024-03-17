@@ -1,4 +1,4 @@
-import { ProjectConfiguration, Tree, visitNotIgnoredFiles } from '@nx/devkit';
+import { ProjectConfiguration, Tree, visitNotIgnoredFiles } from '@titan/devkit';
 import { dirname, join, relative, sep } from 'path';
 import { NormalizedSchema } from '../schema';
 

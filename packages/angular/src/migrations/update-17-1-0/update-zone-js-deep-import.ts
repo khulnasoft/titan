@@ -1,4 +1,4 @@
-import { formatFiles, visitNotIgnoredFiles, type Tree } from '@nx/devkit';
+import { formatFiles, visitNotIgnoredFiles, type Tree } from '@titan/devkit';
 import { getProjectsFilteredByDependencies } from '../utils/projects';
 
 export default async function (tree: Tree) {

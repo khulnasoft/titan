@@ -5,7 +5,7 @@
   "projectType": "library",
   "targets": {
     "test": {
-      "executor": "@nx/jest:jest",
+      "executor": "@titan/jest:jest",
       "options": {
         "jestConfig": "packages/vite/jest.config.ts"
       },
@@ -65,7 +65,7 @@
       "command": "node ./scripts/add-dependency-to-build.js vite @nrwl/vite"
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
+      "executor": "@titan/eslint:lint",
       "outputs": ["{options.outputFile}"]
     }
   }

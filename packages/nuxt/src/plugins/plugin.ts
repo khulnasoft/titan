@@ -8,13 +8,13 @@ import {
   TargetConfiguration,
   workspaceRoot,
   writeJsonFile,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { basename, dirname, isAbsolute, join, relative } from 'path';
 import { projectGraphCacheDirectory } from 'nx/src/utils/cache-directory';
-import { getNamedInputs } from '@nx/devkit/src/utils/get-named-inputs';
+import { getNamedInputs } from '@titan/devkit/src/utils/get-named-inputs';
 import { existsSync, readdirSync } from 'fs';
 import { loadNuxtKitDynamicImport } from '../utils/executor-utils';
-import { calculateHashForCreateNodes } from '@nx/devkit/src/utils/calculate-hash-for-create-nodes';
+import { calculateHashForCreateNodes } from '@titan/devkit/src/utils/calculate-hash-for-create-nodes';
 import { getLockFileName } from '@nx/js';
 
 const cachePath = join(projectGraphCacheDirectory, 'nuxt.hash');

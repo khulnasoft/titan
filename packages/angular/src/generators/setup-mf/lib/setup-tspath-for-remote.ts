@@ -1,6 +1,6 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import type { Schema } from '../schema';
-import { joinPathFragments, readProjectConfiguration } from '@nx/devkit';
+import { joinPathFragments, readProjectConfiguration } from '@titan/devkit';
 import { addTsConfigPath } from '@nx/js';
 
 export function setupTspathForRemote(tree: Tree, options: Schema) {

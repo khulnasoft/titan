@@ -5,12 +5,12 @@ import {
   readProjectConfiguration,
   runTasksInSerial,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import type { SupportedStyles } from '@nx/react';
 import { componentGenerator as reactComponentGenerator } from '@nx/react';
 
 import { addStyleDependencies } from '../../utils/styles';
-import { determineArtifactNameAndDirectoryOptions } from '@nx/devkit/src/generators/artifact-name-and-directory-utils';
+import { determineArtifactNameAndDirectoryOptions } from '@titan/devkit/src/generators/artifact-name-and-directory-utils';
 
 interface Schema {
   name: string;
@@ -67,7 +67,7 @@ export async function componentGeneratorInternal(host: Tree, options: Schema) {
     project: projectName,
   } = await determineArtifactNameAndDirectoryOptions(host, {
     artifactType: 'component',
-    callingGenerator: '@nx/next:component',
+    callingGenerator: '@titan/next:component',
     name: options.name,
     directory: options.directory,
     derivedDirectory: maybeGetDerivedDirectory(host, options),

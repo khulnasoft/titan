@@ -8,14 +8,14 @@ import {
   readJsonFile,
   type TargetConfiguration,
   writeJsonFile,
-} from '@nx/devkit';
-import { calculateHashForCreateNodes } from '@nx/devkit/src/utils/calculate-hash-for-create-nodes';
-import { getNamedInputs } from '@nx/devkit/src/utils/get-named-inputs';
+} from '@titan/devkit';
+import { calculateHashForCreateNodes } from '@titan/devkit/src/utils/calculate-hash-for-create-nodes';
+import { getNamedInputs } from '@titan/devkit/src/utils/get-named-inputs';
 import { getLockFileName } from '@nx/js';
 import { type AppConfig } from '@remix-run/dev';
 import { dirname, join } from 'path';
 import { existsSync, readdirSync } from 'fs';
-import { loadConfigFile } from '@nx/devkit/src/utils/config-utils';
+import { loadConfigFile } from '@titan/devkit/src/utils/config-utils';
 
 const cachePath = join(projectGraphCacheDirectory, 'remix.hash');
 const targetsCache = existsSync(cachePath) ? readTargetsCache() : {};

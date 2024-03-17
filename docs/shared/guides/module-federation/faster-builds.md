@@ -87,14 +87,14 @@ You will be prompted to enable Nx Cloud in the workspace. For the best experienc
 take advantage of remote caching and other features it provides.
 {% /callout %}
 
-Then, for React users, install the `@nx/react` plugin; and for Angular users, install the `@nx/angular` plugin.
+Then, for React users, install the `@nx/react` plugin; and for Angular users, install the `@titan/angular` plugin.
 
 ```shell
 # If you use React
 nx add @nx/react
 
 # If you use Angular
-nx add @nx/angular
+nx add @titan/angular
 ```
 
 Next, generate the host and remote applications.
@@ -110,7 +110,7 @@ nx g @nx/react:host host --remotes=shop,cart,about
 {% tab label="Angular" %}
 
 ```shell
-nx g @nx/angular:host host --remotes=shop,cart,about
+nx g @titan/angular:host host --remotes=shop,cart,about
 ```
 
 {% /tab %}
@@ -118,7 +118,7 @@ nx g @nx/angular:host host --remotes=shop,cart,about
 
 {% callout type="note" title="More details" %}
 You can leave off the `--remotes` option and add them later with `nx g @nx/react:remote shop --host=host`
-or `nx g @nx/angular:remote shop --host=host`.
+or `nx g @titan/angular:remote shop --host=host`.
 {% /callout %}
 
 Now, serve `host` to view it in your browser.
@@ -150,7 +150,7 @@ To understand how Module Federation works with Nx, let's take a look at three fi
 
 ### `apps/host/project.json`
 
-The `build` target uses `@nx/webpack:webpack` for React, and `@nx/angular:webpack-browser` for Angular. This is the same
+The `build` target uses `@nx/webpack:webpack` for React, and `@titan/angular:webpack-browser` for Angular. This is the same
 as a normal SPA that uses custom webpack configuration (`webpackConfig`), but difference is in the webpack configuration
 file.
 
@@ -175,7 +175,7 @@ In the future, Nx may automatically handle this for you.
 The webpack configuration uses an utility function that Nx provides: `withModuleFederation`.
 
 ```javascript
-// For Angular, you'll see `@nx/angular/module-federation`
+// For Angular, you'll see `@titan/angular/module-federation`
 import { withModuleFederation } from '@nx/react/module-federation';
 import moduleFederationConfig from './module-federation.config';
 
@@ -193,7 +193,7 @@ below. This example shows how you could use it to add the `LicenseWebpackPlugin`
 any webpack plugins you need.
 
 ```js
-import { withModuleFederation } from '@nx/angular/module-federation';
+import { withModuleFederation } from '@titan/angular/module-federation';
 import config from './module-federation.config';
 import { LicenseWebpackPlugin } from 'license-webpack-plugin';
 import { resolve } from 'path';

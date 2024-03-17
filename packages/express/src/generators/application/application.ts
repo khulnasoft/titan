@@ -1,4 +1,4 @@
-import type { GeneratorCallback, Tree } from '@nx/devkit';
+import type { GeneratorCallback, Tree } from '@titan/devkit';
 import {
   addDependenciesToPackageJson,
   formatFiles,
@@ -6,8 +6,8 @@ import {
   runTasksInSerial,
   toJS,
   updateJson,
-} from '@nx/devkit';
-import { determineProjectNameAndRootOptions } from '@nx/devkit/src/generators/project-name-and-root-utils';
+} from '@titan/devkit';
+import { determineProjectNameAndRootOptions } from '@titan/devkit/src/generators/project-name-and-root-utils';
 import { applicationGenerator as nodeApplicationGenerator } from '@nx/node';
 import { tslibVersion } from '@nx/node/src/utils/versions';
 import { join } from 'path';

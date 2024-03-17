@@ -4,7 +4,7 @@ import {
   runTasksInSerial,
   Tree,
   updateJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { initGenerator as jsInitGenerator } from '@nx/js';
 
 export default async function (tree: Tree) {

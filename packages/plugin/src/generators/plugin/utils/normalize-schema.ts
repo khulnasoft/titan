@@ -1,5 +1,5 @@
-import { Tree, extractLayoutDirectory, getWorkspaceLayout } from '@nx/devkit';
-import { determineProjectNameAndRootOptions } from '@nx/devkit/src/generators/project-name-and-root-utils';
+import { Tree, extractLayoutDirectory, getWorkspaceLayout } from '@titan/devkit';
+import { determineProjectNameAndRootOptions } from '@titan/devkit/src/generators/project-name-and-root-utils';
 import { Schema } from '../schema';
 
 export interface NormalizedSchema extends Schema {

@@ -1,4 +1,4 @@
-import { Tree, addProjectConfiguration } from '@nx/devkit';
+import { Tree, addProjectConfiguration } from '@titan/devkit';
 import { createTreeWithEmptyWorkspace } from 'nx/src/devkit-testing-exports';
 
 import update from './add-project-to-config';
@@ -18,9 +18,9 @@ describe('update-nx-next-dependency', () => {
     tree.write(
       'acme/playwright.config.ts',
       `import { defineConfig } from '@playwright/test';
-            import { nxE2EPreset } from '@nx/playwright/preset';
+            import { nxE2EPreset } from '@titan/playwright/preset';
 
-            import { workspaceRoot } from '@nx/devkit';
+            import { workspaceRoot } from '@titan/devkit';
 
             const baseURL = process.env['BASE_URL'] || 'http://localhost:4200';
 
@@ -57,9 +57,9 @@ describe('update-nx-next-dependency', () => {
     tree.write(
       'acme/playwright.config.ts',
       `import { defineConfig } from '@playwright/test';
-              import { nxE2EPreset } from '@nx/playwright/preset';
+              import { nxE2EPreset } from '@titan/playwright/preset';
   
-              import { workspaceRoot } from '@nx/devkit';
+              import { workspaceRoot } from '@titan/devkit';
   
               const baseURL = process.env['BASE_URL'] || 'http://localhost:4200';
   

@@ -2,14 +2,14 @@ import type {
   ProjectConfiguration,
   TargetConfiguration,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import {
   readJson,
   readNxJson,
   readProjectConfiguration,
   writeJson,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import type { MigrationProjectConfiguration } from '../../utilities/types';
 import { AppMigrator } from './app.migrator';
 
@@ -963,7 +963,7 @@ describe('app migrator', () => {
 
       const { targets } = readProjectConfiguration(tree, 'app1');
       expect(targets.lint).toStrictEqual({
-        executor: '@nx/eslint:lint',
+        executor: '@titan/eslint:lint',
         options: {
           lintFilePatterns: ['apps/app1/**/*.ts', 'apps/app1/**/*.html'],
         },
@@ -989,7 +989,7 @@ describe('app migrator', () => {
 
       const { targets } = readProjectConfiguration(tree, 'app1');
       expect(targets.myCustomLintTarget).toStrictEqual({
-        executor: '@nx/eslint:lint',
+        executor: '@titan/eslint:lint',
         options: {
           lintFilePatterns: ['apps/app1/**/*.ts', 'apps/app1/**/*.html'],
         },
@@ -1016,7 +1016,7 @@ describe('app migrator', () => {
 
       const { targets } = readProjectConfiguration(tree, 'app1');
       expect(targets.lint).toStrictEqual({
-        executor: '@nx/eslint:lint',
+        executor: '@titan/eslint:lint',
         options: {
           eslintConfig: 'apps/app1/.eslintrc.json',
           lintFilePatterns: ['apps/app1/**/*.ts', 'apps/app1/**/*.html'],
@@ -1055,7 +1055,7 @@ describe('app migrator', () => {
 
       const { targets } = readProjectConfiguration(tree, 'app1');
       expect(targets.lint).toStrictEqual({
-        executor: '@nx/eslint:lint',
+        executor: '@titan/eslint:lint',
         options: {
           eslintConfig: 'apps/app1/.eslintrc.json',
           hasTypeAwareRules: true,

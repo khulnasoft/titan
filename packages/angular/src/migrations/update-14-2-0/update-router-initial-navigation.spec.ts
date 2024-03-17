@@ -4,13 +4,13 @@ import {
   formatFiles,
   ProjectGraph,
   Tree,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import updateRouterInitialNavigation from './update-router-initial-navigation';
 
 let projectGraph: ProjectGraph;
-jest.mock('@nx/devkit', () => ({
-  ...jest.requireActual<any>('@nx/devkit'),
+jest.mock('@titan/devkit', () => ({
+  ...jest.requireActual<any>('@titan/devkit'),
   createProjectGraphAsync: jest
     .fn()
     .mockImplementation(async () => projectGraph),

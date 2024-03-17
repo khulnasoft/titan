@@ -5,7 +5,7 @@ import {
   joinPathFragments,
   updateJson,
   workspaceRoot,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { loadNuxtKitDynamicImport } from '../../utils/executor-utils';
 import { basename } from 'path';
 

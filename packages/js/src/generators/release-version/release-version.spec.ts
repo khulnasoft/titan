@@ -10,8 +10,8 @@ const processExitSpy = jest
     return originalExit(...args);
   });
 
-import { ProjectGraph, Tree, output, readJson } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { ProjectGraph, Tree, output, readJson } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import * as enquirer from 'enquirer';
 import { ReleaseGroupWithName } from 'nx/src/command-line/release/config/filter-release-groups';
 import { releaseVersionGenerator } from './release-version';

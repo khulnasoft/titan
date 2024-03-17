@@ -7,7 +7,7 @@ export {
   createDirectory,
 } from './src/utilities/fileutils';
 
-export { names } from '@nx/devkit';
+export { names } from '@titan/devkit';
 
 export { output } from './src/utilities/output';
 

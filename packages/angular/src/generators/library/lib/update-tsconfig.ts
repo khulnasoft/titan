@@ -1,5 +1,5 @@
-import type { Tree } from '@nx/devkit';
-import { updateJson } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
+import { updateJson } from '@titan/devkit';
 import { getRelativePathToRootTsConfig } from '@nx/js';
 import { NormalizedSchema } from './normalized-schema';
 import {

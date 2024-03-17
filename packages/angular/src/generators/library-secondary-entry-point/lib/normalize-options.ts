@@ -4,7 +4,7 @@ import {
   names,
   readJson,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { GeneratorOptions, NormalizedGeneratorOptions } from '../schema';
 
 export function normalizeOptions(

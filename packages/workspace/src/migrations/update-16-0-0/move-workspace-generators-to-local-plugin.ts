@@ -11,7 +11,7 @@ import {
   readProjectConfiguration,
   Tree,
   updateJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 // nx-ignore-next-line
 import * as path from 'path';
 import {
@@ -169,7 +169,7 @@ async function createNewPlugin(tree: Tree) {
     require('@nx/plugin/src/generators/plugin/plugin');
 
   // nx-ignore-next-line
-  const { Linter } = ensurePackage('@nx/eslint', nxVersion);
+  const { Linter } = ensurePackage('@titan/eslint', nxVersion);
 
   const npmScope = getNpmScope(tree);
   const importPath = npmScope ? `@${npmScope}/${PROJECT_NAME}` : PROJECT_NAME;

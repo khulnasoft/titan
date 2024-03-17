@@ -1,5 +1,5 @@
-import type { Tree } from '@nx/devkit';
-import { names } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
+import { names } from '@titan/devkit';
 import type { SourceFile } from 'typescript';
 import {
   addImportToModule,

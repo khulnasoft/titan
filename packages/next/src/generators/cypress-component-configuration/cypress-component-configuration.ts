@@ -9,7 +9,7 @@ import {
   Tree,
   updateProjectConfiguration,
   visitNotIgnoredFiles,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { isComponent } from '@nx/react/src/utils/ct-utils';
 import { CypressComponentConfigurationGeneratorSchema } from './schema';
 import { nxVersion } from '../../utils/versions';
@@ -33,8 +33,8 @@ export async function cypressComponentConfigurationInternal(
   const tasks: GeneratorCallback[] = [];
 
   const { componentConfigurationGenerator: baseCyCtConfig } = ensurePackage<
-    typeof import('@nx/cypress')
-  >('@nx/cypress', nxVersion);
+    typeof import('@titan/cypress')
+  >('@titan/cypress', nxVersion);
   tasks.push(
     await baseCyCtConfig(tree, {
       project: options.project,
@@ -65,7 +65,7 @@ export async function cypressComponentConfigurationInternal(
   const projectConfig = readProjectConfiguration(tree, options.project);
   if (
     projectConfig.targets?.['component-test']?.executor ===
-    '@nx/cypress:cypress'
+    '@titan/cypress:cypress'
   ) {
     projectConfig.targets['component-test'].options = {
       ...projectConfig.targets['component-test'].options,
@@ -89,7 +89,7 @@ async function addFiles(
   opts: CypressComponentConfigurationGeneratorSchema
 ) {
   const { addMountDefinition, addDefaultCTConfig } = await import(
-    '@nx/cypress/src/utils/config'
+    '@titan/cypress/src/utils/config'
   );
 
   const ctFile = joinPathFragments(
@@ -111,7 +111,7 @@ async function addFiles(
   const updatedCyConfig = await addDefaultCTConfig(tree.read(cyFile, 'utf-8'));
   tree.write(
     cyFile,
-    `import { nxComponentTestingPreset } from '@nx/next/plugins/component-testing';\n${updatedCyConfig}`
+    `import { nxComponentTestingPreset } from '@titan/next/plugins/component-testing';\n${updatedCyConfig}`
   );
 
   const isUsingTailwind = ['js', 'cjs'].some((ext) =>

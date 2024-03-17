@@ -1,10 +1,10 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import {
   generateFiles,
   joinPathFragments,
   names,
   offsetFromRoot,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import type { NormalizedOptions } from '../schema';
 
 export function createFiles(tree: Tree, options: NormalizedOptions): void {

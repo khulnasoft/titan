@@ -4,7 +4,7 @@ import {
   formatFiles,
   readNxJson,
   updateNxJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 export async function addTestSetupToIgnoredInputs(tree: Tree) {
   const nxJson: NxJsonConfiguration = readNxJson(tree);

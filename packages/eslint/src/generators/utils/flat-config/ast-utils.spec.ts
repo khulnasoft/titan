@@ -601,7 +601,7 @@ describe('ast-utils', () => {
   describe('removePlugin', () => {
     it('should remove plugins from config', () => {
       const content = `const { FlatCompat } = require("@eslint/eslintrc");
-      const nxEslintPlugin = require("@nx/eslint-plugin");
+      const nxEslintPlugin = require("@titan/eslint-plugin");
       const js = require("@eslint/js");
       const compat = new FlatCompat({
         baseDirectory: __dirname,
@@ -613,7 +613,7 @@ describe('ast-utils', () => {
         { ignores: ["something/else"] }
       ];`;
 
-      const result = removePlugin(content, '@nx', '@nx/eslint-plugin');
+      const result = removePlugin(content, '@nx', '@titan/eslint-plugin');
       expect(result).toMatchInlineSnapshot(`
         "const { FlatCompat } = require("@eslint/eslintrc");
               const js = require("@eslint/js");
@@ -630,7 +630,7 @@ describe('ast-utils', () => {
 
     it('should remove single plugin from config', () => {
       const content = `const { FlatCompat } = require("@eslint/eslintrc");
-      const nxEslintPlugin = require("@nx/eslint-plugin");
+      const nxEslintPlugin = require("@titan/eslint-plugin");
       const otherPlugin = require("other/eslint-plugin");
       const js = require("@eslint/js");
       const compat = new FlatCompat({
@@ -643,7 +643,7 @@ describe('ast-utils', () => {
         { ignores: ["something/else"] }
       ];`;
 
-      const result = removePlugin(content, '@nx', '@nx/eslint-plugin');
+      const result = removePlugin(content, '@nx', '@titan/eslint-plugin');
       expect(result).toMatchInlineSnapshot(`
         "const { FlatCompat } = require("@eslint/eslintrc");
               const otherPlugin = require("other/eslint-plugin");
@@ -662,7 +662,7 @@ describe('ast-utils', () => {
 
     it('should leave other properties in config', () => {
       const content = `const { FlatCompat } = require("@eslint/eslintrc");
-      const nxEslintPlugin = require("@nx/eslint-plugin");
+      const nxEslintPlugin = require("@titan/eslint-plugin");
       const js = require("@eslint/js");
       const compat = new FlatCompat({
         baseDirectory: __dirname,
@@ -674,7 +674,7 @@ describe('ast-utils', () => {
         { ignores: ["something/else"] }
       ];`;
 
-      const result = removePlugin(content, '@nx', '@nx/eslint-plugin');
+      const result = removePlugin(content, '@nx', '@titan/eslint-plugin');
       expect(result).toMatchInlineSnapshot(`
         "const { FlatCompat } = require("@eslint/eslintrc");
               const js = require("@eslint/js");
@@ -692,7 +692,7 @@ describe('ast-utils', () => {
 
     it('should remove single plugin from config array', () => {
       const content = `const { FlatCompat } = require("@eslint/eslintrc");
-      const nxEslintPlugin = require("@nx/eslint-plugin");
+      const nxEslintPlugin = require("@titan/eslint-plugin");
       const js = require("@eslint/js");
       const compat = new FlatCompat({
         baseDirectory: __dirname,
@@ -704,7 +704,7 @@ describe('ast-utils', () => {
         { ignores: ["something/else"] }
       ];`;
 
-      const result = removePlugin(content, '@nx', '@nx/eslint-plugin');
+      const result = removePlugin(content, '@nx', '@titan/eslint-plugin');
       expect(result).toMatchInlineSnapshot(`
         "const { FlatCompat } = require("@eslint/eslintrc");
               const js = require("@eslint/js");
@@ -722,7 +722,7 @@ describe('ast-utils', () => {
 
     it('should leave other fields in the object', () => {
       const content = `const { FlatCompat } = require("@eslint/eslintrc");
-      const nxEslintPlugin = require("@nx/eslint-plugin");
+      const nxEslintPlugin = require("@titan/eslint-plugin");
       const js = require("@eslint/js");
       const compat = new FlatCompat({
         baseDirectory: __dirname,
@@ -734,7 +734,7 @@ describe('ast-utils', () => {
         { ignores: ["something/else"] }
       ];`;
 
-      const result = removePlugin(content, '@nx', '@nx/eslint-plugin');
+      const result = removePlugin(content, '@nx', '@titan/eslint-plugin');
       expect(result).toMatchInlineSnapshot(`
         "const { FlatCompat } = require("@eslint/eslintrc");
               const js = require("@eslint/js");
@@ -752,7 +752,7 @@ describe('ast-utils', () => {
 
     it('should remove entire plugin when array with single element', () => {
       const content = `const { FlatCompat } = require("@eslint/eslintrc");
-      const nxEslintPlugin = require("@nx/eslint-plugin");
+      const nxEslintPlugin = require("@titan/eslint-plugin");
       const js = require("@eslint/js");
       const compat = new FlatCompat({
         baseDirectory: __dirname,
@@ -764,7 +764,7 @@ describe('ast-utils', () => {
         { ignores: ["something/else"] }
       ];`;
 
-      const result = removePlugin(content, '@nx', '@nx/eslint-plugin');
+      const result = removePlugin(content, '@nx', '@titan/eslint-plugin');
       expect(result).toMatchInlineSnapshot(`
         "const { FlatCompat } = require("@eslint/eslintrc");
               const js = require("@eslint/js");
@@ -783,7 +783,7 @@ describe('ast-utils', () => {
   describe('removeCompatExtends', () => {
     it('should remove compat extends from config', () => {
       const content = `const { FlatCompat } = require("@eslint/eslintrc");
-      const nxEslintPlugin = require("@nx/eslint-plugin");
+      const nxEslintPlugin = require("@titan/eslint-plugin");
       const js = require("@eslint/js");
       const compat = new FlatCompat({
         baseDirectory: __dirname,
@@ -812,7 +812,7 @@ describe('ast-utils', () => {
       ]);
       expect(result).toMatchInlineSnapshot(`
         "const { FlatCompat } = require("@eslint/eslintrc");
-              const nxEslintPlugin = require("@nx/eslint-plugin");
+              const nxEslintPlugin = require("@titan/eslint-plugin");
               const js = require("@eslint/js");
               const compat = new FlatCompat({
                 baseDirectory: __dirname,

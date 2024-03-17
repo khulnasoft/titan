@@ -1,5 +1,5 @@
-import { readJson, updateJson, type Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { readJson, updateJson, type Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { angularDevkitVersion, angularVersion } from '../../utils/versions';
 import { ensureAngularDependencies } from './ensure-angular-dependencies';
 

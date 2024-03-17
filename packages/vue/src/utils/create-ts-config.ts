@@ -1,4 +1,4 @@
-import { Tree, updateJson, writeJson } from '@nx/devkit';
+import { Tree, updateJson, writeJson } from '@titan/devkit';
 import * as shared from '@nx/js/src/utils/typescript/create-ts-config';
 
 export function createTsConfig(

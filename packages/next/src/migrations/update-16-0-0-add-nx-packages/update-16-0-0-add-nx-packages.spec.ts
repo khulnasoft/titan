@@ -1,5 +1,5 @@
-import { Tree, readJson, updateJson } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { Tree, readJson, updateJson } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import replacePackage from './update-16-0-0-add-nx-packages';
 
 describe('update-16-0-0-add-nx-packages', () => {
@@ -24,13 +24,13 @@ describe('update-16-0-0-add-nx-packages', () => {
     ).not.toBeDefined();
   });
 
-  it('should add a dependency on @nx/next', async () => {
+  it('should add a dependency on @titan/next', async () => {
     await replacePackage(tree);
 
     const packageJson = readJson(tree, 'package.json');
     const newDependencyVersion =
-      packageJson.devDependencies['@nx/next'] ??
-      packageJson.dependencies['@nx/next'];
+      packageJson.devDependencies['@titan/next'] ??
+      packageJson.dependencies['@titan/next'];
 
     expect(newDependencyVersion).toBeDefined();
   });

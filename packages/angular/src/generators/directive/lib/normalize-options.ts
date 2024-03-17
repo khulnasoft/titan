@@ -1,9 +1,9 @@
-import type { Tree } from '@nx/devkit';
-import { names, readProjectConfiguration } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
+import { names, readProjectConfiguration } from '@titan/devkit';
 import type { AngularProjectConfiguration } from '../../../utils/types';
 import { buildSelector, validateHtmlSelector } from '../../utils/selector';
 import type { NormalizedSchema, Schema } from '../schema';
-import { determineArtifactNameAndDirectoryOptions } from '@nx/devkit/src/generators/artifact-name-and-directory-utils';
+import { determineArtifactNameAndDirectoryOptions } from '@titan/devkit/src/generators/artifact-name-and-directory-utils';
 
 export async function normalizeOptions(
   tree: Tree,
@@ -17,7 +17,7 @@ export async function normalizeOptions(
     project: projectName,
   } = await determineArtifactNameAndDirectoryOptions(tree, {
     artifactType: 'directive',
-    callingGenerator: '@nx/angular:directive',
+    callingGenerator: '@titan/angular:directive',
     name: options.name,
     directory: options.directory ?? options.path,
     flat: options.flat,

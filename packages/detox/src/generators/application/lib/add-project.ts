@@ -3,7 +3,7 @@ import {
   readNxJson,
   TargetConfiguration,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import {
   expoBuildTarget,
   expoTestTarget,

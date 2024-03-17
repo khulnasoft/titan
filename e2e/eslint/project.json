@@ -6,7 +6,7 @@
   "targets": {
     "e2e": {},
     "run-e2e-tests": {
-      "executor": "@nx/jest:jest",
+      "executor": "@titan/jest:jest",
       "options": {
         "jestConfig": "e2e/eslint/jest.config.ts",
         "runInBand": true

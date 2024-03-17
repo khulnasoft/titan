@@ -6,7 +6,7 @@ import {
   TaskGraph,
   TaskHasher,
   hashArray,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 export default async function run(
   task: Task,

@@ -1,6 +1,6 @@
 /* eslint-disable @nx/enforce-module-boundaries */
 // nx-ignore-next-line
-import type { ProjectGraphProjectNode, Task } from '@nx/devkit';
+import type { ProjectGraphProjectNode, Task } from '@titan/devkit';
 /* eslint-enable @nx/enforce-module-boundaries */
 import * as cy from 'cytoscape';
 

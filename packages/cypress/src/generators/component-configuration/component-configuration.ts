@@ -13,7 +13,7 @@ import {
   updateNxJson,
   runTasksInSerial,
   GeneratorCallback,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { installedCypressVersion } from '../../utils/cypress-version';
 
 import {
@@ -55,8 +55,8 @@ export async function componentConfigurationGeneratorInternal(
   const nxJson = readNxJson(tree);
   const hasPlugin = nxJson.plugins?.some((p) =>
     typeof p === 'string'
-      ? p === '@nx/cypress/plugin'
-      : p.plugin === '@nx/cypress/plugin'
+      ? p === '@titan/cypress/plugin'
+      : p.plugin === '@titan/cypress/plugin'
   );
 
   const projectConfig = readProjectConfiguration(tree, opts.project);
@@ -147,7 +147,7 @@ function addTargetToProject(
   opts: NormalizeCTOptions
 ) {
   projectConfig.targets['component-test'] = {
-    executor: '@nx/cypress:cypress',
+    executor: '@titan/cypress:cypress',
     options: {
       cypressConfig: joinPathFragments(projectConfig.root, 'cypress.config.ts'),
       testingType: 'component',

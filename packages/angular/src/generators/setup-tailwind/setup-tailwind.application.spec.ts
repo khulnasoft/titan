@@ -1,12 +1,12 @@
-import * as devkit from '@nx/devkit';
+import * as devkit from '@titan/devkit';
 import {
   addProjectConfiguration,
   readJson,
   readProjectConfiguration,
   Tree,
   updateProjectConfiguration,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { setupTailwindGenerator } from './setup-tailwind';
 import {
   autoprefixerVersion,
@@ -98,7 +98,7 @@ describe('setupTailwind generator', () => {
       const projectConfig = readProjectConfiguration(tree, project);
       projectConfig.targets = {
         build: {
-          executor: '@nx/angular:webpack-browser',
+          executor: '@titan/angular:webpack-browser',
           options: {},
         },
       };
@@ -117,7 +117,7 @@ describe('setupTailwind generator', () => {
       const projectConfig = readProjectConfiguration(tree, project);
       projectConfig.targets = {
         build: {
-          executor: '@nx/angular:webpack-browser',
+          executor: '@titan/angular:webpack-browser',
           options: {
             styles: ['node_modules/awesome-ds/styles.css', stylesEntryPoint],
           },
@@ -137,7 +137,7 @@ describe('setupTailwind generator', () => {
       const projectConfig = readProjectConfiguration(tree, project);
       projectConfig.targets = {
         build: {
-          executor: '@nx/angular:webpack-browser',
+          executor: '@titan/angular:webpack-browser',
           options: {
             styles: ['node_modules/awesome-ds/styles.css'],
           },
@@ -159,7 +159,7 @@ describe('setupTailwind generator', () => {
       const projectConfig = readProjectConfiguration(tree, project);
       projectConfig.targets = {
         build: {
-          executor: '@nx/angular:webpack-browser',
+          executor: '@titan/angular:webpack-browser',
           options: {
             styles: [
               'node_modules/awesome-ds/styles.css',
@@ -224,7 +224,7 @@ describe('setupTailwind generator', () => {
       const projectConfig = readProjectConfiguration(tree, project);
       projectConfig.targets = {
         build: {
-          executor: '@nx/angular:webpack-browser',
+          executor: '@titan/angular:webpack-browser',
           options: {
             styles: ['node_modules/awesome-ds/styles.css', stylesEntryPoint],
           },
@@ -249,7 +249,7 @@ describe('setupTailwind generator', () => {
       const projectConfig = readProjectConfiguration(tree, project);
       projectConfig.targets = {
         build: {
-          executor: '@nx/angular:webpack-browser',
+          executor: '@titan/angular:webpack-browser',
           options: {
             styles: [
               'node_modules/awesome-ds/styles.css',
@@ -280,7 +280,7 @@ describe('setupTailwind generator', () => {
       const projectConfig = readProjectConfiguration(tree, project);
       projectConfig.targets = {
         build: {
-          executor: '@nx/angular:webpack-browser',
+          executor: '@titan/angular:webpack-browser',
           options: {
             styles: [
               'node_modules/awesome-ds/styles.css',
@@ -334,7 +334,7 @@ describe('setupTailwind generator', () => {
 
       expect(tree.read(`apps/${project}/tailwind.config.js`, 'utf-8'))
         .toMatchInlineSnapshot(`
-        "const { createGlobPatternsForDependencies } = require('@nx/angular/tailwind');
+        "const { createGlobPatternsForDependencies } = require('@titan/angular/tailwind');
         const { join } = require('path');
 
         /** @type {import('tailwindcss').Config} */
@@ -368,7 +368,7 @@ describe('setupTailwind generator', () => {
 
       expect(tree.read(`apps/${project}/tailwind.config.js`, 'utf-8'))
         .toMatchInlineSnapshot(`
-        "const { createGlobPatternsForDependencies } = require('@nx/angular/tailwind');
+        "const { createGlobPatternsForDependencies } = require('@titan/angular/tailwind');
         const { join } = require('path');
 
         /** @type {import('tailwindcss').Config} */
@@ -402,7 +402,7 @@ describe('setupTailwind generator', () => {
 
       expect(tree.read(`apps/${project}/tailwind.config.js`, 'utf-8'))
         .toMatchInlineSnapshot(`
-        "const { createGlobPatternsForDependencies } = require('@nx/angular/tailwind');
+        "const { createGlobPatternsForDependencies } = require('@titan/angular/tailwind');
         const { join } = require('path');
 
         module.exports = {

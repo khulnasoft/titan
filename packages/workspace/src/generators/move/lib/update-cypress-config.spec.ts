@@ -4,8 +4,8 @@ import {
   readProjectConfiguration,
   Tree,
   writeJson,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { NormalizedSchema } from '../schema';
 import { updateCypressConfig } from './update-cypress-config';
 
@@ -86,7 +86,7 @@ describe('updateCypressConfig', () => {
       'my-destination/cypress.config.ts',
       `
 import { defineConfig } from 'cypress';
-import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
+import { nxE2EPreset } from '@titan/cypress/plugins/cypress-preset';
 
 export default defineConfig({
   e2e: {

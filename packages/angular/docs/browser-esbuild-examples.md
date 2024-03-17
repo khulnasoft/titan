@@ -1,6 +1,6 @@
-The `@nx/angular:browser-esbuild` executor is very similar to the `@angular-devkit/build-angular:browser-esbuild` builder provided by the Angular CLI. It builds an Angular application using [esbuild](https://esbuild.github.io/).
+The `@titan/angular:browser-esbuild` executor is very similar to the `@angular-devkit/build-angular:browser-esbuild` builder provided by the Angular CLI. It builds an Angular application using [esbuild](https://esbuild.github.io/).
 
-In addition to the features provided by the Angular CLI builder, the `@nx/angular:browser-esbuild` executor also supports the following:
+In addition to the features provided by the Angular CLI builder, the `@titan/angular:browser-esbuild` executor also supports the following:
 
 - Providing esbuild plugins
 - Incremental builds
@@ -17,7 +17,7 @@ The executor accepts a `plugins` option that allows you to provide esbuild plugi
   ...
   "targets": {
     "build": {
-      "executor": "@nx/angular:browser-esbuild",
+      "executor": "@titan/angular:browser-esbuild",
       "options": {
         ...
         "plugins": [

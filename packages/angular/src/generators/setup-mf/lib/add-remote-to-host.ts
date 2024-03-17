@@ -5,7 +5,7 @@ import {
   readProjectConfiguration,
   Tree,
   updateJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import type { Schema } from '../schema';
 import { ArrayLiteralExpression } from 'typescript';
 import { insertImport } from '@nx/js';
@@ -158,7 +158,7 @@ function addLazyLoadedRouteToHostAppModule(
       sourceFile,
       pathToHostRootRouting,
       'loadRemoteModule',
-      '@nx/angular/mf'
+      '@titan/angular/mf'
     );
   }
 

@@ -1,5 +1,5 @@
-import { Tree, readJson, updateJson } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { Tree, readJson, updateJson } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import addBabelCore from './add-babel-core';
 
 describe('update-16-7-0-add-babel-core', () => {

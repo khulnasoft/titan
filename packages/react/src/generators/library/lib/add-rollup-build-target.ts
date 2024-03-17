@@ -7,7 +7,7 @@ import {
   readProjectConfiguration,
   runTasksInSerial,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 import { maybeJs } from '../../../utils/maybe-js';
 import {

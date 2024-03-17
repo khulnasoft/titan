@@ -1,6 +1,6 @@
 import { addLocalRegistryScripts } from './add-local-registry-scripts';
-import { Tree, writeJson } from '@nx/devkit';
-import { createTree } from '@nx/devkit/testing';
+import { Tree, writeJson } from '@titan/devkit';
+import { createTree } from '@titan/devkit/testing';
 
 describe('addLocalRegistryScripts', () => {
   let tree: Tree;

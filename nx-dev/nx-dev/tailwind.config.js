@@ -1,7 +1,7 @@
 const path = require('path');
-// Ignore @nx/next dependency since it is the installed version not the one in the workspace
+// Ignore @titan/next dependency since it is the installed version not the one in the workspace
 // nx-ignore-next-line
-const { createGlobPatternsForDependencies } = require('@nx/next/tailwind');
+const { createGlobPatternsForDependencies } = require('@titan/next/tailwind');
 const plugin = require('tailwindcss/plugin');
 
 if (!createGlobPatternsForDependencies(__dirname).length)

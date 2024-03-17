@@ -1,15 +1,15 @@
-import { installedCypressVersion } from '@nx/cypress/src/utils/cypress-version';
-import type { Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { installedCypressVersion } from '@titan/cypress/src/utils/cypress-version';
+import type { Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { componentGenerator } from '../component/component';
 import { scamGenerator } from '../scam/scam';
 import { generateTestApplication } from '../utils/testing';
 import { angularStoriesGenerator } from './stories';
-import { stripIndents } from '@nx/devkit';
+import { stripIndents } from '@titan/devkit';
 
 // need to mock cypress otherwise it'll use the nx installed version from package.json
 //  which is v9 while we are testing for the new v10 version
-jest.mock('@nx/cypress/src/utils/cypress-version');
+jest.mock('@titan/cypress/src/utils/cypress-version');
 
 // TODO(katerina): Nx 19 -> remove Cypress
 

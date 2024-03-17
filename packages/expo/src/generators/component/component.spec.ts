@@ -1,6 +1,6 @@
-import { logger, Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { Linter } from '@nx/eslint';
+import { logger, Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { Linter } from '@titan/eslint';
 import expoApplicationGenerator from '../application/application';
 import expoLibraryGenerator from '../library/library';
 import { expoComponentGenerator } from './component';

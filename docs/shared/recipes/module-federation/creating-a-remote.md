@@ -49,8 +49,8 @@ UPDATE tsconfig.base.json
 {% /tab %}
 {% tab label="Angular" %}
 
-```{% command="nx g @nx/angular:remote myremote --directory=apps/angular/myremote" %}
-NX Generating @nx/angular:host
+```{% command="nx g @titan/angular:remote myremote --directory=apps/angular/myremote" %}
+NX Generating @titan/angular:host
 
 CREATE apps/angular/myremote/project.json
 CREATE apps/angular/myremote/src/assets/.gitkeep
@@ -158,8 +158,8 @@ UPDATE tsconfig.base.json
 {% /tab %}
 {% tab label="Angular" %}
 
-```{% command="nx g @nx/angular:remote myremote --directory=apps/angular/myremote --host=shell" %}
-> NX Generating @nx/angular:host
+```{% command="nx g @titan/angular:remote myremote --directory=apps/angular/myremote --host=shell" %}
+> NX Generating @titan/angular:host
 
 CREATE apps/angular/myremote/project.json
 CREATE apps/angular/myremote/src/assets/.gitkeep

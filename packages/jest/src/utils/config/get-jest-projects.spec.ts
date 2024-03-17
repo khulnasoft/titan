@@ -2,8 +2,8 @@ import type {
   ProjectConfiguration,
   ProjectGraph,
   WorkspaceJsonConfiguration,
-} from '@nx/devkit';
-import * as devkit from '@nx/devkit';
+} from '@titan/devkit';
+import * as devkit from '@titan/devkit';
 import * as Workspace from 'nx/src/project-graph/file-utils';
 import { getJestProjects, getJestProjectsAsync } from './get-jest-projects';
 
@@ -15,7 +15,7 @@ describe('getJestProjects', () => {
           root: 'blah',
           targets: {
             test: {
-              executor: '@nx/jest:jest',
+              executor: '@titan/jest:jest',
               options: {
                 jestConfig: 'test/jest/config/location/jest.config.js',
               },
@@ -41,7 +41,7 @@ describe('getJestProjects', () => {
           root: 'blah',
           targets: {
             'test-with-jest': {
-              executor: '@nx/jest:jest',
+              executor: '@titan/jest:jest',
               options: {
                 jestConfig: 'test/jest/config/location/jest.config.js',
               },
@@ -67,7 +67,7 @@ describe('getJestProjects', () => {
           root: '.',
           targets: {
             test: {
-              executor: '@nx/jest:jest',
+              executor: '@titan/jest:jest',
               options: {
                 jestConfig: 'jest.config.app.js',
               },
@@ -91,7 +91,7 @@ describe('getJestProjects', () => {
           root: 'blah',
           targets: {
             'test-with-jest': {
-              executor: '@nx/jest:jest',
+              executor: '@titan/jest:jest',
               options: {
                 jestConfig: 'test/jest/config/location/jest.config.js',
               },
@@ -123,7 +123,7 @@ describe('getJestProjects', () => {
           root: 'blah',
           targets: {
             'test-with-jest': {
-              executor: '@nx/jest:jest',
+              executor: '@titan/jest:jest',
               options: {
                 jestConfig: 'test/jest/config/location/jest.config.js',
               },
@@ -205,7 +205,7 @@ describe('getJestProjectsAsync', () => {
       root: 'blah',
       targets: {
         test: {
-          executor: '@nx/jest:jest',
+          executor: '@titan/jest:jest',
           options: {
             jestConfig: 'test/jest/config/location/jest.config.js',
           },
@@ -223,7 +223,7 @@ describe('getJestProjectsAsync', () => {
       root: 'blah',
       targets: {
         'test-with-jest': {
-          executor: '@nx/jest:jest',
+          executor: '@titan/jest:jest',
           options: {
             jestConfig: 'test/jest/config/location/jest.config.js',
           },
@@ -241,7 +241,7 @@ describe('getJestProjectsAsync', () => {
       root: '.',
       targets: {
         test: {
-          executor: '@nx/jest:jest',
+          executor: '@titan/jest:jest',
           options: {
             jestConfig: 'jest.config.app.js',
           },
@@ -257,7 +257,7 @@ describe('getJestProjectsAsync', () => {
       root: 'blah',
       targets: {
         'test-with-jest': {
-          executor: '@nx/jest:jest',
+          executor: '@titan/jest:jest',
           options: {
             jestConfig: 'test/jest/config/location/jest.config.js',
           },
@@ -281,7 +281,7 @@ describe('getJestProjectsAsync', () => {
       root: 'blah',
       targets: {
         'test-with-jest': {
-          executor: '@nx/jest:jest',
+          executor: '@titan/jest:jest',
           options: {
             jestConfig: 'test/jest/config/location/jest.config.js',
           },
@@ -474,7 +474,7 @@ describe('getJestProjectsAsync', () => {
       root: 'projects/test-1',
       targets: {
         test: {
-          executor: '@nx/jest:jest',
+          executor: '@titan/jest:jest',
           options: {
             jestConfig: 'projects/test-1/jest.config.js',
           },

@@ -19,14 +19,14 @@ import {
   Tree,
   updateJson,
   writeJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import {
   determineProjectNameAndRootOptions,
   type ProjectNameAndRootOptions,
-} from '@nx/devkit/src/generators/project-name-and-root-utils';
+} from '@titan/devkit/src/generators/project-name-and-root-utils';
 
-import { addBuildTargetDefaults } from '@nx/devkit/src/generators/add-build-target-defaults';
-import { logShowProjectCommand } from '@nx/devkit/src/utils/log-show-project-command';
+import { addBuildTargetDefaults } from '@titan/devkit/src/generators/add-build-target-defaults';
+import { logShowProjectCommand } from '@titan/devkit/src/utils/log-show-project-command';
 import { findMatchingProjects } from 'nx/src/utils/find-matching-projects';
 import { type PackageJson } from 'nx/src/utils/package-json';
 import { join } from 'path';
@@ -308,7 +308,7 @@ export async function addLint(
   tree: Tree,
   options: AddLintOptions
 ): Promise<GeneratorCallback> {
-  const { lintProjectGenerator } = ensurePackage('@nx/eslint', nxVersion);
+  const { lintProjectGenerator } = ensurePackage('@titan/eslint', nxVersion);
   const projectConfiguration = readProjectConfiguration(tree, options.name);
   const task = await lintProjectGenerator(tree, {
     project: options.name,
@@ -328,7 +328,7 @@ export async function addLint(
     isEslintConfigSupported,
     updateOverrideInLintConfig,
     // nx-ignore-next-line
-  } = require('@nx/eslint/src/generators/utils/eslint-file');
+  } = require('@titan/eslint/src/generators/utils/eslint-file');
 
   // if config is not supported, we don't need to do anything
   if (!isEslintConfigSupported(tree)) {
@@ -575,7 +575,7 @@ async function addJest(
   tree: Tree,
   options: NormalizedSchema
 ): Promise<GeneratorCallback> {
-  const { configurationGenerator } = ensurePackage('@nx/jest', nxVersion);
+  const { configurationGenerator } = ensurePackage('@titan/jest', nxVersion);
   return await configurationGenerator(tree, {
     ...options,
     project: options.name,
@@ -671,7 +671,7 @@ async function normalizeOptions(
     options.bundler = 'none';
   }
 
-  const { Linter } = ensurePackage('@nx/eslint', nxVersion);
+  const { Linter } = ensurePackage('@titan/eslint', nxVersion);
   if (options.config === 'npm-scripts') {
     options.unitTestRunner = 'none';
     options.linter = Linter.None;
@@ -752,7 +752,7 @@ function addProjectDependencies(
       tree,
       {},
       {
-        '@nx/esbuild': nxVersion,
+        '@titan/esbuild': nxVersion,
         '@types/node': typesNodeVersion,
         esbuild: esbuildVersion,
       }
@@ -779,7 +779,7 @@ function addProjectDependencies(
 function getBuildExecutor(bundler: Bundler) {
   switch (bundler) {
     case 'esbuild':
-      return `@nx/esbuild:esbuild`;
+      return `@titan/esbuild:esbuild`;
     case 'rollup':
       return `@nx/rollup:rollup`;
     case 'swc':

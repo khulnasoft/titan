@@ -4,8 +4,8 @@ import {
   readNxJson,
   Tree,
   updateNxJson,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 
 import { Schema } from '../schema';
 import { removeProjectReferencesInConfig } from './remove-project-references-in-config';
@@ -35,7 +35,7 @@ describe('removeProjectReferencesInConfig', () => {
       projectType: 'application',
       targets: {
         e2e: {
-          executor: '@nx/cypress:cypress',
+          executor: '@titan/cypress:cypress',
           options: {
             cypressConfig: 'apps/ng-app-e2e/cypress.json',
             tsConfig: 'apps/ng-app-e2e/tsconfig.e2e.json',

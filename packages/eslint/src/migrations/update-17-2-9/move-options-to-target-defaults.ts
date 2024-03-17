@@ -10,11 +10,11 @@ import {
   readNxJson,
   updateNxJson,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import {
   forEachExecutorOptions,
   forEachExecutorOptionsInGraph,
-} from '@nx/devkit/src/generators/executor-options-utils';
+} from '@titan/devkit/src/generators/executor-options-utils';
 import { Schema } from '../../executors/lint/schema';
 import { findEslintFile } from '../../generators/utils/eslint-file';
 import { readTargetDefaultsForTarget } from 'nx/src/project-graph/utils/project-configuration-utils';
@@ -23,7 +23,7 @@ export default async function update(tree: Tree) {
   const nxJson = readNxJson(tree);
 
   // Don't override anything if there are already target defaults for eslint
-  if (nxJson.targetDefaults?.['@nx/eslint:lint']) {
+  if (nxJson.targetDefaults?.['@titan/eslint:lint']) {
     return;
   }
 
@@ -34,7 +34,7 @@ export default async function update(tree: Tree) {
   const lintTargets = new Set<string>();
   forEachExecutorOptionsInGraph(
     graph,
-    '@nx/eslint:lint',
+    '@titan/eslint:lint',
     (value, proj, targetName) => {
       lintTargets.add(targetName);
     }
@@ -46,7 +46,7 @@ export default async function update(tree: Tree) {
   }
 
   const lintDefaults: TargetConfiguration<Partial<Schema>> =
-    (nxJson.targetDefaults['@nx/eslint:lint'] = {});
+    (nxJson.targetDefaults['@titan/eslint:lint'] = {});
 
   // All eslint targets have the same name
   if (lintTargets.size === 1) {
@@ -89,7 +89,7 @@ export default async function update(tree: Tree) {
   let addOutputs = false;
   forEachExecutorOptions<Schema>(
     tree,
-    '@nx/eslint:lint',
+    '@titan/eslint:lint',
     (options, proj, targetName, configuration) => {
       const projConfig = projectMap.get(proj);
 

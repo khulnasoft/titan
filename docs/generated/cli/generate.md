@@ -24,7 +24,7 @@ Install `nx` globally to invoke the command directly using `nx`, or use `npx nx`
 Generate a new Angular application:
 
 ```shell
-nx generate @nx/angular:app myapp
+nx generate @titan/angular:app myapp
 ```
 
 Generate a new React application:
@@ -48,7 +48,7 @@ nx generate @nx/node:app myapp
 Generate a new Angular library application:
 
 ```shell
-nx generate @nx/angular:library mylibrary
+nx generate @titan/angular:library mylibrary
 ```
 
 Generate a new React library application:

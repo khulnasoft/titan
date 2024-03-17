@@ -4,8 +4,8 @@ import {
   readProjectConfiguration,
   updateJson,
   updateProjectConfiguration,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { PackageJson } from 'nx/src/utils/package-json';
 import { backwardCompatibleVersions } from '../../utils/backward-compatible-versions';
 import {

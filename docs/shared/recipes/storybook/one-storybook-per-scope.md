@@ -91,15 +91,15 @@ The commands below uses the `as-provided` directory flag behavior, which is the 
 {% /callout %}
 
 ```shell
-nx g @nx/angular:lib storybook-host-client --directory=libs/storybook-host-client --projectNameAndRootFormat=as-provided
+nx g @titan/angular:lib storybook-host-client --directory=libs/storybook-host-client --projectNameAndRootFormat=as-provided
 ```
 
 ```shell
-nx g @nx/angular:lib storybook-host-admin --directory=libs/storybook-host-admin --projectNameAndRootFormat=as-provided
+nx g @titan/angular:lib storybook-host-admin --directory=libs/storybook-host-admin --projectNameAndRootFormat=as-provided
 ```
 
 ```shell
-nx g @nx/angular:lib storybook-host-shared --directory=libs/storybook-host-shared --projectNameAndRootFormat=as-provided
+nx g @titan/angular:lib storybook-host-shared --directory=libs/storybook-host-shared --projectNameAndRootFormat=as-provided
 ```
 
 ### Generate the Storybook configuration for the libraries

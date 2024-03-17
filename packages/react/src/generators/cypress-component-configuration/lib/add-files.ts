@@ -5,12 +5,12 @@ import {
   ProjectConfiguration,
   Tree,
   visitNotIgnoredFiles,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { nxVersion } from 'nx/src/utils/versions';
 import { componentTestGenerator } from '../../component-test/component-test';
 import type { CypressComponentConfigurationSchema } from '../schema';
 import { getActualBundler, isComponent } from '../../../utils/ct-utils';
-import { FoundTarget } from '@nx/cypress/src/utils/find-target-options';
+import { FoundTarget } from '@titan/cypress/src/utils/find-target-options';
 
 export async function addFiles(
   tree: Tree,
@@ -21,7 +21,7 @@ export async function addFiles(
   // must dyanmicaly import to prevent packages not using cypress from erroring out
   // when importing react
   const { addMountDefinition, addDefaultCTConfig } = await import(
-    '@nx/cypress/src/utils/config'
+    '@titan/cypress/src/utils/config'
   );
 
   // Specifically undefined to allow Remix workaround of passing an empty string

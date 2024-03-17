@@ -1,10 +1,10 @@
-import { CreateNodesContext } from '@nx/devkit';
-import { TempFs } from '@nx/devkit/internal-testing-utils';
+import { CreateNodesContext } from '@titan/devkit';
+import { TempFs } from '@titan/devkit/internal-testing-utils';
 
 import { createNodes } from './plugin';
 import { PlaywrightTestConfig } from '@playwright/test';
 
-describe('@nx/playwright/plugin', () => {
+describe('@titan/playwright/plugin', () => {
   let createNodesFunction = createNodes[1];
   let context: CreateNodesContext;
   let tempFs: TempFs;

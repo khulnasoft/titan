@@ -1,4 +1,4 @@
-import { readJsonFile, writeJsonFile } from '@nx/devkit';
+import { readJsonFile, writeJsonFile } from '@titan/devkit';
 import type { InlineProjectGraph } from '../inline';
 
 export function generateTmpSwcrc(

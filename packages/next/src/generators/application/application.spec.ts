@@ -1,10 +1,10 @@
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import {
   getProjects,
   readJson,
   readProjectConfiguration,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 import { Schema } from './schema';
 import { applicationGenerator } from './application';
@@ -508,10 +508,10 @@ describe('app', () => {
       "//@ts-check
 
       // eslint-disable-next-line @typescript-eslint/no-var-requires
-      const { composePlugins, withNx } = require('@nx/next');
+      const { composePlugins, withNx } = require('@titan/next');
 
       /**
-       * @type {import('@nx/next/plugins/with-nx').WithNxOptions}
+       * @type {import('@titan/next/plugins/with-nx').WithNxOptions}
        **/
       const nextConfig = {
         nx: {

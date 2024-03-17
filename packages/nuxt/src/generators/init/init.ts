@@ -1,5 +1,5 @@
-import { GeneratorCallback, Tree } from '@nx/devkit';
-import { updatePackageScripts } from '@nx/devkit/src/utils/update-package-scripts';
+import { GeneratorCallback, Tree } from '@titan/devkit';
+import { updatePackageScripts } from '@titan/devkit/src/utils/update-package-scripts';
 
 import { createNodes } from '../../plugins/plugin';
 import { InitSchema } from './schema';

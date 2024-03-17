@@ -1,4 +1,4 @@
-import { type ExecutorContext, workspaceRoot } from '@nx/devkit';
+import { type ExecutorContext, workspaceRoot } from '@titan/devkit';
 import { type Schema } from '../schema';
 import fileServerExecutor from '@nx/web/src/executors/file-server/file-server.impl';
 import { join } from 'path';

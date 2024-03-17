@@ -1,5 +1,5 @@
-import { addProjectConfiguration, readJson, Tree, writeJson } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { addProjectConfiguration, readJson, Tree, writeJson } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import update from './update-swcrc';
 
 describe('Migration: update .swcrc', () => {

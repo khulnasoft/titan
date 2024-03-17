@@ -149,7 +149,7 @@ function addNestPluginToPackageJson(repoRoot: string) {
   const path = join(repoRoot, `package.json`);
   const json: PackageJson = readJsonFile(path);
   json.devDependencies['@nx/nest'] = nxVersion;
-  json.devDependencies['@nx/jest'] = nxVersion;
+  json.devDependencies['@titan/jest'] = nxVersion;
   writeJsonFile(path, json);
 }
 
@@ -232,7 +232,7 @@ function createProjectJson(
 
     // lint
     json.targets['lint'] = {
-      executor: '@nx/eslint:lint',
+      executor: '@titan/eslint:lint',
       options: {
         lintFilePatterns: ['./src', './test'],
       },
@@ -289,7 +289,7 @@ function tryCreateJestPreset(repoRoot: string) {
     writeFileSync(
       jestPresetPath,
       `
-const nxPreset = require('@nx/jest/preset').default;
+const nxPreset = require('@titan/jest/preset').default;
 module.exports = {...nxPreset};
 `,
       'utf8'
@@ -335,7 +335,7 @@ function addJestTargets(
   );
 
   projectJson.targets['test'] = {
-    executor: '@nx/jest:jest',
+    executor: '@titan/jest:jest',
     outputs: [`{workspaceRoot}/coverage/${packageName}`],
     options: {
       passWithNoTests: true,
@@ -344,7 +344,7 @@ function addJestTargets(
   };
 
   projectJson.targets['e2e'] = {
-    executor: '@nx/jest:jest',
+    executor: '@titan/jest:jest',
     options: {
       passWithNoTests: true,
       jestConfig: e2eTestConfigPath,

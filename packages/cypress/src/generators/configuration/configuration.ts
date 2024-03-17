@@ -16,12 +16,12 @@ import {
   Tree,
   updateJson,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import {
   getRelativePathToRootTsConfig,
   initGenerator as jsInitGenerator,
 } from '@nx/js';
-import { Linter } from '@nx/eslint';
+import { Linter } from '@titan/eslint';
 import { join } from 'path';
 import { addLinterToCyProject } from '../../utils/add-linter';
 import { addDefaultE2EConfig } from '../../utils/config';
@@ -86,8 +86,8 @@ export async function configurationGeneratorInternal(
   const nxJson = readNxJson(tree);
   const hasPlugin = nxJson.plugins?.some((p) =>
     typeof p === 'string'
-      ? p === '@nx/cypress/plugin'
-      : p.plugin === '@nx/cypress/plugin'
+      ? p === '@titan/cypress/plugin'
+      : p.plugin === '@titan/cypress/plugin'
   );
 
   await addFiles(tree, opts, projectGraph, hasPlugin);
@@ -288,7 +288,7 @@ function addTarget(tree: Tree, opts: NormalizedSchema) {
   const cyVersion = installedCypressVersion();
   projectConfig.targets ??= {};
   projectConfig.targets.e2e = {
-    executor: '@nx/cypress:cypress',
+    executor: '@titan/cypress:cypress',
     options: {
       cypressConfig: joinPathFragments(
         projectConfig.root,

@@ -1,17 +1,17 @@
-import { createTree } from '@nx/devkit/testing';
+import { createTree } from '@titan/devkit/testing';
 import {
   addProjectConfiguration as _addProjectConfiguration,
   ProjectGraph,
   readNxJson,
   Tree,
   writeJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 import update from './move-target-defaults';
 
 let projectGraph: ProjectGraph;
-jest.mock('@nx/devkit', () => ({
-  ...jest.requireActual<any>('@nx/devkit'),
+jest.mock('@titan/devkit', () => ({
+  ...jest.requireActual<any>('@titan/devkit'),
   createProjectGraphAsync: jest.fn().mockImplementation(async () => {
     return projectGraph;
   }),

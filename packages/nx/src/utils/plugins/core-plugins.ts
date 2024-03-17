@@ -5,11 +5,11 @@ import type { CorePlugin, PluginCapabilities } from './models';
 export function fetchCorePlugins(): CorePlugin[] {
   return [
     {
-      name: '@nx/angular',
+      name: '@titan/angular',
       capabilities: 'executors,generators',
     },
     {
-      name: '@nx/cypress',
+      name: '@titan/cypress',
       capabilities: 'executors,generators',
     },
     {
@@ -17,7 +17,7 @@ export function fetchCorePlugins(): CorePlugin[] {
       capabilities: 'executors,generators',
     },
     {
-      name: '@nx/esbuild',
+      name: '@titan/esbuild',
       capabilities: 'executors,generators',
     },
     {
@@ -29,7 +29,7 @@ export function fetchCorePlugins(): CorePlugin[] {
       capabilities: 'generators',
     },
     {
-      name: '@nx/jest',
+      name: '@titan/jest',
       capabilities: 'executors,generators',
     },
     {
@@ -37,7 +37,7 @@ export function fetchCorePlugins(): CorePlugin[] {
       capabilities: 'executors,generators',
     },
     {
-      name: '@nx/eslint',
+      name: '@titan/eslint',
       capabilities: 'executors,generators',
     },
     {
@@ -45,7 +45,7 @@ export function fetchCorePlugins(): CorePlugin[] {
       capabilities: 'generators',
     },
     {
-      name: '@nx/next',
+      name: '@titan/next',
       capabilities: 'executors,generators',
     },
     {

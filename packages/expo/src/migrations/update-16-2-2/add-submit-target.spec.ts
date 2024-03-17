@@ -1,5 +1,5 @@
-import { addProjectConfiguration, getProjects, Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { addProjectConfiguration, getProjects, Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import update from './add-submit-target';
 
 describe('add-submit-target', () => {

@@ -1,6 +1,6 @@
-The `@nx/angular:dev-server` executor is very similar to the `@angular-devkit/build-angular:dev-server` builder provided by the Angular CLI. In addition to the features provided by the Angular CLI builder, the `@nx/angular:dev-server` executor also supports the following:
+The `@titan/angular:dev-server` executor is very similar to the `@angular-devkit/build-angular:dev-server` builder provided by the Angular CLI. In addition to the features provided by the Angular CLI builder, the `@titan/angular:dev-server` executor also supports the following:
 
-- Best integration for `@nx/angular:webpack-browser`, `@nx/angular:browser-esbuild` and `@nx/angular:application`
+- Best integration for `@titan/angular:webpack-browser`, `@titan/angular:browser-esbuild` and `@titan/angular:application`
 - Providing HTTP request middleware functions when the build target is using an esbuild-based executor
 - Incremental builds
 
@@ -9,13 +9,13 @@ The `@nx/angular:dev-server` executor is very similar to the `@angular-devkit/bu
 {% tabs %}
 {% tab label="Using a custom Webpack configuration" %}
 
-This executor should be used along with `@nx/angular:webpack-browser` to serve an application using a custom Webpack configuration.
+This executor should be used along with `@titan/angular:webpack-browser` to serve an application using a custom Webpack configuration.
 
-Add the `serve` target using the `@nx/angular:dev-server` executor, set the `build` target executor as `@nx/angular:webpack-browser` and set the `customWebpackConfig` option as shown below:
+Add the `serve` target using the `@titan/angular:dev-server` executor, set the `build` target executor as `@titan/angular:webpack-browser` and set the `customWebpackConfig` option as shown below:
 
 ```json {% fileName="apps/my-app/project.json" highlightLines=[2,"5-7","10-20"] %}
 "build": {
-  "executor": "@nx/angular:webpack-browser",
+  "executor": "@titan/angular:webpack-browser",
   "options": {
     ...
     "customWebpackConfig": {
@@ -24,7 +24,7 @@ Add the `serve` target using the `@nx/angular:dev-server` executor, set the `bui
   }
 },
 "serve": {
-  "executor": "@nx/angular:dev-server",
+  "executor": "@titan/angular:dev-server",
   "configurations": {
     "production": {
       "buildTarget": "my-app:build:production"
@@ -62,7 +62,7 @@ The executor accepts an `esbuildMidleware` option that allows you to provide HTT
   ...
   "targets": {
     "serve": {
-      "executor": "@nx/angular:dev-server",
+      "executor": "@titan/angular:dev-server",
       "options": {
         ...
         "esbuildMidleware": ["apps/my-app/hello-world.middleware.ts"]

@@ -4,8 +4,8 @@ import {
   offsetFromRoot,
   readJson,
   updateJson,
-} from '@nx/devkit';
-import type { Tree } from '@nx/devkit';
+} from '@titan/devkit';
+import type { Tree } from '@titan/devkit';
 import type { Linter } from 'eslint';
 import { useFlatConfig } from '../../utils/flat-config';
 import {

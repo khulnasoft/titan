@@ -1,4 +1,4 @@
-import { stripIndents, type Tree } from '@nx/devkit';
+import { stripIndents, type Tree } from '@titan/devkit';
 import { ensureTypescript } from '@nx/js/src/utils/typescript/ensure-typescript';
 
 let tsModule: typeof import('typescript');

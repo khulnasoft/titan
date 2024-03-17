@@ -7,7 +7,7 @@ import {
   Tree,
   updateJson,
   writeJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { dirname } from 'path';
 import { findEslintFile, isEslintConfigSupported } from '../utils/eslint-file';
 import {
@@ -80,7 +80,7 @@ export function migrateConfigToMonorepoStyle(
       eslintFile =
         lintTarget.options?.eslintConfig || findEslintFile(tree, project.root);
     } else if (hasEslintPlugin(tree)) {
-      // Otherwise, if `@nx/eslint/plugin` is used, match any of the known config files.
+      // Otherwise, if `@titan/eslint/plugin` is used, match any of the known config files.
       for (const f of ESLINT_CONFIG_FILENAMES) {
         if (tree.exists(joinPathFragments(project.root, f))) {
           eslintFile = f;
@@ -112,7 +112,7 @@ export function findLintTarget(
 ): TargetConfiguration {
   return Object.values(project.targets ?? {}).find(
     (target) =>
-      target.executor === '@nx/eslint:lint' ||
+      target.executor === '@titan/eslint:lint' ||
       target.executor === '@nx/linter:eslint' ||
       target.executor === '@nrwl/linter:eslint'
   );
@@ -124,7 +124,7 @@ function migrateEslintFile(projectEslintPath: string, tree: Tree) {
     if (useFlatConfig(tree)) {
       let config = tree.read(projectEslintPath, 'utf-8');
       // remove @nx plugin
-      config = removePlugin(config, '@nx', '@nx/eslint-plugin-nx');
+      config = removePlugin(config, '@nx', '@titan/eslint-plugin-nx');
       // extend eslint.base.config.js
       config = addImportToFlatConfig(
         config,

@@ -6,7 +6,7 @@ Depending on your testing type, the Cypress executor is configured in different 
 ```json
 "targets": {
   "e2e": {
-    "executor": "@nx/cypress:cypress",
+    "executor": "@titan/cypress:cypress",
     "options": {
       "cypressConfig": "apps/app-e2e/cypres.config.ts",
       "devServerTarget": "my-react-app:serve",
@@ -80,7 +80,7 @@ When adding component testing to a project, it's best to use the framework speci
 ```json
 "targets": {
   "component-test": {
-    "executor": "@nx/cypress:cypress",
+    "executor": "@titan/cypress:cypress",
     "options": {
       "cypressConfig": "apps/app/cypres.config.ts",
       "devServerTarget": "my-react-app:build",
@@ -104,7 +104,7 @@ Using [executor configurations](recipes/executors/use-executor-configurations#us
 ```json
 "targets": {
   "e2e": {
-    "executor": "@nx/cypress:cypress",
+    "executor": "@titan/cypress:cypress",
     "options": {
       "cypressConfig": "apps/app-e2e/cypres.config.ts",
       "devServerTarget": "my-react-app:serve",

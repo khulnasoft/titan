@@ -13,7 +13,7 @@ import {
   Tree,
   updateJson,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 import {
   addTsConfigPath,
@@ -32,8 +32,8 @@ import { NormalizedSchema, normalizeOptions } from './lib/normalize-options';
 import { Schema } from './schema';
 import { ensureDependencies } from '../../utils/ensure-dependencies';
 import { initRootBabelConfig } from '../../utils/init-root-babel-config';
-import { addBuildTargetDefaults } from '@nx/devkit/src/generators/add-build-target-defaults';
-import { logShowProjectCommand } from '@nx/devkit/src/utils/log-show-project-command';
+import { addBuildTargetDefaults } from '@titan/devkit/src/generators/add-build-target-defaults';
+import { logShowProjectCommand } from '@titan/devkit/src/utils/log-show-project-command';
 
 export async function expoLibraryGenerator(
   host: Tree,

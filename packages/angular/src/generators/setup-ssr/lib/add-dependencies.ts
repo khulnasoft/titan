@@ -1,4 +1,4 @@
-import { addDependenciesToPackageJson, type Tree } from '@nx/devkit';
+import { addDependenciesToPackageJson, type Tree } from '@titan/devkit';
 import { gte } from 'semver';
 import type { PackageCompatVersions } from '../../../utils/backward-compatible-versions';
 import {

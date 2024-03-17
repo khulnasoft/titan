@@ -1,4 +1,4 @@
-import { output, ProjectConfiguration, readJson, type Tree } from '@nx/devkit';
+import { output, ProjectConfiguration, readJson, type Tree } from '@titan/devkit';
 
 const startLocalRegistryScript = (localRegistryTarget: string) => `
 /**

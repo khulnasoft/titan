@@ -2,9 +2,9 @@ import type { WorkspaceLibrary } from './models';
 import { WorkspaceLibrarySecondaryEntryPoint } from './models';
 import { dirname, join, relative } from 'path';
 import { existsSync, lstatSync, readdirSync } from 'fs';
-import { readJsonFile, joinPathFragments, workspaceRoot } from '@nx/devkit';
+import { readJsonFile, joinPathFragments, workspaceRoot } from '@titan/devkit';
 import type { PackageJson } from 'nx/src/utils/package-json';
-import { requireNx } from '@nx/devkit/nx';
+import { requireNx } from '@titan/devkit/nx';
 
 let { readModulePackageJson } = requireNx();
 

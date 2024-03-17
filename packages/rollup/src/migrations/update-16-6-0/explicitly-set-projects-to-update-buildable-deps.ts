@@ -4,7 +4,7 @@ import {
   readProjectConfiguration,
   Tree,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 const executors = new Set(['@nx/rollup:rollup', '@nrwl/rollup:rollup']);
 

@@ -5,7 +5,7 @@ import {
   Tree,
   updateNxJson,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 export function removeProjectReferencesInConfig(tree: Tree, schema: Schema) {
   // Unset default project if deleting the default project

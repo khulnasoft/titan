@@ -25,12 +25,12 @@
   "schematics": "./generators.json",
   "builders": "./executors.json",
   "dependencies": {
-    "@nx/esbuild": "file:../../packages/esbuild"
+    "@titan/esbuild": "file:../../packages/esbuild"
   },
   "publishConfig": {
     "access": "public"
   },
   "nx-migrations": {
-    "migrations": "@nx/esbuild/migrations.json"
+    "migrations": "@titan/esbuild/migrations.json"
   }
 }

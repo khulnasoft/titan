@@ -1,4 +1,4 @@
-import { readJson, type Tree } from '@nx/devkit';
+import { readJson, type Tree } from '@titan/devkit';
 import { addTsConfigPath, getRootTsConfigPathInTree } from '@nx/js';
 
 type AddPathToTsConfigOptions = {

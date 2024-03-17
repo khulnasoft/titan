@@ -1,4 +1,4 @@
-import { logger } from '@nx/devkit';
+import { logger } from '@titan/devkit';
 import type { Configuration as WebpackDevServerConfiguration } from 'webpack-dev-server';
 import * as path from 'path';
 import { readFileSync } from 'fs';

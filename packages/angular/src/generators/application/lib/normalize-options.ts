@@ -1,6 +1,6 @@
-import { joinPathFragments, type Tree } from '@nx/devkit';
-import { determineProjectNameAndRootOptions } from '@nx/devkit/src/generators/project-name-and-root-utils';
-import { Linter } from '@nx/eslint';
+import { joinPathFragments, type Tree } from '@titan/devkit';
+import { determineProjectNameAndRootOptions } from '@titan/devkit/src/generators/project-name-and-root-utils';
+import { Linter } from '@titan/eslint';
 import { E2eTestRunner, UnitTestRunner } from '../../../utils/test-runners';
 import type { Schema } from '../schema';
 import type { NormalizedSchema } from './normalized-schema';
@@ -20,7 +20,7 @@ export async function normalizeOptions(
     directory: options.directory,
     projectNameAndRootFormat: options.projectNameAndRootFormat,
     rootProject: options.rootProject,
-    callingGenerator: '@nx/angular:application',
+    callingGenerator: '@titan/angular:application',
   });
   options.rootProject = appProjectRoot === '.';
   options.projectNameAndRootFormat = projectNameAndRootFormat;

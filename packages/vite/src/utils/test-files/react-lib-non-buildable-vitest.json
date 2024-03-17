@@ -6,7 +6,7 @@
   "projectType": "library",
   "targets": {
     "lint": {
-      "executor": "@nx/eslint:lint",
+      "executor": "@titan/eslint:lint",
       "outputs": ["{options.outputFile}"]
     },
     "test": {

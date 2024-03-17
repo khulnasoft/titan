@@ -1,4 +1,4 @@
-import { Tree } from '@nx/devkit';
+import { Tree } from '@titan/devkit';
 import { getNpmScope } from './package-json/get-npm-scope';
 
 /**

@@ -18,7 +18,7 @@ describe('Next.js Applications', () => {
 
   beforeAll(() => {
     proj = newProject({
-      packages: ['@nx/next', '@nx/cypress'],
+      packages: ['@titan/next', '@titan/cypress'],
     });
   });
 
@@ -37,7 +37,7 @@ describe('Next.js Applications', () => {
     const libName = uniq('@my-org/lib1');
 
     runCLI(
-      `generate @nx/next:app ${appName} --project-name-and-root-format=as-provided --no-interactive`
+      `generate @titan/next:app ${appName} --project-name-and-root-format=as-provided --no-interactive`
     );
 
     // check files are generated without the layout directory ("apps/") and
@@ -54,7 +54,7 @@ describe('Next.js Applications', () => {
     );
 
     runCLI(
-      `generate @nx/next:lib ${libName} --buildable --project-name-and-root-format=as-provided --no-interactive`
+      `generate @titan/next:lib ${libName} --buildable --project-name-and-root-format=as-provided --no-interactive`
     );
 
     // check files are generated without the layout directory ("libs/") and
@@ -70,7 +70,7 @@ describe('Next.js Applications', () => {
     const appName = uniq('app');
 
     runCLI(
-      `generate @nx/next:app ${appName} --no-interactive --style=css --appDir=false`
+      `generate @titan/next:app ${appName} --no-interactive --style=css --appDir=false`
     );
 
     checkFilesDoNotExist(`apps/${appName}/.next/build-manifest.json`);
@@ -85,7 +85,7 @@ describe('Next.js Applications', () => {
     const appName = uniq('app');
 
     runCLI(
-      `generate @nx/next:app ${appName} --no-interactive --js --appDir=false --e2eTestRunner=playwright`
+      `generate @titan/next:app ${appName} --no-interactive --js --appDir=false --e2eTestRunner=playwright`
     );
 
     checkFilesExist(`apps/${appName}/src/pages/index.js`);
@@ -101,7 +101,7 @@ describe('Next.js Applications', () => {
     const libName = uniq('lib');
 
     runCLI(
-      `generate @nx/next:lib ${libName} --no-interactive --style=none --js`
+      `generate @titan/next:lib ${libName} --no-interactive --style=none --js`
     );
 
     const mainPath = `apps/${appName}/src/pages/index.js`;
@@ -138,7 +138,7 @@ describe('Next.js Applications', () => {
   it('should support --no-swc flag', async () => {
     const appName = uniq('app');
 
-    runCLI(`generate @nx/next:app ${appName} --no-interactive --no-swc`);
+    runCLI(`generate @titan/next:app ${appName} --no-interactive --no-swc`);
 
     // Next.js enables SWC when custom .babelrc is not provided.
     checkFilesExist(`apps/${appName}/.babelrc`);
@@ -154,7 +154,7 @@ describe('Next.js Applications', () => {
   it('should support --custom-server flag (swc)', async () => {
     const appName = uniq('app');
 
-    runCLI(`generate @nx/next:app ${appName} --no-interactive --custom-server`);
+    runCLI(`generate @titan/next:app ${appName} --no-interactive --custom-server`);
 
     checkFilesExist(`apps/${appName}/server/main.ts`);
 
@@ -171,7 +171,7 @@ describe('Next.js Applications', () => {
     const appName = uniq('app');
 
     runCLI(
-      `generate @nx/next:app ${appName} --swc=false --no-interactive --custom-server`
+      `generate @titan/next:app ${appName} --swc=false --no-interactive --custom-server`
     );
 
     checkFilesExist(`apps/${appName}/server/main.ts`);
@@ -189,7 +189,7 @@ describe('Next.js Applications', () => {
     const appName = uniq('app');
 
     runCLI(
-      `generate @nx/next:app ${appName} --no-interactive --style=css --project-name-and-root-format=as-provided`
+      `generate @titan/next:app ${appName} --no-interactive --style=css --project-name-and-root-format=as-provided`
     );
 
     if (runE2ETests('cypress')) {

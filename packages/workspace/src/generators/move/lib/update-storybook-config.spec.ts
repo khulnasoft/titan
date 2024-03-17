@@ -1,5 +1,5 @@
-import { readProjectConfiguration, Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { readProjectConfiguration, Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { NormalizedSchema } from '../schema';
 import { updateStorybookConfig } from './update-storybook-config';
 

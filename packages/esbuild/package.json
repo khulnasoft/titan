@@ -1,5 +1,5 @@
 {
-  "name": "@nx/esbuild",
+  "name": "@titan/esbuild",
   "version": "0.0.1",
   "private": false,
   "description": "The Nx Plugin for esbuild contains executors and generators that support building applications using esbuild",
@@ -34,7 +34,7 @@
     "fs-extra": "^11.1.0",
     "tslib": "^2.3.0",
     "tsconfig-paths": "^4.1.2",
-    "@nx/devkit": "file:../devkit",
+    "@titan/devkit": "file:../devkit",
     "@nx/js": "file:../js"
   },
   "peerDependencies": {

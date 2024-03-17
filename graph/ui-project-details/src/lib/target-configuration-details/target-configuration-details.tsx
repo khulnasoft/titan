@@ -8,7 +8,7 @@ import {
 } from '@heroicons/react/24/outline';
 
 // nx-ignore-next-line
-import { TargetConfiguration } from '@nx/devkit';
+import { TargetConfiguration } from '@titan/devkit';
 import { JsonCodeBlock } from '@nx/graph/ui-code-block';
 import {
   ForwardedRef,

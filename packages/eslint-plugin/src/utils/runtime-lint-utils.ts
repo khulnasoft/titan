@@ -10,7 +10,7 @@ import {
   ProjectGraphExternalNode,
   ProjectGraphProjectNode,
   workspaceRoot,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { getPath, pathExists } from './graph-utils';
 import { readFileIfExisting } from 'nx/src/utils/fileutils';
 import {

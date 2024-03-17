@@ -1,1 +1,1 @@
-export * from '@nx/next/plugins/with-nx';
+export * from '@titan/next/plugins/with-nx';

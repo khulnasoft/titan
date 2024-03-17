@@ -4,7 +4,7 @@ import {
   applyChangesToString,
   joinPathFragments,
   offsetFromRoot,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { tsquery } from '@phenomnomnominal/tsquery';
 import ts = require('typescript');
 import { getConfigNode, notFoundWarning } from '../update-vite-config';

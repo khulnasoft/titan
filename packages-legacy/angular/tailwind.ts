@@ -1,1 +1,1 @@
-export * from '@nx/angular/tailwind';
+export * from '@titan/angular/tailwind';

@@ -1,5 +1,5 @@
-import { getProjects, logger, normalizePath, Tree } from '@nx/devkit';
-import { determineProjectNameAndRootOptions } from '@nx/devkit/src/generators/project-name-and-root-utils';
+import { getProjects, logger, normalizePath, Tree } from '@titan/devkit';
+import { determineProjectNameAndRootOptions } from '@titan/devkit/src/generators/project-name-and-root-utils';
 import { NormalizedSchema, Schema } from '../schema';
 
 export async function normalizeOptions(

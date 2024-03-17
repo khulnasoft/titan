@@ -7,10 +7,10 @@ import {
   Tree,
   updateJson,
   writeJson,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 
-import { Linter } from '@nx/eslint';
+import { Linter } from '@titan/eslint';
 import { libraryGenerator } from '@nx/js';
 import { TsConfig } from '../../utils/utilities';
 import { nxVersion, storybookVersion } from '../../utils/versions';

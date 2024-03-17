@@ -1,5 +1,5 @@
-import { Tree, extractLayoutDirectory, names, readNxJson } from '@nx/devkit';
-import { determineProjectNameAndRootOptions } from '@nx/devkit/src/generators/project-name-and-root-utils';
+import { Tree, extractLayoutDirectory, names, readNxJson } from '@titan/devkit';
+import { determineProjectNameAndRootOptions } from '@titan/devkit/src/generators/project-name-and-root-utils';
 import { assertValidStyle } from '../../../utils/assertion';
 import { NormalizedSchema, Schema } from '../schema';
 import { findFreePort } from './find-free-port';

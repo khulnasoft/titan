@@ -1,5 +1,5 @@
-import { readProjectConfiguration, Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { readProjectConfiguration, Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { NormalizedSchema } from '../schema';
 import { updateJestConfig } from './update-jest-config';
 
@@ -192,7 +192,7 @@ describe('updateJestConfig', () => {
     });
     tree.write(
       rootJestConfigPath,
-      `const { getJestProjects } = require('@nx/jest');
+      `const { getJestProjects } = require('@titan/jest');
 
 module.exports = {
   projects: [...getJestProjects(), '<rootDir>/some/test/dir/my-source']
@@ -233,7 +233,7 @@ module.exports = {
     });
     tree.write(
       rootJestConfigPath,
-      `const { getJestProjects } = require('@nx/jest');
+      `const { getJestProjects } = require('@titan/jest');
 
 module.exports = {
   projects: [...getJestProjects(), '<rootDir>/some/test/dir/my-source', '<rootDir>/foo']

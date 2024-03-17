@@ -3,7 +3,7 @@ import {
   joinPathFragments,
   logger,
   stripIndents,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { VitestExecutorOptions } from '../schema';
 import { normalizeViteConfigFilePath } from '../../../utils/options-utils';
 import { relative } from 'path';

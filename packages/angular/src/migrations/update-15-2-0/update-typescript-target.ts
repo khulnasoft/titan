@@ -1,5 +1,5 @@
-import type { Tree } from '@nx/devkit';
-import { formatFiles, getProjects, updateJson } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
+import { formatFiles, getProjects, updateJson } from '@titan/devkit';
 import { Builders } from '@schematics/angular/utility/workspace-models';
 
 function updateTarget(tree: Tree, tsconfigPath: string) {

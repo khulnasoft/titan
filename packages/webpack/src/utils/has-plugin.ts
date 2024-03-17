@@ -1,4 +1,4 @@
-import { readNxJson, Tree } from '@nx/devkit';
+import { readNxJson, Tree } from '@titan/devkit';
 
 export function hasPlugin(tree: Tree) {
   const nxJson = readNxJson(tree);

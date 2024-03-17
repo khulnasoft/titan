@@ -1,1 +1,1 @@
-export * from '@nx/devkit/testing';
+export * from '@titan/devkit/testing';

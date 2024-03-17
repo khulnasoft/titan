@@ -192,14 +192,14 @@ module.exports = composePlugins(
 {% /callout %}
 
 If you use the [Module Federation](/concepts/module-federation/faster-builds-with-module-federation) support
-from `@nx/angular` or `@nx/react` then
+from `@titan/angular` or `@nx/react` then
 you can customize your Webpack configuration as follows.
 
 ```js {% fileName="apps/my-app/webpack.config.js" %}
 const { composePlugins, withNx } = require('@nx/webpack');
 const { merge } = require('webpack-merge');
 const withModuleFederation = require('@nx/react/module-federation');
-// or `const withModuleFederation = require('@nx/angular/module-federation');`
+// or `const withModuleFederation = require('@titan/angular/module-federation');`
 
 module.exports = composePlugins(
   withNx(),
@@ -223,7 +223,7 @@ configuration object.
 Next.js supports Webpack customization in the `next.config.js` file.
 
 ```js {% fileName="next.config.js" %}
-const { withNx } = require('@nx/next/plugins/with-nx');
+const { withNx } = require('@titan/next/plugins/with-nx');
 
 const nextConfig = {
   webpack: (

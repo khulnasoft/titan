@@ -1,9 +1,9 @@
-import { readNxJson, Tree, updateNxJson } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { readNxJson, Tree, updateNxJson } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 
 import { initGenerator } from './init';
 
-describe('@nx/playwright:init', () => {
+describe('@titan/playwright:init', () => {
   let tree: Tree;
 
   beforeEach(() => {
@@ -23,7 +23,7 @@ describe('@nx/playwright:init', () => {
           "options": {
             "targetName": "e2e",
           },
-          "plugin": "@nx/playwright/plugin",
+          "plugin": "@titan/playwright/plugin",
         },
       ]
     `);
@@ -46,7 +46,7 @@ describe('@nx/playwright:init', () => {
           "options": {
             "targetName": "e2e",
           },
-          "plugin": "@nx/playwright/plugin",
+          "plugin": "@titan/playwright/plugin",
         },
       ]
     `);
@@ -54,7 +54,7 @@ describe('@nx/playwright:init', () => {
 
   it('should not add plugin if already in array', async () => {
     updateNxJson(tree, {
-      plugins: ['@nx/playwright/plugin'],
+      plugins: ['@titan/playwright/plugin'],
     });
     await initGenerator(tree, {
       skipFormat: true,
@@ -64,7 +64,7 @@ describe('@nx/playwright:init', () => {
     const nxJson = readNxJson(tree);
     expect(nxJson.plugins).toMatchInlineSnapshot(`
       [
-        "@nx/playwright/plugin",
+        "@titan/playwright/plugin",
       ]
     `);
   });

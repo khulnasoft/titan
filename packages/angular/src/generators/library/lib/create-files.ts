@@ -1,10 +1,10 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import {
   generateFiles,
   joinPathFragments,
   names,
   offsetFromRoot,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { getRootTsConfigFileName } from '@nx/js';
 import { parse } from 'semver';
 import { UnitTestRunner } from '../../../utils/test-runners';

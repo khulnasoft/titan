@@ -1,4 +1,4 @@
-import { ProjectGraph } from '@nx/devkit';
+import { ProjectGraph } from '@titan/devkit';
 import { isCtProjectUsingBuildProject } from './ct-helpers';
 
 describe('ct-helpers', () => {

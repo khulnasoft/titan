@@ -12,7 +12,7 @@ describe('NextJs Component Testing', () => {
   beforeAll(() => {
     newProject({
       name: uniq('next-ct'),
-      packages: ['@nx/next'],
+      packages: ['@titan/next'],
     });
   });
 
@@ -118,10 +118,10 @@ function addBabelSupport(path: string) {
 
 function createAppWithCt(appName: string) {
   runCLI(
-    `generate @nx/next:app ${appName} --no-interactive --appDir=false --src=false`
+    `generate @titan/next:app ${appName} --no-interactive --appDir=false --src=false`
   );
   runCLI(
-    `generate @nx/next:component button --project=${appName} --directory=components --flat --no-interactive`
+    `generate @titan/next:component button --project=${appName} --directory=components --flat --no-interactive`
   );
   createFile(
     `apps/${appName}/public/data.json`,
@@ -153,7 +153,7 @@ export default function Button(props: ButtonProps) {
   });
 
   runCLI(
-    `generate @nx/next:cypress-component-configuration --project=${appName} --generate-tests --no-interactive`
+    `generate @titan/next:cypress-component-configuration --project=${appName} --generate-tests --no-interactive`
   );
 }
 
@@ -187,11 +187,11 @@ describe(Button.name, () => {
 
 function createLibWithCt(libName: string, buildable: boolean) {
   runCLI(
-    `generate @nx/next:lib ${libName} --buildable=${buildable} --no-interactive`
+    `generate @titan/next:lib ${libName} --buildable=${buildable} --no-interactive`
   );
 
   runCLI(
-    `generate @nx/next:component button --project=${libName} --flat --export --no-interactive`
+    `generate @titan/next:component button --project=${libName} --flat --export --no-interactive`
   );
   updateFile(`libs/${libName}/src/lib/button.tsx`, (content) => {
     return `import { useEffect, useState } from 'react';
@@ -208,17 +208,17 @@ export default Button;
   });
 
   runCLI(
-    `generate @nx/next:cypress-component-configuration --project=${libName} --generate-tests --no-interactive`
+    `generate @titan/next:cypress-component-configuration --project=${libName} --generate-tests --no-interactive`
   );
 }
 
 function createLibWithCtCypress(libName: string) {
   runCLI(
-    `generate @nx/next:lib ${libName} --no-interactive --projectNameAndRootFormat=as-provided`
+    `generate @titan/next:lib ${libName} --no-interactive --projectNameAndRootFormat=as-provided`
   );
 
   runCLI(
-    `generate @nx/next:cypress-component-configuration --project=${libName} --no-interactive`
+    `generate @titan/next:cypress-component-configuration --project=${libName} --no-interactive`
   );
 
   updateFile(`${libName}/src/lib/hello-server.tsx`, () => {

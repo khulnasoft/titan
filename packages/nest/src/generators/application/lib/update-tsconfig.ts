@@ -1,5 +1,5 @@
-import type { Tree } from '@nx/devkit';
-import { joinPathFragments, updateJson } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
+import { joinPathFragments, updateJson } from '@titan/devkit';
 import type { NormalizedOptions } from '../schema';
 
 export function updateTsConfig(tree: Tree, options: NormalizedOptions): void {

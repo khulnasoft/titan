@@ -5,7 +5,7 @@ import * as chalk from 'chalk';
 import { CachedInputFileSystem, ResolverFactory } from 'enhanced-resolve';
 import { dirname, join } from 'path';
 import * as fs from 'fs';
-import { workspaceRoot } from '@nx/devkit';
+import { workspaceRoot } from '@titan/devkit';
 
 /*
  * Use tsconfig to resolve additional workspace libs.

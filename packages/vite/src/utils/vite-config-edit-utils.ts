@@ -1,4 +1,4 @@
-import { applyChangesToString, ChangeType, Tree } from '@nx/devkit';
+import { applyChangesToString, ChangeType, Tree } from '@titan/devkit';
 import { findNodes } from '@nx/js';
 import { TargetFlags } from './generator-utils';
 import type {

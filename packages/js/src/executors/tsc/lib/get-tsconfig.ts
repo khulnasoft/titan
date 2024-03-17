@@ -3,7 +3,7 @@ import {
   readJsonFile,
   stripIndents,
   type ExecutorContext,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { join } from 'path';
 import type { NormalizedExecutorOptions } from '../../../utils/schema';
 import { getTaskOptions } from './get-task-options';

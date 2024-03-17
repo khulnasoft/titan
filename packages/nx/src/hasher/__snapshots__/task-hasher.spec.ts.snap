@@ -99,7 +99,7 @@ exports[`TaskHasher hashTarget should hash entire subtree of dependencies 1`] = 
       "app:ProjectConfiguration": "12026883044296863450",
       "app:TsConfig": "8767608672024750088",
       "app:{projectRoot}/**/*": "3244421341483603138",
-      "npm:@nx/devkit": "$nx/devkit16$",
+      "npm:@titan/devkit": "$nx/devkit16$",
       "npm:@nx/webpack": "$nx/webpack16$",
       "npm:nx": "$nx16$",
       "npm:webpack": "5.0.0",

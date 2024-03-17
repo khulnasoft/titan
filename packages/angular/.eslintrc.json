@@ -49,9 +49,9 @@
               "rxjs",
               "semver",
               // These are installed by ensurePackage so missing in package.json
-              "@nx/cypress",
-              "@nx/playwright",
-              "@nx/jest",
+              "@titan/cypress",
+              "@titan/playwright",
+              "@titan/jest",
               "@nx/rollup",
               "@nx/storybook",
               "@nx/vite",

@@ -4,7 +4,7 @@ import {
   readProjectConfiguration,
   updateJson,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { createTreeWithEmptyWorkspace } from 'nx/src/devkit-testing-exports';
 import { normalizeCyTsConfigNames } from './update-cy-tsconfig';
 import { libraryGenerator } from '@nx/js';
@@ -235,7 +235,7 @@ function addCyExecutor(tree: Tree, projectName: string) {
   const pc = readProjectConfiguration(tree, projectName);
 
   pc.targets['e2e'] = {
-    executor: '@nx/cypress:cypress',
+    executor: '@titan/cypress:cypress',
     options: {
       testingType: 'e2e',
       devServerTarget: `${projectName}:serve`,

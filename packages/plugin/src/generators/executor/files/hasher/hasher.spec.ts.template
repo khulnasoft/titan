@@ -1,4 +1,4 @@
-import { TaskHasher, HasherContext } from '@nx/devkit';
+import { TaskHasher, HasherContext } from '@titan/devkit';
 
 import { <%=propertyName%>Hasher } from './hasher';
 

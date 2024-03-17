@@ -1,5 +1,5 @@
-import type { GeneratorCallback, Tree } from '@nx/devkit';
-import { addDependenciesToPackageJson, readJson } from '@nx/devkit';
+import type { GeneratorCallback, Tree } from '@titan/devkit';
+import { addDependenciesToPackageJson, readJson } from '@titan/devkit';
 import { clean, coerce, major } from 'semver';
 import {
   backwardCompatibleVersions,

@@ -1,4 +1,4 @@
-import { stripIndents } from '@nx/devkit';
+import { stripIndents } from '@titan/devkit';
 import { lt } from 'semver';
 import { getInstalledAngularVersionInfo } from '../../../executors/utilities/angular-version-utils';
 import type { Schema } from '../schema';

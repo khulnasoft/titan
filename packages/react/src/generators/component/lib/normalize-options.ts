@@ -1,6 +1,6 @@
-import { logger, names, readProjectConfiguration, Tree } from '@nx/devkit';
+import { logger, names, readProjectConfiguration, Tree } from '@titan/devkit';
 
-import { determineArtifactNameAndDirectoryOptions } from '@nx/devkit/src/generators/artifact-name-and-directory-utils';
+import { determineArtifactNameAndDirectoryOptions } from '@titan/devkit/src/generators/artifact-name-and-directory-utils';
 
 import { assertValidStyle } from '../../../utils/assertion';
 import { NormalizedSchema, Schema } from '../schema';

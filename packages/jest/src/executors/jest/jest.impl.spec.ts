@@ -15,7 +15,7 @@ jest.mock('jest-config', () => ({
   readConfig,
 }));
 
-import { ExecutorContext } from '@nx/devkit';
+import { ExecutorContext } from '@titan/devkit';
 import { jestExecutor } from './jest.impl';
 import { JestExecutorOptions } from './schema';
 
@@ -44,7 +44,7 @@ describe('Jest Executor', () => {
             root: 'proj',
             targets: {
               test: {
-                executor: '@nx/jest:jest',
+                executor: '@titan/jest:jest',
               },
             },
           },
@@ -52,7 +52,7 @@ describe('Jest Executor', () => {
       },
       nxJsonConfiguration: {},
       target: {
-        executor: '@nx/jest:jest',
+        executor: '@titan/jest:jest',
       },
       cwd: '/root',
       isVerbose: true,

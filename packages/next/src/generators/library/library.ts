@@ -6,7 +6,7 @@ import {
   runTasksInSerial,
   Tree,
   updateJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { libraryGenerator as reactLibraryGenerator } from '@nx/react/src/generators/library/library';
 import { addTsConfigPath, initGenerator as jsInitGenerator } from '@nx/js';
 import { testingLibraryReactVersion } from '@nx/react/src/utils/versions';
@@ -134,7 +134,7 @@ export async function libraryGeneratorInternal(host: Tree, rawOptions: Schema) {
       json.compilerOptions.types = [
         ...json.compilerOptions.types,
         'next',
-        '@nx/next/typings/image.d.ts',
+        '@titan/next/typings/image.d.ts',
       ];
       return json;
     }

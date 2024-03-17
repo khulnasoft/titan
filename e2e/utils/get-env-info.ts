@@ -1,4 +1,4 @@
-import { readJsonFile, workspaceRoot } from '@nx/devkit';
+import { readJsonFile, workspaceRoot } from '@titan/devkit';
 import { execSync } from 'child_process';
 import { existsSync } from 'fs-extra';
 import { join } from 'path';

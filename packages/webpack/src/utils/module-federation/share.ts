@@ -17,7 +17,7 @@ import {
   logger,
   readJsonFile,
   joinPathFragments,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { existsSync } from 'fs';
 import type { PackageJson } from 'nx/src/utils/package-json';
 

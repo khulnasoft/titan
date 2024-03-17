@@ -1,4 +1,4 @@
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import {
   Tree,
   readProjectConfiguration,
@@ -7,7 +7,7 @@ import {
   GeneratorsJson,
   ProjectConfiguration,
   stripIndents,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 import generator from './move-workspace-generators-to-local-plugin';
 
@@ -170,7 +170,7 @@ async function workspaceGeneratorGenerator(
 
   host.write(
     joinPathFragments(outputDirectory, 'index.ts'),
-    stripIndents`import { Tree, formatFiles, installPackagesTask } from '@nx/devkit';
+    stripIndents`import { Tree, formatFiles, installPackagesTask } from '@titan/devkit';
   import { libraryGenerator } from '@nx/workspace/generators';
   
   export default async function(tree: Tree, schema: any) {

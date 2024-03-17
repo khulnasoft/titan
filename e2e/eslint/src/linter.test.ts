@@ -22,7 +22,7 @@ describe('Linter', () => {
 
     beforeAll(() => {
       projScope = newProject({
-        packages: ['@nx/react', '@nx/js', '@nx/eslint'],
+        packages: ['@nx/react', '@nx/js', '@titan/eslint'],
       });
       runCLI(`generate @nx/react:app ${myapp} --tags=validtag`);
       runCLI(`generate @nx/js:lib ${mylib}`);
@@ -143,7 +143,7 @@ describe('Linter', () => {
 
         // Generate a new rule (should also scaffold the required workspace project and tests)
         const newRuleName = 'e2e-test-rule-name';
-        runCLI(`generate @nx/eslint:workspace-rule ${newRuleName}`);
+        runCLI(`generate @titan/eslint:workspace-rule ${newRuleName}`);
 
         // Ensure that the unit tests for the new rule are runnable
         const unitTestsOutput = runCLI(`test eslint-rules`);
@@ -474,14 +474,14 @@ describe('Linter', () => {
         updateFile(
           `libs/${mylib}/src/lib/${mylib}.ts`,
           (content) =>
-            `import { names } from '@nx/devkit';\n\n` +
+            `import { names } from '@titan/devkit';\n\n` +
             content.replace(/=> .*;/, `=> names('${mylib}').className;`)
         );
 
         // output should now report missing dependency
         out = runCLI(`lint ${mylib}`, { silenceError: true });
         expect(out).toContain('they are missing');
-        expect(out).toContain('@nx/devkit');
+        expect(out).toContain('@titan/devkit');
 
         // should fix the missing dependency issue
         out = runCLI(`lint ${mylib} --fix`, { silenceError: true });
@@ -492,7 +492,7 @@ describe('Linter', () => {
         expect(packageJson).toMatchInlineSnapshot(`
           {
             "dependencies": {
-              "@nx/devkit": "${nxVersion}",
+              "@titan/devkit": "${nxVersion}",
               "tslib": "${tslibVersion}",
             },
             "main": "./src/index.js",
@@ -506,12 +506,12 @@ describe('Linter', () => {
 
         // intentionally set the invalid version
         updateJson(`libs/${mylib}/package.json`, (json) => {
-          json.dependencies['@nx/devkit'] = '100.0.0';
+          json.dependencies['@titan/devkit'] = '100.0.0';
           return json;
         });
         out = runCLI(`lint ${mylib}`, { silenceError: true });
         expect(out).toContain(
-          'version specifier does not contain the installed version of "@nx/devkit"'
+          'version specifier does not contain the installed version of "@titan/devkit"'
         );
 
         // should fix the version mismatch issue
@@ -526,7 +526,7 @@ describe('Linter', () => {
   describe('Root projects migration', () => {
     beforeEach(() =>
       newProject({
-        packages: ['@nx/react', '@nx/js', '@nx/angular', '@nx/node'],
+        packages: ['@nx/react', '@nx/js', '@titan/angular', '@nx/node'],
       })
     );
     afterEach(() => cleanupProject());
@@ -617,7 +617,7 @@ describe('Linter', () => {
       const mylib = uniq('mylib');
 
       runCLI(
-        `generate @nx/angular:app ${myapp} --rootProject=true --no-interactive`
+        `generate @titan/angular:app ${myapp} --rootProject=true --no-interactive`
       );
       verifySuccessfulStandaloneSetup(myapp);
 

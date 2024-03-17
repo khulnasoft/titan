@@ -3,10 +3,10 @@ import {
   Tree,
   addProjectConfiguration,
   readJson,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { addLinting } from './add-linting';
-import { Linter } from '@nx/eslint';
+import { Linter } from '@titan/eslint';
 import { NormalizedSchema } from './normalize-options';
 
 describe('updateEslint', () => {

@@ -1,7 +1,7 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import type { NormalizedSchema, Schema } from '../schema';
-import { determineArtifactNameAndDirectoryOptions } from '@nx/devkit/src/generators/artifact-name-and-directory-utils';
-import { names } from '@nx/devkit';
+import { determineArtifactNameAndDirectoryOptions } from '@titan/devkit/src/generators/artifact-name-and-directory-utils';
+import { names } from '@titan/devkit';
 
 export async function normalizeOptions(
   tree: Tree,
@@ -15,7 +15,7 @@ export async function normalizeOptions(
     project: projectName,
   } = await determineArtifactNameAndDirectoryOptions(tree, {
     artifactType: 'pipe',
-    callingGenerator: '@nx/angular:scam-pipe',
+    callingGenerator: '@titan/angular:scam-pipe',
     name: options.name,
     directory: options.directory ?? options.path,
     flat: options.flat,

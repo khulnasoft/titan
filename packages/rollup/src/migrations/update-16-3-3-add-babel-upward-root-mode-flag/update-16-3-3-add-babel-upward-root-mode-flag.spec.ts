@@ -1,9 +1,9 @@
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import {
   addProjectConfiguration,
   readProjectConfiguration,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import addBabelUpwardRootModeFlag from './update-16-3-3-add-babel-upward-root-mode-flag';
 
 describe('16.3.0 migration (add babelUpwardRootMode flag)', () => {
@@ -39,7 +39,7 @@ describe('16.3.0 migration (add babelUpwardRootMode flag)', () => {
       root: 'apps/app3',
       targets: {
         build: {
-          executor: '@nx/esbuild:esbuild',
+          executor: '@titan/esbuild:esbuild',
           options: {},
         },
       },

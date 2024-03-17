@@ -9,7 +9,7 @@ import {
   getPackageManagerCommand,
   names,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 /**
  * Update .detoxrc.json under detox project for expo:

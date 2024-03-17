@@ -14,7 +14,7 @@ export interface GeneratorOptions {
 Import the TypeScript schema into your generator file and replace the `any` in your generator function with the interface.
 
 ```typescript
-import { Tree, formatFiles, installPackagesTask } from '@nx/devkit';
+import { Tree, formatFiles, installPackagesTask } from '@titan/devkit';
 import { libraryGenerator } from '@nx/js';
 
 export default async function (tree: Tree, schema: GeneratorOptions) {

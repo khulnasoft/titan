@@ -3,7 +3,7 @@ import {
   Tree,
   joinPathFragments,
   logger,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import {
   findViteConfig,
   findWebpackConfig,

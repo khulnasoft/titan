@@ -3,8 +3,8 @@ import {
   offsetFromRoot,
   Tree,
   updateProjectConfiguration,
-} from '@nx/devkit';
-import { forEachExecutorOptions } from '@nx/devkit/src/generators/executor-options-utils';
+} from '@titan/devkit';
+import { forEachExecutorOptions } from '@titan/devkit/src/generators/executor-options-utils';
 import { VitestExecutorOptions } from '../../executors/test/schema';
 
 export function updateReportDirectoryPlaceholders(tree: Tree) {

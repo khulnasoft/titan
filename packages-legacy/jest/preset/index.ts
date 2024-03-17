@@ -1,1 +1,1 @@
-module.exports = require('@nx/jest/preset');
+module.exports = require('@titan/jest/preset');

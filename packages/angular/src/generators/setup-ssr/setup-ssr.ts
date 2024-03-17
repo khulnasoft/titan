@@ -1,9 +1,9 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import {
   formatFiles,
   installPackagesTask,
   readProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { getInstalledAngularVersionInfo } from '../utils/version-utils';
 import {
   addDependencies,
@@ -28,7 +28,7 @@ export async function setupSsr(tree: Tree, schema: Schema) {
   const { targets } = readProjectConfiguration(tree, options.project);
   const isUsingApplicationBuilder =
     targets.build.executor === '@angular-devkit/build-angular:application' ||
-    targets.build.executor === '@nx/angular:application';
+    targets.build.executor === '@titan/angular:application';
 
   addDependencies(tree, isUsingApplicationBuilder);
   generateSSRFiles(tree, options, isUsingApplicationBuilder);

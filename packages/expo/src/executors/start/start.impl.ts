@@ -1,5 +1,5 @@
 import * as chalk from 'chalk';
-import { ExecutorContext, logger, names } from '@nx/devkit';
+import { ExecutorContext, logger, names } from '@titan/devkit';
 import { ChildProcess, fork } from 'child_process';
 import { resolve as pathResolve } from 'path';
 

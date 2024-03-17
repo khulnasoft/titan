@@ -18,10 +18,10 @@ import {
   runTasksInSerial,
   stripIndents,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 import reactInitGenerator from '../init/init';
-import { Linter, lintProjectGenerator } from '@nx/eslint';
+import { Linter, lintProjectGenerator } from '@titan/eslint';
 import {
   babelLoaderVersion,
   nxRspackVersion,
@@ -37,9 +37,9 @@ import { addE2e } from './lib/add-e2e';
 import {
   addExtendsToLintConfig,
   isEslintConfigSupported,
-} from '@nx/eslint/src/generators/utils/eslint-file';
+} from '@titan/eslint/src/generators/utils/eslint-file';
 import { initGenerator as jsInitGenerator } from '@nx/js';
-import { logShowProjectCommand } from '@nx/devkit/src/utils/log-show-project-command';
+import { logShowProjectCommand } from '@titan/devkit/src/utils/log-show-project-command';
 import { setupTailwindGenerator } from '../setup-tailwind/setup-tailwind';
 
 async function addLinting(host: Tree, options: NormalizedSchema) {

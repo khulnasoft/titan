@@ -1,4 +1,4 @@
-import { joinPathFragments, workspaceRoot } from '@nx/devkit';
+import { joinPathFragments, workspaceRoot } from '@titan/devkit';
 import { mergeConfig } from 'metro-config';
 import type { MetroConfig } from 'metro-config';
 import { existsSync, readdirSync, statSync } from 'fs-extra';

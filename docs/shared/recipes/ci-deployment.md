@@ -77,7 +77,7 @@ Some executors automatically generate output `package.json` and the lock file ge
 
 - `@nx/js:swc`
 - `@nx/js:tsc`
-- `@nx/next:build`
+- `@titan/next:build`
 
 {% /tab %}
 {% /tabs %}
@@ -97,7 +97,7 @@ const {
   createProjectGraphAsync,
   readCachedProjectGraph,
   detectPackageManager,
-} = require('@nx/devkit');
+} = require('@titan/devkit');
 const {
   createLockFile,
   createPackageJson,
@@ -166,7 +166,7 @@ import {
   detectPackageManager,
   ExecutorContext,
   writeJsonFile,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 export default async function buildExecutor(
   options: Schema,

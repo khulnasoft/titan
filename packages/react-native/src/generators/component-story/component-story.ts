@@ -1,4 +1,4 @@
-import { Tree, logger } from '@nx/devkit';
+import { Tree, logger } from '@titan/devkit';
 import { componentStoryGenerator as reactComponentStoryGenerator } from '@nx/react';
 import { CreateComponentStoriesFileSchema } from './schema';
 

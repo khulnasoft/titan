@@ -10,10 +10,10 @@ import {
   detectPackageManager,
   CreateNodesContext,
   joinPathFragments,
-} from '@nx/devkit';
-import { calculateHashForCreateNodes } from '@nx/devkit/src/utils/calculate-hash-for-create-nodes';
+} from '@titan/devkit';
+import { calculateHashForCreateNodes } from '@titan/devkit/src/utils/calculate-hash-for-create-nodes';
 import { getLockFileName } from '@nx/js';
-import { getNamedInputs } from '@nx/devkit/src/utils/get-named-inputs';
+import { getNamedInputs } from '@titan/devkit/src/utils/get-named-inputs';
 import { type RollupOptions } from 'rollup';
 import * as loadConfigFile from 'rollup/dist/loadConfigFile';
 

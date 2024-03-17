@@ -3,9 +3,9 @@ import {
   getProjects,
   readJson,
   readProjectConfiguration,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { Linter } from '@nx/eslint';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { Linter } from '@titan/eslint';
 import { reactNativeApplicationGenerator } from './application';
 
 describe('app', () => {
@@ -74,7 +74,7 @@ describe('app', () => {
       "module.exports = {
         displayName: 'my-app',
         preset: 'react-native',
-        resolver: '@nx/jest/plugins/resolver',
+        resolver: '@titan/jest/plugins/resolver',
         moduleFileExtensions: ['ts', 'js', 'html', 'tsx', 'jsx'],
         setupFilesAfterEnv: ['<rootDir>/test-setup.ts'],
         moduleNameMapper: {

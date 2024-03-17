@@ -1,5 +1,5 @@
-import { addProjectConfiguration, type Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { addProjectConfiguration, type Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { setRouterInitialNavigation } from './set-router-initial-navigation';
 
 describe('setRouterInitialNavigation', () => {

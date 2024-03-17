@@ -7,14 +7,14 @@ import {
   readJsonFile,
   TargetConfiguration,
   writeJsonFile,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { dirname, extname, join } from 'path';
 
-import { getNamedInputs } from '@nx/devkit/src/utils/get-named-inputs';
+import { getNamedInputs } from '@titan/devkit/src/utils/get-named-inputs';
 import { existsSync, readdirSync } from 'fs';
 
 import { projectGraphCacheDirectory } from 'nx/src/utils/cache-directory';
-import { calculateHashForCreateNodes } from '@nx/devkit/src/utils/calculate-hash-for-create-nodes';
+import { calculateHashForCreateNodes } from '@titan/devkit/src/utils/calculate-hash-for-create-nodes';
 import { getLockFileName } from '@nx/js';
 
 export interface NextPluginOptions {

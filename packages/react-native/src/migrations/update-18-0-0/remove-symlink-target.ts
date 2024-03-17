@@ -3,7 +3,7 @@ import {
   Tree,
   getProjects,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { removeSync } from 'fs-extra';
 
 /**

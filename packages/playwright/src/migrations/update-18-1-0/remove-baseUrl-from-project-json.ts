@@ -5,13 +5,13 @@ import {
   type Tree,
   updateNxJson,
   updateProjectConfiguration,
-} from '@nx/devkit';
-import { forEachExecutorOptions } from '@nx/devkit/src/generators/executor-options-utils';
+} from '@titan/devkit';
+import { forEachExecutorOptions } from '@titan/devkit/src/generators/executor-options-utils';
 
 export default async function (tree: Tree) {
   forEachExecutorOptions(
     tree,
-    '@nx/playwright:playwright',
+    '@titan/playwright:playwright',
     (options, projectName, targetName, configurationName) => {
       if (options?.['baseUrl']) {
         const project = readProjectConfiguration(tree, projectName);
@@ -33,8 +33,8 @@ export default async function (tree: Tree) {
     nxJson.targetDefaults
   )) {
     if (
-      targetNameOrExecutor === '@nx/playwright:playwright' ||
-      (target.executor && target.executor === '@nx/playwright:playwright')
+      targetNameOrExecutor === '@titan/playwright:playwright' ||
+      (target.executor && target.executor === '@titan/playwright:playwright')
     ) {
       let updated = false;
       if (target.options?.['baseUrl']) {

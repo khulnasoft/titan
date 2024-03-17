@@ -3,7 +3,7 @@ import {
   readProjectConfiguration,
   removeProjectConfiguration,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { checkDestination } from './lib/check-destination';
 import { createProjectConfigurationInNewDestination } from './lib/create-project-configuration-in-new-destination';
 import { moveProjectFiles } from './lib/move-project-files';

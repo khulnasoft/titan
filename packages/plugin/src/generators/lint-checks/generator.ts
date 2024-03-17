@@ -10,9 +10,9 @@ import {
   Tree,
   updateProjectConfiguration,
   writeJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
-import type { Schema as EsLintExecutorOptions } from '@nx/eslint/src/executors/lint/schema';
+import type { Schema as EsLintExecutorOptions } from '@titan/eslint/src/executors/lint/schema';
 
 import { PluginLintChecksGeneratorSchema } from './schema';
 import { NX_PREFIX } from 'nx/src/utils/logger';
@@ -23,8 +23,8 @@ import {
   isEslintConfigSupported,
   lintConfigHasOverride,
   updateOverrideInLintConfig,
-} from '@nx/eslint/src/generators/utils/eslint-file';
-import { useFlatConfig } from '@nx/eslint/src/utils/flat-config';
+} from '@titan/eslint/src/generators/utils/eslint-file';
+import { useFlatConfig } from '@titan/eslint/src/utils/flat-config';
 
 export default async function pluginLintCheckGenerator(
   host: Tree,
@@ -131,7 +131,7 @@ function updateProjectTarget(
 
   for (const [target, configuration] of Object.entries(project.targets)) {
     if (
-      configuration.executor === '@nx/eslint:lint' &&
+      configuration.executor === '@titan/eslint:lint' &&
       // only add patterns if there are already hardcoded ones
       configuration.options?.lintFilePatterns
     ) {
@@ -290,7 +290,7 @@ export function getEsLintOptions(
 ): [target: string, configuration: TargetConfiguration<EsLintExecutorOptions>] {
   return Object.entries(project.targets || {}).find(
     ([, x]) =>
-      x.executor === '@nx/eslint:lint' ||
+      x.executor === '@titan/eslint:lint' ||
       x.executor === '@nx/linter:eslint' ||
       x.executor === '@nrwl/linter:eslint'
   );

@@ -1,4 +1,4 @@
-import { Tree, getProjects, updateProjectConfiguration } from '@nx/devkit';
+import { Tree, getProjects, updateProjectConfiguration } from '@titan/devkit';
 
 /**
  * This migration adds dependsOn to project.json.

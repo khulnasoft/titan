@@ -7,9 +7,9 @@ import {
   readJson,
   runTasksInSerial,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { initGenerator as jsInitGenerator } from '@nx/js';
-import { logShowProjectCommand } from '@nx/devkit/src/utils/log-show-project-command';
+import { logShowProjectCommand } from '@titan/devkit/src/utils/log-show-project-command';
 
 import { addLinting } from '../../utils/add-linting';
 import { addJest } from '../../utils/add-jest';

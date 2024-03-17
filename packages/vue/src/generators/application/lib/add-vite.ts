@@ -3,7 +3,7 @@ import {
   readProjectConfiguration,
   Tree,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { createOrEditViteConfig, viteConfigurationGenerator } from '@nx/vite';
 
 import { NormalizedSchema } from '../schema';

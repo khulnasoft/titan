@@ -4,8 +4,8 @@ import {
   readProjectConfiguration,
   updateJson,
   type Tree,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { convertToApplicationExecutor } from './convert-to-application-executor';
 
 describe('convert-to-application-executor generator', () => {
@@ -21,8 +21,8 @@ describe('convert-to-application-executor generator', () => {
     executor                                           | expected
     ${'@angular-devkit/build-angular:browser'}         | ${'@angular-devkit/build-angular:application'}
     ${'@angular-devkit/build-angular:browser-esbuild'} | ${'@angular-devkit/build-angular:application'}
-    ${'@nx/angular:webpack-browser'}                   | ${'@nx/angular:application'}
-    ${'@nx/angular:browser-esbuild'}                   | ${'@nx/angular:application'}
+    ${'@titan/angular:webpack-browser'}                   | ${'@titan/angular:application'}
+    ${'@titan/angular:browser-esbuild'}                   | ${'@titan/angular:application'}
   `(
     'should replace "$executor" with "$expected"',
     async ({ executor, expected }) => {
@@ -45,7 +45,7 @@ describe('convert-to-application-executor generator', () => {
       projectType: 'application',
       targets: {
         build: {
-          executor: '@nx/angular:webpack-browser',
+          executor: '@titan/angular:webpack-browser',
           options: {
             customWebpackConfig: {
               path: 'app1/webpack.config.js',
@@ -58,7 +58,7 @@ describe('convert-to-application-executor generator', () => {
     await convertToApplicationExecutor(tree, {});
 
     const project = readProjectConfiguration(tree, 'app1');
-    expect(project.targets.build.executor).toBe('@nx/angular:webpack-browser');
+    expect(project.targets.build.executor).toBe('@titan/angular:webpack-browser');
     expect(project.targets.build.options.customWebpackConfig).toStrictEqual({
       path: 'app1/webpack.config.js',
     });

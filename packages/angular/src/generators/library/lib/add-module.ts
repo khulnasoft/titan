@@ -1,4 +1,4 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import { addChildren } from './add-children';
 import { addLoadChildren } from './add-load-children';
 import { NormalizedSchema } from './normalized-schema';

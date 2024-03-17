@@ -5,7 +5,7 @@ import {
   readProjectConfiguration,
   Tree,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { nxVersion } from '../utils/versions';
 import { maybeJs } from '../utils/maybe-js';
 

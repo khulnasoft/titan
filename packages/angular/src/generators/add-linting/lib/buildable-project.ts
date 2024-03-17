@@ -1,4 +1,4 @@
-import { readProjectConfiguration, type Tree } from '@nx/devkit';
+import { readProjectConfiguration, type Tree } from '@titan/devkit';
 
 export function isBuildableLibraryProject(
   tree: Tree,

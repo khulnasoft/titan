@@ -69,7 +69,7 @@ describe('convert Angular CLI workspace to an Nx workspace', () => {
     packageManager = packageManager === 'pnpm' ? 'yarn' : packageManager;
     project = runNgNew(packageManager);
     packageInstall('nx', null, 'latest');
-    packageInstall('@nx/angular', null, 'latest');
+    packageInstall('@titan/angular', null, 'latest');
   });
 
   afterEach(() => {
@@ -107,7 +107,7 @@ describe('convert Angular CLI workspace to an Nx workspace', () => {
     expect(packageJson.devDependencies['@nx/workspace']).not.toBeDefined();
 
     // run ng add
-    runCLI('g @nx/angular:ng-add --default-base main');
+    runCLI('g @titan/angular:ng-add --default-base main');
 
     // check that prettier config exits and that files have been moved
     checkFilesExist(
@@ -261,7 +261,7 @@ describe('convert Angular CLI workspace to an Nx workspace', () => {
   it('should handle a workspace with cypress v9', () => {
     addCypress9();
 
-    runCLI('g @nx/angular:ng-add --skip-install');
+    runCLI('g @titan/angular:ng-add --skip-install');
 
     const e2eProject = `${project}-e2e`;
     //check e2e project files
@@ -290,7 +290,7 @@ describe('convert Angular CLI workspace to an Nx workspace', () => {
     // check e2e project config
     const e2eProjectConfig = readJson(`apps/${project}-e2e/project.json`);
     expect(e2eProjectConfig.targets['cypress-run']).toEqual({
-      executor: '@nx/cypress:cypress',
+      executor: '@titan/cypress:cypress',
       options: {
         devServerTarget: `${project}:serve`,
         cypressConfig: `apps/${e2eProject}/cypress.json`,
@@ -302,7 +302,7 @@ describe('convert Angular CLI workspace to an Nx workspace', () => {
       },
     });
     expect(e2eProjectConfig.targets['cypress-open']).toEqual({
-      executor: '@nx/cypress:cypress',
+      executor: '@titan/cypress:cypress',
       options: {
         watch: true,
         headless: false,
@@ -310,7 +310,7 @@ describe('convert Angular CLI workspace to an Nx workspace', () => {
       },
     });
     expect(e2eProjectConfig.targets.e2e).toEqual({
-      executor: '@nx/cypress:cypress',
+      executor: '@titan/cypress:cypress',
       options: {
         devServerTarget: `${project}:serve`,
         watch: true,
@@ -328,7 +328,7 @@ describe('convert Angular CLI workspace to an Nx workspace', () => {
   it('should handle a workspace with cypress v10', () => {
     addCypress10();
 
-    runCLI('g @nx/angular:ng-add --skip-install');
+    runCLI('g @titan/angular:ng-add --skip-install');
 
     const e2eProject = `${project}-e2e`;
     //check e2e project files
@@ -357,7 +357,7 @@ describe('convert Angular CLI workspace to an Nx workspace', () => {
     // check e2e project config
     const e2eProjectConfig = readJson(`apps/${project}-e2e/project.json`);
     expect(e2eProjectConfig.targets['cypress-run']).toEqual({
-      executor: '@nx/cypress:cypress',
+      executor: '@titan/cypress:cypress',
       options: {
         devServerTarget: `${project}:serve`,
         cypressConfig: `apps/${e2eProject}/cypress.config.ts`,
@@ -369,7 +369,7 @@ describe('convert Angular CLI workspace to an Nx workspace', () => {
       },
     });
     expect(e2eProjectConfig.targets['cypress-open']).toEqual({
-      executor: '@nx/cypress:cypress',
+      executor: '@titan/cypress:cypress',
       options: {
         watch: true,
         headless: false,
@@ -377,7 +377,7 @@ describe('convert Angular CLI workspace to an Nx workspace', () => {
       },
     });
     expect(e2eProjectConfig.targets.e2e).toEqual({
-      executor: '@nx/cypress:cypress',
+      executor: '@titan/cypress:cypress',
       options: {
         devServerTarget: `${project}:serve`,
         watch: true,
@@ -394,17 +394,17 @@ describe('convert Angular CLI workspace to an Nx workspace', () => {
 
   // TODO(leo): The current Verdaccio setup fails to resolve older versions
   // of @nx/* packages, the @angular-eslint/builder package depends on an
-  // older version of @nx/devkit so we skip this test for now.
+  // older version of @titan/devkit so we skip this test for now.
   it.skip('should handle a workspace with ESLint', () => {
     addEsLint();
 
-    runCLI('g @nx/angular:ng-add');
+    runCLI('g @titan/angular:ng-add');
 
     checkFilesExist(`apps/${project}/.eslintrc.json`, `.eslintrc.json`);
 
     const projectConfig = readJson(`apps/${project}/project.json`);
     expect(projectConfig.targets.lint).toStrictEqual({
-      executor: '@nx/eslint:lint',
+      executor: '@titan/eslint:lint',
     });
 
     let output = runCLI(`lint ${project}`);
@@ -429,7 +429,7 @@ describe('convert Angular CLI workspace to an Nx workspace', () => {
     runCommand(`ng g @schematics/angular:application ${app1} --no-interactive`);
     runCommand(`ng g @schematics/angular:library ${lib1} --no-interactive`);
 
-    runCLI('g @nx/angular:ng-add');
+    runCLI('g @titan/angular:ng-add');
 
     // check angular.json does not exist
     checkFilesDoNotExist('angular.json');

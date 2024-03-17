@@ -1,5 +1,5 @@
-import { formatFiles, joinPathFragments, Tree } from '@nx/devkit';
-import { determineArtifactNameAndDirectoryOptions } from '@nx/devkit/src/generators/artifact-name-and-directory-utils';
+import { formatFiles, joinPathFragments, Tree } from '@titan/devkit';
+import { determineArtifactNameAndDirectoryOptions } from '@titan/devkit/src/generators/artifact-name-and-directory-utils';
 import {
   checkRoutePathForErrors,
   resolveRemixRouteFile,

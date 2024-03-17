@@ -4,14 +4,14 @@ import {
   ProjectGraph,
   readJson,
   updateJson,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { jasmineMarblesVersion } from '../../utils/versions';
 import switchToJasmineMarbles from './switch-to-jasmine-marbles';
 
 let projectGraph: ProjectGraph;
-jest.mock('@nx/devkit', () => ({
-  ...jest.requireActual<any>('@nx/devkit'),
+jest.mock('@titan/devkit', () => ({
+  ...jest.requireActual<any>('@titan/devkit'),
   readCachedProjectGraph: jest.fn().mockImplementation(() => projectGraph),
   createProjectGraphAsync: jest
     .fn()

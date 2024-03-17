@@ -1,5 +1,5 @@
-import { addProjectConfiguration } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { addProjectConfiguration } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { componentGenerator } from '../../component/component';
 import { convertComponentToScam } from './convert-component-to-scam';
 

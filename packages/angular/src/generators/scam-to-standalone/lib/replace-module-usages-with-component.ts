@@ -1,5 +1,5 @@
 import { Tree } from 'nx/src/generators/tree';
-import { visitNotIgnoredFiles } from '@nx/devkit';
+import { visitNotIgnoredFiles } from '@titan/devkit';
 import { extname } from 'path';
 
 export function replaceModuleUsagesWithComponent(

@@ -16,7 +16,7 @@ describe('Jest', () => {
 
   afterAll(() => cleanupProject());
 
-  it('should support multiple `coverageReporters` when using @nx/jest:jest executor', async () => {
+  it('should support multiple `coverageReporters` when using @titan/jest:jest executor', async () => {
     const mylib = uniq('mylib');
     runCLI(`generate @nx/js:lib ${mylib} --unitTestRunner=jest`, {
       env: {

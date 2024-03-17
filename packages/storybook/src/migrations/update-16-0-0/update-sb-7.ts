@@ -1,4 +1,4 @@
-import { Tree } from '@nx/devkit';
+import { Tree } from '@titan/devkit';
 import { output } from 'nx/src/utils/output';
 import migrate7Generator from '../../generators/migrate-7/migrate-7';
 import { storybookMajorVersion } from '../../utils/utilities';

@@ -1,5 +1,5 @@
-import { readProjectConfiguration, Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { readProjectConfiguration, Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { applicationGenerator } from '../application/application';
 describe('setupDockerGenerator', () => {
   let tree: Tree;

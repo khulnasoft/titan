@@ -13,7 +13,7 @@ import {
   Tree,
   updateNxJson,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 import type { Schema } from './schema';
 import {

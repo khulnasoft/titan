@@ -1,7 +1,7 @@
-import { installedCypressVersion } from '@nx/cypress/src/utils/cypress-version';
-import { Tree } from '@nx/devkit';
-import { writeJson } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { installedCypressVersion } from '@titan/cypress/src/utils/cypress-version';
+import { Tree } from '@titan/devkit';
+import { writeJson } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { componentGenerator } from '../component/component';
 import { librarySecondaryEntryPointGenerator } from '../library-secondary-entry-point/library-secondary-entry-point';
 import { scamGenerator } from '../scam/scam';
@@ -13,7 +13,7 @@ import { angularStoriesGenerator } from './stories';
 
 // need to mock cypress otherwise it'll use the nx installed version from package.json
 //  which is v9 while we are testing for the new v10 version
-jest.mock('@nx/cypress/src/utils/cypress-version');
+jest.mock('@titan/cypress/src/utils/cypress-version');
 // TODO(katerina): Nx 19 -> remove Cypress
 
 describe('angularStories generator: libraries', () => {

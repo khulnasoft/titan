@@ -1,5 +1,5 @@
-import type { ExecutorContext } from '@nx/devkit';
-import { parseTargetString } from '@nx/devkit';
+import type { ExecutorContext } from '@titan/devkit';
+import { parseTargetString } from '@titan/devkit';
 import type {
   ExecutorOptions,
   NormalizedExecutorOptions,

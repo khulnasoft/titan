@@ -1,4 +1,4 @@
-import { Tree, logger, readNxJson } from '@nx/devkit';
+import { Tree, logger, readNxJson } from '@titan/devkit';
 import { storybookConfigurationGenerator as reactStorybookConfigurationGenerator } from '@nx/react';
 import { StorybookConfigureSchema } from './schema';
 

@@ -190,7 +190,7 @@ Navigate to `nx.json` it should contain the following:
   // ... other config
   "plugins": [
     {
-      "plugin": "@nx/eslint/plugin",
+      "plugin": "@titan/eslint/plugin",
       "options": {
         "targetName": "lint"
       }

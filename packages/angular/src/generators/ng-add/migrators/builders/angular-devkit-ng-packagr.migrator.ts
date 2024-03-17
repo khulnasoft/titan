@@ -2,13 +2,13 @@ import type {
   ProjectConfiguration,
   TargetConfiguration,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import {
   joinPathFragments,
   offsetFromRoot,
   updateJson,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { getRootTsConfigPathInTree } from '@nx/js';
 import { basename } from 'path';
 import { addBuildableLibrariesPostCssDependencies } from '../../../utils/dependencies';
@@ -58,7 +58,7 @@ export class AngularDevkitNgPackagrMigrator extends BuilderMigrator {
     targetName: string,
     target: TargetConfiguration
   ): void {
-    target.executor = '@nx/angular:package';
+    target.executor = '@titan/angular:package';
 
     if (
       !target.options &&

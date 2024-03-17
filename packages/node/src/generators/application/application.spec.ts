@@ -1,14 +1,14 @@
-import * as devkit from '@nx/devkit';
+import * as devkit from '@titan/devkit';
 import {
   getProjects,
   readJson,
   readProjectConfiguration,
   Tree,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 
 // nx-ignore-next-line
-import { applicationGenerator as angularApplicationGenerator } from '@nx/angular/generators';
+import { applicationGenerator as angularApplicationGenerator } from '@titan/angular/generators';
 import { Schema } from './schema';
 import { applicationGenerator } from './application';
 
@@ -198,7 +198,7 @@ describe('app', () => {
                 },
               },
               "defaultConfiguration": "production",
-              "executor": "@nx/esbuild:esbuild",
+              "executor": "@titan/esbuild:esbuild",
               "options": {
                 "assets": [
                   "my-dir/my-node-app/src/assets",

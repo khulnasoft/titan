@@ -4,7 +4,7 @@ import {
   type ProjectConfiguration,
   joinPathFragments,
   formatFiles,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { addMfEnvToTargetDefaultInputs } from '../../generators/utils/add-mf-env-to-inputs';
 
 export default async function (tree: Tree) {
@@ -22,7 +22,7 @@ function isWebpackBrowserUsed(tree: Tree) {
     const targets = project.targets || {};
     for (const [_, target] of Object.entries(targets)) {
       if (
-        target.executor === '@nx/angular:webpack-browser' &&
+        target.executor === '@titan/angular:webpack-browser' &&
         (tree.exists(
           joinPathFragments(project.root, 'module-federation.config.ts')
         ) ||

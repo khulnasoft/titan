@@ -1,5 +1,5 @@
-import { addProjectConfiguration, Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { addProjectConfiguration, Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 
 import configurationGenerator from './configuration';
 

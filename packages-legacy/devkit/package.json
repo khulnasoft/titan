@@ -28,12 +28,12 @@
   },
   "homepage": "https://nx.dev",
   "dependencies": {
-    "@nx/devkit": "file:../../packages/devkit"
+    "@titan/devkit": "file:../../packages/devkit"
   },
   "publishConfig": {
     "access": "public"
   },
   "nx-migrations": {
-    "migrations": "@nx/devkit/migrations.json"
+    "migrations": "@titan/devkit/migrations.json"
   }
 }

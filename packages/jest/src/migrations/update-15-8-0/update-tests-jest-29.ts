@@ -4,8 +4,8 @@ import {
   readProjectConfiguration,
   Tree,
   visitNotIgnoredFiles,
-} from '@nx/devkit';
-import { forEachExecutorOptionsInGraph } from '@nx/devkit/src/generators/executor-options-utils';
+} from '@titan/devkit';
+import { forEachExecutorOptionsInGraph } from '@titan/devkit/src/generators/executor-options-utils';
 import { tsquery } from '@phenomnomnominal/tsquery';
 import {
   CallExpression,

@@ -4,7 +4,7 @@ import {
   offsetFromRoot,
   parseTargetString,
   runExecutor,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import {
   getNxTargetOptions,
   getProxyConfig,

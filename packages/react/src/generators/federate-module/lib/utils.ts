@@ -1,4 +1,4 @@
-import { Tree, getProjects, joinPathFragments } from '@nx/devkit';
+import { Tree, getProjects, joinPathFragments } from '@titan/devkit';
 
 import { ensureTypescript } from '@nx/js/src/utils/typescript/ensure-typescript';
 import type {

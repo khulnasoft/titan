@@ -1,6 +1,6 @@
-import type { Tree } from '@nx/devkit';
-import { Linter } from '@nx/eslint';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import type { Tree } from '@titan/devkit';
+import { Linter } from '@titan/eslint';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { normalizeOptions } from './normalize-options';
 
 describe('normalizeOptions', () => {

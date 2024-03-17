@@ -1,4 +1,4 @@
-import { offsetFromRoot, Tree, updateJson, workspaceRoot } from '@nx/devkit';
+import { offsetFromRoot, Tree, updateJson, workspaceRoot } from '@titan/devkit';
 import { existsSync } from 'fs';
 import { dirname, join } from 'path';
 import * as ts from 'typescript';

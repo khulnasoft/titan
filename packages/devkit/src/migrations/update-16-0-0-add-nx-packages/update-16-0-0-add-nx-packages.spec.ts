@@ -26,13 +26,13 @@ describe('update-16-0-0-add-nx-packages', () => {
     ).not.toBeDefined();
   });
 
-  it('should add a dependency on @nx/devkit', async () => {
+  it('should add a dependency on @titan/devkit', async () => {
     await replacePackage(tree);
 
     const packageJson = readJson(tree, 'package.json');
     const newDependencyVersion =
-      packageJson.devDependencies['@nx/devkit'] ??
-      packageJson.dependencies['@nx/devkit'];
+      packageJson.devDependencies['@titan/devkit'] ??
+      packageJson.dependencies['@titan/devkit'];
 
     expect(newDependencyVersion).toBeDefined();
   });

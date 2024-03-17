@@ -182,7 +182,7 @@
         "type": "generator"
       },
       {
-        "description": "Converts projects to use the `@nx/angular:application` executor or the `@angular-devkit/build-angular:application` builder. _Note: this is only supported in Angular versions >= 17.0.0_.",
+        "description": "Converts projects to use the `@titan/angular:application` executor or the `@angular-devkit/build-angular:application` builder. _Note: this is only supported in Angular versions >= 17.0.0_.",
         "file": "generated/packages/angular/generators/convert-to-application-executor.json",
         "hidden": false,
         "name": "convert-to-application-executor",
@@ -418,7 +418,7 @@
     ],
     "githubRoot": "https://github.com/nrwl/nx/blob/master",
     "name": "angular",
-    "packageName": "@nx/angular",
+    "packageName": "@titan/angular",
     "root": "/packages/angular",
     "source": "/packages/angular/src"
   },
@@ -519,7 +519,7 @@
     ],
     "githubRoot": "https://github.com/nrwl/nx/blob/master",
     "name": "cypress",
-    "packageName": "@nx/cypress",
+    "packageName": "@titan/cypress",
     "root": "/packages/cypress",
     "source": "/packages/cypress/src"
   },
@@ -614,7 +614,7 @@
     "generators": [],
     "githubRoot": "https://github.com/nrwl/nx/blob/master",
     "name": "devkit",
-    "packageName": "@nx/devkit",
+    "packageName": "@titan/devkit",
     "root": "/packages/devkit",
     "source": "/packages/devkit/src"
   },
@@ -666,7 +666,7 @@
     ],
     "githubRoot": "https://github.com/nrwl/nx/blob/master",
     "name": "esbuild",
-    "packageName": "@nx/esbuild",
+    "packageName": "@titan/esbuild",
     "root": "/packages/esbuild",
     "source": "/packages/esbuild/src"
   },
@@ -736,7 +736,7 @@
     ],
     "githubRoot": "https://github.com/nrwl/nx/blob/master",
     "name": "eslint",
-    "packageName": "@nx/eslint",
+    "packageName": "@titan/eslint",
     "root": "/packages/eslint",
     "source": "/packages/eslint/src"
   },
@@ -781,7 +781,7 @@
     "generators": [],
     "githubRoot": "https://github.com/nrwl/nx/blob/master",
     "name": "eslint-plugin",
-    "packageName": "@nx/eslint-plugin",
+    "packageName": "@titan/eslint-plugin",
     "root": "/packages/eslint-plugin",
     "source": "/packages/eslint-plugin/src"
   },
@@ -1044,7 +1044,7 @@
     ],
     "githubRoot": "https://github.com/nrwl/nx/blob/master",
     "name": "jest",
-    "packageName": "@nx/jest",
+    "packageName": "@titan/jest",
     "root": "/packages/jest",
     "source": "/packages/jest/src"
   },
@@ -1469,7 +1469,7 @@
     ],
     "githubRoot": "https://github.com/nrwl/nx/blob/master",
     "name": "next",
-    "packageName": "@nx/next",
+    "packageName": "@titan/next",
     "root": "/packages/next",
     "source": "/packages/next/src"
   },
@@ -1946,7 +1946,7 @@
     ],
     "githubRoot": "https://github.com/nrwl/nx/blob/master",
     "name": "playwright",
-    "packageName": "@nx/playwright",
+    "packageName": "@titan/playwright",
     "root": "/packages/playwright",
     "source": "/packages/playwright/src"
   },

@@ -4,7 +4,7 @@ import {
   logger,
   readProjectConfiguration,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import type { Schema } from './schema';
 import { getMFProjects } from '../../utils/get-mf-projects';
 import {

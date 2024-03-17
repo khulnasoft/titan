@@ -3,8 +3,8 @@ import {
   readJson,
   stripIndents,
   writeJson,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import update from './setup-tailwind';
 
 describe('vue setup-tailwind generator', () => {

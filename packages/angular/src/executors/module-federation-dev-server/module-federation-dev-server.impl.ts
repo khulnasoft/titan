@@ -2,7 +2,7 @@ import {
   type ExecutorContext,
   logger,
   readProjectsConfigurationFromProjectGraph,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { type Schema } from './schema';
 import {
   buildStaticRemotes,
@@ -11,12 +11,12 @@ import {
   startDevRemotes,
   startStaticRemotesFileServer,
 } from './lib';
-import { eachValueFrom } from '@nx/devkit/src/utils/rxjs-for-await';
+import { eachValueFrom } from '@titan/devkit/src/utils/rxjs-for-await';
 import {
   combineAsyncIterables,
   createAsyncIterable,
   mapAsyncIterable,
-} from '@nx/devkit/src/utils/async-iterable';
+} from '@titan/devkit/src/utils/async-iterable';
 import {
   getModuleFederationConfig,
   getRemotes,
@@ -61,7 +61,7 @@ export async function* moduleFederationDevServerExecutor(
           options,
           await createBuilderContext(
             {
-              builderName: '@nx/angular:webpack-browser',
+              builderName: '@titan/angular:webpack-browser',
               description: 'Build a browser application',
               optionSchema: await import(
                 '../../builders/webpack-browser/schema.json'

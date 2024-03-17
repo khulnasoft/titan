@@ -7,8 +7,8 @@ import {
   runTasksInSerial,
   Tree,
   updateNxJson,
-} from '@nx/devkit';
-import { updatePackageScripts } from '@nx/devkit/src/utils/update-package-scripts';
+} from '@titan/devkit';
+import { updatePackageScripts } from '@titan/devkit/src/utils/update-package-scripts';
 import { createNodes, ExpoPluginOptions } from '../../../plugins/plugin';
 import {
   expoCliVersion,

@@ -4,7 +4,7 @@ import {
   readNxJson,
   readProjectConfiguration,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { nxVersion } from '../../utils/versions';
 import { addFiles } from './lib/add-files';
 import { configureCypressCT } from '../../utils/ct-utils';
@@ -30,8 +30,8 @@ export async function cypressComponentConfigGeneratorInternal(
   options: CypressComponentConfigurationSchema
 ) {
   const { componentConfigurationGenerator: baseCyCtConfig } = ensurePackage<
-    typeof import('@nx/cypress')
-  >('@nx/cypress', nxVersion);
+    typeof import('@titan/cypress')
+  >('@titan/cypress', nxVersion);
 
   const nxJson = readNxJson(tree);
   const addPlugin =

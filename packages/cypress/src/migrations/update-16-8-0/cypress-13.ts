@@ -5,7 +5,7 @@ import {
   visitNotIgnoredFiles,
   formatFiles,
   type Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { installedCypressVersion } from '../../utils/cypress-version';
 import {
   isObjectLiteralExpression,
@@ -16,7 +16,7 @@ import {
   type PropertyAssignment,
 } from 'typescript';
 import { tsquery } from '@phenomnomnominal/tsquery';
-import { forEachExecutorOptions } from '@nx/devkit/src/generators/executor-options-utils';
+import { forEachExecutorOptions } from '@titan/devkit/src/generators/executor-options-utils';
 import type { CypressExecutorOptions } from '../../executors/cypress/cypress.impl';
 
 const JS_TS_FILE_MATCHER = /\.[jt]sx?$/;
@@ -30,7 +30,7 @@ export async function updateToCypress13(tree: Tree) {
 
   forEachExecutorOptions<CypressExecutorOptions>(
     tree,
-    '@nx/cypress:cypress',
+    '@titan/cypress:cypress',
     (options, projectName) => {
       if (!options.cypressConfig || !tree.exists(options.cypressConfig)) {
         return;
@@ -215,7 +215,7 @@ export function shouldNotOverrideReadFile(tree: Tree, filePath: string) {
         if (command === 'readFile') {
           // overwrite
           return `/**
-* TODO(@nx/cypress): This command can no longer be overridden
+* TODO(@titan/cypress): This command can no longer be overridden
 * Consider using a different name like 'custom_${command}'
 * More info: https://docs.cypress.io/guides/references/migration-guide#readFile-can-no-longer-be-overwritten-with-CypressCommandsoverwrite
 **/
@@ -228,7 +228,7 @@ ${node.getText()}`;
 }
 
 function isAlreadyCommented(node: PropertyAccessExpression) {
-  return node.getFullText().includes('TODO(@nx/cypress)');
+  return node.getFullText().includes('TODO(@titan/cypress)');
 }
 
 function isPropertyTopLevel(node: PropertyAssignment) {

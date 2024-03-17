@@ -41,11 +41,11 @@ const pages: Array<{ title: string; path: string }> = [
     path: '/storybook/storybook-composition-setup',
   },
   {
-    title: '@nx/devkit',
+    title: '@titan/devkit',
     path: '/devkit/index',
   },
   {
-    title: '@nx/devkit',
+    title: '@titan/devkit',
     path: '/devkit/ngcli_adapter',
   },
 ];

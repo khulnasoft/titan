@@ -1,6 +1,6 @@
-import * as devkit from '@nx/devkit';
-import { addProjectConfiguration, readJson, Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import * as devkit from '@titan/devkit';
+import { addProjectConfiguration, readJson, Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { generateTestLibrary } from '../utils/testing';
 import { librarySecondaryEntryPointGenerator } from './library-secondary-entry-point';
 

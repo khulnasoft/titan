@@ -2,7 +2,7 @@ import {
   joinPathFragments,
   normalizePath,
   targetToTargetString,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { existsSync } from 'fs';
 import { relative } from 'path';
 import { Observable, from } from 'rxjs';

@@ -1,10 +1,10 @@
 {
-  "@nx/angular": {
+  "@titan/angular": {
     "lastPublishedDate": "2023-12-12T20:23:02.852Z",
     "npmDownloads": 918971,
     "githubStars": 20474
   },
-  "@nx/cypress": {
+  "@titan/cypress": {
     "lastPublishedDate": "2023-12-12T20:22:42.711Z",
     "npmDownloads": 2277532,
     "githubStars": 20474
@@ -14,22 +14,22 @@
     "npmDownloads": 134668,
     "githubStars": 20474
   },
-  "@nx/devkit": {
+  "@titan/devkit": {
     "lastPublishedDate": "2023-12-12T20:22:07.047Z",
     "npmDownloads": 9592305,
     "githubStars": 20474
   },
-  "@nx/esbuild": {
+  "@titan/esbuild": {
     "lastPublishedDate": "2023-12-12T20:22:27.310Z",
     "npmDownloads": 464054,
     "githubStars": 20474
   },
-  "@nx/eslint": {
+  "@titan/eslint": {
     "lastPublishedDate": "2023-12-12T20:22:38.455Z",
     "npmDownloads": 1331622,
     "githubStars": 20474
   },
-  "@nx/eslint-plugin": {
+  "@titan/eslint-plugin": {
     "lastPublishedDate": "2023-12-12T20:22:26.302Z",
     "npmDownloads": 2801044,
     "githubStars": 20474
@@ -44,7 +44,7 @@
     "npmDownloads": 260191,
     "githubStars": 20474
   },
-  "@nx/jest": {
+  "@titan/jest": {
     "lastPublishedDate": "2023-12-12T20:22:27.158Z",
     "npmDownloads": 3134202,
     "githubStars": 20474
@@ -59,7 +59,7 @@
     "npmDownloads": 707573,
     "githubStars": 20474
   },
-  "@nx/next": {
+  "@titan/next": {
     "lastPublishedDate": "2023-12-12T20:23:08.642Z",
     "npmDownloads": 670371,
     "githubStars": 20474
@@ -78,7 +78,7 @@
     "npmDownloads": 16869403,
     "githubStars": 20474
   },
-  "@nx/playwright": {
+  "@titan/playwright": {
     "lastPublishedDate": "2023-12-12T20:22:42.611Z",
     "npmDownloads": 240538,
     "githubStars": 20474

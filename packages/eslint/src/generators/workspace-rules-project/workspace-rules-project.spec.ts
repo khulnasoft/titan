@@ -5,14 +5,14 @@ import {
   readProjectConfiguration,
   Tree,
   updateJson,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import {
   lintWorkspaceRulesProjectGenerator,
   WORKSPACE_RULES_PROJECT_NAME,
 } from './workspace-rules-project';
 
-describe('@nx/eslint:workspace-rules-project', () => {
+describe('@titan/eslint:workspace-rules-project', () => {
   let tree: Tree;
 
   beforeEach(() => {

@@ -30,7 +30,7 @@
     "migrations": "./migrations.json"
   },
   "dependencies": {
-    "@nx/devkit": "file:../devkit",
+    "@titan/devkit": "file:../devkit",
     "@nx/node": "file:../node",
     "tslib": "^2.3.0"
   },

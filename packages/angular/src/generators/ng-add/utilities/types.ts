@@ -1,4 +1,4 @@
-import type { ProjectConfiguration } from '@nx/devkit';
+import type { ProjectConfiguration } from '@titan/devkit';
 
 export type MigrationProjectConfiguration = {
   config: ProjectConfiguration;

@@ -110,7 +110,7 @@ Here is an example of the project configuration that is generated. The `--build-
 {
   "targets" {
     "component-test": {
-      "executor": "@nx/cypress:cypress",
+      "executor": "@titan/cypress:cypress",
       "options": {
         "cypressConfig": "<path-to-project-root>/cypress.config.ts",
         "testingType": "component",

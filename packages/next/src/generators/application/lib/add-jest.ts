@@ -4,7 +4,7 @@ import {
   readJson,
   Tree,
   updateJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 import { nxVersion } from '../../../utils/versions';
 import { NormalizedSchema } from './normalize-options';
@@ -14,8 +14,8 @@ export async function addJest(host: Tree, options: NormalizedSchema) {
     return () => {};
   }
 
-  const { configurationGenerator } = ensurePackage<typeof import('@nx/jest')>(
-    '@nx/jest',
+  const { configurationGenerator } = ensurePackage<typeof import('@titan/jest')>(
+    '@titan/jest',
     nxVersion
   );
   const jestTask = await configurationGenerator(host, {

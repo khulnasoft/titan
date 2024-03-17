@@ -3,7 +3,7 @@ import {
   joinPathFragments,
   ProjectConfiguration,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 export function maybeExtractTsConfigBase(tree: Tree): void {
   let extractTsConfigBase: any;

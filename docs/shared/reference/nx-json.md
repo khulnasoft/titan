@@ -8,7 +8,7 @@ The following is an expanded example showing all options. Your `nx.json` will li
 {
   "plugins": [
     {
-      "plugin": "@nx/eslint/plugin",
+      "plugin": "@titan/eslint/plugin",
       "options": {
         "targetName": "lint"
       }
@@ -72,7 +72,7 @@ To learn about creating your own plugin read about [extending Nx](/extending-nx/
   "plugins": [
     "@my-org/graph-plugin",
     {
-      "plugin": "@nx/eslint/plugin",
+      "plugin": "@titan/eslint/plugin",
       "options": {
         "targetName": "lint"
       }

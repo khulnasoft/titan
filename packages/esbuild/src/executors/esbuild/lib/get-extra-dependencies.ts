@@ -1,4 +1,4 @@
-import { ProjectGraph } from '@nx/devkit';
+import { ProjectGraph } from '@titan/devkit';
 import { DependentBuildableProjectNode } from '@nx/js/src/utils/buildable-libs-utils';
 
 export function getExtraDependencies(

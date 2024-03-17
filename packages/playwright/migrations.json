@@ -9,7 +9,7 @@
     "18-1-0-remove-baseUrl-from-project-json": {
       "cli": "nx",
       "version": "18.1.0-beta.3",
-      "description": "Remove invalid baseUrl option from @nx/playwright:playwright targets in project.json.",
+      "description": "Remove invalid baseUrl option from @titan/playwright:playwright targets in project.json.",
       "implementation": "./src/migrations/update-18-1-0/remove-baseUrl-from-project-json"
     }
   }

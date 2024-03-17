@@ -3,7 +3,7 @@ import {
   GeneratorCallback,
   readProjectConfiguration,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { updateAppEditorTsConfigExcludedFiles } from '../utils/update-app-editor-tsconfig-excluded-files';
 import { assertCompatibleStorybookVersion } from './lib/assert-compatible-storybook-version';
 import { generateStories } from './lib/generate-stories';

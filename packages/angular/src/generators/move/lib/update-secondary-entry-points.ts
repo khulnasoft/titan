@@ -1,17 +1,17 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import {
   joinPathFragments,
   normalizePath,
   readProjectConfiguration,
   visitNotIgnoredFiles,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { basename, dirname } from 'path';
 import type { MoveImplOptions } from './types';
 
 const libraryExecutors = [
   '@angular-devkit/build-angular:ng-packagr',
-  '@nx/angular:ng-packagr-lite',
-  '@nx/angular:package',
+  '@titan/angular:ng-packagr-lite',
+  '@titan/angular:package',
   // TODO(v17): remove when @nrwl/* scope is removed
   '@nrwl/angular:ng-packagr-lite',
   '@nrwl/angular:package',

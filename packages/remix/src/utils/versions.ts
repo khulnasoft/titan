@@ -1,4 +1,4 @@
-import { readJson, Tree } from '@nx/devkit';
+import { readJson, Tree } from '@titan/devkit';
 
 export const nxVersion = require('../../package.json').version;
 

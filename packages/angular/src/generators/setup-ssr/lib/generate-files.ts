@@ -1,9 +1,9 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import {
   generateFiles,
   joinPathFragments,
   readProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { lt } from 'semver';
 import { getInstalledAngularVersionInfo } from '../../utils/version-utils';
 import type { Schema } from '../schema';

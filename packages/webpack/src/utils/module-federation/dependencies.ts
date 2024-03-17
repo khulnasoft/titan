@@ -1,10 +1,10 @@
-import type { ProjectGraph } from '@nx/devkit';
+import type { ProjectGraph } from '@titan/devkit';
 import type { WorkspaceLibrary } from './models';
 import { readTsPathMappings } from './typescript';
 import {
   getOutputsForTargetAndConfiguration,
   parseTargetString,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { interpolate } from 'nx/src/tasks-runner/utils';
 
 export function getDependentPackagesForProject(

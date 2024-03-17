@@ -30,13 +30,13 @@
     "migrations": "./migrations.json"
   },
   "dependencies": {
-    "@nx/devkit": "file:../devkit",
+    "@titan/devkit": "file:../devkit",
     "@phenomnomnominal/tsquery": "~5.0.1",
     "semver": "^7.5.3",
     "tslib": "^2.3.0",
-    "@nx/cypress": "file:../cypress",
+    "@titan/cypress": "file:../cypress",
     "@nx/js": "file:../js",
-    "@nx/eslint": "file:../eslint"
+    "@titan/eslint": "file:../eslint"
   },
   "publishConfig": {
     "access": "public"

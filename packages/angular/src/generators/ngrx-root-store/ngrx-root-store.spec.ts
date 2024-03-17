@@ -1,6 +1,6 @@
-import type { Tree } from '@nx/devkit';
-import { readJson } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import type { Tree } from '@titan/devkit';
+import { readJson } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { ngrxVersion } from '../../utils/versions';
 import { generateTestApplication } from '../utils/testing';
 import { ngrxRootStoreGenerator } from './ngrx-root-store';

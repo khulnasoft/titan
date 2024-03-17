@@ -1,7 +1,7 @@
 import { applicationGenerator } from '../application/application';
 import { pageGenerator } from './page';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { Tree } from '@nx/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { Tree } from '@titan/devkit';
 
 describe('component', () => {
   let tree: Tree;

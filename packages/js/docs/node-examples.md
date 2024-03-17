@@ -3,7 +3,7 @@ title: JS Node executor examples
 description: This page contains examples for the @nx/js:node executor.
 ---
 
-The `@nx/js:node` executor runs the output of a build target. For example, an application uses esbuild ([`@nx/esbuild:esbuild`](/packages/esbuild/executors/esbuild)) to output the bundle to `dist/my-app` folder, which can then be executed by `@nx/js:node`.
+The `@nx/js:node` executor runs the output of a build target. For example, an application uses esbuild ([`@titan/esbuild:esbuild`](/packages/esbuild/executors/esbuild)) to output the bundle to `dist/my-app` folder, which can then be executed by `@nx/js:node`.
 
 `project.json`:
 
@@ -17,7 +17,7 @@ The `@nx/js:node` executor runs the output of a build target. For example, an ap
       }
     },
     "build": {
-      "executor": "@nx/esbuild:esbuild",
+      "executor": "@titan/esbuild:esbuild",
       "options": {
         "main": "my-app/src/main.ts",
         "output": ["dist/my-app"],

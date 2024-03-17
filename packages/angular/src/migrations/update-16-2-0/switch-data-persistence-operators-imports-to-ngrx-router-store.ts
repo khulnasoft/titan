@@ -1,9 +1,9 @@
-import type { FileData, Tree } from '@nx/devkit';
+import type { FileData, Tree } from '@titan/devkit';
 import {
   addDependenciesToPackageJson,
   formatFiles,
   readJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { ensureTypescript } from '@nx/js/src/utils/typescript/ensure-typescript';
 import type { ImportDeclaration, ImportSpecifier, Node } from 'typescript';
 import { FileChangeRecorder } from '../../utils/file-change-recorder';
@@ -14,7 +14,7 @@ import { fileDataDepTarget } from 'nx/src/config/project-graph';
 
 let tsquery: typeof import('@phenomnomnominal/tsquery').tsquery;
 
-const angularPluginTargetNames = ['npm:@nx/angular', 'npm:@nrwl/angular'];
+const angularPluginTargetNames = ['npm:@titan/angular', 'npm:@nrwl/angular'];
 const dataPersistenceOperators = [
   'fetch',
   'navigation',

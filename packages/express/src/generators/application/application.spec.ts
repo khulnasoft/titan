@@ -1,5 +1,5 @@
-import { readJson, Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { readJson, Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { applicationGenerator } from './application';
 import { Schema } from './schema';
 

@@ -1,6 +1,6 @@
-import { Tree, readJson, updateJson } from '@nx/devkit';
-import * as devkit from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { Tree, readJson, updateJson } from '@titan/devkit';
+import * as devkit from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import replacePackage from './update-16-0-0-add-nx-packages';
 
 describe('update-16-0-0-add-nx-packages', () => {
@@ -28,13 +28,13 @@ describe('update-16-0-0-add-nx-packages', () => {
     ).not.toBeDefined();
   });
 
-  it('should add a dependency on @nx/angular', async () => {
+  it('should add a dependency on @titan/angular', async () => {
     await replacePackage(tree);
 
     const packageJson = readJson(tree, 'package.json');
     const newDependencyVersion =
-      packageJson.devDependencies['@nx/angular'] ??
-      packageJson.dependencies['@nx/angular'];
+      packageJson.devDependencies['@titan/angular'] ??
+      packageJson.dependencies['@titan/angular'];
 
     expect(newDependencyVersion).toBeDefined();
   });

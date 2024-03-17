@@ -5,7 +5,7 @@ import {
   runTasksInSerial,
   Tree,
   updateJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { storybookConfigurationGenerator as vueStorybookConfigurationGenerator } from '@nx/vue';
 import { Schema } from './schema';
 

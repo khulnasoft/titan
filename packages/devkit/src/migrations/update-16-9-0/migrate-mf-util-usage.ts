@@ -107,7 +107,7 @@ function replaceRequireCalls(
     tsModule.SyntaxKind.VariableStatement
   )
     .filter((node) =>
-      [`require("@nx/devkit")`, `require('@nx/devkit')`].some((r) =>
+      [`require("@titan/devkit")`, `require('@titan/devkit')`].some((r) =>
         node.getText().includes(r)
       )
     )
@@ -206,7 +206,7 @@ function replaceTSImports(
     tsModule.SyntaxKind.ImportDeclaration
   );
   const devkitImports = allImports.filter((i) =>
-    i.getText().includes(`'@nx/devkit';`)
+    i.getText().includes(`'@titan/devkit';`)
   );
   const mfUtilsImports = devkitImports.filter((i) =>
     MODULE_FEDERATION_PUBLIC_TOKENS.some((token) => i.getText().includes(token))

@@ -4,8 +4,8 @@ import {
   ProjectConfiguration,
   readNxJson,
   Tree,
-} from '@nx/devkit';
-import { addBuildTargetDefaults } from '@nx/devkit/src/generators/add-build-target-defaults';
+} from '@titan/devkit';
+import { addBuildTargetDefaults } from '@titan/devkit/src/generators/add-build-target-defaults';
 
 export function addProject(host: Tree, options: NormalizedSchema) {
   const targets: Record<string, any> = {};
@@ -16,15 +16,15 @@ export function addProject(host: Tree, options: NormalizedSchema) {
   const nxJson = readNxJson(host);
   const hasPlugin = nxJson.plugins?.some((p) =>
     typeof p === 'string'
-      ? p === '@nx/next/plugin'
-      : p.plugin === '@nx/next/plugin'
+      ? p === '@titan/next/plugin'
+      : p.plugin === '@titan/next/plugin'
   );
 
   if (!hasPlugin) {
-    addBuildTargetDefaults(host, '@nx/next:build');
+    addBuildTargetDefaults(host, '@titan/next:build');
 
     targets.build = {
-      executor: '@nx/next:build',
+      executor: '@titan/next:build',
       outputs: ['{options.outputPath}'],
       defaultConfiguration: 'production',
       options: {
@@ -39,7 +39,7 @@ export function addProject(host: Tree, options: NormalizedSchema) {
     };
 
     targets.serve = {
-      executor: '@nx/next:server',
+      executor: '@titan/next:server',
       defaultConfiguration: 'development',
       options: {
         buildTarget: `${options.projectName}:build`,
@@ -58,7 +58,7 @@ export function addProject(host: Tree, options: NormalizedSchema) {
     };
 
     targets.export = {
-      executor: '@nx/next:export',
+      executor: '@titan/next:export',
       options: {
         buildTarget: `${options.projectName}:build:production`,
       },

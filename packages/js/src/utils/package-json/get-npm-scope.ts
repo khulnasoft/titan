@@ -1,4 +1,4 @@
-import { readJson, Tree } from '@nx/devkit';
+import { readJson, Tree } from '@titan/devkit';
 
 /**
  * Read the npm scope that a workspace should use by default

@@ -2,7 +2,7 @@ import {
   readProjectConfiguration,
   visitNotIgnoredFiles,
   type Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { insertImport } from '@nx/js';
 import { tsquery } from '@phenomnomnominal/tsquery';
 import type {

@@ -3,7 +3,7 @@ import {
   parseTargetString,
   readTargetOptions,
   targetToTargetString,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import exportApp from 'next/dist/export';
 import {
   NextBuildBuilderOptions,

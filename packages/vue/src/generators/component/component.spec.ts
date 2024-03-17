@@ -1,5 +1,5 @@
-import { logger, Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { logger, Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { componentGenerator } from './component';
 import { createApp, createLib } from '../../utils/test-utils';
 

@@ -1,4 +1,4 @@
-import { CreateNodesContext } from '@nx/devkit';
+import { CreateNodesContext } from '@titan/devkit';
 import { defineConfig } from 'cypress';
 
 import { createNodes } from './plugin';
@@ -6,7 +6,7 @@ import { TempFs } from 'nx/src/internal-testing-utils/temp-fs';
 import { join } from 'path';
 import { nxE2EPreset } from '../../plugins/cypress-preset';
 
-describe('@nx/cypress/plugin', () => {
+describe('@titan/cypress/plugin', () => {
   let createNodesFunction = createNodes[1];
   let context: CreateNodesContext;
   let tempFs: TempFs;

@@ -3,8 +3,8 @@ import {
   readProjectConfiguration,
   updateProjectConfiguration,
   type Tree,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import type { AngularProjectConfiguration } from '../../utils/types';
 import { directiveGenerator } from './directive';
 import type { Schema } from './schema';

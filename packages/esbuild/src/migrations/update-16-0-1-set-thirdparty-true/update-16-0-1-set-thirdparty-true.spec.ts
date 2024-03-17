@@ -1,9 +1,9 @@
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import {
   addProjectConfiguration,
   readProjectConfiguration,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 import update from './update-16-0-1-set-thirdparty-true';
 
@@ -30,7 +30,7 @@ describe('update-16-0-1-set-thirdparty-true', () => {
       root: 'myapp',
       targets: {
         build: {
-          executor: '@nx/esbuild:esbuild',
+          executor: '@titan/esbuild:esbuild',
         },
       },
     });
@@ -48,7 +48,7 @@ describe('update-16-0-1-set-thirdparty-true', () => {
       root: 'myapp',
       targets: {
         build: {
-          executor: '@nx/esbuild:esbuild',
+          executor: '@titan/esbuild:esbuild',
           options: {
             bundle: true,
           },
@@ -70,7 +70,7 @@ describe('update-16-0-1-set-thirdparty-true', () => {
       root: 'myapp',
       targets: {
         build: {
-          executor: '@nx/esbuild:esbuild',
+          executor: '@titan/esbuild:esbuild',
           options: {
             bundle: false,
           },
@@ -91,7 +91,7 @@ describe('update-16-0-1-set-thirdparty-true', () => {
       root: 'myapp',
       targets: {
         build: {
-          executor: '@nx/esbuild:esbuild',
+          executor: '@titan/esbuild:esbuild',
           options: {
             thirdParty: false,
           },

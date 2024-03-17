@@ -2,7 +2,7 @@ import type {
   ProjectConfiguration,
   TargetConfiguration,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import {
   addProjectConfiguration,
   ensurePackage,
@@ -16,8 +16,8 @@ import {
   updateProjectConfiguration,
   visitNotIgnoredFiles,
   writeJson,
-} from '@nx/devkit';
-import { Linter, lintProjectGenerator } from '@nx/eslint';
+} from '@titan/devkit';
+import { Linter, lintProjectGenerator } from '@titan/eslint';
 import { getRootTsConfigPathInTree, insertImport } from '@nx/js';
 import { ensureTypescript } from '@nx/js/src/utils/typescript/ensure-typescript';
 import { basename, relative } from 'path';
@@ -261,10 +261,10 @@ export class E2eMigrator extends ProjectMigrator<SupportedTargets> {
         newSourceRoot,
       };
     } else if (this.isCypressE2eProject()) {
-      ensurePackage('@nx/cypress', nxVersion);
+      ensurePackage('@titan/cypress', nxVersion);
       const {
         installedCypressVersion,
-      } = require('@nx/cypress/src/utils/cypress-version');
+      } = require('@titan/cypress/src/utils/cypress-version');
       this.cypressInstalledVersion = installedCypressVersion();
       this.project = {
         ...this.project,
@@ -343,7 +343,7 @@ export class E2eMigrator extends ProjectMigrator<SupportedTargets> {
     const addPlugin =
       process.env.NX_ADD_PLUGINS !== 'false' &&
       nxJson.useInferencePlugins !== false;
-    const { configurationGenerator } = await import('@nx/cypress');
+    const { configurationGenerator } = await import('@titan/cypress');
     await configurationGenerator(this.tree, {
       project: this.project.name,
       linter: this.isProjectUsingEsLint ? Linter.EsLint : Linter.None,
@@ -435,7 +435,7 @@ export class E2eMigrator extends ProjectMigrator<SupportedTargets> {
   ): TargetConfiguration {
     const updatedTarget = {
       ...existingTarget,
-      executor: '@nx/cypress:cypress',
+      executor: '@titan/cypress:cypress',
       options: {
         ...existingTarget.options,
         cypressConfig,
@@ -555,7 +555,7 @@ export class E2eMigrator extends ProjectMigrator<SupportedTargets> {
   private updateCypress10ConfigFile(configFilePath: string): void {
     const { isPropertyAssignment } = ensureTypescript();
     const { tsquery } = require('@phenomnomnominal/tsquery');
-    const { nxE2EPreset } = require('@nx/cypress/plugins/cypress-preset');
+    const { nxE2EPreset } = require('@titan/cypress/plugins/cypress-preset');
     this.cypressPreset = nxE2EPreset(configFilePath);
 
     const fileContent = this.tree.read(configFilePath, 'utf-8');
@@ -762,7 +762,7 @@ export class E2eMigrator extends ProjectMigrator<SupportedTargets> {
       sourceFile,
       configFilePath,
       'nxE2EPreset',
-      '@nx/cypress/plugins/cypress-preset'
+      '@titan/cypress/plugins/cypress-preset'
     );
     // update recorder with the new content from the file
     recorder.setContentToFileContent();

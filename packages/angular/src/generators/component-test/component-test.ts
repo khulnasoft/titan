@@ -5,7 +5,7 @@ import {
   joinPathFragments,
   readProjectConfiguration,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { nxVersion } from '../../utils/versions';
 import {
   getArgsDefaultValue,
@@ -17,9 +17,9 @@ export async function componentTestGenerator(
   tree: Tree,
   options: ComponentTestSchema
 ) {
-  ensurePackage('@nx/cypress', nxVersion);
+  ensurePackage('@titan/cypress', nxVersion);
   const { assertMinimumCypressVersion } = await import(
-    '@nx/cypress/src/utils/cypress-version'
+    '@titan/cypress/src/utils/cypress-version'
   );
   assertMinimumCypressVersion(10);
   const { root } = readProjectConfiguration(tree, options.project);

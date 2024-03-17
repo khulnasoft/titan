@@ -22,7 +22,7 @@ describe('migrate-mf-util-usage', () => {
 
   it('should do nothing if it does not find files using the mf public api even if they use devkit', async () => {
     // ARRANGE
-    const testFileContents = `${stripIndents`import { readJson } from '@nx/devkit';
+    const testFileContents = `${stripIndents`import { readJson } from '@titan/devkit';
     const file = readJson('test.json');`}\n`;
 
     const tree = createTreeWithEmptyWorkspace();
@@ -37,7 +37,7 @@ describe('migrate-mf-util-usage', () => {
 
   it('should replace imports to utils from devkit with webpack', async () => {
     // ARRANGE
-    const testFileContents = stripIndents`import {ModuleFederationConfig} from '@nx/devkit';
+    const testFileContents = stripIndents`import {ModuleFederationConfig} from '@titan/devkit';
     const config: ModuleFederationConfig = {};
     `;
     const expectedTestFileContents = `${stripIndents`import { ModuleFederationConfig } from '@nx/webpack';
@@ -58,10 +58,10 @@ describe('migrate-mf-util-usage', () => {
 
   it('should extract imports to utils from devkit and replace with imports from webpack', async () => {
     // ARRANGE
-    const testFileContents = stripIndents`import {joinPathFragments, ModuleFederationConfig} from '@nx/devkit';
+    const testFileContents = stripIndents`import {joinPathFragments, ModuleFederationConfig} from '@titan/devkit';
     const config: ModuleFederationConfig = {};
     `;
-    const expectedTestFileContents = `${stripIndents`import { joinPathFragments } from '@nx/devkit';
+    const expectedTestFileContents = `${stripIndents`import { joinPathFragments } from '@titan/devkit';
     import { ModuleFederationConfig } from '@nx/webpack';
     const config: ModuleFederationConfig = {};`}\n`;
 
@@ -80,12 +80,12 @@ describe('migrate-mf-util-usage', () => {
 
   it('should extract imports to utils from devkit and replace with imports from webpack, even with multiple devkit imports', async () => {
     // ARRANGE
-    const testFileContents = stripIndents`import {joinPathFragments, ModuleFederationConfig} from '@nx/devkit';
-    import {readJson, WorkspaceLibrary} from '@nx/devkit';
+    const testFileContents = stripIndents`import {joinPathFragments, ModuleFederationConfig} from '@titan/devkit';
+    import {readJson, WorkspaceLibrary} from '@titan/devkit';
     const config: ModuleFederationConfig = {};
     `;
-    const expectedTestFileContents = `${stripIndents`import { joinPathFragments } from '@nx/devkit';
-    import { readJson } from '@nx/devkit';
+    const expectedTestFileContents = `${stripIndents`import { joinPathFragments } from '@titan/devkit';
+    import { readJson } from '@titan/devkit';
     import { ModuleFederationConfig, WorkspaceLibrary } from '@nx/webpack';
     const config: ModuleFederationConfig = {};`}\n`;
 
@@ -120,7 +120,7 @@ describe('migrate-mf-util-usage', () => {
 
     it('should do nothing if it does not find files using the mf public api even if they use devkit', async () => {
       // ARRANGE
-      const testFileContents = `${stripIndents`const { readJson } = require('@nx/devkit');
+      const testFileContents = `${stripIndents`const { readJson } = require('@titan/devkit');
     const file = readJson('test.json');`}\n`;
 
       const tree = createTreeWithEmptyWorkspace();
@@ -135,7 +135,7 @@ describe('migrate-mf-util-usage', () => {
 
     it('should replace imports to utils from devkit with webpack', async () => {
       // ARRANGE
-      const testFileContents = stripIndents`const {ModuleFederationConfig} = require('@nx/devkit');
+      const testFileContents = stripIndents`const {ModuleFederationConfig} = require('@titan/devkit');
     const config: ModuleFederationConfig = {};
     `;
       const expectedTestFileContents = `${stripIndents`const { ModuleFederationConfig } = require('@nx/webpack');
@@ -156,10 +156,10 @@ describe('migrate-mf-util-usage', () => {
 
     it('should extract imports to utils from devkit and replace with imports from webpack', async () => {
       // ARRANGE
-      const testFileContents = stripIndents`const {joinPathFragments, ModuleFederationConfig} = require("@nx/devkit");
+      const testFileContents = stripIndents`const {joinPathFragments, ModuleFederationConfig} = require("@titan/devkit");
     const config: ModuleFederationConfig = {};
     `;
-      const expectedTestFileContents = `${stripIndents`const { joinPathFragments } = require('@nx/devkit');
+      const expectedTestFileContents = `${stripIndents`const { joinPathFragments } = require('@titan/devkit');
     const { ModuleFederationConfig } = require('@nx/webpack');
     const config: ModuleFederationConfig = {};`}\n`;
 
@@ -178,12 +178,12 @@ describe('migrate-mf-util-usage', () => {
 
     it('should extract imports to utils from devkit and replace with imports from webpack, even with multiple devkit imports', async () => {
       // ARRANGE
-      const testFileContents = stripIndents`const {joinPathFragments, ModuleFederationConfig} = require('@nx/devkit');
-    const {readJson, WorkspaceLibrary} = require('@nx/devkit');
+      const testFileContents = stripIndents`const {joinPathFragments, ModuleFederationConfig} = require('@titan/devkit');
+    const {readJson, WorkspaceLibrary} = require('@titan/devkit');
     const config: ModuleFederationConfig = {};
     `;
-      const expectedTestFileContents = `${stripIndents`const { joinPathFragments } = require('@nx/devkit');
-    const { readJson } = require('@nx/devkit');
+      const expectedTestFileContents = `${stripIndents`const { joinPathFragments } = require('@titan/devkit');
+    const { readJson } = require('@titan/devkit');
     const { ModuleFederationConfig, WorkspaceLibrary } = require('@nx/webpack');
     const config: ModuleFederationConfig = {};`}\n`;
 
@@ -205,7 +205,7 @@ describe('migrate-mf-util-usage', () => {
     // ARRANGE
     const testFileContents = stripIndents`
     /**
-    * @type {import('@nx/devkit').ModuleFederationConfig}
+    * @type {import('@titan/devkit').ModuleFederationConfig}
     **/
     const config = {};
     `;

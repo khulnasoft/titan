@@ -4,9 +4,9 @@ import {
   parseTargetString,
   readTargetOptions,
   targetToTargetString,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
-import { eachValueFrom } from '@nx/devkit/src/utils/rxjs-for-await';
+import { eachValueFrom } from '@titan/devkit/src/utils/rxjs-for-await';
 import { map, tap } from 'rxjs/operators';
 import * as WebpackDevServer from 'webpack-dev-server';
 

@@ -2,7 +2,7 @@
 
 exports[`create-nodes-plugin/generator generator should add the plugin path to package.json exports 1`] = `
 "{
-  "name": "@nx/eslint",
+  "name": "@titan/eslint",
   "version": "0.0.1",
   "private": false,
   "description": "Some description",
@@ -32,7 +32,7 @@ exports[`create-nodes-plugin/generator generator should add the plugin path to p
     "migrations": "./migrations.json"
   },
   "dependencies": {
-    "@nx/devkit": "file:../devkit"
+    "@titan/devkit": "file:../devkit"
   },
   "peerDependencies": {},
   "publishConfig": {
@@ -59,14 +59,14 @@ exports[`create-nodes-plugin/generator generator should run successfully 1`] = `
   CreateNodes,
   CreateNodesContext,
   TargetConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { basename, dirname, extname, join, resolve } from 'path';
 import { registerTsProject } from '@nx/js/src/internal';
 
 import { getRootTsConfigPath } from '@nx/js';
 
 import { readTargetDefaultsForTarget } from 'nx/src/project-graph/utils/project-configuration-utils';
-import { getNamedInputs } from '@nx/devkit/src/utils/get-named-inputs';
+import { getNamedInputs } from '@titan/devkit/src/utils/get-named-inputs';
 import { readdirSync } from 'fs';
 
 export interface EslintPluginOptions {
@@ -197,11 +197,11 @@ function normalizeOptions(options: EslintPluginOptions): EslintPluginOptions {
 `;
 
 exports[`create-nodes-plugin/generator generator should run successfully 2`] = `
-"import { CreateNodesContext } from '@nx/devkit';
+"import { CreateNodesContext } from '@titan/devkit';
 
 import { createNodes } from './plugin';
 
-describe('@nx/eslint/plugin', () => {
+describe('@titan/eslint/plugin', () => {
   let createNodesFunction = createNodes[1];
   let context: CreateNodesContext;
 
@@ -250,11 +250,11 @@ function mockEslintConfig(config: any) {
 `;
 
 exports[`create-nodes-plugin/generator generator should run successfully 3`] = `
-"import { formatFiles, getProjects, Tree } from '@nx/devkit';
+"import { formatFiles, getProjects, Tree } from '@titan/devkit';
 import { createNodes } from '../../plugins/plugin';
 
 import { createProjectRootMappingsFromProjectConfigurations } from 'nx/src/project-graph/utils/find-project-for-path';
-import { replaceProjectConfigurationsWithPlugin } from '@nx/devkit/src/utils/replace-project-configuration-with-plugin';
+import { replaceProjectConfigurationsWithPlugin } from '@titan/devkit/src/utils/replace-project-configuration-with-plugin';
 
 export default async function update(tree: Tree) {
   const proj = Object.fromEntries(getProjects(tree).entries());
@@ -264,7 +264,7 @@ export default async function update(tree: Tree) {
   await replaceProjectConfigurationsWithPlugin(
     tree,
     rootMappings,
-    '@nx/eslint/plugin',
+    '@titan/eslint/plugin',
     createNodes,
     {
       targetName: 'TODO',

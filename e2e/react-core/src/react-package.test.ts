@@ -15,7 +15,7 @@ import {
   updateFile,
   updateJson,
 } from '@nx/e2e/utils';
-import { names } from '@nx/devkit';
+import { names } from '@titan/devkit';
 import { join } from 'path';
 
 describe('Build React libraries and apps', () => {

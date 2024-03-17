@@ -45,7 +45,7 @@ pnpm add -D @my-org/my-plugin
 Nx provides a utility (`nx list`) that lists both core and community plugins. You can submit your plugin to be added to this list, but it needs to meet a few criteria first:
 
 - Run some kind of automated e2e tests in your repository
-- Include `@nx/devkit` as a `dependency` in the plugin's `package.json`
+- Include `@titan/devkit` as a `dependency` in the plugin's `package.json`
 - List a `repository.url` in the plugin's `package.json`
 
 ```jsonc {% fileName="package.json" %}

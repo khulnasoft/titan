@@ -1,6 +1,6 @@
 import { basename, dirname, join } from 'path';
 import { existsSync, readFileSync } from 'fs';
-import { logger, ProjectConfiguration } from '@nx/devkit';
+import { logger, ProjectConfiguration } from '@titan/devkit';
 import { registerTsProject } from '@nx/js/src/internal';
 
 export function getDynamicRemotes(
@@ -106,7 +106,7 @@ function getModuleFederationConfig(
     };
   } catch {
     throw new Error(
-      `Could not load ${moduleFederationConfigPath}. Was this project generated with "@nx/angular:host"?`
+      `Could not load ${moduleFederationConfigPath}. Was this project generated with "@titan/angular:host"?`
     );
   }
 }

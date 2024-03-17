@@ -1,16 +1,16 @@
-import { logger, ProjectGraph, Tree } from '@nx/devkit';
+import { logger, ProjectGraph, Tree } from '@titan/devkit';
 import {
   addProjectConfiguration,
   DependencyType,
   readJson,
   writeJson,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import updateTsConfigTarget from './update-tsconfig-target';
 
 let projectGraph: ProjectGraph;
-jest.mock('@nx/devkit', () => ({
-  ...jest.requireActual<any>('@nx/devkit'),
+jest.mock('@titan/devkit', () => ({
+  ...jest.requireActual<any>('@titan/devkit'),
   createProjectGraphAsync: jest
     .fn()
     .mockImplementation(async () => projectGraph),

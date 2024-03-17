@@ -1,6 +1,6 @@
 import * as chalk from 'chalk';
-import type { ExecutorContext } from '@nx/devkit';
-import { cacheDir, joinPathFragments, logger, stripIndents } from '@nx/devkit';
+import type { ExecutorContext } from '@titan/devkit';
+import { cacheDir, joinPathFragments, logger, stripIndents } from '@titan/devkit';
 import {
   copyAssets,
   copyPackageJson,
@@ -14,7 +14,7 @@ import { normalizeOptions } from './lib/normalize';
 
 import { EsBuildExecutorOptions } from './schema';
 import { removeSync, writeJsonSync } from 'fs-extra';
-import { createAsyncIterable } from '@nx/devkit/src/utils/async-iterable';
+import { createAsyncIterable } from '@titan/devkit/src/utils/async-iterable';
 import {
   buildEsbuildOptions,
   getOutExtension,

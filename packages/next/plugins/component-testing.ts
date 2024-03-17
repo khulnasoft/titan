@@ -1,11 +1,11 @@
 import {
   createExecutorContext,
   getProjectConfigByPath,
-} from '@nx/cypress/src/utils/ct-helpers';
+} from '@titan/cypress/src/utils/ct-helpers';
 import {
   nxBaseCypressPreset,
   NxComponentTestingOptions,
-} from '@nx/cypress/plugins/cypress-preset';
+} from '@titan/cypress/plugins/cypress-preset';
 import {
   ExecutorContext,
   parseTargetString,
@@ -13,7 +13,7 @@ import {
   readTargetOptions,
   stripIndents,
   workspaceRoot,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { withReact } from '@nx/react';
 import {
   AssetGlobPattern,
@@ -23,7 +23,7 @@ import {
 } from '@nx/webpack';
 import { join } from 'path';
 import { NextBuildBuilderOptions } from '../src/utils/types';
-import { CypressExecutorOptions } from '@nx/cypress/src/executors/cypress/cypress.impl';
+import { CypressExecutorOptions } from '@titan/cypress/src/executors/cypress/cypress.impl';
 
 export function nxComponentTestingPreset(
   pathToConfig: string,
@@ -79,13 +79,13 @@ export function nxComponentTestingPreset(
 
     if (
       buildProjectConfig?.targets?.[parsedBuildTarget.target]?.executor !==
-      '@nx/next:build'
+      '@titan/next:build'
     ) {
       throw new Error(
         `The '${parsedBuildTarget.target}' target of the '${[
           parsedBuildTarget.project,
-        ]}' project is not using the '@nx/next:build' executor. ` +
-          `Please make sure to use '@nx/next:build' executor in that target to use Cypress Component Testing.`
+        ]}' project is not using the '@titan/next:build' executor. ` +
+          `Please make sure to use '@titan/next:build' executor in that target to use Cypress Component Testing.`
       );
     }
 

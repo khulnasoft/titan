@@ -1,9 +1,9 @@
-import { getProjects } from '@nx/devkit';
+import { getProjects } from '@titan/devkit';
 import { Schema } from './schema';
 import { Schema as remoteSchma } from '../remote/schema';
 import { federateModuleGenerator } from './federate-module';
 import { createTreeWithEmptyWorkspace } from 'nx/src/devkit-testing-exports';
-import { Linter } from '@nx/eslint';
+import { Linter } from '@titan/eslint';
 import remoteGenerator from '../remote/remote';
 import { E2eTestRunner, UnitTestRunner } from '../../utils/test-runners';
 

@@ -22,7 +22,7 @@ describe('Linter (legacy)', () => {
 
     beforeAll(() => {
       projScope = newProject({
-        packages: ['@nx/react', '@nx/js', '@nx/eslint'],
+        packages: ['@nx/react', '@nx/js', '@titan/eslint'],
       });
       runCLI(`generate @nx/react:app ${myapp} --tags=validtag`, {
         env: { NX_ADD_PLUGINS: 'false' },
@@ -132,7 +132,7 @@ describe('Linter (legacy)', () => {
       );
 
       // migrate to flat structure
-      runCLI(`generate @nx/eslint:convert-to-flat-config`, {
+      runCLI(`generate @titan/eslint:convert-to-flat-config`, {
         env: { NX_ADD_PLUGINS: 'false' },
       });
       checkFilesExist(
@@ -182,7 +182,7 @@ describe('Linter (legacy)', () => {
       });
 
       // migrate to flat structure
-      runCLI(`generate @nx/eslint:convert-to-flat-config`, {
+      runCLI(`generate @titan/eslint:convert-to-flat-config`, {
         env: { NX_ADD_PLUGINS: 'false' },
       });
       checkFilesExist(

@@ -1,7 +1,7 @@
-import type { Tree } from '@nx/devkit';
-import { joinPathFragments, readJson } from '@nx/devkit';
-import { ProjectNameAndRootFormat } from '@nx/devkit/src/generators/project-name-and-root-utils';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import type { Tree } from '@titan/devkit';
+import { joinPathFragments, readJson } from '@titan/devkit';
+import { ProjectNameAndRootFormat } from '@titan/devkit/src/generators/project-name-and-root-utils';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import applicationGenerator from './application.impl';
 import { join } from 'path';
 

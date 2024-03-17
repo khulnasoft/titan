@@ -1,4 +1,4 @@
-import { getE2eProjectName } from '@nx/cypress/src/utils/project-name';
+import { getE2eProjectName } from '@titan/cypress/src/utils/project-name';
 import {
   addProjectConfiguration,
   ensurePackage,
@@ -10,9 +10,9 @@ import {
   Tree,
   updateJson,
   updateProjectConfiguration,
-} from '@nx/devkit';
-import { Linter } from '@nx/eslint';
-import { determineProjectNameAndRootOptions } from '@nx/devkit/src/generators/project-name-and-root-utils';
+} from '@titan/devkit';
+import { Linter } from '@titan/eslint';
+import { determineProjectNameAndRootOptions } from '@titan/devkit/src/generators/project-name-and-root-utils';
 import { join } from 'path';
 
 import { safeFileDelete } from '../../utils/utilities';
@@ -44,8 +44,8 @@ export async function cypressProjectGeneratorInternal(
   schema: CypressConfigureSchema
 ) {
   const { configurationGenerator } = ensurePackage<
-    typeof import('@nx/cypress')
-  >('@nx/cypress', nxVersion);
+    typeof import('@titan/cypress')
+  >('@titan/cypress', nxVersion);
 
   const e2eName = schema.name ? `${schema.name}-e2e` : undefined;
   const { projectName, projectRoot } = await determineProjectNameAndRootOptions(
@@ -161,8 +161,8 @@ function updateAngularJsonBuilder(
 function projectAlreadyHasCypress(tree: Tree): boolean {
   const packageJsonContents = readJson(tree, 'package.json');
   return (
-    (packageJsonContents?.['devDependencies']?.['@nx/cypress'] ||
-      packageJsonContents?.['dependencies']?.['@nx/cypress'] ||
+    (packageJsonContents?.['devDependencies']?.['@titan/cypress'] ||
+      packageJsonContents?.['dependencies']?.['@titan/cypress'] ||
       packageJsonContents?.['devDependencies']?.['@nrwl/cypress'] ||
       packageJsonContents?.['dependencies']?.['@nrwl/cypress']) &&
     (packageJsonContents?.['devDependencies']?.['cypress'] ||

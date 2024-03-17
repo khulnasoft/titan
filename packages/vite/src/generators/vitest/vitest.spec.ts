@@ -1,5 +1,5 @@
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { Tree } from '@nx/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { Tree } from '@titan/devkit';
 
 import generator from './vitest-generator';
 import { VitestGeneratorSchema } from './schema';

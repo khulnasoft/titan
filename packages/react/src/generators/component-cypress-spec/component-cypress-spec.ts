@@ -4,7 +4,7 @@ import {
   getProjects,
   joinPathFragments,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { basename, join } from 'path';
 import type * as ts from 'typescript';
 import {

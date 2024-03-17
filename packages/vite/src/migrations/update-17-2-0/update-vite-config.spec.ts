@@ -1,10 +1,10 @@
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import {
   Tree,
   addProjectConfiguration,
   logger,
   readProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 import updateBuildDir from './update-vite-config';
 

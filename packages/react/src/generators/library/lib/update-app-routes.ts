@@ -4,7 +4,7 @@ import {
   joinPathFragments,
   names,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import type * as ts from 'typescript';
 
 import { NormalizedSchema } from '../schema';

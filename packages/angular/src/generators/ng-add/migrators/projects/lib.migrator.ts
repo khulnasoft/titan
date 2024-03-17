@@ -1,5 +1,5 @@
-import { joinPathFragments, Tree } from '@nx/devkit';
-import { updateProjectConfiguration } from '@nx/devkit';
+import { joinPathFragments, Tree } from '@titan/devkit';
+import { updateProjectConfiguration } from '@titan/devkit';
 import type { GeneratorOptions } from '../../schema';
 import type {
   Logger,

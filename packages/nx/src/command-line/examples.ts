@@ -296,9 +296,9 @@ export const examples: Record<string, Example[]> = {
     },
     {
       command:
-        'migrate @nx/workspace@9.0.0 --to="@nx/react@9.0.1,@nx/angular@9.0.1"',
+        'migrate @nx/workspace@9.0.0 --to="@nx/react@9.0.1,@titan/angular@9.0.1"',
       description:
-        'Update @nx/workspace to "9.0.0". If it tries to update @nx/react or @nx/angular, use version "9.0.1"',
+        'Update @nx/workspace to "9.0.0". If it tries to update @nx/react or @titan/angular, use version "9.0.1"',
     },
     {
       command: 'migrate another-package@12.0.0',

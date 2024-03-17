@@ -8,7 +8,7 @@ import {
   stripIndents,
   Target,
   targetToTargetString,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { join } from 'path';
 import { CypressExecutorOptions } from '../executors/cypress/cypress.impl';
 import * as detectPort from 'detect-port';

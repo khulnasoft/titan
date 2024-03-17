@@ -1,5 +1,5 @@
-import { readProjectConfiguration, Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { readProjectConfiguration, Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { presetGenerator } from './preset';
 import { Preset } from '../utils/presets';
 

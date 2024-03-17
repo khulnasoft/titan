@@ -1,5 +1,5 @@
 import { join } from 'path';
-import { ExecutorContext, logger, readJsonFile } from '@nx/devkit';
+import { ExecutorContext, logger, readJsonFile } from '@titan/devkit';
 import { fileExists } from '@nx/workspace/src/utilities/fileutils';
 import * as chalk from 'chalk';
 import { sync as globSync } from 'glob';

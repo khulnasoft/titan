@@ -2,7 +2,7 @@ import {
   type Tree,
   readProjectConfiguration,
   joinPathFragments,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 export function getRemoteIfExists(tree: Tree, remote: string) {
   const remoteProject = getRemote(tree, remote);

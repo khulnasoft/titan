@@ -4,7 +4,7 @@ import {
   ProjectGraph,
   ProjectGraphExternalNode,
   ProjectGraphProjectNode,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import {
   DepConstraint,
   appIsMFERemote,

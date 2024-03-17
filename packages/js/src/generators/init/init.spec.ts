@@ -1,5 +1,5 @@
-import { writeJson, readJson, Tree, updateJson } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { writeJson, readJson, Tree, updateJson } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import init from './init';
 import { typescriptVersion } from '../../utils/versions';
 

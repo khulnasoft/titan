@@ -33,14 +33,14 @@ The `nxE2EPreset` will then use the `bundler` information to generate the correc
 
 ```ts
 import { defineConfig } from 'cypress';
-import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
+import { nxE2EPreset } from '@titan/cypress/plugins/cypress-preset';
 
 const config = nxE2EPreset(__filename, { bundler: 'vite' });
 export default defineConfig({
   e2e: {
     ...config,
     async setupNodeEvents(on, config) {
-      // Ensure that `@nx/cypress` events are set up.
+      // Ensure that `@titan/cypress` events are set up.
       await config.setupNodeEvents(on, config);
 
       // Your settings here

@@ -1,5 +1,5 @@
-import { readJson } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { readJson } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import applicationGenerator from '../application/application.impl';
 import setupTailwind from './setup-tailwind.impl';
 

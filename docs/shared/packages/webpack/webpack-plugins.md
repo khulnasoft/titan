@@ -611,7 +611,7 @@ module.exports = composePlugins(
 const {
   composePlugins,
   withModuleFederation,
-} = require('@nx/angular/module-federation');
+} = require('@titan/angular/module-federation');
 
 // Host config
 // e.g. { remotes: ['about', 'dashboard'] }
@@ -655,7 +655,7 @@ module.exports = composePlugins(
 const {
   composePlugins,
   withModuleFederationForSSR,
-} = require('@nx/angular/module-federation');
+} = require('@titan/angular/module-federation');
 
 // Host config
 // e.g. { remotes: ['about', 'dashboard'] }

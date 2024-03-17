@@ -1,9 +1,9 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import {
   formatFiles,
   getProjects,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 export default async function update(tree: Tree): Promise<void> {
   const projects = getProjects(tree);

@@ -1,4 +1,4 @@
-import { joinPathFragments, ProjectConfiguration, Tree } from '@nx/devkit';
+import { joinPathFragments, ProjectConfiguration, Tree } from '@titan/devkit';
 
 import { SetupTailwindOptions } from '../schema';
 

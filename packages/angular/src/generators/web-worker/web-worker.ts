@@ -1,4 +1,4 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import {
   formatFiles,
   generateFiles,
@@ -7,7 +7,7 @@ import {
   offsetFromRoot,
   readProjectConfiguration,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { addSnippet, normalizeOptions } from './lib';
 import type { WebWorkerGeneratorOptions } from './schema';
 import { getRelativePathToRootTsConfig } from '@nx/js';

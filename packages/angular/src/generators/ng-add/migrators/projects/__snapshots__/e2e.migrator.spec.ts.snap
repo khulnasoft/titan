@@ -2,7 +2,7 @@
 
 exports[`e2e migrator cypress with project root at "" cypress version >=10 should add paths to the e2e config from the global config when they differ from the nx preset defaults 1`] = `
 "import { defineConfig } from 'cypress';
-import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
+import { nxE2EPreset } from '@titan/cypress/plugins/cypress-preset';
 
 export default defineConfig({
   fixturesFolder: 'src/my-fixtures',
@@ -14,7 +14,7 @@ export default defineConfig({
 `;
 
 exports[`e2e migrator cypress with project root at "" cypress version >=10 should create a cypress.config.ts file when it does not exist 1`] = `
-"import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
+"import { nxE2EPreset } from '@titan/cypress/plugins/cypress-preset';
 
 import { defineConfig } from 'cypress';
 
@@ -32,7 +32,7 @@ export default defineConfig({
 
 exports[`e2e migrator cypress with project root at "" cypress version >=10 should keep paths in the e2e config when they differ from the nx preset defaults 1`] = `
 "import { defineConfig } from 'cypress';
-import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
+import { nxE2EPreset } from '@titan/cypress/plugins/cypress-preset';
 
 export default defineConfig({
   e2e: {...nxE2EPreset(__dirname),
@@ -45,7 +45,7 @@ export default defineConfig({
 
 exports[`e2e migrator cypress with project root at "" cypress version >=10 should remove paths in the e2e config when they match the nx preset defaults 1`] = `
 "import { defineConfig } from 'cypress';
-import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
+import { nxE2EPreset } from '@titan/cypress/plugins/cypress-preset';
 
 export default defineConfig({
   e2e: {...nxE2EPreset(__dirname),
@@ -56,7 +56,7 @@ export default defineConfig({
 
 exports[`e2e migrator cypress with project root at "" cypress version >=10 should update e2e config with the nx preset 1`] = `
 "import { defineConfig } from 'cypress';
-import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
+import { nxE2EPreset } from '@titan/cypress/plugins/cypress-preset';
 
             export default defineConfig({
               e2e: {...nxE2EPreset(__dirname),
@@ -67,7 +67,7 @@ import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
 
 exports[`e2e migrator cypress with project root at "" cypress version >=10 should update paths in the config 1`] = `
 "import { defineConfig } from 'cypress';
-import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
+import { nxE2EPreset } from '@titan/cypress/plugins/cypress-preset';
 
 export default defineConfig({
   fixturesFolder: 'src/fixtures',
@@ -85,7 +85,7 @@ export default defineConfig({
 
 exports[`e2e migrator cypress with project root at "projects/app1" cypress version >=10 should add paths to the e2e config from the global config when they differ from the nx preset defaults 1`] = `
 "import { defineConfig } from 'cypress';
-import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
+import { nxE2EPreset } from '@titan/cypress/plugins/cypress-preset';
 
 export default defineConfig({
   fixturesFolder: 'src/my-fixtures',
@@ -97,7 +97,7 @@ export default defineConfig({
 `;
 
 exports[`e2e migrator cypress with project root at "projects/app1" cypress version >=10 should create a cypress.config.ts file when it does not exist 1`] = `
-"import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
+"import { nxE2EPreset } from '@titan/cypress/plugins/cypress-preset';
 
 import { defineConfig } from 'cypress';
 
@@ -115,7 +115,7 @@ export default defineConfig({
 
 exports[`e2e migrator cypress with project root at "projects/app1" cypress version >=10 should keep paths in the e2e config when they differ from the nx preset defaults 1`] = `
 "import { defineConfig } from 'cypress';
-import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
+import { nxE2EPreset } from '@titan/cypress/plugins/cypress-preset';
 
 export default defineConfig({
   e2e: {...nxE2EPreset(__dirname),
@@ -128,7 +128,7 @@ export default defineConfig({
 
 exports[`e2e migrator cypress with project root at "projects/app1" cypress version >=10 should remove paths in the e2e config when they match the nx preset defaults 1`] = `
 "import { defineConfig } from 'cypress';
-import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
+import { nxE2EPreset } from '@titan/cypress/plugins/cypress-preset';
 
 export default defineConfig({
   e2e: {...nxE2EPreset(__dirname),
@@ -139,7 +139,7 @@ export default defineConfig({
 
 exports[`e2e migrator cypress with project root at "projects/app1" cypress version >=10 should update e2e config with the nx preset 1`] = `
 "import { defineConfig } from 'cypress';
-import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
+import { nxE2EPreset } from '@titan/cypress/plugins/cypress-preset';
 
             export default defineConfig({
               e2e: {...nxE2EPreset(__dirname),
@@ -150,7 +150,7 @@ import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
 
 exports[`e2e migrator cypress with project root at "projects/app1" cypress version >=10 should update paths in the config 1`] = `
 "import { defineConfig } from 'cypress';
-import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
+import { nxE2EPreset } from '@titan/cypress/plugins/cypress-preset';
 
 export default defineConfig({
   fixturesFolder: 'src/fixtures',

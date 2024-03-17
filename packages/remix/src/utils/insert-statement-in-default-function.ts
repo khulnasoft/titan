@@ -1,4 +1,4 @@
-import { applyChangesToString, ChangeType, Tree } from '@nx/devkit';
+import { applyChangesToString, ChangeType, Tree } from '@titan/devkit';
 import { getDefaultExport } from './get-default-export';
 
 export function insertStatementInDefaultFunction(

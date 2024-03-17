@@ -1,12 +1,12 @@
-import * as devkit from '@nx/devkit';
+import * as devkit from '@titan/devkit';
 import {
   addProjectConfiguration,
   readJson,
   readProjectConfiguration,
   Tree,
   updateProjectConfiguration,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { setupTailwindGenerator } from './setup-tailwind';
 import {
   autoprefixerVersion,
@@ -108,7 +108,7 @@ describe('setupTailwind generator', () => {
       let projectConfig = readProjectConfiguration(tree, project);
       projectConfig.targets = {
         build: {
-          executor: '@nx/angular:package',
+          executor: '@titan/angular:package',
           options: { tailwindConfig },
         },
       };
@@ -127,7 +127,7 @@ describe('setupTailwind generator', () => {
     it('should add the tailwind config path to the "build" target by default when no build target is specified', async () => {
       let projectConfig = readProjectConfiguration(tree, project);
       projectConfig.targets = {
-        build: { executor: '@nx/angular:package', options: {} },
+        build: { executor: '@titan/angular:package', options: {} },
       };
       updateProjectConfiguration(tree, project, projectConfig);
 
@@ -143,7 +143,7 @@ describe('setupTailwind generator', () => {
       const buildTarget = 'custom-build';
       let projectConfig = readProjectConfiguration(tree, project);
       projectConfig.targets = {
-        [buildTarget]: { executor: '@nx/angular:package', options: {} },
+        [buildTarget]: { executor: '@titan/angular:package', options: {} },
       };
       updateProjectConfiguration(tree, project, projectConfig);
 
@@ -159,7 +159,7 @@ describe('setupTailwind generator', () => {
       );
     });
 
-    it.each(['@nx/angular:ng-packagr-lite', '@nx/angular:package'])(
+    it.each(['@titan/angular:ng-packagr-lite', '@titan/angular:package'])(
       'should add the tailwind config path when using the "%s" executor',
       async (executor) => {
         let projectConfig = readProjectConfiguration(tree, project);
@@ -178,7 +178,7 @@ describe('setupTailwind generator', () => {
     it('should add required packages', async () => {
       const projectConfig = readProjectConfiguration(tree, project);
       projectConfig.targets = {
-        build: { executor: '@nx/angular:package', options: {} },
+        build: { executor: '@titan/angular:package', options: {} },
       };
       updateProjectConfiguration(tree, project, projectConfig);
 
@@ -193,7 +193,7 @@ describe('setupTailwind generator', () => {
     it('should generate the tailwind.config.js file in the project root for v3 by default', async () => {
       const projectConfig = readProjectConfiguration(tree, project);
       projectConfig.targets = {
-        build: { executor: '@nx/angular:package', options: {} },
+        build: { executor: '@titan/angular:package', options: {} },
       };
       updateProjectConfiguration(tree, project, projectConfig);
 
@@ -201,7 +201,7 @@ describe('setupTailwind generator', () => {
 
       expect(tree.read(`libs/${project}/tailwind.config.js`, 'utf-8'))
         .toMatchInlineSnapshot(`
-        "const { createGlobPatternsForDependencies } = require('@nx/angular/tailwind');
+        "const { createGlobPatternsForDependencies } = require('@titan/angular/tailwind');
         const { join } = require('path');
 
         /** @type {import('tailwindcss').Config} */
@@ -222,7 +222,7 @@ describe('setupTailwind generator', () => {
     it('should generate the tailwind.config.js file in the project root with the config for v3 when a version greater than 3 is installed', async () => {
       const projectConfig = readProjectConfiguration(tree, project);
       projectConfig.targets = {
-        build: { executor: '@nx/angular:package', options: {} },
+        build: { executor: '@titan/angular:package', options: {} },
       };
       updateProjectConfiguration(tree, project, projectConfig);
       tree.write(
@@ -234,7 +234,7 @@ describe('setupTailwind generator', () => {
 
       expect(tree.read(`libs/${project}/tailwind.config.js`, 'utf-8'))
         .toMatchInlineSnapshot(`
-        "const { createGlobPatternsForDependencies } = require('@nx/angular/tailwind');
+        "const { createGlobPatternsForDependencies } = require('@titan/angular/tailwind');
         const { join } = require('path');
 
         /** @type {import('tailwindcss').Config} */
@@ -255,7 +255,7 @@ describe('setupTailwind generator', () => {
     it('should generate the tailwind.config.js file in the project root with the config for v2 when a version greater than 2 and lower than 3 is installed', async () => {
       const projectConfig = readProjectConfiguration(tree, project);
       projectConfig.targets = {
-        build: { executor: '@nx/angular:package', options: {} },
+        build: { executor: '@titan/angular:package', options: {} },
       };
       updateProjectConfiguration(tree, project, projectConfig);
       tree.write(
@@ -267,7 +267,7 @@ describe('setupTailwind generator', () => {
 
       expect(tree.read(`libs/${project}/tailwind.config.js`, 'utf-8'))
         .toMatchInlineSnapshot(`
-        "const { createGlobPatternsForDependencies } = require('@nx/angular/tailwind');
+        "const { createGlobPatternsForDependencies } = require('@titan/angular/tailwind');
         const { join } = require('path');
 
         module.exports = {
@@ -292,7 +292,7 @@ describe('setupTailwind generator', () => {
     it('should format files', async () => {
       const projectConfig = readProjectConfiguration(tree, project);
       projectConfig.targets = {
-        build: { executor: '@nx/angular:package', options: {} },
+        build: { executor: '@titan/angular:package', options: {} },
       };
       updateProjectConfiguration(tree, project, projectConfig);
       jest.spyOn(devkit, 'formatFiles');
@@ -305,7 +305,7 @@ describe('setupTailwind generator', () => {
     it('should not format files when "skipFormat: true"', async () => {
       const projectConfig = readProjectConfiguration(tree, project);
       projectConfig.targets = {
-        build: { executor: '@nx/angular:package', options: {} },
+        build: { executor: '@titan/angular:package', options: {} },
       };
       updateProjectConfiguration(tree, project, projectConfig);
       jest.spyOn(devkit, 'formatFiles');

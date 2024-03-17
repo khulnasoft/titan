@@ -8,7 +8,7 @@ import {
   Tree,
   updateJson,
   writeJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { nxVersion } from '../../utils/versions';
 import { join } from 'path';
 import { Preset } from '../utils/presets';

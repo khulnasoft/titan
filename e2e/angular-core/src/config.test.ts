@@ -12,9 +12,9 @@ describe('angular.json v1 config', () => {
   const app1 = uniq('app1');
 
   beforeAll(() => {
-    newProject({ packages: ['@nx/angular'] });
+    newProject({ packages: ['@titan/angular'] });
     runCLI(
-      `generate @nx/angular:app ${app1} --project-name-and-root-format=as-provided --no-interactive`
+      `generate @titan/angular:app ${app1} --project-name-and-root-format=as-provided --no-interactive`
     );
     // reset workspace to use v1 config
     updateFile(`angular.json`, angularV1Json(app1));
@@ -34,7 +34,7 @@ describe('angular.json v1 config', () => {
     // create new app
     const app2 = uniq('app2');
     runCLI(
-      `generate @nx/angular:app ${app2} --project-name-and-root-format=as-provided --no-interactive`
+      `generate @titan/angular:app ${app2} --project-name-and-root-format=as-provided --no-interactive`
     );
 
     // should generate project.json for new projects
@@ -120,10 +120,10 @@ const angularV1Json = (appName: string) => `{
           }
         },
         "lint": {
-          "builder": "@nx/eslint:lint"
+          "builder": "@titan/eslint:lint"
         },
         "test": {
-          "builder": "@nx/jest:jest",
+          "builder": "@titan/jest:jest",
           "outputs": ["{workspaceRoot}/coverage${appName}"],
           "options": {
             "jestConfig": "${appName}/jest.config.ts",
@@ -139,7 +139,7 @@ const angularV1Json = (appName: string) => `{
       "projectType": "application",
       "architect": {
         "e2e": {
-          "builder": "@nx/cypress:cypress",
+          "builder": "@titan/cypress:cypress",
           "options": {
             "cypressConfig": "${appName}-e2e/cypress.json",
             "devServerTarget": "${appName}:serve:development",
@@ -152,7 +152,7 @@ const angularV1Json = (appName: string) => `{
           }
         },
         "lint": {
-          "builder": "@nx/eslint:lint",
+          "builder": "@titan/eslint:lint",
           "outputs": ["{options.outputFile}"]
         }
       },

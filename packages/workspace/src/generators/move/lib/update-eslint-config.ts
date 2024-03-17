@@ -1,4 +1,4 @@
-import { output, ProjectConfiguration, Tree } from '@nx/devkit';
+import { output, ProjectConfiguration, Tree } from '@titan/devkit';
 import { NormalizedSchema } from '../schema';
 
 /**
@@ -24,7 +24,7 @@ export function updateEslintConfig(
     const {
       updateRelativePathsInConfig,
       // nx-ignore-next-line
-    } = require('@nx/eslint/src/generators/utils/eslint-file');
+    } = require('@titan/eslint/src/generators/utils/eslint-file');
     updateRelativePathsInConfig(
       tree,
       project.root,
@@ -34,7 +34,7 @@ export function updateEslintConfig(
     output.warn({
       title: `Could not update the eslint config file.`,
       bodyLines: [
-        'The @nx/eslint package could not be loaded. Please update the paths in eslint config manually.',
+        'The @titan/eslint package could not be loaded. Please update the paths in eslint config manually.',
       ],
     });
   }

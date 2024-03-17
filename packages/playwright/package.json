@@ -1,5 +1,5 @@
 {
-  "name": "@nx/playwright",
+  "name": "@titan/playwright",
   "version": "0.0.1",
   "type": "commonjs",
   "homepage": "https://nx.dev",
@@ -33,8 +33,8 @@
   },
   "dependencies": {
     "@phenomnomnominal/tsquery": "~5.0.1",
-    "@nx/devkit": "file:../devkit",
-    "@nx/eslint": "file:../eslint",
+    "@titan/devkit": "file:../devkit",
+    "@titan/eslint": "file:../eslint",
     "@nx/js": "file:../js",
     "tslib": "^2.3.0",
     "minimatch": "9.0.3"

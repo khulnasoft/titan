@@ -186,23 +186,23 @@
       "apps/myreactapp/vite.config.ts",
       "@nx/vite/plugin"
     ],
-    "targets.lint": ["apps/myreactapp/project.json", "@nx/eslint/plugin"],
+    "targets.lint": ["apps/myreactapp/project.json", "@titan/eslint/plugin"],
     "targets.lint.command": [
       "apps/myreactapp/project.json",
-      "@nx/eslint/plugin"
+      "@titan/eslint/plugin"
     ],
-    "targets.lint.cache": ["apps/myreactapp/project.json", "@nx/eslint/plugin"],
+    "targets.lint.cache": ["apps/myreactapp/project.json", "@titan/eslint/plugin"],
     "targets.lint.options": [
       "apps/myreactapp/project.json",
-      "@nx/eslint/plugin"
+      "@titan/eslint/plugin"
     ],
     "targets.lint.inputs": [
       "apps/myreactapp/project.json",
-      "@nx/eslint/plugin"
+      "@titan/eslint/plugin"
     ],
     "targets.lint.options.cwd": [
       "apps/myreactapp/project.json",
-      "@nx/eslint/plugin"
+      "@titan/eslint/plugin"
     ],
     "name": ["apps/myreactapp/project.json", "nx/core/project-json"],
     "$schema": ["apps/myreactapp/project.json", "nx/core/project-json"],

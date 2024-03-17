@@ -5,7 +5,7 @@
   "projectType": "application",
   "targets": {
     "e2e-base": {
-      "executor": "@nx/cypress:cypress",
+      "executor": "@titan/cypress:cypress",
       "options": {
         "testingType": "e2e",
         "browser": "chrome"

@@ -1,5 +1,5 @@
-import type { Tree } from '@nx/devkit';
-import { formatFiles, GeneratorCallback } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
+import { formatFiles, GeneratorCallback } from '@titan/devkit';
 import type { Schema } from './schema';
 import {
   addExportsToBarrel,

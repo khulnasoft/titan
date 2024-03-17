@@ -1,5 +1,5 @@
-import { Tree, joinPathFragments } from '@nx/devkit';
-import { determineProjectNameAndRootOptions } from '@nx/devkit/src/generators/project-name-and-root-utils';
+import { Tree, joinPathFragments } from '@titan/devkit';
+import { determineProjectNameAndRootOptions } from '@titan/devkit/src/generators/project-name-and-root-utils';
 import { NormalizedSchema } from '../schema';
 
 export async function normalizeRemoteName(

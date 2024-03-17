@@ -7,8 +7,8 @@ import {
   logger,
   readNxJson,
   Tree,
-} from '@nx/devkit';
-import { camelize } from '@nx/devkit/src/utils/string-utils';
+} from '@titan/devkit';
+import { camelize } from '@titan/devkit/src/utils/string-utils';
 import { join } from 'path';
 import * as ts from 'typescript';
 import { workspaceLintPluginDir } from '../../utils/workspace-lint-rules';

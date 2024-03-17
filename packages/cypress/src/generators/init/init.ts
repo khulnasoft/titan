@@ -7,8 +7,8 @@ import {
   runTasksInSerial,
   Tree,
   updateNxJson,
-} from '@nx/devkit';
-import { updatePackageScripts } from '@nx/devkit/src/utils/update-package-scripts';
+} from '@titan/devkit';
+import { updatePackageScripts } from '@titan/devkit/src/utils/update-package-scripts';
 import { createNodes } from '../../plugins/plugin';
 import { cypressVersion, nxVersion } from '../../utils/versions';
 import { Schema } from './schema';
@@ -37,14 +37,14 @@ function setupE2ETargetDefaults(tree: Tree) {
 
 function updateDependencies(tree: Tree, options: Schema) {
   const tasks: GeneratorCallback[] = [];
-  tasks.push(removeDependenciesFromPackageJson(tree, ['@nx/cypress'], []));
+  tasks.push(removeDependenciesFromPackageJson(tree, ['@titan/cypress'], []));
 
   tasks.push(
     addDependenciesToPackageJson(
       tree,
       {},
       {
-        ['@nx/cypress']: nxVersion,
+        ['@titan/cypress']: nxVersion,
         cypress: cypressVersion,
       },
       undefined,
@@ -62,15 +62,15 @@ export function addPlugin(tree: Tree) {
   for (const plugin of nxJson.plugins) {
     if (
       typeof plugin === 'string'
-        ? plugin === '@nx/cypress/plugin'
-        : plugin.plugin === '@nx/cypress/plugin'
+        ? plugin === '@titan/cypress/plugin'
+        : plugin.plugin === '@titan/cypress/plugin'
     ) {
       return;
     }
   }
 
   nxJson.plugins.push({
-    plugin: '@nx/cypress/plugin',
+    plugin: '@titan/cypress/plugin',
     options: {
       targetName: 'e2e',
       componentTestingTargetName: 'component-test',

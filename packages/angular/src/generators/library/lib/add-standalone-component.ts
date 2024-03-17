@@ -1,4 +1,4 @@
-import { joinPathFragments, type Tree } from '@nx/devkit';
+import { joinPathFragments, type Tree } from '@titan/devkit';
 import { componentGenerator } from '../../component/component';
 import { addChildren } from './add-children';
 import { addLoadChildren } from './add-load-children';

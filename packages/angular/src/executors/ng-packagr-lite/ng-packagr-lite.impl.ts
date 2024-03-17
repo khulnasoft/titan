@@ -1,4 +1,4 @@
-import type { ExecutorContext } from '@nx/devkit';
+import type { ExecutorContext } from '@titan/devkit';
 import {
   createTmpTsConfig,
   DependentBuildableProjectNode,

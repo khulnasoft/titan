@@ -9,7 +9,7 @@ import {
   readProjectConfiguration,
   runTasksInSerial,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { hasWebpackPlugin } from '@nx/react/src/utils/has-webpack-plugin';
 
 import { nxVersion, reactNativeWebVersion } from '../../utils/versions';

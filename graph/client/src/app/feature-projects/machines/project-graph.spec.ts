@@ -3,7 +3,7 @@
 import type {
   ProjectGraphDependency,
   ProjectGraphProjectNode,
-} from '@nx/devkit';
+} from '@titan/devkit';
 /* eslint-enable @nx/enforce-module-boundaries */
 import { interpret } from 'xstate';
 import { projectGraphMachine } from './project-graph.machine';

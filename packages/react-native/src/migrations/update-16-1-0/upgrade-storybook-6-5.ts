@@ -1,4 +1,4 @@
-import { Tree, updateJson } from '@nx/devkit';
+import { Tree, updateJson } from '@titan/devkit';
 
 /**
  * This migration is to upgrade storybook to 6.5.

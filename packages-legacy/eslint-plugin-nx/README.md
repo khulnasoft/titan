@@ -1,6 +1,6 @@
-## @nrwl/eslint-plugin-nx has been renamed to @nx/eslint-plugin!
+## @nrwl/eslint-plugin-nx has been renamed to @titan/eslint-plugin!
 
-@nrwl/eslint-plugin-nx has been renamed to [@nx/eslint-plugin](https://www.npmjs.com/package/@nx/eslint-plugin). Please use that instead.
+@nrwl/eslint-plugin-nx has been renamed to [@titan/eslint-plugin](https://www.npmjs.com/package/@titan/eslint-plugin). Please use that instead.
 
 [Read more here](https://nx.dev/recipes/other/rescope)
 

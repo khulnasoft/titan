@@ -1,4 +1,4 @@
-import { Linter } from '@nx/eslint';
+import { Linter } from '@titan/eslint';
 
 export interface Schema {
   project: string;

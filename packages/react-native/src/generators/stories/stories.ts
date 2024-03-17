@@ -1,4 +1,4 @@
-import { Tree } from '@nx/devkit';
+import { Tree } from '@titan/devkit';
 import { storiesGenerator as reactStoriesGenerator } from '@nx/react';
 import { StorybookStoriesSchema } from './schema';
 

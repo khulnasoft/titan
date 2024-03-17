@@ -1,5 +1,5 @@
-import { updateJson, ProjectConfiguration, Tree } from '@nx/devkit';
-import { workspaceRoot } from '@nx/devkit';
+import { updateJson, ProjectConfiguration, Tree } from '@titan/devkit';
+import { workspaceRoot } from '@titan/devkit';
 import * as path from 'path';
 import { extname, join } from 'path';
 import { NormalizedSchema } from '../schema';

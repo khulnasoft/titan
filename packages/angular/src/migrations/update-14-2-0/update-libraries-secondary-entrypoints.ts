@@ -7,7 +7,7 @@ import {
   Tree,
   visitNotIgnoredFiles,
   writeJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { basename, dirname } from 'path';
 
 const libraryExecutors = [

@@ -1,4 +1,4 @@
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import {
   NxJsonConfiguration,
   ProjectConfiguration,
@@ -6,7 +6,7 @@ import {
   addProjectConfiguration,
   readJson,
   updateJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 import { convertToFlatConfigGenerator } from './generator';
 import { ConvertToFlatConfigGeneratorSchema } from './schema';
@@ -145,7 +145,7 @@ describe('convert-to-flat-config generator', () => {
 
     expect(tree.read('eslint.config.js', 'utf-8')).toMatchInlineSnapshot(`
       "const { FlatCompat } = require('@eslint/eslintrc');
-      const nxEslintPlugin = require('@nx/eslint-plugin');
+      const nxEslintPlugin = require('@titan/eslint-plugin');
       const js = require('@eslint/js');
 
       const compat = new FlatCompat({
@@ -386,7 +386,7 @@ describe('convert-to-flat-config generator', () => {
 
     expect(tree.read('eslint.config.js', 'utf-8')).toMatchInlineSnapshot(`
       "const { FlatCompat } = require('@eslint/eslintrc');
-      const nxEslintPlugin = require('@nx/eslint-plugin');
+      const nxEslintPlugin = require('@titan/eslint-plugin');
       const js = require('@eslint/js');
 
       const compat = new FlatCompat({
@@ -443,7 +443,7 @@ describe('convert-to-flat-config generator', () => {
     });
     updateJson(tree, 'nx.json', (json: NxJsonConfiguration) => {
       delete json.targetDefaults;
-      json.plugins = ['@nx/eslint/plugin'];
+      json.plugins = ['@titan/eslint/plugin'];
       return json;
     });
     updateJson(
@@ -473,7 +473,7 @@ describe('convert-to-flat-config generator', () => {
       delete json.targetDefaults;
       json.plugins = [
         {
-          plugin: '@nx/eslint/plugin',
+          plugin: '@titan/eslint/plugin',
           options: {
             targetName: 'lint',
           },

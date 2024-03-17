@@ -5,7 +5,7 @@ import {
   readJson,
   runTasksInSerial,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 import { output } from 'nx/src/utils/output';
 import { litVersion } from '../../utils/versions';

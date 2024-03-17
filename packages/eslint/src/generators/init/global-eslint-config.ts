@@ -98,9 +98,9 @@ export const getGlobalFlatEslintConfiguration = (
 ): string => {
   const nodeList = createNodeList(new Map(), [], true);
   let content = stringifyNodeList(nodeList);
-  content = addImportToFlatConfig(content, 'nxPlugin', '@nx/eslint-plugin');
+  content = addImportToFlatConfig(content, 'nxPlugin', '@titan/eslint-plugin');
   content = addPluginsToExportsBlock(content, [
-    { name: '@nx', varName: 'nxPlugin', imp: '@nx/eslint-plugin' },
+    { name: '@nx', varName: 'nxPlugin', imp: '@titan/eslint-plugin' },
   ]);
   if (!rootProject) {
     content = addBlockToFlatConfigExport(

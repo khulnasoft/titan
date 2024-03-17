@@ -1,4 +1,4 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import {
   addDependenciesToPackageJson,
   formatFiles,
@@ -6,7 +6,7 @@ import {
   readNxJson,
   updateNxJson,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { nxVersion } from '../../utils/versions';
 
 export default async function updateFileServerExecutor(tree: Tree) {

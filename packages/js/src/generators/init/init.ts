@@ -9,8 +9,8 @@ import {
   Tree,
   updateJson,
   writeJson,
-} from '@nx/devkit';
-import { checkAndCleanWithSemver } from '@nx/devkit/src/utils/semver';
+} from '@titan/devkit';
+import { checkAndCleanWithSemver } from '@titan/devkit/src/utils/semver';
 import { readModulePackageJson } from 'nx/src/utils/package-json';
 import { satisfies, valid } from 'semver';
 import { getRootTsConfigFileName } from '../../utils/typescript/ts-config';

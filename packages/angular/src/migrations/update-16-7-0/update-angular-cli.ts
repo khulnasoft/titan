@@ -1,4 +1,4 @@
-import { formatFiles, Tree, updateJson } from '@nx/devkit';
+import { formatFiles, Tree, updateJson } from '@titan/devkit';
 
 export const angularCliVersion = '~16.2.0';
 

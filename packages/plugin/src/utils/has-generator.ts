@@ -4,7 +4,7 @@ import {
   readJson,
   readProjectConfiguration,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { PackageJson } from 'nx/src/utils/package-json';
 
 export function hasGenerator(

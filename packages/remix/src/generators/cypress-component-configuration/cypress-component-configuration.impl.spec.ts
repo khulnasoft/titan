@@ -1,5 +1,5 @@
-import { joinPathFragments, readProjectConfiguration } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { joinPathFragments, readProjectConfiguration } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import libraryGenerator from '../library/library.impl';
 import cypressComponentConfigurationGenerator from './cypress-component-configuration.impl';
 
@@ -39,7 +39,7 @@ describe('CypressComponentConfiguration', () => {
     `);
     expect(project.targets['component-test']).toMatchInlineSnapshot(`
       {
-        "executor": "@nx/cypress:cypress",
+        "executor": "@titan/cypress:cypress",
         "options": {
           "cypressConfig": "cypress-test/cypress.config.ts",
           "devServerTarget": "",

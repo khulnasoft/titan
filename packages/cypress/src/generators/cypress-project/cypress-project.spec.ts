@@ -4,11 +4,11 @@ import {
   readProjectConfiguration,
   Tree,
   updateProjectConfiguration,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { cypressProjectGenerator } from './cypress-project';
 import { Schema } from './schema';
-import { Linter } from '@nx/eslint';
+import { Linter } from '@titan/eslint';
 import { installedCypressVersion } from '../../utils/cypress-version';
 import { cypressInitGenerator } from '../init/init';
 

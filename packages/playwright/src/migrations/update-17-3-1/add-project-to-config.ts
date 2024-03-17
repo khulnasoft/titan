@@ -1,4 +1,4 @@
-import { Tree, getProjects, joinPathFragments } from '@nx/devkit';
+import { Tree, getProjects, joinPathFragments } from '@titan/devkit';
 import * as ts from 'typescript';
 import { tsquery } from '@phenomnomnominal/tsquery';
 

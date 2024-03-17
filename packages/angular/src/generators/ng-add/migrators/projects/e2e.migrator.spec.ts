@@ -1,5 +1,5 @@
 // mock so we can test multiple versions
-jest.mock('@nx/cypress/src/utils/cypress-version');
+jest.mock('@titan/cypress/src/utils/cypress-version');
 // mock bc the nxE2EPreset uses fs for path normalization
 jest.mock('fs', () => {
   return {
@@ -10,16 +10,16 @@ jest.mock('fs', () => {
   };
 });
 
-import { installedCypressVersion } from '@nx/cypress/src/utils/cypress-version';
-import { formatFiles, ProjectConfiguration, Tree } from '@nx/devkit';
+import { installedCypressVersion } from '@titan/cypress/src/utils/cypress-version';
+import { formatFiles, ProjectConfiguration, Tree } from '@titan/devkit';
 import {
   joinPathFragments,
   offsetFromRoot,
   readJson,
   readProjectConfiguration,
   writeJson,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import type { Logger, MigrationProjectConfiguration } from '../../utilities';
 import { E2eMigrator } from './e2e.migrator';
 
@@ -543,7 +543,7 @@ describe('e2e migrator', () => {
           projectType: 'application',
           targets: {
             e2e: {
-              executor: '@nx/cypress:cypress',
+              executor: '@titan/cypress:cypress',
               options: { cypressConfig: 'apps/app1-e2e/cypress.json' },
             },
           },
@@ -609,15 +609,15 @@ describe('e2e migrator', () => {
           projectType: 'application',
           targets: {
             'cypress-run': {
-              executor: '@nx/cypress:cypress',
+              executor: '@titan/cypress:cypress',
               options: { cypressConfig: 'apps/app1-e2e/cypress.json' },
             },
             'cypress-open': {
-              executor: '@nx/cypress:cypress',
+              executor: '@titan/cypress:cypress',
               options: { cypressConfig: 'apps/app1-e2e/cypress.json' },
             },
             e2e: {
-              executor: '@nx/cypress:cypress',
+              executor: '@titan/cypress:cypress',
               options: { cypressConfig: 'apps/app1-e2e/cypress.json' },
             },
           },
@@ -663,18 +663,18 @@ describe('e2e migrator', () => {
           projectType: 'application',
           targets: {
             'cypress-run': {
-              executor: '@nx/cypress:cypress',
+              executor: '@titan/cypress:cypress',
               options: {
                 cypressConfig: 'apps/app1-e2e/cypress.json',
                 tsConfig: 'apps/app1-e2e/tsconfig.json',
               },
             },
             'cypress-open': {
-              executor: '@nx/cypress:cypress',
+              executor: '@titan/cypress:cypress',
               options: { cypressConfig: 'apps/app1-e2e/cypress.json' },
             },
             e2e: {
-              executor: '@nx/cypress:cypress',
+              executor: '@titan/cypress:cypress',
               options: {
                 cypressConfig: 'apps/app1-e2e/cypress.json',
                 tsConfig: 'apps/app1-e2e/tsconfig.json',

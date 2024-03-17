@@ -3,7 +3,7 @@ import {
   readProjectConfiguration,
   Tree,
   workspaceRoot,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import type { AppConfig } from '@remix-run/dev';
 import { createContext, SourceTextModule } from 'vm';
 

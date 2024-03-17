@@ -6,7 +6,7 @@ import {
   UpdatePackageJsonOption,
 } from './update-package-json';
 import { vol } from 'memfs';
-import { DependencyType, ExecutorContext, ProjectGraph } from '@nx/devkit';
+import { DependencyType, ExecutorContext, ProjectGraph } from '@titan/devkit';
 import { DependentBuildableProjectNode } from '../buildable-libs-utils';
 
 jest.mock('nx/src/utils/workspace-root', () => ({

@@ -1,4 +1,4 @@
-import { joinPathFragments } from '@nx/devkit';
+import { joinPathFragments } from '@titan/devkit';
 import {
   getPackageManagerCommand,
   runCLI,
@@ -13,8 +13,8 @@ type GeneratorsWithDefaultTests =
   | '@nx/node:lib'
   | '@nx/react:lib'
   | '@nx/react:app'
-  | '@nx/next:app'
-  | '@nx/angular:app'
+  | '@titan/next:app'
+  | '@titan/angular:app'
   | '@nx/web:app';
 
 /**

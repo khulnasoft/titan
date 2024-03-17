@@ -1,5 +1,5 @@
 import type { ExtractI18nBuilderOptions } from '@angular-devkit/build-angular';
-import { parseTargetString, type ExecutorContext } from '@nx/devkit';
+import { parseTargetString, type ExecutorContext } from '@titan/devkit';
 import { createBuilderContext } from 'nx/src/adapter/ngcli-adapter';
 import { readCachedProjectConfiguration } from 'nx/src/project-graph/project-graph';
 import { getInstalledAngularVersionInfo } from '../utilities/angular-version-utils';
@@ -21,8 +21,8 @@ export default async function* extractI18nExecutor(
   const isUsingEsbuildBuilder = [
     '@angular-devkit/build-angular:application',
     '@angular-devkit/build-angular:browser-esbuild',
-    '@nx/angular:application',
-    '@nx/angular:browser-esbuild',
+    '@titan/angular:application',
+    '@titan/angular:browser-esbuild',
   ].includes(buildTarget.executor);
 
   const builderContext = await createBuilderContext(
@@ -38,7 +38,7 @@ export default async function* extractI18nExecutor(
    * The Angular CLI extract-i18n builder make some decisions based on the build
    * target builder but it only considers `@angular-devkit/build-angular:*`
    * builders. Since we are using a custom builder, we patch the context to
-   * handle `@nx/angular:*` executors.
+   * handle `@titan/angular:*` executors.
    */
   patchBuilderContext(builderContext, isUsingEsbuildBuilder, parsedBuildTarget);
 

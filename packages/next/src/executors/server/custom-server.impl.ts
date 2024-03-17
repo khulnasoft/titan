@@ -1,4 +1,4 @@
-import { ExecutorContext, parseTargetString, runExecutor } from '@nx/devkit';
+import { ExecutorContext, parseTargetString, runExecutor } from '@titan/devkit';
 import { join } from 'path';
 
 import { NextServeBuilderOptions } from '../../utils/types';

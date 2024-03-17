@@ -85,9 +85,9 @@ exports[`@nx/storybook:configuration for Storybook v7 dependencies should add an
   },
   "devDependencies": {
     "@angular/forms": "*",
-    "@nx/eslint": "0.0.1",
-    "@nx/eslint-plugin": "0.0.1",
-    "@nx/jest": "0.0.1",
+    "@titan/eslint": "0.0.1",
+    "@titan/eslint-plugin": "0.0.1",
+    "@titan/jest": "0.0.1",
     "@nx/js": "0.0.1",
     "@nx/storybook": "0.0.1",
     "@nx/web": "0.0.1",

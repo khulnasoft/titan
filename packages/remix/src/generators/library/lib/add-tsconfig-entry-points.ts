@@ -1,9 +1,9 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import {
   joinPathFragments,
   readProjectConfiguration,
   updateJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { getRootTsConfigPathInTree } from '@nx/js';
 import type { RemixLibraryOptions } from './normalize-options';
 

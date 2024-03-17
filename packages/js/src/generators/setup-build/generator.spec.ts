@@ -1,10 +1,10 @@
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import {
   addProjectConfiguration,
   readProjectConfiguration,
   Tree,
   writeJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 import { setupBuildGenerator } from './generator';
 
@@ -164,7 +164,7 @@ describe('setup-build generator', () => {
     expect(config).toMatchObject({
       targets: {
         build: {
-          executor: '@nx/esbuild:esbuild',
+          executor: '@titan/esbuild:esbuild',
           options: {
             outputPath: 'dist/packages/mypkg',
             main: 'packages/mypkg/src/main.ts',

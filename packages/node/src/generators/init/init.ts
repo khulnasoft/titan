@@ -5,7 +5,7 @@ import {
   removeDependenciesFromPackageJson,
   runTasksInSerial,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { nxVersion } from '../../utils/versions';
 import { Schema } from './schema';
 

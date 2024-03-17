@@ -1,4 +1,4 @@
-import { Tree } from '@nx/devkit';
+import { Tree } from '@titan/devkit';
 import { UnitTestRunner } from '../../../utils/test-runners';
 import { addJest } from '../../utils/add-jest';
 import type { NormalizedSchema } from './normalized-schema';

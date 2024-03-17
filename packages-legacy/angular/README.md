@@ -1,6 +1,6 @@
-## @nrwl/angular has been renamed to @nx/angular!
+## @nrwl/angular has been renamed to @titan/angular!
 
-@nrwl/angular has been renamed to [@nx/angular](https://www.npmjs.com/package/@nx/angular). Please use that instead.
+@nrwl/angular has been renamed to [@titan/angular](https://www.npmjs.com/package/@titan/angular). Please use that instead.
 
 [Read more here](https://nx.dev/recipes/other/rescope)
 

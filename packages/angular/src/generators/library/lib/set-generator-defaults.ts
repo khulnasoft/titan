@@ -1,4 +1,4 @@
-import { readNxJson, updateNxJson, type Tree } from '@nx/devkit';
+import { readNxJson, updateNxJson, type Tree } from '@titan/devkit';
 import type { NormalizedSchema } from './normalized-schema';
 
 export function setGeneratorDefaults(
@@ -8,10 +8,10 @@ export function setGeneratorDefaults(
   const nxJson = readNxJson(tree);
 
   nxJson.generators = nxJson.generators ?? {};
-  nxJson.generators['@nx/angular:library'] = {
+  nxJson.generators['@titan/angular:library'] = {
     linter: options.libraryOptions.linter,
     unitTestRunner: options.libraryOptions.unitTestRunner,
-    ...(nxJson.generators['@nx/angular:library'] || {}),
+    ...(nxJson.generators['@titan/angular:library'] || {}),
   };
 
   updateNxJson(tree, nxJson);

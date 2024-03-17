@@ -13,25 +13,25 @@ post [Set up Tailwind CSS with Angular in an Nx workspace](https://medium.com/nr
 To generate an Angular application with Tailwind CSS configured run:
 
 ```shell
-npx nx g @nx/angular:app my-app --add-tailwind
+npx nx g @titan/angular:app my-app --add-tailwind
 ```
 
 To generate an Angular buildable library with Tailwind CSS configured run:
 
 ```shell
-npx nx g @nx/angular:lib my-lib --buildable --add-tailwind
+npx nx g @titan/angular:lib my-lib --buildable --add-tailwind
 ```
 
 To generate an Angular publishable library with Tailwind CSS configured run:
 
 ```shell
-npx nx g @nx/angular:lib my-lib --publishable --importPath=@my-org/my-lib --add-tailwind
+npx nx g @titan/angular:lib my-lib --publishable --importPath=@my-org/my-lib --add-tailwind
 ```
 
 To add Tailwind CSS to an existing Angular application, buildable library or publishable library, run:
 
 ```shell
-npx nx g @nx/angular:setup-tailwind my-project
+npx nx g @titan/angular:setup-tailwind my-project
 ```
 
 You can see the available options for the above generator in [its docs](/nx-api/angular/generators/setup-tailwind).
@@ -58,7 +58,7 @@ will default to `/**/!(*.stories|*.spec).{ts,html}`.
 The following is an example of it being used in an application called `app1`:
 
 ```javascript {% fileName="apps/app1/tailwind.config.js" %}
-const { createGlobPatternsForDependencies } = require('@nx/angular/tailwind');
+const { createGlobPatternsForDependencies } = require('@titan/angular/tailwind');
 const { join } = require('path');
 
 module.exports = {
@@ -172,7 +172,7 @@ Adjust the application's `tailwind.config.js` file to use the preset and remove 
 included in the preset:
 
 ```javascript {% fileName="apps/app1/tailwind.config.js" %}
-const { createGlobPatternsForDependencies } = require('@nx/angular/tailwind');
+const { createGlobPatternsForDependencies } = require('@titan/angular/tailwind');
 const { join } = require('path');
 const sharedTailwindConfig = require('../../libs/tailwind-preset/tailwind.config');
 
@@ -188,7 +188,7 @@ module.exports = {
 Do the same with any buildable or publishable library `tailwind.config.js` file:
 
 ```javascript {% fileName="libs/lib1/tailwind.config.js" %}
-const { createGlobPatternsForDependencies } = require('@nx/angular/tailwind');
+const { createGlobPatternsForDependencies } = require('@titan/angular/tailwind');
 const { join } = require('path');
 const sharedTailwindConfig = require('../../libs/tailwind-preset/tailwind.config');
 
@@ -282,7 +282,7 @@ Adjust the `tailwind.config.js` file of the different applications to use the pr
 already included in the preset:
 
 ```javascript {% fileName="apps/app1/tailwind.config.js" %}
-const { createGlobPatternsForDependencies } = require('@nx/angular/tailwind');
+const { createGlobPatternsForDependencies } = require('@titan/angular/tailwind');
 const { join } = require('path');
 const sharedTailwindConfig = require('../../libs/tailwind-preset/tailwind.config');
 
@@ -296,7 +296,7 @@ module.exports = {
 ```
 
 ```javascript {% fileName="apps/app2/tailwind.config.js" %}
-const { createGlobPatternsForDependencies } = require('@nx/angular/tailwind');
+const { createGlobPatternsForDependencies } = require('@titan/angular/tailwind');
 const { join } = require('path');
 const sharedTailwindConfig = require('../../libs/tailwind-preset/tailwind.config');
 
@@ -312,7 +312,7 @@ module.exports = {
 Do the same with any shared buildable or publishable library `tailwind.config.js` file:
 
 ```javascript {% fileName="libs/lib1/tailwind.config.js" %}
-const { createGlobPatternsForDependencies } = require('@nx/angular/tailwind');
+const { createGlobPatternsForDependencies } = require('@titan/angular/tailwind');
 const { join } = require('path');
 const sharedTailwindConfig = require('../../libs/tailwind-preset/tailwind.config');
 
@@ -420,7 +420,7 @@ to have the following targets:
 ```jsonc {% fileName="libs/lib1/project.json" %}
 ...
 "build-angular": {
-  "executor": "@nx/angular:package",
+  "executor": "@titan/angular:package",
   "outputs": ["{workspaceRoot}/dist/libs/lib1"],
   "options": {
     "project": "libs/lib1/ng-package.json",

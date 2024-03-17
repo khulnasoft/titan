@@ -1,8 +1,8 @@
 import {
   nxBaseCypressPreset,
   NxComponentTestingOptions,
-} from '@nx/cypress/plugins/cypress-preset';
-import type { CypressExecutorOptions } from '@nx/cypress/src/executors/cypress/cypress.impl';
+} from '@titan/cypress/plugins/cypress-preset';
+import type { CypressExecutorOptions } from '@titan/cypress/src/executors/cypress/cypress.impl';
 import {
   ExecutorContext,
   joinPathFragments,
@@ -13,11 +13,11 @@ import {
   stripIndents,
   Target,
   workspaceRoot,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import {
   createExecutorContext,
   getProjectConfigByPath,
-} from '@nx/cypress/src/utils/ct-helpers';
+} from '@titan/cypress/src/utils/ct-helpers';
 
 import { existsSync } from 'fs';
 import { dirname, join } from 'path';

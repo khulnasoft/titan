@@ -4,15 +4,15 @@ import {
   getPackageManagerCommand,
   joinPathFragments,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { nxVersion } from '../../../utils/versions';
 import { NormalizedSchema } from '../schema';
 
 export async function addE2e(host: Tree, options: NormalizedSchema) {
   if (options.e2eTestRunner === 'cypress') {
     const { configurationGenerator } = ensurePackage<
-      typeof import('@nx/cypress')
-    >('@nx/cypress', nxVersion);
+      typeof import('@titan/cypress')
+    >('@titan/cypress', nxVersion);
     addProjectConfiguration(host, options.e2eProjectName, {
       projectType: 'application',
       root: options.e2eProjectRoot,
@@ -40,8 +40,8 @@ export async function addE2e(host: Tree, options: NormalizedSchema) {
     });
   } else if (options.e2eTestRunner === 'playwright') {
     const { configurationGenerator } = ensurePackage<
-      typeof import('@nx/playwright')
-    >('@nx/playwright', nxVersion);
+      typeof import('@titan/playwright')
+    >('@titan/playwright', nxVersion);
     addProjectConfiguration(host, options.e2eProjectName, {
       root: options.e2eProjectRoot,
       sourceRoot: joinPathFragments(options.e2eProjectRoot, 'src'),

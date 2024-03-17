@@ -8,9 +8,9 @@ import {
   runTasksInSerial,
   Tree,
   updateJson,
-} from '@nx/devkit';
-import { getRelativeCwd } from '@nx/devkit/src/generators/artifact-name-and-directory-utils';
-import { logShowProjectCommand } from '@nx/devkit/src/utils/log-show-project-command';
+} from '@titan/devkit';
+import { getRelativeCwd } from '@titan/devkit/src/generators/artifact-name-and-directory-utils';
+import { logShowProjectCommand } from '@titan/devkit/src/utils/log-show-project-command';
 import { addTsConfigPath, initGenerator as jsInitGenerator } from '@nx/js';
 
 import { nxVersion } from '../../utils/versions';
@@ -119,8 +119,8 @@ export async function libraryGeneratorInternal(host: Tree, schema: Schema) {
 
   // Set up test target
   if (options.unitTestRunner === 'jest') {
-    const { configurationGenerator } = ensurePackage<typeof import('@nx/jest')>(
-      '@nx/jest',
+    const { configurationGenerator } = ensurePackage<typeof import('@titan/jest')>(
+      '@titan/jest',
       nxVersion
     );
 

@@ -6,7 +6,7 @@ import {
   readNxJson,
   type GeneratorCallback,
   type Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { getInstalledPackageVersion, versions } from '../utils/version-utils';
 import { Schema } from './schema';
 

@@ -1,7 +1,7 @@
-import { Tree, readJson } from '@nx/devkit';
-import { writeJson } from '@nx/devkit';
-import * as devkit from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { Tree, readJson } from '@titan/devkit';
+import { writeJson } from '@titan/devkit';
+import * as devkit from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import migration from './rename-angular-eslint-accesibility-rules';
 
 describe('rename-angular-eslint-accesibility-rules migration', () => {

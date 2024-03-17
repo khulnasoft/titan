@@ -4,7 +4,7 @@ import {
   Tree,
   addProjectConfiguration,
   readJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import {
   updateNestJs10,
   updateCacheManagerImport,
@@ -13,8 +13,8 @@ import {
 import { createTreeWithEmptyWorkspace } from 'nx/src/devkit-testing-exports';
 
 let projectGraph: ProjectGraph;
-jest.mock('@nx/devkit', () => ({
-  ...jest.requireActual('@nx/devkit'),
+jest.mock('@titan/devkit', () => ({
+  ...jest.requireActual('@titan/devkit'),
   createProjectGraphAsync: () => Promise.resolve(projectGraph),
 }));
 describe('nestjs 10 migration changes', () => {

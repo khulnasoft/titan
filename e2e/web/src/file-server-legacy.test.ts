@@ -20,7 +20,7 @@ describe('file-server', () => {
     const reactAppName = uniq('react-app');
 
     runCLI(
-      `generate @nx/angular:app ${ngAppName} --no-interactive --e2eTestRunner=none`,
+      `generate @titan/angular:app ${ngAppName} --no-interactive --e2eTestRunner=none`,
       {
         env: {
           NX_ADD_PLUGINS: 'false',

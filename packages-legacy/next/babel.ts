@@ -1,1 +1,1 @@
-module.exports = require('@nx/next/babel');
+module.exports = require('@titan/next/babel');

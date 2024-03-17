@@ -4,7 +4,7 @@ import {
   logger,
   parseTargetString,
   readTargetOptions,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { existsSync } from 'fs';
 import { ViteDevServerExecutorOptions } from '../executors/dev-server/schema';
 import { loadViteDynamicImport } from './executor-utils';

@@ -1,4 +1,4 @@
-import { addDependenciesToPackageJson, readJson, Tree } from '@nx/devkit';
+import { addDependenciesToPackageJson, readJson, Tree } from '@titan/devkit';
 import { getPkgVersionForAngularMajorVersion } from '../../../utils/version-utils';
 import { getInstalledAngularMajorVersion } from '../../utils/version-utils';
 

@@ -1,5 +1,5 @@
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { Tree, addProjectConfiguration } from '@nx/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { Tree, addProjectConfiguration } from '@titan/devkit';
 import fixCoverageThreshold from './vitest-coverage-and-reporters';
 
 describe('vitest-coverage-threshold migration', () => {

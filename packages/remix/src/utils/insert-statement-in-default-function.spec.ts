@@ -1,5 +1,5 @@
-import { Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { insertStatementInDefaultFunction } from './insert-statement-in-default-function';
 
 describe('insertStatementInDefaultFunction', () => {

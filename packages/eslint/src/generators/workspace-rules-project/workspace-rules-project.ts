@@ -12,7 +12,7 @@ import {
   Tree,
   updateJson,
   updateNxJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { getRelativePathToRootTsConfig } from '@nx/js';
 import { addSwcRegisterDependencies } from '@nx/js/src/utils/swc/add-swc-dependencies';
 import { join } from 'path';
@@ -32,8 +32,8 @@ export async function lintWorkspaceRulesProjectGenerator(
   tree: Tree,
   options: LintWorkspaceRulesProjectGeneratorOptions = {}
 ) {
-  const { configurationGenerator } = ensurePackage<typeof import('@nx/jest')>(
-    '@nx/jest',
+  const { configurationGenerator } = ensurePackage<typeof import('@titan/jest')>(
+    '@titan/jest',
     nxVersion
   );
   const tasks: GeneratorCallback[] = [];

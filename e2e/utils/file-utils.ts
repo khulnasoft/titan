@@ -1,4 +1,4 @@
-import { parseJson } from '@nx/devkit';
+import { parseJson } from '@titan/devkit';
 import {
   createFileSync,
   ensureDirSync,

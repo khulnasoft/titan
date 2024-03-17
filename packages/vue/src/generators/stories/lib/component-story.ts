@@ -4,7 +4,7 @@ import {
   joinPathFragments,
   normalizePath,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { ensureTypescript } from '@nx/js/src/utils/typescript/ensure-typescript';
 import { StorybookStoriesSchema } from '../stories';
 import {

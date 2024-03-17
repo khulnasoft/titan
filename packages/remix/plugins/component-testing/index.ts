@@ -1,5 +1,5 @@
-import { nxBaseCypressPreset } from '@nx/cypress/plugins/cypress-preset';
-import { joinPathFragments, workspaceRoot } from '@nx/devkit';
+import { nxBaseCypressPreset } from '@titan/cypress/plugins/cypress-preset';
+import { joinPathFragments, workspaceRoot } from '@titan/devkit';
 
 import { existsSync } from 'fs';
 import { dirname, join } from 'path';

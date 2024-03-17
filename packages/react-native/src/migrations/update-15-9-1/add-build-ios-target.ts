@@ -3,7 +3,7 @@ import {
   formatFiles,
   getProjects,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 /**
  * Add build-ios target for react-native

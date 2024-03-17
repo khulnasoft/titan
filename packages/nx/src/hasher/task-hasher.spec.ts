@@ -1136,11 +1136,11 @@ describe('TaskHasher', () => {
                 hash: '$nx/webpack16$',
               },
             },
-            'npm:@nx/devkit': {
-              name: 'npm:@nx/devkit',
+            'npm:@titan/devkit': {
+              name: 'npm:@titan/devkit',
               type: 'npm',
               data: {
-                packageName: '@nx/devkit',
+                packageName: '@titan/devkit',
                 version: '16.0.0',
                 hash: '$nx/devkit16$',
               },
@@ -1167,7 +1167,7 @@ describe('TaskHasher', () => {
             'npm:@nx/webpack': [
               {
                 source: 'npm:@nx/webpack',
-                target: 'npm:@nx/devkit',
+                target: 'npm:@titan/devkit',
                 type: DependencyType.static,
               },
               {
@@ -1181,9 +1181,9 @@ describe('TaskHasher', () => {
                 type: DependencyType.static,
               },
             ],
-            'npm:@nx/devkit': [
+            'npm:@titan/devkit': [
               {
-                source: 'npm:@nx/devkit',
+                source: 'npm:@titan/devkit',
                 target: 'npm:nx',
                 type: DependencyType.static,
               },

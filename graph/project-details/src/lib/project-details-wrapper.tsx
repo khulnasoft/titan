@@ -4,7 +4,7 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 
 /* eslint-disable @nx/enforce-module-boundaries */
 // nx-ignore-next-line
-import { ProjectGraphProjectNode } from '@nx/devkit';
+import { ProjectGraphProjectNode } from '@titan/devkit';
 import {
   getExternalApiService,
   useEnvironmentConfig,

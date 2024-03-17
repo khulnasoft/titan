@@ -4,18 +4,18 @@ import {
   runTasksInSerial,
   type GeneratorCallback,
   type Tree,
-} from '@nx/devkit';
-import { camelize, dasherize } from '@nx/devkit/src/utils/string-utils';
-import { Linter, lintProjectGenerator } from '@nx/eslint';
+} from '@titan/devkit';
+import { camelize, dasherize } from '@titan/devkit/src/utils/string-utils';
+import { Linter, lintProjectGenerator } from '@titan/eslint';
 import {
   javaScriptOverride,
   typeScriptOverride,
-} from '@nx/eslint/src/generators/init/global-eslint-config';
+} from '@titan/eslint/src/generators/init/global-eslint-config';
 import {
   findEslintFile,
   isEslintConfigSupported,
   replaceOverridesInLintConfig,
-} from '@nx/eslint/src/generators/utils/eslint-file';
+} from '@titan/eslint/src/generators/utils/eslint-file';
 import { addAngularEsLintDependencies } from './lib/add-angular-eslint-dependencies';
 import { isBuildableLibraryProject } from './lib/buildable-project';
 import type { AddLintingGeneratorSchema } from './schema';
@@ -60,7 +60,7 @@ export async function addLintingGenerator(
             }
           : {}),
         extends: [
-          'plugin:@nx/angular',
+          'plugin:@titan/angular',
           'plugin:@angular-eslint/template/process-inline-templates',
         ],
         rules: {
@@ -84,7 +84,7 @@ export async function addLintingGenerator(
       },
       {
         files: ['*.html'],
-        extends: ['plugin:@nx/angular-template'],
+        extends: ['plugin:@titan/angular-template'],
         /**
          * Having an empty rules object present makes it more obvious to the user where they would
          * extend things from if they needed to

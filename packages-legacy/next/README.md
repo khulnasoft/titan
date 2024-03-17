@@ -1,6 +1,6 @@
-## @nrwl/next has been renamed to @nx/next!
+## @nrwl/next has been renamed to @titan/next!
 
-@nrwl/next has been renamed to [@nx/next](https://www.npmjs.com/package/@nx/next). Please use that instead.
+@nrwl/next has been renamed to [@titan/next](https://www.npmjs.com/package/@titan/next). Please use that instead.
 
 [Read more here](https://nx.dev/recipes/other/rescope)
 

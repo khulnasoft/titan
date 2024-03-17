@@ -4,11 +4,11 @@ import {
   readProjectConfiguration,
   Tree,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { ensureTypescript } from '@nx/js/src/utils/typescript/ensure-typescript';
 import { getComponentNode } from './ast-utils';
-import { type FoundTarget } from '@nx/cypress/src/utils/find-target-options';
-import type { NxComponentTestingOptions } from '@nx/cypress/plugins/cypress-preset';
+import { type FoundTarget } from '@titan/cypress/src/utils/find-target-options';
+import type { NxComponentTestingOptions } from '@titan/cypress/plugins/cypress-preset';
 
 let tsModule: typeof import('typescript');
 
@@ -30,7 +30,7 @@ export async function configureCypressCT(
   // Specifically undefined as a workaround for Remix to pass an empty string as the buildTarget
   if (options.buildTarget === undefined) {
     const { findBuildConfig } = await import(
-      '@nx/cypress/src/utils/find-target-options'
+      '@titan/cypress/src/utils/find-target-options'
     );
 
     found = await findBuildConfig(tree, {
@@ -56,7 +56,7 @@ export async function configureCypressCT(
   }
 
   const { addDefaultCTConfig, getProjectCypressConfigPath } = await import(
-    '@nx/cypress/src/utils/config'
+    '@titan/cypress/src/utils/config'
   );
 
   const ctConfigOptions: NxComponentTestingOptions = {
@@ -64,7 +64,7 @@ export async function configureCypressCT(
   };
   if (
     projectConfig.targets?.['component-test']?.executor ===
-    '@nx/cypress:cypress'
+    '@titan/cypress:cypress'
   ) {
     projectConfig.targets['component-test'].options = {
       ...projectConfig.targets['component-test'].options,

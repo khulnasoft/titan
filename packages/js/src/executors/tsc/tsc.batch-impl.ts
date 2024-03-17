@@ -1,4 +1,4 @@
-import { ExecutorContext, TaskGraph, parseTargetString } from '@nx/devkit';
+import { ExecutorContext, TaskGraph, parseTargetString } from '@titan/devkit';
 import { rmSync } from 'fs';
 import type { BatchExecutorTaskResult } from 'nx/src/config/misc-interfaces';
 import { getLastValueFromAsyncIterableIterator } from 'nx/src/utils/async-iterator';

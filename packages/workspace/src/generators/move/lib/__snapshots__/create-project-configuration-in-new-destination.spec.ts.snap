@@ -71,7 +71,7 @@ exports[`moveProjectConfiguration should rename the project 1`] = `
       },
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
+      "executor": "@titan/eslint:lint",
     },
     "serve": {
       "configurations": {
@@ -85,7 +85,7 @@ exports[`moveProjectConfiguration should rename the project 1`] = `
       },
     },
     "test": {
-      "executor": "@nx/jest:jest",
+      "executor": "@titan/jest:jest",
       "options": {
         "jestConfig": "apps/subfolder/my-destination/jest.config.js",
         "setupFile": "apps/subfolder/my-destination/src/test-setup.ts",
@@ -135,7 +135,7 @@ exports[`moveProjectConfiguration should rename the project correctly except for
     "lint": {
       "cache": true,
       "configurations": {},
-      "executor": "@nx/eslint:lint",
+      "executor": "@titan/eslint:lint",
       "inputs": [
         "default",
         "{workspaceRoot}/.eslintrc.json",

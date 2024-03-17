@@ -1,5 +1,5 @@
-import type { Tree } from '@nx/devkit';
-import { joinPathFragments } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
+import { joinPathFragments } from '@titan/devkit';
 import { dirname } from 'path';
 import { ensureTypescript } from '@nx/js/src/utils/typescript/ensure-typescript';
 import { insertImport } from '@nx/js';

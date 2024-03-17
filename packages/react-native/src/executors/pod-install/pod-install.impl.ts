@@ -1,5 +1,5 @@
 import { join } from 'path';
-import { ExecutorContext } from '@nx/devkit';
+import { ExecutorContext } from '@titan/devkit';
 
 import { runPodInstall } from '../../utils/pod-install-task';
 import { ReactNativePodInstallOptions } from './schema';

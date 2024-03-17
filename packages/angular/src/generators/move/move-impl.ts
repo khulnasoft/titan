@@ -1,4 +1,4 @@
-import { createProjectGraphAsync, type Tree } from '@nx/devkit';
+import { createProjectGraphAsync, type Tree } from '@titan/devkit';
 import {
   updateModuleName,
   updateNgPackage,

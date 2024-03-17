@@ -1,5 +1,5 @@
-import { Tree, getProjects, joinPathFragments } from '@nx/devkit';
-import { forEachExecutorOptions } from '@nx/devkit/src/generators/executor-options-utils';
+import { Tree, getProjects, joinPathFragments } from '@titan/devkit';
+import { forEachExecutorOptions } from '@titan/devkit/src/generators/executor-options-utils';
 import { ViteBuildExecutorOptions } from '../../executors/build/schema';
 import { tsquery } from '@phenomnomnominal/tsquery';
 import { findViteConfig } from '../../utils/find-vite-config';

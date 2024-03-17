@@ -1,10 +1,10 @@
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import {
   addProjectConfiguration,
   readNxJson,
   Tree,
   updateNxJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import addJestInputs from './add-jest-inputs';
 
 describe('15.0.0 migration (add-jest-inputs)', () => {

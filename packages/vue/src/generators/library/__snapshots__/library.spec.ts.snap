@@ -171,9 +171,9 @@ exports[`lib should add vue, vite and vitest to package.json 1`] = `
     "vue": "^3.3.4",
   },
   "devDependencies": {
-    "@nx/cypress": "0.0.1",
-    "@nx/eslint": "0.0.1",
-    "@nx/eslint-plugin": "0.0.1",
+    "@titan/cypress": "0.0.1",
+    "@titan/eslint": "0.0.1",
+    "@titan/eslint-plugin": "0.0.1",
     "@nx/js": "0.0.1",
     "@nx/rollup": "0.0.1",
     "@nx/vite": "0.0.1",

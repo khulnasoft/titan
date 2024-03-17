@@ -15,7 +15,7 @@ import {
   Tree,
   updateJson,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { extractTsConfigBase } from '@nx/js/src/utils/typescript/create-ts-config';
 import {
   eslintVersion,
@@ -33,8 +33,8 @@ import { NxRemixGeneratorSchema } from './schema';
 import { updateDependencies } from '../utils/update-dependencies';
 import initGenerator from '../init/init';
 import { initGenerator as jsInitGenerator } from '@nx/js';
-import { addBuildTargetDefaults } from '@nx/devkit/src/generators/add-build-target-defaults';
-import { logShowProjectCommand } from '@nx/devkit/src/utils/log-show-project-command';
+import { addBuildTargetDefaults } from '@titan/devkit/src/generators/add-build-target-defaults';
+import { logShowProjectCommand } from '@titan/devkit/src/utils/log-show-project-command';
 import { updateJestTestMatch } from '../../utils/testing-config-utils';
 
 export function remixApplicationGenerator(
@@ -174,8 +174,8 @@ export async function remixApplicationGeneratorInternal(
       tasks.push(vitestTask);
     } else {
       const { configurationGenerator: jestConfigurationGenerator } =
-        ensurePackage<typeof import('@nx/jest')>(
-          '@nx/jest',
+        ensurePackage<typeof import('@titan/jest')>(
+          '@titan/jest',
           getPackageVersion(tree, 'nx')
         );
       const jestTask = await jestConfigurationGenerator(tree, {
@@ -210,8 +210,8 @@ export async function remixApplicationGeneratorInternal(
   }
 
   if (options.linter !== 'none') {
-    const { lintProjectGenerator } = ensurePackage<typeof import('@nx/eslint')>(
-      '@nx/eslint',
+    const { lintProjectGenerator } = ensurePackage<typeof import('@titan/eslint')>(
+      '@titan/eslint',
       getPackageVersion(tree, 'nx')
     );
     const eslintTask = await lintProjectGenerator(tree, {
@@ -277,7 +277,7 @@ export async function remixApplicationGeneratorInternal(
     if (options.unitTestRunner === 'jest') {
       tree.write(
         'jest.preset.js',
-        `import { nxPreset } from '@nx/jest/preset/jest-preset.js';
+        `import { nxPreset } from '@titan/jest/preset/jest-preset.js';
 export default {...nxPreset};
 `
       );

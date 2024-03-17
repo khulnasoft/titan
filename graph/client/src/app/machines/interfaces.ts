@@ -4,7 +4,7 @@ import type {
   ProjectFileMap,
   ProjectGraphDependency,
   ProjectGraphProjectNode,
-} from '@nx/devkit';
+} from '@titan/devkit';
 /* eslint-enable @nx/enforce-module-boundaries */
 import { TracingAlgorithmType } from '../feature-projects/machines/interfaces';
 

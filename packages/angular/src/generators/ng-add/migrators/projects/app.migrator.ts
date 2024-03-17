@@ -1,10 +1,10 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import {
   joinPathFragments,
   offsetFromRoot,
   updateJson,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { getRootTsConfigPathInTree } from '@nx/js';
 import { basename } from 'path';
 import type { GeneratorOptions } from '../../schema';

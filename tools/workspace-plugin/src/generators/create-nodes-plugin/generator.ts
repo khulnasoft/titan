@@ -5,7 +5,7 @@ import {
   names,
   Tree,
   updateJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { basename, join, relative } from 'path';
 import migrationGenerator from '@nx/plugin/src/generators/migration/migration';
 

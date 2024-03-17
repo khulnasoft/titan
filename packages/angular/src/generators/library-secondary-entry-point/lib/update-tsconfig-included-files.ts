@@ -1,4 +1,4 @@
-import { joinPathFragments, updateJson, type Tree } from '@nx/devkit';
+import { joinPathFragments, updateJson, type Tree } from '@titan/devkit';
 import type { NormalizedGeneratorOptions } from '../schema';
 
 export function updateTsConfigIncludedFiles(

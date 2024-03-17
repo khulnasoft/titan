@@ -1,5 +1,5 @@
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { addProjectConfiguration, readJson, Tree, writeJson } from '@nx/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { addProjectConfiguration, readJson, Tree, writeJson } from '@titan/devkit';
 
 import update from './update-16-8-0-add-ignored-files';
 
@@ -31,7 +31,7 @@ describe('update-16-8-0-add-ignored-files migration', () => {
     executor                 | expectedPattern
     ${'@nx/vite:build'}      | ${'{projectRoot}/vite.config.{js,ts,mjs,mts}'}
     ${'@nx/vite:test'}       | ${'{projectRoot}/vite.config.{js,ts,mjs,mts}'}
-    ${'@nx/esbuild:esbuild'} | ${'{projectRoot}/esbuild.config.{js,ts,mjs,mts}'}
+    ${'@titan/esbuild:esbuild'} | ${'{projectRoot}/esbuild.config.{js,ts,mjs,mts}'}
     ${'@nx/rollup:rollup'}   | ${'{projectRoot}/rollup.config.{js,ts,mjs,mts}'}
   `(
     'should add ignoredFiles to projects using vite, esbuild, and rollup',

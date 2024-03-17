@@ -1,5 +1,5 @@
-import { getProjects, Tree } from '@nx/devkit';
-import { forEachExecutorOptions } from '@nx/devkit/src/generators/executor-options-utils';
+import { getProjects, Tree } from '@titan/devkit';
+import { forEachExecutorOptions } from '@titan/devkit/src/generators/executor-options-utils';
 import {
   findEslintFile,
   isEslintConfigSupported,
@@ -69,7 +69,7 @@ export default function update(tree: Tree) {
   );
   forEachExecutorOptions(
     tree,
-    '@nx/esbuild:esbuild',
+    '@titan/esbuild:esbuild',
     addIgnorePattern('{projectRoot}/esbuild.config.{js,ts,mjs,mts}')
   );
   forEachExecutorOptions(

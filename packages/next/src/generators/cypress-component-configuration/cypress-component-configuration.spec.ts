@@ -1,10 +1,10 @@
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { readJson, readProjectConfiguration, Tree } from '@nx/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { readJson, readProjectConfiguration, Tree } from '@titan/devkit';
 import { cypressComponentConfiguration } from './cypress-component-configuration';
 import { applicationGenerator } from '../application/application';
 import { libraryGenerator } from '../library/library';
 import { setupTailwindGenerator } from '@nx/react';
-import { Linter } from '@nx/eslint';
+import { Linter } from '@titan/eslint';
 
 describe('cypress-component-configuration generator', () => {
   let tree: Tree;
@@ -48,7 +48,7 @@ describe('cypress-component-configuration generator', () => {
       }
     }`);
     expect(tree.read('demo/cypress.config.ts', 'utf-8')).toMatchInlineSnapshot(`
-      "import { nxComponentTestingPreset } from '@nx/next/plugins/component-testing';
+      "import { nxComponentTestingPreset } from '@titan/next/plugins/component-testing';
       import { defineConfig } from 'cypress';
 
       export default defineConfig({
@@ -96,7 +96,7 @@ describe('cypress-component-configuration generator', () => {
     expect(
       readProjectConfiguration(tree, 'demo').targets['component-test']
     ).toEqual({
-      executor: '@nx/cypress:cypress',
+      executor: '@titan/cypress:cypress',
       options: {
         cypressConfig: 'demo/cypress.config.ts',
         skipServe: true,
@@ -164,7 +164,7 @@ describe('cypress-component-configuration generator', () => {
       }
     }`);
     expect(tree.read('demo/cypress.config.ts', 'utf-8')).toMatchInlineSnapshot(`
-      "import { nxComponentTestingPreset } from '@nx/next/plugins/component-testing';
+      "import { nxComponentTestingPreset } from '@titan/next/plugins/component-testing';
       import { defineConfig } from 'cypress';
 
       export default defineConfig({

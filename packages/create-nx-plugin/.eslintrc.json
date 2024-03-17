@@ -8,7 +8,7 @@
       "@angular-devkit/architect",
       "@angular-devkit/schematics",
       "nx",
-      "@nx/devkit"
+      "@titan/devkit"
     ]
   },
   "ignorePatterns": ["!**/*"],

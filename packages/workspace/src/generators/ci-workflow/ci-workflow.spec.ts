@@ -6,13 +6,13 @@ import {
   Tree,
   updateJson,
   writeJson,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { ciWorkflowGenerator } from './ci-workflow';
 import { vol } from 'memfs';
 
-jest.mock('@nx/devkit', () => ({
-  ...jest.requireActual<any>('@nx/devkit'),
+jest.mock('@titan/devkit', () => ({
+  ...jest.requireActual<any>('@titan/devkit'),
   workspaceRoot: '/root',
 }));
 
@@ -153,7 +153,7 @@ describe('CI Workflow generator', () => {
       updateJson(tree, 'package.json', (json) => {
         json.devDependencies = {
           ...json.devDependencies,
-          '@nx/cypress': 'latest',
+          '@titan/cypress': 'latest',
         };
         return json;
       });

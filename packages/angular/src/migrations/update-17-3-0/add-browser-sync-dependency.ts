@@ -3,7 +3,7 @@ import {
   formatFiles,
   getProjects,
   type Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { getInstalledPackageVersion } from '../../generators/utils/version-utils';
 
 export default async function (tree: Tree) {
@@ -21,7 +21,7 @@ export default async function (tree: Tree) {
     for (const target of Object.values(project.targets ?? {})) {
       if (
         target.executor !== '@angular-devkit/build-angular:ssr-dev-server' &&
-        target.executor !== '@nx/angular:module-federation-dev-ssr'
+        target.executor !== '@titan/angular:module-federation-dev-ssr'
       ) {
         continue;
       }

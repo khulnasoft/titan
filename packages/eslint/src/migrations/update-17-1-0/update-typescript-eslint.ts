@@ -7,7 +7,7 @@ import {
   Tree,
   updateJson,
   visitNotIgnoredFiles,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { nxVersion } from '../../utils/versions';
 import { extname } from 'path';
 import {
@@ -24,8 +24,8 @@ function updateJestConfig(tree: Tree) {
   const jestConfigPath = 'tools/eslint-rules/jest.config.ts';
   if (tree.exists(jestConfigPath)) {
     const { removePropertyFromJestConfig } = ensurePackage<
-      typeof import('@nx/jest')
-    >('@nx/jest', nxVersion);
+      typeof import('@titan/jest')
+    >('@titan/jest', nxVersion);
 
     removePropertyFromJestConfig(tree, jestConfigPath, [
       'moduleNameMapper',

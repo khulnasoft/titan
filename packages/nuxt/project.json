@@ -5,7 +5,7 @@
   "projectType": "library",
   "targets": {
     "test": {
-      "executor": "@nx/jest:jest",
+      "executor": "@titan/jest:jest",
       "options": {
         "jestConfig": "packages/nuxt/jest.config.ts"
       },

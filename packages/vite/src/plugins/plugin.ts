@@ -8,11 +8,11 @@ import {
   TargetConfiguration,
   workspaceRoot,
   writeJsonFile,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { dirname, isAbsolute, join, relative } from 'path';
-import { getNamedInputs } from '@nx/devkit/src/utils/get-named-inputs';
+import { getNamedInputs } from '@titan/devkit/src/utils/get-named-inputs';
 import { existsSync, readdirSync } from 'fs';
-import { calculateHashForCreateNodes } from '@nx/devkit/src/utils/calculate-hash-for-create-nodes';
+import { calculateHashForCreateNodes } from '@titan/devkit/src/utils/calculate-hash-for-create-nodes';
 import { projectGraphCacheDirectory } from 'nx/src/utils/cache-directory';
 import { getLockFileName } from '@nx/js';
 import { loadViteDynamicImport } from '../utils/executor-utils';

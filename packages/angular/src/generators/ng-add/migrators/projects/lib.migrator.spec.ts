@@ -2,14 +2,14 @@ import type {
   ProjectConfiguration,
   TargetConfiguration,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import {
   readJson,
   readNxJson,
   readProjectConfiguration,
   writeJson,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import type { MigrationProjectConfiguration } from '../../utilities';
 import { LibMigrator } from './lib.migrator';
 
@@ -570,7 +570,7 @@ describe('lib migrator', () => {
 
       const { targets } = readProjectConfiguration(tree, 'lib1');
       expect(targets.build).toStrictEqual({
-        executor: '@nx/angular:package',
+        executor: '@titan/angular:package',
         options: { project: 'libs/lib1/ng-package.json' },
         configurations: {
           production: { tsConfig: 'libs/lib1/tsconfig.lib.prod.json' },
@@ -602,7 +602,7 @@ describe('lib migrator', () => {
 
       const { targets } = readProjectConfiguration(tree, 'lib1');
       expect(targets.myCustomBuildTarget).toStrictEqual({
-        executor: '@nx/angular:package',
+        executor: '@titan/angular:package',
         options: { project: 'libs/lib1/ng-package.json' },
         configurations: {
           production: { tsConfig: 'libs/lib1/tsconfig.lib.prod.json' },
@@ -639,7 +639,7 @@ describe('lib migrator', () => {
 
       const { targets } = readProjectConfiguration(tree, 'lib1');
       expect(targets.build).toStrictEqual({
-        executor: '@nx/angular:package',
+        executor: '@titan/angular:package',
         configurations: {
           production: {
             project: 'libs/lib1/ng-package.json',
@@ -677,7 +677,7 @@ describe('lib migrator', () => {
 
       const { targets } = readProjectConfiguration(tree, 'lib1');
       expect(targets.build).toStrictEqual({
-        executor: '@nx/angular:package',
+        executor: '@titan/angular:package',
         options: {
           project: 'libs/lib1/ng-package.json',
           tsConfig: 'libs/lib1/tsconfig.lib.json',
@@ -710,7 +710,7 @@ describe('lib migrator', () => {
 
       const { targets } = readProjectConfiguration(tree, 'lib1');
       expect(targets.lint).toStrictEqual({
-        executor: '@nx/eslint:lint',
+        executor: '@titan/eslint:lint',
         options: {
           lintFilePatterns: ['libs/lib1/**/*.ts', 'libs/lib1/**/*.html'],
         },
@@ -739,7 +739,7 @@ describe('lib migrator', () => {
 
       const { targets } = readProjectConfiguration(tree, 'lib1');
       expect(targets.myCustomLintTarget).toStrictEqual({
-        executor: '@nx/eslint:lint',
+        executor: '@titan/eslint:lint',
         options: {
           lintFilePatterns: ['libs/lib1/**/*.ts', 'libs/lib1/**/*.html'],
         },
@@ -769,7 +769,7 @@ describe('lib migrator', () => {
 
       const { targets } = readProjectConfiguration(tree, 'lib1');
       expect(targets.lint).toStrictEqual({
-        executor: '@nx/eslint:lint',
+        executor: '@titan/eslint:lint',
         options: {
           eslintConfig: 'libs/lib1/.eslintrc.json',
           lintFilePatterns: ['libs/lib1/**/*.ts', 'libs/lib1/**/*.html'],
@@ -811,7 +811,7 @@ describe('lib migrator', () => {
 
       const { targets } = readProjectConfiguration(tree, 'lib1');
       expect(targets.lint).toStrictEqual({
-        executor: '@nx/eslint:lint',
+        executor: '@titan/eslint:lint',
         options: {
           eslintConfig: 'libs/lib1/.eslintrc.json',
           hasTypeAwareRules: true,

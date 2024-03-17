@@ -1,4 +1,4 @@
-import { ChangeType, applyChangesToString } from '@nx/devkit';
+import { ChangeType, applyChangesToString } from '@titan/devkit';
 import { tsquery } from '@phenomnomnominal/tsquery';
 import ts = require('typescript');
 

@@ -1,5 +1,5 @@
-import type { Tree } from '@nx/devkit';
-import { formatFiles, generateFiles, joinPathFragments } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
+import { formatFiles, generateFiles, joinPathFragments } from '@titan/devkit';
 import { addToNgModule } from '../utils';
 import { getInstalledAngularVersionInfo } from '../utils/version-utils';
 import {

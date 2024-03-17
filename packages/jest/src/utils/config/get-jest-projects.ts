@@ -2,7 +2,7 @@ import {
   createProjectGraphAsync,
   type ProjectsConfigurations,
   type TargetConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { readWorkspaceConfig } from 'nx/src/project-graph/file-utils';
 import { join } from 'path';
 import * as yargs from 'yargs-parser';
@@ -35,7 +35,7 @@ export function getJestProjects() {
     }
     for (const targetConfiguration of Object.values(projectConfig.targets)) {
       if (
-        targetConfiguration.executor !== '@nx/jest:jest' &&
+        targetConfiguration.executor !== '@titan/jest:jest' &&
         targetConfiguration.executor !== '@nrwl/jest:jest'
       ) {
         continue;
@@ -101,7 +101,7 @@ export async function getJestProjectsAsync() {
     }
     for (const targetConfiguration of Object.values(projectConfig.targets)) {
       if (
-        targetConfiguration.executor === '@nx/jest:jest' ||
+        targetConfiguration.executor === '@titan/jest:jest' ||
         targetConfiguration.executor === '@nrwl/jest:jest'
       ) {
         collectJestConfigFromJestExecutor(

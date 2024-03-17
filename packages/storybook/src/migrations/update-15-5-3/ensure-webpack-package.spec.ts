@@ -1,5 +1,5 @@
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { readJson, writeJson, addProjectConfiguration, Tree } from '@nx/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { readJson, writeJson, addProjectConfiguration, Tree } from '@titan/devkit';
 import update from './ensure-webpack-package';
 
 describe('ensure-webpack-package', () => {

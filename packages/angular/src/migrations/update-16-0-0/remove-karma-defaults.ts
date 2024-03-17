@@ -2,17 +2,17 @@ import type {
   NxJsonConfiguration,
   ProjectConfiguration,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import {
   formatFiles,
   getProjects,
   readNxJson,
   updateNxJson,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 const GENERATORS = ['application', 'library', 'host', 'remote'];
-const CANDIDATE_GENERATOR_COLLECTIONS = ['@nrwl/angular', '@nx/angular'];
+const CANDIDATE_GENERATOR_COLLECTIONS = ['@nrwl/angular', '@titan/angular'];
 
 export default async function removeKarmaDefaults(tree: Tree) {
   const nxJson = readNxJson(tree);
@@ -65,7 +65,7 @@ function updateUnitTestRunner(
 
     if (
       !GENERATORS.map((v) => `@nrwl/angular:${v}`).includes(generatorName) &&
-      !GENERATORS.map((v) => `@nx/angular:${v}`).includes(generatorName)
+      !GENERATORS.map((v) => `@titan/angular:${v}`).includes(generatorName)
     ) {
       continue;
     }

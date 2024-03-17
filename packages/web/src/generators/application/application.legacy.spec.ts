@@ -1,14 +1,14 @@
-import { installedCypressVersion } from '@nx/cypress/src/utils/cypress-version';
-import { getProjects, readProjectConfiguration, Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { installedCypressVersion } from '@titan/cypress/src/utils/cypress-version';
+import { getProjects, readProjectConfiguration, Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 
 import { applicationGenerator } from './application';
 // need to mock cypress otherwise it'll use the nx installed version from package.json
 //  which is v9 while we are testing for the new v10 version
-jest.mock('@nx/cypress/src/utils/cypress-version');
-jest.mock('@nx/devkit', () => {
+jest.mock('@titan/cypress/src/utils/cypress-version');
+jest.mock('@titan/devkit', () => {
   return {
-    ...jest.requireActual('@nx/devkit'),
+    ...jest.requireActual('@titan/devkit'),
     ensurePackage: jest.fn((pkg) => jest.requireActual(pkg)),
   };
 });
@@ -91,7 +91,7 @@ describe('web app generator (legacy)', () => {
             ],
           },
           "lint": {
-            "executor": "@nx/eslint:lint",
+            "executor": "@titan/eslint:lint",
           },
           "serve": {
             "configurations": {
@@ -105,7 +105,7 @@ describe('web app generator (legacy)', () => {
             },
           },
           "test": {
-            "executor": "@nx/jest:jest",
+            "executor": "@titan/jest:jest",
             "options": {
               "jestConfig": "my-app/jest.config.ts",
             },
@@ -165,7 +165,7 @@ describe('web app generator (legacy)', () => {
             ],
           },
           "lint": {
-            "executor": "@nx/eslint:lint",
+            "executor": "@titan/eslint:lint",
           },
           "preview": {
             "configurations": {

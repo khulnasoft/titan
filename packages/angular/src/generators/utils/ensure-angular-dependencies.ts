@@ -1,4 +1,4 @@
-import type { GeneratorCallback, Tree } from '@nx/devkit';
+import type { GeneratorCallback, Tree } from '@titan/devkit';
 import {
   addDependenciesToPackageJsonIfDontExist,
   getInstalledPackageVersion,

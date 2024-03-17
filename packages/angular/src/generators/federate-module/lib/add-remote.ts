@@ -1,5 +1,5 @@
-import type { GeneratorCallback, Tree } from '@nx/devkit';
-import { determineProjectNameAndRootOptions } from '@nx/devkit/src/generators/project-name-and-root-utils';
+import type { GeneratorCallback, Tree } from '@titan/devkit';
+import { determineProjectNameAndRootOptions } from '@titan/devkit/src/generators/project-name-and-root-utils';
 import { E2eTestRunner, UnitTestRunner } from '../../../utils/test-runners';
 import remoteGenerator from '../../remote/remote';
 import { type Schema } from '../schema';
@@ -30,7 +30,7 @@ export async function addRemote(tree: Tree, schema: Schema) {
         directory: schema.remoteDirectory,
         projectType: 'application',
         projectNameAndRootFormat: schema.projectNameAndRootFormat ?? 'derived',
-        callingGenerator: '@nx/angular:federate-module',
+        callingGenerator: '@titan/angular:federate-module',
       });
 
     projectRoot = remoteRoot;

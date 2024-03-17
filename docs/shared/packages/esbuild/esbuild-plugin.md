@@ -12,38 +12,38 @@ Why should you use this plugin?
 - Intelligent `package.json` output.
 - Additional [assets](/nx-api/esbuild/executors/esbuild#assets) for the output.
 
-## Setting Up @nx/esbuild
+## Setting Up @titan/esbuild
 
 ### Installation
 
 {% callout type="note" title="Keep Nx Package Versions In Sync" %}
-Make sure to install the `@nx/esbuild` version that matches the version of `nx` in your repository. If the version numbers get out of sync, you can encounter some difficult to debug errors. You can [fix Nx version mismatches with this recipe](/recipes/tips-n-tricks/keep-nx-versions-in-sync).
+Make sure to install the `@titan/esbuild` version that matches the version of `nx` in your repository. If the version numbers get out of sync, you can encounter some difficult to debug errors. You can [fix Nx version mismatches with this recipe](/recipes/tips-n-tricks/keep-nx-versions-in-sync).
 {% /callout %}
 
-In any Nx workspace, you can install `@nx/esbuild` by running the following command:
+In any Nx workspace, you can install `@titan/esbuild` by running the following command:
 
 {% tabs %}
 {% tab label="Nx 18+" %}
 
 ```shell {% skipRescope=true %}
-nx add @nx/esbuild
+nx add @titan/esbuild
 ```
 
-This will install the correct version of `@nx/esbuild`.
+This will install the correct version of `@titan/esbuild`.
 
 {% /tab %}
 {% tab label="Nx < 18" %}
 
-Install the `@nx/esbuild` package with your package manager.
+Install the `@titan/esbuild` package with your package manager.
 
 ```shell
-npm add -D @nx/esbuild
+npm add -D @titan/esbuild
 ```
 
 {% /tab %}
 {% /tabs %}
 
-## Using the @nx/esbuild Plugin
+## Using the @titan/esbuild Plugin
 
 ### Creating a new JS library
 
@@ -57,20 +57,20 @@ You can add a new library that builds using esbuild with:
 nx g @nx/js:lib mylib --directory=libs/mylib --bundler=esbuild
 ```
 
-This command will install the esbuild plugin if needed, and set `@nx/esbuild:esbuild` executor for the `build` target.
+This command will install the esbuild plugin if needed, and set `@titan/esbuild:esbuild` executor for the `build` target.
 
 ### Adding esbuild target to existing libraries
 
 If you already have a JS project that you want to use esbuild for, run this command:
 
 ```shell
-nx g @nx/esbuild:configuration mylib
+nx g @titan/esbuild:configuration mylib
 ```
 
 This generator validates there isn't an existing `build` target. If you want to overwrite the existing target you can pass the `--skipValidation` option.
 
 ```shell
-nx g @nx/esbuild:configuration mylib --skipValidation
+nx g @titan/esbuild:configuration mylib --skipValidation
 ```
 
 ## Using esbuild
@@ -89,7 +89,7 @@ Assets are non-JS and non-TS files, such as images, CSS, etc. You can add them t
 
 ```jsonc
 "build": {
- "executor": "@nx/esbuild:esbuild",
+ "executor": "@titan/esbuild:esbuild",
   "options": {
     //...
     "assets": [
@@ -139,7 +139,7 @@ Extra API options for esbuild can be passed in the `esbuildOptions` object for y
 
 ```jsonc
 "build": {
-  "executor": "@nx/esbuild:esbuild",
+  "executor": "@titan/esbuild:esbuild",
   "options": {
     //...
     "esbuildOptions": {

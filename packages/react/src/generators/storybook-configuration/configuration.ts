@@ -7,14 +7,14 @@ import {
   readNxJson,
   readProjectConfiguration,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { nxVersion } from '../../utils/versions';
 
 async function generateStories(host: Tree, schema: StorybookConfigureSchema) {
   // TODO(katerina): Nx 19 -> remove Cypress
-  ensurePackage('@nx/cypress', nxVersion);
+  ensurePackage('@titan/cypress', nxVersion);
   const { getE2eProjectName } = await import(
-    '@nx/cypress/src/utils/project-name'
+    '@titan/cypress/src/utils/project-name'
   );
   const projectConfig = readProjectConfiguration(host, schema.project);
   const cypressProject = getE2eProjectName(

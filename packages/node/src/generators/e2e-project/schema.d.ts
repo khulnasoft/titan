@@ -1,4 +1,4 @@
-import type { ProjectNameAndRootFormat } from '@nx/devkit/src/generators/project-name-and-root-utils';
+import type { ProjectNameAndRootFormat } from '@titan/devkit/src/generators/project-name-and-root-utils';
 
 export interface Schema {
   project: string;

@@ -1,4 +1,4 @@
-import { names, offsetFromRoot } from '@nx/devkit';
+import { names, offsetFromRoot } from '@titan/devkit';
 import { UpgradeNativeConfigureSchema } from '../schema';
 
 export interface NormalizedSchema {

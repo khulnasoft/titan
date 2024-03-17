@@ -2,7 +2,7 @@ import {
   addDependenciesToPackageJson,
   type GeneratorCallback,
   type Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { swcCoreVersion, swcHelpersVersion } from '@nx/js/src/utils/versions';
 import { swcLoaderVersion, tsLibVersion } from './versions';
 

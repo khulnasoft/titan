@@ -1,5 +1,5 @@
-import type { Tree } from '@nx/devkit';
-import { generateFiles, joinPathFragments, names } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
+import { generateFiles, joinPathFragments, names } from '@titan/devkit';
 import type { NormalizedNgRxFeatureStoreGeneratorOptions } from './normalize-options';
 import { lt } from 'semver';
 

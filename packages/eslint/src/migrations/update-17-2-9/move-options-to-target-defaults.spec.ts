@@ -5,14 +5,14 @@ import {
   readNxJson,
   readProjectConfiguration,
   writeJson,
-} from '@nx/devkit';
-import { createTree } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTree } from '@titan/devkit/testing';
 
 import update from './move-options-to-target-defaults';
 
 let projectGraph: ProjectGraph;
-jest.mock('@nx/devkit', () => ({
-  ...jest.requireActual<any>('@nx/devkit'),
+jest.mock('@titan/devkit', () => ({
+  ...jest.requireActual<any>('@titan/devkit'),
   createProjectGraphAsync: jest.fn().mockImplementation(async () => {
     return projectGraph;
   }),
@@ -45,7 +45,7 @@ describe('change-target-defaults-to-executor migration', () => {
       projectType: 'library',
       targets: {
         lint: {
-          executor: '@nx/eslint:lint',
+          executor: '@titan/eslint:lint',
           options: {
             lintFilePatterns: ['test-lib1/**/*.{ts,html}'],
           },
@@ -56,14 +56,14 @@ describe('change-target-defaults-to-executor migration', () => {
     await update(tree);
 
     expect(readProjectConfiguration(tree, 'test-lib1').targets.lint).toEqual({
-      executor: '@nx/eslint:lint',
+      executor: '@titan/eslint:lint',
       options: {
         lintFilePatterns: ['{projectRoot}/**/*.{ts,html}'],
       },
     });
 
     expect(readNxJson(tree).targetDefaults).toEqual({
-      '@nx/eslint:lint': {
+      '@titan/eslint:lint': {
         cache: true,
         inputs: [
           'default',
@@ -80,7 +80,7 @@ describe('change-target-defaults-to-executor migration', () => {
       projectType: 'library',
       targets: {
         lint: {
-          executor: '@nx/eslint:lint',
+          executor: '@titan/eslint:lint',
           options: {
             lintFilePatterns: ['test-lib1/**/*.{ts,html}'],
             eslintConfig: 'test-lib1/.eslintrc.json',
@@ -93,7 +93,7 @@ describe('change-target-defaults-to-executor migration', () => {
     await update(tree);
 
     expect(readProjectConfiguration(tree, 'test-lib1').targets.lint).toEqual({
-      executor: '@nx/eslint:lint',
+      executor: '@titan/eslint:lint',
       options: {
         lintFilePatterns: ['{projectRoot}/**/*.{ts,html}'],
       },
@@ -106,7 +106,7 @@ describe('change-target-defaults-to-executor migration', () => {
       projectType: 'library',
       targets: {
         lint: {
-          executor: '@nx/eslint:lint',
+          executor: '@titan/eslint:lint',
           options: {
             lintFilePatterns: ['test-lib1/**/*.{ts,html}'],
           },
@@ -122,7 +122,7 @@ describe('change-target-defaults-to-executor migration', () => {
     ).toBeUndefined();
 
     expect(
-      readNxJson(tree).targetDefaults['@nx/eslint:lint'].outputs
+      readNxJson(tree).targetDefaults['@titan/eslint:lint'].outputs
     ).toBeUndefined();
   });
 
@@ -132,7 +132,7 @@ describe('change-target-defaults-to-executor migration', () => {
       projectType: 'library',
       targets: {
         lint: {
-          executor: '@nx/eslint:lint',
+          executor: '@titan/eslint:lint',
           options: {
             lintFilePatterns: ['test-lib1/**/*.{ts,html}'],
           },
@@ -145,7 +145,7 @@ describe('change-target-defaults-to-executor migration', () => {
       projectType: 'library',
       targets: {
         lint: {
-          executor: '@nx/eslint:lint',
+          executor: '@titan/eslint:lint',
           options: {
             lintFilePatterns: ['test-lib2/**/*.{ts,html}'],
             outputFile: 'test-lib2/output.txt',
@@ -164,7 +164,7 @@ describe('change-target-defaults-to-executor migration', () => {
       readProjectConfiguration(tree, 'test-lib1').targets.lint.outputs
     ).toBeUndefined();
 
-    expect(readNxJson(tree).targetDefaults['@nx/eslint:lint'].outputs).toEqual([
+    expect(readNxJson(tree).targetDefaults['@titan/eslint:lint'].outputs).toEqual([
       '{options.outputFile}',
     ]);
   });
@@ -175,7 +175,7 @@ describe('change-target-defaults-to-executor migration', () => {
       projectType: 'library',
       targets: {
         lint: {
-          executor: '@nx/eslint:lint',
+          executor: '@titan/eslint:lint',
           options: {
             lintFilePatterns: ['test-lib1'],
           },
@@ -187,7 +187,7 @@ describe('change-target-defaults-to-executor migration', () => {
       projectType: 'library',
       targets: {
         lint: {
-          executor: '@nx/eslint:lint',
+          executor: '@titan/eslint:lint',
           options: {
             lintFilePatterns: ['{projectRoot}'],
           },
@@ -198,10 +198,10 @@ describe('change-target-defaults-to-executor migration', () => {
     await update(tree);
 
     expect(readProjectConfiguration(tree, 'test-lib1').targets.lint).toEqual({
-      executor: '@nx/eslint:lint',
+      executor: '@titan/eslint:lint',
     });
     expect(readProjectConfiguration(tree, 'test-lib2').targets.lint).toEqual({
-      executor: '@nx/eslint:lint',
+      executor: '@titan/eslint:lint',
     });
   });
 
@@ -211,7 +211,7 @@ describe('change-target-defaults-to-executor migration', () => {
       projectType: 'library',
       targets: {
         lint: {
-          executor: '@nx/eslint:lint',
+          executor: '@titan/eslint:lint',
           options: {
             lintFilePatterns: ['test-lib1/**/*.{ts,html}'],
           },
@@ -223,7 +223,7 @@ describe('change-target-defaults-to-executor migration', () => {
     await update(tree);
 
     expect(readProjectConfiguration(tree, 'test-lib1').targets.lint).toEqual({
-      executor: '@nx/eslint:lint',
+      executor: '@titan/eslint:lint',
       options: {
         lintFilePatterns: ['{projectRoot}/**/*.{ts,html}'],
       },

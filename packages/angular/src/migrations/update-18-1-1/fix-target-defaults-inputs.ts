@@ -6,7 +6,7 @@ import {
   formatFiles,
   readNxJson,
   updateNxJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 export default async function (tree: Tree) {
   if (!isWebpackBrowserUsed(tree)) {
@@ -19,7 +19,7 @@ export default async function (tree: Tree) {
 
 function ensureTargetDefaultsContainProductionInputs(tree: Tree) {
   const nxJson = readNxJson(tree);
-  const webpackExecutor = '@nx/angular:webpack-browser';
+  const webpackExecutor = '@titan/angular:webpack-browser';
   const mfEnvVar = 'NX_MF_DEV_SERVER_STATIC_REMOTES';
 
   nxJson.targetDefaults[webpackExecutor] ??= {};
@@ -59,7 +59,7 @@ function isWebpackBrowserUsed(tree: Tree) {
     const targets = project.targets || {};
     for (const [_, target] of Object.entries(targets)) {
       if (
-        target.executor === '@nx/angular:webpack-browser' &&
+        target.executor === '@titan/angular:webpack-browser' &&
         (tree.exists(
           joinPathFragments(project.root, 'module-federation.config.ts')
         ) ||

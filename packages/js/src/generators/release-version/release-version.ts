@@ -8,7 +8,7 @@ import {
   updateJson,
   workspaceRoot,
   writeJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import * as chalk from 'chalk';
 import { exec } from 'node:child_process';
 import { relative } from 'node:path';

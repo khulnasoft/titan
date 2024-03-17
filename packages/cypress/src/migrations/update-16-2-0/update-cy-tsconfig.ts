@@ -5,13 +5,13 @@ import {
   getProjects,
   joinPathFragments,
   updateJson,
-} from '@nx/devkit';
-import { forEachExecutorOptions } from '@nx/devkit/src/generators/executor-options-utils';
+} from '@titan/devkit';
+import { forEachExecutorOptions } from '@titan/devkit/src/generators/executor-options-utils';
 
 export async function normalizeCyTsConfigNames(tree: Tree) {
   const projects = getProjects(tree);
 
-  forEachExecutorOptions(tree, '@nx/cypress:cypress', (_, projectName) => {
+  forEachExecutorOptions(tree, '@titan/cypress:cypress', (_, projectName) => {
     const projectConfig = projects.get(projectName);
     const newTsConfigPath = joinPathFragments(
       projectConfig.root,

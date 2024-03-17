@@ -1,5 +1,5 @@
-import type { Tree } from '@nx/devkit';
-import { joinPathFragments, readProjectConfiguration } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
+import { joinPathFragments, readProjectConfiguration } from '@titan/devkit';
 import { Schema } from '../schema';
 
 export function removeDeadCodeFromRemote(tree: Tree, options: Schema) {

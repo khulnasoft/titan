@@ -91,7 +91,7 @@ or
 {% tab label="Angular" %}
 
 ```shell
-nx g @nx/angular:storybook-configuration my-angular-project
+nx g @titan/angular:storybook-configuration my-angular-project
 ```
 
 {% /tab %}
@@ -147,7 +147,7 @@ Choosing one of these frameworks will have the following effects on your workspa
 
 3. Nx will create new `targets` in your project's `project.json`, called `storybook`, `test-storybook` and `build-storybook`, containing all the necessary configuration to serve, test and build Storybook.
 
-Make sure to **use the framework-specific generators** if your project is using Angular, React, Next.js, Vue, Nuxt, or React Native: [`@nx/angular:storybook-configuration`](/nx-api/angular/generators/storybook-configuration), [`@nx/react:storybook-configuration`](/nx-api/react/generators/storybook-configuration), [`@nx/react-native:storybook-configuration`](/nx-api/react-native/generators/storybook-configuration), [`@nx/vue:storybook-configuration`](/nx-api/vue/generators/storybook-configuration) as shown above.
+Make sure to **use the framework-specific generators** if your project is using Angular, React, Next.js, Vue, Nuxt, or React Native: [`@titan/angular:storybook-configuration`](/nx-api/angular/generators/storybook-configuration), [`@nx/react:storybook-configuration`](/nx-api/react/generators/storybook-configuration), [`@nx/react-native:storybook-configuration`](/nx-api/react-native/generators/storybook-configuration), [`@nx/vue:storybook-configuration`](/nx-api/vue/generators/storybook-configuration) as shown above.
 
 ### Running Storybook
 

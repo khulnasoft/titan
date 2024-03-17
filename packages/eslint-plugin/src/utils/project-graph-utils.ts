@@ -2,7 +2,7 @@ import {
   ProjectFileMap,
   ProjectGraph,
   readCachedProjectGraph,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { isTerminalRun } from './runtime-lint-utils';
 import chalk = require('chalk');
 import {

@@ -5,7 +5,7 @@ import {
   updateProjectConfiguration,
   joinPathFragments,
   normalizePath,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 export function updateWorkspace(
   tree: Tree,
@@ -17,7 +17,7 @@ export function updateWorkspace(
   }
 
   projectConfig.targets[options.targetName] = {
-    executor: '@nx/jest:jest',
+    executor: '@titan/jest:jest',
     outputs: [
       options.rootProject
         ? joinPathFragments('{workspaceRoot}', 'coverage', '{projectName}')

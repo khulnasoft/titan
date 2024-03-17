@@ -1,6 +1,6 @@
 import * as ts from 'typescript';
 import { updateExposesProperty, createObjectEntry, findExposes } from './utils';
-import { Tree } from '@nx/devkit';
+import { Tree } from '@titan/devkit';
 import { createTreeWithEmptyWorkspace } from 'nx/src/devkit-testing-exports';
 
 describe('federate-module Utils', () => {

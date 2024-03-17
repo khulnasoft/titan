@@ -12,7 +12,7 @@ import {
   runTasksInSerial,
   Tree,
   logger,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { existsSync } from 'fs';
 
 import { runPodInstall } from '../../utils/pod-install-task';

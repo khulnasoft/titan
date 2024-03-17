@@ -57,7 +57,7 @@
     "semver": "^7.5.3",
     "source-map-support": "0.5.19",
     "tslib": "^2.3.0",
-    "@nx/devkit": "file:../devkit",
+    "@titan/devkit": "file:../devkit",
     "@nx/workspace": "file:../workspace"
   },
   "peerDependencies": {

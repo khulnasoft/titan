@@ -63,7 +63,7 @@
     "webpack-dev-server": "^4.9.3",
     "webpack-node-externals": "^3.0.0",
     "webpack-subresource-integrity": "^5.1.0",
-    "@nx/devkit": "file:../devkit",
+    "@titan/devkit": "file:../devkit",
     "@nx/js": "file:../js"
   },
   "publishConfig": {

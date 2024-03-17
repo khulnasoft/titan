@@ -6,13 +6,13 @@ import {
   type ProjectConfiguration,
   type ProjectGraph,
   type Tree,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import migration from './replace-nguniversal-engines';
 
 let projectGraph: ProjectGraph;
-jest.mock('@nx/devkit', () => ({
-  ...jest.requireActual('@nx/devkit'),
+jest.mock('@titan/devkit', () => ({
+  ...jest.requireActual('@titan/devkit'),
   createProjectGraphAsync: () => Promise.resolve(projectGraph),
   formatFiles: jest.fn(),
 }));

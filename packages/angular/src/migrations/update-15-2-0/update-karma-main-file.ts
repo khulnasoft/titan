@@ -1,8 +1,8 @@
-import type { Tree } from '@nx/devkit';
-import { formatFiles } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
+import { formatFiles } from '@titan/devkit';
 import * as ts from 'typescript';
 import { Builders } from '@schematics/angular/utility/workspace-models';
-import { forEachExecutorOptions } from '@nx/devkit/src/generators/executor-options-utils';
+import { forEachExecutorOptions } from '@titan/devkit/src/generators/executor-options-utils';
 import { FileChangeRecorder } from '../../utils/file-change-recorder';
 
 export default async function (tree: Tree) {

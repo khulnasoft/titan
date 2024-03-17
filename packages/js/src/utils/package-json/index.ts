@@ -1,4 +1,4 @@
-import { ExecutorContext } from '@nx/devkit';
+import { ExecutorContext } from '@titan/devkit';
 import { DependentBuildableProjectNode } from '../buildable-libs-utils';
 
 import { watchForSingleFileChanges } from '../watch-for-single-file-changes';

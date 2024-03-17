@@ -1,8 +1,8 @@
-import { createTree } from '@nx/devkit/testing';
+import { createTree } from '@titan/devkit/testing';
 
 let projectGraph: ProjectGraph;
-jest.mock('@nx/devkit', () => ({
-  ...jest.requireActual<any>('@nx/devkit'),
+jest.mock('@titan/devkit', () => ({
+  ...jest.requireActual<any>('@titan/devkit'),
   createProjectGraphAsync: jest.fn().mockImplementation(async () => {
     return projectGraph;
   }),
@@ -16,7 +16,7 @@ import {
   Tree,
   updateNxJson,
   writeJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 function addProjectConfiguration(tree, name, project) {
   _addProjectConfiguration(tree, name, project);
@@ -57,7 +57,7 @@ describe('move-options-to-target-defaults migration', () => {
       root: 'proj1',
       targets: {
         test: {
-          executor: '@nx/jest:jest',
+          executor: '@titan/jest:jest',
           options: {
             jestConfig: 'jest.config.js',
             passWithNoTests: true,
@@ -75,7 +75,7 @@ describe('move-options-to-target-defaults migration', () => {
       root: 'proj2',
       targets: {
         test: {
-          executor: '@nx/jest:jest',
+          executor: '@titan/jest:jest',
           options: {
             jestConfig: 'jest.config.js',
             passWithNoTests: true,
@@ -93,20 +93,20 @@ describe('move-options-to-target-defaults migration', () => {
     await update(tree);
 
     expect(readProjectConfiguration(tree, 'proj1').targets.test).toEqual({
-      executor: '@nx/jest:jest',
+      executor: '@titan/jest:jest',
       options: {
         jestConfig: 'jest.config.js',
       },
     });
     expect(readProjectConfiguration(tree, 'proj2').targets.test).toEqual({
-      executor: '@nx/jest:jest',
+      executor: '@titan/jest:jest',
       options: {
         jestConfig: 'jest.config.js',
       },
     });
 
     expect(readNxJson(tree).targetDefaults).toEqual({
-      '@nx/jest:jest': {
+      '@titan/jest:jest': {
         cache: true,
         configurations: {
           ci: {
@@ -137,7 +137,7 @@ describe('move-options-to-target-defaults migration', () => {
       root: 'proj1',
       targets: {
         test: {
-          executor: '@nx/jest:jest',
+          executor: '@titan/jest:jest',
           options: {
             jestConfig: 'jest.config.js',
             passWithNoTests: true,
@@ -155,14 +155,14 @@ describe('move-options-to-target-defaults migration', () => {
     await update(tree);
 
     expect(readProjectConfiguration(tree, 'proj1').targets.test).toEqual({
-      executor: '@nx/jest:jest',
+      executor: '@titan/jest:jest',
       options: {
         jestConfig: 'jest.config.js',
       },
     });
 
     expect(readNxJson(tree).targetDefaults).toEqual({
-      '@nx/jest:jest': {
+      '@titan/jest:jest': {
         cache: false,
         configurations: {
           ci: {
@@ -184,7 +184,7 @@ describe('move-options-to-target-defaults migration', () => {
       root: 'proj1',
       targets: {
         test: {
-          executor: '@nx/jest:jest',
+          executor: '@titan/jest:jest',
           inputs: ['default', '^production', '{workspaceRoot}/other-file.txt'],
           options: {
             jestConfig: 'jest.config.js',
@@ -204,7 +204,7 @@ describe('move-options-to-target-defaults migration', () => {
     await update(tree);
 
     expect(readProjectConfiguration(tree, 'proj1').targets.test).toEqual({
-      executor: '@nx/jest:jest',
+      executor: '@titan/jest:jest',
       inputs: ['default', '^production', '{workspaceRoot}/other-file.txt'],
       options: {
         jestConfig: 'jest.config.js',
@@ -213,7 +213,7 @@ describe('move-options-to-target-defaults migration', () => {
     });
 
     expect(readNxJson(tree).targetDefaults).toEqual({
-      '@nx/jest:jest': {
+      '@titan/jest:jest': {
         cache: true,
         configurations: {
           ci: {
@@ -234,7 +234,7 @@ describe('move-options-to-target-defaults migration', () => {
       root: 'proj1',
       targets: {
         test: {
-          executor: '@nx/jest:jest',
+          executor: '@titan/jest:jest',
           options: {
             jestConfig: 'jest.config.js',
             passWithNoTests: true,
@@ -261,7 +261,7 @@ describe('move-options-to-target-defaults migration', () => {
     await update(tree);
 
     expect(readProjectConfiguration(tree, 'proj1').targets.test).toEqual({
-      executor: '@nx/jest:jest',
+      executor: '@titan/jest:jest',
       options: {
         jestConfig: 'jest.config.js',
       },
@@ -272,7 +272,7 @@ describe('move-options-to-target-defaults migration', () => {
     });
 
     expect(readNxJson(tree).targetDefaults).toEqual({
-      '@nx/jest:jest': {
+      '@titan/jest:jest': {
         cache: true,
         configurations: {
           ci: {
@@ -310,14 +310,14 @@ describe('move-options-to-target-defaults migration', () => {
       root: 'proj1',
       targets: {
         test: {
-          executor: '@nx/jest:jest',
+          executor: '@titan/jest:jest',
           options: {
             jestConfig: 'jest.config.ts',
             passWithNoTests: true,
           },
         },
         e2e: {
-          executor: '@nx/jest:jest',
+          executor: '@titan/jest:jest',
           options: {
             jestConfig: 'jest.config.ts',
             passWithNoTests: true,
@@ -333,7 +333,7 @@ describe('move-options-to-target-defaults migration', () => {
           options: {},
         },
         e2e: {
-          executor: '@nx/cypress:cypress',
+          executor: '@titan/cypress:cypress',
           options: {},
         },
       },
@@ -343,13 +343,13 @@ describe('move-options-to-target-defaults migration', () => {
 
     expect(readProjectConfiguration(tree, 'proj1').targets).toEqual({
       e2e: {
-        executor: '@nx/jest:jest',
+        executor: '@titan/jest:jest',
         options: {
           jestConfig: 'jest.config.ts',
         },
       },
       test: {
-        executor: '@nx/jest:jest',
+        executor: '@titan/jest:jest',
         options: {
           jestConfig: 'jest.config.ts',
         },
@@ -358,7 +358,7 @@ describe('move-options-to-target-defaults migration', () => {
 
     expect(readProjectConfiguration(tree, 'proj2').targets).toEqual({
       e2e: {
-        executor: '@nx/cypress:cypress',
+        executor: '@titan/cypress:cypress',
         options: {},
       },
       test: {
@@ -368,7 +368,7 @@ describe('move-options-to-target-defaults migration', () => {
     });
 
     expect(readNxJson(tree).targetDefaults).toEqual({
-      '@nx/jest:jest': {
+      '@titan/jest:jest': {
         cache: true,
         configurations: {
           ci: {
@@ -413,7 +413,7 @@ describe('move-options-to-target-defaults migration', () => {
       root: 'proj1',
       targets: {
         test: {
-          executor: '@nx/jest:jest',
+          executor: '@titan/jest:jest',
           options: {
             jestConfig: 'jest.config.ts',
           },
@@ -425,7 +425,7 @@ describe('move-options-to-target-defaults migration', () => {
 
     expect(readProjectConfiguration(tree, 'proj1').targets).toEqual({
       test: {
-        executor: '@nx/jest:jest',
+        executor: '@titan/jest:jest',
         options: {
           jestConfig: 'jest.config.ts',
         },
@@ -433,7 +433,7 @@ describe('move-options-to-target-defaults migration', () => {
     });
 
     expect(readNxJson(tree).targetDefaults).toEqual({
-      '@nx/jest:jest': {
+      '@titan/jest:jest': {
         cache: true,
         configurations: {
           ci: {
@@ -475,14 +475,14 @@ describe('move-options-to-target-defaults migration', () => {
       root: 'proj1',
       targets: {
         test: {
-          executor: '@nx/jest:jest',
+          executor: '@titan/jest:jest',
           options: {
             jestConfig: 'jest.config.ts',
             passWithNoTests: true,
           },
         },
         e2e: {
-          executor: '@nx/jest:jest',
+          executor: '@titan/jest:jest',
           options: {
             jestConfig: 'jest.config.ts',
             passWithNoTests: true,
@@ -498,7 +498,7 @@ describe('move-options-to-target-defaults migration', () => {
           options: {},
         },
         e2e: {
-          executor: '@nx/cypress:cypress',
+          executor: '@titan/cypress:cypress',
           options: {},
         },
       },
@@ -508,13 +508,13 @@ describe('move-options-to-target-defaults migration', () => {
 
     expect(readProjectConfiguration(tree, 'proj1').targets).toEqual({
       e2e: {
-        executor: '@nx/jest:jest',
+        executor: '@titan/jest:jest',
         options: {
           jestConfig: 'jest.config.ts',
         },
       },
       test: {
-        executor: '@nx/jest:jest',
+        executor: '@titan/jest:jest',
         options: {
           jestConfig: 'jest.config.ts',
         },
@@ -523,7 +523,7 @@ describe('move-options-to-target-defaults migration', () => {
 
     expect(readProjectConfiguration(tree, 'proj2').targets).toEqual({
       e2e: {
-        executor: '@nx/cypress:cypress',
+        executor: '@titan/cypress:cypress',
         options: {},
       },
       test: {
@@ -533,7 +533,7 @@ describe('move-options-to-target-defaults migration', () => {
     });
 
     expect(readNxJson(tree).targetDefaults).toEqual({
-      '@nx/jest:jest': {
+      '@titan/jest:jest': {
         cache: true,
         configurations: {
           ci: {
@@ -577,7 +577,7 @@ describe('move-options-to-target-defaults migration', () => {
       root: 'proj1',
       targets: {
         test: {
-          executor: '@nx/jest:jest',
+          executor: '@titan/jest:jest',
           options: {
             jestConfig: 'jest.config.js',
             passWithNoTests: true,

@@ -1,5 +1,5 @@
 {
-  "name": "@nx/cypress",
+  "name": "@titan/cypress",
   "version": "0.0.1",
   "private": false,
   "description": "The Nx Plugin for Cypress contains executors and generators allowing your workspace to use the powerful Cypress integration testing capabilities.",
@@ -34,8 +34,8 @@
     "migrations": "./migrations.json"
   },
   "dependencies": {
-    "@nx/devkit": "file:../devkit",
-    "@nx/eslint": "file:../eslint",
+    "@titan/devkit": "file:../devkit",
+    "@titan/eslint": "file:../eslint",
     "@nx/js": "file:../js",
     "@phenomnomnominal/tsquery": "~5.0.1",
     "detect-port": "^1.5.1",

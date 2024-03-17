@@ -1,4 +1,4 @@
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import scamGenerator from '../scam/scam';
 import { generateTestApplication } from '../utils/testing';
 import { scamToStandalone } from './scam-to-standalone';

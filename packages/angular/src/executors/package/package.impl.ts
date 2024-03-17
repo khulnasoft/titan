@@ -1,5 +1,5 @@
-import type { ExecutorContext } from '@nx/devkit';
-import { eachValueFrom } from '@nx/devkit/src/utils/rxjs-for-await';
+import type { ExecutorContext } from '@titan/devkit';
+import { eachValueFrom } from '@titan/devkit/src/utils/rxjs-for-await';
 import {
   calculateProjectBuildableDependencies,
   checkDependentProjectsHaveBeenBuilt,

@@ -1,4 +1,4 @@
-import { DependencyType, ProjectGraph, TaskGraph } from '@nx/devkit';
+import { DependencyType, ProjectGraph, TaskGraph } from '@titan/devkit';
 import {
   calculateProjectDependencies,
   calculateDependenciesFromTaskGraph,

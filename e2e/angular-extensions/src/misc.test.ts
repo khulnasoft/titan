@@ -7,7 +7,7 @@ import {
   uniq,
   updateFile,
 } from '@nx/e2e/utils';
-import { classify } from '@nx/devkit/src/utils/string-utils';
+import { classify } from '@titan/devkit/src/utils/string-utils';
 
 describe('Move Angular Project', () => {
   let proj: string;
@@ -16,12 +16,12 @@ describe('Move Angular Project', () => {
   let newPath: string;
 
   beforeAll(() => {
-    proj = newProject({ packages: ['@nx/angular'] });
+    proj = newProject({ packages: ['@titan/angular'] });
     app1 = uniq('app1');
     app2 = uniq('app2');
     newPath = `subfolder/${app2}`;
     runCLI(
-      `generate @nx/angular:app ${app1} --project-name-and-root-format=as-provided --no-interactive`
+      `generate @titan/angular:app ${app1} --project-name-and-root-format=as-provided --no-interactive`
     );
   });
 
@@ -32,7 +32,7 @@ describe('Move Angular Project', () => {
    */
   it('should work for apps', () => {
     const moveOutput = runCLI(
-      `generate @nx/angular:move --project ${app1} ${newPath} --project-name-and-root-format=as-provided`
+      `generate @titan/angular:move --project ${app1} ${newPath} --project-name-and-root-format=as-provided`
     );
 
     // just check the output
@@ -65,7 +65,7 @@ describe('Move Angular Project', () => {
       `${app1}-e2e/cypress.config.ts`,
       `
   import { defineConfig } from 'cypress';
-  import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
+  import { nxE2EPreset } from '@titan/cypress/plugins/cypress-preset';
   
   export default defineConfig({
     e2e: {
@@ -77,7 +77,7 @@ describe('Move Angular Project', () => {
   `
     );
     const moveOutput = runCLI(
-      `generate @nx/angular:move --projectName=${app1}-e2e --destination=${newPath}-e2e --project-name-and-root-format=as-provided`
+      `generate @titan/angular:move --projectName=${app1}-e2e --destination=${newPath}-e2e --project-name-and-root-format=as-provided`
     );
 
     // just check that the cypress.config.ts is updated correctly
@@ -99,7 +99,7 @@ describe('Move Angular Project', () => {
     const lib1 = uniq('mylib');
     const lib2 = uniq('mylib');
     runCLI(
-      `generate @nx/angular:lib ${lib1} --no-standalone --project-name-and-root-format=as-provided --no-interactive`
+      `generate @titan/angular:lib ${lib1} --no-standalone --project-name-and-root-format=as-provided --no-interactive`
     );
 
     /**
@@ -107,7 +107,7 @@ describe('Move Angular Project', () => {
      */
 
     runCLI(
-      `generate @nx/angular:lib ${lib2} --no-standalone --project-name-and-root-format=as-provided --no-interactive`
+      `generate @titan/angular:lib ${lib2} --no-standalone --project-name-and-root-format=as-provided --no-interactive`
     );
 
     updateFile(
@@ -118,7 +118,7 @@ describe('Move Angular Project', () => {
     );
 
     const moveOutput = runCLI(
-      `generate @nx/angular:move --projectName=${lib1} --destination=shared/${lib1} --newProjectName=shared-${lib1} --project-name-and-root-format=as-provided`
+      `generate @titan/angular:move --projectName=${lib1} --destination=shared/${lib1} --newProjectName=shared-${lib1} --project-name-and-root-format=as-provided`
     );
 
     const newPath = `shared/${lib1}`;
@@ -155,7 +155,7 @@ describe('Move Angular Project', () => {
     const lib1 = uniq('mylib');
     const lib2 = uniq('mylib');
     runCLI(
-      `generate @nx/angular:lib ${lib1} --no-standalone --project-name-and-root-format=derived --no-interactive`
+      `generate @titan/angular:lib ${lib1} --no-standalone --project-name-and-root-format=derived --no-interactive`
     );
 
     /**
@@ -163,7 +163,7 @@ describe('Move Angular Project', () => {
      */
 
     runCLI(
-      `generate @nx/angular:lib ${lib2} --no-standalone --project-name-and-root-format=derived --no-interactive`
+      `generate @titan/angular:lib ${lib2} --no-standalone --project-name-and-root-format=derived --no-interactive`
     );
 
     updateFile(
@@ -174,7 +174,7 @@ describe('Move Angular Project', () => {
     );
 
     const moveOutput = runCLI(
-      `generate @nx/angular:move --projectName=${lib1} --destination=shared/${lib1} --project-name-and-root-format=derived`
+      `generate @titan/angular:move --projectName=${lib1} --destination=shared/${lib1} --project-name-and-root-format=derived`
     );
 
     const newPath = `libs/shared/${lib1}`;

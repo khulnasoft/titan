@@ -1,4 +1,4 @@
-import { Tree, getProjects } from '@nx/devkit';
+import { Tree, getProjects } from '@titan/devkit';
 import { join } from 'path';
 
 /**

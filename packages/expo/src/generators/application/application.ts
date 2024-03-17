@@ -4,7 +4,7 @@ import {
   joinPathFragments,
   runTasksInSerial,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { initGenerator as jsInitGenerator } from '@nx/js';
 
 import { addLinting } from '../../utils/add-linting';
@@ -19,7 +19,7 @@ import { addE2e } from './lib/add-e2e';
 import { Schema } from './schema';
 import { ensureDependencies } from '../../utils/ensure-dependencies';
 import { initRootBabelConfig } from '../../utils/init-root-babel-config';
-import { logShowProjectCommand } from '@nx/devkit/src/utils/log-show-project-command';
+import { logShowProjectCommand } from '@titan/devkit/src/utils/log-show-project-command';
 
 export async function expoApplicationGenerator(
   host: Tree,

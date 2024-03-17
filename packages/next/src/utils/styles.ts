@@ -2,7 +2,7 @@ import {
   addDependenciesToPackageJson,
   GeneratorCallback,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 import { lessVersion } from '@nx/react/src/utils/versions';
 import {

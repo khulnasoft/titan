@@ -6,8 +6,8 @@ import {
   updateProjectConfiguration,
   writeJson,
   updateJson,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { jestConfigObject } from '../../utils/config/functions';
 
 import configurationGenerator from './configuration';
@@ -33,7 +33,7 @@ describe('jestProject', () => {
       sourceRoot: 'libs/lib1/src',
       targets: {
         lint: {
-          executor: '@nx/eslint:lint',
+          executor: '@titan/eslint:lint',
           options: {},
         },
       },
@@ -394,7 +394,7 @@ describe('jestProject', () => {
       tree.write(
         `jest.preset.cjs`,
         `
-      const nxPreset = require('@nx/jest/preset').default;
+      const nxPreset = require('@titan/jest/preset').default;
 
       module.exports = { ...nxPreset }`
       );

@@ -105,10 +105,10 @@ describe('addDependenciesToPackageJson', () => {
     // ARRANGE
     writeJson(tree, 'package.json', {
       dependencies: {
-        '@nx/angular': 'latest',
+        '@titan/angular': 'latest',
       },
       devDependencies: {
-        '@nx/next': 'latest',
+        '@titan/next': 'latest',
       },
     });
 
@@ -116,20 +116,20 @@ describe('addDependenciesToPackageJson', () => {
     const installTask = addDependenciesToPackageJson(
       tree,
       {
-        '@nx/next': 'next',
+        '@titan/next': 'next',
       },
       {
-        '@nx/angular': 'next',
+        '@titan/angular': 'next',
       }
     );
 
     // ASSERT
     const { dependencies, devDependencies } = readJson(tree, 'package.json');
     expect(dependencies).toEqual({
-      '@nx/angular': 'next',
+      '@titan/angular': 'next',
     });
     expect(devDependencies).toEqual({
-      '@nx/next': 'next',
+      '@titan/next': 'next',
     });
     expect(installTask).toBeDefined();
   });
@@ -138,10 +138,10 @@ describe('addDependenciesToPackageJson', () => {
     // ARRANGE
     writeJson(tree, 'package.json', {
       dependencies: {
-        '@nx/angular': 'next',
+        '@titan/angular': 'next',
       },
       devDependencies: {
-        '@nx/next': 'next',
+        '@titan/next': 'next',
       },
     });
 
@@ -149,20 +149,20 @@ describe('addDependenciesToPackageJson', () => {
     const installTask = addDependenciesToPackageJson(
       tree,
       {
-        '@nx/next': 'latest',
+        '@titan/next': 'latest',
       },
       {
-        '@nx/angular': 'latest',
+        '@titan/angular': 'latest',
       }
     );
 
     // ASSERT
     const { dependencies, devDependencies } = readJson(tree, 'package.json');
     expect(dependencies).toEqual({
-      '@nx/angular': 'next',
+      '@titan/angular': 'next',
     });
     expect(devDependencies).toEqual({
-      '@nx/next': 'next',
+      '@titan/next': 'next',
     });
     expect(installTask).toBeDefined();
   });
@@ -171,10 +171,10 @@ describe('addDependenciesToPackageJson', () => {
     // ARRANGE
     writeJson(tree, 'package.json', {
       dependencies: {
-        '@nx/angular': '14.0.0',
+        '@titan/angular': '14.0.0',
       },
       devDependencies: {
-        '@nx/next': '14.0.0',
+        '@titan/next': '14.0.0',
       },
     });
 
@@ -182,20 +182,20 @@ describe('addDependenciesToPackageJson', () => {
     const installTask = addDependenciesToPackageJson(
       tree,
       {
-        '@nx/next': '14.1.0',
+        '@titan/next': '14.1.0',
       },
       {
-        '@nx/angular': '14.1.0',
+        '@titan/angular': '14.1.0',
       }
     );
 
     // ASSERT
     const { dependencies, devDependencies } = readJson(tree, 'package.json');
     expect(dependencies).toEqual({
-      '@nx/angular': '14.1.0',
+      '@titan/angular': '14.1.0',
     });
     expect(devDependencies).toEqual({
-      '@nx/next': '14.1.0',
+      '@titan/next': '14.1.0',
     });
     expect(installTask).toBeDefined();
   });
@@ -204,10 +204,10 @@ describe('addDependenciesToPackageJson', () => {
     // ARRANGE
     writeJson(tree, 'package.json', {
       dependencies: {
-        '@nx/angular': '14.1.0',
+        '@titan/angular': '14.1.0',
       },
       devDependencies: {
-        '@nx/next': '14.1.0',
+        '@titan/next': '14.1.0',
       },
     });
 
@@ -215,20 +215,20 @@ describe('addDependenciesToPackageJson', () => {
     const installTask = addDependenciesToPackageJson(
       tree,
       {
-        '@nx/next': '14.0.0',
+        '@titan/next': '14.0.0',
       },
       {
-        '@nx/angular': '14.0.0',
+        '@titan/angular': '14.0.0',
       }
     );
 
     // ASSERT
     const { dependencies, devDependencies } = readJson(tree, 'package.json');
     expect(dependencies).toEqual({
-      '@nx/angular': '14.1.0',
+      '@titan/angular': '14.1.0',
     });
     expect(devDependencies).toEqual({
-      '@nx/next': '14.1.0',
+      '@titan/next': '14.1.0',
     });
     expect(installTask).toBeDefined();
   });
@@ -237,11 +237,11 @@ describe('addDependenciesToPackageJson', () => {
     // ARRANGE
     writeJson(tree, 'package.json', {
       dependencies: {
-        '@nx/angular': '14.2.0',
-        '@nx/cypress': '14.1.1',
+        '@titan/angular': '14.2.0',
+        '@titan/cypress': '14.1.1',
       },
       devDependencies: {
-        '@nx/next': '14.0.0',
+        '@titan/next': '14.0.0',
         '@nx/vite': '14.1.0',
       },
     });
@@ -250,21 +250,21 @@ describe('addDependenciesToPackageJson', () => {
     const installTask = addDependenciesToPackageJson(
       tree,
       {
-        '@nx/angular': '14.1.0',
+        '@titan/angular': '14.1.0',
       },
       {
-        '@nx/next': '14.1.0',
+        '@titan/next': '14.1.0',
       }
     );
 
     // ASSERT
     const { dependencies, devDependencies } = readJson(tree, 'package.json');
     expect(dependencies).toEqual({
-      '@nx/angular': '14.2.0',
-      '@nx/cypress': '14.1.1',
+      '@titan/angular': '14.2.0',
+      '@titan/cypress': '14.1.1',
     });
     expect(devDependencies).toEqual({
-      '@nx/next': '14.1.0',
+      '@titan/next': '14.1.0',
       '@nx/vite': '14.1.0',
     });
     expect(installTask).toBeDefined();
@@ -274,11 +274,11 @@ describe('addDependenciesToPackageJson', () => {
     // ARRANGE
     writeJson(tree, 'package.json', {
       dependencies: {
-        '@nx/angular': '14.0.0',
-        '@nx/cypress': '14.1.1',
+        '@titan/angular': '14.0.0',
+        '@titan/cypress': '14.1.1',
       },
       devDependencies: {
-        '@nx/next': '14.2.0',
+        '@titan/next': '14.2.0',
         '@nx/vite': '14.1.0',
       },
     });
@@ -287,21 +287,21 @@ describe('addDependenciesToPackageJson', () => {
     const installTask = addDependenciesToPackageJson(
       tree,
       {
-        '@nx/angular': '14.1.0',
+        '@titan/angular': '14.1.0',
       },
       {
-        '@nx/next': '14.1.0',
+        '@titan/next': '14.1.0',
       }
     );
 
     // ASSERT
     const { dependencies, devDependencies } = readJson(tree, 'package.json');
     expect(dependencies).toEqual({
-      '@nx/angular': '14.1.0',
-      '@nx/cypress': '14.1.1',
+      '@titan/angular': '14.1.0',
+      '@titan/cypress': '14.1.1',
     });
     expect(devDependencies).toEqual({
-      '@nx/next': '14.2.0',
+      '@titan/next': '14.2.0',
       '@nx/vite': '14.1.0',
     });
     expect(installTask).toBeDefined();
@@ -311,10 +311,10 @@ describe('addDependenciesToPackageJson', () => {
     // ARRANGE
     writeJson(tree, 'package.json', {
       dependencies: {
-        '@nx/angular': '14.0.0',
+        '@titan/angular': '14.0.0',
       },
       devDependencies: {
-        '@nx/next': '14.1.0',
+        '@titan/next': '14.1.0',
       },
     });
 
@@ -322,20 +322,20 @@ describe('addDependenciesToPackageJson', () => {
     const installTask = addDependenciesToPackageJson(
       tree,
       {
-        '@nx/next': '14.0.0',
+        '@titan/next': '14.0.0',
       },
       {
-        '@nx/angular': '14.1.0',
+        '@titan/angular': '14.1.0',
       }
     );
 
     // ASSERT
     const { dependencies, devDependencies } = readJson(tree, 'package.json');
     expect(dependencies).toEqual({
-      '@nx/angular': '14.1.0',
+      '@titan/angular': '14.1.0',
     });
     expect(devDependencies).toEqual({
-      '@nx/next': '14.1.0',
+      '@titan/next': '14.1.0',
     });
     expect(installTask).toBeDefined();
   });
@@ -344,11 +344,11 @@ describe('addDependenciesToPackageJson', () => {
     // ARRANGE
     writeJson(tree, 'package.json', {
       dependencies: {
-        '@nx/angular': 'github:reponame/packageNameOne',
+        '@titan/angular': 'github:reponame/packageNameOne',
         '@nx/vite': 'git://github.com/npm/cli.git#v14.2.0', // this format is parsable
       },
       devDependencies: {
-        '@nx/next': '14.1.0',
+        '@titan/next': '14.1.0',
       },
     });
 
@@ -356,25 +356,25 @@ describe('addDependenciesToPackageJson', () => {
     const installTask = addDependenciesToPackageJson(
       tree,
       {
-        '@nx/next': 'github:reponame/packageNameTwo',
-        '@nx/cypress':
+        '@titan/next': 'github:reponame/packageNameTwo',
+        '@titan/cypress':
           'git+https://username@github.com/reponame/packagename.git',
         '@nx/vite': '14.0.1',
       },
       {
-        '@nx/angular': '14.1.0',
+        '@titan/angular': '14.1.0',
       }
     );
 
     // ASSERT
     const { dependencies, devDependencies } = readJson(tree, 'package.json');
     expect(dependencies).toEqual({
-      '@nx/angular': '14.1.0',
-      '@nx/cypress': 'git+https://username@github.com/reponame/packagename.git',
+      '@titan/angular': '14.1.0',
+      '@titan/cypress': 'git+https://username@github.com/reponame/packagename.git',
       '@nx/vite': 'git://github.com/npm/cli.git#v14.2.0',
     });
     expect(devDependencies).toEqual({
-      '@nx/next': 'github:reponame/packageNameTwo',
+      '@titan/next': 'github:reponame/packageNameTwo',
     });
     expect(installTask).toBeDefined();
   });
@@ -383,10 +383,10 @@ describe('addDependenciesToPackageJson', () => {
     // ARRANGE
     writeJson(tree, 'package.json', {
       dependencies: {
-        '@nx/angular': 'latest',
+        '@titan/angular': 'latest',
       },
       devDependencies: {
-        '@nx/next': 'latest',
+        '@titan/next': 'latest',
       },
     });
 
@@ -394,22 +394,22 @@ describe('addDependenciesToPackageJson', () => {
     const installTask = addDependenciesToPackageJson(
       tree,
       {
-        '@nx/next': 'next',
-        '@nx/cypress': 'latest',
+        '@titan/next': 'next',
+        '@titan/cypress': 'latest',
       },
       {
-        '@nx/angular': 'next',
+        '@titan/angular': 'next',
       }
     );
 
     // ASSERT
     const { dependencies, devDependencies } = readJson(tree, 'package.json');
     expect(dependencies).toEqual({
-      '@nx/angular': 'next',
-      '@nx/cypress': 'latest',
+      '@titan/angular': 'next',
+      '@titan/cypress': 'latest',
     });
     expect(devDependencies).toEqual({
-      '@nx/next': 'next',
+      '@titan/next': 'next',
     });
     expect(installTask).toBeDefined();
   });
@@ -481,8 +481,8 @@ describe('ensurePackage', () => {
   it('should return package when present', async () => {
     writeJson(tree, 'package.json', {});
 
-    expect(ensurePackage('@nx/devkit', '>=15.0.0')).toEqual(
-      require('@nx/devkit')
+    expect(ensurePackage('@titan/devkit', '>=15.0.0')).toEqual(
+      require('@titan/devkit')
     ); // return void
   });
 });

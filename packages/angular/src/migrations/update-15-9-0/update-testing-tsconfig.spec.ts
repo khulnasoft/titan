@@ -5,7 +5,7 @@ import {
   Tree,
   updateJson,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { createTreeWithEmptyWorkspace } from 'nx/src/devkit-testing-exports';
 import {
   generateTestApplication,
@@ -14,8 +14,8 @@ import {
 import { updateTestingTsconfigForJest } from './update-testing-tsconfig';
 
 let projectGraph: ProjectGraph;
-jest.mock('@nx/devkit', () => ({
-  ...jest.requireActual<any>('@nx/devkit'),
+jest.mock('@titan/devkit', () => ({
+  ...jest.requireActual<any>('@titan/devkit'),
   createProjectGraphAsync: jest.fn().mockImplementation(async () => {
     return projectGraph;
   }),

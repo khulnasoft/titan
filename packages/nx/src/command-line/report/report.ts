@@ -274,8 +274,8 @@ export function findInstalledPackagesWeCareAbout() {
   const packageChangeMap: Record<string, string> = {
     '@nrwl/nx-plugin': '@nx/plugin',
     '@nx/plugin': '@nrwl/nx-plugin',
-    '@nrwl/eslint-plugin-nx': '@nx/eslint-plugin',
-    '@nx/eslint-plugin': '@nrwl/eslint-plugin-nx',
+    '@nrwl/eslint-plugin-nx': '@titan/eslint-plugin',
+    '@titan/eslint-plugin': '@nrwl/eslint-plugin-nx',
     '@nrwl/nx-cloud': 'nx-cloud',
   };
 

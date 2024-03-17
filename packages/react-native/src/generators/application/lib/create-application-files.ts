@@ -1,4 +1,4 @@
-import { generateFiles, offsetFromRoot, toJS, Tree } from '@nx/devkit';
+import { generateFiles, offsetFromRoot, toJS, Tree } from '@titan/devkit';
 import { getRelativePathToRootTsConfig } from '@nx/js';
 import { join } from 'path';
 import { NormalizedSchema } from './normalize-options';

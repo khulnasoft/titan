@@ -1,4 +1,4 @@
-import type { Linter } from '@nx/eslint';
+import type { Linter } from '@titan/eslint';
 
 export interface StorybookConfigurationOptions {
   configureStaticServe?: boolean;

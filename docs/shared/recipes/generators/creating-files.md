@@ -41,7 +41,7 @@ import {
   generateFiles,
   joinPathFragments,
   readProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { libraryGenerator } from '@nx/js';
 
 export default async function (tree: Tree, schema: any) {

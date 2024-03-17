@@ -6,7 +6,7 @@
   "tags": [],
   "targets": {
     "lint": {
-      "executor": "@nx/eslint:lint"
+      "executor": "@titan/eslint:lint"
     },
     "storybook": {
       "executor": "@nx/storybook:storybook",

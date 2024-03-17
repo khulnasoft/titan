@@ -1,12 +1,12 @@
-import { installedCypressVersion } from '@nx/cypress/src/utils/cypress-version';
-import { Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { Linter } from '@nx/eslint';
+import { installedCypressVersion } from '@titan/cypress/src/utils/cypress-version';
+import { Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { Linter } from '@titan/eslint';
 import applicationGenerator from '../application/application';
 import storiesGenerator from './stories';
 // need to mock cypress otherwise it'll use the nx installed version from package.json
 //  which is v9 while we are testing for the new v10 version
-jest.mock('@nx/cypress/src/utils/cypress-version');
+jest.mock('@titan/cypress/src/utils/cypress-version');
 describe('react:stories for applications', () => {
   let appTree: Tree;
   let mockedInstalledCypressVersion: jest.Mock<

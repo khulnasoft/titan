@@ -12,7 +12,7 @@ Cypress is a test runner built for the modern web. It has a lot of great feature
 - Network traffic control
 - Screenshots and videos
 
-## Setting Up @nx/cypress
+## Setting Up @titan/cypress
 
 > Info about [Cypress Component Testing can be found here](/recipes/cypress/cypress-component-testing)
 >
@@ -21,23 +21,23 @@ Cypress is a test runner built for the modern web. It has a lot of great feature
 ### Installation
 
 {% callout type="note" title="Keep Nx Package Versions In Sync" %}
-Make sure to install the `@nx/cypress` version that matches the version of `nx` in your repository. If the version numbers get out of sync, you can encounter some difficult to debug errors. You can [fix Nx version mismatches with this recipe](/recipes/tips-n-tricks/keep-nx-versions-in-sync).
+Make sure to install the `@titan/cypress` version that matches the version of `nx` in your repository. If the version numbers get out of sync, you can encounter some difficult to debug errors. You can [fix Nx version mismatches with this recipe](/recipes/tips-n-tricks/keep-nx-versions-in-sync).
 {% /callout %}
 
-In any Nx workspace, you can install `@nx/cypress` by running the following command:
+In any Nx workspace, you can install `@titan/cypress` by running the following command:
 
 {% tabs %}
 {% tab label="Nx 18+" %}
 
 ```shell {% skipRescope=true %}
-nx add @nx/cypress
+nx add @titan/cypress
 ```
 
-This will install the correct version of `@nx/cypress`.
+This will install the correct version of `@titan/cypress`.
 
-### How @nx/cypress Infers Tasks
+### How @titan/cypress Infers Tasks
 
-The `@nx/cypress` plugin will create a task for any project that has a Cypress configuration file present. Any of the following files will be recognized as a Cypress configuration file:
+The `@titan/cypress` plugin will create a task for any project that has a Cypress configuration file present. Any of the following files will be recognized as a Cypress configuration file:
 
 - `cypress.config.js`
 - `cypress.config.ts`
@@ -50,15 +50,15 @@ The `@nx/cypress` plugin will create a task for any project that has a Cypress c
 
 To view inferred tasks for a project, open the [project details view](/concepts/inferred-tasks) in Nx Console or run `nx show project my-project --web` in the command line.
 
-### @nx/cypress Configuration
+### @titan/cypress Configuration
 
-The `@nx/cypress/plugin` is configured in the `plugins` array in `nx.json`.
+The `@titan/cypress/plugin` is configured in the `plugins` array in `nx.json`.
 
 ```json {% fileName="nx.json" %}
 {
   "plugins": [
     {
-      "plugin": "@nx/cypress/plugin",
+      "plugin": "@titan/cypress/plugin",
       "options": {
         "ciTargetName": "e2e-ci",
         "targetName": "e2e",
@@ -73,13 +73,13 @@ The `@nx/cypress/plugin` is configured in the `plugins` array in `nx.json`.
 
 ### Splitting E2E tasks by file
 
-The `@nx/cypress/plugin` will automatically split your e2e tasks by file. You can read more about this feature [here](/ci/features/split-e2e-tasks).
+The `@titan/cypress/plugin` will automatically split your e2e tasks by file. You can read more about this feature [here](/ci/features/split-e2e-tasks).
 
 To enable e2e task splitting, make sure there is a `ciWebServerCommand` property set in your `cypress.config.ts` file. It will look something like this:
 
 ```ts {% fileName="apps/my-project-e2e/cypress.config.ts" highlightLines=[13] %}
 import { defineConfig } from 'cypress';
-import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
+import { nxE2EPreset } from '@titan/cypress/plugins/cypress-preset';
 
 export default defineConfig({
   e2e: {
@@ -104,10 +104,10 @@ If you use the `setupNodeEvents` function in your Cypress configuration, make su
 {% /tab %}
 {% tab label="Nx < 18" %}
 
-Install the `@nx/cypress` package with your package manager.
+Install the `@titan/cypress` package with your package manager.
 
 ```shell
-npm add -D @nx/cypress
+npm add -D @titan/cypress
 ```
 
 {% /tab %}
@@ -126,13 +126,13 @@ nx g @nx/web:app frontend
 To configure Cypress for an existing project, run the following generator
 
 ```shell
-nx g @nx/cypress:configuration --project=your-app-name
+nx g @titan/cypress:configuration --project=your-app-name
 ```
 
 Optionally, you can use the `--baseUrl` option if you don't want the Cypress plugin to serve `your-app-name`.
 
 ```shell
-nx g @nx/cypress:configuration --project=your-app-name --baseUrl=http://localhost:4200
+nx g @titan/cypress:configuration --project=your-app-name --baseUrl=http://localhost:4200
 ```
 
 Replace `your-app-name` with the app's name as defined in your `tsconfig.base.json` file or the `name` property of your `package.json`.
@@ -204,7 +204,7 @@ There are a handful of ways to pass environment variables to Cypress, but the mo
 
 Create a `cypress.env.json` file in the projects root i.e. `apps/my-cool-app-e2e/cypress.env.json`. Cypress will automatically pick up this file. This method is helpful for configurations that you want to not commit. Just don't forget to add the file to the `.gitignore` and add documentation so people in your repo know what values to popluate in their local copy of the `cypress.env.json` file.
 
-Using [@nx/cypress:cypress](/nx-api/cypress/executors/cypress) env executor option is a good way to add values you want to define that you don't mine commit to the repository, such as a base API url. You can leverage [target configurations](/reference/project-configuration#targets) to define different values as well.
+Using [@titan/cypress:cypress](/nx-api/cypress/executors/cypress) env executor option is a good way to add values you want to define that you don't mine commit to the repository, such as a base API url. You can leverage [target configurations](/reference/project-configuration#targets) to define different values as well.
 
 Optionally, you can pass environment variables via the commandline with the `--env` flag.
 

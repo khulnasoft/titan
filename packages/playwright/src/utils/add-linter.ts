@@ -5,9 +5,9 @@ import {
   readProjectConfiguration,
   runTasksInSerial,
   Tree,
-} from '@nx/devkit';
-import { Linter, lintProjectGenerator } from '@nx/eslint';
-import { javaScriptOverride } from '@nx/eslint/src/generators/init/global-eslint-config';
+} from '@titan/devkit';
+import { Linter, lintProjectGenerator } from '@titan/eslint';
+import { javaScriptOverride } from '@titan/eslint/src/generators/init/global-eslint-config';
 import { eslintPluginPlaywrightVersion } from './versions';
 import {
   addExtendsToLintConfig,
@@ -15,7 +15,7 @@ import {
   addPluginsToLintConfig,
   findEslintFile,
   isEslintConfigSupported,
-} from '@nx/eslint/src/generators/utils/eslint-file';
+} from '@titan/eslint/src/generators/utils/eslint-file';
 
 export interface PlaywrightLinterOptions {
   project: string;

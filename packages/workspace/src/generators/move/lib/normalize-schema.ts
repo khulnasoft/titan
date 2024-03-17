@@ -5,8 +5,8 @@ import {
   stripIndents,
   type ProjectConfiguration,
   type Tree,
-} from '@nx/devkit';
-import type { ProjectNameAndRootFormat } from '@nx/devkit/src/generators/project-name-and-root-utils';
+} from '@titan/devkit';
+import type { ProjectNameAndRootFormat } from '@titan/devkit/src/generators/project-name-and-root-utils';
 import { prompt } from 'enquirer';
 import { getImportPath, getNpmScope } from '../../../utilities/get-import-path';
 import type { NormalizedSchema, Schema } from '../schema';
@@ -235,7 +235,7 @@ function logDeprecationMessage(
 ) {
   const callingGenerator =
     process.env.NX_ANGULAR_MOVE_INVOKED === 'true'
-      ? '@nx/angular:move'
+      ? '@titan/angular:move'
       : '@nx/workspace:move';
 
   logger.warn(

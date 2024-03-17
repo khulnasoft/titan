@@ -1,5 +1,5 @@
-import type { Tree } from '@nx/devkit';
-import { getProjects, updateProjectConfiguration } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
+import { getProjects, updateProjectConfiguration } from '@titan/devkit';
 import type { NormalizedSchema } from '../schema';
 
 /**

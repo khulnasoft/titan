@@ -5,7 +5,7 @@ import {
   Tree,
   updateJson,
   updateNxJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { nxVersion, vitestVersion, viteVersion } from '../../../utils/versions';
 import { InitGeneratorSchema } from '../schema';
 

@@ -1,4 +1,4 @@
-import { Tree, updateJson } from '@nx/devkit';
+import { Tree, updateJson } from '@titan/devkit';
 import { NormalizedSchema } from './normalized-schema';
 
 export function updateLibPackageNpmScope(

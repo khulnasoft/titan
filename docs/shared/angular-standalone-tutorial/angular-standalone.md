@@ -316,52 +316,52 @@ nx show project e2e --web
   },
   "sourceMap": {
     "targets": ["project.json", "nx/core/project-json"],
-    "targets.e2e": ["e2e/cypress.config.ts", "@nx/cypress/plugin"],
-    "targets.e2e.cache": ["e2e/cypress.config.ts", "@nx/cypress/plugin"],
-    "targets.e2e.inputs": ["e2e/cypress.config.ts", "@nx/cypress/plugin"],
-    "targets.e2e.outputs": ["e2e/cypress.config.ts", "@nx/cypress/plugin"],
-    "targets.e2e.options": ["e2e/cypress.config.ts", "@nx/cypress/plugin"],
+    "targets.e2e": ["e2e/cypress.config.ts", "@titan/cypress/plugin"],
+    "targets.e2e.cache": ["e2e/cypress.config.ts", "@titan/cypress/plugin"],
+    "targets.e2e.inputs": ["e2e/cypress.config.ts", "@titan/cypress/plugin"],
+    "targets.e2e.outputs": ["e2e/cypress.config.ts", "@titan/cypress/plugin"],
+    "targets.e2e.options": ["e2e/cypress.config.ts", "@titan/cypress/plugin"],
     "targets.e2e.configurations": [
       "e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci--src/e2e/app.cy.ts": [
       "e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci--src/e2e/app.cy.ts.cache": [
       "e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci--src/e2e/app.cy.ts.inputs": [
       "e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci--src/e2e/app.cy.ts.outputs": [
       "e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci--src/e2e/app.cy.ts.options": [
       "e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
-    "targets.e2e-ci": ["e2e/cypress.config.ts", "@nx/cypress/plugin"],
-    "targets.e2e-ci.cache": ["e2e/cypress.config.ts", "@nx/cypress/plugin"],
-    "targets.e2e-ci.dependsOn": ["e2e/cypress.config.ts", "@nx/cypress/plugin"],
-    "targets.e2e-ci.inputs": ["e2e/cypress.config.ts", "@nx/cypress/plugin"],
-    "targets.e2e-ci.outputs": ["e2e/cypress.config.ts", "@nx/cypress/plugin"],
-    "targets.e2e-ci.executor": ["e2e/cypress.config.ts", "@nx/cypress/plugin"],
-    "targets.lint": ["e2e/project.json", "@nx/eslint/plugin"],
-    "targets.lint.cache": ["e2e/project.json", "@nx/eslint/plugin"],
-    "targets.lint.inputs": ["e2e/project.json", "@nx/eslint/plugin"],
-    "targets.lint.options": ["e2e/project.json", "@nx/eslint/plugin"]
+    "targets.e2e-ci": ["e2e/cypress.config.ts", "@titan/cypress/plugin"],
+    "targets.e2e-ci.cache": ["e2e/cypress.config.ts", "@titan/cypress/plugin"],
+    "targets.e2e-ci.dependsOn": ["e2e/cypress.config.ts", "@titan/cypress/plugin"],
+    "targets.e2e-ci.inputs": ["e2e/cypress.config.ts", "@titan/cypress/plugin"],
+    "targets.e2e-ci.outputs": ["e2e/cypress.config.ts", "@titan/cypress/plugin"],
+    "targets.e2e-ci.executor": ["e2e/cypress.config.ts", "@titan/cypress/plugin"],
+    "targets.lint": ["e2e/project.json", "@titan/eslint/plugin"],
+    "targets.lint.cache": ["e2e/project.json", "@titan/eslint/plugin"],
+    "targets.lint.inputs": ["e2e/project.json", "@titan/eslint/plugin"],
+    "targets.lint.options": ["e2e/project.json", "@titan/eslint/plugin"]
   }
 }
 ```
 
 {% /project-details %}
 
-If you expand the `e2e` task, you can see that it was created by the `@nx/cypress` plugin by analyzing the `e2e/cypress.config.ts` file. Notice the outputs are defined as:
+If you expand the `e2e` task, you can see that it was created by the `@titan/cypress` plugin by analyzing the `e2e/cypress.config.ts` file. Notice the outputs are defined as:
 
 ```json
 [
@@ -445,13 +445,13 @@ Not all tasks might be cacheable though. You can configure the `cache` propertie
 
 Similar to the Angular CLI, Nx comes with code generation abilities. What the Angular CLI calls "Schematics", Nx calls "Generators".
 
-Generators allow you to easily scaffold code, configuration or entire projects. To see what capabilities the `@nx/angular` plugin ships with, run the following command and inspect the output:
+Generators allow you to easily scaffold code, configuration or entire projects. To see what capabilities the `@titan/angular` plugin ships with, run the following command and inspect the output:
 
-```{% command="npx nx list @nx/angular" path="myngapp" %}
+```{% command="npx nx list @titan/angular" path="myngapp" %}
 
-NX   Capabilities in @nx/angular:
+NX   Capabilities in @titan/angular:
 
-NX   Capabilities in @nx/angular:
+NX   Capabilities in @titan/angular:
 
   GENERATORS
 
@@ -499,8 +499,8 @@ More info can be found in [the integrate with editors article](/features/integra
 
 Run the following command to generate a new "hello-world" component. Note how we append `--dry-run` to first check the output.
 
-```{% command="npx nx g @nx/angular:component hello-world --directory=src/app/hello-world --standalone --dry-run" path="myngapp" %}
-NX  Generating @nx/angular:component
+```{% command="npx nx g @titan/angular:component hello-world --directory=src/app/hello-world --standalone --dry-run" path="myngapp" %}
+NX  Generating @titan/angular:component
 
 CREATE src/app/hello-world/hello-world.component.css
 CREATE src/app/hello-world/hello-world.component.html
@@ -607,9 +607,9 @@ Nx allows you to separate this logic into "local libraries". The main benefits i
 Let's assume our domain areas include `products`, `orders` and some more generic design system components, called `ui`. We can generate a new library for each of these areas using the Angular library generator:
 
 ```
-nx g @nx/angular:library products --directory=modules/products --standalone
-nx g @nx/angular:library orders --directory=modules/orders --standalone
-nx g @nx/angular:library shared-ui --directory=modules/shared/ui --standalone
+nx g @titan/angular:library products --directory=modules/products --standalone
+nx g @titan/angular:library orders --directory=modules/orders --standalone
+nx g @titan/angular:library shared-ui --directory=modules/shared/ui --standalone
 ```
 
 Note how we use the `--directory` flag to place the libraries into a subfolder. You can choose whatever folder structure you like, even keep all of them at the root-level.

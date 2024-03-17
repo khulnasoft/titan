@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`createJestConfig should generate files  1`] = `
-"import { getJestProjectsAsync } from '@nx/jest';
+"import { getJestProjectsAsync } from '@titan/jest';
 
 export default async () => ({
 projects: await getJestProjectsAsync()
@@ -9,13 +9,13 @@ projects: await getJestProjectsAsync()
 `;
 
 exports[`createJestConfig should generate files  2`] = `
-"const nxPreset = require('@nx/jest/preset').default;
+"const nxPreset = require('@titan/jest/preset').default;
 
 module.exports = { ...nxPreset }"
 `;
 
 exports[`createJestConfig should generate files with --js flag 1`] = `
-"const { getJestProjectsAsync } = require('@nx/jest');
+"const { getJestProjectsAsync } = require('@titan/jest');
 
 module.exports = async () => ({
 projects: await getJestProjectsAsync()
@@ -23,7 +23,7 @@ projects: await getJestProjectsAsync()
 `;
 
 exports[`createJestConfig should generate files with --js flag 2`] = `
-"const nxPreset = require('@nx/jest/preset').default;
+"const nxPreset = require('@titan/jest/preset').default;
 
 module.exports = { ...nxPreset }"
 `;

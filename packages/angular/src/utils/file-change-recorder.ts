@@ -1,4 +1,4 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import MagicString from 'magic-string';
 import type { Node } from 'typescript';
 

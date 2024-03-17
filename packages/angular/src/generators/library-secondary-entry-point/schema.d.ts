@@ -1,4 +1,4 @@
-import { ProjectConfiguration } from '@nx/devkit';
+import { ProjectConfiguration } from '@titan/devkit';
 
 export interface GeneratorOptions {
   library: string;

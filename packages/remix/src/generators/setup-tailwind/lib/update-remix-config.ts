@@ -1,4 +1,4 @@
-import { joinPathFragments, type Tree } from '@nx/devkit';
+import { joinPathFragments, type Tree } from '@titan/devkit';
 import { tsquery } from '@phenomnomnominal/tsquery';
 import { getRemixConfigPathFromProjectRoot } from '../../../utils/remix-config';
 

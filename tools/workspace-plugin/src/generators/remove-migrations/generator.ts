@@ -4,7 +4,7 @@ import {
   Tree,
   updateJson,
   visitNotIgnoredFiles,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { basename, dirname, join } from 'path';
 import { lte, major } from 'semver';
 

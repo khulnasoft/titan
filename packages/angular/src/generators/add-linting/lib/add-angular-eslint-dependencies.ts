@@ -2,7 +2,7 @@ import {
   addDependenciesToPackageJson,
   type GeneratorCallback,
   type Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { versions } from '../../utils/version-utils';
 import { isBuildableLibraryProject } from './buildable-project';
 

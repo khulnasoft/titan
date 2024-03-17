@@ -1,4 +1,4 @@
-import { getJestProjects } from '@nx/jest';
+import { getJestProjects } from '@titan/jest';
 
 export default {
   projects: getJestProjects(),

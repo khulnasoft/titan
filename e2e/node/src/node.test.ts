@@ -1,5 +1,5 @@
 import { stripIndents } from '@angular-devkit/core/src/utils/literals';
-import { joinPathFragments } from '@nx/devkit';
+import { joinPathFragments } from '@titan/devkit';
 import {
   checkFilesDoNotExist,
   checkFilesExist,

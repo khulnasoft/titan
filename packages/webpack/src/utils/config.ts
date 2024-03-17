@@ -2,7 +2,7 @@ import {
   ExecutorContext,
   readCachedProjectGraph,
   workspaceRoot,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { Configuration } from 'webpack';
 
 import { NormalizedWebpackExecutorOptions } from '../executors/webpack/schema';

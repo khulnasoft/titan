@@ -1,5 +1,5 @@
-import type { Tree } from '@nx/devkit';
-import { joinPathFragments, readProjectConfiguration } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
+import { joinPathFragments, readProjectConfiguration } from '@titan/devkit';
 import { addTsConfigPath } from '@nx/js';
 import { maybeJs } from '../../../utils/maybe-js';
 import type { Schema } from '../schema';

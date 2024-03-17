@@ -4,7 +4,7 @@ import {
   runTasksInSerial,
   stripIndents,
   type Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { type Schema } from './schema';
 import {
   addFileToRemoteTsconfig,

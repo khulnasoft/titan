@@ -4,10 +4,10 @@ import {
   readProjectConfiguration,
   stripIndents,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { RemixStyleSchema } from './schema';
 
-import { determineArtifactNameAndDirectoryOptions } from '@nx/devkit/src/generators/artifact-name-and-directory-utils';
+import { determineArtifactNameAndDirectoryOptions } from '@titan/devkit/src/generators/artifact-name-and-directory-utils';
 import { dirname, relative } from 'path';
 import { insertImport } from '../../utils/insert-import';
 import { insertStatementAfterImports } from '../../utils/insert-statement-after-imports';

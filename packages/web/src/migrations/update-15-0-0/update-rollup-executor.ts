@@ -3,7 +3,7 @@ import {
   getProjects,
   Tree,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 export default async function update(host: Tree) {
   const projects = getProjects(host);

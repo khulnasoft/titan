@@ -2,8 +2,8 @@ import {
   readProjectConfiguration,
   Tree,
   updateProjectConfiguration,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { libraryGenerator } from '../../generators/library/library';
 import renameSwcrcConfig from './rename-swcrc-config';
 

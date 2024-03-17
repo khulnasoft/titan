@@ -1,5 +1,5 @@
-import type { Tree } from '@nx/devkit';
-import { getPackageManagerCommand } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
+import { getPackageManagerCommand } from '@titan/devkit';
 import { runNxSync } from 'nx/src/utils/child-process';
 
 export function formatFilesTask(tree: Tree): void {

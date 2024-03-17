@@ -1,4 +1,4 @@
-import { addDependenciesToPackageJson, Tree } from '@nx/devkit';
+import { addDependenciesToPackageJson, Tree } from '@titan/devkit';
 import {
   swcCliVersion,
   swcCoreVersion,

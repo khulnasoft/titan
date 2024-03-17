@@ -4,7 +4,7 @@ import {
   ExecutorContext,
   parseTargetString,
   readTargetOptions,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { copyFileSync, unlinkSync } from 'fs';
 import { Schema } from './schema';
 import { platform } from 'os';

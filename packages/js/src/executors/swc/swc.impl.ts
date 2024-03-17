@@ -1,4 +1,4 @@
-import { ExecutorContext, readJsonFile } from '@nx/devkit';
+import { ExecutorContext, readJsonFile } from '@titan/devkit';
 import { assetGlobsToFiles, FileInputOutput } from '../../utils/assets/assets';
 import { removeSync } from 'fs-extra';
 import { sync as globSync } from 'fast-glob';

@@ -1,5 +1,5 @@
 {
-  "name": "@nx/eslint-plugin",
+  "name": "@titan/eslint-plugin",
   "version": "0.0.1",
   "private": false,
   "description": "The eslint-plugin package is an ESLint plugin that contains a collection of recommended ESLint rule configurations which you can extend from in your own ESLint configs, as well as an Nx-specific lint rule called enforce-module-boundaries.",
@@ -33,7 +33,7 @@
     }
   },
   "dependencies": {
-    "@nx/devkit": "file:../devkit",
+    "@titan/devkit": "file:../devkit",
     "@nx/js": "file:../js",
     "@typescript-eslint/type-utils": "^6.13.2",
     "@typescript-eslint/utils": "^6.13.2",

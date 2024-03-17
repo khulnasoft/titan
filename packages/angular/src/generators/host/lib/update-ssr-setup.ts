@@ -1,11 +1,11 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import {
   addDependenciesToPackageJson,
   generateFiles,
   joinPathFragments,
   readProjectConfiguration,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { join } from 'path';
 import {
   corsVersion,
@@ -63,7 +63,7 @@ export async function updateSsrSetup(
   // update project.json
   project = readProjectConfiguration(tree, appName);
 
-  project.targets.server.executor = '@nx/angular:webpack-server';
+  project.targets.server.executor = '@titan/angular:webpack-server';
   project.targets.server.options.customWebpackConfig = {
     path: joinPathFragments(
       project.root,
@@ -72,7 +72,7 @@ export async function updateSsrSetup(
   };
 
   project.targets['serve-ssr'].executor =
-    '@nx/angular:module-federation-dev-ssr';
+    '@titan/angular:module-federation-dev-ssr';
 
   updateProjectConfiguration(tree, appName, project);
 

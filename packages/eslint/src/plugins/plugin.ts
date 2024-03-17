@@ -3,7 +3,7 @@ import {
   CreateNodesContext,
   CreateNodesResult,
   TargetConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { combineGlobPatterns } from 'nx/src/utils/globs';

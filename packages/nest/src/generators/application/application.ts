@@ -1,5 +1,5 @@
-import type { GeneratorCallback, Tree } from '@nx/devkit';
-import { formatFiles, runTasksInSerial } from '@nx/devkit';
+import type { GeneratorCallback, Tree } from '@titan/devkit';
+import { formatFiles, runTasksInSerial } from '@titan/devkit';
 import { applicationGenerator as nodeApplicationGenerator } from '@nx/node';
 
 import { initGenerator } from '../init/init';

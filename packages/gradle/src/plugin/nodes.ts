@@ -4,8 +4,8 @@ import {
   TargetConfiguration,
   readJsonFile,
   writeJsonFile,
-} from '@nx/devkit';
-import { calculateHashForCreateNodes } from '@nx/devkit/src/utils/calculate-hash-for-create-nodes';
+} from '@titan/devkit';
+import { calculateHashForCreateNodes } from '@titan/devkit/src/utils/calculate-hash-for-create-nodes';
 import { existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { projectGraphCacheDirectory } from 'nx/src/utils/cache-directory';

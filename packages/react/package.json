@@ -36,9 +36,9 @@
     "chalk": "^4.1.0",
     "minimatch": "9.0.3",
     "tslib": "^2.3.0",
-    "@nx/devkit": "file:../devkit",
+    "@titan/devkit": "file:../devkit",
     "@nx/js": "file:../js",
-    "@nx/eslint": "file:../eslint",
+    "@titan/eslint": "file:../eslint",
     "@nx/web": "file:../web"
   },
   "publishConfig": {

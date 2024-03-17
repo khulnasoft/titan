@@ -6,7 +6,7 @@ import {
   updateJson,
   formatFiles,
   readJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { ExecutorConfig } from 'nx/src/config/misc-interfaces';
 import { PackageJson } from 'nx/src/utils/package-json';
 

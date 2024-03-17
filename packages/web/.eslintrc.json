@@ -45,12 +45,12 @@
               "eslint",
               "http-server", // Used by readModulePackageJson
               // Installed by ensurePackage
-              "@nx/eslint",
-              "@nx/cypress",
-              "@nx/playwright",
+              "@titan/eslint",
+              "@titan/cypress",
+              "@titan/playwright",
               "@nx/vite",
               "@nx/webpack",
-              "@nx/jest"
+              "@titan/jest"
             ]
           }
         ]

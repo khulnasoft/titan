@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { createProjectGraphAsync, workspaceRoot } from '@nx/devkit';
+import { createProjectGraphAsync, workspaceRoot } from '@titan/devkit';
 import * as chalk from 'chalk';
 import { execSync } from 'node:child_process';
 import { rmSync, writeFileSync } from 'node:fs';

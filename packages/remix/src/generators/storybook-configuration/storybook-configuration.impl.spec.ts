@@ -1,4 +1,4 @@
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import libraryGenerator from '../library/library.impl';
 import storybookConfigurationGenerator from './storybook-configuration.impl';
 

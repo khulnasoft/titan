@@ -3,7 +3,7 @@ import {
   joinPathFragments,
   stripIndents,
   type Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import {
   updateJestTestSetup,
   updateVitestTestSetup,

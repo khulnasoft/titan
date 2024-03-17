@@ -1,5 +1,5 @@
 import * as chalk from 'chalk';
-import { logger, Tree } from '@nx/devkit';
+import { logger, Tree } from '@titan/devkit';
 import { NormalizedSchema, Schema } from '../schema';
 
 export function showPossibleWarnings(

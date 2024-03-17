@@ -4,12 +4,12 @@ import {
   readProjectConfiguration,
   Tree,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 const executors = new Set([
-  '@nx/angular:ng-packagr-lite',
+  '@titan/angular:ng-packagr-lite',
   '@nrwl/angular:ng-packagr-lite',
-  '@nx/angular:package',
+  '@titan/angular:package',
   '@nrwl/angular:package',
 ]);
 

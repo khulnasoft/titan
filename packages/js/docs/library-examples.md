@@ -81,7 +81,7 @@ npx nx g @nx/js:lib mylib --bundler=vite
 
 {% tab label="Using ESBuild" %}
 
-Generate a buildable library using [ESBuild](https://esbuild.github.io/) as the bundler. This will use the `@nx/esbuild:esbuild` executor.
+Generate a buildable library using [ESBuild](https://esbuild.github.io/) as the bundler. This will use the `@titan/esbuild:esbuild` executor.
 
 ```bash
 npx nx g @nx/js:lib mylib --bundler=esbuild
@@ -91,7 +91,7 @@ If you want to specify whether you want to bundle your library or not, you can d
 
 ```jsonc {% fileName="libs/mylib/project.json" %}
 "build": {
-  "executor": "@nx/esbuild:esbuild",
+  "executor": "@titan/esbuild:esbuild",
   "options": {
     //...
     "esbuildOptions": {

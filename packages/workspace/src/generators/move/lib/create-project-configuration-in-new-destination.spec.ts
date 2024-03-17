@@ -3,8 +3,8 @@ import {
   ProjectConfiguration,
   readProjectConfiguration,
   Tree,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import type { NormalizedSchema } from '../schema';
 import { createProjectConfigurationInNewDestination } from './create-project-configuration-in-new-destination';
 
@@ -100,10 +100,10 @@ describe('moveProjectConfiguration', () => {
           },
         },
         lint: {
-          executor: '@nx/eslint:lint',
+          executor: '@titan/eslint:lint',
         },
         test: {
-          executor: '@nx/jest:jest',
+          executor: '@titan/jest:jest',
           options: {
             jestConfig: 'apps/my-source/jest.config.js',
             tsConfig: 'apps/my-source/tsconfig.spec.json',
@@ -121,7 +121,7 @@ describe('moveProjectConfiguration', () => {
       projectType: 'application',
       targets: {
         e2e: {
-          executor: '@nx/cypress:cypress',
+          executor: '@titan/cypress:cypress',
           options: {
             cypressConfig: 'apps/my-source-e2e/cypress.json',
             tsConfig: 'apps/my-source-e2e/tsconfig.e2e.json',
@@ -134,7 +134,7 @@ describe('moveProjectConfiguration', () => {
           },
         },
         lint: {
-          executor: '@nx/eslint:lint',
+          executor: '@titan/eslint:lint',
         },
       },
     });
@@ -201,7 +201,7 @@ describe('moveProjectConfiguration', () => {
             '{workspaceRoot}/.eslintignore',
             '{workspaceRoot}/eslint.config.js',
           ],
-          executor: '@nx/eslint:lint',
+          executor: '@titan/eslint:lint',
           outputs: ['{options.outputFile}'],
           options: {},
           configurations: {},

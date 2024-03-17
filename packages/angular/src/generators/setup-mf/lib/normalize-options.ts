@@ -1,4 +1,4 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import { getProjectPrefix } from '../../utils/project';
 import type { NormalizedOptions, Schema } from '../schema';
 

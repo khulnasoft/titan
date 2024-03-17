@@ -1,5 +1,5 @@
-import { Tree, readJson } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { Tree, readJson } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { convertEslintJsonToFlatConfig } from './json-converter';
 
 describe('convertEslintJsonToFlatConfig', () => {
@@ -67,7 +67,7 @@ describe('convertEslintJsonToFlatConfig', () => {
 
     expect(content).toMatchInlineSnapshot(`
       "const { FlatCompat } = require("@eslint/eslintrc");
-      const nxEslintPlugin = require("@nx/eslint-plugin");
+      const nxEslintPlugin = require("@titan/eslint-plugin");
       const js = require("@eslint/js");
 
       const compat = new FlatCompat({

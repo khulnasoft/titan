@@ -1,6 +1,6 @@
-import { readJson, Tree, writeJson } from '@nx/devkit';
-import * as devkit from '@nx/devkit';
-import { createTree } from '@nx/devkit/testing';
+import { readJson, Tree, writeJson } from '@titan/devkit';
+import * as devkit from '@titan/devkit';
+import { createTree } from '@titan/devkit/testing';
 import { Linter } from '../../utils/lint';
 import {
   angularCliVersion,
@@ -109,7 +109,7 @@ describe('new', () => {
       const { devDependencies } = readJson(tree, 'my-workspace/package.json');
       expect(devDependencies).toStrictEqual({
         '@nx/react': nxVersion,
-        '@nx/cypress': nxVersion,
+        '@titan/cypress': nxVersion,
         '@nx/vite': nxVersion,
         '@nx/workspace': nxVersion,
         nx: nxVersion,
@@ -129,7 +129,7 @@ describe('new', () => {
       const { devDependencies } = readJson(tree, 'my-workspace/package.json');
       expect(devDependencies).toStrictEqual({
         '@nx/vue': nxVersion,
-        '@nx/cypress': nxVersion,
+        '@titan/cypress': nxVersion,
         '@nx/vite': nxVersion,
         '@nx/workspace': nxVersion,
         nx: nxVersion,
@@ -149,7 +149,7 @@ describe('new', () => {
       const { devDependencies } = readJson(tree, 'my-workspace/package.json');
       expect(devDependencies).toStrictEqual({
         '@nx/nuxt': nxVersion,
-        '@nx/cypress': nxVersion,
+        '@titan/cypress': nxVersion,
         '@nx/workspace': nxVersion,
         nx: nxVersion,
       });
@@ -168,7 +168,7 @@ describe('new', () => {
         tree,
         'my-workspace/package.json'
       );
-      expect(dependencies).toStrictEqual({ '@nx/angular': nxVersion });
+      expect(dependencies).toStrictEqual({ '@titan/angular': nxVersion });
       expect(devDependencies).toStrictEqual({
         '@angular-devkit/core': angularCliVersion,
         '@nx/workspace': nxVersion,

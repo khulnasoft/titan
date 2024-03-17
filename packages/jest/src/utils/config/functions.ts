@@ -1,5 +1,5 @@
 import type * as ts from 'typescript';
-import { applyChangesToString, ChangeType, Tree } from '@nx/devkit';
+import { applyChangesToString, ChangeType, Tree } from '@titan/devkit';
 import { Config } from '@jest/types';
 import { createContext, runInContext } from 'vm';
 import { dirname, join } from 'path';

@@ -1,10 +1,10 @@
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import {
   Tree,
   addProjectConfiguration,
   readNxJson,
   updateNxJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import addEslintInputs from './add-eslint-inputs';
 import { ESLINT_CONFIG_FILENAMES } from '../../utils/config-file';
 

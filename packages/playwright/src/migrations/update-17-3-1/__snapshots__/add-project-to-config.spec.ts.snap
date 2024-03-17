@@ -2,9 +2,9 @@
 
 exports[`update-nx-next-dependency should not update playwright.config.ts if projects is already defined 1`] = `
 "import { defineConfig } from '@playwright/test';
-              import { nxE2EPreset } from '@nx/playwright/preset';
+              import { nxE2EPreset } from '@titan/playwright/preset';
   
-              import { workspaceRoot } from '@nx/devkit';
+              import { workspaceRoot } from '@titan/devkit';
   
               const baseURL = process.env['BASE_URL'] || 'http://localhost:4200';
   
@@ -30,8 +30,8 @@ exports[`update-nx-next-dependency should not update playwright.config.ts if pro
 
 exports[`update-nx-next-dependency should update playwright.config.ts 1`] = `
 "import { defineConfig, devices } from '@playwright/test';
-import { nxE2EPreset } from '@nx/playwright/preset';
-import { workspaceRoot } from '@nx/devkit';
+import { nxE2EPreset } from '@titan/playwright/preset';
+import { workspaceRoot } from '@titan/devkit';
 const baseURL = process.env['BASE_URL'] || 'http://localhost:4200';
 export default defineConfig({ ...nxE2EPreset(__filename, { testDir: './src' }),
     /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */

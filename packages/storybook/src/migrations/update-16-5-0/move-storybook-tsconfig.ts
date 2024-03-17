@@ -1,5 +1,5 @@
-import { getProjects, joinPathFragments, Tree, formatFiles } from '@nx/devkit';
-import { forEachExecutorOptions } from '@nx/devkit/src/generators/executor-options-utils';
+import { getProjects, joinPathFragments, Tree, formatFiles } from '@titan/devkit';
+import { forEachExecutorOptions } from '@titan/devkit/src/generators/executor-options-utils';
 import {
   addStorybookToNamedInputs,
   addStorybookToTargetDefaults,

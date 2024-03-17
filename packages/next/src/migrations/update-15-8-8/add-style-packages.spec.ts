@@ -1,5 +1,5 @@
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { writeJson, readJson, Tree, addProjectConfiguration } from '@nx/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { writeJson, readJson, Tree, addProjectConfiguration } from '@titan/devkit';
 import update from './add-style-packages';
 
 describe('Add less if needed', () => {

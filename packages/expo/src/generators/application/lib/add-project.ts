@@ -4,11 +4,11 @@ import {
   readNxJson,
   TargetConfiguration,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 import { hasExpoPlugin } from '../../../utils/has-expo-plugin';
 import { NormalizedSchema } from './normalize-options';
-import { addBuildTargetDefaults } from '@nx/devkit/src/generators/add-build-target-defaults';
+import { addBuildTargetDefaults } from '@titan/devkit/src/generators/add-build-target-defaults';
 
 export function addProject(host: Tree, options: NormalizedSchema) {
   const nxJson = readNxJson(host);

@@ -8,7 +8,7 @@ import {
   toJS,
   Tree,
   updateJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { getRelativePathToRootTsConfig } from '@nx/js';
 
 import { NormalizedSchema } from './normalize-options';

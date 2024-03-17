@@ -3,7 +3,7 @@ import {
   Tree,
   readProjectConfiguration,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 export function updateModuleFederationE2eProject(
   host: Tree,
@@ -11,7 +11,7 @@ export function updateModuleFederationE2eProject(
 ) {
   try {
     let projectConfig = readProjectConfiguration(host, options.e2eProjectName);
-    if (projectConfig.targets.e2e.executor !== '@nx/playwright:playwright') {
+    if (projectConfig.targets.e2e.executor !== '@titan/playwright:playwright') {
       projectConfig.targets.e2e.options = {
         ...projectConfig.targets.e2e.options,
         baseUrl: `http://localhost:${options.devServerPort}`,

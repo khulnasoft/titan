@@ -185,11 +185,11 @@ Learn more about how to [run tasks with Nx](/features/run-tasks). We'll [revisit
 
 <!-- {% video-link link="https://youtu.be/OQ-Zc5tcxJE?t=706" /%} -->
 
-Nx plugins usually provide [generators](/features/generate-code) that allow you to easily scaffold code, configuration or entire projects. To see what capabilities the `@nx/angular` plugin provides, run the following command and inspect the output:
+Nx plugins usually provide [generators](/features/generate-code) that allow you to easily scaffold code, configuration or entire projects. To see what capabilities the `@titan/angular` plugin provides, run the following command and inspect the output:
 
-```{% command="npx nx list @nx/angular" path="angular-monorepo" %}
+```{% command="npx nx list @titan/angular" path="angular-monorepo" %}
 
-NX   Capabilities in @nx/angular:
+NX   Capabilities in @titan/angular:
 
    GENERATORS
 
@@ -230,8 +230,8 @@ More info can be found in [the integrate with editors article](/features/integra
 
 Run the following command to generate a new `inventory` application. Note how we append `--dry-run` to first check the output.
 
-```{% command="npx nx g @nx/angular:app inventory --directory=apps/inventory --dry-run" path="angular-monorepo" %}
-NX  Generating @nx/angular:application
+```{% command="npx nx g @titan/angular:app inventory --directory=apps/inventory --dry-run" path="angular-monorepo" %}
+NX  Generating @titan/angular:application
 
 ✔ Would you like to configure routing for this application? (y/N) · false
 ✔ Would you like to use Standalone Components? (y/N) · true
@@ -270,7 +270,7 @@ NOTE: The "dryRun" flag means no changes were made.
 As you can see, it generates a new application in the `apps/inventory/` folder. Let's actually run the generator by removing the `--dry-run` flag.
 
 ```shell
-npx nx g @nx/angular:app inventory --directory=apps/inventory
+npx nx g @titan/angular:app inventory --directory=apps/inventory
 ```
 
 ## Sharing Code with Local Libraries
@@ -315,9 +315,9 @@ Nx allows you to separate this logic into "local libraries". The main benefits i
 Let's assume our domain areas include `products`, `orders` and some more generic design system components, called `ui`. We can generate a new library for each of these areas using the Angular library generator:
 
 ```
-nx g @nx/angular:library products --directory=libs/products --standalone
-nx g @nx/angular:library orders --directory=libs/orders --standalone
-nx g @nx/angular:library shared-ui --directory=libs/shared/ui --standalone
+nx g @titan/angular:library products --directory=libs/products --standalone
+nx g @titan/angular:library orders --directory=libs/orders --standalone
+nx g @titan/angular:library shared-ui --directory=libs/shared/ui --standalone
 ```
 
 Note how we type out the full path in the `directory` flag to place the libraries into a subfolder. You can choose whatever folder structure you like to organize your projects. If you change your mind later, you can run the [move generator](/nx-api/workspace/generators/move) to move a project to a different folder.
@@ -388,7 +388,7 @@ All libraries that we generate automatically have aliases created in the root-le
 Hence we can easily import them into other libraries and our Angular application. As an example, let's create and expose a `ProductListComponent` component from our `libs/products` library. Either create it by hand or run
 
 ```shell
-nx g @nx/angular:component product-list --directory=libs/products/src/lib/product-list --standalone --export
+nx g @titan/angular:component product-list --directory=libs/products/src/lib/product-list --standalone --export
 ```
 
 We don't need to implement anything fancy as we just want to learn how to import it into our main Angular application.
@@ -735,87 +735,87 @@ nx show project angular-store-e2e --web
     "targets": ["apps/angular-store-e2e/project.json", "nx/core/project-json"],
     "targets.e2e": [
       "apps/angular-store-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e.cache": [
       "apps/angular-store-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e.inputs": [
       "apps/angular-store-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e.outputs": [
       "apps/angular-store-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e.options": [
       "apps/angular-store-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e.configurations": [
       "apps/angular-store-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci--src/e2e/app.cy.ts": [
       "apps/angular-store-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci--src/e2e/app.cy.ts.cache": [
       "apps/angular-store-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci--src/e2e/app.cy.ts.inputs": [
       "apps/angular-store-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci--src/e2e/app.cy.ts.outputs": [
       "apps/angular-store-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci--src/e2e/app.cy.ts.options": [
       "apps/angular-store-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci": [
       "apps/angular-store-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci.cache": [
       "apps/angular-store-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci.dependsOn": [
       "apps/angular-store-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci.inputs": [
       "apps/angular-store-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci.outputs": [
       "apps/angular-store-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.e2e-ci.executor": [
       "apps/angular-store-e2e/cypress.config.ts",
-      "@nx/cypress/plugin"
+      "@titan/cypress/plugin"
     ],
     "targets.lint": [
       "apps/angular-store-e2e/project.json",
-      "@nx/eslint/plugin"
+      "@titan/eslint/plugin"
     ],
     "targets.lint.cache": [
       "apps/angular-store-e2e/project.json",
-      "@nx/eslint/plugin"
+      "@titan/eslint/plugin"
     ],
     "targets.lint.inputs": [
       "apps/angular-store-e2e/project.json",
-      "@nx/eslint/plugin"
+      "@titan/eslint/plugin"
     ],
     "targets.lint.options": [
       "apps/angular-store-e2e/project.json",
-      "@nx/eslint/plugin"
+      "@titan/eslint/plugin"
     ]
   }
 }
@@ -823,7 +823,7 @@ nx show project angular-store-e2e --web
 
 {% /project-details %}
 
-If you expand the `e2e` task, you can see that it was created by the `@nx/cypress` plugin by analyzing the `apps/angular-store-e2e/cypress.config.ts` file. Notice the outputs are defined as:
+If you expand the `e2e` task, you can see that it was created by the `@titan/cypress` plugin by analyzing the `apps/angular-store-e2e/cypress.config.ts` file. Notice the outputs are defined as:
 
 ```json
 [
@@ -1022,7 +1022,7 @@ nx graph --affected
 If you're ready and want to ship your applications, you can build them using
 
 ```{% command="npx nx run-many -t build" path="angular-monorepo" %}
-NX  Generating @nx/angular:component
+NX  Generating @titan/angular:component
 
 CREATE libs/orders/src/lib/order-list/order-list.component.css
 CREATE libs/orders/src/lib/order-list/order-list.component.html

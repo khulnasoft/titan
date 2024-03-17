@@ -1,7 +1,7 @@
 import 'nx/src/internal-testing-utils/mock-fs';
 
-import type { FileData, ProjectFileMap, ProjectGraph } from '@nx/devkit';
-import { DependencyType } from '@nx/devkit';
+import type { FileData, ProjectFileMap, ProjectGraph } from '@titan/devkit';
+import { DependencyType } from '@titan/devkit';
 import * as parser from '@typescript-eslint/parser';
 import { TSESLint } from '@typescript-eslint/utils';
 import { vol } from 'memfs';
@@ -12,8 +12,8 @@ import enforceModuleBoundaries, {
 import { createProjectRootMappings } from 'nx/src/project-graph/utils/find-project-for-path';
 import { FileDataDependency } from 'nx/src/config/project-graph';
 
-jest.mock('@nx/devkit', () => ({
-  ...jest.requireActual<any>('@nx/devkit'),
+jest.mock('@titan/devkit', () => ({
+  ...jest.requireActual<any>('@titan/devkit'),
   workspaceRoot: '/root',
 }));
 

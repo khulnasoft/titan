@@ -2,7 +2,7 @@ import type {
   ProjectConfiguration,
   TargetConfiguration,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import type {
   Logger,
   ProjectMigrationInfo,

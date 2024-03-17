@@ -19,32 +19,32 @@ You can easily and mostly **automatically migrate from an Angular CLI** project 
 more [here](/recipes/angular/migration/angular).
 {% /callout %}
 
-## Setting Up @nx/angular
+## Setting Up @titan/angular
 
 ### Installation
 
 {% callout type="note" title="Keep Nx Package Versions In Sync" %}
-Make sure to install the `@nx/angular` version that matches the version of `nx` in your repository. If the version numbers get out of sync, you can encounter some difficult to debug errors. You can [fix Nx version mismatches with this recipe](/recipes/tips-n-tricks/keep-nx-versions-in-sync).
+Make sure to install the `@titan/angular` version that matches the version of `nx` in your repository. If the version numbers get out of sync, you can encounter some difficult to debug errors. You can [fix Nx version mismatches with this recipe](/recipes/tips-n-tricks/keep-nx-versions-in-sync).
 {% /callout %}
 
-In any Nx workspace, you can install `@nx/angular` by running the following command:
+In any Nx workspace, you can install `@titan/angular` by running the following command:
 
 {% tabs %}
 {% tab label="Nx 18+" %}
 
 ```shell {% skipRescope=true %}
-nx add @nx/angular
+nx add @titan/angular
 ```
 
-This will install the correct version of `@nx/angular`.
+This will install the correct version of `@titan/angular`.
 
 {% /tab %}
 {% tab label="Nx < 18" %}
 
-Install the `@nx/angular` package with your package manager.
+Install the `@titan/angular` package with your package manager.
 
 ```shell
-npm add -D @nx/angular
+npm add -D @titan/angular
 ```
 
 {% /tab %}
@@ -61,7 +61,7 @@ For a full tutorial experience, follow the [Angular Standalone Tutorial](/gettin
 It's straightforward to generate an Angular application:
 
 ```shell
-nx g @nx/angular:app appName
+nx g @titan/angular:app appName
 ```
 
 By default, the application will be generated with:
@@ -85,7 +85,7 @@ nx e2e appName
 Generating an Angular library is very similar to generating an application:
 
 ```shell
-nx g @nx/angular:lib libName
+nx g @titan/angular:lib libName
 ```
 
 By default, the library will be generated with:
@@ -108,12 +108,12 @@ Read more about:
 
 ### Fallback to `@schematics/angular`
 
-If you try to invoke a generator that is not present in `@nx/angular`, the request will automatically be forwarded on
-to `@schematics/angular`. So, even though there is no `@nx/angular:service` generator, the following command will
+If you try to invoke a generator that is not present in `@titan/angular`, the request will automatically be forwarded on
+to `@schematics/angular`. So, even though there is no `@titan/angular:service` generator, the following command will
 successfully create a service:
 
 ```shell
-nx g @nx/angular:service my-service
+nx g @titan/angular:service my-service
 ```
 
 ## More Documentation

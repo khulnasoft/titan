@@ -1,5 +1,5 @@
-import { addProjectConfiguration, readJson, type Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { addProjectConfiguration, readJson, type Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import migration from './add-browser-sync-dependency';
 
 describe('add-browser-sync-dependency migration', () => {
@@ -26,13 +26,13 @@ describe('add-browser-sync-dependency migration', () => {
     expect(devDependencies['browser-sync']).toEqual('^3.0.0');
   });
 
-  it('should add "browser-sync" as devDependencies when "@nx/angular:module-federation-dev-ssr" is used', async () => {
+  it('should add "browser-sync" as devDependencies when "@titan/angular:module-federation-dev-ssr" is used', async () => {
     addProjectConfiguration(tree, 'my-app', {
       root: 'apps/my-app',
       projectType: 'application',
       targets: {
         'ssr-dev-server': {
-          executor: '@nx/angular:module-federation-dev-ssr',
+          executor: '@titan/angular:module-federation-dev-ssr',
         },
       },
     });
@@ -49,7 +49,7 @@ describe('add-browser-sync-dependency migration', () => {
       projectType: 'application',
       targets: {
         'ssr-dev-server': {
-          executor: '@nx/angular:application',
+          executor: '@titan/angular:application',
         },
       },
     });

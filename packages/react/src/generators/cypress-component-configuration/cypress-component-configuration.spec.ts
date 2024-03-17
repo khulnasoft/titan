@@ -1,27 +1,27 @@
-import { assertMinimumCypressVersion } from '@nx/cypress/src/utils/cypress-version';
+import { assertMinimumCypressVersion } from '@titan/cypress/src/utils/cypress-version';
 import {
   DependencyType,
   ProjectGraph,
   readProjectConfiguration,
   Tree,
   updateProjectConfiguration,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { Linter } from '@nx/eslint';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { Linter } from '@titan/eslint';
 import { applicationGenerator } from '../application/application';
 import { componentGenerator } from '../component/component';
 import { libraryGenerator } from '../library/library';
 import { cypressComponentConfigGenerator } from './cypress-component-configuration';
 
 let projectGraph: ProjectGraph;
-jest.mock('@nx/devkit', () => ({
-  ...jest.requireActual<any>('@nx/devkit'),
+jest.mock('@titan/devkit', () => ({
+  ...jest.requireActual<any>('@titan/devkit'),
   readTargetOptions: jest.fn().mockImplementation(() => ({})),
   createProjectGraphAsync: jest
     .fn()
     .mockImplementation(async () => projectGraph),
 }));
-jest.mock('@nx/cypress/src/utils/cypress-version');
+jest.mock('@titan/cypress/src/utils/cypress-version');
 // nested code imports graph from the repo, which might have innacurate graph version
 jest.mock('nx/src/project-graph/project-graph', () => ({
   ...jest.requireActual<any>('nx/src/project-graph/project-graph'),
@@ -170,7 +170,7 @@ describe('React:CypressComponentTestConfiguration', () => {
     expect(
       readProjectConfiguration(tree, 'some-lib').targets['component-test']
     ).toEqual({
-      executor: '@nx/cypress:cypress',
+      executor: '@titan/cypress:cypress',
       options: {
         cypressConfig: 'some-lib/cypress.config.ts',
         devServerTarget: 'my-app:build',
@@ -238,7 +238,7 @@ describe('React:CypressComponentTestConfiguration', () => {
     expect(
       readProjectConfiguration(tree, 'some-lib').targets['component-test']
     ).toEqual({
-      executor: '@nx/cypress:cypress',
+      executor: '@titan/cypress:cypress',
       options: {
         cypressConfig: 'some-lib/cypress.config.ts',
         devServerTarget: 'my-app:build',
@@ -306,7 +306,7 @@ describe('React:CypressComponentTestConfiguration', () => {
     expect(
       readProjectConfiguration(tree, 'some-lib').targets['component-test']
     ).toEqual({
-      executor: '@nx/cypress:cypress',
+      executor: '@titan/cypress:cypress',
       options: {
         cypressConfig: 'some-lib/cypress.config.ts',
         devServerTarget: 'my-app:build',
@@ -471,7 +471,7 @@ describe('React:CypressComponentTestConfiguration', () => {
       });
     }).resolves;
     expect(
-      require('@nx/devkit').createProjectGraphAsync
+      require('@titan/devkit').createProjectGraphAsync
     ).not.toHaveBeenCalled();
   });
 

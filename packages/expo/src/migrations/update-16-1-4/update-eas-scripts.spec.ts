@@ -3,8 +3,8 @@ import {
   addProjectConfiguration,
   readJson,
   updateJson,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import update from './update-eas-scripts';
 
 describe('update-eas-scripts', () => {

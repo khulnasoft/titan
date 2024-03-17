@@ -1,4 +1,4 @@
-export const ASYNC_GENERATOR_EXECUTOR_CONTENTS = `import { ExecutorContext } from '@nx/devkit';
+export const ASYNC_GENERATOR_EXECUTOR_CONTENTS = `import { ExecutorContext } from '@titan/devkit';
 
 async function* asyncGenerator(
 ) {
@@ -20,7 +20,7 @@ export default async function* execute(
 `;
 
 export const NX_PLUGIN_V2_CONTENTS = `import { basename, dirname } from "path";
-import { CreateNodes } from "@nx/devkit";
+import { CreateNodes } from "@titan/devkit";
 
 type PluginOptions = {
     inferredTags: string[]

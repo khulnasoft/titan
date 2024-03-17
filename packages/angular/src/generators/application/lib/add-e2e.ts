@@ -1,4 +1,4 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import {
   addDependenciesToPackageJson,
   addProjectConfiguration,
@@ -8,7 +8,7 @@ import {
   readNxJson,
   readProjectConfiguration,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { nxVersion } from '../../../utils/versions';
 import { getInstalledAngularVersionInfo } from '../../utils/version-utils';
 import type { NormalizedSchema } from './normalized-schema';
@@ -22,8 +22,8 @@ export async function addE2e(tree: Tree, options: NormalizedSchema) {
 
   if (options.e2eTestRunner === 'cypress') {
     const { configurationGenerator } = ensurePackage<
-      typeof import('@nx/cypress')
-    >('@nx/cypress', nxVersion);
+      typeof import('@titan/cypress')
+    >('@titan/cypress', nxVersion);
     // TODO: This can call `@nx/web:static-config` generator when ready
     addFileServerTarget(tree, options, 'serve-static');
     addProjectConfiguration(tree, options.e2eProjectName, {
@@ -47,8 +47,8 @@ export async function addE2e(tree: Tree, options: NormalizedSchema) {
     });
   } else if (options.e2eTestRunner === 'playwright') {
     const { configurationGenerator } = ensurePackage<
-      typeof import('@nx/playwright')
-    >('@nx/playwright', nxVersion);
+      typeof import('@titan/playwright')
+    >('@titan/playwright', nxVersion);
     addProjectConfiguration(tree, options.e2eProjectName, {
       projectType: 'application',
       root: options.e2eProjectRoot,

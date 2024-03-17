@@ -1,4 +1,4 @@
-import { Tree, joinPathFragments } from '@nx/devkit';
+import { Tree, joinPathFragments } from '@titan/devkit';
 
 export function findViteConfig(tree: Tree, searchRoot: string) {
   const allowsExt = ['js', 'mjs', 'ts', 'cjs', 'mts', 'cts'];

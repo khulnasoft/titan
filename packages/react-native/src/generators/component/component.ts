@@ -7,7 +7,7 @@ import {
   joinPathFragments,
   toJS,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { NormalizedSchema, normalizeOptions } from './lib/normalize-options';
 import { addImport } from './lib/add-import';
 import { ensureTypescript } from '@nx/js/src/utils/typescript/ensure-typescript';

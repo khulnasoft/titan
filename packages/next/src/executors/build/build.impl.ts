@@ -5,13 +5,13 @@ import {
   readJsonFile,
   workspaceRoot,
   writeJsonFile,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { createLockFile, createPackageJson, getLockFileName } from '@nx/js';
 import { join, resolve as pathResolve } from 'path';
 import { copySync, existsSync, mkdir, writeFileSync } from 'fs-extra';
 import { gte } from 'semver';
 import { directoryExists } from '@nx/workspace/src/utilities/fileutils';
-import { checkAndCleanWithSemver } from '@nx/devkit/src/utils/semver';
+import { checkAndCleanWithSemver } from '@titan/devkit/src/utils/semver';
 
 import { updatePackageJson } from './lib/update-package-json';
 import { createNextConfigFile } from './lib/create-next-config-file';

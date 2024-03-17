@@ -7,7 +7,7 @@ import {
   readProjectConfiguration,
   toJS,
   type Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 import { upsertLinksFunction } from '../../utils/upsert-links-function';
 import { tailwindVersion } from '../../utils/versions';

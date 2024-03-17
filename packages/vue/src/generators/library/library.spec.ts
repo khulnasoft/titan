@@ -4,9 +4,9 @@ import {
   readProjectConfiguration,
   Tree,
   updateJson,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { Linter } from '@nx/eslint';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { Linter } from '@titan/eslint';
 import { nxVersion } from '../../utils/versions';
 import libraryGenerator from './library';
 import { Schema } from './schema';
@@ -28,7 +28,7 @@ describe('lib', () => {
     tree = createTreeWithEmptyWorkspace();
     updateJson(tree, '/package.json', (json) => {
       json.devDependencies = {
-        '@nx/cypress': nxVersion,
+        '@titan/cypress': nxVersion,
         '@nx/rollup': nxVersion,
         '@nx/vite': nxVersion,
       };

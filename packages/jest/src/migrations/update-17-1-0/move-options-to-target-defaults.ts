@@ -10,19 +10,19 @@ import {
   Tree,
   updateNxJson,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { JestExecutorOptions } from '../../executors/jest/schema';
 import {
   forEachExecutorOptions,
   forEachExecutorOptionsInGraph,
-} from '@nx/devkit/src/generators/executor-options-utils';
+} from '@titan/devkit/src/generators/executor-options-utils';
 import { readTargetDefaultsForTarget } from 'nx/src/project-graph/utils/project-configuration-utils';
 
 export default async function update(tree: Tree) {
   const nxJson = readNxJson(tree);
 
   // Don't override anything if there are already target defaults for jest
-  if (nxJson.targetDefaults?.['@nx/jest:jest']) {
+  if (nxJson.targetDefaults?.['@titan/jest:jest']) {
     return;
   }
 
@@ -37,7 +37,7 @@ export default async function update(tree: Tree) {
 
   forEachExecutorOptionsInGraph(
     graph,
-    '@nx/jest:jest',
+    '@titan/jest:jest',
     (value, proj, targetName) => {
       jestTargets.add(targetName);
     }
@@ -52,7 +52,7 @@ export default async function update(tree: Tree) {
   const projectMap = getProjects(tree);
 
   const jestDefaults: TargetConfiguration<Partial<JestExecutorOptions>> =
-    (nxJson.targetDefaults['@nx/jest:jest'] = {});
+    (nxJson.targetDefaults['@titan/jest:jest'] = {});
 
   // All jest targets have the same name
   if (jestTargets.size === 1) {
@@ -106,7 +106,7 @@ export default async function update(tree: Tree) {
 
   forEachExecutorOptions<JestExecutorOptions>(
     tree,
-    '@nx/jest:jest',
+    '@titan/jest:jest',
     (value, proj, targetName, configuration) => {
       const projConfig = projectMap.get(proj);
 

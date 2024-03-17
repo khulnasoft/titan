@@ -15,11 +15,11 @@
       }
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
+      "executor": "@titan/eslint:lint",
       "outputs": ["{options.outputFile}"]
     },
     "test": {
-      "executor": "@nx/jest:jest",
+      "executor": "@titan/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "jestConfig": "nx-dev/util-ai/jest.config.ts"

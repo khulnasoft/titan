@@ -1,4 +1,4 @@
-import { parseJson } from '@nx/devkit';
+import { parseJson } from '@titan/devkit';
 import {
   checkFilesExist,
   cleanupProject,
@@ -60,7 +60,7 @@ describe('Extra Nx Misc Tests', () => {
         `
       module.exports = {
         processProjectGraph: (graph) => {
-          const Builder = require('@nx/devkit').ProjectGraphBuilder;
+          const Builder = require('@titan/devkit').ProjectGraphBuilder;
           const builder = new Builder(graph);
           builder.addNode({
             name: 'plugin-node',

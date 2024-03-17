@@ -32,8 +32,8 @@
             "ignoredDependencies": [
               "nx",
               "typescript",
-              "@nx/cypress",
-              "@nx/playwright",
+              "@titan/cypress",
+              "@titan/playwright",
               "@nx/vite"
             ]
           }

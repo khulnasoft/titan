@@ -1,9 +1,9 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import {
   addDependenciesToPackageJson,
   formatFiles,
   readProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import type { Schema } from './schema';
 
 import {

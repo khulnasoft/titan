@@ -2,7 +2,7 @@ import {
   joinPathFragments,
   readProjectConfiguration,
   type Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { insertImport } from '@nx/js';
 import { ensureTypescript } from '@nx/js/src/utils/typescript/ensure-typescript';
 import type { CallExpression, SourceFile } from 'typescript';

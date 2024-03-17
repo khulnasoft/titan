@@ -1,4 +1,4 @@
-import { ProjectGraph, Tree, writeJson } from '@nx/devkit';
+import { ProjectGraph, Tree, writeJson } from '@titan/devkit';
 
 interface ProjectAndPackageData {
   [projectName: string]: {

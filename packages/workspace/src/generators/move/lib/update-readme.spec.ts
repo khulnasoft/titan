@@ -1,5 +1,5 @@
-import { Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { join } from 'path';
 import { NormalizedSchema } from '../schema';
 import { updateReadme } from './update-readme';

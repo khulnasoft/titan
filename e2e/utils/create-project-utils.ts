@@ -29,7 +29,7 @@ import {
   RunCmdOpts,
   runCommand,
 } from './command-utils';
-import { output, readJsonFile } from '@nx/devkit';
+import { output, readJsonFile } from '@titan/devkit';
 import { readFileSync } from 'fs';
 import { join } from 'path';
 import { resetWorkspaceContext } from 'nx/src/utils/workspace-context';
@@ -38,21 +38,21 @@ let projName: string;
 
 // TODO(jack): we should tag the projects (e.g. tags: ['package']) and filter from that rather than hard-code packages.
 const nxPackages = [
-  `@nx/angular`,
-  `@nx/cypress`,
-  `@nx/eslint-plugin`,
+  `@titan/angular`,
+  `@titan/cypress`,
+  `@titan/eslint-plugin`,
   `@nx/express`,
-  `@nx/esbuild`,
+  `@titan/esbuild`,
   `@nx/gradle`,
-  `@nx/jest`,
+  `@titan/jest`,
   `@nx/js`,
-  `@nx/eslint`,
+  `@titan/eslint`,
   `@nx/nest`,
-  `@nx/next`,
+  `@titan/next`,
   `@nx/node`,
   `@nx/nuxt`,
   `@nx/plugin`,
-  `@nx/playwright`,
+  `@titan/playwright`,
   `@nx/rollup`,
   `@nx/react`,
   `@nx/remix`,
@@ -528,7 +528,7 @@ export function newLernaWorkspace({
         ...json.overrides,
         nx: nxVersion,
         '@nrwl/devkit': nxVersion,
-        '@nx/devkit': nxVersion,
+        '@titan/devkit': nxVersion,
       };
       if (packageManager === 'pnpm') {
         json.pnpm = {

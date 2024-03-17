@@ -1,7 +1,7 @@
-import { readJson, updateJson } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { Linter } from '@nx/eslint';
-import { assertRunsAgainstNxRepo } from '@nx/devkit/internal-testing-utils';
+import { readJson, updateJson } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { Linter } from '@titan/eslint';
+import { assertRunsAgainstNxRepo } from '@titan/devkit/internal-testing-utils';
 import { ExecutorConfig } from 'nx/src/config/misc-interfaces';
 import executorGenerator from '../../generators/executor/executor';
 import pluginGenerator from '../../generators/plugin/plugin';

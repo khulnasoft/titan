@@ -4,7 +4,7 @@ import {
   readJsonFile,
   writeJsonFile,
   type ExecutorContext,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { createLockFile, createPackageJson, getLockFileName } from '@nx/js';
 import { directoryExists } from '@nx/workspace/src/utilities/fileutils';
 import { fork } from 'child_process';

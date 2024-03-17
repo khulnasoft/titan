@@ -1,14 +1,14 @@
 {
   "web": {
     "build": {
-      "executor": "@nx/next:build",
+      "executor": "@titan/next:build",
       "options": {
         "root": "apps/web",
         "outputPath": "dist/apps/web"
       }
     },
     "serve": {
-      "executor": "@nx/next:server",
+      "executor": "@titan/next:server",
       "options": {
         "buildTarget": "web:build",
         "dev": true
@@ -85,7 +85,7 @@
   },
   "nextapp": {
     "build": {
-      "executor": "@nx/next:build",
+      "executor": "@titan/next:build",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
@@ -94,7 +94,7 @@
       }
     },
     "serve": {
-      "executor": "@nx/next:server",
+      "executor": "@titan/next:server",
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "nextapp:build",
@@ -152,7 +152,7 @@
   },
   "nglib": {
     "build": {
-      "executor": "@nx/angular:ng-packagr-lite",
+      "executor": "@titan/angular:ng-packagr-lite",
       "outputs": ["dist/libs/nglibuild"],
       "options": {
         "project": "libs/nglibuild/ng-package.json"
@@ -160,7 +160,7 @@
       "defaultConfiguration": "production"
     },
     "lint": {
-      "executor": "@nx/eslint:lint"
+      "executor": "@titan/eslint:lint"
     }
   },
   "react-swc": {
@@ -197,7 +197,7 @@
   },
   "nextapp-swc": {
     "build": {
-      "executor": "@nx/next:build",
+      "executor": "@titan/next:build",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
@@ -207,7 +207,7 @@
       }
     },
     "serve": {
-      "executor": "@nx/next:server",
+      "executor": "@titan/next:server",
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "nextapp:build",

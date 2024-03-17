@@ -8,13 +8,13 @@ import {
   Tree,
   updateProjectConfiguration,
   writeJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { ViteBuildExecutorOptions } from '../executors/build/schema';
 import { VitePreviewServerExecutorOptions } from '../executors/preview-server/schema';
 import { VitestExecutorOptions } from '../executors/test/schema';
 import { ViteConfigurationGeneratorSchema } from '../generators/configuration/schema';
 import { ensureViteConfigIsCorrect } from './vite-config-edit-utils';
-import { addBuildTargetDefaults } from '@nx/devkit/src/generators/add-build-target-defaults';
+import { addBuildTargetDefaults } from '@titan/devkit/src/generators/add-build-target-defaults';
 
 export type Target = 'build' | 'serve' | 'test' | 'preview';
 export type TargetFlags = Partial<Record<Target, boolean>>;
@@ -36,17 +36,17 @@ export function findExistingJsBuildTargetInProject(targets: {
     build: ['@nx/js:babel', '@nx/js:swc', '@nx/rollup:rollup'],
   };
   const unsupportedExecutors = [
-    '@nx/angular:ng-packagr-lite',
-    '@nx/angular:package',
-    '@nx/angular:webpack-browser',
-    '@nx/esbuild:esbuild',
+    '@titan/angular:ng-packagr-lite',
+    '@titan/angular:package',
+    '@titan/angular:webpack-browser',
+    '@titan/esbuild:esbuild',
     '@nx/react-native:run-ios',
     '@nx/react-native:start',
     '@nx/react-native:run-android',
     '@nx/react-native:bundle',
     '@nx/react-native:build-android',
     '@nx/react-native:bundle',
-    '@nx/next:build',
+    '@titan/next:build',
     '@nx/js:tsc',
     '@nrwl/angular:ng-packagr-lite',
     '@nrwl/angular:package',

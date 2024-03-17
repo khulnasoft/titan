@@ -3,8 +3,8 @@ import {
   readJson,
   type Tree,
   updateJson,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { jestInitGenerator } from './init';
 import { JestInitSchema } from './schema';
 
@@ -31,7 +31,7 @@ describe('jest', () => {
     const productionFileSet = readJson<NxJsonConfiguration>(tree, 'nx.json')
       .namedInputs.production;
     const jestDefaults = readJson<NxJsonConfiguration>(tree, 'nx.json')
-      .targetDefaults['@nx/jest:jest'];
+      .targetDefaults['@titan/jest:jest'];
     expect(productionFileSet).toContain(
       '!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)'
     );
@@ -79,6 +79,6 @@ describe('jest', () => {
 
     const packageJson = readJson(tree, 'package.json');
     expect(packageJson.devDependencies.jest).toBeDefined();
-    expect(packageJson.devDependencies['@nx/jest']).toBeDefined();
+    expect(packageJson.devDependencies['@titan/jest']).toBeDefined();
   });
 });

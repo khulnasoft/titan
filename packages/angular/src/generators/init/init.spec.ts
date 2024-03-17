@@ -1,5 +1,5 @@
-import { readNxJson, updateJson, updateNxJson, type Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { readNxJson, updateJson, updateNxJson, type Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import init from './init';
 
 describe('init', () => {

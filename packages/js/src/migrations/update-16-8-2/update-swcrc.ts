@@ -4,7 +4,7 @@ import {
   readJson,
   Tree,
   writeJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { join } from 'path';
 
 export default async function update(tree: Tree) {

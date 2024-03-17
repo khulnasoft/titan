@@ -333,10 +333,10 @@ export class AppElement extends HTMLElement {
               Add UI library
             </summary>
             <pre><span># Generate UI lib</span>
-nx g @nx/angular:lib ui
+nx g @titan/angular:lib ui
 
 <span># Add a component</span>
-nx g @nx/angular:component ui/src/lib/button</pre>
+nx g @titan/angular:component ui/src/lib/button</pre>
           </details>
           <details>
             <summary>

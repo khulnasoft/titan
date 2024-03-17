@@ -206,7 +206,7 @@
       },
       "test": {
         "inputs": ["default", "^production", "{workspaceRoot}/jest.preset.js"],
-        "executor": "@nx/jest:jest",
+        "executor": "@titan/jest:jest",
         "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
         "options": {
           "jestConfig": "apps/webpack-app/jest.config.ts",

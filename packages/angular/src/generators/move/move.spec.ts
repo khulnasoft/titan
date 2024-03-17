@@ -1,13 +1,13 @@
-import * as devkit from '@nx/devkit';
-import { ProjectGraph, readJson, Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { Linter } from '@nx/eslint';
+import * as devkit from '@titan/devkit';
+import { ProjectGraph, readJson, Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { Linter } from '@titan/eslint';
 import { UnitTestRunner } from '../../utils/test-runners';
 import { librarySecondaryEntryPointGenerator } from '../library-secondary-entry-point/library-secondary-entry-point';
 import { generateTestLibrary } from '../utils/testing';
 import { angularMoveGenerator } from './move';
 
-describe('@nx/angular:move', () => {
+describe('@titan/angular:move', () => {
   let tree: Tree;
   let projectGraph: ProjectGraph;
 

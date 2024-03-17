@@ -1,4 +1,4 @@
-import { ensurePackage, readNxJson, Tree, updateJson } from '@nx/devkit';
+import { ensurePackage, readNxJson, Tree, updateJson } from '@titan/devkit';
 import { NormalizedSchema } from '../schema';
 import { addVitestTargetDefaults } from '../../init/lib/utils';
 import { nxVersion } from '../../../utils/versions';

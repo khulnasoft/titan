@@ -1,5 +1,5 @@
-import { Tree, offsetFromRoot } from '@nx/devkit';
-import { configurationGenerator } from '@nx/jest';
+import { Tree, offsetFromRoot } from '@titan/devkit';
+import { configurationGenerator } from '@titan/jest';
 
 export async function addJest(
   host: Tree,
@@ -31,7 +31,7 @@ export async function addJest(
   const content = `module.exports = {
   displayName: '${projectName}',
   preset: 'react-native',
-  resolver: '@nx/jest/plugins/resolver',
+  resolver: '@titan/jest/plugins/resolver',
   moduleFileExtensions: ['ts', 'js', 'html', 'tsx', 'jsx'],
   setupFilesAfterEnv: ['<rootDir>/test-setup.${js ? 'js' : 'ts'}'],
   moduleNameMapper: {

@@ -115,7 +115,7 @@ In the `project.json` file update the `options` under the `build` target. The pr
 {
   "targets": {
     "build": {
-      "executor": "@nx/esbuild:esbuild",
+      "executor": "@titan/esbuild:esbuild",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
@@ -218,6 +218,6 @@ Now when you serve your application, you'll see the content from the library bei
 
 ## More Documentation
 
-- [@nx/esbuild](/nx-api/esbuild)
+- [@titan/esbuild](/nx-api/esbuild)
 - [@nx/js](/nx-api/js)
 - [Lit](https://lit.dev/)

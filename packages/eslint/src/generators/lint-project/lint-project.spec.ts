@@ -4,13 +4,13 @@ import {
   readProjectConfiguration,
   Tree,
   updateJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 import { Linter } from '../utils/linter';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { lintProjectGenerator } from './lint-project';
 
-describe('@nx/eslint:lint-project', () => {
+describe('@titan/eslint:lint-project', () => {
   let tree: Tree;
 
   const defaultOptions = {
@@ -327,7 +327,7 @@ describe('@nx/eslint:lint-project', () => {
     const explicitCOnfig = readProjectConfiguration(tree, 'explicit-lib');
     expect(explicitCOnfig.targets.lint).toMatchInlineSnapshot(`
       {
-        "executor": "@nx/eslint:lint",
+        "executor": "@titan/eslint:lint",
       }
     `);
     const inferredConfig = readProjectConfiguration(tree, 'inferred-lib');

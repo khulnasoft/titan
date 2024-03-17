@@ -29,7 +29,7 @@ export class Workspaces {
 }
 
 /**
- * Pulled from toFileName in names from @nx/devkit.
+ * Pulled from toFileName in names from @titan/devkit.
  * Todo: Should refactor, not duplicate.
  */
 export function toProjectName(fileName: string): string {

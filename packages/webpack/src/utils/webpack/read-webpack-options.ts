@@ -1,4 +1,4 @@
-import { workspaceRoot } from '@nx/devkit';
+import { workspaceRoot } from '@titan/devkit';
 import { isNxWebpackComposablePlugin } from '../config';
 import { Configuration } from 'webpack';
 

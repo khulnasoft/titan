@@ -1,5 +1,5 @@
-import type { Tree } from '@nx/devkit';
-import { visitNotIgnoredFiles } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
+import { visitNotIgnoredFiles } from '@titan/devkit';
 import { extname } from 'path';
 import { tsquery } from '@phenomnomnominal/tsquery';
 import { SourceFile } from 'typescript';

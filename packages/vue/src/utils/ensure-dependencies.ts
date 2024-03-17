@@ -2,7 +2,7 @@ import {
   addDependenciesToPackageJson,
   type GeneratorCallback,
   type Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import {
   lessVersion,
   sassVersion,

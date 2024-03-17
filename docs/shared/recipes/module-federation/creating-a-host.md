@@ -49,8 +49,8 @@ CREATE apps/react/shell/webpack.config.prod.ts
 {% /tab %}
 {% tab label="Angular" %}
 
-```{% command="nx g @nx/angular:host shell --directory=apps/angular/shell" %}
-NX Generating @nx/angular:host
+```{% command="nx g @titan/angular:host shell --directory=apps/angular/shell" %}
+NX Generating @titan/angular:host
 
 CREATE apps/angular/shell/project.json
 CREATE apps/angular/shell/src/assets/.gitkeep
@@ -167,8 +167,8 @@ CREATE apps/react/with-remotes/remote2/webpack.config.prod.ts
 {% /tab %}
 {% tab label="Angular" %}
 
-```{% command="nx g @nx/angular:host shell --directory=apps/angular/with-remotes/shell --remotes=remote1,remote2" %}
-> NX Generating @nx/angular:host
+```{% command="nx g @titan/angular:host shell --directory=apps/angular/with-remotes/shell --remotes=remote1,remote2" %}
+> NX Generating @titan/angular:host
 
 CREATE apps/angular/with-remotes/shell/project.json
 CREATE apps/angular/with-remotes/shell/src/assets/.gitkeep

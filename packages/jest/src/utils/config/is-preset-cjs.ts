@@ -1,4 +1,4 @@
-import { type Tree, readJson } from '@nx/devkit';
+import { type Tree, readJson } from '@titan/devkit';
 
 export function isPresetCjs(tree: Tree) {
   if (tree.exists('jest.preset.cjs')) {

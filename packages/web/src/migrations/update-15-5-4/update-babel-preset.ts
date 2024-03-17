@@ -5,7 +5,7 @@ import {
   addDependenciesToPackageJson,
   getProjects,
   joinPathFragments,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { nxVersion } from '../../utils/versions';
 
 /* Updates @nrwl/web/babel to @nrwl/js/babel because web package is no longer necessary to use webpack/rollup + babel. */

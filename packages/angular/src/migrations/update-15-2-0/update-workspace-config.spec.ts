@@ -1,5 +1,5 @@
-import * as devkit from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import * as devkit from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { Builders } from '@schematics/angular/utility/workspace-models';
 import {
   readProjectConfiguration,

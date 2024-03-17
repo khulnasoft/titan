@@ -11,7 +11,7 @@ import {
   stripIndents,
   TaskGraph,
   workspaceRoot,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { getSummary } from './summary';
 import { readFileSync } from 'fs';
 import type { BatchResults } from 'nx/src/tasks-runner/batch/batch-messages';

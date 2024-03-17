@@ -3,7 +3,7 @@ import {
   Tree,
   ensurePackage,
   runTasksInSerial,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { NormalizedSchema } from '../schema';
 import { nxVersion } from '../../../utils/versions';
 

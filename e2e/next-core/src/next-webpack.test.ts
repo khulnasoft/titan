@@ -16,7 +16,7 @@ describe('Next.js Webpack', () => {
 
   beforeEach(() => {
     proj = newProject({
-      packages: ['@nx/next'],
+      packages: ['@titan/next'],
     });
     originalEnv = process.env.NODE_ENV;
   });
@@ -30,7 +30,7 @@ describe('Next.js Webpack', () => {
     const appName = uniq('app');
 
     runCLI(
-      `generate @nx/next:app ${appName} --no-interactive --style=css --appDir=false`,
+      `generate @titan/next:app ${appName} --no-interactive --style=css --appDir=false`,
       {
         env: {
           NX_ADD_PLUGINS: 'false',
@@ -41,7 +41,7 @@ describe('Next.js Webpack', () => {
     updateFile(
       `apps/${appName}/next.config.js`,
       `
-        const { withNx } = require('@nx/next');
+        const { withNx } = require('@titan/next');
         const nextConfig = {
           nx: {
             svgr: false,
@@ -94,7 +94,7 @@ describe('Next.js Webpack', () => {
     updateFile(
       `apps/${appName}/next.config.js`,
       `
-        const { withNx } = require('@nx/next');
+        const { withNx } = require('@titan/next');
         // Not including "nx" entry should still work.
         const nextConfig = {};
 

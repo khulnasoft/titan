@@ -1,7 +1,7 @@
-import { CreateNodesContext } from '@nx/devkit';
+import { CreateNodesContext } from '@titan/devkit';
 
 import { createNodes } from './plugin';
-import { TempFs } from '@nx/devkit/internal-testing-utils';
+import { TempFs } from '@titan/devkit/internal-testing-utils';
 
 describe('@nx/storybook/plugin', () => {
   let createNodesFunction = createNodes[1];

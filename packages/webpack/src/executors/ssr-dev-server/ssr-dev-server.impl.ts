@@ -3,9 +3,9 @@ import {
   parseTargetString,
   readTargetOptions,
   runExecutor,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import * as chalk from 'chalk';
-import { combineAsyncIterables } from '@nx/devkit/src/utils/async-iterable';
+import { combineAsyncIterables } from '@titan/devkit/src/utils/async-iterable';
 
 import { WebpackExecutorOptions } from '../webpack/schema';
 import { TargetOptions, WebSsrDevServerOptions } from './schema';

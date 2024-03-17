@@ -1,4 +1,4 @@
-import { names } from '@nx/devkit';
+import { names } from '@titan/devkit';
 import {
   checkFilesExist,
   cleanupProject,
@@ -18,7 +18,7 @@ describe('Angular Module Federation', () => {
   let oldVerboseLoggingValue: string;
 
   beforeAll(() => {
-    proj = newProject({ packages: ['@nx/angular'] });
+    proj = newProject({ packages: ['@titan/angular'] });
     oldVerboseLoggingValue = process.env.NX_E2E_VERBOSE_LOGGING;
     process.env.NX_E2E_VERBOSE_LOGGING = 'true';
   });
@@ -37,11 +37,11 @@ describe('Angular Module Federation', () => {
 
     // generate host app
     runCLI(
-      `generate @nx/angular:host ${hostApp} --style=css --no-standalone --project-name-and-root-format=as-provided --no-interactive`
+      `generate @titan/angular:host ${hostApp} --style=css --no-standalone --project-name-and-root-format=as-provided --no-interactive`
     );
     // generate remote app
     runCLI(
-      `generate @nx/angular:remote ${remoteApp1} --host=${hostApp} --port=${remotePort} --style=css --no-standalone --project-name-and-root-format=as-provided --no-interactive`
+      `generate @titan/angular:remote ${remoteApp1} --host=${hostApp} --port=${remotePort} --style=css --no-standalone --project-name-and-root-format=as-provided --no-interactive`
     );
 
     // check files are generated without the layout directory ("apps/")
@@ -56,10 +56,10 @@ describe('Angular Module Federation', () => {
 
     // generate a shared lib with a seconary entry point
     runCLI(
-      `generate @nx/angular:library ${sharedLib} --buildable --no-standalone --project-name-and-root-format=as-provided --no-interactive`
+      `generate @titan/angular:library ${sharedLib} --buildable --no-standalone --project-name-and-root-format=as-provided --no-interactive`
     );
     runCLI(
-      `generate @nx/angular:library-secondary-entry-point --library=${sharedLib} --name=${secondaryEntry} --no-interactive`
+      `generate @titan/angular:library-secondary-entry-point --library=${sharedLib} --name=${secondaryEntry} --no-interactive`
     );
     // update host & remote files to use shared library
     updateFile(
@@ -157,18 +157,18 @@ describe('Angular Module Federation', () => {
 
     // generate apps
     runCLI(
-      `generate @nx/angular:application ${app1} --routing --bundler=webpack --project-name-and-root-format=as-provided --no-interactive`
+      `generate @titan/angular:application ${app1} --routing --bundler=webpack --project-name-and-root-format=as-provided --no-interactive`
     );
     runCLI(
-      `generate @nx/angular:application ${app2} --bundler=webpack --project-name-and-root-format=as-provided --no-interactive`
+      `generate @titan/angular:application ${app2} --bundler=webpack --project-name-and-root-format=as-provided --no-interactive`
     );
 
     // convert apps
     runCLI(
-      `generate @nx/angular:setup-mf ${app1} --mfType=host --port=${app1Port} --no-interactive`
+      `generate @titan/angular:setup-mf ${app1} --mfType=host --port=${app1Port} --no-interactive`
     );
     runCLI(
-      `generate @nx/angular:setup-mf ${app2} --mfType=remote --host=${app1} --port=${app2Port} --no-interactive`
+      `generate @titan/angular:setup-mf ${app2} --mfType=remote --host=${app1} --port=${app2Port} --no-interactive`
     );
 
     const processSwc = await runCommandUntil(
@@ -198,7 +198,7 @@ describe('Angular Module Federation', () => {
 
     // generate remote apps
     runCLI(
-      `generate @nx/angular:host ${host} --ssr --remotes=${remote1},${remote2} --project-name-and-root-format=as-provided --no-interactive`
+      `generate @titan/angular:host ${host} --ssr --remotes=${remote1},${remote2} --project-name-and-root-format=as-provided --no-interactive`
     );
 
     // ports
@@ -260,11 +260,11 @@ describe('Angular Module Federation', () => {
 
     // generate host app
     runCLI(
-      `generate @nx/angular:host ${hostApp} --no-standalone --project-name-and-root-format=derived --no-interactive`
+      `generate @titan/angular:host ${hostApp} --no-standalone --project-name-and-root-format=derived --no-interactive`
     );
     // generate remote app
     runCLI(
-      `generate @nx/angular:remote ${remoteApp} --host=${hostApp} --port=${remotePort} --no-standalone --project-name-and-root-format=derived --no-interactive`
+      `generate @titan/angular:remote ${remoteApp} --host=${hostApp} --port=${remotePort} --no-standalone --project-name-and-root-format=derived --no-interactive`
     );
 
     // check files are generated with the layout directory ("apps/")
@@ -319,7 +319,7 @@ describe('Angular Module Federation', () => {
     const hostPort = 4200;
 
     runCLI(
-      `generate @nx/angular:host ${host} --remotes=${remote} --no-interactive --projectNameAndRootFormat=as-provided`
+      `generate @titan/angular:host ${host} --remotes=${remote} --no-interactive --projectNameAndRootFormat=as-provided`
     );
 
     runCLI(
@@ -328,7 +328,7 @@ describe('Angular Module Federation', () => {
 
     // Federate Module
     runCLI(
-      `generate @nx/angular:federate-module ${lib}/src/index.ts --name=${module} --remote=${remote} --no-interactive`
+      `generate @titan/angular:federate-module ${lib}/src/index.ts --name=${module} --remote=${remote} --no-interactive`
     );
 
     updateFile(`${lib}/src/index.ts`, `export { isEven } from './lib/${lib}';`);
@@ -393,7 +393,7 @@ describe('Angular Module Federation', () => {
     const hostPort = 4200;
 
     runCLI(
-      `generate @nx/angular:host ${host} --remotes=${remote} --no-interactive --projectNameAndRootFormat=as-provided`
+      `generate @titan/angular:host ${host} --remotes=${remote} --no-interactive --projectNameAndRootFormat=as-provided`
     );
 
     runCLI(
@@ -402,7 +402,7 @@ describe('Angular Module Federation', () => {
 
     // Federate Module
     runCLI(
-      `generate @nx/angular:federate-module ${lib}/src/index.ts --name=${module} --remote=${childRemote} --no-interactive`
+      `generate @titan/angular:federate-module ${lib}/src/index.ts --name=${module} --remote=${childRemote} --no-interactive`
     );
 
     updateFile(`${lib}/src/index.ts`, `export { isEven } from './lib/${lib}';`);

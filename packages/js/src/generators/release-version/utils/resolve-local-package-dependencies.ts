@@ -6,7 +6,7 @@ import {
   joinPathFragments,
   readJson,
   workspaceRoot,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { PackageJson } from 'nx/src/utils/package-json';
 import { satisfies } from 'semver';
 import { Package } from './package';

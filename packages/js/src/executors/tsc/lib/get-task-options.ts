@@ -2,7 +2,7 @@ import type {
   ExecutorContext,
   ProjectGraphProjectNode,
   Target,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import type {
   ExecutorOptions,
   NormalizedExecutorOptions,

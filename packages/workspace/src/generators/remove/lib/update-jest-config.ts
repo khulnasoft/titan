@@ -3,7 +3,7 @@ import {
   ChangeType,
   ProjectConfiguration,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { getSourceNodes } from '../../../utilities/typescript/get-source-nodes';
 
 import { Schema } from '../schema';

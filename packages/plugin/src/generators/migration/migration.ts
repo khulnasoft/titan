@@ -1,4 +1,4 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import {
   formatFiles,
   generateFiles,
@@ -9,14 +9,14 @@ import {
   updateJson,
   updateProjectConfiguration,
   writeJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import type { Schema } from './schema';
 import * as path from 'path';
 import { relative } from 'path';
 import { addMigrationJsonChecks } from '../lint-checks/generator';
 import { PackageJson, readNxMigrateConfig } from 'nx/src/utils/package-json';
 import { nxVersion } from '../../utils/versions';
-import { determineArtifactNameAndDirectoryOptions } from '@nx/devkit/src/generators/artifact-name-and-directory-utils';
+import { determineArtifactNameAndDirectoryOptions } from '@titan/devkit/src/generators/artifact-name-and-directory-utils';
 
 interface NormalizedSchema extends Schema {
   projectRoot: string;
@@ -138,7 +138,7 @@ function updatePackageJson(host: Tree, options: NormalizedSchema) {
 
       // add dependencies
       json.dependencies = {
-        '@nx/devkit': nxVersion,
+        '@titan/devkit': nxVersion,
         ...json.dependencies,
       };
 

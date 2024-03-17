@@ -1,5 +1,5 @@
-import type { Tree } from '@nx/devkit';
-import { generateFiles, joinPathFragments, logger } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
+import { generateFiles, joinPathFragments, logger } from '@titan/devkit';
 import type { Schema } from '../schema';
 
 export function generateWebpackConfig(

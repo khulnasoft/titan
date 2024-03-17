@@ -1,11 +1,11 @@
-import { Tree } from '@nx/devkit';
+import { Tree } from '@titan/devkit';
 import storiesGenerator from './stories';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 /* eslint-disable @nx/enforce-module-boundaries */
 // nx-ignore-next-line
-import { applicationGenerator } from '@nx/next';
+import { applicationGenerator } from '@titan/next';
 /* eslint-enable @nx/enforce-module-boundaries */
-import { Linter } from '@nx/eslint';
+import { Linter } from '@titan/eslint';
 
 describe('nextjs:stories for applications', () => {
   let tree: Tree;

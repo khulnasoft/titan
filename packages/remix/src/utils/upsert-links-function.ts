@@ -1,4 +1,4 @@
-import { stripIndents, type Tree } from '@nx/devkit';
+import { stripIndents, type Tree } from '@titan/devkit';
 import { tsquery } from '@phenomnomnominal/tsquery';
 import { insertImport } from './insert-import';
 import { insertStatementAfterImports } from './insert-statement-after-imports';

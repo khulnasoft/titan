@@ -1,10 +1,10 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import {
   addProjectConfiguration,
   readProjectConfiguration,
   writeJson,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import configurationGenerator from './configuration';
 
 describe('configurationGenerator', () => {

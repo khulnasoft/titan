@@ -6,7 +6,7 @@ import {
   readTargetOptions,
   runExecutor,
   workspaceRoot,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import ssrDevServerExecutor from '@nx/webpack/src/executors/ssr-dev-server/ssr-dev-server.impl';
 import { WebSsrDevServerOptions } from '@nx/webpack/src/executors/ssr-dev-server/schema';
 import { join } from 'path';
@@ -16,7 +16,7 @@ import {
   createAsyncIterable,
   mapAsyncIterable,
   tapAsyncIterable,
-} from '@nx/devkit/src/utils/async-iterable';
+} from '@titan/devkit/src/utils/async-iterable';
 import { execSync, fork } from 'child_process';
 import { existsSync } from 'fs';
 import { registerTsProject } from '@nx/js/src/internal';

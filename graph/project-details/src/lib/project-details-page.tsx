@@ -1,6 +1,6 @@
 /* eslint-disable @nx/enforce-module-boundaries */
 // nx-ignore-next-line
-import { ProjectGraphProjectNode } from '@nx/devkit';
+import { ProjectGraphProjectNode } from '@titan/devkit';
 import {
   ScrollRestoration,
   useParams,

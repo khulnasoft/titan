@@ -176,7 +176,7 @@ Plugins which define compile or bundling tasks such as `@nx/webpack/plugin` and 
 ]
 ```
 
-Plugins which define testing tasks such as `@nx/cypress/plugin`, `@nx/playwright/plugin`, `@nx/jest/plugin` and `@nx/vite/plugin` will infer the following inputs for tasks:
+Plugins which define testing tasks such as `@titan/cypress/plugin`, `@titan/playwright/plugin`, `@titan/jest/plugin` and `@nx/vite/plugin` will infer the following inputs for tasks:
 
 ```jsonc
 "inputs": [

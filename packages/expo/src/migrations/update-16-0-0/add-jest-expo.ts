@@ -1,8 +1,8 @@
-import { getProjects, logger, stripIndents, Tree } from '@nx/devkit';
+import { getProjects, logger, stripIndents, Tree } from '@titan/devkit';
 import {
   addPropertyToJestConfig,
   removePropertyFromJestConfig,
-} from '@nx/jest';
+} from '@titan/jest';
 
 /**
  * Change the preset in expo's jest config

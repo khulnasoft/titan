@@ -1,5 +1,5 @@
-import { type Tree, readNxJson } from '@nx/devkit';
-import { determineProjectNameAndRootOptions } from '@nx/devkit/src/generators/project-name-and-root-utils';
+import { type Tree, readNxJson } from '@titan/devkit';
+import { determineProjectNameAndRootOptions } from '@titan/devkit/src/generators/project-name-and-root-utils';
 import { getImportPath } from '@nx/js/src/utils/get-import-path';
 import type { NxRemixGeneratorSchema } from '../schema';
 

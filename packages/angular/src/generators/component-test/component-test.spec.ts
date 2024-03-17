@@ -1,13 +1,13 @@
-import { assertMinimumCypressVersion } from '@nx/cypress/src/utils/cypress-version';
-import { Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { Linter } from '@nx/eslint';
+import { assertMinimumCypressVersion } from '@titan/cypress/src/utils/cypress-version';
+import { Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { Linter } from '@titan/eslint';
 import { UnitTestRunner } from '../../utils/test-runners';
 import { componentGenerator } from '../component/component';
 import { generateTestLibrary } from '../utils/testing';
 import { componentTestGenerator } from './component-test';
 
-jest.mock('@nx/cypress/src/utils/cypress-version');
+jest.mock('@titan/cypress/src/utils/cypress-version');
 
 describe('Angular Cypress Component Test Generator', () => {
   let tree: Tree;

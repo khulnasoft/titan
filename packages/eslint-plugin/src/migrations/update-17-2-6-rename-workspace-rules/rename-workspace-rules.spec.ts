@@ -1,4 +1,4 @@
-import { Tree, readJson, writeJson } from '@nx/devkit';
+import { Tree, readJson, writeJson } from '@titan/devkit';
 import { createTreeWithEmptyWorkspace } from 'nx/src/devkit-testing-exports';
 import { WORKSPACE_PLUGIN_DIR } from '../../constants';
 import update from './rename-workspace-rules';

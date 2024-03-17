@@ -1,4 +1,4 @@
-import { ProjectConfiguration, Tree } from '@nx/devkit';
+import { ProjectConfiguration, Tree } from '@titan/devkit';
 import * as path from 'path';
 import { NormalizedSchema } from '../schema';
 

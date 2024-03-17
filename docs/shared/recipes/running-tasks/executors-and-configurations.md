@@ -19,7 +19,7 @@ In order to use an executor, you need to install the plugin that contains the ex
       }
     },
     "test": {
-      "executor": "@nx/jest:jest",
+      "executor": "@titan/jest:jest",
       "options": {
         ...
       }
@@ -107,7 +107,7 @@ or `nx run mylib:build:production`.
 The following code snippet shows how the executor options get constructed:
 
 ```javascript
-require(`@nx/jest`).executors['jest']({
+require(`@titan/jest`).executors['jest']({
   ...options,
   ...selectedConfiguration,
   ...commandLineArgs,
@@ -125,7 +125,7 @@ For example, running e2e tests for multiple environments. By default it would ma
 ```json {% fileName="project.json" %}
 {
   "e2e": {
-    "executor": "@nx/cypress:cypress",
+    "executor": "@titan/cypress:cypress",
     "options": {
       "cypressConfig": "apps/my-app-e2e/cypress.config.ts"
     },

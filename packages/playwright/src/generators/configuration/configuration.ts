@@ -18,7 +18,7 @@ import {
   updateProjectConfiguration,
   workspaceRoot,
   writeJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { getRelativePathToRootTsConfig } from '@nx/js';
 import { typescriptVersion } from '@nx/js/src/utils/versions';
 import { execSync } from 'child_process';
@@ -98,8 +98,8 @@ export async function configurationGeneratorInternal(
 
   const hasPlugin = readNxJson(tree).plugins?.some((p) =>
     typeof p === 'string'
-      ? p === '@nx/playwright/plugin'
-      : p.plugin === '@nx/playwright/plugin'
+      ? p === '@titan/playwright/plugin'
+      : p.plugin === '@titan/playwright/plugin'
   );
 
   if (!hasPlugin) {
@@ -137,7 +137,7 @@ export async function configurationGeneratorInternal(
         {},
         {
           // required since used in playwright config
-          '@nx/devkit': nxVersion,
+          '@titan/devkit': nxVersion,
         }
       )
     );
@@ -212,7 +212,7 @@ Rename or remove the existing e2e target.`);
   }
   projectConfig.targets ??= {};
   projectConfig.targets.e2e = {
-    executor: '@nx/playwright:playwright',
+    executor: '@titan/playwright:playwright',
     outputs: [`{workspaceRoot}/dist/.playwright/${projectConfig.root}`],
     options: {
       config: `${projectConfig.root}/playwright.config.${

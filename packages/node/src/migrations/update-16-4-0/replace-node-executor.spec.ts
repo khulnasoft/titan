@@ -1,5 +1,5 @@
-import { addProjectConfiguration, readProjectConfiguration } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { addProjectConfiguration, readProjectConfiguration } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import update from './replace-node-executor';
 
 describe('Migration: replace @nx/node:node executor', () => {

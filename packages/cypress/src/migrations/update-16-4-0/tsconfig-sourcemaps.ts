@@ -1,4 +1,4 @@
-import { forEachExecutorOptions } from '@nx/devkit/src/generators/executor-options-utils';
+import { forEachExecutorOptions } from '@titan/devkit/src/generators/executor-options-utils';
 import { CypressExecutorOptions } from '../../executors/cypress/cypress.impl';
 import {
   updateJson,
@@ -8,14 +8,14 @@ import {
   readJson,
   updateProjectConfiguration,
   formatFiles,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { posix } from 'path';
 
 export async function fixLegacyCypressTsconfig(tree: Tree) {
   const projects = getProjects(tree);
   forEachExecutorOptions<CypressExecutorOptions>(
     tree,
-    '@nx/cypress:cypress',
+    '@titan/cypress:cypress',
     (options, projectName, targetName, configName) => {
       const projectConfig = projects.get(projectName);
 

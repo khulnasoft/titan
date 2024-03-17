@@ -1,9 +1,9 @@
 import { applicationGenerator } from '../application/application';
 import { componentGenerator } from './component';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { Tree } from '@nx/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { Tree } from '@titan/devkit';
 import { libraryGenerator } from '@nx/react';
-import { Linter } from '@nx/eslint';
+import { Linter } from '@titan/eslint';
 
 describe('component', () => {
   let tree: Tree;

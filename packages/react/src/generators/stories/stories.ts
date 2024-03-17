@@ -16,7 +16,7 @@ import {
   runTasksInSerial,
   Tree,
   visitNotIgnoredFiles,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { basename, join } from 'path';
 import { minimatch } from 'minimatch';
 import { ensureTypescript } from '@nx/js/src/utils/typescript/ensure-typescript';

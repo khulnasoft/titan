@@ -9,7 +9,7 @@ import {
   runTasksInSerial,
   toJS,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { Schema } from './schema';
 import nuxtInitGenerator from '../init/init';
 import { normalizeOptions } from './lib/normalize-options';
@@ -19,13 +19,13 @@ import {
   initGenerator as jsInitGenerator,
 } from '@nx/js';
 import { updateGitIgnore } from '../../utils/update-gitignore';
-import { Linter } from '@nx/eslint';
+import { Linter } from '@titan/eslint';
 import { addE2e } from './lib/add-e2e';
 import { addLinting } from '../../utils/add-linting';
 import { addVitest } from './lib/add-vitest';
 import { vueTestUtilsVersion, vitePluginVueVersion } from '@nx/vue';
 import { ensureDependencies } from './lib/ensure-dependencies';
-import { logShowProjectCommand } from '@nx/devkit/src/utils/log-show-project-command';
+import { logShowProjectCommand } from '@titan/devkit/src/utils/log-show-project-command';
 
 export async function applicationGenerator(tree: Tree, schema: Schema) {
   const tasks: GeneratorCallback[] = [];

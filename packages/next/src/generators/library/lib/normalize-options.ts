@@ -1,5 +1,5 @@
-import { Tree, readNxJson } from '@nx/devkit';
-import { determineProjectNameAndRootOptions } from '@nx/devkit/src/generators/project-name-and-root-utils';
+import { Tree, readNxJson } from '@titan/devkit';
+import { determineProjectNameAndRootOptions } from '@titan/devkit/src/generators/project-name-and-root-utils';
 import { Schema } from '../schema';
 
 export interface NormalizedSchema extends Schema {
@@ -18,7 +18,7 @@ export async function normalizeOptions(
       directory: options.directory,
       importPath: options.importPath,
       projectNameAndRootFormat: options.projectNameAndRootFormat,
-      callingGenerator: '@nx/next:library',
+      callingGenerator: '@titan/next:library',
     });
   options.projectNameAndRootFormat = projectNameAndRootFormat;
 

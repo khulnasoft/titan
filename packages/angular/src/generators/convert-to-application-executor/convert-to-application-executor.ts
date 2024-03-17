@@ -9,7 +9,7 @@ import {
   writeJson,
   type TargetConfiguration,
   type Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { dirname, join } from 'node:path/posix';
 import { gte, lt } from 'semver';
 import { allTargetOptions } from '../../utils/targets';
@@ -21,19 +21,19 @@ import type { GeneratorOptions } from './schema';
 const executorsToConvert = new Set([
   '@angular-devkit/build-angular:browser',
   '@angular-devkit/build-angular:browser-esbuild',
-  '@nx/angular:webpack-browser',
-  '@nx/angular:browser-esbuild',
+  '@titan/angular:webpack-browser',
+  '@titan/angular:browser-esbuild',
 ]);
 const serverTargetExecutors = new Set([
   '@angular-devkit/build-angular:server',
-  '@nx/angular:webpack-server',
+  '@titan/angular:webpack-server',
 ]);
 const redundantExecutors = new Set([
   '@angular-devkit/build-angular:server',
   '@angular-devkit/build-angular:prerender',
   '@angular-devkit/build-angular:app-shell',
   '@angular-devkit/build-angular:ssr-dev-server',
-  '@nx/angular:webpack-server',
+  '@titan/angular:webpack-server',
 ]);
 
 export async function convertToApplicationExecutor(
@@ -113,15 +113,15 @@ async function convertProjectTargets(
     warnIfProvided(
       `The provided project "${projectName}" does not have any targets using on of the ` +
         `'@angular-devkit/build-angular:browser', '@angular-devkit/build-angular:browser-esbuild', ` +
-        `'@nx/angular:browser' and '@nx/angular:browser-esbuild' executors. Skipping conversion.`
+        `'@titan/angular:browser' and '@titan/angular:browser-esbuild' executors. Skipping conversion.`
     );
     return false;
   }
 
   const useNxExecutor =
-    project.targets[buildTargetName].executor.startsWith('@nx/angular:');
+    project.targets[buildTargetName].executor.startsWith('@titan/angular:');
   const newExecutor = useNxExecutor
-    ? '@nx/angular:application'
+    ? '@titan/angular:application'
     : '@angular-devkit/build-angular:application';
 
   const buildTarget = project.targets[buildTargetName];
@@ -274,7 +274,7 @@ function getTargetsToConvert(targets: Record<string, TargetConfiguration>): {
   let serverTargetName: string;
   for (const target of Object.keys(targets)) {
     if (
-      targets[target].executor === '@nx/angular:application' ||
+      targets[target].executor === '@titan/angular:application' ||
       targets[target].executor === '@angular-devkit/build-angular:application'
     ) {
       logger.warn(
@@ -311,7 +311,7 @@ function getTargetsToConvert(targets: Record<string, TargetConfiguration>): {
 
     // server target
     if (serverTargetExecutors.has(targets[target].executor)) {
-      if (targets[target].executor === '@nx/angular:webpack-server') {
+      if (targets[target].executor === '@titan/angular:webpack-server') {
         for (const [, options] of allTargetOptions(targets[target])) {
           if (options.customWebpackConfig) {
             logger.warn(

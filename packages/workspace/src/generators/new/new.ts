@@ -5,7 +5,7 @@ import {
   names,
   PackageManager,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 import { join } from 'path';
 import { Preset } from '../utils/presets';

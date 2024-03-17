@@ -7,7 +7,7 @@ import {
   readCachedProjectGraph,
   readJsonFile,
   writeJsonFile,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 import { ReactNativeSyncDepsOptions } from './schema';
 import { findAllNpmDependencies } from '../../utils/find-all-npm-dependencies';

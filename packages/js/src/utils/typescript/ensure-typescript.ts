@@ -1,4 +1,4 @@
-import { ensurePackage } from '@nx/devkit';
+import { ensurePackage } from '@titan/devkit';
 import { typescriptVersion } from '../versions';
 
 export function ensureTypescript() {

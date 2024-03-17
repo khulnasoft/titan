@@ -144,7 +144,7 @@ export const hasEverything = `
     import react from '@vitejs/plugin-react';
     import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
     import dts from 'vite-plugin-dts';
-    import { joinPathFragments } from '@nx/devkit';
+    import { joinPathFragments } from '@titan/devkit';
 
     export default defineConfig({
       plugins: [
@@ -232,7 +232,7 @@ export const testOptionObject = {
 
 export const imports = [
   `import dts from 'vite-plugin-dts'`,
-  `import { joinPathFragments } from '@nx/devkit'`,
+  `import { joinPathFragments } from '@titan/devkit'`,
 ];
 
 export const plugins = [`react()`, `nxViteTsPaths()`];

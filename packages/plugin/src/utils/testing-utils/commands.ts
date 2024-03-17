@@ -1,6 +1,6 @@
 import { ExecOptions, execSync } from 'child_process';
 import { tmpProjPath } from './paths';
-import { detectPackageManager, getPackageManagerCommand } from '@nx/devkit';
+import { detectPackageManager, getPackageManagerCommand } from '@titan/devkit';
 import { fileExists } from './utils';
 
 /**

@@ -1,4 +1,4 @@
-import { ExecutorContext, joinPathFragments, workspaceRoot } from '@nx/devkit';
+import { ExecutorContext, joinPathFragments, workspaceRoot } from '@titan/devkit';
 import { ESLint } from 'eslint';
 import { existsSync, mkdirSync, writeFileSync } from 'fs';
 import { dirname, resolve } from 'path';

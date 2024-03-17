@@ -13,8 +13,8 @@ import {
   Tree,
   updateProjectConfiguration,
   updateTsConfigsToJs,
-} from '@nx/devkit';
-import { determineProjectNameAndRootOptions } from '@nx/devkit/src/generators/project-name-and-root-utils';
+} from '@titan/devkit';
+import { determineProjectNameAndRootOptions } from '@titan/devkit/src/generators/project-name-and-root-utils';
 import { libraryGenerator as jsLibraryGenerator } from '@nx/js';
 import { addSwcConfig } from '@nx/js/src/utils/swc/add-swc-config';
 import { addSwcDependencies } from '@nx/js/src/utils/swc/add-swc-dependencies';
@@ -22,7 +22,7 @@ import { join } from 'path';
 import { tslibVersion, typesNodeVersion } from '../../utils/versions';
 import { initGenerator } from '../init/init';
 import { Schema } from './schema';
-import { addBuildTargetDefaults } from '@nx/devkit/src/generators/add-build-target-defaults';
+import { addBuildTargetDefaults } from '@titan/devkit/src/generators/add-build-target-defaults';
 
 export interface NormalizedSchema extends Schema {
   fileName: string;

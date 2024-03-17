@@ -7,15 +7,15 @@ import {
   readJsonFile,
   TargetConfiguration,
   writeJsonFile,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { dirname, join, relative, resolve } from 'path';
 
 import { readTargetDefaultsForTarget } from 'nx/src/project-graph/utils/project-configuration-utils';
-import { getNamedInputs } from '@nx/devkit/src/utils/get-named-inputs';
+import { getNamedInputs } from '@titan/devkit/src/utils/get-named-inputs';
 import { existsSync, readdirSync, readFileSync } from 'fs';
 import { readConfig } from 'jest-config';
 import { projectGraphCacheDirectory } from 'nx/src/utils/cache-directory';
-import { calculateHashForCreateNodes } from '@nx/devkit/src/utils/calculate-hash-for-create-nodes';
+import { calculateHashForCreateNodes } from '@titan/devkit/src/utils/calculate-hash-for-create-nodes';
 import { getGlobPatternsFromPackageManagerWorkspaces } from 'nx/src/plugins/package-json-workspaces';
 import { combineGlobPatterns } from 'nx/src/utils/globs';
 import { minimatch } from 'minimatch';

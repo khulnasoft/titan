@@ -4,7 +4,7 @@ import {
   readNxJson,
   TargetConfiguration,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { NormalizedSchema } from './normalize-options';
 
 export function addProject(host: Tree, options: NormalizedSchema) {

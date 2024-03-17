@@ -1,6 +1,6 @@
-import type { Tree } from '@nx/devkit';
-import * as devkit from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import type { Tree } from '@titan/devkit';
+import * as devkit from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { applicationGenerator } from './application';
 
 describe('application generator', () => {

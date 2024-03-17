@@ -1,9 +1,9 @@
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import {
   addProjectConfiguration,
   readProjectConfiguration,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import update from './remove-es2015-polyfills-option';
 
 describe('15.4.5 migration (remove es2015-polyfills)', () => {

@@ -1,1 +1,1 @@
-export * from '@nx/jest';
+export * from '@titan/jest';

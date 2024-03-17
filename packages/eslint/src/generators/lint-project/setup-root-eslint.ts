@@ -3,7 +3,7 @@ import {
   writeJson,
   type GeneratorCallback,
   type Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import {
   eslintConfigPrettierVersion,
   nxVersion,
@@ -48,7 +48,7 @@ export function setupRootEsLint(
         tree,
         {},
         {
-          '@nx/eslint-plugin': nxVersion,
+          '@titan/eslint-plugin': nxVersion,
           '@typescript-eslint/parser': typescriptESLintVersion,
           '@typescript-eslint/eslint-plugin': typescriptESLintVersion,
           'eslint-config-prettier': eslintConfigPrettierVersion,

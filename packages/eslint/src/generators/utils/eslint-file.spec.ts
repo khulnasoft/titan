@@ -4,14 +4,14 @@ import {
   lintConfigHasOverride,
 } from './eslint-file';
 
-import { Tree, readJson } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { Tree, readJson } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import {
   ESLINT_CONFIG_FILENAMES,
   baseEsLintConfigFile,
 } from '../../utils/config-file';
 
-describe('@nx/eslint:lint-file', () => {
+describe('@titan/eslint:lint-file', () => {
   let tree: Tree;
 
   beforeEach(() => {

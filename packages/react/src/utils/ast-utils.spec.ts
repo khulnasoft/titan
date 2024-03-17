@@ -1,7 +1,7 @@
 import * as utils from './ast-utils';
 import * as ts from 'typescript';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { applyChangesToString, Tree } from '@nx/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { applyChangesToString, Tree } from '@titan/devkit';
 
 describe('findDefaultExport', () => {
   it('should find exported variable', () => {

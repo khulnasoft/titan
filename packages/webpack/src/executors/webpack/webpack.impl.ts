@@ -3,8 +3,8 @@ import {
   logger,
   stripIndents,
   targetToTargetString,
-} from '@nx/devkit';
-import { eachValueFrom } from '@nx/devkit/src/utils/rxjs-for-await';
+} from '@titan/devkit';
+import { eachValueFrom } from '@titan/devkit/src/utils/rxjs-for-await';
 import type { Configuration, Stats } from 'webpack';
 import { from, of } from 'rxjs';
 import {

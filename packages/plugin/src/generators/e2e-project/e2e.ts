@@ -1,4 +1,4 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import {
   addProjectConfiguration,
   extractLayoutDirectory,
@@ -15,13 +15,13 @@ import {
   readProjectConfiguration,
   runTasksInSerial,
   updateProjectConfiguration,
-} from '@nx/devkit';
-import { determineProjectNameAndRootOptions } from '@nx/devkit/src/generators/project-name-and-root-utils';
-import { addPropertyToJestConfig, configurationGenerator } from '@nx/jest';
+} from '@titan/devkit';
+import { determineProjectNameAndRootOptions } from '@titan/devkit/src/generators/project-name-and-root-utils';
+import { addPropertyToJestConfig, configurationGenerator } from '@titan/jest';
 import { getRelativePathToRootTsConfig } from '@nx/js';
 import { setupVerdaccio } from '@nx/js/src/generators/setup-verdaccio/generator';
 import { addLocalRegistryScripts } from '@nx/js/src/utils/add-local-registry-scripts';
-import { Linter, lintProjectGenerator } from '@nx/eslint';
+import { Linter, lintProjectGenerator } from '@titan/eslint';
 import { join } from 'path';
 import type { Schema } from './schema';
 

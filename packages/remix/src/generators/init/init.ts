@@ -6,8 +6,8 @@ import {
   updateNxJson,
   addDependenciesToPackageJson,
   runTasksInSerial,
-} from '@nx/devkit';
-import { updatePackageScripts } from '@nx/devkit/src/utils/update-package-scripts';
+} from '@titan/devkit';
+import { updatePackageScripts } from '@titan/devkit/src/utils/update-package-scripts';
 import { createNodes } from '../../plugins/plugin';
 import { nxVersion, remixVersion } from '../../utils/versions';
 import { type Schema } from './schema';

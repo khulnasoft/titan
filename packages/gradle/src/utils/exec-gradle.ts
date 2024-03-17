@@ -1,4 +1,4 @@
-import { workspaceRoot } from '@nx/devkit';
+import { workspaceRoot } from '@titan/devkit';
 import { ExecFileOptions } from 'child_process';
 import {
   ExecFileSyncOptionsWithBufferEncoding,

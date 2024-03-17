@@ -1,7 +1,7 @@
 import { execSync } from 'child_process';
 import { platform } from 'os';
 import * as chalk from 'chalk';
-import { GeneratorCallback, logger } from '@nx/devkit';
+import { GeneratorCallback, logger } from '@titan/devkit';
 import { existsSync } from 'fs-extra';
 import { join } from 'path';
 

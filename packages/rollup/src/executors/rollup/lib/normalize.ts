@@ -1,6 +1,6 @@
 import { basename, dirname, join, relative, resolve } from 'path';
 import { statSync } from 'fs';
-import { ExecutorContext, normalizePath } from '@nx/devkit';
+import { ExecutorContext, normalizePath } from '@titan/devkit';
 
 import type { AssetGlobPattern, RollupExecutorOptions } from '../schema';
 import { createEntryPoints } from '@nx/js';

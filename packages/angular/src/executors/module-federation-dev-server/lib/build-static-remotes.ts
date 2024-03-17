@@ -1,5 +1,5 @@
 import { type Schema } from '../schema';
-import { logger, type ExecutorContext } from '@nx/devkit';
+import { logger, type ExecutorContext } from '@titan/devkit';
 import { fork } from 'child_process';
 import type { StaticRemotesConfig } from './parse-static-remotes-config';
 

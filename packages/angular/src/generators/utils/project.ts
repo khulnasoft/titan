@@ -1,5 +1,5 @@
-import type { Tree } from '@nx/devkit';
-import { readProjectConfiguration } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
+import { readProjectConfiguration } from '@titan/devkit';
 import type { AngularProjectConfiguration } from '../../utils/types';
 
 export function getProjectPrefix(

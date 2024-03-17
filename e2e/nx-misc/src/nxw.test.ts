@@ -1,4 +1,4 @@
-import type { NxJsonConfiguration } from '@nx/devkit';
+import type { NxJsonConfiguration } from '@titan/devkit';
 import {
   newWrappedNxWorkspace,
   updateFile,

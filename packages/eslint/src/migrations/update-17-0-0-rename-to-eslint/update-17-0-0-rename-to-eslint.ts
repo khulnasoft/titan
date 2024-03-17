@@ -6,11 +6,11 @@ import {
   readNxJson,
   updateNxJson,
   updateProjectConfiguration,
-} from '@nx/devkit';
-import { replaceNrwlPackageWithNxPackage } from '@nx/devkit/src/utils/replace-package';
+} from '@titan/devkit';
+import { replaceNrwlPackageWithNxPackage } from '@titan/devkit/src/utils/replace-package';
 
 export default async function replacePackage(tree: Tree): Promise<void> {
-  await replaceNrwlPackageWithNxPackage(tree, '@nx/linter', '@nx/eslint');
+  await replaceNrwlPackageWithNxPackage(tree, '@nx/linter', '@titan/eslint');
 
   // executor name change from :eslint to :lint
   updateNxJsonExecutor(tree);
@@ -31,11 +31,11 @@ function updateNxJsonExecutor(tree: Tree) {
     nxJson.targetDefaults ?? {}
   )) {
     // this will be in a broken state after the package is globally renamed
-    if (targetConfig.executor !== '@nx/eslint:eslint') {
+    if (targetConfig.executor !== '@titan/eslint:eslint') {
       continue;
     }
     needsUpdate = true;
-    nxJson.targetDefaults[targetName].executor = '@nx/eslint:lint';
+    nxJson.targetDefaults[targetName].executor = '@titan/eslint:lint';
   }
 
   if (needsUpdate) {
@@ -53,12 +53,12 @@ function updateProjectExecutor(tree: Tree) {
       projectConfiguration.targets ?? {}
     )) {
       // this will be in a broken state after the package is globally renamed
-      if (targetConfig.executor !== '@nx/eslint:eslint') {
+      if (targetConfig.executor !== '@titan/eslint:eslint') {
         continue;
       }
 
       needsUpdate = true;
-      projectConfiguration.targets[targetName].executor = '@nx/eslint:lint';
+      projectConfiguration.targets[targetName].executor = '@titan/eslint:lint';
     }
 
     if (needsUpdate) {

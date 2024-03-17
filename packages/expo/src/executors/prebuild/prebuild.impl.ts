@@ -1,4 +1,4 @@
-import { ExecutorContext, names, workspaceRoot } from '@nx/devkit';
+import { ExecutorContext, names, workspaceRoot } from '@titan/devkit';
 import { ChildProcess, fork } from 'child_process';
 import { join } from 'path';
 

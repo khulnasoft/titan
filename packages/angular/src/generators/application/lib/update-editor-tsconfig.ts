@@ -4,7 +4,7 @@ import {
   readProjectConfiguration,
   updateJson,
   type Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { updateAppEditorTsConfigExcludedFiles } from '../../utils/update-app-editor-tsconfig-excluded-files';
 import type { NormalizedSchema } from './normalized-schema';
 

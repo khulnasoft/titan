@@ -1,5 +1,5 @@
-import { addDependenciesToPackageJson, type Tree } from '@nx/devkit';
-import { jestVersion, typesNodeVersion } from '@nx/jest/src/utils/versions';
+import { addDependenciesToPackageJson, type Tree } from '@titan/devkit';
+import { jestVersion, typesNodeVersion } from '@titan/jest/src/utils/versions';
 import {
   configPluginsDetoxVersion,
   testingLibraryJestDom,

@@ -5,7 +5,7 @@ import {
   readNxJson,
   Tree,
   updateNxJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { moveGenerator } from '../move/move';
 
 export async function monorepoGenerator(tree: Tree, options: {}) {

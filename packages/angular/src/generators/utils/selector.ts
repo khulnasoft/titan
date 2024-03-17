@@ -1,4 +1,4 @@
-import { names } from '@nx/devkit';
+import { names } from '@titan/devkit';
 
 export function buildSelector(
   name: string,

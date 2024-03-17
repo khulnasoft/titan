@@ -8,7 +8,7 @@ import {
   TargetConfiguration,
   Tree,
   updateJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import * as path from 'path';
 import { SetupVerdaccioGeneratorSchema } from './schema';
 import { verdaccioVersion } from '../../utils/versions';

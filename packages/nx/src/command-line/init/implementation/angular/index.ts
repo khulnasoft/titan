@@ -120,7 +120,7 @@ function addPluginDependencies(): void {
   const packageJson = readJsonFile<PackageJson>(packageJsonPath);
 
   packageJson.devDependencies ??= {};
-  packageJson.devDependencies['@nx/angular'] = nxVersion;
+  packageJson.devDependencies['@titan/angular'] = nxVersion;
   packageJson.devDependencies['@nx/workspace'] = nxVersion;
 
   const peerDepsToInstall = [

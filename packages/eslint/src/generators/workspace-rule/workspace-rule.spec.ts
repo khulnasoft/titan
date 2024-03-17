@@ -1,8 +1,8 @@
-import { Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { lintWorkspaceRuleGenerator } from './workspace-rule';
 
-describe('@nx/eslint:workspace-rule', () => {
+describe('@titan/eslint:workspace-rule', () => {
   let tree: Tree;
 
   beforeEach(async () => {
@@ -66,7 +66,7 @@ describe('@nx/eslint:workspace-rule', () => {
        * following generator command and provide your desired rule name:
        *
        * \`\`\`sh
-       * npx nx g @nx/eslint:workspace-rule {{ NEW_RULE_NAME }}
+       * npx nx g @titan/eslint:workspace-rule {{ NEW_RULE_NAME }}
        * \`\`\`
        */
 

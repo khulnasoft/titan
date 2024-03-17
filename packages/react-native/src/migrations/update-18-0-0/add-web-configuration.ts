@@ -5,7 +5,7 @@ import {
   joinPathFragments,
   runTasksInSerial,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import webConfigurationGenerator from '../../generators/web-configuration/web-configuration';
 
 /**

@@ -1,5 +1,5 @@
-import { addProjectConfiguration, readJson, type Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { addProjectConfiguration, readJson, type Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import migration from './add-autoprefixer-dependency';
 
 describe('add-autoprefixer-dependency migration', () => {
@@ -9,13 +9,13 @@ describe('add-autoprefixer-dependency migration', () => {
     tree = createTreeWithEmptyWorkspace();
   });
 
-  it('should add "autoprefixer" as devDependencies when "@nx/angular:ng-packagr-lite" is used', async () => {
+  it('should add "autoprefixer" as devDependencies when "@titan/angular:ng-packagr-lite" is used', async () => {
     addProjectConfiguration(tree, 'my-lib', {
       root: 'libs/my-lib',
       projectType: 'library',
       targets: {
         build: {
-          executor: '@nx/angular:ng-packagr-lite',
+          executor: '@titan/angular:ng-packagr-lite',
         },
       },
     });
@@ -26,13 +26,13 @@ describe('add-autoprefixer-dependency migration', () => {
     expect(devDependencies['autoprefixer']).toEqual('^10.4.0');
   });
 
-  it('should add "autoprefixer" as devDependencies when "@nx/angular:package" is used', async () => {
+  it('should add "autoprefixer" as devDependencies when "@titan/angular:package" is used', async () => {
     addProjectConfiguration(tree, 'my-lib', {
       root: 'libs/my-lib',
       projectType: 'library',
       targets: {
         build: {
-          executor: '@nx/angular:package',
+          executor: '@titan/angular:package',
         },
       },
     });

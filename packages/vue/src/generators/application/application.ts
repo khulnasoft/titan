@@ -5,8 +5,8 @@ import {
   runTasksInSerial,
   toJS,
   Tree,
-} from '@nx/devkit';
-import { Linter } from '@nx/eslint';
+} from '@titan/devkit';
+import { Linter } from '@titan/eslint';
 import { initGenerator as jsInitGenerator } from '@nx/js';
 import { Schema } from './schema';
 import { normalizeOptions } from './lib/normalize-options';
@@ -17,7 +17,7 @@ import { createApplicationFiles } from './lib/create-application-files';
 import { addVite } from './lib/add-vite';
 import { extractTsConfigBase } from '../../utils/create-ts-config';
 import { ensureDependencies } from '../../utils/ensure-dependencies';
-import { logShowProjectCommand } from '@nx/devkit/src/utils/log-show-project-command';
+import { logShowProjectCommand } from '@titan/devkit/src/utils/log-show-project-command';
 
 export function applicationGenerator(tree: Tree, options: Schema) {
   return applicationGeneratorInternal(tree, { addPlugin: false, ...options });

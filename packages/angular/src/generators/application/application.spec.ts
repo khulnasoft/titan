@@ -1,6 +1,6 @@
-import { installedCypressVersion } from '@nx/cypress/src/utils/cypress-version';
-import type { Tree } from '@nx/devkit';
-import * as devkit from '@nx/devkit';
+import { installedCypressVersion } from '@titan/cypress/src/utils/cypress-version';
+import type { Tree } from '@titan/devkit';
+import * as devkit from '@titan/devkit';
 import {
   NxJsonConfiguration,
   parseJson,
@@ -8,9 +8,9 @@ import {
   readNxJson,
   readProjectConfiguration,
   updateJson,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { Linter } from '@nx/eslint';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { Linter } from '@titan/eslint';
 import * as enquirer from 'enquirer';
 import { backwardCompatibleVersions } from '../../utils/backward-compatible-versions';
 import { E2eTestRunner, UnitTestRunner } from '../../utils/test-runners';
@@ -25,10 +25,10 @@ import { generateTestApplication } from '../utils/testing';
 import type { Schema } from './schema';
 
 // need to mock cypress otherwise it'll use installed version in this repo's package.json
-jest.mock('@nx/cypress/src/utils/cypress-version');
+jest.mock('@titan/cypress/src/utils/cypress-version');
 jest.mock('enquirer');
-jest.mock('@nx/devkit', () => {
-  const original = jest.requireActual('@nx/devkit');
+jest.mock('@titan/devkit', () => {
+  const original = jest.requireActual('@titan/devkit');
   return {
     ...original,
     ensurePackage: (pkg: string) => jest.requireActual(pkg),
@@ -541,7 +541,7 @@ describe('app', () => {
         expect(readProjectConfiguration(appTree, 'my-app').targets.lint)
           .toMatchInlineSnapshot(`
           {
-            "executor": "@nx/eslint:lint",
+            "executor": "@titan/eslint:lint",
           }
         `);
       });
@@ -556,13 +556,13 @@ describe('app', () => {
                 "componentTestingTargetName": "component-test",
                 "targetName": "e2e",
               },
-              "plugin": "@nx/cypress/plugin",
+              "plugin": "@titan/cypress/plugin",
             },
             {
               "options": {
                 "targetName": "lint",
               },
-              "plugin": "@nx/eslint/plugin",
+              "plugin": "@titan/eslint/plugin",
             },
           ]
         `);
@@ -595,7 +595,7 @@ describe('app', () => {
             "overrides": [
               {
                 "extends": [
-                  "plugin:@nx/angular",
+                  "plugin:@titan/angular",
                   "plugin:@angular-eslint/template/process-inline-templates",
                 ],
                 "files": [
@@ -622,7 +622,7 @@ describe('app', () => {
               },
               {
                 "extends": [
-                  "plugin:@nx/angular-template",
+                  "plugin:@titan/angular-template",
                 ],
                 "files": [
                   "*.html",
@@ -755,7 +755,7 @@ describe('app', () => {
       // should not update workspace configuration since --strict=true is the default
       const nxJson = readJson<NxJsonConfiguration>(appTree, 'nx.json');
       expect(
-        nxJson.generators['@nx/angular:application'].strict
+        nxJson.generators['@titan/angular:application'].strict
       ).not.toBeDefined();
     });
 
@@ -765,7 +765,7 @@ describe('app', () => {
       // check to see if the workspace configuration has been updated to turn off
       // strict mode by default in future applications
       const nxJson = readJson<NxJsonConfiguration>(appTree, 'nx.json');
-      expect(nxJson.generators['@nx/angular:application'].strict).toBe(false);
+      expect(nxJson.generators['@titan/angular:application'].strict).toBe(false);
     });
   });
 
@@ -801,7 +801,7 @@ describe('app', () => {
       // ASSERT
       expect(appTree.read('app1/tailwind.config.js', 'utf-8'))
         .toMatchInlineSnapshot(`
-        "const { createGlobPatternsForDependencies } = require('@nx/angular/tailwind');
+        "const { createGlobPatternsForDependencies } = require('@titan/angular/tailwind');
         const { join } = require('path');
 
         /** @type {import('tailwindcss').Config} */

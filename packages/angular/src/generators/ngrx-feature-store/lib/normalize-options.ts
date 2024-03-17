@@ -1,6 +1,6 @@
-import type { Tree } from '@nx/devkit';
-import { joinPathFragments, names, readJson } from '@nx/devkit';
-import { checkAndCleanWithSemver } from '@nx/devkit/src/utils/semver';
+import type { Tree } from '@titan/devkit';
+import { joinPathFragments, names, readJson } from '@titan/devkit';
+import { checkAndCleanWithSemver } from '@titan/devkit/src/utils/semver';
 import { dirname } from 'path';
 import { rxjsVersion as defaultRxjsVersion } from '../../../utils/versions';
 import type { Schema } from '../schema';

@@ -3,14 +3,14 @@ import type {
   ProjectGraphExternalNode,
   ProjectGraphProjectNode,
   TaskGraph,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import {
   getOutputsForTargetAndConfiguration,
   parseTargetString,
   readJsonFile,
   stripIndents,
   writeJsonFile,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { unlinkSync } from 'fs';
 import { isNpmProject } from 'nx/src/project-graph/operators';
 import { directoryExists, fileExists } from 'nx/src/utils/fileutils';

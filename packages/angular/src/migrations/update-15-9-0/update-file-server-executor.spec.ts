@@ -4,9 +4,9 @@ import {
   readNxJson,
   readProjectConfiguration,
   updateNxJson,
-} from '@nx/devkit';
-import * as devkit from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import * as devkit from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import updateFileServerExecutor from './update-file-server-executor';
 
 describe('updateFileServerExecutor', () => {

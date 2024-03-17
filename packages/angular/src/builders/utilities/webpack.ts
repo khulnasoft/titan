@@ -1,6 +1,6 @@
 import { merge } from 'webpack-merge';
 import { registerTsProject } from '@nx/js/src/internal';
-import { workspaceRoot } from '@nx/devkit';
+import { workspaceRoot } from '@titan/devkit';
 import { join } from 'path';
 
 export async function mergeCustomWebpackConfig(

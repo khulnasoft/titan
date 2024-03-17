@@ -11,16 +11,16 @@ import {
   readJsonFile,
   TargetConfiguration,
   writeJsonFile,
-} from '@nx/devkit';
-import { getNamedInputs } from '@nx/devkit/src/utils/get-named-inputs';
-import { calculateHashForCreateNodes } from '@nx/devkit/src/utils/calculate-hash-for-create-nodes';
+} from '@titan/devkit';
+import { getNamedInputs } from '@titan/devkit/src/utils/get-named-inputs';
+import { calculateHashForCreateNodes } from '@titan/devkit/src/utils/calculate-hash-for-create-nodes';
 
 import type { PlaywrightTestConfig } from '@playwright/test';
 import { getFilesInDirectoryUsingContext } from 'nx/src/utils/workspace-context';
 import { minimatch } from 'minimatch';
 import { projectGraphCacheDirectory } from 'nx/src/utils/cache-directory';
 import { getLockFileName } from '@nx/js';
-import { loadConfigFile } from '@nx/devkit/src/utils/config-utils';
+import { loadConfigFile } from '@titan/devkit/src/utils/config-utils';
 
 export interface PlaywrightPluginOptions {
   targetName?: string;

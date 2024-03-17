@@ -146,14 +146,14 @@
           }
         },
         "lint": {
-          "executor": "@nx/eslint:lint",
+          "executor": "@titan/eslint:lint",
           "outputs": ["{options.outputFile}"],
           "options": {
             "lintFilePatterns": ["apps/reapp/**/*.{ts,tsx,js,jsx}"]
           }
         },
         "test": {
-          "executor": "@nx/jest:jest",
+          "executor": "@titan/jest:jest",
           "outputs": ["coverage/apps/reapp"],
           "options": {
             "jestConfig": "apps/reapp/jest.config.ts",
@@ -171,14 +171,14 @@
       "tags": [],
       "targets": {
         "lint": {
-          "executor": "@nx/eslint:lint",
+          "executor": "@titan/eslint:lint",
           "outputs": ["{options.outputFile}"],
           "options": {
             "lintFilePatterns": ["libs/nxlib/**/*.{ts,tsx,js,jsx}"]
           }
         },
         "test": {
-          "executor": "@nx/jest:jest",
+          "executor": "@titan/jest:jest",
           "outputs": ["coverage/libs/nxlib"],
           "options": {
             "jestConfig": "libs/nxlib/jest.config.ts",
@@ -215,14 +215,14 @@
           }
         },
         "lint": {
-          "executor": "@nx/eslint:lint",
+          "executor": "@titan/eslint:lint",
           "outputs": ["{options.outputFile}"],
           "options": {
             "lintFilePatterns": ["libs/nxlib-buildable/**/*.{ts,tsx,js,jsx}"]
           }
         },
         "test": {
-          "executor": "@nx/jest:jest",
+          "executor": "@titan/jest:jest",
           "outputs": ["coverage/libs/nxlib-buildable"],
           "options": {
             "jestConfig": "libs/nxlib-buildable/jest.config.ts",
@@ -259,14 +259,14 @@
           }
         },
         "lint": {
-          "executor": "@nx/eslint:lint",
+          "executor": "@titan/eslint:lint",
           "outputs": ["{options.outputFile}"],
           "options": {
             "lintFilePatterns": ["libs/relib-buildable/**/*.{ts,tsx,js,jsx}"]
           }
         },
         "test": {
-          "executor": "@nx/jest:jest",
+          "executor": "@titan/jest:jest",
           "outputs": ["coverage/libs/relib-buildable"],
           "options": {
             "jestConfig": "libs/relib-buildable/jest.config.ts",
@@ -342,14 +342,14 @@
           }
         },
         "lint": {
-          "executor": "@nx/eslint:lint",
+          "executor": "@titan/eslint:lint",
           "outputs": ["{options.outputFile}"],
           "options": {
             "lintFilePatterns": ["apps/reapp-swc/**/*.{ts,tsx,js,jsx}"]
           }
         },
         "test": {
-          "executor": "@nx/jest:jest",
+          "executor": "@titan/jest:jest",
           "outputs": ["coverage/apps/reapp-swc"],
           "options": {
             "jestConfig": "apps/reapp-swc/jest.config.ts",

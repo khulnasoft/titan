@@ -1,4 +1,4 @@
-import { addDependenciesToPackageJson, type Tree } from '@nx/devkit';
+import { addDependenciesToPackageJson, type Tree } from '@titan/devkit';
 import {
   babelJestVersion,
   jestTypesVersion,

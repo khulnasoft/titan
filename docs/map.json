@@ -765,7 +765,7 @@
                 {
                   "id": "cypress-setup-node-events",
                   "name": "Using setupNodeEvents with Cypress preset",
-                  "description": "A guide on using the setupNodeEvents function with @nx/cypress/plugins/cypress-preset",
+                  "description": "A guide on using the setupNodeEvents function with @titan/cypress/plugins/cypress-preset",
                   "file": "shared/packages/cypress/cypress-setup-node-events"
                 },
                 {

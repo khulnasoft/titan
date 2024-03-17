@@ -1,4 +1,4 @@
-import { Tree, names } from '@nx/devkit';
+import { Tree, names } from '@titan/devkit';
 import { ESLint } from 'eslint';
 import * as ts from 'typescript';
 import {

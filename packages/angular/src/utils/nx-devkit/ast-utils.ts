@@ -8,7 +8,7 @@ import {
   replaceChange,
 } from '@nx/js';
 import { dirname, join } from 'path';
-import { names, readProjectConfiguration, Tree } from '@nx/devkit';
+import { names, readProjectConfiguration, Tree } from '@titan/devkit';
 import { ensureTypescript } from '@nx/js/src/utils/typescript/ensure-typescript';
 
 let tsModule: typeof import('typescript');

@@ -5,7 +5,7 @@ import {
   joinPathFragments,
   readJson,
   updateJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { swcCliVersion, swcCoreVersion, swcNodeVersion } from './versions';
 import { addSwcConfig } from '@nx/js/src/utils/swc/add-swc-config';
 

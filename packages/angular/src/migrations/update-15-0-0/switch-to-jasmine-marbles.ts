@@ -1,4 +1,4 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import {
   addDependenciesToPackageJson,
   createProjectGraphAsync,
@@ -6,14 +6,14 @@ import {
   readJson,
   readProjectConfiguration,
   visitNotIgnoredFiles,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { extname } from 'path';
 import { tsquery } from '@phenomnomnominal/tsquery';
 import {
   jasmineMarblesVersion as latestJasmineMarblesVersion,
   rxjsVersion as latestRxjsVersion,
 } from '../../utils/versions';
-import { checkAndCleanWithSemver } from '@nx/devkit/src/utils/semver';
+import { checkAndCleanWithSemver } from '@titan/devkit/src/utils/semver';
 import { gte } from 'semver';
 
 export default async function switchToJasmineMarbles(tree: Tree) {

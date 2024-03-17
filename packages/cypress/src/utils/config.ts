@@ -1,4 +1,4 @@
-import { glob, joinPathFragments, type Tree } from '@nx/devkit';
+import { glob, joinPathFragments, type Tree } from '@titan/devkit';
 import type {
   InterfaceDeclaration,
   MethodSignature,
@@ -59,10 +59,10 @@ export async function addDefaultE2EConfig(
     );
 
     return isCommonJS
-      ? `const { nxE2EPreset } = require('@nx/cypress/plugins/cypress-preset');
+      ? `const { nxE2EPreset } = require('@titan/cypress/plugins/cypress-preset');
     
     ${updatedConfigContents}`
-      : `import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
+      : `import { nxE2EPreset } from '@titan/cypress/plugins/cypress-preset';
     
     ${updatedConfigContents}`;
   }

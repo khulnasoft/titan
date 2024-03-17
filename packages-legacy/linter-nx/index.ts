@@ -1,1 +1,1 @@
-export * from '@nx/eslint';
+export * from '@titan/eslint';

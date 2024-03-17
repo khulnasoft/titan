@@ -269,7 +269,7 @@ exports[`app --project-name-and-root-format=derived should generate correctly wh
       },
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
+      "executor": "@titan/eslint:lint",
     },
     "serve": {
       "configurations": {
@@ -291,7 +291,7 @@ exports[`app --project-name-and-root-format=derived should generate correctly wh
       },
     },
     "test": {
-      "executor": "@nx/jest:jest",
+      "executor": "@titan/jest:jest",
       "options": {
         "jestConfig": "apps/my-dir/my-app/jest.config.ts",
       },
@@ -468,7 +468,7 @@ exports[`app --project-name-and-root-format=derived should generate correctly wh
       },
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
+      "executor": "@titan/eslint:lint",
     },
     "serve": {
       "configurations": {
@@ -490,7 +490,7 @@ exports[`app --project-name-and-root-format=derived should generate correctly wh
       },
     },
     "test": {
-      "executor": "@nx/jest:jest",
+      "executor": "@titan/jest:jest",
       "options": {
         "jestConfig": "apps/my-app/jest.config.ts",
       },
@@ -962,7 +962,7 @@ exports[`app nested should create project configs 1`] = `
       },
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
+      "executor": "@titan/eslint:lint",
     },
     "serve": {
       "configurations": {
@@ -984,7 +984,7 @@ exports[`app nested should create project configs 1`] = `
       },
     },
     "test": {
-      "executor": "@nx/jest:jest",
+      "executor": "@titan/jest:jest",
       "options": {
         "jestConfig": "my-dir/my-app/jest.config.ts",
       },
@@ -1074,7 +1074,7 @@ exports[`app not nested should create project configs 1`] = `
       },
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
+      "executor": "@titan/eslint:lint",
     },
     "serve": {
       "configurations": {
@@ -1096,7 +1096,7 @@ exports[`app not nested should create project configs 1`] = `
       },
     },
     "test": {
-      "executor": "@nx/jest:jest",
+      "executor": "@titan/jest:jest",
       "options": {
         "jestConfig": "my-app/jest.config.ts",
       },

@@ -15,10 +15,10 @@ describe('Next Playwright e2e tests', () => {
   beforeAll(async () => {
     projectName = newProject({
       name: uniq('pw-next'),
-      packages: ['@nx/next'],
+      packages: ['@titan/next'],
     });
     runCLI(
-      `generate @nx/next:app ${appName} --e2eTestRunner=playwright --projectNameAndRootFormat=as-provided --no-interactive`
+      `generate @titan/next:app ${appName} --e2eTestRunner=playwright --projectNameAndRootFormat=as-provided --no-interactive`
     );
   });
 

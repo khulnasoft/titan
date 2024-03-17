@@ -6,7 +6,7 @@
  * - Change the package.json metadata to only use the ESM2020 output (Angular < 16).
  */
 
-import { logger } from '@nx/devkit';
+import { logger } from '@titan/devkit';
 import { BuildGraph } from 'ng-packagr/lib/graph/build-graph';
 import { Node } from 'ng-packagr/lib/graph/node';
 import { transformFromPromise } from 'ng-packagr/lib/graph/transform';

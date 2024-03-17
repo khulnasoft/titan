@@ -1,5 +1,5 @@
-import { ProjectConfiguration, Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { ProjectConfiguration, Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { addInteractionsInAddons } from './interaction-testing.utils';
 describe('Helper functions for the Storybook 7 migration generator', () => {
   let tree: Tree;

@@ -6,7 +6,7 @@
   "targets": {
     "lint": {},
     "test": {
-      "executor": "@nx/jest:jest",
+      "executor": "@titan/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "jestConfig": "tools/workspace-plugin/jest.config.ts"

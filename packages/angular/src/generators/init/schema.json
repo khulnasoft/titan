@@ -3,7 +3,7 @@
   "$id": "SchematicsAngularModuleInit",
   "cli": "nx",
   "title": "Init Angular Plugin",
-  "description": "Initializes the `@nx/angular` plugin. NOTE: Does not work in the `--dry-run` mode.",
+  "description": "Initializes the `@titan/angular` plugin. NOTE: Does not work in the `--dry-run` mode.",
   "type": "object",
   "properties": {
     "skipInstall": {

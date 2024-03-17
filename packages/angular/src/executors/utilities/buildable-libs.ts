@@ -1,4 +1,4 @@
-import { readCachedProjectGraph, type ExecutorContext } from '@nx/devkit';
+import { readCachedProjectGraph, type ExecutorContext } from '@titan/devkit';
 import {
   calculateProjectDependencies,
   createTmpTsConfig,

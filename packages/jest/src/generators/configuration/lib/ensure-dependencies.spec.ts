@@ -1,5 +1,5 @@
-import { readJson, type Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { readJson, type Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { ensureDependencies } from './ensure-dependencies';
 
 describe('ensureDependencies', () => {

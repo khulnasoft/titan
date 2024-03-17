@@ -30,7 +30,7 @@ npx nx@latest init --integrated
 
 The command applies the following changes to your workspace:
 
-- Installs the `nx`, `@nx/angular` and `@nx/workspace` packages.
+- Installs the `nx`, `@titan/angular` and `@nx/workspace` packages.
 - Moves your applications into the `apps` folder, and updates the relevant file paths in your configuration files.
 - Moves your e2e suites into the `apps/<app name>-e2e` folder, and updates the relevant file paths in your configuration files.
 - Moves your libraries into the `libs` folder, and updates the relevant file paths in your configuration files.

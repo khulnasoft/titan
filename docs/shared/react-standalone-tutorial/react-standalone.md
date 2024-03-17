@@ -250,7 +250,7 @@ One thing you might be curious about is the [inferred tasks](/concepts/inferred-
 
 Nx understands and supports both approaches, allowing you to define tasks in your `package.json` and `project.json` files or have Nx plugins automatically detect them. The inferred tasks give you the benefit of automatically setting the Nx cache settings for you based on your tooling configuration. In this tutorial, we take advantage of those inferred tasks to demonstrate the full value of Nx plugins.
 
-So, what are Nx Plugins? Nx Plugins are optional packages that extend the capabilities of Nx, catering to various specific technologies. For instance, we have plugins tailored to React (e.g., `@nx/react`), Vite (`@nx/vite`), Cypress (`@nx/cypress`), and more. These plugins offer additional features, making your development experience more efficient and enjoyable when working with specific tech stacks.
+So, what are Nx Plugins? Nx Plugins are optional packages that extend the capabilities of Nx, catering to various specific technologies. For instance, we have plugins tailored to React (e.g., `@nx/react`), Vite (`@nx/vite`), Cypress (`@titan/cypress`), and more. These plugins offer additional features, making your development experience more efficient and enjoyable when working with specific tech stacks.
 
 [Visit our "Why Nx" page](/getting-started/why-nx) for more details.
 

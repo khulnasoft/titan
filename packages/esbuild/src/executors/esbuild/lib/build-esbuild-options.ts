@@ -6,7 +6,7 @@ import {
   joinPathFragments,
   normalizePath,
   ProjectGraphProjectNode,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 import { getClientEnvironment } from '../../../utils/environment-variables';
 import { NormalizedEsBuildExecutorOptions } from '../schema';

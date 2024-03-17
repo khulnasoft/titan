@@ -48,7 +48,7 @@ describe('nx init (for React - legacy)', () => {
     expect(craToNxOutput).toContain('🎉 Done!');
 
     const packageJson = readJson('package.json');
-    expect(packageJson.devDependencies['@nx/jest']).toBeDefined();
+    expect(packageJson.devDependencies['@titan/jest']).toBeDefined();
     expect(packageJson.devDependencies['@nx/vite']).toBeUndefined();
     expect(packageJson.devDependencies['@nx/webpack']).toBeDefined();
     expect(packageJson.dependencies['redux']).toBeDefined();
@@ -82,7 +82,7 @@ describe('nx init (for React - legacy)', () => {
     expect(craToNxOutput).toContain('🎉 Done!');
 
     const packageJson = readJson('package.json');
-    expect(packageJson.devDependencies['@nx/jest']).toBeUndefined();
+    expect(packageJson.devDependencies['@titan/jest']).toBeUndefined();
     expect(packageJson.devDependencies['@nx/vite']).toBeDefined();
     expect(packageJson.devDependencies['@nx/webpack']).toBeUndefined();
 
@@ -163,7 +163,7 @@ describe('nx init (for React - legacy)', () => {
     );
 
     const packageJson = readJson('package.json');
-    expect(packageJson.devDependencies['@nx/jest']).toBeUndefined();
+    expect(packageJson.devDependencies['@titan/jest']).toBeUndefined();
     expect(packageJson.dependencies['redux']).toBeDefined();
     expect(packageJson.name).toEqual(appName);
 

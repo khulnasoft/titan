@@ -1,4 +1,4 @@
-import { updateJson, type Tree } from '@nx/devkit';
+import { updateJson, type Tree } from '@titan/devkit';
 import { tsConfigBaseOptions } from '@nx/js';
 
 export { extractTsConfigBase } from '@nx/js';

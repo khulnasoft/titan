@@ -1,5 +1,5 @@
-import type { ExecutorContext } from '@nx/devkit';
-import { parseTargetString } from '@nx/devkit';
+import type { ExecutorContext } from '@titan/devkit';
+import { parseTargetString } from '@titan/devkit';
 import { join, relative } from 'path';
 import { CopyAssetsHandler } from '../../../../utils/assets/copy-assets-handler';
 import { calculateProjectBuildableDependencies } from '../../../../utils/buildable-libs-utils';

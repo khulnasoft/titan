@@ -8,14 +8,14 @@ import {
   readJson,
   ExecutorsJson,
   formatFiles,
-} from '@nx/devkit';
-import type { Tree } from '@nx/devkit';
+} from '@titan/devkit';
+import type { Tree } from '@titan/devkit';
 import type { Schema } from './schema';
 import * as path from 'path';
 import { PackageJson } from 'nx/src/utils/package-json';
 import pluginLintCheckGenerator from '../lint-checks/generator';
 import { nxVersion } from '../../utils/versions';
-import { determineArtifactNameAndDirectoryOptions } from '@nx/devkit/src/generators/artifact-name-and-directory-utils';
+import { determineArtifactNameAndDirectoryOptions } from '@titan/devkit/src/generators/artifact-name-and-directory-utils';
 import { relative } from 'path';
 
 interface NormalizedSchema extends Schema {
@@ -112,7 +112,7 @@ async function updateExecutorJson(host: Tree, options: NormalizedSchema) {
     joinPathFragments(options.projectRoot, 'package.json'),
     (json) => {
       json.dependencies = {
-        '@nx/devkit': nxVersion,
+        '@titan/devkit': nxVersion,
         ...json.dependencies,
       };
       return json;

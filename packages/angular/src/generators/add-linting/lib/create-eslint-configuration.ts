@@ -1,15 +1,15 @@
-import type { Tree } from '@nx/devkit';
-import { joinPathFragments, offsetFromRoot, writeJson } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
+import { joinPathFragments, offsetFromRoot, writeJson } from '@titan/devkit';
 import type { Linter } from 'eslint';
 import type { AddLintingGeneratorSchema } from '../schema';
-import { camelize, dasherize } from '@nx/devkit/src/utils/string-utils';
+import { camelize, dasherize } from '@titan/devkit/src/utils/string-utils';
 
 type EslintExtensionSchema = {
   prefix: string;
 };
 
 /**
- * @deprecated Use tools from `@nx/eslint/src/generators/utils/eslint-file` instead
+ * @deprecated Use tools from `@titan/eslint/src/generators/utils/eslint-file` instead
  */
 export const extendAngularEslintJson = (
   json: Linter.Config,
@@ -21,7 +21,7 @@ export const extendAngularEslintJson = (
       files: ['*.ts'],
       extends: [
         ...(json.overrides[0].extends || []),
-        'plugin:@nx/angular',
+        'plugin:@titan/angular',
         'plugin:@angular-eslint/template/process-inline-templates',
       ],
       rules: {
@@ -45,7 +45,7 @@ export const extendAngularEslintJson = (
     },
     {
       files: ['*.html'],
-      extends: ['plugin:@nx/angular-template'],
+      extends: ['plugin:@titan/angular-template'],
       /**
        * Having an empty rules object present makes it more obvious to the user where they would
        * extend things from if they needed to
@@ -78,7 +78,7 @@ export function createEsLintConfiguration(
       {
         files: ['*.ts'],
         extends: [
-          'plugin:@nx/angular',
+          'plugin:@titan/angular',
           'plugin:@angular-eslint/template/process-inline-templates',
         ],
         /**
@@ -120,7 +120,7 @@ export function createEsLintConfiguration(
       },
       {
         files: ['*.html'],
-        extends: ['plugin:@nx/angular-template'],
+        extends: ['plugin:@titan/angular-template'],
         /**
          * Having an empty rules object present makes it more obvious to the user where they would
          * extend things from if they needed to

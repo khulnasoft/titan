@@ -1,4 +1,4 @@
-import { logger } from '@nx/devkit';
+import { logger } from '@titan/devkit';
 import { daemonClient } from 'nx/src/daemon/client/client';
 import { join } from 'path';
 

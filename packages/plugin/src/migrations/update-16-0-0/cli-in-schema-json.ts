@@ -8,7 +8,7 @@ import {
   Tree,
   updateJson,
   output,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import {
   ExecutorsJsonEntry,
   GeneratorsJsonEntry,

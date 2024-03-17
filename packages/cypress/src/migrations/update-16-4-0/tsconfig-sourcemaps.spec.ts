@@ -5,7 +5,7 @@ import {
   readProjectConfiguration,
   updateJson,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { createTreeWithEmptyWorkspace } from 'nx/src/devkit-testing-exports';
 import { fixLegacyCypressTsconfig } from './tsconfig-sourcemaps';
 
@@ -28,7 +28,7 @@ describe('Cypress Migration: tsconfig-sourcemaps', () => {
             "devServerTarget": "legacy-e2e:serve:production",
           },
         },
-        "executor": "@nx/cypress:cypress",
+        "executor": "@titan/cypress:cypress",
         "options": {
           "cypressConfig": "apps/legacy-e2e/cypress.config.ts",
           "devServerTarget": "legacy-e2e:serve",
@@ -105,7 +105,7 @@ function addLegacyProject(tree: Tree) {
     sourceRoot: 'apps/legacy-e2e/src',
     targets: {
       e2e: {
-        executor: '@nx/cypress:cypress',
+        executor: '@titan/cypress:cypress',
         options: {
           cypressConfig: 'apps/legacy-e2e/cypress.config.ts',
           tsConfig: 'apps/legacy-e2e/tsconfig.e2e.json',

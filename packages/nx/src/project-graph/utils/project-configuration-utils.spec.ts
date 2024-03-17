@@ -663,7 +663,7 @@ describe('project-configuration-utils', () => {
           root: 'libs/lib-a',
           name: 'lib-a',
           generators: {
-            '@nx/angular:component': {
+            '@titan/angular:component': {
               style: 'scss',
             },
           },
@@ -673,21 +673,21 @@ describe('project-configuration-utils', () => {
         root: 'libs/lib-a',
         name: 'lib-a',
         generators: {
-          '@nx/angular:component': {
+          '@titan/angular:component': {
             flat: true,
           },
-          '@nx/angular:service': {
+          '@titan/angular:service': {
             spec: false,
           },
         },
       });
       expect(rootMap.get('libs/lib-a').generators).toMatchInlineSnapshot(`
         {
-          "@nx/angular:component": {
+          "@titan/angular:component": {
             "flat": true,
             "style": "scss",
           },
-          "@nx/angular:service": {
+          "@titan/angular:service": {
             "spec": false,
           },
         }
@@ -1085,7 +1085,7 @@ describe('project-configuration-utils', () => {
             name: 'lib-a',
             root: 'libs/lib-a',
             generators: {
-              '@nx/angular:component': {
+              '@titan/angular:component': {
                 option1: true,
                 option2: 'true',
               },
@@ -1100,7 +1100,7 @@ describe('project-configuration-utils', () => {
             name: 'lib-a',
             root: 'libs/lib-a',
             generators: {
-              '@nx/angular:component': {
+              '@titan/angular:component': {
                 option1: false,
                 option3: {
                   nested: 3,
@@ -1115,9 +1115,9 @@ describe('project-configuration-utils', () => {
         assertCorrectKeysInSourceMap(
           sourceMap,
           'libs/lib-a',
-          ['generators.@nx/angular:component.option1', 'dummy2'],
-          ['generators.@nx/angular:component.option2', 'dummy'],
-          ['generators.@nx/angular:component.option3', 'dummy2']
+          ['generators.@titan/angular:component.option1', 'dummy2'],
+          ['generators.@titan/angular:component.option2', 'dummy'],
+          ['generators.@titan/angular:component.option3', 'dummy2']
         );
       });
     });

@@ -30,12 +30,12 @@
   "schematics": "./generators.json",
   "builders": "./executors.json",
   "dependencies": {
-    "@nx/jest": "file:../../packages/jest"
+    "@titan/jest": "file:../../packages/jest"
   },
   "publishConfig": {
     "access": "public"
   },
   "nx-migrations": {
-    "migrations": "@nx/jest/migrations.json"
+    "migrations": "@titan/jest/migrations.json"
   }
 }

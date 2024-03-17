@@ -1,5 +1,5 @@
-import { ProjectGraph, Tree, workspaceRoot } from '@nx/devkit';
-import { createTree } from '@nx/devkit/testing';
+import { ProjectGraph, Tree, workspaceRoot } from '@titan/devkit';
+import { createTree } from '@titan/devkit/testing';
 import { createWorkspaceWithPackageDependencies } from '../test-utils/create-workspace-with-package-dependencies';
 import { resolveLocalPackageDependencies } from './resolve-local-package-dependencies';
 

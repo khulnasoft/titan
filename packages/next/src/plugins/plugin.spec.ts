@@ -1,10 +1,10 @@
-import { CreateNodesContext } from '@nx/devkit';
+import { CreateNodesContext } from '@titan/devkit';
 import type { NextConfig } from 'next';
 
 import { createNodes } from './plugin';
-import { TempFs } from '@nx/devkit/internal-testing-utils';
+import { TempFs } from '@titan/devkit/internal-testing-utils';
 
-describe('@nx/next/plugin', () => {
+describe('@titan/next/plugin', () => {
   let createNodesFunction = createNodes[1];
   let context: CreateNodesContext;
 

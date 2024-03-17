@@ -1,4 +1,4 @@
-import { type CreateNodesContext, joinPathFragments } from '@nx/devkit';
+import { type CreateNodesContext, joinPathFragments } from '@titan/devkit';
 import { createNodes } from './plugin';
 import { TempFs } from 'nx/src/internal-testing-utils/temp-fs';
 

@@ -1,5 +1,5 @@
-import { readJson, readProjectConfiguration, Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { readJson, readProjectConfiguration, Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { generateTestApplication } from '../utils/testing';
 import { setupMf } from './setup-mf';
 
@@ -157,10 +157,10 @@ describe('Init MF', () => {
 
       expect(serve.executor).toEqual(
         type === 'host'
-          ? '@nx/angular:module-federation-dev-server'
-          : '@nx/angular:dev-server'
+          ? '@titan/angular:module-federation-dev-server'
+          : '@titan/angular:dev-server'
       );
-      expect(build.executor).toEqual('@nx/angular:webpack-browser');
+      expect(build.executor).toEqual('@titan/angular:webpack-browser');
       expect(build.options.customWebpackConfig.path).toEqual(
         `${app}/webpack.config.js`
       );
@@ -187,10 +187,10 @@ describe('Init MF', () => {
 
       expect(serve.executor).toEqual(
         type === 'host'
-          ? '@nx/angular:module-federation-dev-server'
-          : '@nx/angular:dev-server'
+          ? '@titan/angular:module-federation-dev-server'
+          : '@titan/angular:dev-server'
       );
-      expect(build.executor).toEqual('@nx/angular:webpack-browser');
+      expect(build.executor).toEqual('@titan/angular:webpack-browser');
       expect(build.options.customWebpackConfig.path).toEqual(
         `${app}/webpack.config.ts`
       );

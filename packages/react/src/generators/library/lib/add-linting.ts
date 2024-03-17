@@ -1,14 +1,14 @@
 import { Tree } from 'nx/src/generators/tree';
-import { Linter, lintProjectGenerator } from '@nx/eslint';
+import { Linter, lintProjectGenerator } from '@titan/eslint';
 import { joinPathFragments } from 'nx/src/utils/path';
-import { addDependenciesToPackageJson, runTasksInSerial } from '@nx/devkit';
+import { addDependenciesToPackageJson, runTasksInSerial } from '@titan/devkit';
 
 import { NormalizedSchema } from '../schema';
 import { extraEslintDependencies } from '../../../utils/lint';
 import {
   addExtendsToLintConfig,
   isEslintConfigSupported,
-} from '@nx/eslint/src/generators/utils/eslint-file';
+} from '@titan/eslint/src/generators/utils/eslint-file';
 
 export async function addLinting(host: Tree, options: NormalizedSchema) {
   if (options.linter === Linter.EsLint) {

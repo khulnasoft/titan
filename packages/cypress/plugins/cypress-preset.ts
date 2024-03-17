@@ -1,4 +1,4 @@
-import { workspaceRoot } from '@nx/devkit';
+import { workspaceRoot } from '@titan/devkit';
 import { dirname, join, relative } from 'path';
 import { existsSync, lstatSync } from 'fs';
 

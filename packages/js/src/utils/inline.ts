@@ -1,5 +1,5 @@
-import type { ExecutorContext, ProjectGraphProjectNode } from '@nx/devkit';
-import { normalizePath, readJsonFile } from '@nx/devkit';
+import type { ExecutorContext, ProjectGraphProjectNode } from '@titan/devkit';
+import { normalizePath, readJsonFile } from '@titan/devkit';
 import {
   copySync,
   readdirSync,

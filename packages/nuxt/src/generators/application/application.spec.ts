@@ -1,5 +1,5 @@
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { Tree, readJson, readProjectConfiguration } from '@nx/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { Tree, readJson, readProjectConfiguration } from '@titan/devkit';
 import { applicationGenerator } from './application';
 
 describe('app', () => {

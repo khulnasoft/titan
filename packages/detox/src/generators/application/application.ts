@@ -1,4 +1,4 @@
-import { formatFiles, runTasksInSerial, Tree } from '@nx/devkit';
+import { formatFiles, runTasksInSerial, Tree } from '@titan/devkit';
 
 import detoxInitGenerator from '../init/init';
 import { addGitIgnoreEntry } from './lib/add-git-ignore-entry';

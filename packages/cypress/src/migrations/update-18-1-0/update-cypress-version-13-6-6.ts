@@ -2,7 +2,7 @@ import {
   addDependenciesToPackageJson,
   formatFiles,
   type Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { installedCypressVersion } from '../../utils/cypress-version';
 
 export default async function (tree: Tree) {

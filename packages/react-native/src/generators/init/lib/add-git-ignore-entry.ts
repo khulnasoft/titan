@@ -1,4 +1,4 @@
-import { logger, Tree } from '@nx/devkit';
+import { logger, Tree } from '@titan/devkit';
 import ignore from 'ignore';
 import { gitIgnoreEntriesForReactNative } from './gitignore-entries';
 

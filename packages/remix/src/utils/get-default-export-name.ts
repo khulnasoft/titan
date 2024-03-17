@@ -1,4 +1,4 @@
-import { Tree } from '@nx/devkit';
+import { Tree } from '@titan/devkit';
 import { getDefaultExport } from './get-default-export';
 
 export function getDefaultExportName(tree: Tree, path: string) {

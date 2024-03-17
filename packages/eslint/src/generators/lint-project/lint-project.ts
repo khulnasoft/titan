@@ -3,7 +3,7 @@ import type {
   NxJsonConfiguration,
   ProjectConfiguration,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import {
   readNxJson,
   formatFiles,
@@ -14,7 +14,7 @@ import {
   updateJson,
   updateProjectConfiguration,
   writeJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 import { Linter as LinterEnum } from '../utils/linter';
 import { findEslintFile } from '../utils/eslint-file';
@@ -117,7 +117,7 @@ export async function lintProjectGeneratorInternal(
     }
   } else {
     projectConfig.targets['lint'] = {
-      executor: '@nx/eslint:lint',
+      executor: '@titan/eslint:lint',
     };
 
     if (lintFilePatterns && lintFilePatterns.length) {
@@ -317,7 +317,7 @@ function isMigrationToMonorepoNeeded(
   if (!rootProject || !rootProject.targets) {
     return false;
   }
-  // check if we're inferring lint target from `@nx/eslint/plugin`
+  // check if we're inferring lint target from `@titan/eslint/plugin`
   if (hasEslintPlugin(tree)) {
     for (const f of ESLINT_CONFIG_FILENAMES) {
       if (tree.exists(f)) {

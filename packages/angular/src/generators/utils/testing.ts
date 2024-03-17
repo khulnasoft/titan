@@ -1,7 +1,7 @@
-import type { Tree } from '@nx/devkit';
-import { names, readProjectConfiguration, updateJson } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { Linter } from '@nx/eslint';
+import type { Tree } from '@titan/devkit';
+import { names, readProjectConfiguration, updateJson } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { Linter } from '@titan/eslint';
 import { UnitTestRunner } from '../../utils/test-runners';
 import { angularDevkitVersion } from '../../utils/versions';
 import { applicationGenerator } from '../application/application';

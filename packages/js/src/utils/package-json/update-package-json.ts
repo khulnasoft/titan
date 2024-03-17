@@ -18,7 +18,7 @@ import {
   readJsonFile,
   workspaceRoot,
   writeJsonFile,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { DependentBuildableProjectNode } from '../buildable-libs-utils';
 import { basename, join, parse } from 'path';
 import { writeFileSync } from 'fs-extra';

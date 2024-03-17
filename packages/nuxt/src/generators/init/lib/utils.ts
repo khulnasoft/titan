@@ -3,7 +3,7 @@ import {
   readNxJson,
   Tree,
   updateNxJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { nuxtVersion, nxVersion } from '../../../utils/versions';
 import { InitSchema } from '../schema';
 

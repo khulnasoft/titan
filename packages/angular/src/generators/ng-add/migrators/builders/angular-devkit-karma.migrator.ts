@@ -2,12 +2,12 @@ import type {
   ProjectConfiguration,
   TargetConfiguration,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import {
   joinPathFragments,
   offsetFromRoot,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { getRootTsConfigPathInTree } from '@nx/js';
 import { basename } from 'path';
 import type { Logger, ProjectMigrationInfo } from '../../utilities';

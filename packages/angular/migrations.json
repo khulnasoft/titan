@@ -177,7 +177,7 @@
     "update-16-0-0-add-nx-packages": {
       "cli": "nx",
       "version": "16.0.0-beta.1",
-      "description": "Replace @nrwl/angular with @nx/angular",
+      "description": "Replace @nrwl/angular with @titan/angular",
       "implementation": "./src/migrations/update-16-0-0-add-nx-packages/update-16-0-0-add-nx-packages"
     },
     "remove-protractor-defaults-from-generators": {
@@ -327,7 +327,7 @@
     "rename-webpack-dev-server-executor": {
       "cli": "nx",
       "version": "17.2.0-beta.2",
-      "description": "Rename '@nx/angular:webpack-dev-server' executor to '@nx/angular:dev-server'",
+      "description": "Rename '@titan/angular:webpack-dev-server' executor to '@titan/angular:dev-server'",
       "factory": "./src/migrations/update-17-2-0/rename-webpack-dev-server"
     },
     "update-angular-cli-version-17-1-0": {
@@ -345,7 +345,7 @@
       "requires": {
         "@angular/core": ">=17.1.0"
       },
-      "description": "Add 'browser-sync' as dev dependency when '@angular-devkit/build-angular:ssr-dev-server' or '@nx/angular:module-federation-dev-ssr' is used.",
+      "description": "Add 'browser-sync' as dev dependency when '@angular-devkit/build-angular:ssr-dev-server' or '@titan/angular:module-federation-dev-ssr' is used.",
       "factory": "./src/migrations/update-17-3-0/add-browser-sync-dependency"
     },
     "add-autoprefixer-dependency": {
@@ -354,13 +354,13 @@
       "requires": {
         "@angular/core": ">=17.1.0"
       },
-      "description": "Add 'autoprefixer' as dev dependency when '@nx/angular:ng-packagr-lite' or '@nx/angular:package` is used.",
+      "description": "Add 'autoprefixer' as dev dependency when '@titan/angular:ng-packagr-lite' or '@titan/angular:package` is used.",
       "factory": "./src/migrations/update-17-3-0/add-autoprefixer-dependency"
     },
     "add-module-federation-env-var-to-target-defaults": {
       "cli": "nx",
       "version": "18.0.0-beta.0",
-      "description": "Add NX_MF_DEV_SERVER_STATIC_REMOTES to inputs for task hashing when '@nx/angular:webpack-browser' is used for Module Federation.",
+      "description": "Add NX_MF_DEV_SERVER_STATIC_REMOTES to inputs for task hashing when '@titan/angular:webpack-browser' is used for Module Federation.",
       "factory": "./src/migrations/update-18-0-0/add-mf-env-var-to-target-defaults"
     },
     "update-angular-cli-version-17-2-0": {
@@ -375,7 +375,7 @@
     "fix-target-defaults-for-webpack-browser": {
       "cli": "nx",
       "version": "18.1.1-beta.0",
-      "description": "Ensure targetDefaults inputs for task hashing when '@nx/angular:webpack-browser' is used are correct for Module Federation.",
+      "description": "Ensure targetDefaults inputs for task hashing when '@titan/angular:webpack-browser' is used are correct for Module Federation.",
       "factory": "./src/migrations/update-18-1-1/fix-target-defaults-inputs"
     }
   },

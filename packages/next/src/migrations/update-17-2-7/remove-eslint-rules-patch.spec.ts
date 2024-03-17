@@ -1,4 +1,4 @@
-import { addProjectConfiguration, readJson, Tree, writeJson } from '@nx/devkit';
+import { addProjectConfiguration, readJson, Tree, writeJson } from '@titan/devkit';
 import { createTreeWithEmptyWorkspace } from 'nx/src/devkit-testing-exports';
 
 import update from './remove-eslint-rules-patch';

@@ -5,7 +5,7 @@ import {
   names,
   readProjectConfiguration,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import {
   addRemoteDefinition,
   addRemoteRoute,

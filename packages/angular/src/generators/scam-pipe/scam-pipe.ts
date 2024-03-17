@@ -1,5 +1,5 @@
-import type { Tree } from '@nx/devkit';
-import { formatFiles } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
+import { formatFiles } from '@titan/devkit';
 import { pipeGenerator } from '../pipe/pipe';
 import { exportScam } from '../utils/export-scam';
 import { convertPipeToScam, normalizeOptions } from './lib';

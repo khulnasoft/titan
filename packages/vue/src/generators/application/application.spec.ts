@@ -1,5 +1,5 @@
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { Tree, readProjectConfiguration } from '@nx/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { Tree, readProjectConfiguration } from '@titan/devkit';
 
 import { applicationGenerator } from './application';
 import { Schema } from './schema';

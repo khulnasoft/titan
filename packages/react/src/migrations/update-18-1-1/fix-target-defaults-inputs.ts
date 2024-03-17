@@ -6,7 +6,7 @@ import {
   formatFiles,
   readNxJson,
   updateNxJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 export default async function (tree: Tree) {
   if (!hasModuleFederationProject(tree)) {

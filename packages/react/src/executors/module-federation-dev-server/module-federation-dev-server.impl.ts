@@ -5,7 +5,7 @@ import {
   readTargetOptions,
   runExecutor,
   workspaceRoot,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import devServerExecutor from '@nx/webpack/src/executors/dev-server/dev-server.impl';
 import fileServerExecutor from '@nx/web/src/executors/file-server/file-server.impl';
 import { WebDevServerOptions } from '@nx/webpack/src/executors/dev-server/schema';
@@ -16,7 +16,7 @@ import {
 import {
   combineAsyncIterables,
   createAsyncIterable,
-} from '@nx/devkit/src/utils/async-iterable';
+} from '@titan/devkit/src/utils/async-iterable';
 import { waitForPortOpen } from '@nx/web/src/utils/wait-for-port-open';
 import { fork } from 'child_process';
 import { basename, dirname, join } from 'path';

@@ -1,4 +1,4 @@
-import type { NxJsonConfiguration, Tree } from '@nx/devkit';
+import type { NxJsonConfiguration, Tree } from '@titan/devkit';
 import {
   generateFiles,
   getProjects,
@@ -8,9 +8,9 @@ import {
   updateJson,
   updateNxJson,
   writeJson,
-} from '@nx/devkit';
-import { lintInitGenerator } from '@nx/eslint';
-import { setupRootEsLint } from '@nx/eslint/src/generators/lint-project/setup-root-eslint';
+} from '@titan/devkit';
+import { lintInitGenerator } from '@titan/eslint';
+import { setupRootEsLint } from '@titan/eslint/src/generators/lint-project/setup-root-eslint';
 import {
   getRootTsConfigPathInTree,
   initGenerator as jsInitGenerator,

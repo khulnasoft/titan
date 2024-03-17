@@ -1,6 +1,6 @@
-import { logger, Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { Linter } from '@nx/eslint';
+import { logger, Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { Linter } from '@titan/eslint';
 import applicationGenerator from '../application/application';
 import storybookConfigurationGenerator from './configuration';
 import { componentGenerator } from '@nx/vue';

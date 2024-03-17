@@ -3,7 +3,7 @@ import {
   detectPackageManager,
   GeneratorCallback,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import {
   babelCoreVersion,
   babelPresetReactVersion,

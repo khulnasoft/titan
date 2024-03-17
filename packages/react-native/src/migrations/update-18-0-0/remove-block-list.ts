@@ -1,4 +1,4 @@
-import { Tree, formatFiles, getProjects, joinPathFragments } from '@nx/devkit';
+import { Tree, formatFiles, getProjects, joinPathFragments } from '@titan/devkit';
 
 /**
  * This migration removes blockList in metro.config.js.

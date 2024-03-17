@@ -1,10 +1,10 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import {
   logger,
   normalizePath,
   stripIndents,
   visitNotIgnoredFiles,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { findNodes } from '@nx/js';
 import { extname } from 'path';
 import type {
@@ -191,7 +191,7 @@ function getDeclarationsArray(
 
   if (!declarationArray) {
     logger.warn(
-      stripIndents`No stories generated because the declarations in ${moduleFilePath} is not an array literal or the variable could not be found. Hint: you can always generate stories later with the 'nx generate @nx/angular:stories --name=${projectName}' command.`
+      stripIndents`No stories generated because the declarations in ${moduleFilePath} is not an array literal or the variable could not be found. Hint: you can always generate stories later with the 'nx generate @titan/angular:stories --name=${projectName}' command.`
     );
   }
 
@@ -358,7 +358,7 @@ function getNgModuleDeclarationsPropertyAssignment(
 
   if (!declarationsPropertyAssignment) {
     logger.warn(
-      stripIndents`No stories generated because there were no components declared in ${moduleFilePath}. Hint: you can always generate stories later with the 'nx generate @nx/angular:stories --name=${projectName}' command.`
+      stripIndents`No stories generated because there were no components declared in ${moduleFilePath}. Hint: you can always generate stories later with the 'nx generate @titan/angular:stories --name=${projectName}' command.`
     );
   }
 

@@ -1,4 +1,4 @@
-import { formatFiles, Tree } from '@nx/devkit';
+import { formatFiles, Tree } from '@titan/devkit';
 import {
   addFiles,
   addPathMapping,

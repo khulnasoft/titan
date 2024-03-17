@@ -1,5 +1,5 @@
-import type { Tree } from '@nx/devkit';
-import { formatFiles, updateJson } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
+import { formatFiles, updateJson } from '@titan/devkit';
 
 export default async function (tree: Tree) {
   updateJson(tree, 'package.json', (json) => {

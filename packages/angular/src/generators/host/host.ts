@@ -4,8 +4,8 @@ import {
   joinPathFragments,
   runTasksInSerial,
   Tree,
-} from '@nx/devkit';
-import { determineProjectNameAndRootOptions } from '@nx/devkit/src/generators/project-name-and-root-utils';
+} from '@titan/devkit';
+import { determineProjectNameAndRootOptions } from '@titan/devkit/src/generators/project-name-and-root-utils';
 import { E2eTestRunner } from '../../utils/test-runners';
 import applicationGenerator from '../application/application';
 import remoteGenerator from '../remote/remote';
@@ -46,7 +46,7 @@ export async function hostInternal(tree: Tree, schema: Schema) {
       projectType: 'application',
       directory: options.directory,
       projectNameAndRootFormat: options.projectNameAndRootFormat,
-      callingGenerator: '@nx/angular:host',
+      callingGenerator: '@titan/angular:host',
     });
   options.projectNameAndRootFormat = projectNameAndRootFormat;
 

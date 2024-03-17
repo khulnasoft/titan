@@ -1,7 +1,7 @@
-import type { Tree } from '@nx/devkit';
-import * as devkit from '@nx/devkit';
-import { readJson, readProjectConfiguration } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import type { Tree } from '@titan/devkit';
+import * as devkit from '@titan/devkit';
+import { readJson, readProjectConfiguration } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { libraryGenerator } from './library';
 
 describe('lib', () => {

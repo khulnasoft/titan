@@ -1,7 +1,7 @@
-import { installedCypressVersion } from '@nx/cypress/src/utils/cypress-version';
-import type { Tree } from '@nx/devkit';
-import { readJson, writeJson } from '@nx/devkit';
-import { Linter } from '@nx/eslint/src/generators/utils/linter';
+import { installedCypressVersion } from '@titan/cypress/src/utils/cypress-version';
+import type { Tree } from '@titan/devkit';
+import { readJson, writeJson } from '@titan/devkit';
+import { Linter } from '@titan/eslint/src/generators/utils/linter';
 import { componentGenerator } from '../component/component';
 import { librarySecondaryEntryPointGenerator } from '../library-secondary-entry-point/library-secondary-entry-point';
 import {
@@ -13,7 +13,7 @@ import { storybookConfigurationGenerator } from './storybook-configuration';
 
 // need to mock cypress otherwise it'll use the nx installed version from package.json
 //  which is v9 while we are testing for the new v10 version
-jest.mock('@nx/cypress/src/utils/cypress-version');
+jest.mock('@titan/cypress/src/utils/cypress-version');
 // nested code imports graph from the repo, which might have innacurate graph version
 jest.mock('nx/src/project-graph/project-graph', () => ({
   ...jest.requireActual<any>('nx/src/project-graph/project-graph'),

@@ -9,13 +9,13 @@ import {
   Tree,
   updateProjectConfiguration,
   writeJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 import { webpackInitGenerator } from '../init/init';
 import { ConfigurationGeneratorSchema } from './schema';
 import { WebpackExecutorOptions } from '../../executors/webpack/schema';
 import { hasPlugin } from '../../utils/has-plugin';
-import { addBuildTargetDefaults } from '@nx/devkit/src/generators/add-build-target-defaults';
+import { addBuildTargetDefaults } from '@titan/devkit/src/generators/add-build-target-defaults';
 import { ensureDependencies } from '../../utils/ensure-dependencies';
 
 export function configurationGenerator(

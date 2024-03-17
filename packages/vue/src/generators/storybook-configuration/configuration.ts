@@ -1,6 +1,6 @@
 import { StorybookConfigureSchema } from './schema';
 import storiesGenerator from '../stories/stories';
-import { ensurePackage, formatFiles, Tree } from '@nx/devkit';
+import { ensurePackage, formatFiles, Tree } from '@titan/devkit';
 import { nxVersion } from '../../utils/versions';
 
 async function generateStories(host: Tree, schema: StorybookConfigureSchema) {

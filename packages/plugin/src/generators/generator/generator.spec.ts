@@ -3,13 +3,13 @@ import {
   readJson,
   readProjectConfiguration,
   Tree,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { libraryGenerator as jsLibraryGenerator } from '@nx/js';
 import { pluginGenerator } from '../plugin/plugin';
 import { generatorGenerator } from './generator';
-import { Linter } from '@nx/eslint';
-import { setCwd } from '@nx/devkit/internal-testing-utils';
+import { Linter } from '@titan/eslint';
+import { setCwd } from '@titan/devkit/internal-testing-utils';
 
 describe('NxPlugin Generator Generator', () => {
   let tree: Tree;

@@ -1,6 +1,6 @@
 import fixTargetDefaultsInputs from './fix-target-defaults-inputs';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { addProjectConfiguration, readNxJson, updateNxJson } from '@nx/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { addProjectConfiguration, readNxJson, updateNxJson } from '@titan/devkit';
 
 describe('fixTargetDefaultsInputs', () => {
   it('should add the executor and input when it does not exist', async () => {
@@ -49,7 +49,7 @@ describe('fixTargetDefaultsInputs', () => {
       root: '',
       targets: {
         build: {
-          executor: '@nx/angular:module-federation-dev-server',
+          executor: '@titan/angular:module-federation-dev-server',
         },
       },
     });

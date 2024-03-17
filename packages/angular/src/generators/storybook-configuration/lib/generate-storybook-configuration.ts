@@ -1,4 +1,4 @@
-import { GeneratorCallback, Tree, ensurePackage } from '@nx/devkit';
+import { GeneratorCallback, Tree, ensurePackage } from '@titan/devkit';
 import type { StorybookConfigurationOptions } from '../schema';
 import { nxVersion } from '../../../utils/versions';
 

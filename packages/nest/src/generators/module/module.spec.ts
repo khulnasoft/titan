@@ -1,4 +1,4 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import { createTreeWithNestApplication } from '../utils/testing';
 import type { ModuleGeneratorOptions } from './module';
 import { moduleGenerator } from './module';

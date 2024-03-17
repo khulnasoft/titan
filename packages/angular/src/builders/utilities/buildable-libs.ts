@@ -3,7 +3,7 @@ import {
   createTmpTsConfig,
   DependentBuildableProjectNode,
 } from '@nx/js/src/utils/buildable-libs-utils';
-import { ProjectGraph, readCachedProjectGraph } from '@nx/devkit';
+import { ProjectGraph, readCachedProjectGraph } from '@titan/devkit';
 import { join } from 'path';
 
 export function createTmpTsConfigForBuildableLibs(

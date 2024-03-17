@@ -3,7 +3,7 @@ import {
   formatFiles,
   GeneratorCallback,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { Schema } from './schema';
 import { esbuildVersion } from '@nx/js/src/utils/versions';
 import { nxVersion } from '../../utils/versions';
@@ -15,7 +15,7 @@ export async function esbuildInitGenerator(tree: Tree, schema: Schema) {
       tree,
       {},
       {
-        '@nx/esbuild': nxVersion,
+        '@titan/esbuild': nxVersion,
         esbuild: esbuildVersion,
       },
       undefined,

@@ -1,5 +1,5 @@
-import type { Tree } from '@nx/devkit';
-import { joinPathFragments } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
+import { joinPathFragments } from '@titan/devkit';
 import ignore from 'ignore';
 
 export function getAllFilesRecursivelyFromDir(

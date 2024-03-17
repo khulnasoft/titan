@@ -1,10 +1,10 @@
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import {
   addProjectConfiguration,
   stripIndents,
   Tree,
   readJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import {
   shouldNotOverrideCommands,
   shouldNotUseCyInShouldCB,

@@ -1,4 +1,4 @@
-import { names } from '@nx/devkit';
+import { names } from '@titan/devkit';
 import {
   checkFilesDoNotExist,
   checkFilesExist,
@@ -32,15 +32,15 @@ describe('Angular Projects', () => {
   let esbuildAppDefaultProjectConfig: string;
 
   beforeAll(() => {
-    proj = newProject({ packages: ['@nx/angular'] });
+    proj = newProject({ packages: ['@titan/angular'] });
     runCLI(
-      `generate @nx/angular:app ${app1} --no-standalone --bundler=webpack --project-name-and-root-format=as-provided --no-interactive`
+      `generate @titan/angular:app ${app1} --no-standalone --bundler=webpack --project-name-and-root-format=as-provided --no-interactive`
     );
     runCLI(
-      `generate @nx/angular:app ${esbuildApp} --bundler=esbuild --no-standalone --project-name-and-root-format=as-provided --no-interactive`
+      `generate @titan/angular:app ${esbuildApp} --bundler=esbuild --no-standalone --project-name-and-root-format=as-provided --no-interactive`
     );
     runCLI(
-      `generate @nx/angular:lib ${lib1} --project-name-and-root-format=as-provided --no-interactive`
+      `generate @titan/angular:lib ${lib1} --project-name-and-root-format=as-provided --no-interactive`
     );
     app1DefaultModule = readFile(`${app1}/src/app/app.module.ts`);
     app1DefaultComponentTemplate = readFile(
@@ -72,12 +72,12 @@ describe('Angular Projects', () => {
   it('should successfully generate apps and libs and work correctly', async () => {
     const standaloneApp = uniq('standalone-app');
     runCLI(
-      `generate @nx/angular:app ${standaloneApp} --directory=my-dir/${standaloneApp} --bundler=webpack --project-name-and-root-format=as-provided --no-interactive`
+      `generate @titan/angular:app ${standaloneApp} --directory=my-dir/${standaloneApp} --bundler=webpack --project-name-and-root-format=as-provided --no-interactive`
     );
 
     const esbuildStandaloneApp = uniq('esbuild-app');
     runCLI(
-      `generate @nx/angular:app ${esbuildStandaloneApp} --bundler=esbuild --directory=my-dir/${esbuildStandaloneApp} --project-name-and-root-format=as-provided --no-interactive`
+      `generate @titan/angular:app ${esbuildStandaloneApp} --bundler=esbuild --directory=my-dir/${esbuildStandaloneApp} --project-name-and-root-format=as-provided --no-interactive`
     );
 
     updateFile(
@@ -156,7 +156,7 @@ describe('Angular Projects', () => {
     const app = uniq('app');
 
     runCLI(
-      `generate @nx/angular:app ${app} --e2eTestRunner=playwright --project-name-and-root-format=as-provided --no-interactive`
+      `generate @titan/angular:app ${app} --e2eTestRunner=playwright --project-name-and-root-format=as-provided --no-interactive`
     );
 
     if (runE2ETests('playwright')) {
@@ -223,10 +223,10 @@ describe('Angular Projects', () => {
     const buildableChildLib = uniq('buildlib2');
 
     runCLI(
-      `generate @nx/angular:library ${buildableLib} --buildable=true --no-standalone --project-name-and-root-format=as-provided --no-interactive`
+      `generate @titan/angular:library ${buildableLib} --buildable=true --no-standalone --project-name-and-root-format=as-provided --no-interactive`
     );
     runCLI(
-      `generate @nx/angular:library ${buildableChildLib} --buildable=true --no-standalone --project-name-and-root-format=as-provided --no-interactive`
+      `generate @titan/angular:library ${buildableChildLib} --buildable=true --no-standalone --project-name-and-root-format=as-provided --no-interactive`
     );
 
     // update the app module to include a ref to the buildable lib
@@ -303,7 +303,7 @@ describe('Angular Projects', () => {
 
     // update the project.json
     updateJson(join(app1, 'project.json'), (config) => {
-      config.targets.build.executor = '@nx/angular:webpack-browser';
+      config.targets.build.executor = '@titan/angular:webpack-browser';
       config.targets.build.options = {
         ...config.targets.build.options,
         buildLibsFromSource: false,
@@ -311,7 +311,7 @@ describe('Angular Projects', () => {
       return config;
     });
     updateJson(join(esbuildApp, 'project.json'), (config) => {
-      config.targets.build.executor = '@nx/angular:browser-esbuild';
+      config.targets.build.executor = '@titan/angular:browser-esbuild';
       config.targets.build.options = {
         ...config.targets.build.options,
         outputPath: `dist/${esbuildApp}`,
@@ -325,7 +325,7 @@ describe('Angular Projects', () => {
     // update the nx.json
     updateJson('nx.json', (config) => {
       config.targetDefaults ??= {};
-      config.targetDefaults['@nx/angular:webpack-browser'] ??= {
+      config.targetDefaults['@titan/angular:webpack-browser'] ??= {
         cache: true,
         dependsOn: [`^build`],
         inputs:
@@ -333,7 +333,7 @@ describe('Angular Projects', () => {
             ? ['production', '^production']
             : ['default', '^default'],
       };
-      config.targetDefaults['@nx/angular:browser-esbuild'] ??= {
+      config.targetDefaults['@titan/angular:browser-esbuild'] ??= {
         cache: true,
         dependsOn: [`^build`],
         inputs:
@@ -394,9 +394,9 @@ describe('Angular Projects', () => {
       }`
     );
 
-    // check @nx/angular:application
+    // check @titan/angular:application
     updateJson(join(esbuildApp, 'project.json'), (config) => {
-      config.targets.build.executor = '@nx/angular:application';
+      config.targets.build.executor = '@titan/angular:application';
       config.targets.build.options = {
         ...config.targets.build.options,
         plugins: [`${esbuildApp}/replace-text.plugin.mjs`],
@@ -411,9 +411,9 @@ describe('Angular Projects', () => {
       'this.buildDefined = "Value was provided at build time";'
     );
 
-    // check @nx/angular:browser-esbuild
+    // check @titan/angular:browser-esbuild
     updateJson(join(esbuildApp, 'project.json'), (config) => {
-      config.targets.build.executor = '@nx/angular:browser-esbuild';
+      config.targets.build.executor = '@titan/angular:browser-esbuild';
       config.targets.build.options = {
         ...config.targets.build.options,
         main: config.targets.build.options.browser,
@@ -444,7 +444,7 @@ describe('Angular Projects', () => {
     );
 
     updateJson(join(esbuildApp, 'project.json'), (config) => {
-      config.targets.build.executor = '@nx/angular:application';
+      config.targets.build.executor = '@titan/angular:application';
       config.targets.build.options = {
         ...config.targets.build.options,
         indexHtmlTransformer: `${esbuildApp}/index.transformer.mjs`,
@@ -467,17 +467,17 @@ describe('Angular Projects', () => {
     const entryPoint = uniq('entrypoint');
 
     runCLI(
-      `generate @nx/angular:lib ${lib} --publishable --importPath=@${proj}/${lib} --no-standalone --project-name-and-root-format=as-provided --no-interactive`
+      `generate @titan/angular:lib ${lib} --publishable --importPath=@${proj}/${lib} --no-standalone --project-name-and-root-format=as-provided --no-interactive`
     );
     runCLI(
-      `generate @nx/angular:secondary-entry-point --name=${entryPoint} --library=${lib} --no-interactive`
+      `generate @titan/angular:secondary-entry-point --name=${entryPoint} --library=${lib} --no-interactive`
     );
 
     runCLI(
-      `generate @nx/angular:library ${childLib} --publishable=true --importPath=@${proj}/${childLib} --no-standalone --project-name-and-root-format=as-provided --no-interactive`
+      `generate @titan/angular:library ${childLib} --publishable=true --importPath=@${proj}/${childLib} --no-standalone --project-name-and-root-format=as-provided --no-interactive`
     );
     runCLI(
-      `generate @nx/angular:secondary-entry-point --name=sub --library=${childLib} --no-interactive`
+      `generate @titan/angular:secondary-entry-point --name=sub --library=${childLib} --no-interactive`
     );
 
     const moduleContent = `
@@ -510,7 +510,7 @@ describe('Angular Projects', () => {
     const libName = uniq('lib1');
 
     runCLI(
-      `generate @nx/angular:app ${appName} --no-standalone --project-name-and-root-format=derived --no-interactive`
+      `generate @titan/angular:app ${appName} --no-standalone --project-name-and-root-format=derived --no-interactive`
     );
 
     // check files are generated with the layout directory ("apps/")
@@ -526,7 +526,7 @@ describe('Angular Projects', () => {
     );
 
     runCLI(
-      `generate @nx/angular:lib ${libName} --standalone --buildable --project-name-and-root-format=derived`
+      `generate @titan/angular:lib ${libName} --standalone --buildable --project-name-and-root-format=derived`
     );
 
     // check files are generated with the layout directory ("libs/")
@@ -551,12 +551,12 @@ describe('Angular Projects', () => {
     // assert scoped project names are not supported when --project-name-and-root-format=derived
     expect(() =>
       runCLI(
-        `generate @nx/angular:lib ${libName} --buildable --no-standalone --project-name-and-root-format=derived`
+        `generate @titan/angular:lib ${libName} --buildable --no-standalone --project-name-and-root-format=derived`
       )
     ).toThrow();
 
     runCLI(
-      `generate @nx/angular:lib ${libName} --buildable --standalone --project-name-and-root-format=as-provided`
+      `generate @titan/angular:lib ${libName} --buildable --standalone --project-name-and-root-format=as-provided`
     );
 
     // check files are generated without the layout directory ("libs/") and
@@ -583,7 +583,7 @@ describe('Angular Projects', () => {
     const webpackApp = uniq('webpack-app');
 
     runCLI(
-      `generate @nx/angular:app ${esbuildApp} --bundler=esbuild --ssr --project-name-and-root-format=as-provided --no-interactive`
+      `generate @titan/angular:app ${esbuildApp} --bundler=esbuild --ssr --project-name-and-root-format=as-provided --no-interactive`
     );
 
     // check build produces both the browser and server bundles
@@ -594,7 +594,7 @@ describe('Angular Projects', () => {
     );
 
     runCLI(
-      `generate @nx/angular:app ${webpackApp} --bundler=webpack --ssr --project-name-and-root-format=as-provided --no-interactive`
+      `generate @titan/angular:app ${webpackApp} --bundler=webpack --ssr --project-name-and-root-format=as-provided --no-interactive`
     );
 
     // check build only produces the browser bundle
@@ -610,7 +610,7 @@ describe('Angular Projects', () => {
 
     // convert target with webpack-based executors to use the application executor
     runCLI(
-      `generate @nx/angular:convert-to-application-executor ${webpackApp}`
+      `generate @titan/angular:convert-to-application-executor ${webpackApp}`
     );
 
     // check build now produces both the browser and server bundles

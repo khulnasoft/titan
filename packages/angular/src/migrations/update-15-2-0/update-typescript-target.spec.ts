@@ -4,9 +4,9 @@ import {
   Tree,
   updateProjectConfiguration,
   writeJson,
-} from '@nx/devkit';
-import * as devkit from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import * as devkit from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { generateTestApplication } from '../../generators/utils/testing';
 import { UnitTestRunner } from '../../utils/test-runners';
 import updateTypescriptTarget from './update-typescript-target';

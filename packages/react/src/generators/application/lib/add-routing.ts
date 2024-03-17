@@ -3,7 +3,7 @@ import {
   Tree,
   applyChangesToString,
   addDependenciesToPackageJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { ensureTypescript } from '@nx/js/src/utils/typescript/ensure-typescript';
 import { addInitialRoutes } from '../../../utils/ast-utils';
 import { reactRouterDomVersion } from '../../../utils/versions';

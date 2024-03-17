@@ -4,7 +4,7 @@ import {
   readProjectConfiguration,
   offsetFromRoot,
   joinPathFragments,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 export function addFileToRemoteTsconfig(
   tree: Tree,

@@ -3,8 +3,8 @@ import {
   formatFiles,
   getProjects,
   updateProjectConfiguration,
-} from '@nx/devkit';
-import { forEachExecutorOptions } from '@nx/devkit/src/generators/executor-options-utils';
+} from '@titan/devkit';
+import { forEachExecutorOptions } from '@titan/devkit/src/generators/executor-options-utils';
 import { NxPluginE2EExecutorOptions } from '../../executors/e2e/schema';
 
 export default async function replaceE2EExecutor(tree: Tree): Promise<void> {
@@ -29,7 +29,7 @@ export default async function replaceE2EExecutor(tree: Tree): Promise<void> {
             ...(projectConfiguration.targets[target].dependsOn ?? []),
             options.target,
           ];
-          projectConfiguration.targets[target].executor = '@nx/jest:jest';
+          projectConfiguration.targets[target].executor = '@titan/jest:jest';
           projectConfiguration.targets[target].options = config;
         }
 

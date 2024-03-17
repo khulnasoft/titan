@@ -1,4 +1,4 @@
-import { Tree, addProjectConfiguration, readJson } from '@nx/devkit';
+import { Tree, addProjectConfiguration, readJson } from '@titan/devkit';
 
 import update from './simplify-eslint-patterns';
 import { createTreeWithEmptyWorkspace } from 'nx/src/devkit-testing-exports';
@@ -17,7 +17,7 @@ describe('simplify-eslint-patterns migration', () => {
       projectType: 'library',
       targets: {
         lint: {
-          executor: '@nx/eslint:lint',
+          executor: '@titan/eslint:lint',
           options: {
             lintFilePatterns: ['libs/test-lib/**/*.{ts,html}'],
           },
@@ -30,7 +30,7 @@ describe('simplify-eslint-patterns migration', () => {
     const projJson = readJson(tree, 'libs/test-lib/project.json');
     expect(projJson.targets.lint).toMatchInlineSnapshot(`
       {
-        "executor": "@nx/eslint:lint",
+        "executor": "@titan/eslint:lint",
       }
     `);
   });
@@ -41,7 +41,7 @@ describe('simplify-eslint-patterns migration', () => {
       projectType: 'library',
       targets: {
         lint: {
-          executor: '@nx/eslint:lint',
+          executor: '@titan/eslint:lint',
           options: {
             lintFilePatterns: ['libs/test-lib/**/*.{ts,html}'],
             ignorePatterns: ['**/node_modules/**'],
@@ -55,7 +55,7 @@ describe('simplify-eslint-patterns migration', () => {
     const projJson = readJson(tree, 'libs/test-lib/project.json');
     expect(projJson.targets.lint).toMatchInlineSnapshot(`
       {
-        "executor": "@nx/eslint:lint",
+        "executor": "@titan/eslint:lint",
         "options": {
           "ignorePatterns": [
             "**/node_modules/**",
@@ -71,7 +71,7 @@ describe('simplify-eslint-patterns migration', () => {
       projectType: 'library',
       targets: {
         lint: {
-          executor: '@nx/eslint:lint',
+          executor: '@titan/eslint:lint',
           options: {
             lintFilePatterns: [
               'libs/test-lib/**/*.ts',
@@ -88,7 +88,7 @@ describe('simplify-eslint-patterns migration', () => {
     const projJson = readJson(tree, 'libs/test-lib/project.json');
     expect(projJson.targets.lint).toMatchInlineSnapshot(`
       {
-        "executor": "@nx/eslint:lint",
+        "executor": "@titan/eslint:lint",
       }
     `);
   });
@@ -99,7 +99,7 @@ describe('simplify-eslint-patterns migration', () => {
       projectType: 'library',
       targets: {
         lint: {
-          executor: '@nx/eslint:lint',
+          executor: '@titan/eslint:lint',
           options: {
             lintFilePatterns: [
               'libs/test-lib/**/*.ts',
@@ -129,7 +129,7 @@ describe('simplify-eslint-patterns migration', () => {
       projectType: 'library',
       targets: {
         lint: {
-          executor: '@nx/eslint:lint',
+          executor: '@titan/eslint:lint',
           options: {
             lintFilePatterns: ['./src/**/*.{ts,html}'],
           },

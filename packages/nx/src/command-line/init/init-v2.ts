@@ -54,7 +54,7 @@ export async function initHandler(options: InitArgs): Promise<void> {
     return;
   }
 
-  // TODO(jack): Remove this Angular logic once `@nx/angular` is compatible with inferred targets.
+  // TODO(jack): Remove this Angular logic once `@titan/angular` is compatible with inferred targets.
   if (existsSync('angular.json')) {
     await addNxToAngularCliRepo({
       ...options,
@@ -140,7 +140,7 @@ export async function initHandler(options: InitArgs): Promise<void> {
 
 const npmPackageToPluginMap: Record<string, string> = {
   // Generic JS tools
-  eslint: '@nx/eslint',
+  eslint: '@titan/eslint',
   storybook: '@nx/storybook',
   // Bundlers
   vite: '@nx/vite',
@@ -148,13 +148,13 @@ const npmPackageToPluginMap: Record<string, string> = {
   webpack: '@nx/webpack',
   rollup: '@nx/rollup',
   // Testing tools
-  jest: '@nx/jest',
-  cypress: '@nx/cypress',
-  '@playwright/test': '@nx/playwright',
+  jest: '@titan/jest',
+  cypress: '@titan/cypress',
+  '@playwright/test': '@titan/playwright',
   // Frameworks
   detox: '@nx/detox',
   expo: '@nx/expo',
-  next: '@nx/next',
+  next: '@titan/next',
   nuxt: '@nx/nuxt',
   'react-native': '@nx/react-native',
   '@remix-run/dev': '@nx/remix',

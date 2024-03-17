@@ -3,9 +3,9 @@ import {
   readJson,
   readProjectConfiguration,
   Tree,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { Linter } from '@nx/eslint/src/generators/utils/linter';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { Linter } from '@titan/eslint/src/generators/utils/linter';
 
 import detoxApplicationGenerator from './application';
 

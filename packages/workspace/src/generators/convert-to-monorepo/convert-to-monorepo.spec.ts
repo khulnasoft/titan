@@ -1,5 +1,5 @@
-import { readJson, readProjectConfiguration, Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { readJson, readProjectConfiguration, Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { monorepoGenerator } from './convert-to-monorepo';
 
 // nx-ignore-next-line
@@ -7,7 +7,7 @@ const { libraryGenerator } = require('@nx/js');
 // nx-ignore-next-line
 const { applicationGenerator: reactAppGenerator } = require('@nx/react');
 // nx-ignore-next-line
-const { applicationGenerator: nextAppGenerator } = require('@nx/next');
+const { applicationGenerator: nextAppGenerator } = require('@titan/next');
 
 describe('monorepo generator', () => {
   let tree: Tree;

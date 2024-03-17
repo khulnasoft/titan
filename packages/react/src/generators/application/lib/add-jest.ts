@@ -1,4 +1,4 @@
-import { ensurePackage, GeneratorCallback, Tree } from '@nx/devkit';
+import { ensurePackage, GeneratorCallback, Tree } from '@titan/devkit';
 import { NormalizedSchema } from '../schema';
 import { nxVersion } from '../../../utils/versions';
 
@@ -10,8 +10,8 @@ export async function addJest(
     return () => {};
   }
 
-  const { configurationGenerator } = ensurePackage<typeof import('@nx/jest')>(
-    '@nx/jest',
+  const { configurationGenerator } = ensurePackage<typeof import('@titan/jest')>(
+    '@titan/jest',
     nxVersion
   );
 

@@ -1,4 +1,4 @@
-import { formatFiles, type Tree } from '@nx/devkit';
+import { formatFiles, type Tree } from '@titan/devkit';
 import { addV2ErrorBoundary, normalizeOptions } from './lib';
 import type { ErrorBoundarySchema } from './schema';
 

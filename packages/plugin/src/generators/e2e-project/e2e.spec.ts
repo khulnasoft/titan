@@ -5,8 +5,8 @@ import {
   readJson,
   getProjects,
   writeJson,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { e2eProjectGenerator } from './e2e';
 
 describe('NxPlugin e2e-project Generator', () => {
@@ -130,7 +130,7 @@ describe('NxPlugin e2e-project Generator', () => {
         "dependsOn": [
           "^build",
         ],
-        "executor": "@nx/jest:jest",
+        "executor": "@titan/jest:jest",
         "options": {
           "jestConfig": "apps/my-plugin-e2e/jest.config.ts",
           "runInBand": true,

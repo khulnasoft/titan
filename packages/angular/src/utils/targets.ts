@@ -1,4 +1,4 @@
-import { TargetConfiguration } from '@nx/devkit';
+import { TargetConfiguration } from '@titan/devkit';
 
 export function* allTargetOptions<T>(
   target: TargetConfiguration<T>

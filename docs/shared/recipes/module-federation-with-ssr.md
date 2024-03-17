@@ -23,14 +23,14 @@ NX   Let's create a new workspace [https://nx.dev/getting-started/intro]
 ### Install your framework plugin
 
 {% callout type="note" title="Keep Nx Package Versions In Sync" %}
-Make sure to install the `@nx/angular` or `@nx/react` versions that matches the version of `nx` in your repository. If the version numbers get out of sync, you can encounter some difficult to debug errors. You can [fix Nx version mismatches with this recipe](/recipes/tips-n-tricks/keep-nx-versions-in-sync).
+Make sure to install the `@titan/angular` or `@nx/react` versions that matches the version of `nx` in your repository. If the version numbers get out of sync, you can encounter some difficult to debug errors. You can [fix Nx version mismatches with this recipe](/recipes/tips-n-tricks/keep-nx-versions-in-sync).
 {% /callout %}
 
 {% tabs %}
 
 {% tab label="Angular" %}
 
-```{% command="nx add @nx/angular" path="~/myorg" %}
+```{% command="nx add @titan/angular" path="~/myorg" %}
 
 ```
 
@@ -61,7 +61,7 @@ Nx allows you to do this with a single command:
 
 {% tab label="Angular" %}
 
-```{% command="npx nx g @nx/angular:host store --ssr --remotes=product,checkout" path="~/myorg" %}
+```{% command="npx nx g @titan/angular:host store --ssr --remotes=product,checkout" path="~/myorg" %}
 
 ```
 

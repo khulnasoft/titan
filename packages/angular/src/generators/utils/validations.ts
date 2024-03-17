@@ -1,5 +1,5 @@
-import type { Tree } from '@nx/devkit';
-import { getProjects } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
+import { getProjects } from '@titan/devkit';
 
 export function validateProject(tree: Tree, projectName: string): void {
   const projects = getProjects(tree);

@@ -1,4 +1,4 @@
-import { readJsonFile } from '@nx/devkit';
+import { readJsonFile } from '@titan/devkit';
 import { existsSync } from 'fs';
 import { PackageJson } from 'nx/src/utils/package-json';
 import { isTerminalRun } from './runtime-lint-utils';

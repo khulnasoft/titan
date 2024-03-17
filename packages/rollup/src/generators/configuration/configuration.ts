@@ -7,13 +7,13 @@ import {
   runTasksInSerial,
   updateProjectConfiguration,
   writeJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { getImportPath } from '@nx/js/src/utils/get-import-path';
 
 import { rollupInitGenerator } from '../init/init';
 import { RollupExecutorOptions } from '../../executors/rollup/schema';
 import { RollupProjectSchema } from './schema';
-import { addBuildTargetDefaults } from '@nx/devkit/src/generators/add-build-target-defaults';
+import { addBuildTargetDefaults } from '@titan/devkit/src/generators/add-build-target-defaults';
 import { ensureDependencies } from '../../utils/ensure-dependencies';
 
 export async function configurationGenerator(

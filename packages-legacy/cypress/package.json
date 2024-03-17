@@ -30,12 +30,12 @@
   "schematics": "./generators.json",
   "builders": "./executors.json",
   "dependencies": {
-    "@nx/cypress": "file:../../packages/cypress"
+    "@titan/cypress": "file:../../packages/cypress"
   },
   "publishConfig": {
     "access": "public"
   },
   "nx-migrations": {
-    "migrations": "@nx/cypress/migrations.json"
+    "migrations": "@titan/cypress/migrations.json"
   }
 }

@@ -4,7 +4,7 @@ import {
   getProjects,
   updateProjectConfiguration,
   workspaceRoot,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 import { runCliUpgrade } from '../../executors/upgrade/upgrade.impl';
 

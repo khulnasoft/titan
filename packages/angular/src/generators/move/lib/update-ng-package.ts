@@ -5,7 +5,7 @@ import {
   Tree,
   updateJson,
   workspaceRoot,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { join, relative } from 'path';
 import type { MoveImplOptions } from './types';
 

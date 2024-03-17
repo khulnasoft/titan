@@ -1,10 +1,10 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import {
   formatFiles,
   generateFiles,
   joinPathFragments,
   names,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { addToNgModule, findModule } from '../utils';
 import { normalizeOptions } from './lib';
 import type { Schema } from './schema';

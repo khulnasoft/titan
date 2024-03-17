@@ -6,12 +6,12 @@ import {
   readJson,
   runTasksInSerial,
   stripIndents,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { Schema } from './schema';
 
 import { remoteGeneratorInternal } from '../remote/remote';
 import { addPathToExposes, checkRemoteExists } from './lib/utils';
-import { determineProjectNameAndRootOptions } from '@nx/devkit/src/generators/project-name-and-root-utils';
+import { determineProjectNameAndRootOptions } from '@titan/devkit/src/generators/project-name-and-root-utils';
 import { addTsConfigPath, getRootTsConfigPathInTree } from '@nx/js';
 
 export async function federateModuleGenerator(tree: Tree, schema: Schema) {

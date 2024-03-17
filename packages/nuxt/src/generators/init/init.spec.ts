@@ -1,5 +1,5 @@
-import { readJson, readNxJson, Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { readJson, readNxJson, Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { nuxtInitGenerator } from './init';
 
 describe('init', () => {

@@ -1,4 +1,4 @@
-import { ExecutorContext } from '@nx/devkit';
+import { ExecutorContext } from '@titan/devkit';
 
 import { ensureNodeModulesSymlink } from '../../utils/ensure-node-modules-symlink';
 

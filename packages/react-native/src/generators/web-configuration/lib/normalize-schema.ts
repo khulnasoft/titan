@@ -1,4 +1,4 @@
-import { Tree, getProjects, names, offsetFromRoot } from '@nx/devkit';
+import { Tree, getProjects, names, offsetFromRoot } from '@titan/devkit';
 import { WebConfigurationGeneratorSchema } from '../schema';
 
 export interface NormalizedSchema extends WebConfigurationGeneratorSchema {

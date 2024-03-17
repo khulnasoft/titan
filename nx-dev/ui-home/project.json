@@ -7,7 +7,7 @@
   "targets": {
     "lint": {},
     "xtest": {
-      "executor": "@nx/jest:jest",
+      "executor": "@titan/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/nx-dev/ui-home"],
       "options": {
         "jestConfig": "nx-dev/ui-home/jest.config.ts"

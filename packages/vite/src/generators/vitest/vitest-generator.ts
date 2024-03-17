@@ -10,7 +10,7 @@ import {
   runTasksInSerial,
   Tree,
   updateJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import {
   addOrChangeTestTarget,
   createOrEditViteConfig,

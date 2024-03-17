@@ -5,8 +5,8 @@ import {
   readProjectConfiguration,
   runTasksInSerial,
   Tree,
-} from '@nx/devkit';
-import { Linter, lintProjectGenerator } from '@nx/eslint';
+} from '@titan/devkit';
+import { Linter, lintProjectGenerator } from '@titan/eslint';
 import { installedCypressVersion } from './cypress-version';
 import { eslintPluginCypressVersion } from './versions';
 import {
@@ -16,11 +16,11 @@ import {
   findEslintFile,
   isEslintConfigSupported,
   replaceOverridesInLintConfig,
-} from '@nx/eslint/src/generators/utils/eslint-file';
+} from '@titan/eslint/src/generators/utils/eslint-file';
 import {
   javaScriptOverride,
   typeScriptOverride,
-} from '@nx/eslint/src/generators/init/global-eslint-config';
+} from '@titan/eslint/src/generators/init/global-eslint-config';
 
 export interface CyLinterOptions {
   project: string;

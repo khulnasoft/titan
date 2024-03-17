@@ -5,8 +5,8 @@ import {
   runTasksInSerial,
   Tree,
   updateJson,
-} from '@nx/devkit';
-import { Linter } from '@nx/eslint';
+} from '@titan/devkit';
+import { Linter } from '@titan/eslint';
 import { PackageJson } from 'nx/src/utils/package-json';
 import { pluginGenerator } from '../plugin/plugin';
 import { PresetGeneratorSchema } from './schema';

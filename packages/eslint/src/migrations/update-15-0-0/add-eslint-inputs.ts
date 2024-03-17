@@ -4,7 +4,7 @@ import {
   readNxJson,
   Tree,
   updateNxJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { getEslintTargets } from '../../generators/utils/eslint-targets';
 import { ESLINT_CONFIG_FILENAMES } from '../../utils/config-file';
 

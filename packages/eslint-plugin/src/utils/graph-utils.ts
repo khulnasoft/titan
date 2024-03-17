@@ -3,7 +3,7 @@ import type {
   ProjectFileMap,
   ProjectGraph,
   ProjectGraphProjectNode,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import {
   DependencyType,
   fileDataDepTarget,

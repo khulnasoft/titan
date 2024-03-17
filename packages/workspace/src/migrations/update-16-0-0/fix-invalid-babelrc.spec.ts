@@ -4,8 +4,8 @@ import {
   Tree,
   updateJson,
   writeJson,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import update from './fix-invalid-babelrc';
 
 describe('fix-invalid-babelrc', () => {

@@ -336,7 +336,7 @@ export default defineConfig({
 
 Now if you look at project details view again, you'll see that the `outputs` property for Nx's caching has been updated to stay in sync with the setting in the `vite.config.ts` file.
 
-You can also add the `@nx/eslint` plugin to see how it infers `lint` tasks based on the ESLint configuration files.
+You can also add the `@titan/eslint` plugin to see how it infers `lint` tasks based on the ESLint configuration files.
 
 ## Summary
 

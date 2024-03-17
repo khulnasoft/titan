@@ -1,8 +1,8 @@
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { addProjectConfiguration, Tree, writeJson } from '@nx/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { addProjectConfiguration, Tree, writeJson } from '@titan/devkit';
 
 import { generatorGenerator } from './generator';
-import { setCwd } from '@nx/devkit/internal-testing-utils';
+import { setCwd } from '@titan/devkit/internal-testing-utils';
 
 describe('create-nodes-plugin/generator generator', () => {
   let tree: Tree;
@@ -42,7 +42,7 @@ describe('create-nodes-plugin/generator generator', () => {
 
   it('should add the plugin path to package.json exports', async () => {
     writeJson(tree, 'packages/eslint/package.json', {
-      name: '@nx/eslint',
+      name: '@titan/eslint',
       version: '0.0.1',
       private: false,
       description: 'Some description',
@@ -67,7 +67,7 @@ describe('create-nodes-plugin/generator generator', () => {
         migrations: './migrations.json',
       },
       dependencies: {
-        '@nx/devkit': 'file:../devkit',
+        '@titan/devkit': 'file:../devkit',
       },
       peerDependencies: {},
       publishConfig: {

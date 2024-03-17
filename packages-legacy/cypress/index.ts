@@ -1,1 +1,1 @@
-export * from '@nx/cypress';
+export * from '@titan/cypress';

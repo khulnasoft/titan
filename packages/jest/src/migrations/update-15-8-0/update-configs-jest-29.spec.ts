@@ -1,16 +1,16 @@
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import {
   ProjectGraph,
   readProjectConfiguration,
   Tree,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { updateConfigsJest29 } from './update-configs-jest-29';
 import { libraryGenerator } from '@nx/js';
 
 let projectGraph: ProjectGraph;
-jest.mock('@nx/devkit', () => ({
-  ...jest.requireActual<any>('@nx/devkit'),
+jest.mock('@titan/devkit', () => ({
+  ...jest.requireActual<any>('@titan/devkit'),
   createProjectGraphAsync: jest.fn().mockImplementation(async () => {
     return projectGraph;
   }),
@@ -463,7 +463,7 @@ preset: '../../jest.preset.js'
     tree
       .read('jest.config.ts')
       .toString()
-      .replace(new RegExp('@nx/jest', 'g'), '@nrwl/jest')
+      .replace(new RegExp('@titan/jest', 'g'), '@nrwl/jest')
   );
 
   tree.write(
@@ -471,7 +471,7 @@ preset: '../../jest.preset.js'
     tree
       .read('jest.preset.js')
       .toString()
-      .replace(new RegExp('@nx/jest', 'g'), '@nrwl/jest')
+      .replace(new RegExp('@titan/jest', 'g'), '@nrwl/jest')
   );
 
   projectGraph = {

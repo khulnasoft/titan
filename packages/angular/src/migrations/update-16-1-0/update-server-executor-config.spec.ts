@@ -1,12 +1,12 @@
-import type { Tree } from '@nx/devkit';
-import { addProjectConfiguration, readProjectConfiguration } from '@nx/devkit';
-import * as devkit from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import type { Tree } from '@titan/devkit';
+import { addProjectConfiguration, readProjectConfiguration } from '@titan/devkit';
+import * as devkit from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import migration from './update-server-executor-config';
 
 describe.each([
   '@angular-devkit/build-angular:server',
-  '@nx/angular:server',
+  '@titan/angular:server',
   '@nrwl/angular:server',
 ])('update-server-executor-config migration', (executor) => {
   let tree: Tree;

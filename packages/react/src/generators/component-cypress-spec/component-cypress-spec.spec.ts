@@ -1,6 +1,6 @@
-import { Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { Linter } from '@nx/eslint';
+import { Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { Linter } from '@titan/eslint';
 import { formatFile } from '../../utils/format-file';
 import applicationGenerator from '../application/application';
 import libraryGenerator from '../library/library';

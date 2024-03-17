@@ -9,28 +9,28 @@ description: The Nx Plugin for Jest contains executors and generators that suppo
 - Snapshot testing for validating features.
 - Great built-in reporter for printing out test results.
 
-## Setting Up @nx/jest
+## Setting Up @titan/jest
 
 ### Installation
 
 {% callout type="note" title="Keep Nx Package Versions In Sync" %}
-Make sure to install the `@nx/jest` version that matches the version of `nx` in your repository. If the version numbers get out of sync, you can encounter some difficult to debug errors. You can [fix Nx version mismatches with this recipe](/recipes/tips-n-tricks/keep-nx-versions-in-sync).
+Make sure to install the `@titan/jest` version that matches the version of `nx` in your repository. If the version numbers get out of sync, you can encounter some difficult to debug errors. You can [fix Nx version mismatches with this recipe](/recipes/tips-n-tricks/keep-nx-versions-in-sync).
 {% /callout %}
 
-In any Nx workspace, you can install `@nx/jest` by running the following command:
+In any Nx workspace, you can install `@titan/jest` by running the following command:
 
 {% tabs %}
 {% tab label="Nx 18+" %}
 
 ```shell {% skipRescope=true %}
-nx add @nx/jest
+nx add @titan/jest
 ```
 
-This will install the correct version of `@nx/jest`.
+This will install the correct version of `@titan/jest`.
 
-### How @nx/jest Infers Tasks
+### How @titan/jest Infers Tasks
 
-The `@nx/jest` plugin will create a task for any project that has an Jest configuration file present. Any of the following files will be recognized as an Jest configuration file:
+The `@titan/jest` plugin will create a task for any project that has an Jest configuration file present. Any of the following files will be recognized as an Jest configuration file:
 
 - `jest.config.js`
 - `jest.config.ts`
@@ -43,15 +43,15 @@ The `@nx/jest` plugin will create a task for any project that has an Jest config
 
 To view inferred tasks for a project, open the [project details view](/concepts/inferred-tasks) in Nx Console or run `nx show project my-project --web` in the command line.
 
-### @nx/jest Configuration
+### @titan/jest Configuration
 
-The `@nx/jest/plugin` is configured in the `plugins` array in `nx.json`.
+The `@titan/jest/plugin` is configured in the `plugins` array in `nx.json`.
 
 ```json {% fileName="nx.json" %}
 {
   "plugins": [
     {
-      "plugin": "@nx/jest/plugin",
+      "plugin": "@titan/jest/plugin",
       "options": {
         "targetName": "test"
       }
@@ -65,10 +65,10 @@ The `@nx/jest/plugin` is configured in the `plugins` array in `nx.json`.
 {% /tab %}
 {% tab label="Nx < 18" %}
 
-Install the `@nx/jest` package with your package manager.
+Install the `@titan/jest` package with your package manager.
 
 ```shell
-npm add -D @nx/jest
+npm add -D @titan/jest
 ```
 
 {% /tab %}
@@ -89,7 +89,7 @@ nx g @nx/web:app frontend
 Run the `configuration` generator
 
 ```shell
-nx g @nx/jest:configuration --project=<project-name>
+nx g @titan/jest:configuration --project=<project-name>
 ```
 
 > Hint: You can use the `--dry-run` flag to see what will be generated.
@@ -157,12 +157,12 @@ Primary configurations for Jest will be via the `jest.config.ts` file that gener
 The root level `jest.config.ts` file configures [Jest multi project support](https://jestjs.io/docs/configuration#projects-arraystring--projectconfig).
 This configuration allows editor/IDE integrations to pick up individual project's configurations rather than the one at the root.
 
-The set of Jest projects within Nx workspaces tends to change. Instead of statically defining a list in `jest.config.ts`, Nx provides a utility function called `getJestProjects` which queries for Jest configurations defined for targets which use the `@nx/jest:jest` executor.
+The set of Jest projects within Nx workspaces tends to change. Instead of statically defining a list in `jest.config.ts`, Nx provides a utility function called `getJestProjects` which queries for Jest configurations defined for targets which use the `@titan/jest:jest` executor.
 
 You can add Jest projects which are not included in `getJestProjects()`, because they do not use the Nx Jest executor, by doing something like the following:
 
 ```typescript {% fileName="jest.config.ts"}
-import { getJestProjects } from '@nx/jest';
+import { getJestProjects } from '@titan/jest';
 
 export default {
   projects: [...getJestProjects(), '<rootDir>/path/to/jest.config.ts'],
@@ -257,4 +257,4 @@ export default async function () {
 ## More Documentation
 
 - [Jest Docs](https://jestjs.io/)
-- [@nx/jest options](/nx-api/jest)
+- [@titan/jest options](/nx-api/jest)

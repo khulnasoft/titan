@@ -3,7 +3,7 @@ import {
   detectPackageManager,
   readJson,
   type Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { gte } from 'semver';
 import {
   getInstalledStorybookVersion,

@@ -1,4 +1,4 @@
-import { readJson, Tree } from '@nx/devkit';
+import { readJson, Tree } from '@titan/devkit';
 import * as path from 'path';
 import { NormalizedSchema } from '../schema';
 

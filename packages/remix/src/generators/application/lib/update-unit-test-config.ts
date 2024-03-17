@@ -5,7 +5,7 @@ import {
   type Tree,
   updateJson,
   workspaceRoot,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import {
   updateJestTestSetup,
   updateVitestTestIncludes,

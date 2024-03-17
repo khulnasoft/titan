@@ -1,4 +1,4 @@
-import { type Tree, addDependenciesToPackageJson } from '@nx/devkit';
+import { type Tree, addDependenciesToPackageJson } from '@titan/devkit';
 import {
   eslintVersion,
   isbotVersion,

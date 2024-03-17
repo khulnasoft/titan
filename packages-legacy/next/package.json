@@ -27,12 +27,12 @@
   "schematics": "./generators.json",
   "builders": "./executors.json",
   "dependencies": {
-    "@nx/next": "file:../../packages/next"
+    "@titan/next": "file:../../packages/next"
   },
   "publishConfig": {
     "access": "public"
   },
   "nx-migrations": {
-    "migrations": "@nx/next/migrations.json"
+    "migrations": "@titan/next/migrations.json"
   }
 }

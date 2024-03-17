@@ -1,4 +1,4 @@
-import { names, Tree } from '@nx/devkit';
+import { names, Tree } from '@titan/devkit';
 import { insertImport } from '@nx/js';
 import { addImportToModule } from '../../../utils/nx-devkit/ast-utils';
 import { NormalizedSchema } from './normalized-schema';

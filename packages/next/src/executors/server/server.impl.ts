@@ -2,7 +2,7 @@ import {
   ExecutorContext,
   parseTargetString,
   readTargetOptions,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { join, resolve } from 'path';
 
 import {
@@ -12,7 +12,7 @@ import {
 import { fork } from 'child_process';
 import customServer from './custom-server.impl';
 import { createCliOptions } from '../../utils/create-cli-options';
-import { createAsyncIterable } from '@nx/devkit/src/utils/async-iterable';
+import { createAsyncIterable } from '@titan/devkit/src/utils/async-iterable';
 import { waitForPortOpen } from '@nx/web/src/utils/wait-for-port-open';
 
 export default async function* serveExecutor(
@@ -24,7 +24,7 @@ export default async function* serveExecutor(
     context
   );
   const projectRoot = context.workspace.projects[context.projectName].root;
-  // This is required for the default custom server to work. See the @nx/next:app generator.
+  // This is required for the default custom server to work. See the @titan/next:app generator.
   const nextDir =
     !options.dev && resolve(context.root, buildOptions.outputPath);
   process.env.NX_NEXT_DIR ??= options.dev ? projectRoot : nextDir;

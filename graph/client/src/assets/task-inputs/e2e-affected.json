@@ -18,7 +18,7 @@
       "libs/products/product-detail-page/tsconfig.lib.json",
       "libs/products/product-detail-page/tsconfig.spec.json"
     ],
-    "external": ["npm:@nx/eslint"]
+    "external": ["npm:@titan/eslint"]
   },
   "products-product-detail-page:test": {
     "general": [".gitignore", "babel.config.json", "jest.preset.js", "nx.json"],
@@ -75,7 +75,7 @@
       "npm:@jest/schemas",
       "npm:@jest/types",
       "npm:@ngrx/store",
-      "npm:@nx/jest",
+      "npm:@titan/jest",
       "npm:@sinclair/typebox",
       "npm:@sinonjs/commons",
       "npm:@sinonjs/fake-timers",
@@ -232,7 +232,7 @@
       "libs/shared/product/types/tsconfig.json",
       "libs/shared/product/types/tsconfig.lib.json"
     ],
-    "external": ["npm:@nx/eslint"]
+    "external": ["npm:@titan/eslint"]
   },
   "shared-product-state:lint": {
     "general": [".eslintrc.json", ".gitignore", "babel.config.json", "nx.json"],
@@ -256,7 +256,7 @@
       "libs/shared/product/state/tsconfig.lib.json",
       "libs/shared/product/state/tsconfig.spec.json"
     ],
-    "external": ["npm:@nx/eslint"]
+    "external": ["npm:@titan/eslint"]
   },
   "shared-product-state:test": {
     "general": [".gitignore", "babel.config.json", "jest.preset.js", "nx.json"],
@@ -313,7 +313,7 @@
       "npm:@jest/schemas",
       "npm:@jest/types",
       "npm:@ngrx/store",
-      "npm:@nx/jest",
+      "npm:@titan/jest",
       "npm:@sinclair/typebox",
       "npm:@sinonjs/commons",
       "npm:@sinonjs/fake-timers",
@@ -469,7 +469,7 @@
       "libs/shared/product/data/tsconfig.json",
       "libs/shared/product/data/tsconfig.lib.json"
     ],
-    "external": ["npm:@nx/eslint"]
+    "external": ["npm:@titan/eslint"]
   },
   "products-home-page:lint": {
     "general": [".eslintrc.json", ".gitignore", "babel.config.json", "nx.json"],
@@ -490,7 +490,7 @@
       "libs/products/home-page/tsconfig.lib.json",
       "libs/products/home-page/tsconfig.spec.json"
     ],
-    "external": ["npm:@nx/eslint"]
+    "external": ["npm:@titan/eslint"]
   },
   "products-home-page:test": {
     "general": [".gitignore", "babel.config.json", "jest.preset.js", "nx.json"],
@@ -556,7 +556,7 @@
       "npm:@jest/schemas",
       "npm:@jest/types",
       "npm:@ngrx/store",
-      "npm:@nx/jest",
+      "npm:@titan/jest",
       "npm:@sinclair/typebox",
       "npm:@sinonjs/commons",
       "npm:@sinonjs/fake-timers",
@@ -717,7 +717,7 @@
       "libs/shared/product/ui/tsconfig.lib.json",
       "libs/shared/product/ui/tsconfig.spec.json"
     ],
-    "external": ["npm:@nx/eslint"]
+    "external": ["npm:@titan/eslint"]
   },
   "shared-product-ui:test": {
     "general": [".gitignore", "babel.config.json", "jest.preset.js", "nx.json"],
@@ -745,7 +745,7 @@
       "libs/shared/jsxify/tsconfig.lib.json"
     ],
     "external": [
-      "npm:@nx/jest",
+      "npm:@titan/jest",
       "npm:document-register-element",
       "npm:lightercollective"
     ]
@@ -772,7 +772,7 @@
       "libs/shared/cart/state/tsconfig.lib.json",
       "libs/shared/cart/state/tsconfig.spec.json"
     ],
-    "external": ["npm:@nx/eslint"]
+    "external": ["npm:@titan/eslint"]
   },
   "shared-cart-state:test": {
     "general": [".gitignore", "babel.config.json", "jest.preset.js", "nx.json"],
@@ -841,7 +841,7 @@
       "npm:@jest/schemas",
       "npm:@jest/types",
       "npm:@ngrx/store",
-      "npm:@nx/jest",
+      "npm:@titan/jest",
       "npm:@sinclair/typebox",
       "npm:@sinonjs/commons",
       "npm:@sinonjs/fake-timers",
@@ -994,7 +994,7 @@
       "libs/shared/translate/tsconfig.json",
       "libs/shared/translate/tsconfig.lib.json"
     ],
-    "external": ["npm:@nx/eslint"]
+    "external": ["npm:@titan/eslint"]
   },
   "shared-e2e-utils:lint": {
     "general": [".eslintrc.json", ".gitignore", "babel.config.json", "nx.json"],
@@ -1007,7 +1007,7 @@
       "libs/shared/e2e-utils/tsconfig.json",
       "libs/shared/e2e-utils/tsconfig.lib.json"
     ],
-    "external": ["npm:@nx/eslint"]
+    "external": ["npm:@titan/eslint"]
   },
   "cart-cart-page:lint": {
     "general": [".eslintrc.json", ".gitignore", "babel.config.json", "nx.json"],
@@ -1025,7 +1025,7 @@
       "libs/cart/cart-page/tsconfig.lib.json",
       "libs/cart/cart-page/tsconfig.spec.json"
     ],
-    "external": ["npm:@nx/eslint"]
+    "external": ["npm:@titan/eslint"]
   },
   "cart-cart-page:test": {
     "general": [".gitignore", "babel.config.json", "jest.preset.js", "nx.json"],
@@ -1095,7 +1095,7 @@
       "npm:@emotion/unitless",
       "npm:@emotion/use-insertion-effect-with-fallbacks",
       "npm:@emotion/utils",
-      "npm:@nx/jest",
+      "npm:@titan/jest",
       "npm:@testing-library/dom",
       "npm:@testing-library/react",
       "npm:@types/aria-query",
@@ -1218,7 +1218,7 @@
       "libs/shared/header/tsconfig.lib.json",
       "libs/shared/header/tsconfig.spec.json"
     ],
-    "external": ["npm:@nx/eslint"]
+    "external": ["npm:@titan/eslint"]
   },
   "shared-header:test": {
     "general": [".gitignore", "babel.config.json", "jest.preset.js", "nx.json"],
@@ -1248,7 +1248,7 @@
       "libs/shared/header/tsconfig.spec.json"
     ],
     "external": [
-      "npm:@nx/jest",
+      "npm:@titan/jest",
       "npm:document-register-element",
       "npm:lightercollective"
     ]
@@ -1265,7 +1265,7 @@
       "libs/shared/jsxify/tsconfig.json",
       "libs/shared/jsxify/tsconfig.lib.json"
     ],
-    "external": ["npm:@nx/eslint"]
+    "external": ["npm:@titan/eslint"]
   },
   "products-e2e:e2e": {
     "general": [".gitignore", "babel.config.json", "nx.json"],
@@ -1310,7 +1310,7 @@
       "npm:@colors/colors",
       "npm:@cypress/request",
       "npm:@cypress/xvfb",
-      "npm:@nx/cypress",
+      "npm:@titan/cypress",
       "npm:@types/node",
       "npm:@types/node@16.18.48",
       "npm:@types/sinonjs__fake-timers",
@@ -1533,7 +1533,7 @@
       "npm:@colors/colors",
       "npm:@cypress/request",
       "npm:@cypress/xvfb",
-      "npm:@nx/cypress",
+      "npm:@titan/cypress",
       "npm:@types/node",
       "npm:@types/node@16.18.48",
       "npm:@types/sinonjs__fake-timers",
@@ -1726,7 +1726,7 @@
       "apps/products-e2e/src/support/e2e.ts",
       "apps/products-e2e/tsconfig.json"
     ],
-    "external": ["npm:@nx/eslint"]
+    "external": ["npm:@titan/eslint"]
   },
   "products:build": {
     "general": [
@@ -2989,7 +2989,7 @@
       "apps/products/tsconfig.json",
       "apps/products/tsconfig.spec.json"
     ],
-    "external": ["npm:@nx/eslint"]
+    "external": ["npm:@titan/eslint"]
   },
   "products:test": {
     "general": [".gitignore", "babel.config.json", "jest.preset.js", "nx.json"],
@@ -3081,7 +3081,7 @@
       "npm:@jest/schemas",
       "npm:@jest/types",
       "npm:@ngrx/store",
-      "npm:@nx/jest",
+      "npm:@titan/jest",
       "npm:@sinclair/typebox",
       "npm:@sinonjs/commons",
       "npm:@sinonjs/fake-timers",
@@ -3524,7 +3524,7 @@
       "npm:@colors/colors",
       "npm:@cypress/request",
       "npm:@cypress/xvfb",
-      "npm:@nx/cypress",
+      "npm:@titan/cypress",
       "npm:@types/node",
       "npm:@types/node@16.18.48",
       "npm:@types/sinonjs__fake-timers",
@@ -3746,7 +3746,7 @@
       "npm:@colors/colors",
       "npm:@cypress/request",
       "npm:@cypress/xvfb",
-      "npm:@nx/cypress",
+      "npm:@titan/cypress",
       "npm:@types/node",
       "npm:@types/node@16.18.48",
       "npm:@types/sinonjs__fake-timers",
@@ -3939,7 +3939,7 @@
       "apps/cart-e2e/src/support/e2e.ts",
       "apps/cart-e2e/tsconfig.json"
     ],
-    "external": ["npm:@nx/eslint"]
+    "external": ["npm:@titan/eslint"]
   },
   "cart:build:production": {
     "general": [".gitignore", "babel.config.json", "nx.json"],
@@ -4188,9 +4188,9 @@
       "npm:@nrwl/web",
       "npm:@nrwl/webpack",
       "npm:@nrwl/workspace",
-      "npm:@nx/devkit",
+      "npm:@titan/devkit",
       "npm:@nx/js",
-      "npm:@nx/eslint",
+      "npm:@titan/eslint",
       "npm:@nx/nx-darwin-arm64",
       "npm:@nx/nx-darwin-x64@18.0.5",
       "npm:@nx/nx-freebsd-x64@18.0.5",
@@ -5148,9 +5148,9 @@
       "npm:@nrwl/web",
       "npm:@nrwl/webpack",
       "npm:@nrwl/workspace",
-      "npm:@nx/devkit",
+      "npm:@titan/devkit",
       "npm:@nx/js",
-      "npm:@nx/eslint",
+      "npm:@titan/eslint",
       "npm:@nx/nx-darwin-arm64",
       "npm:@nx/nx-darwin-x64@18.0.5",
       "npm:@nx/nx-freebsd-x64@18.0.5",
@@ -6123,9 +6123,9 @@
       "npm:@nrwl/web",
       "npm:@nrwl/webpack",
       "npm:@nrwl/workspace",
-      "npm:@nx/devkit",
+      "npm:@titan/devkit",
       "npm:@nx/js",
-      "npm:@nx/eslint",
+      "npm:@titan/eslint",
       "npm:@nx/nx-darwin-arm64",
       "npm:@nx/nx-darwin-x64@18.0.5",
       "npm:@nx/nx-freebsd-x64@18.0.5",
@@ -7098,9 +7098,9 @@
       "npm:@nrwl/web",
       "npm:@nrwl/webpack",
       "npm:@nrwl/workspace",
-      "npm:@nx/devkit",
+      "npm:@titan/devkit",
       "npm:@nx/js",
-      "npm:@nx/eslint",
+      "npm:@titan/eslint",
       "npm:@nx/nx-darwin-arm64",
       "npm:@nx/nx-darwin-x64@18.0.5",
       "npm:@nx/nx-freebsd-x64@18.0.5",
@@ -7835,7 +7835,7 @@
       "apps/cart/tsconfig.spec.json",
       "apps/cart/webpack.config.js"
     ],
-    "external": ["npm:@nx/eslint"]
+    "external": ["npm:@titan/eslint"]
   },
   "cart:test": {
     "general": [".gitignore", "babel.config.json", "jest.preset.js", "nx.json"],
@@ -8089,10 +8089,10 @@
       "npm:@nrwl/web",
       "npm:@nrwl/webpack",
       "npm:@nrwl/workspace",
-      "npm:@nx/devkit",
-      "npm:@nx/jest",
+      "npm:@titan/devkit",
+      "npm:@titan/jest",
       "npm:@nx/js",
-      "npm:@nx/eslint",
+      "npm:@titan/eslint",
       "npm:@nx/nx-darwin-arm64",
       "npm:@nx/nx-darwin-x64@18.0.5",
       "npm:@nx/nx-freebsd-x64@18.0.5",
@@ -9070,9 +9070,9 @@
       "npm:@nrwl/web",
       "npm:@nrwl/webpack",
       "npm:@nrwl/workspace",
-      "npm:@nx/devkit",
+      "npm:@titan/devkit",
       "npm:@nx/js",
-      "npm:@nx/eslint",
+      "npm:@titan/eslint",
       "npm:@nx/nx-darwin-arm64",
       "npm:@nx/nx-darwin-x64@18.0.5",
       "npm:@nx/nx-freebsd-x64@18.0.5",

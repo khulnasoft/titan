@@ -1,5 +1,5 @@
-import { stripIndents } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { stripIndents } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { upsertLinksFunction } from './upsert-links-function';
 
 describe('upsertLinksFunctions', () => {

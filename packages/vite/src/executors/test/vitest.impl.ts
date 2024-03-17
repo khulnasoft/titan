@@ -1,4 +1,4 @@
-import { ExecutorContext, workspaceRoot } from '@nx/devkit';
+import { ExecutorContext, workspaceRoot } from '@titan/devkit';
 import { VitestExecutorOptions } from './schema';
 import { resolve } from 'path';
 import { registerTsConfigPaths } from '@nx/js/src/internal';

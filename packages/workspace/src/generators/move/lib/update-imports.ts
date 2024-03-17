@@ -10,7 +10,7 @@ import {
   readJson,
   visitNotIgnoredFiles,
   writeJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { relative } from 'path';
 import type * as ts from 'typescript';
 import { getImportPath } from '../../../utilities/get-import-path';

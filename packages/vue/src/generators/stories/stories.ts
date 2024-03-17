@@ -9,7 +9,7 @@ import {
   runTasksInSerial,
   Tree,
   visitNotIgnoredFiles,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { basename, join } from 'path';
 import { nxVersion } from '../../utils/versions';
 import { createComponentStories } from './lib/component-story';

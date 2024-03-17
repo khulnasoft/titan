@@ -7,7 +7,7 @@ import {
   type ProjectGraph,
   type ProjectGraphProjectNode,
   readJsonFile,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { fileExists } from 'nx/src/utils/fileutils';
 import { fileDataDepTarget } from 'nx/src/config/project-graph';
 import { readTsConfig } from './typescript/ts-config';

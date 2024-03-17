@@ -1,5 +1,5 @@
-import type { Tree } from '@nx/devkit';
-import { logger, visitNotIgnoredFiles } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
+import { logger, visitNotIgnoredFiles } from '@titan/devkit';
 import { basename } from 'path';
 
 const validBrowserslistConfigFilenames = new Set([

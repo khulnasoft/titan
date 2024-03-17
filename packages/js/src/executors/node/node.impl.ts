@@ -9,8 +9,8 @@ import {
   readTargetOptions,
   runExecutor,
   Target,
-} from '@nx/devkit';
-import { createAsyncIterable } from '@nx/devkit/src/utils/async-iterable';
+} from '@titan/devkit';
+import { createAsyncIterable } from '@titan/devkit/src/utils/async-iterable';
 import { daemonClient } from 'nx/src/daemon/client/client';
 import { randomUUID } from 'crypto';
 import * as path from 'path';

@@ -4,8 +4,8 @@ import {
   getProjects,
   runTasksInSerial,
   Tree,
-} from '@nx/devkit';
-import { determineProjectNameAndRootOptions } from '@nx/devkit/src/generators/project-name-and-root-utils';
+} from '@titan/devkit';
+import { determineProjectNameAndRootOptions } from '@titan/devkit/src/generators/project-name-and-root-utils';
 import { E2eTestRunner } from '../../utils/test-runners';
 import { applicationGenerator } from '../application/application';
 import { setupMf } from '../setup-mf/setup-mf';
@@ -38,7 +38,7 @@ export async function remoteInternal(tree: Tree, schema: Schema) {
       projectType: 'application',
       directory: options.directory,
       projectNameAndRootFormat: options.projectNameAndRootFormat,
-      callingGenerator: '@nx/angular:remote',
+      callingGenerator: '@titan/angular:remote',
     });
   options.projectNameAndRootFormat = projectNameAndRootFormat;
 

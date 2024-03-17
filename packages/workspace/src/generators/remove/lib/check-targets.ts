@@ -4,7 +4,7 @@ import {
   parseTargetString,
   TargetConfiguration,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { Schema } from '../schema';
 
 /**

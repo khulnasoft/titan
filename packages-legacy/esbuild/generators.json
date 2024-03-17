@@ -1,4 +1,4 @@
 {
-  "extends": ["@nx/esbuild"],
+  "extends": ["@titan/esbuild"],
   "schematics": {}
 }

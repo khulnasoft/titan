@@ -3,7 +3,7 @@ import {
   getProjects,
   joinPathFragments,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { nxVersion } from '../../utils/versions';
 
 // Add @nx/webpack as needed.

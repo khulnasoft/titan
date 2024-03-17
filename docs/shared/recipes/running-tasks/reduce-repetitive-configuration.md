@@ -44,14 +44,14 @@ All three libraries have a similar project configuration. Here is what their `pr
       }
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
+      "executor": "@titan/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/lib1/**/*.ts"]
       }
     },
     "test": {
-      "executor": "@nx/jest:jest",
+      "executor": "@titan/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "jestConfig": "libs/lib1/jest.config.ts",
@@ -90,14 +90,14 @@ All three libraries have a similar project configuration. Here is what their `pr
       }
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
+      "executor": "@titan/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/lib2/**/*.ts"]
       }
     },
     "test": {
-      "executor": "@nx/jest:jest",
+      "executor": "@titan/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "jestConfig": "libs/lib2/jest.config.ts",
@@ -137,14 +137,14 @@ All three libraries have a similar project configuration. Here is what their `pr
       }
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
+      "executor": "@titan/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/lib3/**/*.ts"]
       }
     },
     "test": {
-      "executor": "@nx/jest:jest",
+      "executor": "@titan/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "jestConfig": "libs/lib3/jest.config.ts",
@@ -185,14 +185,14 @@ Let's use the `targetDefaults` property in `nx.json` to reduce some of this dupl
       }
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
+      "executor": "@titan/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["{projectRoot}/**/*.ts"]
       }
     },
     "test": {
-      "executor": "@nx/jest:jest",
+      "executor": "@titan/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "jestConfig": "{projectRoot}/jest.config.ts",

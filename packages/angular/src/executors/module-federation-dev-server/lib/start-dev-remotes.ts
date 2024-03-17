@@ -3,7 +3,7 @@ import {
   type ExecutorContext,
   type ProjectConfiguration,
   runExecutor,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 export async function startDevRemotes(
   remotes: {

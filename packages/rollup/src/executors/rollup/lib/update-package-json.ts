@@ -3,7 +3,7 @@ import { writeJsonFile } from 'nx/src/utils/fileutils';
 import { writeFileSync } from 'fs';
 import { PackageJson } from 'nx/src/utils/package-json';
 import { NormalizedRollupExecutorOptions } from './normalize';
-import { stripIndents } from '@nx/devkit';
+import { stripIndents } from '@titan/devkit';
 
 // TODO(jack): Use updatePackageJson from @nx/js instead.
 export function updatePackageJson(

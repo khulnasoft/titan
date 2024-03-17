@@ -48,15 +48,15 @@ The list of executors for building, testing and serving that can be converted to
 
 ### Unsupported executors
 
-- `@nx/angular:ng-packagr-lite`
-- `@nx/angular:package`
-- `@nx/angular:webpack-browser`
+- `@titan/angular:ng-packagr-lite`
+- `@titan/angular:package`
+- `@titan/angular:webpack-browser`
 - `@angular-devkit/build-angular:browser`
 - `@angular-devkit/build-angular:dev-server`
-- `@nx/esbuild:esbuild`
+- `@titan/esbuild:esbuild`
 - `@nx/react-native:start`
-- `@nx/next:build`
-- `@nx/next:server`
+- `@titan/next:build`
+- `@titan/next:server`
 - `@nx/js:tsc`
 - any executor _not_ listed in the lists of "supported executors"
 - any project that does _not_ have a target for building, serving or testing

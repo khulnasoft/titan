@@ -1,5 +1,5 @@
-import { logger } from '@nx/devkit';
-import { workspaceRoot } from '@nx/devkit';
+import { logger } from '@titan/devkit';
+import { workspaceRoot } from '@titan/devkit';
 import { existsSync } from 'fs';
 import { join, relative } from 'path';
 

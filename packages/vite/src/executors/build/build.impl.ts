@@ -6,7 +6,7 @@ import {
   offsetFromRoot,
   stripIndents,
   writeJsonFile,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import {
   getProjectTsConfigPath,
   normalizeViteConfigFilePath,
@@ -20,7 +20,7 @@ import {
 } from '@nx/js';
 import { existsSync, writeFileSync } from 'fs';
 import { relative, resolve } from 'path';
-import { createAsyncIterable } from '@nx/devkit/src/utils/async-iterable';
+import { createAsyncIterable } from '@titan/devkit/src/utils/async-iterable';
 import {
   createBuildableTsConfig,
   loadViteDynamicImport,

@@ -1,5 +1,5 @@
-import { addProjectConfiguration } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { addProjectConfiguration } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { directiveGenerator } from '../../directive/directive';
 import { convertDirectiveToScam } from './convert-directive-to-scam';
 

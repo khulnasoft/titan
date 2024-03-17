@@ -13,7 +13,7 @@ See below a direct comparison between `JSON`, `JS` and `Flat` config:
 ```js {% fileName="eslint.config.js" %}
 // the older versions were magically interpreting all the imports
 // in flat config we do it explicitly
-const nxPlugin = require('@nx/eslint-plugin');
+const nxPlugin = require('@titan/eslint-plugin');
 const js = require('@eslint/js');
 const baseConfig = require('./eslint.base.config.js');
 const globals = require('globals');
@@ -156,14 +156,14 @@ module.exports = {
 
 For additional details, head over to [ESLint's official blog post](https://eslint.org/blog/2022/08/new-config-system-part-2/).
 
-Since version 16.8.0, Nx supports the usage of flat config in the [@nx/eslint:lint](/nx-api/eslint/executors/lint) executor and `@nx/*` generators, and provides an automated config conversion from `.eslintrc.json` config files.
+Since version 16.8.0, Nx supports the usage of flat config in the [@titan/eslint:lint](/nx-api/eslint/executors/lint) executor and `@nx/*` generators, and provides an automated config conversion from `.eslintrc.json` config files.
 
 ## Converting workspace from .eslintrc.json to flat config
 
 To convert workspace ESLint configurations from the default `.eslintrc.json` to the new flat config you need to run:
 
 ```shell
- nx g @nx/eslint:convert-to-flat-config
+ nx g @titan/eslint:convert-to-flat-config
 ```
 
 The generator will go through all the projects and convert their configurations to the new format. It will also convert the base `.eslintrc.json` and `.eslintignore`.

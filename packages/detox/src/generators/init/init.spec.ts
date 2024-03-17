@@ -1,5 +1,5 @@
-import { Tree, readJson } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { Tree, readJson } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { detoxInitGenerator } from './init';
 
 describe('init', () => {

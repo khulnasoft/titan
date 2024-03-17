@@ -1,8 +1,8 @@
-import { formatFiles, getProjects, Tree } from '@nx/devkit';
+import { formatFiles, getProjects, Tree } from '@titan/devkit';
 import { createNodes } from '../../plugins/plugin';
 
 import { createProjectRootMappingsFromProjectConfigurations } from 'nx/src/project-graph/utils/find-project-for-path';
-import { replaceProjectConfigurationsWithPlugin } from '@nx/devkit/src/utils/replace-project-configuration-with-plugin';
+import { replaceProjectConfigurationsWithPlugin } from '@titan/devkit/src/utils/replace-project-configuration-with-plugin';
 
 export default async function update(tree: Tree) {
   const proj = Object.fromEntries(getProjects(tree).entries());

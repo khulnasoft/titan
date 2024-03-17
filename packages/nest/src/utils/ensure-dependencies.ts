@@ -1,5 +1,5 @@
-import type { GeneratorCallback, Tree } from '@nx/devkit';
-import { addDependenciesToPackageJson } from '@nx/devkit';
+import type { GeneratorCallback, Tree } from '@titan/devkit';
+import { addDependenciesToPackageJson } from '@titan/devkit';
 import {
   nestJsVersion,
   reflectMetadataVersion,

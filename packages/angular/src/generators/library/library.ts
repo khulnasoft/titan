@@ -4,8 +4,8 @@ import {
   installPackagesTask,
   joinPathFragments,
   Tree,
-} from '@nx/devkit';
-import { Linter } from '@nx/eslint';
+} from '@titan/devkit';
+import { Linter } from '@titan/eslint';
 import { addTsConfigPath, initGenerator as jsInitGenerator } from '@nx/js';
 import init from '../../generators/init/init';
 import addLintingGenerator from '../add-linting/add-linting';
@@ -31,7 +31,7 @@ import { addProject } from './lib/add-project';
 import { addJest } from '../utils/add-jest';
 import { setGeneratorDefaults } from './lib/set-generator-defaults';
 import { ensureAngularDependencies } from '../utils/ensure-angular-dependencies';
-import { logShowProjectCommand } from '@nx/devkit/src/utils/log-show-project-command';
+import { logShowProjectCommand } from '@titan/devkit/src/utils/log-show-project-command';
 
 export async function libraryGenerator(
   tree: Tree,

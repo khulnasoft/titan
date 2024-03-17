@@ -3,7 +3,7 @@ import {
   formatFiles,
   generateFiles,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import * as path from 'path';
 import { <%= className %>GeneratorSchema } from './schema';
 

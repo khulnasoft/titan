@@ -5,7 +5,7 @@ import {
   readProjectConfiguration,
   Tree,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 export async function runCommandsGenerator(host: Tree, schema: Schema) {
   const project = readProjectConfiguration(host, schema.project);

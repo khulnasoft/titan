@@ -5,8 +5,8 @@ import {
   ProjectConfiguration,
   readProjectConfiguration,
   Tree,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import * as allProjects from './test-configs/all-projects.json';
 import {
   addViteConfigFilePathInFrameworkOptions,

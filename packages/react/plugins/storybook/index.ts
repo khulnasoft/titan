@@ -4,7 +4,7 @@ import {
   logger,
   ProjectGraphProjectNode,
   workspaceRoot,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { composePluginsSync } from '@nx/webpack/src/utils/config';
 import { NormalizedWebpackExecutorOptions } from '@nx/webpack/src/executors/webpack/schema';
 import { join } from 'path';

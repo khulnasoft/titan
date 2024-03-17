@@ -510,12 +510,12 @@ describe('createPackageJson', () => {
 //
 //   describe('parsing "package.json" versions', () => {
 //     const appDependencies = [
-//       { source: 'app1', target: 'npm:@nx/devkit', type: 'static' },
+//       { source: 'app1', target: 'npm:@titan/devkit', type: 'static' },
 //       { source: 'app1', target: 'npm:typescript', type: 'static' },
 //     ];
 //
 //     const libDependencies = [
-//       { source: 'lib1', target: 'npm:@nx/devkit', type: 'static' },
+//       { source: 'lib1', target: 'npm:@titan/devkit', type: 'static' },
 //       { source: 'lib1', target: 'npm:tslib', type: 'static' },
 //       { source: 'lib1', target: 'npm:typescript', type: 'static' },
 //     ];
@@ -554,10 +554,10 @@ describe('createPackageJson', () => {
 //         },
 //       },
 //       externalNodes: {
-//         'npm:@nx/devkit': {
+//         'npm:@titan/devkit': {
 //           type: 'npm',
-//           name: 'npm:@nx/devkit',
-//           data: { version: '16.0.0', hash: '', packageName: '@nx/devkit' },
+//           name: 'npm:@titan/devkit',
+//           data: { version: '16.0.0', hash: '', packageName: '@titan/devkit' },
 //         },
 //         'npm:nx': {
 //           type: 'npm',
@@ -583,7 +583,7 @@ describe('createPackageJson', () => {
 //
 //     const rootPackageJson = () => ({
 //       dependencies: {
-//         '@nx/devkit': '~16.0.0',
+//         '@titan/devkit': '~16.0.0',
 //         nx: '> 14',
 //         typescript: '^4.8.2',
 //         tslib: '~2.4.0',
@@ -620,7 +620,7 @@ describe('createPackageJson', () => {
 //
 //       expect(createPackageJson('app1', graph)).toEqual({
 //         dependencies: {
-//           '@nx/devkit': '16.0.0',
+//           '@titan/devkit': '16.0.0',
 //           nx: '16.0.0',
 //           typescript: '4.9.5',
 //         },
@@ -652,7 +652,7 @@ describe('createPackageJson', () => {
 //
 //       expect(createPackageJson('app1', graph)).toEqual({
 //         dependencies: {
-//           '@nx/devkit': '16.0.0',
+//           '@titan/devkit': '16.0.0',
 //           nx: '16.0.0',
 //           random: '1.0.0',
 //           typescript: '^4.8.4',
@@ -675,7 +675,7 @@ describe('createPackageJson', () => {
 //
 //       expect(createPackageJson('lib1', graph)).toEqual({
 //         dependencies: {
-//           '@nx/devkit': '~16.0.0',
+//           '@titan/devkit': '~16.0.0',
 //           tslib: '~2.4.0',
 //           typescript: '^4.8.2',
 //         },
@@ -707,7 +707,7 @@ describe('createPackageJson', () => {
 //
 //       expect(createPackageJson('lib1', graph)).toEqual({
 //         dependencies: {
-//           '@nx/devkit': '~16.0.0',
+//           '@titan/devkit': '~16.0.0',
 //           random: '1.0.0',
 //           tslib: '~2.4.0',
 //           typescript: '^4.8.4',

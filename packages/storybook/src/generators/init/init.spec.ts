@@ -1,5 +1,5 @@
-import { readJson, type NxJsonConfiguration, type Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { readJson, type NxJsonConfiguration, type Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { initGenerator } from './init';
 
 describe('@nx/storybook:init', () => {

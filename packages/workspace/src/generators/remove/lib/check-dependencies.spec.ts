@@ -4,10 +4,10 @@ import {
   readProjectConfiguration,
   Tree,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { Schema } from '../schema';
 import { checkDependencies } from './check-dependencies';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 // import { libraryGenerator } from '../../library/library';
 // let projectGraph: ProjectGraph;
 // jest.mock('../../../core/project-graph', () => ({

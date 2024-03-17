@@ -1,6 +1,6 @@
-import { Tree, readNxJson } from '@nx/devkit';
-import { determineProjectNameAndRootOptions } from '@nx/devkit/src/generators/project-name-and-root-utils';
-import { Linter } from '@nx/eslint';
+import { Tree, readNxJson } from '@titan/devkit';
+import { determineProjectNameAndRootOptions } from '@titan/devkit/src/generators/project-name-and-root-utils';
+import { Linter } from '@titan/eslint';
 import type { Schema as NodeApplicationGeneratorOptions } from '@nx/node/src/generators/application/schema';
 import type { ApplicationGeneratorOptions, NormalizedOptions } from '../schema';
 

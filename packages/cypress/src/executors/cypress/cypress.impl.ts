@@ -1,4 +1,4 @@
-import { ExecutorContext, logger, stripIndents } from '@nx/devkit';
+import { ExecutorContext, logger, stripIndents } from '@titan/devkit';
 import { existsSync, readdirSync, unlinkSync } from 'fs';
 import { basename, dirname } from 'path';
 import { getTempTailwindPath } from '../../utils/ct-helpers';

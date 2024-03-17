@@ -1,5 +1,5 @@
 import * as npa from 'npm-package-arg';
-import { normalizePath } from '@nx/devkit';
+import { normalizePath } from '@titan/devkit';
 
 export function resolveVersionSpec(
   name: string,

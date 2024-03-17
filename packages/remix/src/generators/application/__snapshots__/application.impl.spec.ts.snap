@@ -145,7 +145,7 @@ export default function Index() {
 `;
 
 exports[`Remix Application Integrated Repo --projectNameAndRootFormat=as-provided --e2eTestRunner should generate a cypress e2e application for the app 1`] = `
-"import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
+"import { nxE2EPreset } from '@titan/cypress/plugins/cypress-preset';
 
 import { defineConfig } from 'cypress';
 
@@ -164,9 +164,9 @@ export default defineConfig({
 
 exports[`Remix Application Integrated Repo --projectNameAndRootFormat=as-provided --e2eTestRunner should generate a playwright e2e application for the app 1`] = `
 "import { defineConfig, devices } from '@playwright/test';
-import { nxE2EPreset } from '@nx/playwright/preset';
+import { nxE2EPreset } from '@titan/playwright/preset';
 
-import { workspaceRoot } from '@nx/devkit';
+import { workspaceRoot } from '@titan/devkit';
 
 // For CI, you may want to set BASE_URL to the deployed application.
 const baseURL = process.env['BASE_URL'] || 'http://localhost:4200';
@@ -659,7 +659,7 @@ export default function Index() {
 `;
 
 exports[`Remix Application Integrated Repo --projectNameAndRootFormat=derived --e2eTestRunner should generate a cypress e2e application for the app 1`] = `
-"import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
+"import { nxE2EPreset } from '@titan/cypress/plugins/cypress-preset';
 
 import { defineConfig } from 'cypress';
 
@@ -678,9 +678,9 @@ export default defineConfig({
 
 exports[`Remix Application Integrated Repo --projectNameAndRootFormat=derived --e2eTestRunner should generate a playwright e2e application for the app 1`] = `
 "import { defineConfig, devices } from '@playwright/test';
-import { nxE2EPreset } from '@nx/playwright/preset';
+import { nxE2EPreset } from '@titan/playwright/preset';
 
-import { workspaceRoot } from '@nx/devkit';
+import { workspaceRoot } from '@titan/devkit';
 
 // For CI, you may want to set BASE_URL to the deployed application.
 const baseURL = process.env['BASE_URL'] || 'http://localhost:4200';
@@ -1029,7 +1029,7 @@ export default function Index() {
 `;
 
 exports[`Remix Application Standalone Project Repo --e2eTestRunner should generate a cypress e2e application for the app 1`] = `
-"import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
+"import { nxE2EPreset } from '@titan/cypress/plugins/cypress-preset';
 
 import { defineConfig } from 'cypress';
 
@@ -1414,9 +1414,9 @@ exports[`Remix Application Standalone Project Repo should create the application
 
 exports[`Remix Application Standalone Project Repo should generate a playwright e2e application for the app 1`] = `
 "import { defineConfig, devices } from '@playwright/test';
-import { nxE2EPreset } from '@nx/playwright/preset';
+import { nxE2EPreset } from '@titan/playwright/preset';
 
-import { workspaceRoot } from '@nx/devkit';
+import { workspaceRoot } from '@titan/devkit';
 
 // For CI, you may want to set BASE_URL to the deployed application.
 const baseURL = process.env['BASE_URL'] || 'http://localhost:4200';

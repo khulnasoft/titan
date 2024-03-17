@@ -1,4 +1,4 @@
-import { ExecutorContext } from '@nx/devkit';
+import { ExecutorContext } from '@titan/devkit';
 import { ExecutorOptions } from '../../utils/schema';
 import { normalizeOptions } from './lib';
 import { createTypeScriptCompilationOptions } from './tsc.impl';

@@ -1,5 +1,5 @@
-import { capitalize } from '@nx/devkit/src/utils/string-utils';
-import { joinPathFragments } from '@nx/devkit';
+import { capitalize } from '@titan/devkit/src/utils/string-utils';
+import { joinPathFragments } from '@titan/devkit';
 import {
   checkFilesExist,
   cleanupProject,
@@ -22,14 +22,14 @@ import { mkdirSync, removeSync } from 'fs-extra';
 import { join } from 'path';
 import { checkApp } from './utils';
 
-describe('@nx/next (legacy)', () => {
+describe('@titan/next (legacy)', () => {
   let proj: string;
   let originalEnv: string;
   let packageManager;
 
   beforeAll(() => {
     proj = newProject({
-      packages: ['@nx/next'],
+      packages: ['@titan/next'],
     });
     packageManager = detectPackageManager(tmpProjPath());
     originalEnv = process.env.NODE_ENV;
@@ -42,7 +42,7 @@ describe('@nx/next (legacy)', () => {
 
   it('should build app and .next artifacts at the outputPath if provided by the CLI', () => {
     const appName = uniq('app');
-    runCLI(`generate @nx/next:app ${appName} --no-interactive --style=css`, {
+    runCLI(`generate @titan/next:app ${appName} --no-interactive --style=css`, {
       env: { NX_ADD_PLUGINS: 'false' },
     });
 
@@ -58,7 +58,7 @@ describe('@nx/next (legacy)', () => {
   it('should copy relative modules needed by the next.config.js file', async () => {
     const appName = uniq('app');
 
-    runCLI(`generate @nx/next:app ${appName} --style=css --no-interactive`, {
+    runCLI(`generate @titan/next:app ${appName} --style=css --no-interactive`, {
       env: { NX_ADD_PLUGINS: 'false' },
     });
 
@@ -80,7 +80,7 @@ describe('@nx/next (legacy)', () => {
 
   it('should build and install pruned lock file', () => {
     const appName = uniq('app');
-    runCLI(`generate @nx/next:app ${appName} --no-interactive --style=css`, {
+    runCLI(`generate @titan/next:app ${appName} --no-interactive --style=css`, {
       env: { NX_ADD_PLUGINS: 'false' },
     });
 
@@ -109,12 +109,12 @@ describe('@nx/next (legacy)', () => {
     const buildableLib = uniq('buildablelib');
 
     runCLI(
-      `generate @nx/next:app ${appName} --no-interactive --style=css --appDir=false`,
+      `generate @titan/next:app ${appName} --no-interactive --style=css --appDir=false`,
       {
         env: { NX_ADD_PLUGINS: 'false' },
       }
     );
-    runCLI(`generate @nx/next:lib ${nextLib} --no-interactive`, {
+    runCLI(`generate @titan/next:lib ${nextLib} --no-interactive`, {
       env: { NX_ADD_PLUGINS: 'false' },
     });
     runCLI(`generate @nx/js:lib ${jsLib} --no-interactive`, {
@@ -147,7 +147,7 @@ describe('@nx/next (legacy)', () => {
     // create a css file in node_modules so that it can be imported in a lib
     // to test that it works as expected
     updateFile(
-      'node_modules/@nx/next/test-styles.css',
+      'node_modules/@titan/next/test-styles.css',
       'h1 { background-color: red; }'
     );
 

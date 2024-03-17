@@ -2,7 +2,7 @@ import { join } from 'path';
 import { satisfies } from 'semver';
 import { AST } from 'jsonc-eslint-parser';
 import { type JSONLiteral } from 'jsonc-eslint-parser/lib/parser/ast';
-import { normalizePath, workspaceRoot, NX_VERSION } from '@nx/devkit';
+import { normalizePath, workspaceRoot, NX_VERSION } from '@titan/devkit';
 import { findNpmDependencies } from '@nx/js/src/utils/find-npm-dependencies';
 import { readProjectGraph } from '../utils/project-graph-utils';
 import { findProject, getSourceFilePath } from '../utils/runtime-lint-utils';

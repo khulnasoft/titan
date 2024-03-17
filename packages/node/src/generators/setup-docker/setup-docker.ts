@@ -9,7 +9,7 @@ import {
   runTasksInSerial,
   Tree,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 import { SetUpDockerOptions } from './schema';
 import { join } from 'path';

@@ -1,4 +1,4 @@
-import { Tree, readJson, updateJson } from '@nx/devkit';
+import { Tree, readJson, updateJson } from '@titan/devkit';
 import { createTreeWithEmptyWorkspace } from 'nx/src/devkit-testing-exports';
 import removePackage from './update-16-2-0-remove-package';
 

@@ -3,7 +3,7 @@ import {
   formatFiles,
   getProjects,
   type Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { getInstalledPackageVersion } from '../../generators/utils/version-utils';
 
 export default async function (tree: Tree) {
@@ -20,8 +20,8 @@ export default async function (tree: Tree) {
 
     for (const target of Object.values(project.targets ?? {})) {
       if (
-        target.executor !== '@nx/angular:ng-packagr-lite' &&
-        target.executor !== '@nx/angular:package'
+        target.executor !== '@titan/angular:ng-packagr-lite' &&
+        target.executor !== '@titan/angular:package'
       ) {
         continue;
       }

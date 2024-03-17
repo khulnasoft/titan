@@ -1,6 +1,6 @@
-import type { Tree } from '@nx/devkit';
-import { formatFiles, GeneratorCallback, runTasksInSerial } from '@nx/devkit';
-import { Linter } from '@nx/eslint';
+import type { Tree } from '@titan/devkit';
+import { formatFiles, GeneratorCallback, runTasksInSerial } from '@titan/devkit';
+import { Linter } from '@titan/eslint';
 import { libraryGenerator } from '@nx/react';
 import {
   addTsconfigEntryPoints,

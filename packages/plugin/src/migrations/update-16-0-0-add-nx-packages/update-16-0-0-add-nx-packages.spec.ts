@@ -1,6 +1,6 @@
-import { Tree, readJson, updateJson } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { assertRunsAgainstNxRepo } from '@nx/devkit/internal-testing-utils';
+import { Tree, readJson, updateJson } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { assertRunsAgainstNxRepo } from '@titan/devkit/internal-testing-utils';
 import replacePackage from './update-16-0-0-add-nx-packages';
 
 describe('update-16-0-0-add-nx-packages', () => {

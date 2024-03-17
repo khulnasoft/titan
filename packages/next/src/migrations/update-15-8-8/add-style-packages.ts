@@ -3,7 +3,7 @@ import {
   getProjects,
   joinPathFragments,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 export async function update(tree: Tree) {
   const projects = getProjects(tree);

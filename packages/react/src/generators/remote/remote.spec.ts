@@ -1,12 +1,12 @@
-import * as devkit from '@nx/devkit';
-import { ProjectGraph, readJson, readNxJson } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { Linter } from '@nx/eslint';
+import * as devkit from '@titan/devkit';
+import { ProjectGraph, readJson, readNxJson } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { Linter } from '@titan/eslint';
 import remote from './remote';
 import { getRootTsConfigPathInTree } from '@nx/js';
 
-jest.mock('@nx/devkit', () => {
-  const original = jest.requireActual('@nx/devkit');
+jest.mock('@titan/devkit', () => {
+  const original = jest.requireActual('@titan/devkit');
   return {
     ...original,
     readCachedProjectGraph: jest.fn().mockImplementation(

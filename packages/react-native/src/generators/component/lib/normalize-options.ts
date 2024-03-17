@@ -1,6 +1,6 @@
-import { getProjects, logger, names, Tree } from '@nx/devkit';
+import { getProjects, logger, names, Tree } from '@titan/devkit';
 import { Schema } from '../schema';
-import { determineArtifactNameAndDirectoryOptions } from '@nx/devkit/src/generators/artifact-name-and-directory-utils';
+import { determineArtifactNameAndDirectoryOptions } from '@titan/devkit/src/generators/artifact-name-and-directory-utils';
 
 export interface NormalizedSchema extends Schema {
   projectSourceRoot: string;

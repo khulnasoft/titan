@@ -1,11 +1,11 @@
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import {
   addProjectConfiguration,
   readNxJson,
   Tree,
   updateNxJson,
-} from '@nx/devkit';
-import * as devkit from '@nx/devkit';
+} from '@titan/devkit';
+import * as devkit from '@titan/devkit';
 import addKarmaInputs from './add-karma-inputs';
 
 describe('15.0.0 migration (add-karma-inputs)', () => {

@@ -1,4 +1,4 @@
-import { Tree, addProjectConfiguration, readJson } from '@nx/devkit';
+import { Tree, addProjectConfiguration, readJson } from '@titan/devkit';
 import { createTreeWithEmptyWorkspace } from 'nx/src/devkit-testing-exports';
 import { updateToCypress13 } from './cypress-13';
 
@@ -26,7 +26,7 @@ describe('Cypress 13', () => {
       "import fs from 'fs';
 
       import { defineConfig } from 'cypress';
-      import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
+      import { nxE2EPreset } from '@titan/cypress/plugins/cypress-preset';
       import { nxComponentTestingPreset } from '@nx/react/plugins/component-testing';
 
       export default defineConfig({
@@ -80,7 +80,7 @@ describe('Cypress 13', () => {
       "import fs from 'fs';
 
       import { defineConfig } from 'cypress';
-      import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
+      import { nxE2EPreset } from '@titan/cypress/plugins/cypress-preset';
       import { nxComponentTestingPreset } from '@nx/react/plugins/component-testing';
 
       export default defineConfig({
@@ -172,7 +172,7 @@ Cypress.Commands.overwrite('readFile', () => {});
         console.log('Custom command example: Login', email, password);
       });
       /**
-       * TODO(@nx/cypress): This command can no longer be overridden
+       * TODO(@titan/cypress): This command can no longer be overridden
        * Consider using a different name like 'custom_readFile'
        * More info: https://docs.cypress.io/guides/references/migration-guide#readFile-can-no-longer-be-overwritten-with-CypressCommandsoverwrite
        **/
@@ -187,7 +187,7 @@ function setup(tree: Tree, options: { name: string }) {
     `apps/${options.name}/cypress.config.ts`,
     `
 import { defineConfig} from 'cypress';
-import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
+import { nxE2EPreset } from '@titan/cypress/plugins/cypress-preset';
 import { nxComponentTestingPreset } from '@nx/react/plugins/component-testing';
 
 export default defineConfig({
@@ -222,7 +222,7 @@ export default defineConfig({
     sourceRoot: `apps/${options.name}/src`,
     targets: {
       e2e: {
-        executor: '@nx/cypress:cypress',
+        executor: '@titan/cypress:cypress',
         options: {
           testingType: 'e2e',
           cypressConfig: `apps/${options.name}/cypress.config.ts`,
@@ -230,7 +230,7 @@ export default defineConfig({
         },
       },
       'component-test': {
-        executor: '@nx/cypress:cypress',
+        executor: '@titan/cypress:cypress',
         options: {
           testingType: 'component',
           cypressConfig: `apps/${options.name}/ct-cypress.config.ts`,

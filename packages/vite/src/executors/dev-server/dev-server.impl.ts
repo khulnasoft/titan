@@ -2,7 +2,7 @@ import {
   ExecutorContext,
   joinPathFragments,
   parseTargetString,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import {
   getNxTargetOptions,
   getViteServerOptions,

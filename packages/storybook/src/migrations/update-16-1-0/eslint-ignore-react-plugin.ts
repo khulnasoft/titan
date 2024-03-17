@@ -4,7 +4,7 @@ import {
   Tree,
   formatFiles,
   updateJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 export default async function (tree: Tree) {
   const projects = getProjects(tree);

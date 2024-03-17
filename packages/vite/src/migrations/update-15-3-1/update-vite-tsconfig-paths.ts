@@ -4,8 +4,8 @@ import {
   formatFiles,
   readProjectConfiguration,
   Tree,
-} from '@nx/devkit';
-import { forEachExecutorOptions } from '@nx/devkit/src/generators/executor-options-utils';
+} from '@titan/devkit';
+import { forEachExecutorOptions } from '@titan/devkit/src/generators/executor-options-utils';
 import { tsquery } from '@phenomnomnominal/tsquery';
 import { findNodes } from '@nx/js';
 import { normalizeViteConfigFilePathWithTree } from '../../utils/generator-utils';

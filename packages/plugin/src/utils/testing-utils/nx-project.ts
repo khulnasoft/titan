@@ -1,9 +1,9 @@
-import { detectPackageManager, workspaceRoot } from '@nx/devkit';
+import { detectPackageManager, workspaceRoot } from '@titan/devkit';
 import {
   getPackageManagerCommand,
   readJsonFile,
   writeJsonFile,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { execSync } from 'child_process';
 import { dirname } from 'path';
 import { ensureDirSync } from 'fs-extra';

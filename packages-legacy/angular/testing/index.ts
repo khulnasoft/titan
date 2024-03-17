@@ -1,1 +1,1 @@
-export { readAll, readFirst } from '@nx/angular/testing';
+export { readAll, readFirst } from '@titan/angular/testing';

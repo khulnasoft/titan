@@ -1,5 +1,5 @@
 import { dirname } from 'path';
-import { logger } from '@nx/devkit';
+import { logger } from '@titan/devkit';
 
 /*
  * Babel preset to provide TypeScript support and module/nomodule for Nx.
@@ -24,7 +24,7 @@ module.exports = function (api: any, options: NxWebBabelPresetOptions = {}) {
 
   const isModern = api.caller((caller) => caller?.isModern);
 
-  // use by @nx/cypress react component testing to prevent core js build issues
+  // use by @titan/cypress react component testing to prevent core js build issues
   const isTest = api.caller((caller) => caller?.isTest);
 
   // This is set by `@nx/rollup:rollup` executor

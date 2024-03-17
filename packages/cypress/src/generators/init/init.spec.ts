@@ -1,5 +1,5 @@
-import { NxJsonConfiguration, readJson, Tree, updateJson } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { NxJsonConfiguration, readJson, Tree, updateJson } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 
 import { cypressVersion } from '../../utils/versions';
 import { cypressInitGenerator } from './init';
@@ -21,7 +21,7 @@ describe('init', () => {
     const existing = 'existing';
     const existingVersion = '1.0.0';
     updateJson(tree, 'package.json', (json) => {
-      json.dependencies['@nx/cypress'] = cypressVersion;
+      json.dependencies['@titan/cypress'] = cypressVersion;
 
       json.dependencies[existing] = existingVersion;
       json.devDependencies[existing] = existingVersion;
@@ -31,9 +31,9 @@ describe('init', () => {
     const packageJson = readJson(tree, 'package.json');
 
     expect(packageJson.devDependencies.cypress).toBeDefined();
-    expect(packageJson.devDependencies['@nx/cypress']).toBeDefined();
+    expect(packageJson.devDependencies['@titan/cypress']).toBeDefined();
     expect(packageJson.devDependencies[existing]).toBeDefined();
-    expect(packageJson.dependencies['@nx/cypress']).toBeUndefined();
+    expect(packageJson.dependencies['@titan/cypress']).toBeUndefined();
     expect(packageJson.dependencies[existing]).toBeDefined();
   });
 
@@ -54,7 +54,7 @@ describe('init', () => {
     });
   });
 
-  it('should setup @nx/cypress/plugin', async () => {
+  it('should setup @titan/cypress/plugin', async () => {
     updateJson<NxJsonConfiguration>(tree, 'nx.json', (json) => {
       json.namedInputs ??= {};
       json.namedInputs.production = ['default'];
@@ -83,7 +83,7 @@ describe('init', () => {
               "componentTestingTargetName": "component-test",
               "targetName": "e2e",
             },
-            "plugin": "@nx/cypress/plugin",
+            "plugin": "@titan/cypress/plugin",
           },
         ],
         "targetDefaults": {

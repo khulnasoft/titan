@@ -1,8 +1,8 @@
 jest.mock('../../utils/remix-config');
 import * as remixConfigUtils from '../../utils/remix-config';
 
-import { Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import applicationGenerator from '../application/application.impl';
 import routeGenerator from '../route/route.impl';
 import loaderGenerator from './loader.impl';

@@ -6,7 +6,7 @@ import type {
   TransformerFactory,
   Visitor,
 } from 'typescript';
-import { joinPathFragments, type Tree } from '@nx/devkit';
+import { joinPathFragments, type Tree } from '@titan/devkit';
 import { ensureTypescript } from '@nx/js/src/utils/typescript/ensure-typescript';
 
 let tsModule: typeof import('typescript');

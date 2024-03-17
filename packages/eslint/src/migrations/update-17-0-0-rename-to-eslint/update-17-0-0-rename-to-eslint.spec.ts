@@ -3,8 +3,8 @@ import {
   addProjectConfiguration,
   readJson,
   updateJson,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import replacePackage from './update-17-0-0-rename-to-eslint';
 
 describe('update-17-0-0-rename-to-eslint', () => {
@@ -38,13 +38,13 @@ describe('update-17-0-0-rename-to-eslint', () => {
     ).not.toBeDefined();
   });
 
-  it('should add a dependency on @nx/eslint', async () => {
+  it('should add a dependency on @titan/eslint', async () => {
     await replacePackage(tree);
 
     const packageJson = readJson(tree, 'package.json');
     const newDependencyVersion =
-      packageJson.devDependencies['@nx/eslint'] ??
-      packageJson.dependencies['@nx/eslint'];
+      packageJson.devDependencies['@titan/eslint'] ??
+      packageJson.dependencies['@titan/eslint'];
 
     expect(newDependencyVersion).toBeDefined();
   });
@@ -53,7 +53,7 @@ describe('update-17-0-0-rename-to-eslint', () => {
     await replacePackage(tree);
 
     const nxJson = readJson(tree, 'nx.json');
-    expect(nxJson.targetDefaults.lint.executor).toEqual('@nx/eslint:lint');
+    expect(nxJson.targetDefaults.lint.executor).toEqual('@titan/eslint:lint');
   });
 
   it('should update the target executor', async () => {
@@ -70,6 +70,6 @@ describe('update-17-0-0-rename-to-eslint', () => {
     await replacePackage(tree);
 
     const projJson = readJson(tree, 'libs/test-lib/project.json');
-    expect(projJson.targets.lint.executor).toEqual('@nx/eslint:lint');
+    expect(projJson.targets.lint.executor).toEqual('@titan/eslint:lint');
   });
 });

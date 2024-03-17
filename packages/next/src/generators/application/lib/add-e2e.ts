@@ -5,8 +5,8 @@ import {
   joinPathFragments,
   readNxJson,
   Tree,
-} from '@nx/devkit';
-import { Linter } from '@nx/eslint';
+} from '@titan/devkit';
+import { Linter } from '@titan/eslint';
 
 import { nxVersion } from '../../../utils/versions';
 import { NormalizedSchema } from './normalize-options';
@@ -16,14 +16,14 @@ export async function addE2e(host: Tree, options: NormalizedSchema) {
   const nxJson = readNxJson(host);
   const hasPlugin = nxJson.plugins?.some((p) =>
     typeof p === 'string'
-      ? p === '@nx/next/plugin'
-      : p.plugin === '@nx/next/plugin'
+      ? p === '@titan/next/plugin'
+      : p.plugin === '@titan/next/plugin'
   );
 
   if (options.e2eTestRunner === 'cypress') {
     const { configurationGenerator } = ensurePackage<
-      typeof import('@nx/cypress')
-    >('@nx/cypress', nxVersion);
+      typeof import('@titan/cypress')
+    >('@titan/cypress', nxVersion);
 
     if (!hasPlugin) {
       webStaticServeGenerator(host, {
@@ -63,8 +63,8 @@ export async function addE2e(host: Tree, options: NormalizedSchema) {
     });
   } else if (options.e2eTestRunner === 'playwright') {
     const { configurationGenerator } = ensurePackage<
-      typeof import('@nx/playwright')
-    >('@nx/playwright', nxVersion);
+      typeof import('@titan/playwright')
+    >('@titan/playwright', nxVersion);
     addProjectConfiguration(host, options.e2eProjectName, {
       root: options.e2eProjectRoot,
       sourceRoot: joinPathFragments(options.e2eProjectRoot, 'src'),

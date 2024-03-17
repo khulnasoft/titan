@@ -1,8 +1,8 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import type * as ts from 'typescript';
 import { ensureTypescript } from './ensure-typescript';
 import { Node, SyntaxKind } from 'typescript';
-import { workspaceRoot } from '@nx/devkit';
+import { workspaceRoot } from '@titan/devkit';
 import { dirname } from 'path';
 import { getSourceNodes } from './get-source-nodes';
 

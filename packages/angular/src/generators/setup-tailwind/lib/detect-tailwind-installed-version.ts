@@ -1,5 +1,5 @@
-import { readJson, Tree } from '@nx/devkit';
-import { checkAndCleanWithSemver } from '@nx/devkit/src/utils/semver';
+import { readJson, Tree } from '@titan/devkit';
+import { checkAndCleanWithSemver } from '@titan/devkit/src/utils/semver';
 import { lt } from 'semver';
 
 export function detectTailwindInstalledVersion(

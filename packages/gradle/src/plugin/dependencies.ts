@@ -5,7 +5,7 @@ import {
   FileMap,
   RawProjectGraphDependency,
   validateDependency,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { readFileSync } from 'node:fs';
 import { basename } from 'node:path';
 

@@ -3,9 +3,9 @@ import {
   Tree,
   addProjectConfiguration,
   readJson,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import * as linter from '@nx/eslint';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import * as linter from '@titan/eslint';
 import { addLintingGenerator } from './add-linting';
 
 describe('addLinting generator', () => {

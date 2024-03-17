@@ -1,4 +1,4 @@
-import { ProjectGraph } from '@nx/devkit';
+import { ProjectGraph } from '@titan/devkit';
 import { AssetGlob } from '@nx/js/src/utils/assets/assets';
 
 export interface AssetGlobPattern {

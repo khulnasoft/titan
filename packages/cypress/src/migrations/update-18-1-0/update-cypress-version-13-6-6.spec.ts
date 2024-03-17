@@ -1,5 +1,5 @@
-import { readJson, updateJson, type Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { readJson, updateJson, type Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import * as cypressVersionUtils from '../../utils/cypress-version';
 import migration from './update-cypress-version-13-6-6';
 

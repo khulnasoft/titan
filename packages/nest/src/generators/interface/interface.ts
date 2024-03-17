@@ -1,4 +1,4 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import type { NestGeneratorOptions } from '../utils';
 import { normalizeOptions, runNestSchematic } from '../utils';
 

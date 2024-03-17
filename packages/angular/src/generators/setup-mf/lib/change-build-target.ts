@@ -1,17 +1,17 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import type { Schema } from '../schema';
 
 import {
   readProjectConfiguration,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 export function changeBuildTarget(host: Tree, options: Schema) {
   const appConfig = readProjectConfiguration(host, options.appName);
 
   const configExtName = options.typescriptConfiguration ? 'ts' : 'js';
 
-  appConfig.targets.build.executor = '@nx/angular:webpack-browser';
+  appConfig.targets.build.executor = '@titan/angular:webpack-browser';
   appConfig.targets.build.options = {
     ...appConfig.targets.build.options,
     customWebpackConfig: {

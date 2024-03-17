@@ -1,4 +1,4 @@
-import { ExecutorContext, names } from '@nx/devkit';
+import { ExecutorContext, names } from '@titan/devkit';
 import { ChildProcess, fork } from 'child_process';
 
 import { ExpoInstallOptions } from './schema';

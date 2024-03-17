@@ -3,7 +3,7 @@ import {
   TargetConfiguration,
   Tree,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { NormalizedSchema } from '../schema';
 
 /**

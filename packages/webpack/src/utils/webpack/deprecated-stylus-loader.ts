@@ -1,4 +1,4 @@
-import { logger } from '@nx/devkit';
+import { logger } from '@titan/devkit';
 // @ts-ignore
 import * as stylusLoader from 'stylus-loader';
 // TOOD(v19): Remove this file and stylus support.

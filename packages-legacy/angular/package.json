@@ -33,12 +33,12 @@
   "builders": "./executors.json",
   "schematics": "./generators.json",
   "dependencies": {
-    "@nx/angular": "file:../../packages/angular"
+    "@titan/angular": "file:../../packages/angular"
   },
   "publishConfig": {
     "access": "public"
   },
   "nx-migrations": {
-    "migrations": "@nx/angular/migrations.json"
+    "migrations": "@titan/angular/migrations.json"
   }
 }

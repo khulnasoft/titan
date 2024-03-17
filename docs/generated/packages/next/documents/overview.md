@@ -11,7 +11,7 @@ The Next.js plugin contains executors and generators for managing Next.js applic
 - Integration with building, serving, and exporting a Next.js application.
 - Integration with React libraries within the workspace.
 
-## Setting up @nx/next
+## Setting up @titan/next
 
 To create a new Nx workspace with Next.js, run:
 
@@ -22,23 +22,23 @@ npx create-nx-workspace@latest --preset=next
 ### Installation
 
 {% callout type="note" title="Keep Nx Package Versions In Sync" %}
-Make sure to install the `@nx/next` version that matches the version of `nx` in your repository. If the version numbers get out of sync, you can encounter some difficult to debug errors. You can [fix Nx version mismatches with this recipe](/recipes/tips-n-tricks/keep-nx-versions-in-sync).
+Make sure to install the `@titan/next` version that matches the version of `nx` in your repository. If the version numbers get out of sync, you can encounter some difficult to debug errors. You can [fix Nx version mismatches with this recipe](/recipes/tips-n-tricks/keep-nx-versions-in-sync).
 {% /callout %}
 
-In any workspace, you can install `@nx/next` by running the following command:
+In any workspace, you can install `@titan/next` by running the following command:
 
 {% tabs %}
 {% tab label="Nx 18+" %}
 
 ```shell {% skipRescope=true %}
-nx add @nx/next
+nx add @titan/next
 ```
 
-This will install the correct version of `@nx/next`.
+This will install the correct version of `@titan/next`.
 
-### How @nx/next Infers Tasks
+### How @titan/next Infers Tasks
 
-The `@nx/next` plugin will create tasks for any project that has a Next.js configuration file preset. Any of the following files will be recognized as a Next.js configuration file:
+The `@titan/next` plugin will create tasks for any project that has a Next.js configuration file preset. Any of the following files will be recognized as a Next.js configuration file:
 
 - `next.config.js`
 - `next.config.cjs`
@@ -48,15 +48,15 @@ The `@nx/next` plugin will create tasks for any project that has a Next.js confi
 
 To view inferred tasks for a project, open the [project details view](/concepts/inferred-tasks) in Nx Console or run `nx show project <project-name> --web` in your command line.
 
-### @nx/next Configuration
+### @titan/next Configuration
 
-The `@nx/next/plugin` is configured in the `plugins` array in `nx.json`.
+The `@titan/next/plugin` is configured in the `plugins` array in `nx.json`.
 
 ```json {% fileName="nx.json" %}
 {
   "plugins": [
     {
-      "plugin": "@nx/next/plugin",
+      "plugin": "@titan/next/plugin",
       "options": {
         "buildTargetName": "build",
         "devTargetName": "dev",
@@ -77,23 +77,23 @@ The `@nx/next/plugin` is configured in the `plugins` array in `nx.json`.
 
 {% tab label="Nx < 18" %}
 
-Install the `@nx/next` package with your package manager.
+Install the `@titan/next` package with your package manager.
 
 ```shell
-npm add -D @nx/next
+npm add -D @titan/next
 ```
 
 {% /tab %}
 {% /tabs %}
 
-## Using @nx/next
+## Using @titan/next
 
 ### Creating Applications
 
 You can add a new application with the following:
 
 ```shell
-nx g @nx/next:app my-new-app
+nx g @titan/next:app my-new-app
 ```
 
 ### Generating Libraries
@@ -110,7 +110,7 @@ and [Library Types](/concepts/more-concepts/library-types).
 To generate a new library run:
 
 ```shell
-nx g @nx/next:lib my-new-lib
+nx g @titan/next:lib my-new-lib
 ```
 
 ### Generating Pages and Components
@@ -118,9 +118,9 @@ nx g @nx/next:lib my-new-lib
 Nx also provides commands to quickly generate new pages and components for your application.
 
 ```shell
-nx g @nx/next:page my-new-page --project=my-new-app
+nx g @titan/next:page my-new-page --project=my-new-app
 
-nx g @nx/next:component my-new-component --project=my-new-app
+nx g @titan/next:component my-new-component --project=my-new-app
 ```
 
 Above commands will add a new page `my-new-page` and a component `my-new-component` to `my-new-app` project respectively.
@@ -188,7 +188,7 @@ There is no need to build the library prior to using it. When you update your li
 For libraries intended to be built and published to a registry (e.g. npm) you can use the `--publishable` and `--importPath` options.
 
 ```shell
-nx g @nx/next:lib my-new-lib --publishable --importPath=@happynrwl/ui-components
+nx g @titan/next:lib my-new-lib --publishable --importPath=@happynrwl/ui-components
 ```
 
 ### Testing Projects

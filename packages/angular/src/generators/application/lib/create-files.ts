@@ -1,5 +1,5 @@
-import type { Tree } from '@nx/devkit';
-import { generateFiles, joinPathFragments } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
+import { generateFiles, joinPathFragments } from '@titan/devkit';
 import type { NormalizedSchema } from './normalized-schema';
 import { getRelativePathToRootTsConfig, getRootTsConfigFileName } from '@nx/js';
 import { updateProjectRootTsConfig } from '../../utils/update-project-root-tsconfig';

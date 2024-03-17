@@ -8,8 +8,8 @@ import {
   updateJson,
   updateNxJson,
   updateProjectConfiguration,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { installedCypressVersion } from '../../utils/cypress-version';
 import { componentConfigurationGenerator } from './component-configuration';
 import { cypressInitGenerator } from '../init/init';
@@ -27,7 +27,7 @@ let projectConfig: ProjectConfiguration = {
       },
     },
     test: {
-      executor: '@nx/jest:jest',
+      executor: '@titan/jest:jest',
       options: {
         jestConfig: 'libs/cool-lib/jest.config.js',
       },
@@ -98,7 +98,7 @@ describe('Cypress Component Configuration', () => {
     jest.clearAllMocks();
   });
 
-  it('should not add the target when @nx/cypress/plugin is registered', async () => {
+  it('should not add the target when @titan/cypress/plugin is registered', async () => {
     await cypressInitGenerator(tree, {
       addPlugin: true,
     });
@@ -221,7 +221,7 @@ export default defineConfig({
     tree.write('libs/cool-lib/cypress.config.ts', existingConfig);
     const newTarget = {
       ['component-test']: {
-        executor: '@nx/cypress:cypress',
+        executor: '@titan/cypress:cypress',
         options: {
           cypressConfig: 'libs/cool-lib/cypress.config.ts',
           testingType: 'component',

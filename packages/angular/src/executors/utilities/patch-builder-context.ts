@@ -4,14 +4,14 @@ import type {
   BrowserBuilderOptions,
 } from '@angular-devkit/build-angular';
 import type { Schema as BrowserEsbuildBuilderOptions } from '@angular-devkit/build-angular/src/builders/browser-esbuild/schema';
-import type { Target } from '@nx/devkit';
+import type { Target } from '@titan/devkit';
 
 const executorToBuilderMap = new Map<string, string>([
   [
-    '@nx/angular:browser-esbuild',
+    '@titan/angular:browser-esbuild',
     '@angular-devkit/build-angular:browser-esbuild',
   ],
-  ['@nx/angular:application', '@angular-devkit/build-angular:application'],
+  ['@titan/angular:application', '@angular-devkit/build-angular:application'],
 ]);
 
 export function patchBuilderContext(

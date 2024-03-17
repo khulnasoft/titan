@@ -1,4 +1,4 @@
-import { Linter } from '@nx/eslint';
+import { Linter } from '@titan/eslint';
 import { E2eTestRunner, UnitTestRunner } from '../../utils/test-runners';
 import type { Styles } from '../utils/types';
 

@@ -5,7 +5,7 @@ import {
   removeDependenciesFromPackageJson,
   runTasksInSerial,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { nxVersion, vueVersion } from '../../utils/versions';
 import { InitSchema } from './schema';
 

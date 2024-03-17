@@ -1,5 +1,5 @@
-import type { NxComponentTestingOptions } from '@nx/cypress/plugins/cypress-preset';
-import type { FoundTarget } from '@nx/cypress/src/utils/find-target-options';
+import type { NxComponentTestingOptions } from '@titan/cypress/plugins/cypress-preset';
+import type { FoundTarget } from '@titan/cypress/src/utils/find-target-options';
 import {
   ensurePackage,
   formatFiles,
@@ -8,7 +8,7 @@ import {
   readProjectConfiguration,
   Tree,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { relative } from 'path';
 import { nxVersion } from '../../utils/versions';
 import { componentTestGenerator } from '../component-test/component-test';
@@ -40,8 +40,8 @@ export async function cypressComponentConfigurationInternal(
 ) {
   const projectConfig = readProjectConfiguration(tree, options.project);
   const { componentConfigurationGenerator: baseCyCTConfig } = ensurePackage<
-    typeof import('@nx/cypress')
-  >('@nx/cypress', nxVersion);
+    typeof import('@titan/cypress')
+  >('@titan/cypress', nxVersion);
   const installTask = await baseCyCTConfig(tree, {
     project: options.project,
     skipFormat: true,
@@ -74,7 +74,7 @@ async function addFiles(
     'support',
     'component.ts'
   );
-  const { addMountDefinition } = await import('@nx/cypress/src/utils/config');
+  const { addMountDefinition } = await import('@titan/cypress/src/utils/config');
   const updatedCmpContents = await addMountDefinition(
     tree.read(componentFile, 'utf-8')
   );
@@ -127,13 +127,13 @@ async function configureCypressCT(
 
   if (!options.buildTarget) {
     const { findBuildConfig } = await import(
-      '@nx/cypress/src/utils/find-target-options'
+      '@titan/cypress/src/utils/find-target-options'
     );
     found = await findBuildConfig(tree, {
       project: options.project,
       buildTarget: options.buildTarget,
       validExecutorNames: new Set<string>([
-        '@nx/angular:webpack-browser',
+        '@titan/angular:webpack-browser',
         '@nrwl/angular:webpack-browser',
         '@angular-devkit/build-angular:browser',
       ]),
@@ -146,7 +146,7 @@ async function configureCypressCT(
   const projectConfig = readProjectConfiguration(tree, options.project);
   if (
     projectConfig.targets?.['component-test']?.executor ===
-    '@nx/cypress:cypress'
+    '@titan/cypress:cypress'
   ) {
     projectConfig.targets['component-test'].options = {
       ...projectConfig.targets['component-test'].options,
@@ -159,7 +159,7 @@ async function configureCypressCT(
   }
 
   const { addDefaultCTConfig, getProjectCypressConfigPath } = await import(
-    '@nx/cypress/src/utils/config'
+    '@titan/cypress/src/utils/config'
   );
   const cypressConfigPath = getProjectCypressConfigPath(
     tree,
@@ -171,7 +171,7 @@ async function configureCypressCT(
   );
   tree.write(
     cypressConfigPath,
-    `import { nxComponentTestingPreset } from '@nx/angular/plugins/component-testing';\n${updatedCyConfig}`
+    `import { nxComponentTestingPreset } from '@titan/angular/plugins/component-testing';\n${updatedCyConfig}`
   );
 }
 

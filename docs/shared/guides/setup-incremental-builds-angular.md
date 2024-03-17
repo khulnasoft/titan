@@ -59,10 +59,10 @@ The command below uses the `as-provided` directory flag behavior, which is the d
 You can generate a new buildable library with:
 
 ```shell
-nx g @nx/angular:lib my-lib --directory=libs/my-lib --buildable
+nx g @titan/angular:lib my-lib --directory=libs/my-lib --buildable
 ```
 
-The generated buildable library uses the `@nx/angular:ng-packagr-lite` executor which is optimized for the incremental
+The generated buildable library uses the `@titan/angular:ng-packagr-lite` executor which is optimized for the incremental
 builds scenario:
 
 ```jsonc
@@ -71,7 +71,7 @@ builds scenario:
   ...
   "targets": {
     "build": {
-      "executor": "@nx/angular:ng-packagr-lite",
+      "executor": "@titan/angular:ng-packagr-lite",
       "outputs": [
         "{workspaceRoot}/dist/libs/my-lib"
       ],
@@ -92,12 +92,12 @@ builds scenario:
 {% callout type="warning" title="More details" %}
 Please note that it is important to keep the `outputs` property in sync with the `dest` property in the file `ng-package.json` located inside the library root. When a library is generated, this is configured correctly, but if the path is later changed in `ng-package.json`, it needs to be updated as well in the project configuration.
 
-The `@nx/angular:package` executor also supports incremental builds. It is used to build and package an Angular library to be distributed as an NPM package following the Angular Package Format (APF) specification. It will be automatically configured when generating a publishable library (`nx g @nx/angular:lib my-lib --publishable --importPath my-lib`).
+The `@titan/angular:package` executor also supports incremental builds. It is used to build and package an Angular library to be distributed as an NPM package following the Angular Package Format (APF) specification. It will be automatically configured when generating a publishable library (`nx g @titan/angular:lib my-lib --publishable --importPath my-lib`).
 {% /callout %}
 
 ## Adjust the application executor
 
-Change your Angular application’s "build" target executor to `@nx/angular:webpack-browser` and the "serve" target
+Change your Angular application’s "build" target executor to `@titan/angular:webpack-browser` and the "serve" target
 executor to `@nx/web:file-server` as shown below:
 
 ```jsonc
@@ -106,7 +106,7 @@ executor to `@nx/web:file-server` as shown below:
   ...
   "targets": {
     "build": {
-      "executor": "@nx/angular:webpack-browser",
+      "executor": "@titan/angular:webpack-browser",
       "outputs": [
         "{options.outputPath}"
       ],
@@ -160,7 +160,7 @@ your `project.json` file. The file-server executor will pass those to the `nx bu
   ...
   "targets": {
     "build": {
-      "executor": "@nx/angular:webpack-browser",
+      "executor": "@titan/angular:webpack-browser",
       "outputs": [
         "{options.outputPath}"
       ],
@@ -192,7 +192,7 @@ your `project.json` file. The file-server executor will pass those to the `nx bu
 ### Build target name
 
 It is required to use the same target name for the build target (target using one of the executors that support
-incremental builds: `@nx/angular:webpack-browser`, `@nx/angular:package` and `@nx/angular:ng-packagr-lite`) in the
+incremental builds: `@titan/angular:webpack-browser`, `@titan/angular:package` and `@titan/angular:ng-packagr-lite`) in the
 project being built and the buildable libraries it depends on. The executors that support incremental builds rely on the
 build target name of the project to identify which of the libraries it depends on are buildable.
 
@@ -207,7 +207,7 @@ Say you have the same application above with a configuration as follows:
   ...
   "targets": {
     "build-base": {
-      "executor": "@nx/angular:webpack-browser",
+      "executor": "@titan/angular:webpack-browser",
       "outputs": [
         "{options.outputPath}"
       ],
@@ -276,7 +276,7 @@ depends on must also be `build-base`:
   ...
   "targets": {
     "build-base": {
-      "executor": "@nx/angular:ng-packagr-lite",
+      "executor": "@titan/angular:ng-packagr-lite",
       "outputs": [
         "{workspaceRoot}/dist/libs/my-lib"
       ],

@@ -30,9 +30,9 @@
   "dependencies": {
     "tslib": "^2.3.0",
     "@nuxt/kit": "^3.10.0",
-    "@nx/devkit": "file:../devkit",
+    "@titan/devkit": "file:../devkit",
     "@nx/js": "file:../js",
-    "@nx/eslint": "file:../eslint",
+    "@titan/eslint": "file:../eslint",
     "@nx/vue": "file:../vue",
     "@nx/vite": "file:../vite"
   },

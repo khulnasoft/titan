@@ -4,7 +4,7 @@ import {
   getProjects,
   updateProjectConfiguration,
   updateJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 /**
  * Change webpack to metro

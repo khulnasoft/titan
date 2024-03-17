@@ -1,4 +1,4 @@
-import type { NxJsonConfiguration, ProjectConfiguration } from '@nx/devkit';
+import type { NxJsonConfiguration, ProjectConfiguration } from '@titan/devkit';
 import {
   cleanupProject,
   createNonNxProjectDirectory,
@@ -27,7 +27,7 @@ import { join } from 'path';
 describe('Nx Commands', () => {
   beforeAll(() =>
     newProject({
-      packages: ['@nx/web', '@nx/angular', '@nx/next'],
+      packages: ['@nx/web', '@titan/angular', '@titan/next'],
     })
   );
 
@@ -97,8 +97,8 @@ describe('Nx Commands', () => {
 
       // temporarily make it look like this isn't installed
       renameSync(
-        tmpProjPath('node_modules/@nx/next'),
-        tmpProjPath('node_modules/@nx/next_tmp')
+        tmpProjPath('node_modules/@titan/next'),
+        tmpProjPath('node_modules/@titan/next_tmp')
       );
 
       listOutput = runCLI('list');
@@ -116,9 +116,9 @@ describe('Nx Commands', () => {
       // check for builders
       expect(listOutput).toContain('run-commands');
 
-      listOutput = runCLI('list @nx/angular');
+      listOutput = runCLI('list @titan/angular');
 
-      expect(listOutput).toContain('Capabilities in @nx/angular');
+      expect(listOutput).toContain('Capabilities in @titan/angular');
 
       expect(listOutput).toContain('library');
       expect(listOutput).toContain('component');
@@ -127,9 +127,9 @@ describe('Nx Commands', () => {
       expect(listOutput).toContain('package');
 
       // // look for uninstalled core plugin
-      listOutput = runCLI('list @nx/next');
+      listOutput = runCLI('list @titan/next');
 
-      expect(listOutput).toContain('NX   @nx/next is not currently installed');
+      expect(listOutput).toContain('NX   @titan/next is not currently installed');
 
       // look for an unknown plugin
       listOutput = runCLI('list @wibble/fish');
@@ -138,10 +138,10 @@ describe('Nx Commands', () => {
         'NX   @wibble/fish is not currently installed'
       );
 
-      // put back the @nx/angular module (or all the other e2e tests after this will fail)
+      // put back the @titan/angular module (or all the other e2e tests after this will fail)
       renameSync(
-        tmpProjPath('node_modules/@nx/next_tmp'),
-        tmpProjPath('node_modules/@nx/next')
+        tmpProjPath('node_modules/@titan/next_tmp'),
+        tmpProjPath('node_modules/@titan/next')
       );
     }, 120000);
   });

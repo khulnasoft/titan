@@ -4,7 +4,7 @@ import {
   getProjects,
   updateJson,
   ProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 /**
  * Update .detoxrc.json under detox project:

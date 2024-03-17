@@ -7,11 +7,11 @@ describe('Jest root projects', () => {
   describe('angular', () => {
     beforeAll(() => {
       newProject({
-        packages: ['@nx/angular'],
+        packages: ['@titan/angular'],
         unsetProjectNameAndRootFormat: false,
       });
       runCLI(
-        `generate @nx/angular:app ${myapp} --directory . --rootProject --projectNameAndRootFormat as-provided --no-interactive`
+        `generate @titan/angular:app ${myapp} --directory . --rootProject --projectNameAndRootFormat as-provided --no-interactive`
       );
     });
 
@@ -24,7 +24,7 @@ describe('Jest root projects', () => {
 
     it('should add lib project and tests should still work', async () => {
       runCLI(
-        `generate @nx/angular:lib ${mylib} --projectNameAndRootFormat as-provided --no-interactive`
+        `generate @titan/angular:lib ${mylib} --projectNameAndRootFormat as-provided --no-interactive`
       );
 
       const libProjectTestResults = await runCLIAsync(`test ${mylib}`);

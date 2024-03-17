@@ -1,5 +1,5 @@
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { addProjectConfiguration, Tree } from '@nx/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { addProjectConfiguration, Tree } from '@titan/devkit';
 import webpackConfigSetup from './webpack-config-setup';
 
 describe('17.2.1 migration (setup webpack.config file)', () => {

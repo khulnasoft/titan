@@ -11,28 +11,28 @@ Playwright is a modern web test runner. With included features such as:
 - Test generation
 - Screenshots and videos
 
-## Setting Up @nx/playwright
+## Setting Up @titan/playwright
 
 ### Installation
 
 {% callout type="note" title="Keep Nx Package Versions In Sync" %}
-Make sure to install the `@nx/playwright` version that matches the version of `nx` in your repository. If the version numbers get out of sync, you can encounter some difficult to debug errors. You can [fix Nx version mismatches with this recipe](/recipes/tips-n-tricks/keep-nx-versions-in-sync).
+Make sure to install the `@titan/playwright` version that matches the version of `nx` in your repository. If the version numbers get out of sync, you can encounter some difficult to debug errors. You can [fix Nx version mismatches with this recipe](/recipes/tips-n-tricks/keep-nx-versions-in-sync).
 {% /callout %}
 
-In any Nx workspace, you can install `@nx/playwright` by running the following command:
+In any Nx workspace, you can install `@titan/playwright` by running the following command:
 
 {% tabs %}
 {% tab label="Nx 18+" %}
 
 ```shell {% skipRescope=true %}
-nx add @nx/playwright
+nx add @titan/playwright
 ```
 
-This will install the correct version of `@nx/playwright`.
+This will install the correct version of `@titan/playwright`.
 
-### How @nx/playwright Infers Tasks
+### How @titan/playwright Infers Tasks
 
-The `@nx/playwright` plugin will create a task for any project that has a Playwright configuration file present. Any of the following files will be recognized as a Playwright configuration file:
+The `@titan/playwright` plugin will create a task for any project that has a Playwright configuration file present. Any of the following files will be recognized as a Playwright configuration file:
 
 - `playwright.config.js`
 - `playwright.config.ts`
@@ -45,15 +45,15 @@ The `@nx/playwright` plugin will create a task for any project that has a Playwr
 
 To view inferred tasks for a project, open the [project details view](/concepts/inferred-tasks) in Nx Console or run `nx show project my-project --web` in the command line.
 
-### @nx/playwright Configuration
+### @titan/playwright Configuration
 
-The `@nx/playwright/plugin` is configured in the `plugins` array in `nx.json`.
+The `@titan/playwright/plugin` is configured in the `plugins` array in `nx.json`.
 
 ```json {% fileName="nx.json" %}
 {
   "plugins": [
     {
-      "plugin": "@nx/playwright/plugin",
+      "plugin": "@titan/playwright/plugin",
       "options": {
         "ciTargetName": "e2e-ci",
         "targetName": "e2e"
@@ -67,15 +67,15 @@ The `targetName` and `ciTargetName` options control the name of the inferred Pla
 
 ### Splitting E2E tasks by file
 
-The `@nx/playwright/plugin` will automatically split your e2e tasks by file. You can read more about this feature [here](/ci/features/split-e2e-tasks).
+The `@titan/playwright/plugin` will automatically split your e2e tasks by file. You can read more about this feature [here](/ci/features/split-e2e-tasks).
 
 {% /tab %}
 {% tab label="Nx < 18" %}
 
-Install the `@nx/playwright` package with your package manager.
+Install the `@titan/playwright` package with your package manager.
 
 ```shell {% skipRescope=true %}
-npm add -D @nx/playwright
+npm add -D @titan/playwright
 ```
 
 {% /tab %}
@@ -94,13 +94,13 @@ nx g @nx/web:app frontend --e2eTestRunner=playwright
 To generate an E2E project for an existing project, run the following generator
 
 ```shell
-nx g @nx/playwright:configuration --project=your-app-name
+nx g @titan/playwright:configuration --project=your-app-name
 ```
 
 Optionally, you can use the `--webServerCommand` and `--webServerAddress` option, to auto setup the [web server option](https://playwright.dev/docs/test-webserver) in the playwright config
 
 ```shell
-nx g @nx/playwright:configuration --project=your-app-name --webServerCommand="npx serve your-project-name" --webServerAddress="http://localhost:4200"
+nx g @titan/playwright:configuration --project=your-app-name --webServerCommand="npx serve your-project-name" --webServerAddress="http://localhost:4200"
 ```
 
 ### Testing Applications
@@ -192,8 +192,8 @@ By default Nx, provides a `nxE2EPreset` with predefined configuration for Playwr
 
 ```ts
 import { defineConfig } from '@playwright/test';
-import { nxE2EPreset } from '@nx/playwright/preset';
-import { workspaceRoot } from '@nx/devkit';
+import { nxE2EPreset } from '@titan/playwright/preset';
+import { workspaceRoot } from '@titan/devkit';
 
 // For CI, you may want to set BASE_URL to the deployed application.
 const baseURL = process.env['BASE_URL'] || 'http://localhost:4200';

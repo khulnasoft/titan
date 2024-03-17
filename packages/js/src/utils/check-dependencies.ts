@@ -1,4 +1,4 @@
-import { ExecutorContext, ProjectGraphProjectNode } from '@nx/devkit';
+import { ExecutorContext, ProjectGraphProjectNode } from '@titan/devkit';
 import {
   calculateProjectBuildableDependencies,
   createTmpTsConfig,

@@ -3,7 +3,7 @@
 import type {
   ProjectGraphDependency,
   ProjectGraphProjectNode,
-} from '@nx/devkit';
+} from '@titan/devkit';
 // nx-ignore-next-line
 import type {
   ProjectGraphClientResponse,

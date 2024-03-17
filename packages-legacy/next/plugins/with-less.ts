@@ -1,1 +1,1 @@
-export * from '@nx/next/plugins/with-less';
+export * from '@titan/next/plugins/with-less';

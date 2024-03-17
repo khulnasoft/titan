@@ -1,5 +1,5 @@
-import { Tree } from '@nx/devkit';
-import { configurationGenerator } from '@nx/jest';
+import { Tree } from '@titan/devkit';
+import { configurationGenerator } from '@titan/jest';
 
 export async function addJest(
   host: Tree,
@@ -31,7 +31,7 @@ export async function addJest(
   const configPath = `${appProjectRoot}/jest.config.${js ? 'js' : 'ts'}`;
   const content = `module.exports = {
     displayName: '${projectName}',
-    resolver: '@nx/jest/plugins/resolver',
+    resolver: '@titan/jest/plugins/resolver',
     preset: 'jest-expo',
     moduleFileExtensions: ['ts', 'js', 'html', 'tsx', 'jsx'],
     setupFilesAfterEnv: ['<rootDir>/test-setup.${js ? 'js' : 'ts'}'],

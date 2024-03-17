@@ -1,4 +1,4 @@
-import { getProjects, Tree, updateProjectConfiguration } from '@nx/devkit';
+import { getProjects, Tree, updateProjectConfiguration } from '@titan/devkit';
 
 export function updateRollupExecutor(tree: Tree) {
   const projects = getProjects(tree);

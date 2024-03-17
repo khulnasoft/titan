@@ -1,4 +1,4 @@
-import type { ExecutorContext, ProjectGraphProjectNode } from '@nx/devkit';
+import type { ExecutorContext, ProjectGraphProjectNode } from '@titan/devkit';
 import type { CopyAssetsHandler } from '../../../../utils/assets/copy-assets-handler';
 import type { DependentBuildableProjectNode } from '../../../../utils/buildable-libs-utils';
 import type { NormalizedExecutorOptions } from '../../../../utils/schema';

@@ -4,7 +4,7 @@ import {
   normalizePath,
   ProjectConfiguration,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { Schema } from '../schema';
 import { relative } from 'path';
 

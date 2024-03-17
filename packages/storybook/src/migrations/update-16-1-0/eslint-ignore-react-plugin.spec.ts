@@ -4,8 +4,8 @@ import {
   readJson,
   Tree,
   updateJson,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import * as variousProjects from '../update-15-7-0/test-configs/various-configs.json';
 import eslintIgnoreReactPlugin from './eslint-ignore-react-plugin';
 

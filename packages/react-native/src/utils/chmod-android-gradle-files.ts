@@ -1,4 +1,4 @@
-import { GeneratorCallback, logger } from '@nx/devkit';
+import { GeneratorCallback, logger } from '@titan/devkit';
 import { chmodSync, existsSync } from 'fs';
 import { join } from 'path';
 

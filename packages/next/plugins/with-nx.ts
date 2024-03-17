@@ -10,7 +10,7 @@ import {
   type ProjectGraph,
   type ProjectGraphProjectNode,
   type Target,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 export interface WithNxOptions extends NextConfig {
   nx?: {
@@ -40,7 +40,7 @@ function regexEqual(x, y) {
  * To this function that hard-codes the libsDir.
  */
 function getWithNxContext(): WithNxContext {
-  const { workspaceRoot, workspaceLayout } = require('@nx/devkit');
+  const { workspaceRoot, workspaceLayout } = require('@titan/devkit');
   return {
     workspaceRoot,
     libsDir: workspaceLayout().libsDir,
@@ -57,7 +57,7 @@ function getNxContext(
   targetName: string;
   configurationName?: string;
 } {
-  const { parseTargetString, workspaceRoot } = require('@nx/devkit');
+  const { parseTargetString, workspaceRoot } = require('@titan/devkit');
   const projectNode = graph.nodes[target.project];
   const targetConfig = projectNode.data.targets[target.target];
   const targetOptions = targetConfig.options;
@@ -77,13 +77,13 @@ function getNxContext(
   };
 
   if (targetOptions.devServerTarget) {
-    // Executors such as @nx/cypress:cypress define the devServerTarget option.
+    // Executors such as @titan/cypress:cypress define the devServerTarget option.
     return getNxContext(
       graph,
       parseTargetString(targetOptions.devServerTarget, partialExecutorContext)
     );
   } else if (targetOptions.buildTarget) {
-    // Executors such as @nx/next:server or @nx/next:export define the buildTarget option.
+    // Executors such as @titan/next:server or @titan/next:export define the buildTarget option.
     return getNxContext(
       graph,
       parseTargetString(targetOptions.buildTarget, partialExecutorContext)
@@ -91,7 +91,7 @@ function getNxContext(
   }
 
   // Default case, return info for current target.
-  // This could be a build using @nx/next:build or run-commands without using our executors.
+  // This could be a build using @titan/next:build or run-commands without using our executors.
   return {
     node: graph.nodes[target.project],
     options: targetOptions,
@@ -129,7 +129,7 @@ function withNx(
         joinPathFragments,
         offsetFromRoot,
         workspaceRoot,
-      } = require('@nx/devkit');
+      } = require('@titan/devkit');
 
       let graph: ProjectGraph;
       try {
@@ -177,11 +177,11 @@ function withNx(
         }
       });
 
-      // process.env.NX_NEXT_OUTPUT_PATH is set when running @nx/next:build
+      // process.env.NX_NEXT_OUTPUT_PATH is set when running @titan/next:build
       options.outputPath =
         process.env.NX_NEXT_OUTPUT_PATH || options.outputPath;
 
-      // outputPath may be undefined if using run-commands or other executors other than @nx/next:build.
+      // outputPath may be undefined if using run-commands or other executors other than @titan/next:build.
       // In this case, the user should set distDir in their next.config.js.
       if (options.outputPath && phase !== PHASE_DEVELOPMENT_SERVER) {
         const outputDir = `${offsetFromRoot(projectDirectory)}${
@@ -203,7 +203,7 @@ function withNx(
 
       const userWebpackConfig = nextConfig.webpack;
 
-      const { createWebpackConfig } = require('@nx/next/src/utils/config');
+      const { createWebpackConfig } = require('@titan/next/src/utils/config');
       nextConfig.webpack = (a, b) =>
         createWebpackConfig(
           workspaceRoot,
@@ -418,7 +418,7 @@ export function forNextVersion(range: string, fn: () => void) {
   }
 }
 
-// Support for older generated code: `const withNx = require('@nx/next/plugins/with-nx');`
+// Support for older generated code: `const withNx = require('@titan/next/plugins/with-nx');`
 module.exports = withNx;
 // Support for newer generated code: `const { withNx } = require(...);`
 module.exports.withNx = withNx;

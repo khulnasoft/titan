@@ -4,7 +4,7 @@ import {
   ProjectGraphProjectNode,
   readJsonFile,
   workspaceRoot,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { findNodes } from '@nx/js';
 import { getModifiers } from '@typescript-eslint/type-utils';
 import { existsSync, lstatSync, readdirSync, readFileSync } from 'fs';

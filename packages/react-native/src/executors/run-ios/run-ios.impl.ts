@@ -1,4 +1,4 @@
-import { ExecutorContext, GeneratorCallback, workspaceRoot } from '@nx/devkit';
+import { ExecutorContext, GeneratorCallback, workspaceRoot } from '@titan/devkit';
 import { resolve as pathResolve } from 'path';
 import { ChildProcess, fork } from 'child_process';
 import { platform } from 'os';

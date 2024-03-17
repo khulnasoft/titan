@@ -6,7 +6,7 @@
     "projectType": "application",
     "targets": {
       "build": {
-        "executor": "@nx/next:build",
+        "executor": "@titan/next:build",
         "outputs": ["{options.outputPath}"],
         "defaultConfiguration": "production",
         "options": {
@@ -19,7 +19,7 @@
         }
       },
       "serve": {
-        "executor": "@nx/next:server",
+        "executor": "@titan/next:server",
         "defaultConfiguration": "development",
         "options": { "buildTarget": "nextapp:build", "dev": true },
         "configurations": {
@@ -34,11 +34,11 @@
         }
       },
       "export": {
-        "executor": "@nx/next:export",
+        "executor": "@titan/next:export",
         "options": { "buildTarget": "nextapp:build:production" }
       },
       "test": {
-        "executor": "@nx/jest:jest",
+        "executor": "@titan/jest:jest",
         "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
         "options": {
           "jestConfig": "apps/nextapp/jest.config.ts",
@@ -81,7 +81,7 @@
     "projectType": "application",
     "targets": {
       "build": {
-        "executor": "@nx/next:build",
+        "executor": "@titan/next:build",
         "outputs": ["{options.outputPath}"],
         "defaultConfiguration": "production",
         "options": {
@@ -94,7 +94,7 @@
         }
       },
       "serve": {
-        "executor": "@nx/next:server",
+        "executor": "@titan/next:server",
         "defaultConfiguration": "development",
         "options": { "buildTarget": "nextapp-ts:build", "dev": true },
         "configurations": {
@@ -109,11 +109,11 @@
         }
       },
       "export": {
-        "executor": "@nx/next:export",
+        "executor": "@titan/next:export",
         "options": { "buildTarget": "nextapp-ts:build:production" }
       },
       "test": {
-        "executor": "@nx/jest:jest",
+        "executor": "@titan/jest:jest",
         "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
         "options": {
           "jestConfig": "apps/nextapp-ts/jest.config.ts",
@@ -218,7 +218,7 @@
         }
       },
       "test": {
-        "executor": "@nx/jest:jest",
+        "executor": "@titan/jest:jest",
         "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
         "options": {
           "jestConfig": "apps/ngapp/jest.config.ts",
@@ -324,7 +324,7 @@
         }
       },
       "test": {
-        "executor": "@nx/jest:jest",
+        "executor": "@titan/jest:jest",
         "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
         "options": {
           "jestConfig": "apps/ngapp-ts/jest.config.ts",
@@ -567,7 +567,7 @@
         "options": { "lintFilePatterns": ["apps/rw1/**/*.{ts,tsx,js,jsx}"] }
       },
       "test": {
-        "executor": "@nx/jest:jest",
+        "executor": "@titan/jest:jest",
         "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
         "options": {
           "jestConfig": "apps/rw1/jest.config.ts",

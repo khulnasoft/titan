@@ -3,8 +3,8 @@ import {
   readProjectConfiguration,
   Tree,
   updateNxJson,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 
 // nx-ignore-next-line
 import { applicationGenerator } from './application';

@@ -3,8 +3,8 @@ import {
   readJson,
   readProjectConfiguration,
   Tree,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { Schema } from '../schema';
 import { updateTsconfig } from './update-tsconfig';
 
@@ -12,9 +12,9 @@ import { updateTsconfig } from './update-tsconfig';
 const { libraryGenerator } = require('@nx/js');
 
 let graph: ProjectGraph;
-jest.mock('@nx/devkit', () => {
+jest.mock('@titan/devkit', () => {
   return {
-    ...jest.requireActual('@nx/devkit'),
+    ...jest.requireActual('@titan/devkit'),
     createProjectGraphAsync: jest.fn().mockImplementation(() => graph),
   };
 });

@@ -13,7 +13,7 @@ import {
   Tree,
   updateJson,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 import {
   addTsConfigPath,
@@ -31,7 +31,7 @@ import {
 import { NormalizedSchema, normalizeOptions } from './lib/normalize-options';
 import { Schema } from './schema';
 import { ensureDependencies } from '../../utils/ensure-dependencies';
-import { logShowProjectCommand } from '@nx/devkit/src/utils/log-show-project-command';
+import { logShowProjectCommand } from '@titan/devkit/src/utils/log-show-project-command';
 
 export async function reactNativeLibraryGenerator(
   host: Tree,

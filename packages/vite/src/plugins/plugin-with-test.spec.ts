@@ -1,4 +1,4 @@
-import { CreateNodesContext } from '@nx/devkit';
+import { CreateNodesContext } from '@titan/devkit';
 import { createNodes } from './plugin';
 
 // This will only create test targets since no build targets are defined in vite.config.ts

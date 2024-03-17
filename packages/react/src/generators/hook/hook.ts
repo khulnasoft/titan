@@ -9,13 +9,13 @@ import {
   names,
   toJS,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 import { Schema } from './schema';
 import { addImport } from '../../utils/ast-utils';
 import { ensureTypescript } from '@nx/js/src/utils/typescript/ensure-typescript';
 import { join } from 'path';
-import { determineArtifactNameAndDirectoryOptions } from '@nx/devkit/src/generators/artifact-name-and-directory-utils';
+import { determineArtifactNameAndDirectoryOptions } from '@titan/devkit/src/generators/artifact-name-and-directory-utils';
 
 interface NormalizedSchema extends Schema {
   projectSourceRoot: string;

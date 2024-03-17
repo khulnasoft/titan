@@ -7,7 +7,7 @@ import {
   readProjectConfiguration,
   updateJson,
   readJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { getRelativePathToRootTsConfig } from '@nx/js';
 import { join } from 'path';
 

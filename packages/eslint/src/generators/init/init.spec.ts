@@ -1,8 +1,8 @@
-import { NxJsonConfiguration, readJson, Tree, updateJson } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { NxJsonConfiguration, readJson, Tree, updateJson } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { LinterInitOptions, lintInitGenerator } from './init';
 
-describe('@nx/eslint:init', () => {
+describe('@titan/eslint:init', () => {
   let tree: Tree;
   let options: LinterInitOptions;
 
@@ -21,7 +21,7 @@ describe('@nx/eslint:init', () => {
     expect(tree.exists('.eslintrc.json')).toBe(false);
   });
 
-  it('should setup @nx/eslint/plugin', async () => {
+  it('should setup @titan/eslint/plugin', async () => {
     updateJson<NxJsonConfiguration>(tree, 'nx.json', (json) => {
       json.namedInputs ??= {};
       json.namedInputs.production = ['default'];
@@ -32,7 +32,7 @@ describe('@nx/eslint:init', () => {
 
     expect(
       readJson<NxJsonConfiguration>(tree, 'nx.json').targetDefaults[
-        '@nx/eslint:lint'
+        '@titan/eslint:lint'
       ]
     ).toBeUndefined();
     expect(readJson<NxJsonConfiguration>(tree, 'nx.json').plugins)
@@ -42,13 +42,13 @@ describe('@nx/eslint:init', () => {
           "options": {
             "targetName": "lint",
           },
-          "plugin": "@nx/eslint/plugin",
+          "plugin": "@titan/eslint/plugin",
         },
       ]
     `);
   });
 
-  it('should add @nx/eslint/plugin', async () => {
+  it('should add @titan/eslint/plugin', async () => {
     updateJson<NxJsonConfiguration>(tree, 'nx.json', (json) => {
       json.namedInputs ??= {};
       json.namedInputs.production = ['default'];
@@ -63,7 +63,7 @@ describe('@nx/eslint:init', () => {
           "options": {
             "targetName": "lint",
           },
-          "plugin": "@nx/eslint/plugin",
+          "plugin": "@titan/eslint/plugin",
         },
       ]
     `);
@@ -74,7 +74,7 @@ describe('@nx/eslint:init', () => {
       await lintInitGenerator(tree, { ...options, addPlugin: false });
 
       expect(
-        readJson(tree, 'nx.json').targetDefaults['@nx/eslint:lint']
+        readJson(tree, 'nx.json').targetDefaults['@titan/eslint:lint']
       ).toEqual({
         cache: true,
         inputs: [
@@ -97,7 +97,7 @@ describe('@nx/eslint:init', () => {
 
       expect(
         readJson<NxJsonConfiguration>(tree, 'nx.json').targetDefaults[
-          '@nx/eslint:lint'
+          '@titan/eslint:lint'
         ]
       ).toEqual({
         cache: true,

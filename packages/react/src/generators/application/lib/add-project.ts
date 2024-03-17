@@ -5,7 +5,7 @@ import {
   ProjectConfiguration,
   TargetConfiguration,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { hasWebpackPlugin } from '../../../utils/has-webpack-plugin';
 import { maybeJs } from '../../../utils/maybe-js';
 

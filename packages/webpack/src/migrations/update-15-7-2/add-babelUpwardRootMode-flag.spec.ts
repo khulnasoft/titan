@@ -1,9 +1,9 @@
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import {
   addProjectConfiguration,
   readProjectConfiguration,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import addBabelUpwardRootModeFlag from './add-babelUpwardRootMode-flag';
 
 describe('15.7.2 migration (add babelUpwardRootMode flag)', () => {

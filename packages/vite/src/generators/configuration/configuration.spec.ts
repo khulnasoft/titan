@@ -1,5 +1,5 @@
-import { addDependenciesToPackageJson, readJson, Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { addDependenciesToPackageJson, readJson, Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { nxVersion } from '../../utils/versions';
 
 import { viteConfigurationGenerator } from './configuration';

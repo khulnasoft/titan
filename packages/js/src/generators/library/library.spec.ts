@@ -6,8 +6,8 @@ import {
   readProjectConfiguration,
   Tree,
   updateJson,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { LibraryGeneratorSchema } from '../../utils/schema';
 import libraryGenerator from './library';
 
@@ -485,8 +485,8 @@ describe('lib', () => {
 
       const packageJson = readJson(tree, 'package.json');
       expect(packageJson.devDependencies['eslint']).toBeDefined();
-      expect(packageJson.devDependencies['@nx/eslint']).toBeDefined();
-      expect(packageJson.devDependencies['@nx/eslint-plugin']).toBeDefined();
+      expect(packageJson.devDependencies['@titan/eslint']).toBeDefined();
+      expect(packageJson.devDependencies['@titan/eslint-plugin']).toBeDefined();
     });
 
     describe('not nested', () => {
@@ -1448,8 +1448,8 @@ describe('lib', () => {
       it('should not generate a .babelrc when flag is not set and there is NOT a `@nx/web` package installed', async () => {
         updateJson(tree, 'package.json', (json) => {
           json.devDependencies = {
-            '@nx/angular': '1.1.1',
-            '@nx/next': '1.1.1',
+            '@titan/angular': '1.1.1',
+            '@titan/next': '1.1.1',
           };
           return json;
         });
@@ -1532,7 +1532,7 @@ describe('lib', () => {
 
       const project = readProjectConfiguration(tree, 'my-lib');
       expect(project.targets.build).toMatchObject({
-        executor: '@nx/esbuild:esbuild',
+        executor: '@titan/esbuild:esbuild',
       });
       expect(readJson(tree, 'my-lib/.eslintrc.json').overrides).toContainEqual({
         files: ['*.json'],

@@ -1,5 +1,5 @@
-import { Tree, readNxJson, updateNxJson } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { Tree, readNxJson, updateNxJson } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import addTestSetupToIgnoredInputs from './add-test-setup-to-inputs-ignore';
 
 describe('Jest Migration - jest 29 mocked usage in tests', () => {

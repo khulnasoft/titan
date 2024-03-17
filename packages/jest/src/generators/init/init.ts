@@ -7,8 +7,8 @@ import {
   updateNxJson,
   type GeneratorCallback,
   type Tree,
-} from '@nx/devkit';
-import { updatePackageScripts } from '@nx/devkit/src/utils/update-package-scripts';
+} from '@titan/devkit';
+import { updatePackageScripts } from '@titan/devkit/src/utils/update-package-scripts';
 import { createNodes } from '../../plugins/plugin';
 import { jestVersion, nxVersion } from '../../utils/versions';
 import { isPresetCjs } from '../../utils/config/is-preset-cjs';
@@ -21,12 +21,12 @@ function addPlugin(tree: Tree) {
   if (
     !nxJson.plugins.some((p) =>
       typeof p === 'string'
-        ? p === '@nx/jest/plugin'
-        : p.plugin === '@nx/jest/plugin'
+        ? p === '@titan/jest/plugin'
+        : p.plugin === '@titan/jest/plugin'
     )
   ) {
     nxJson.plugins.push({
-      plugin: '@nx/jest/plugin',
+      plugin: '@titan/jest/plugin',
       options: {
         targetName: 'test',
       },
@@ -64,22 +64,22 @@ function addJestTargetDefaults(tree: Tree, presetEnv: 'cjs' | 'js') {
   const nxJson = readNxJson(tree);
 
   nxJson.targetDefaults ??= {};
-  nxJson.targetDefaults['@nx/jest:jest'] ??= {};
+  nxJson.targetDefaults['@titan/jest:jest'] ??= {};
 
   const productionFileSet = nxJson.namedInputs?.production;
 
-  nxJson.targetDefaults['@nx/jest:jest'].cache ??= true;
+  nxJson.targetDefaults['@titan/jest:jest'].cache ??= true;
   // Test targets depend on all their project's sources + production sources of dependencies
-  nxJson.targetDefaults['@nx/jest:jest'].inputs ??= [
+  nxJson.targetDefaults['@titan/jest:jest'].inputs ??= [
     'default',
     productionFileSet ? '^production' : '^default',
     `{workspaceRoot}/jest.preset.${presetEnv}`,
   ];
 
-  nxJson.targetDefaults['@nx/jest:jest'].options ??= {
+  nxJson.targetDefaults['@titan/jest:jest'].options ??= {
     passWithNoTests: true,
   };
-  nxJson.targetDefaults['@nx/jest:jest'].configurations ??= {
+  nxJson.targetDefaults['@titan/jest:jest'].configurations ??= {
     ci: {
       ci: true,
       codeCoverage: true,
@@ -94,7 +94,7 @@ function updateDependencies(tree: Tree, options: JestInitSchema) {
     tree,
     {},
     {
-      '@nx/jest': nxVersion,
+      '@titan/jest': nxVersion,
       jest: jestVersion,
     },
     undefined,
@@ -129,7 +129,7 @@ export async function jestInitGeneratorInternal(
 
   const tasks: GeneratorCallback[] = [];
   if (!options.skipPackageJson) {
-    tasks.push(removeDependenciesFromPackageJson(tree, ['@nx/jest'], []));
+    tasks.push(removeDependenciesFromPackageJson(tree, ['@titan/jest'], []));
     tasks.push(updateDependencies(tree, options));
   }
 

@@ -1,5 +1,5 @@
-import type { ProjectConfiguration, Tree } from '@nx/devkit';
-import { readProjectConfiguration } from '@nx/devkit';
+import type { ProjectConfiguration, Tree } from '@titan/devkit';
+import { readProjectConfiguration } from '@titan/devkit';
 
 export function getE2EProject(
   tree: Tree,

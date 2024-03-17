@@ -1,6 +1,6 @@
 import { getImportPath } from './get-import-path';
-import { Tree, writeJson } from '@nx/devkit';
-import { createTree } from '@nx/devkit/testing';
+import { Tree, writeJson } from '@titan/devkit';
+import { createTree } from '@titan/devkit/testing';
 
 describe('getImportPath', () => {
   let tree: Tree;

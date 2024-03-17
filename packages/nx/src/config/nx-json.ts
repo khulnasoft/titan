@@ -49,7 +49,7 @@ interface NxInstallationConfiguration {
   version: string;
   /**
    * Record<pluginPackageName, pluginVersion>. e.g.
-   * plugins: { '@nx/angular': '1.0.0' }
+   * plugins: { '@titan/angular': '1.0.0' }
    */
   plugins?: Record<string, string>;
 }

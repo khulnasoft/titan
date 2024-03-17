@@ -5,7 +5,7 @@ import {
   normalizePath,
   parseTargetString,
   readCachedProjectGraph,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { getRootTsConfigPath } from '@nx/js';
 import type { DependentBuildableProjectNode } from '@nx/js/src/utils/buildable-libs-utils';
 import { WebpackNxBuildCoordinationPlugin } from '@nx/webpack/src/plugins/webpack-nx-build-coordination-plugin';
@@ -152,15 +152,15 @@ export function executeDevServerBuilder(
   const isUsingWebpackBuilder = ![
     '@angular-devkit/build-angular:application',
     '@angular-devkit/build-angular:browser-esbuild',
-    '@nx/angular:application',
-    '@nx/angular:browser-esbuild',
+    '@titan/angular:application',
+    '@titan/angular:browser-esbuild',
   ].includes(buildTarget.executor);
 
   /**
    * The Angular CLI dev-server builder make some decisions based on the build
    * target builder but it only considers `@angular-devkit/build-angular:*`
    * builders. Since we are using a custom builder, we patch the context to
-   * handle `@nx/angular:*` executors.
+   * handle `@titan/angular:*` executors.
    */
   patchBuilderContext(context, !isUsingWebpackBuilder, parsedBuildTarget);
 

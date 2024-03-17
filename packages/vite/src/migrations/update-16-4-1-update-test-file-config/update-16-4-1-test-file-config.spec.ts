@@ -1,9 +1,9 @@
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import {
   Tree,
   addProjectConfiguration,
   readProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 import updateTestFileOption from './update-16-4-1-test-file-config';
 

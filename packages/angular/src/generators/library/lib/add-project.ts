@@ -1,8 +1,8 @@
-import type { Tree } from '@nx/devkit';
-import { addProjectConfiguration, joinPathFragments } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
+import { addProjectConfiguration, joinPathFragments } from '@titan/devkit';
 import type { AngularProjectConfiguration } from '../../../utils/types';
 import type { NormalizedSchema } from './normalized-schema';
-import { addBuildTargetDefaults } from '@nx/devkit/src/generators/add-build-target-defaults';
+import { addBuildTargetDefaults } from '@titan/devkit/src/generators/add-build-target-defaults';
 
 export function addProject(
   tree: Tree,
@@ -20,8 +20,8 @@ export function addProject(
 
   if (libraryOptions.buildable || libraryOptions.publishable) {
     const executor = libraryOptions.publishable
-      ? '@nx/angular:package'
-      : '@nx/angular:ng-packagr-lite';
+      ? '@titan/angular:package'
+      : '@titan/angular:ng-packagr-lite';
 
     addBuildTargetDefaults(tree, executor);
 

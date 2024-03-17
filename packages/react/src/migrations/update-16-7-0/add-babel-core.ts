@@ -3,7 +3,7 @@ import {
   addDependenciesToPackageJson,
   formatFiles,
   readJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { babelCoreVersion } from '../../utils/versions';
 
 export default async function addBabelCore(tree: Tree): Promise<void> {

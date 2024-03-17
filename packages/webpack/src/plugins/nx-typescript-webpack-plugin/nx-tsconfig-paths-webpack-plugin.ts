@@ -1,7 +1,7 @@
 import * as path from 'path';
 import { Compiler } from 'webpack';
 import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin';
-import { workspaceRoot } from '@nx/devkit';
+import { workspaceRoot } from '@titan/devkit';
 
 export class NxTsconfigPathsWebpackPlugin {
   constructor(

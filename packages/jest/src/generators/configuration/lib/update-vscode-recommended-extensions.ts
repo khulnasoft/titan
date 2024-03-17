@@ -1,4 +1,4 @@
-import { updateJson, type Tree } from '@nx/devkit';
+import { updateJson, type Tree } from '@titan/devkit';
 
 export function updateVsCodeRecommendedExtensions(host: Tree) {
   if (!host.exists('.vscode/extensions.json')) {

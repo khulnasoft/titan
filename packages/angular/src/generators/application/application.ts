@@ -6,7 +6,7 @@ import {
   readNxJson,
   Tree,
   updateNxJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { initGenerator as jsInitGenerator } from '@nx/js';
 import { angularInitGenerator } from '../init/init';
 import { setupSsr } from '../setup-ssr/setup-ssr';
@@ -26,7 +26,7 @@ import {
   updateEditorTsConfig,
 } from './lib';
 import type { Schema } from './schema';
-import { logShowProjectCommand } from '@nx/devkit/src/utils/log-show-project-command';
+import { logShowProjectCommand } from '@titan/devkit/src/utils/log-show-project-command';
 
 export async function applicationGenerator(
   tree: Tree,

@@ -1,6 +1,6 @@
 import { AssetGlob } from './assets';
 import { CopyAssetsHandler, FileEvent } from './copy-assets-handler';
-import { ExecutorContext } from '@nx/devkit';
+import { ExecutorContext } from '@titan/devkit';
 
 export interface CopyAssetsOptions {
   outputPath: string;

@@ -1,6 +1,6 @@
-import { readJson, readProjectConfiguration } from '@nx/devkit';
-import { type ProjectNameAndRootFormat } from '@nx/devkit/src/generators/project-name-and-root-utils';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { readJson, readProjectConfiguration } from '@titan/devkit';
+import { type ProjectNameAndRootFormat } from '@titan/devkit/src/generators/project-name-and-root-utils';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import applicationGenerator from '../application/application.impl';
 import libraryGenerator from './library.impl';
 

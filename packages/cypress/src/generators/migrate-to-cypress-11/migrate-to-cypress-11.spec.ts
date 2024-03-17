@@ -6,8 +6,8 @@ import {
   Tree,
   updateJson,
   updateProjectConfiguration,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { installedCypressVersion } from '../../utils/cypress-version';
 import { cypressProjectGenerator } from '../cypress-project/cypress-project';
 import {
@@ -245,7 +245,7 @@ describe('convertToCypressTen', () => {
       pc.targets = {
         ...pc.targets,
         e2e: {
-          executor: '@nx/cypress:cypress',
+          executor: '@titan/cypress:cypress',
           options: {
             baseUrl: 'http://localhost:4200',
           },
@@ -330,7 +330,7 @@ describe('convertToCypressTen', () => {
       expect(tree.exists('app-e2e/src/e2e/app.cy.ts')).toBeTruthy();
       expect(tree.exists('app-e2e/src/support/e2e.ts')).toBeTruthy();
       expect(readProjectConfiguration(tree, 'app-e2e').targets['e2e']).toEqual({
-        executor: '@nx/cypress:cypress',
+        executor: '@titan/cypress:cypress',
         options: {
           cypressConfig: 'cypress.config.ts',
           devServerTarget: 'app:serve',
@@ -352,7 +352,7 @@ describe('convertToCypressTen', () => {
       expect(
         readProjectConfiguration(tree, 'app-two-e2e').targets['e2e']
       ).toEqual({
-        executor: '@nx/cypress:cypress',
+        executor: '@titan/cypress:cypress',
         options: {
           cypressConfig: 'cypress.config.ts',
           devServerTarget: 'app-two:serve',

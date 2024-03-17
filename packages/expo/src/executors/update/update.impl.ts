@@ -1,4 +1,4 @@
-import { ExecutorContext, names, readJsonFile } from '@nx/devkit';
+import { ExecutorContext, names, readJsonFile } from '@titan/devkit';
 import { join, resolve as pathResolve } from 'path';
 import { ChildProcess, fork } from 'child_process';
 

@@ -1,5 +1,5 @@
-import { Tree, readJson } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { Tree, readJson } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { nxVersion } from '../../utils/versions';
 
 import { rollupInitGenerator } from './init';

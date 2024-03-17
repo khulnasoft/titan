@@ -1,7 +1,7 @@
 // nx-ignore-next-line
 import type { OutputBundle } from 'rollup'; // only used  for types
 import { relative } from 'path';
-import { stripIndents } from '@nx/devkit';
+import { stripIndents } from '@titan/devkit';
 
 //NOTE: This is here so we can share between `@nx/rollup` and `@nx/vite`.
 

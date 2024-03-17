@@ -1,10 +1,10 @@
-import type { GeneratorCallback, Tree } from '@nx/devkit';
+import type { GeneratorCallback, Tree } from '@titan/devkit';
 import {
   addDependenciesToPackageJson,
   formatFiles,
   generateFiles,
   readProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 import {
   autoprefixerVersion,

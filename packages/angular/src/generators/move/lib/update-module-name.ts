@@ -6,7 +6,7 @@ import {
   readProjectConfiguration,
   Tree,
   visitNotIgnoredFiles,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import type { MoveImplOptions } from './types';
 
 /**

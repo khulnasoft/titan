@@ -3,8 +3,8 @@ import {
   readJson,
   Tree,
   updateNxJson,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 
 import addDroppedDependencies from './add-dropped-dependencies';
 

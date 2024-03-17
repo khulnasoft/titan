@@ -13,8 +13,8 @@ import {
   Tree,
   updateJson,
   updateProjectConfiguration,
-} from '@nx/devkit';
-import { forEachExecutorOptions } from '@nx/devkit/src/generators/executor-options-utils';
+} from '@titan/devkit';
+import { forEachExecutorOptions } from '@titan/devkit/src/generators/executor-options-utils';
 import { CypressExecutorOptions } from '../../executors/cypress/cypress.impl';
 import {
   addConfigToTsConfig,
@@ -133,7 +133,7 @@ export async function migrateCypressProject(tree: Tree) {
 
   forEachExecutorOptions<CypressExecutorOptions>(
     tree,
-    '@nx/cypress:cypress',
+    '@titan/cypress:cypress',
     (currentValue, projectName, target, configuration) => {
       migrateCypressExecutorOptions(
         tree,

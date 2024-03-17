@@ -5,8 +5,8 @@ import {
   addProjectConfiguration,
   updateJson,
   readNxJson,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import * as variousProjects from './test-configs/storybook-projects.json';
 import moveStorybookTsconfig from './move-storybook-tsconfig';
 

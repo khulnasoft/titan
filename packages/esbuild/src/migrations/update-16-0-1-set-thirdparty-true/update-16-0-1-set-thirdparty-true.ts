@@ -4,7 +4,7 @@ import {
   getProjects,
   Tree,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 export default async function update(host: Tree) {
   const projects = getProjects(host);
@@ -18,7 +18,7 @@ export default async function update(host: Tree) {
       ([targetName, targetConfig]) => {
         if (
           targetConfig.executor === '@nrwl/esbuild:esbuild' ||
-          targetConfig.executor === '@nx/esbuild:esbuild'
+          targetConfig.executor === '@titan/esbuild:esbuild'
         ) {
           projectConfig.targets[targetName].options ??= {};
           if (projectConfig.targets[targetName].options.bundle !== false) {

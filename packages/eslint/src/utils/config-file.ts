@@ -1,4 +1,4 @@
-import { joinPathFragments } from '@nx/devkit';
+import { joinPathFragments } from '@titan/devkit';
 import { existsSync } from 'fs';
 
 export const ESLINT_CONFIG_FILENAMES = [

@@ -78,7 +78,7 @@ Plugins should export a function named `registerProjectTargets` that infers the 
 The `registerProjectTargets` function should return a `Record<string, TargetConfiguration>`, which describes the targets inferred for that specific project file.
 
 ```typescript
-import { TargetConfiguration } from '@nx/devkit';
+import { TargetConfiguration } from '@titan/devkit';
 
 export const projectFilePatterns = ['project.json', 'my-other-project-file'];
 
@@ -147,7 +147,7 @@ import {
   ProjectGraphBuilder,
   ProjectGraphProcessorContext,
   DependencyType,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 export function processProjectGraph(
   graph: ProjectGraph,
@@ -222,7 +222,7 @@ Dynamic dependencies are a special type of explicit dependencies. In contrast to
 A typical example would be lazy-loaded routes. Having separation between these two allows us to identify situations where static import breaks the lazy-loading.
 
 ```typescript
-import { DependencyType } from '@nx/devkit';
+import { DependencyType } from '@titan/devkit';
 
 // Add a new edge
 builder.addDynamicDependency(

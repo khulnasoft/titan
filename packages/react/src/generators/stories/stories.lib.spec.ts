@@ -1,8 +1,8 @@
-import { Tree } from '@nx/devkit';
+import { Tree } from '@titan/devkit';
 import storiesGenerator from './stories';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import applicationGenerator from '../application/application';
-import { Linter } from '@nx/eslint';
+import { Linter } from '@titan/eslint';
 import libraryGenerator from '../library/library';
 
 describe('react:stories for libraries', () => {

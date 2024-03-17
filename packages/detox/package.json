@@ -25,10 +25,10 @@
   "main": "./index",
   "types": "index.d.ts",
   "dependencies": {
-    "@nx/devkit": "file:../devkit",
-    "@nx/jest": "file:../jest",
+    "@titan/devkit": "file:../devkit",
+    "@titan/jest": "file:../jest",
     "@nx/js": "file:../js",
-    "@nx/eslint": "file:../eslint",
+    "@titan/eslint": "file:../eslint",
     "@nx/react": "file:../react",
     "tslib": "^2.3.0"
   },

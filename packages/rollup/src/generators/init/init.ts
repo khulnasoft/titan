@@ -5,10 +5,10 @@ import {
   Tree,
   readNxJson,
   updateNxJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { nxVersion } from '../../utils/versions';
 import { Schema } from './schema';
-import { updatePackageScripts } from '@nx/devkit/src/utils/update-package-scripts';
+import { updatePackageScripts } from '@titan/devkit/src/utils/update-package-scripts';
 import { createNodes } from '../../plugins/plugin';
 
 function addPlugin(tree: Tree) {

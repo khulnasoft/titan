@@ -1,4 +1,4 @@
-import { ExecutorContext, logger, names } from '@nx/devkit';
+import { ExecutorContext, logger, names } from '@titan/devkit';
 import { resolve as pathResolve } from 'path';
 import { ChildProcess, fork } from 'child_process';
 

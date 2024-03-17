@@ -49,24 +49,24 @@ describe('create-nx-workspace --preset=npm', () => {
   });
 
   it('should add angular application', () => {
-    packageInstall('@nx/angular', wsName);
+    packageInstall('@titan/angular', wsName);
     const appName = uniq('my-app');
 
     expect(() => {
       runCLI(
-        `generate @nx/angular:app packages/${appName} --projectNameAndRootFormat as-provided --no-interactive`
+        `generate @titan/angular:app packages/${appName} --projectNameAndRootFormat as-provided --no-interactive`
       );
     }).not.toThrowError();
     checkFilesExist('tsconfig.base.json');
   }, 1_000_000);
 
   it('should add angular library', () => {
-    packageInstall('@nx/angular', wsName);
+    packageInstall('@titan/angular', wsName);
     const libName = uniq('lib');
 
     expect(() => {
       runCLI(
-        `generate @nx/angular:lib packages/${libName} --projectNameAndRootFormat as-provided --no-interactive`
+        `generate @titan/angular:lib packages/${libName} --projectNameAndRootFormat as-provided --no-interactive`
       );
     }).not.toThrowError();
     checkFilesExist('tsconfig.base.json');
@@ -137,26 +137,26 @@ describe('create-nx-workspace --preset=npm', () => {
   });
 
   it('should add next application', () => {
-    packageInstall('@nx/next', wsName);
+    packageInstall('@titan/next', wsName);
 
     const appName = uniq('my-app');
 
     expect(() => {
       runCLI(
-        `generate @nx/next:app packages/${appName} --projectNameAndRootFormat as-provided --no-interactive`
+        `generate @titan/next:app packages/${appName} --projectNameAndRootFormat as-provided --no-interactive`
       );
     }).not.toThrowError();
     checkFilesExist('tsconfig.base.json');
   });
 
   it('should add next library', () => {
-    packageInstall('@nx/next', wsName);
+    packageInstall('@titan/next', wsName);
 
     const libName = uniq('lib');
 
     expect(() => {
       runCLI(
-        `generate @nx/next:lib packages/${libName} --projectNameAndRootFormat as-provided --no-interactive`
+        `generate @titan/next:lib packages/${libName} --projectNameAndRootFormat as-provided --no-interactive`
       );
     }).not.toThrowError();
     checkFilesExist('tsconfig.base.json');

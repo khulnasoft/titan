@@ -12,14 +12,14 @@ describe('Storybook executors for Angular', () => {
   const angularStorybookLib = uniq('test-ui-ng-lib');
   beforeAll(() => {
     newProject({
-      packages: ['@nx/angular'],
+      packages: ['@titan/angular'],
       unsetProjectNameAndRootFormat: false,
     });
     runCLI(
-      `g @nx/angular:library ${angularStorybookLib} --project-name-and-root-format=as-provided --no-interactive`
+      `g @titan/angular:library ${angularStorybookLib} --project-name-and-root-format=as-provided --no-interactive`
     );
     runCLI(
-      `generate @nx/angular:storybook-configuration ${angularStorybookLib} --generateStories --no-interactive`
+      `generate @titan/angular:storybook-configuration ${angularStorybookLib} --generateStories --no-interactive`
     );
   });
 

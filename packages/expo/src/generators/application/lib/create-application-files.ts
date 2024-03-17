@@ -5,7 +5,7 @@ import {
   PackageManager,
   toJS,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { join } from 'path';
 import { NormalizedSchema } from './normalize-options';
 

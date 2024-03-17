@@ -1,7 +1,7 @@
 import { maybeJs } from '../../../utils/maybe-js';
 import { updateJestConfigContent } from '../../../utils/jest-utils';
 import { NormalizedSchema } from '../schema';
-import { Tree, updateJson } from '@nx/devkit';
+import { Tree, updateJson } from '@titan/devkit';
 
 export function updateSpecConfig(host: Tree, options: NormalizedSchema) {
   if (options.unitTestRunner === 'none') {

@@ -1,4 +1,4 @@
-import { workspaceRoot } from '@nx/devkit';
+import { workspaceRoot } from '@titan/devkit';
 import { XMLParser } from 'fast-xml-parser';
 import { existsSync, readJSONSync } from 'fs-extra';
 import * as glob from 'glob';

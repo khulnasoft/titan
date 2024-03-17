@@ -12,7 +12,7 @@ import {
   TargetConfiguration,
   Tree,
   workspaceRoot,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { readNxJson } from 'nx/src/config/configuration';
 import { readProjectsConfigurationFromProjectGraph } from 'nx/src/project-graph/project-graph';
 
@@ -128,10 +128,10 @@ function frameworkHelperMessage(
     '@nx/vite:build': 'react',
     '@nrwl/webpack:webpack': 'react',
     '@nrwl/vite:build': 'react',
-    '@nx/angular:webpack-browser': 'angular',
+    '@titan/angular:webpack-browser': 'angular',
     '@nrwl/angular:webpack-browser': 'angular',
     '@angular-devkit/build-angular:browser': 'angular',
-    '@nx/next:build': 'next',
+    '@titan/next:build': 'next',
     '@nrwl/next:build': 'next',
   };
   const buildTargetFramework = executorsToFramework[executorName];

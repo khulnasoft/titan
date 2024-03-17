@@ -14,7 +14,7 @@ import {
   createProjectGraphAsync,
   ProjectGraph,
   readCachedProjectGraph,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { readCachedProjectConfiguration } from 'nx/src/project-graph/project-graph';
 
 export function applyDefaultEagerPackages(
@@ -35,7 +35,7 @@ export function applyDefaultEagerPackages(
 
 export const DEFAULT_NPM_PACKAGES_TO_AVOID = [
   'zone.js',
-  '@nx/angular/mf',
+  '@titan/angular/mf',
   '@nrwl/angular/mf',
 ];
 export const DEFAULT_ANGULAR_PACKAGES_TO_SHARE = [

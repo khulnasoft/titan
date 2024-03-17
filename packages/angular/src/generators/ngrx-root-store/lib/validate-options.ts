@@ -1,5 +1,5 @@
-import type { Tree } from '@nx/devkit';
-import { getProjects, readProjectConfiguration } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
+import { getProjects, readProjectConfiguration } from '@titan/devkit';
 import { Schema } from '../schema';
 
 export function validateOptions(tree: Tree, options: Schema): void {

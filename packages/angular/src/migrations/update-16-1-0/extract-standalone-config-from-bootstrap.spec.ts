@@ -4,13 +4,13 @@ import {
   Tree,
   addProjectConfiguration,
   formatFiles,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import extractStandaloneConfig from './extract-standalone-config-from-bootstrap';
 
 let projectGraph: ProjectGraph;
-jest.mock('@nx/devkit', () => ({
-  ...jest.requireActual('@nx/devkit'),
+jest.mock('@titan/devkit', () => ({
+  ...jest.requireActual('@titan/devkit'),
   createProjectGraphAsync: () => Promise.resolve(projectGraph),
   formatFiles: jest.fn(),
 }));

@@ -7,9 +7,9 @@ import {
   TargetConfiguration,
   workspaceRoot,
   writeJsonFile,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { dirname, isAbsolute, join, relative } from 'path';
-import { getNamedInputs } from '@nx/devkit/src/utils/get-named-inputs';
+import { getNamedInputs } from '@titan/devkit/src/utils/get-named-inputs';
 import { WebpackExecutorOptions } from '../executors/webpack/schema';
 import { WebDevServerOptions } from '../executors/dev-server/schema';
 import { existsSync, readdirSync } from 'fs';
@@ -17,7 +17,7 @@ import { readWebpackOptions } from '../utils/webpack/read-webpack-options';
 import { resolveUserDefinedWebpackConfig } from '../utils/webpack/resolve-user-defined-webpack-config';
 import { getLockFileName, getRootTsConfigPath } from '@nx/js';
 import { projectGraphCacheDirectory } from 'nx/src/utils/cache-directory';
-import { calculateHashForCreateNodes } from '@nx/devkit/src/utils/calculate-hash-for-create-nodes';
+import { calculateHashForCreateNodes } from '@titan/devkit/src/utils/calculate-hash-for-create-nodes';
 
 export interface WebpackPluginOptions {
   buildTargetName?: string;

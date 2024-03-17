@@ -1,18 +1,18 @@
-import { installedCypressVersion } from '@nx/cypress/src/utils/cypress-version';
+import { installedCypressVersion } from '@titan/cypress/src/utils/cypress-version';
 import {
   logger,
   readJson,
   readProjectConfiguration,
   Tree,
   updateProjectConfiguration,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { createApp, createLib } from '../../utils/testing-generators';
 import { componentGenerator } from './component';
 
 // need to mock cypress otherwise it'll use the nx installed version from package.json
 //  which is v9 while we are testing for the new v10 version
-jest.mock('@nx/cypress/src/utils/cypress-version');
+jest.mock('@titan/cypress/src/utils/cypress-version');
 
 describe('component', () => {
   let appTree: Tree;

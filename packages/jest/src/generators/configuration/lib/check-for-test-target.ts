@@ -1,4 +1,4 @@
-import { readProjectConfiguration, Tree } from '@nx/devkit';
+import { readProjectConfiguration, Tree } from '@titan/devkit';
 import { NormalizedJestProjectSchema } from '../schema';
 
 export function checkForTestTarget(

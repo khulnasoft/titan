@@ -1,5 +1,5 @@
-import { readProjectConfiguration, Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { readProjectConfiguration, Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { NormalizedSchema } from '../schema';
 import { updateProjectRootFiles } from './update-project-root-files';
 
@@ -49,7 +49,7 @@ describe('updateProjectRootFiles', () => {
   });
 
   it('should handle cypress configs correctly', async () => {
-    const cypressConfigContents = `import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
+    const cypressConfigContents = `import { nxE2EPreset } from '@titan/cypress/plugins/cypress-preset';
 
 import { defineConfig } from 'cypress';
 

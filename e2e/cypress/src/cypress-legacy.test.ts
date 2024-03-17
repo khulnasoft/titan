@@ -11,7 +11,7 @@ const TEN_MINS_MS = 600_000;
 
 describe('Cypress E2E Test runner (legacy)', () => {
   beforeAll(() => {
-    newProject({ packages: ['@nx/angular', '@nx/react'] });
+    newProject({ packages: ['@titan/angular', '@nx/react'] });
   });
 
   afterAll(() => cleanupProject());
@@ -22,11 +22,11 @@ describe('Cypress E2E Test runner (legacy)', () => {
       const ngApp1 = uniq('ng-app1');
       const ngApp2 = uniq('ng-app2');
       runCLI(
-        `generate @nx/angular:app ${ngApp1} --e2eTestRunner=cypress --linter=eslint --no-interactive`,
+        `generate @titan/angular:app ${ngApp1} --e2eTestRunner=cypress --linter=eslint --no-interactive`,
         { env: { NX_ADD_PLUGINS: 'false' } }
       );
       runCLI(
-        `generate @nx/angular:app ${ngApp2} --e2eTestRunner=cypress --linter=eslint --no-interactive`,
+        `generate @titan/angular:app ${ngApp2} --e2eTestRunner=cypress --linter=eslint --no-interactive`,
         { env: { NX_ADD_PLUGINS: 'false' } }
       );
 
@@ -56,7 +56,7 @@ describe('Cypress E2E Test runner (legacy)', () => {
         `generate @nx/react:cypress-component-configuration --project=${appName} --generate-tests --no-interactive`,
         { env: { NX_ADD_PLUGINS: 'false' } }
       );
-      runCLI(`generate @nx/cypress:e2e --project=${appName} --no-interactive`, {
+      runCLI(`generate @titan/cypress:e2e --project=${appName} --no-interactive`, {
         env: { NX_ADD_PLUGINS: 'false' },
       });
 

@@ -53,9 +53,9 @@ export function jsPluginConfig(
     packageJsonDeps['@nx/workspace'] ||
     packageJsonDeps['@nx/js'] ||
     packageJsonDeps['@nx/node'] ||
-    packageJsonDeps['@nx/next'] ||
+    packageJsonDeps['@titan/next'] ||
     packageJsonDeps['@nx/react'] ||
-    packageJsonDeps['@nx/angular'] ||
+    packageJsonDeps['@titan/angular'] ||
     packageJsonDeps['@nx/web'] ||
     packageJsonDeps['@nrwl/workspace'] ||
     packageJsonDeps['@nrwl/js'] ||

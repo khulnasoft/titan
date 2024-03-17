@@ -1,4 +1,4 @@
-import { ExecutorContext } from '@nx/devkit';
+import { ExecutorContext } from '@titan/devkit';
 import { join } from 'path';
 import { ModuleFederationConfig } from './models';
 

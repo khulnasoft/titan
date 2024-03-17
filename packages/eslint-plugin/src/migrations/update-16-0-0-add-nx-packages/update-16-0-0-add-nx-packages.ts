@@ -1,8 +1,8 @@
-import { Tree, formatFiles, visitNotIgnoredFiles } from '@nx/devkit';
-import { replaceNrwlPackageWithNxPackage } from '@nx/devkit/src/utils/replace-package';
+import { Tree, formatFiles, visitNotIgnoredFiles } from '@titan/devkit';
+import { replaceNrwlPackageWithNxPackage } from '@titan/devkit/src/utils/replace-package';
 
 import { basename } from 'path';
-import { isBinaryPath } from '@nx/devkit/src/utils/binary-extensions';
+import { isBinaryPath } from '@titan/devkit/src/utils/binary-extensions';
 
 const eslintFileNames = [
   '.eslintrc',
@@ -18,7 +18,7 @@ export default async function replacePackage(tree: Tree): Promise<void> {
   await replaceNrwlPackageWithNxPackage(
     tree,
     '@nrwl/eslint-plugin-nx',
-    '@nx/eslint-plugin'
+    '@titan/eslint-plugin'
   );
 
   /**

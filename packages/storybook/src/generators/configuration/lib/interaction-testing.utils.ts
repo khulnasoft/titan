@@ -3,7 +3,7 @@ import {
   ChangeType,
   ProjectConfiguration,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { tsquery } from '@phenomnomnominal/tsquery';
 import {
   storybookJestVersion,

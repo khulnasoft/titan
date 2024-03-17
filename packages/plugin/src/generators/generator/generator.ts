@@ -9,13 +9,13 @@ import {
   readJson,
   readProjectConfiguration,
   updateJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { PackageJson } from 'nx/src/utils/package-json';
 import { hasGenerator } from '../../utils/has-generator';
 import pluginLintCheckGenerator from '../lint-checks/generator';
 import type { Schema } from './schema';
 import { nxVersion } from '../../utils/versions';
-import { determineArtifactNameAndDirectoryOptions } from '@nx/devkit/src/generators/artifact-name-and-directory-utils';
+import { determineArtifactNameAndDirectoryOptions } from '@titan/devkit/src/generators/artifact-name-and-directory-utils';
 import { join, relative } from 'path';
 
 type NormalizedSchema = Schema & {
@@ -144,7 +144,7 @@ async function updateGeneratorJson(host: Tree, options: NormalizedSchema) {
     joinPathFragments(options.projectRoot, 'package.json'),
     (json) => {
       json.dependencies = {
-        '@nx/devkit': nxVersion,
+        '@titan/devkit': nxVersion,
         ...json.dependencies,
       };
       return json;

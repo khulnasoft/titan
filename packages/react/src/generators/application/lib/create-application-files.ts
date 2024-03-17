@@ -6,7 +6,7 @@ import {
   toJS,
   Tree,
   writeJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { WithNxOptions } from '@nx/webpack';
 import { getRelativePathToRootTsConfig } from '@nx/js';
 import { join } from 'path';

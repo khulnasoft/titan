@@ -6,7 +6,7 @@ import {
   runTasksInSerial,
   Tree,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { updateModuleFederationProject } from '../../rules/update-module-federation-project';
 import applicationGenerator from '../application/application';
 import { normalizeOptions } from '../application/lib/normalize-options';

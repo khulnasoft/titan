@@ -1,4 +1,4 @@
-import { Tree, stripIndents } from '@nx/devkit';
+import { Tree, stripIndents } from '@titan/devkit';
 import {
   checkFilesExist,
   cleanupProject,

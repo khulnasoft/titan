@@ -6,8 +6,8 @@ import {
   Tree,
   updateJson,
   updateProjectConfiguration,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import cypressE2EConfigurationGenerator from './configuration';
 
 import { installedCypressVersion } from '../../utils/cypress-version';
@@ -35,7 +35,7 @@ describe('Cypress e2e configuration', () => {
       mockedInstalledCypressVersion.mockReturnValue(10);
     });
 
-    it('should add web server commands to the cypress config when the @nx/cypress/plugin is present', async () => {
+    it('should add web server commands to the cypress config when the @titan/cypress/plugin is present', async () => {
       await cypressInitGenerator(tree, {
         addPlugin: true,
       });
@@ -54,7 +54,7 @@ describe('Cypress e2e configuration', () => {
       });
       expect(tree.read('apps/my-app/cypress.config.ts', 'utf-8'))
         .toMatchInlineSnapshot(`
-        "import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
+        "import { nxE2EPreset } from '@titan/cypress/plugins/cypress-preset';
 
         import { defineConfig } from 'cypress';
 
@@ -113,7 +113,7 @@ describe('Cypress e2e configuration', () => {
       });
       expect(tree.read('apps/my-app/cypress.config.ts', 'utf-8'))
         .toMatchInlineSnapshot(`
-        "import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
+        "import { nxE2EPreset } from '@titan/cypress/plugins/cypress-preset';
 
         import { defineConfig } from 'cypress';
 
@@ -173,7 +173,7 @@ describe('Cypress e2e configuration', () => {
       });
       expect(tree.read('libs/my-lib/cypress.config.ts', 'utf-8'))
         .toMatchInlineSnapshot(`
-        "import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
+        "import { nxE2EPreset } from '@titan/cypress/plugins/cypress-preset';
 
         import { defineConfig } from 'cypress';
 
@@ -204,7 +204,7 @@ describe('Cypress e2e configuration', () => {
       assertCypressFiles(tree, 'apps/my-app/src');
       expect(tree.read('apps/my-app/cypress.config.ts', 'utf-8'))
         .toMatchInlineSnapshot(`
-        "import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
+        "import { nxE2EPreset } from '@titan/cypress/plugins/cypress-preset';
 
         import { defineConfig } from 'cypress';
 
@@ -356,13 +356,13 @@ describe('Cypress e2e configuration', () => {
               ],
             },
             extends: [
-              'plugin:@nx/angular',
+              'plugin:@titan/angular',
               'plugin:@angular-eslint/template/process-inline-templates',
             ],
           },
           {
             files: ['*.html'],
-            extends: ['plugin:@nx/angular-template'],
+            extends: ['plugin:@titan/angular-template'],
             rules: {},
           },
         ],
@@ -432,7 +432,7 @@ describe('Cypress e2e configuration', () => {
       tree.write(
         'libs/my-lib/cypress.config.ts',
         `import { defineConfig } from 'cypress';
-import { nxComponentTestingPreset } from '@nx/angular/plugins/component-testing';
+import { nxComponentTestingPreset } from '@titan/angular/plugins/component-testing';
 
 export default defineConfig({
   component: nxComponentTestingPreset(__filename),
@@ -447,10 +447,10 @@ export default defineConfig({
 
       expect(tree.read('libs/my-lib/cypress.config.ts', 'utf-8'))
         .toMatchInlineSnapshot(`
-        "import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
+        "import { nxE2EPreset } from '@titan/cypress/plugins/cypress-preset';
 
         import { defineConfig } from 'cypress';
-        import { nxComponentTestingPreset } from '@nx/angular/plugins/component-testing';
+        import { nxComponentTestingPreset } from '@titan/angular/plugins/component-testing';
 
         export default defineConfig({
           component: nxComponentTestingPreset(__filename),
@@ -510,7 +510,7 @@ export default defineConfig({
 
       expect(tree.read('libs/my-lib/cypress.config.js', 'utf-8'))
         .toMatchInlineSnapshot(`
-        "const { nxE2EPreset } = require('@nx/cypress/plugins/cypress-preset');
+        "const { nxE2EPreset } = require('@titan/cypress/plugins/cypress-preset');
 
         const { defineConfig } = require('cypress');
 
@@ -541,7 +541,7 @@ export default defineConfig({
 
       expect(tree.read('libs/my-lib/cypress.config.js', 'utf-8'))
         .toMatchInlineSnapshot(`
-        "import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
+        "import { nxE2EPreset } from '@titan/cypress/plugins/cypress-preset';
 
         import { defineConfig } from 'cypress';
 

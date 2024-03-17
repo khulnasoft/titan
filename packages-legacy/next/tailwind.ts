@@ -1,1 +1,1 @@
-export * from '@nx/next/tailwind';
+export * from '@titan/next/tailwind';

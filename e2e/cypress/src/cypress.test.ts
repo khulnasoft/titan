@@ -17,7 +17,7 @@ describe('Cypress E2E Test runner', () => {
   const myapp = uniq('myapp');
 
   beforeAll(() => {
-    newProject({ packages: ['@nx/angular', '@nx/next', '@nx/react'] });
+    newProject({ packages: ['@titan/angular', '@titan/next', '@nx/react'] });
   });
 
   afterAll(() => cleanupProject());
@@ -87,7 +87,7 @@ describe('env vars', () => {
           `apps/${myapp}-e2e/cypress.config.ts`,
           `
 import { defineConfig } from 'cypress';
-import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
+import { nxE2EPreset } from '@titan/cypress/plugins/cypress-preset';
 
 export default defineConfig({
   e2e: {
@@ -154,16 +154,16 @@ export default defineConfig({
     async () => {
       const appName = uniq('next-cy-app');
       runCLI(
-        `generate @nx/next:app ${appName} --e2eTestRunner=none --no-interactive`
+        `generate @titan/next:app ${appName} --e2eTestRunner=none --no-interactive`
       );
       runCLI(
-        `generate @nx/next:component btn --project=${appName} --no-interactive`
+        `generate @titan/next:component btn --project=${appName} --no-interactive`
       );
       runCLI(
-        `generate @nx/next:cypress-component-configuration --project=${appName} --generate-tests --no-interactive`
+        `generate @titan/next:cypress-component-configuration --project=${appName} --generate-tests --no-interactive`
       );
       runCLI(
-        `generate @nx/cypress:configuration --project=${appName} --devServerTarget=${appName}:dev --baseUrl=http://localhost:3000 --no-interactive`
+        `generate @titan/cypress:configuration --project=${appName} --devServerTarget=${appName}:dev --baseUrl=http://localhost:3000 --no-interactive`
       );
 
       if (runE2ETests('cypress')) {
@@ -182,16 +182,16 @@ export default defineConfig({
     async () => {
       let appName = uniq(`angular-cy-app`);
       runCLI(
-        `generate @nx/angular:app ${appName} --e2eTestRunner=none --no-interactive --bundler=webpack`
+        `generate @titan/angular:app ${appName} --e2eTestRunner=none --no-interactive --bundler=webpack`
       );
       runCLI(
-        `generate @nx/angular:component btn --project=${appName} --no-interactive`
+        `generate @titan/angular:component btn --project=${appName} --no-interactive`
       );
       runCLI(
-        `generate @nx/angular:cypress-component-configuration --project=${appName} --generate-tests --no-interactive`
+        `generate @titan/angular:cypress-component-configuration --project=${appName} --generate-tests --no-interactive`
       );
       runCLI(
-        `generate @nx/cypress:e2e --project=${appName} --baseUrl=http://localhost:4200 --no-interactive`
+        `generate @titan/cypress:e2e --project=${appName} --baseUrl=http://localhost:4200 --no-interactive`
       );
 
       if (runE2ETests('cypress')) {

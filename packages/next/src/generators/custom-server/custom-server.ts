@@ -1,4 +1,4 @@
-import type { Tree } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
 import {
   updateJson,
   generateFiles,
@@ -7,7 +7,7 @@ import {
   readProjectConfiguration,
   updateProjectConfiguration,
   readNxJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { CustomServerSchema } from './schema';
 import { join } from 'path';
 import { configureForSwc } from '../../utils/add-swc-to-custom-server';
@@ -21,17 +21,17 @@ export async function customServerGenerator(
   const nxJson = readNxJson(host);
   const hasPlugin = nxJson.plugins?.some((p) =>
     typeof p === 'string'
-      ? p === '@nx/next/plugin'
-      : p.plugin === '@nx/next/plugin'
+      ? p === '@titan/next/plugin'
+      : p.plugin === '@titan/next/plugin'
   );
 
   if (
-    project.targets?.build?.executor !== '@nx/next:build' &&
+    project.targets?.build?.executor !== '@titan/next:build' &&
     project.targets?.build?.executor !== '@nrwl/next:build' &&
     !hasPlugin
   ) {
     logger.error(
-      `Project ${options.project} is not a Next.js project. Did you generate it with "nx g @nx/next:app"?`
+      `Project ${options.project} is not a Next.js project. Did you generate it with "nx g @titan/next:app"?`
     );
     return;
   }
@@ -50,7 +50,7 @@ export async function customServerGenerator(
     !hasPlugin
   ) {
     logger.error(
-      `Project ${options.project} has invalid config. Did you generate it with "nx g @nx/next:app"?`
+      `Project ${options.project} has invalid config. Did you generate it with "nx g @titan/next:app"?`
     );
     return;
   }

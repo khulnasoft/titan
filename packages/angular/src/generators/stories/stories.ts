@@ -8,7 +8,7 @@ import {
   readProjectConfiguration,
   runTasksInSerial,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import componentCypressSpecGenerator from '../component-cypress-spec/component-cypress-spec';
 import componentStoryGenerator from '../component-story/component-story';
 import type { ComponentInfo } from '../utils/storybook-ast/component-info';

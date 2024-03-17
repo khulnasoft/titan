@@ -1,4 +1,4 @@
-import { logger } from '@nx/devkit';
+import { logger } from '@titan/devkit';
 import { join } from 'path';
 import {
   CompilerPlugin,

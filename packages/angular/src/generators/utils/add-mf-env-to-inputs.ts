@@ -1,8 +1,8 @@
-import { type Tree, readNxJson, updateNxJson } from '@nx/devkit';
+import { type Tree, readNxJson, updateNxJson } from '@titan/devkit';
 
 export function addMfEnvToTargetDefaultInputs(tree: Tree) {
   const nxJson = readNxJson(tree);
-  const webpackExecutor = '@nx/angular:webpack-browser';
+  const webpackExecutor = '@titan/angular:webpack-browser';
   const mfEnvVar = 'NX_MF_DEV_SERVER_STATIC_REMOTES';
 
   nxJson.targetDefaults ??= {};

@@ -2,7 +2,7 @@ import {
   formatFiles,
   removeDependenciesFromPackageJson,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 /**
  * Remove eas-cli from dev dependencies.

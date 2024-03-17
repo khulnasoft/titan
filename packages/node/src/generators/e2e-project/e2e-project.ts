@@ -11,13 +11,13 @@ import {
   readProjectConfiguration,
   runTasksInSerial,
   Tree,
-} from '@nx/devkit';
-import { determineProjectNameAndRootOptions } from '@nx/devkit/src/generators/project-name-and-root-utils';
-import { Linter, lintProjectGenerator } from '@nx/eslint';
+} from '@titan/devkit';
+import { determineProjectNameAndRootOptions } from '@titan/devkit/src/generators/project-name-and-root-utils';
+import { Linter, lintProjectGenerator } from '@titan/eslint';
 import {
   javaScriptOverride,
   typeScriptOverride,
-} from '@nx/eslint/src/generators/init/global-eslint-config';
+} from '@titan/eslint/src/generators/init/global-eslint-config';
 import * as path from 'path';
 import { axiosVersion } from '../../utils/versions';
 import { Schema } from './schema';
@@ -25,8 +25,8 @@ import {
   addPluginsToLintConfig,
   isEslintConfigSupported,
   replaceOverridesInLintConfig,
-} from '@nx/eslint/src/generators/utils/eslint-file';
-import { logShowProjectCommand } from '@nx/devkit/src/utils/log-show-project-command';
+} from '@titan/eslint/src/generators/utils/eslint-file';
+import { logShowProjectCommand } from '@titan/devkit/src/utils/log-show-project-command';
 
 export async function e2eProjectGenerator(host: Tree, options: Schema) {
   return await e2eProjectGeneratorInternal(host, {
@@ -51,7 +51,7 @@ export async function e2eProjectGeneratorInternal(
     projectType: 'application',
     targets: {
       e2e: {
-        executor: '@nx/jest:jest',
+        executor: '@titan/jest:jest',
         outputs: ['{workspaceRoot}/coverage/{e2eProjectRoot}'],
         options: {
           jestConfig: `${options.e2eProjectRoot}/jest.config.ts`,

@@ -7,9 +7,9 @@ import {
   readProjectConfiguration,
   Tree,
   updateJson,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { Linter } from '@nx/eslint';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { Linter } from '@titan/eslint';
 import { createApp } from '../../utils/nx-devkit/testing';
 import { UnitTestRunner } from '../../utils/test-runners';
 import {
@@ -23,9 +23,9 @@ import { generateTestApplication, generateTestLibrary } from '../utils/testing';
 import { Schema } from './schema';
 
 let projectGraph: ProjectGraph;
-jest.mock('@nx/devkit', () => {
+jest.mock('@titan/devkit', () => {
   return {
-    ...jest.requireActual('@nx/devkit'),
+    ...jest.requireActual('@titan/devkit'),
     createProjectGraphAsync: jest.fn().mockImplementation(() => projectGraph),
   };
 });
@@ -644,7 +644,7 @@ describe('lib', () => {
                 "*.ts"
               ],
               "extends": [
-                "plugin:@nx/angular",
+                "plugin:@titan/angular",
                 "plugin:@angular-eslint/template/process-inline-templates"
               ],
               "rules": {
@@ -671,7 +671,7 @@ describe('lib', () => {
                 "*.html"
               ],
               "extends": [
-                "plugin:@nx/angular-template"
+                "plugin:@titan/angular-template"
               ],
               "rules": {}
             },
@@ -1152,7 +1152,7 @@ describe('lib', () => {
 
       // check to see if the workspace configuration has been updated to use strict
       // mode by default in future libraries
-      expect(generators['@nx/angular:library'].strict).not.toBeDefined();
+      expect(generators['@titan/angular:library'].strict).not.toBeDefined();
     });
 
     it('should set defaults when --strict=false', async () => {
@@ -1167,7 +1167,7 @@ describe('lib', () => {
       // check to see if the workspace configuration has been updated to turn off
       // strict mode by default in future libraries
       const { generators } = readJson<NxJsonConfiguration>(tree, 'nx.json');
-      expect(generators['@nx/angular:library'].strict).toBe(false);
+      expect(generators['@titan/angular:library'].strict).toBe(false);
     });
   });
 
@@ -1191,7 +1191,7 @@ describe('lib', () => {
             "overrides": [
               {
                 "extends": [
-                  "plugin:@nx/angular",
+                  "plugin:@titan/angular",
                   "plugin:@angular-eslint/template/process-inline-templates",
                 ],
                 "files": [
@@ -1218,7 +1218,7 @@ describe('lib', () => {
               },
               {
                 "extends": [
-                  "plugin:@nx/angular-template",
+                  "plugin:@titan/angular-template",
                 ],
                 "files": [
                   "*.html",
@@ -1251,7 +1251,7 @@ describe('lib', () => {
             "overrides": [
               {
                 "extends": [
-                  "plugin:@nx/angular",
+                  "plugin:@titan/angular",
                   "plugin:@angular-eslint/template/process-inline-templates",
                 ],
                 "files": [
@@ -1278,7 +1278,7 @@ describe('lib', () => {
               },
               {
                 "extends": [
-                  "plugin:@nx/angular-template",
+                  "plugin:@titan/angular-template",
                 ],
                 "files": [
                   "*.html",
@@ -1354,7 +1354,7 @@ describe('lib', () => {
       // ASSERT
       expect(tree.read('my-lib/tailwind.config.js', 'utf-8'))
         .toMatchInlineSnapshot(`
-        "const { createGlobPatternsForDependencies } = require('@nx/angular/tailwind');
+        "const { createGlobPatternsForDependencies } = require('@titan/angular/tailwind');
         const { join } = require('path');
 
         /** @type {import('tailwindcss').Config} */

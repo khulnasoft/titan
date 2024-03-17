@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { dirname, join, relative } from 'node:path';
 
-import { workspaceRoot } from '@nx/devkit';
+import { workspaceRoot } from '@titan/devkit';
 import { hashWithWorkspaceContext } from 'nx/src/utils/workspace-context';
 
 import { execGradle } from './exec-gradle';

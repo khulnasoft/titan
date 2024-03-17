@@ -1,10 +1,10 @@
-import type { GeneratorCallback, Tree } from '@nx/devkit';
+import type { GeneratorCallback, Tree } from '@titan/devkit';
 import {
   addProjectConfiguration,
   ensurePackage,
   getPackageManagerCommand,
   joinPathFragments,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { webStaticServeGenerator } from '@nx/web';
 
 import { nxVersion } from '../../../utils/versions';
@@ -29,8 +29,8 @@ export async function addE2e(
       }
 
       const { configurationGenerator } = ensurePackage<
-        typeof import('@nx/cypress')
-      >('@nx/cypress', nxVersion);
+        typeof import('@titan/cypress')
+      >('@titan/cypress', nxVersion);
 
       addProjectConfiguration(tree, options.e2eProjectName, {
         projectType: 'application',
@@ -65,8 +65,8 @@ export async function addE2e(
     }
     case 'playwright': {
       const { configurationGenerator } = ensurePackage<
-        typeof import('@nx/playwright')
-      >('@nx/playwright', nxVersion);
+        typeof import('@titan/playwright')
+      >('@titan/playwright', nxVersion);
       addProjectConfiguration(tree, options.e2eProjectName, {
         projectType: 'application',
         root: options.e2eProjectRoot,

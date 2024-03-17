@@ -1,1 +1,1 @@
-export * from '@nx/angular/module-federation';
+export * from '@titan/angular/module-federation';

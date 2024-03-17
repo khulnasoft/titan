@@ -4,7 +4,7 @@ import {
   normalizePath,
   Tree,
   visitNotIgnoredFiles,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { ensureTypescript } from '@nx/js/src/utils/typescript/ensure-typescript';
 import { basename, dirname, extname, relative } from 'path';
 import type { Identifier, SourceFile, Statement } from 'typescript';

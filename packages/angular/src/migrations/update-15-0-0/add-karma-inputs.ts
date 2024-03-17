@@ -1,5 +1,5 @@
-import { formatFiles, readNxJson, Tree, updateNxJson } from '@nx/devkit';
-import { forEachExecutorOptions } from '@nx/devkit/src/generators/executor-options-utils';
+import { formatFiles, readNxJson, Tree, updateNxJson } from '@titan/devkit';
+import { forEachExecutorOptions } from '@titan/devkit/src/generators/executor-options-utils';
 
 export default async function (tree: Tree) {
   const nxJson = readNxJson(tree);

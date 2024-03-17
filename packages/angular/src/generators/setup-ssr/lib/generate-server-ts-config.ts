@@ -4,7 +4,7 @@ import {
   updateJson,
   type Tree,
   joinPathFragments,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { join } from 'path';
 import type { Schema } from '../schema';
 

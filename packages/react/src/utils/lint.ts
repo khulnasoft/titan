@@ -17,7 +17,7 @@ export const extraEslintDependencies = {
 };
 
 /**
- * @deprecated Use `addExtendsToLintConfig` from `@nx/eslint` instead.
+ * @deprecated Use `addExtendsToLintConfig` from `@titan/eslint` instead.
  */
 export const extendReactEslintJson = (json: Linter.Config) => {
   const { extends: pluginExtends, ...config } = json;

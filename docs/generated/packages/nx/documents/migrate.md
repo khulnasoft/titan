@@ -41,10 +41,10 @@ Update @nx/workspace and generate the list of migrations starting with version 8
  nx migrate @nx/workspace@9.0.0 --from="@nx/workspace@8.0.0,@nx/node@8.0.0"
 ```
 
-Update @nx/workspace to "9.0.0". If it tries to update @nx/react or @nx/angular, use version "9.0.1":
+Update @nx/workspace to "9.0.0". If it tries to update @nx/react or @titan/angular, use version "9.0.1":
 
 ```shell
- nx migrate @nx/workspace@9.0.0 --to="@nx/react@9.0.1,@nx/angular@9.0.1"
+ nx migrate @nx/workspace@9.0.0 --to="@nx/react@9.0.1,@titan/angular@9.0.1"
 ```
 
 Update another-package to "12.0.0". This will update other packages and will generate migrations.json file:

@@ -246,7 +246,7 @@ exports[`ngrx-feature-store NgModule should generate the files with the correct 
 import { TestBed } from '@angular/core/testing';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule, Store } from '@ngrx/store';
-import { readFirst } from '@nx/angular/testing';
+import { readFirst } from '@titan/angular/testing';
 
 import * as UsersActions from './users.actions';
 import { UsersEffects } from './users.effects';
@@ -702,7 +702,7 @@ exports[`ngrx-feature-store Standalone APIs should generate the files with the c
 import { TestBed } from '@angular/core/testing';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule, Store } from '@ngrx/store';
-import { readFirst } from '@nx/angular/testing';
+import { readFirst } from '@titan/angular/testing';
 
 import * as UsersActions from './users.actions';
 import { UsersEffects } from './users.effects';

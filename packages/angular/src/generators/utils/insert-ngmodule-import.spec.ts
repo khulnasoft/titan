@@ -1,5 +1,5 @@
-import { Tree } from '@nx/devkit';
-import { createTree } from '@nx/devkit/testing';
+import { Tree } from '@titan/devkit';
+import { createTree } from '@titan/devkit/testing';
 import { insertNgModuleImport } from './insert-ngmodule-import';
 
 describe('insertNgModuleImport', () => {

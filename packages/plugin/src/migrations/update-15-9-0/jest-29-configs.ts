@@ -4,13 +4,13 @@ import {
   logger,
   stripIndents,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { tsquery } from '@phenomnomnominal/tsquery';
 import * as ts from 'typescript';
-import { forEachExecutorOptionsInGraph } from '@nx/devkit/src/generators/executor-options-utils';
-import { TS_QUERY_JEST_CONFIG_PREFIX } from '@nx/jest/src/utils/ast-utils';
-import { findRootJestPreset } from '@nx/jest/src/utils/config/find-root-jest-files';
-import { JestExecutorOptions } from '@nx/jest/src/executors/jest/schema';
+import { forEachExecutorOptionsInGraph } from '@titan/devkit/src/generators/executor-options-utils';
+import { TS_QUERY_JEST_CONFIG_PREFIX } from '@titan/jest/src/utils/ast-utils';
+import { findRootJestPreset } from '@titan/jest/src/utils/config/find-root-jest-files';
+import { JestExecutorOptions } from '@titan/jest/src/executors/jest/schema';
 
 // NOTE: this is a copy of the @nrwl/jest v15.8.0 migrations
 export async function updateConfigsJest29(tree: Tree) {

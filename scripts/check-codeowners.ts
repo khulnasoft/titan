@@ -2,7 +2,7 @@ import * as fg from 'fast-glob';
 import * as path from 'path';
 import * as fs from 'fs';
 import * as octokit from 'octokit';
-import { output } from '@nx/devkit';
+import { output } from '@titan/devkit';
 import { Octokit } from 'octokit';
 
 async function main() {

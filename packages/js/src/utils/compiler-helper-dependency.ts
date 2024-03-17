@@ -4,7 +4,7 @@ import {
   type ProjectGraphDependency,
   type ProjectGraphExternalNode,
   readJsonFile,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { DependentBuildableProjectNode } from './buildable-libs-utils';
 import { join } from 'path';
 import { readTsConfig } from './typescript/ts-config';

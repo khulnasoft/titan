@@ -5,7 +5,7 @@ import {
   offsetFromRoot,
   toJS,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { getRelativePathToRootTsConfig } from '@nx/js';
 import { join } from 'path';
 import { NormalizedSchema } from './normalize-options';

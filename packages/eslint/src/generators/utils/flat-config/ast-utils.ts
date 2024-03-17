@@ -3,7 +3,7 @@ import {
   StringChange,
   applyChangesToString,
   parseJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { Linter } from 'eslint';
 import * as ts from 'typescript';
 import { mapFilePath } from './path-utils';

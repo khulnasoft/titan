@@ -4,7 +4,7 @@ import {
   Tree,
   updateProjectConfiguration,
   addDependenciesToPackageJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { nxVersion } from '../../utils/versions';
 
 export default async function update(host: Tree) {

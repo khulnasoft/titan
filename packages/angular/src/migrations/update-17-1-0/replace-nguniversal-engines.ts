@@ -6,7 +6,7 @@ import {
   removeDependenciesFromPackageJson,
   visitNotIgnoredFiles,
   type Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { dirname, relative } from 'path';
 import {
   getInstalledPackageVersionInfo,
@@ -29,7 +29,7 @@ const NGUNIVERSAL_PACKAGE_REGEXP =
   /@nguniversal\/(common(\/engine)?|express-engine)/g;
 const serverExecutors = [
   '@angular-devkit/build-angular:server',
-  '@nx/angular:webpack-server',
+  '@titan/angular:webpack-server',
 ];
 
 export default async function (tree: Tree) {

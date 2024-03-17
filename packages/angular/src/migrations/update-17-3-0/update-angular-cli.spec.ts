@@ -1,5 +1,5 @@
-import { readJson, Tree, writeJson } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { readJson, Tree, writeJson } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import updateAngularCli, { angularCliVersion } from './update-angular-cli';
 
 describe('update-angular-cli migration', () => {

@@ -1,4 +1,4 @@
-import { stripIndents } from '@nx/devkit';
+import { stripIndents } from '@titan/devkit';
 import { format } from 'prettier';
 
 export function formatFile(content, ...values) {

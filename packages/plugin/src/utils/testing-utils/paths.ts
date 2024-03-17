@@ -1,4 +1,4 @@
-import { workspaceRoot } from '@nx/devkit';
+import { workspaceRoot } from '@titan/devkit';
 
 export function tmpFolder() {
   return `${workspaceRoot}/tmp`;

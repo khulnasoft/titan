@@ -1,6 +1,6 @@
-import { joinPathFragments, names, readNxJson, Tree } from '@nx/devkit';
-import { determineProjectNameAndRootOptions } from '@nx/devkit/src/generators/project-name-and-root-utils';
-import { Linter } from '@nx/eslint';
+import { joinPathFragments, names, readNxJson, Tree } from '@titan/devkit';
+import { determineProjectNameAndRootOptions } from '@titan/devkit/src/generators/project-name-and-root-utils';
+import { Linter } from '@titan/eslint';
 import { assertValidStyle } from '@nx/react/src/utils/assertion';
 import { Schema } from '../schema';
 
@@ -30,7 +30,7 @@ export async function normalizeOptions(
     directory: options.directory,
     projectNameAndRootFormat: options.projectNameAndRootFormat,
     rootProject: options.rootProject,
-    callingGenerator: '@nx/next:application',
+    callingGenerator: '@titan/next:application',
   });
   options.rootProject = appProjectRoot === '.';
   options.projectNameAndRootFormat = projectNameAndRootFormat;

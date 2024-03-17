@@ -4,7 +4,7 @@ import {
   readProjectConfiguration,
   readNxJson,
   type Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { join } from 'path';
 import { type CypressComponentConfigurationSchema } from './schema';
 import { cypressComponentConfigGenerator } from '@nx/react';

@@ -1,4 +1,4 @@
-import { createAsyncIterable } from '@nx/devkit/src/utils/async-iterable';
+import { createAsyncIterable } from '@titan/devkit/src/utils/async-iterable';
 import * as ts from 'typescript';
 import type { TransformerEntry } from '../../../utils/typescript/types';
 import { getCustomTrasformersFactory } from './get-custom-transformers-factory';

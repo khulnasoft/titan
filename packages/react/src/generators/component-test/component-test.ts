@@ -4,7 +4,7 @@ import {
   joinPathFragments,
   readProjectConfiguration,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { basename, dirname, extname, join, relative } from 'path';
 import {
   findExportDeclarationsForJsx,
@@ -21,9 +21,9 @@ export async function componentTestGenerator(
   tree: Tree,
   options: ComponentTestSchema
 ) {
-  ensurePackage('@nx/cypress', nxVersion);
+  ensurePackage('@titan/cypress', nxVersion);
   const { assertMinimumCypressVersion } = await import(
-    '@nx/cypress/src/utils/cypress-version'
+    '@titan/cypress/src/utils/cypress-version'
   );
   assertMinimumCypressVersion(10);
   // normalize any windows paths

@@ -1,4 +1,4 @@
-import { formatFiles, generateFiles, toJS, Tree } from '@nx/devkit';
+import { formatFiles, generateFiles, toJS, Tree } from '@titan/devkit';
 import { join } from 'path';
 import { addExportsToBarrel, normalizeOptions } from './lib/utils';
 import { NormalizedSchema, ComponentGeneratorSchema } from './schema';

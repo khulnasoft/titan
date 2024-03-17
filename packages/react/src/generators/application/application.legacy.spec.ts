@@ -1,12 +1,12 @@
-import { installedCypressVersion } from '@nx/cypress/src/utils/cypress-version';
-import { getProjects, readProjectConfiguration, Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { Linter } from '@nx/eslint';
+import { installedCypressVersion } from '@titan/cypress/src/utils/cypress-version';
+import { getProjects, readProjectConfiguration, Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { Linter } from '@titan/eslint';
 import { applicationGenerator } from './application';
 import { Schema } from './schema';
 // need to mock cypress otherwise it'll use the nx installed version from package.json
 //  which is v9 while we are testing for the new v10 version
-jest.mock('@nx/cypress/src/utils/cypress-version');
+jest.mock('@titan/cypress/src/utils/cypress-version');
 describe('react app generator (legacy)', () => {
   let appTree: Tree;
   let schema: Schema = {

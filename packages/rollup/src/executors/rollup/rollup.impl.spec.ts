@@ -1,4 +1,4 @@
-import { ExecutorContext } from '@nx/devkit';
+import { ExecutorContext } from '@titan/devkit';
 import * as fs from 'fs';
 import * as rollup from 'rollup';
 import { RollupExecutorOptions } from './schema';

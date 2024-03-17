@@ -2,7 +2,7 @@ import {
   getPackageManagerCommand,
   readCachedProjectGraph,
   workspaceRoot,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { execSync, fork } from 'child_process';
 import { existsSync } from 'fs';
 import { scheduleTarget } from 'nx/src/adapter/ngcli-adapter';

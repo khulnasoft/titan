@@ -4,8 +4,8 @@ import {
   Tree,
   updateJson,
   updateProjectConfiguration,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { moveGenerator } from './move';
 // nx-ignore-next-line
 const { applicationGenerator } = require('@nx/react');

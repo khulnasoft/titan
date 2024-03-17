@@ -1,9 +1,9 @@
-import { readJson, readProjectConfiguration, Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { readJson, readProjectConfiguration, Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { migrationGenerator } from './migration';
 import { pluginGenerator } from '../plugin/plugin';
-import { setCwd } from '@nx/devkit/internal-testing-utils';
-import { Linter } from '@nx/eslint';
+import { setCwd } from '@titan/devkit/internal-testing-utils';
+import { Linter } from '@titan/eslint';
 
 describe('NxPlugin migration generator', () => {
   let tree: Tree;

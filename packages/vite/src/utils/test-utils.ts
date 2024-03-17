@@ -1,4 +1,4 @@
-import { Tree, writeJson } from '@nx/devkit';
+import { Tree, writeJson } from '@titan/devkit';
 import * as reactViteConfig from './test-files/react-vite-project.config.json';
 import * as angularAppConfig from './test-files/angular-project.config.json';
 import * as randomAppConfig from './test-files/unknown-project.config.json';

@@ -4,7 +4,7 @@ import {
   updateJson,
   type ProjectConfiguration,
   type Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 export function updateAppEditorTsConfigExcludedFiles(
   tree: Tree,

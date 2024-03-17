@@ -5,8 +5,8 @@ import {
   readNxJson,
   Tree,
   updateJson,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { nxVersion } from '../../utils/versions';
 
 import { initGenerator } from './init';

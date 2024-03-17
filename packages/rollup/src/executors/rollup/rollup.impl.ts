@@ -5,10 +5,10 @@ import { getBabelInputPlugin } from '@rollup/plugin-babel';
 import { dirname, join, parse, resolve } from 'path';
 import { from, Observable, of } from 'rxjs';
 import { catchError, concatMap, last, scan, tap } from 'rxjs/operators';
-import { eachValueFrom } from '@nx/devkit/src/utils/rxjs-for-await';
+import { eachValueFrom } from '@titan/devkit/src/utils/rxjs-for-await';
 import * as autoprefixer from 'autoprefixer';
-import type { ExecutorContext } from '@nx/devkit';
-import { joinPathFragments, logger, names, readJsonFile } from '@nx/devkit';
+import type { ExecutorContext } from '@titan/devkit';
+import { joinPathFragments, logger, names, readJsonFile } from '@titan/devkit';
 import {
   calculateProjectBuildableDependencies,
   computeCompilerOptionsPaths,
@@ -28,7 +28,7 @@ import { analyze } from './lib/analyze-plugin';
 import { deleteOutputDir } from '../../utils/fs';
 import { swc } from './lib/swc-plugin';
 import { updatePackageJson } from './lib/update-package-json';
-import { loadConfigFile } from '@nx/devkit/src/utils/config-utils';
+import { loadConfigFile } from '@titan/devkit/src/utils/config-utils';
 
 export type RollupExecutorEvent = {
   success: boolean;

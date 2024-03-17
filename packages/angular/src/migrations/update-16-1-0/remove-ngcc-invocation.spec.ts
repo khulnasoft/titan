@@ -1,7 +1,7 @@
-import type { Tree } from '@nx/devkit';
-import { readJson, updateJson } from '@nx/devkit';
-import * as devkit from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import type { Tree } from '@titan/devkit';
+import { readJson, updateJson } from '@titan/devkit';
+import * as devkit from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import removeNgccInvocation from './remove-ngcc-invocation';
 
 describe('remove-ngcc-invocation migration', () => {

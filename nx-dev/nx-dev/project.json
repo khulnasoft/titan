@@ -48,7 +48,7 @@
       }
     },
     "build-base": {
-      "executor": "@nx/next:build",
+      "executor": "@titan/next:build",
       "dependsOn": ["copy-docs"],
       "outputs": ["{options.outputPath}"],
       "options": {
@@ -81,7 +81,7 @@
       }
     },
     "serve": {
-      "executor": "@nx/next:server",
+      "executor": "@titan/next:server",
       "dependsOn": ["copy-docs"],
       "options": {
         "buildTarget": "nx-dev:build-base",
@@ -130,7 +130,7 @@
       }
     },
     "export": {
-      "executor": "@nx/next:export",
+      "executor": "@titan/next:export",
       "options": {
         "buildTarget": "nx-dev:build:production"
       }

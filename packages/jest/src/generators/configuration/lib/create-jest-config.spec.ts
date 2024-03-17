@@ -1,6 +1,6 @@
 let projectGraph: ProjectGraph;
-jest.mock('@nx/devkit', () => ({
-  ...jest.requireActual<any>('@nx/devkit'),
+jest.mock('@titan/devkit', () => ({
+  ...jest.requireActual<any>('@titan/devkit'),
   createProjectGraphAsync: jest.fn().mockImplementation(async () => {
     return projectGraph;
   }),
@@ -13,8 +13,8 @@ import {
   type ProjectConfiguration,
   type ProjectGraph,
   type Tree,
-} from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+} from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { createJestConfig } from './create-jest-config';
 
 function addProjectConfiguration(
@@ -76,7 +76,7 @@ describe('createJestConfig', () => {
       sourceRoot: 'apps/my-app/src',
       targets: {
         test: {
-          executor: '@nx/jest:jest',
+          executor: '@titan/jest:jest',
           options: {
             jestConfig: 'apps/my-app/jest.config.ts',
           },
@@ -84,7 +84,7 @@ describe('createJestConfig', () => {
       },
     });
     const expected = stripIndents`
-import { getJestProjects } from '@nx/jest';
+import { getJestProjects } from '@titan/jest';
 export default {
   projects: getJestProjects(),
   extraThing: "Goes Here"
@@ -119,7 +119,7 @@ export default {
         sourceRoot: 'src',
         targets: {
           test: {
-            executor: '@nx/jest:jest',
+            executor: '@titan/jest:jest',
             options: {
               jestConfig: 'jest.config.ts',
             },
@@ -162,7 +162,7 @@ export default {
         "
       `);
       expect(tree.read('jest.config.ts', 'utf-8'))
-        .toEqual(`import { getJestProjectsAsync } from '@nx/jest';
+        .toEqual(`import { getJestProjectsAsync } from '@titan/jest';
 
 export default async () => ({
 projects: await getJestProjectsAsync()
@@ -170,7 +170,7 @@ projects: await getJestProjectsAsync()
       expect(readProjectConfiguration(tree, 'my-project').targets.test)
         .toMatchInlineSnapshot(`
         {
-          "executor": "@nx/jest:jest",
+          "executor": "@titan/jest:jest",
           "options": {
             "jestConfig": "jest.config.app.ts",
           },
@@ -186,7 +186,7 @@ projects: await getJestProjectsAsync()
         projectType: 'application',
         targets: {
           test: {
-            executor: '@nx/jest:jest',
+            executor: '@titan/jest:jest',
             options: {
               jestConfig: 'jest.config.js',
             },
@@ -214,7 +214,7 @@ module.exports = {
 
       expect(tree.exists('jest.config.app.js')).toBeTruthy();
       expect(tree.read('jest.config.js', 'utf-8'))
-        .toEqual(`const { getJestProjectsAsync } = require('@nx/jest');
+        .toEqual(`const { getJestProjectsAsync } = require('@titan/jest');
 
 module.exports = async () => ({
 projects: await getJestProjectsAsync()

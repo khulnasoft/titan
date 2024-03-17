@@ -1,4 +1,4 @@
-# @nx/devkit
+# @titan/devkit
 
 ## Table of contents
 

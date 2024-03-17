@@ -4,7 +4,7 @@ import {
   readProjectConfiguration,
   readNxJson,
   type Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { join } from 'path';
 import type { StorybookConfigurationSchema } from './schema';
 import { storybookConfigurationGenerator } from '@nx/react';

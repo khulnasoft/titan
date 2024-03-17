@@ -33,7 +33,7 @@ The `--interactionTests` flag is true by default, so when you're setting up Stor
 {% tab label="Angular" %}
 
 ```shell
-nx g @nx/angular:storybook-configuration project-name --interactionTests=true
+nx g @titan/angular:storybook-configuration project-name --interactionTests=true
 ```
 
 {% /tab %}

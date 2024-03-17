@@ -1,4 +1,4 @@
-import { type Tree } from '@nx/devkit';
+import { type Tree } from '@titan/devkit';
 import { resolveRemixRouteFile } from '../../../utils/remix-route-utils';
 import type { ErrorBoundarySchema } from '../schema';
 

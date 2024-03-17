@@ -1,5 +1,5 @@
-import type { Tree } from '@nx/devkit';
-import { joinPathFragments, readJson } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
+import { joinPathFragments, readJson } from '@titan/devkit';
 import { dirname } from 'path';
 
 export function locateLibraryEntryPointFromDirectory(

@@ -9,8 +9,8 @@ import {
   TargetDefaults,
   Tree,
   updateNxJson,
-} from '@nx/devkit';
-import { forEachExecutorOptionsInGraph } from '@nx/devkit/src/generators/executor-options-utils';
+} from '@titan/devkit';
+import { forEachExecutorOptionsInGraph } from '@titan/devkit/src/generators/executor-options-utils';
 import { VitestExecutorOptions } from '../../executors/test/schema';
 import { readTargetDefaultsForTarget } from 'nx/src/project-graph/utils/project-configuration-utils';
 

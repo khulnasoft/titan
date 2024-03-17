@@ -1,4 +1,4 @@
-import { stripIndents, type Tree } from '@nx/devkit';
+import { stripIndents, type Tree } from '@titan/devkit';
 import { insertImport } from '../../../utils/insert-import';
 import { insertStatementAfterImports } from '../../../utils/insert-statement-after-imports';
 import type { ErrorBoundarySchema } from '../schema';

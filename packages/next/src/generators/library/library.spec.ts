@@ -1,19 +1,19 @@
-import { installedCypressVersion } from '@nx/cypress/src/utils/cypress-version';
-import { readJson } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { Linter } from '@nx/eslint';
+import { installedCypressVersion } from '@titan/cypress/src/utils/cypress-version';
+import { readJson } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { Linter } from '@titan/eslint';
 import libraryGenerator from './library';
 import { Schema } from './schema';
 
 // need to mock cypress otherwise it'll use the nx installed version from package.json
 //  which is v9 while we are testing for the new v10 version
-jest.mock('@nx/cypress/src/utils/cypress-version');
+jest.mock('@titan/cypress/src/utils/cypress-version');
 
 describe('next library', () => {
   let mockedInstalledCypressVersion: jest.Mock<
     ReturnType<typeof installedCypressVersion>
   > = installedCypressVersion as never;
-  it('should use @nx/next images.d.ts file', async () => {
+  it('should use @titan/next images.d.ts file', async () => {
     const baseOptions: Schema = {
       name: '',
       linter: Linter.EsLint,
@@ -33,7 +33,7 @@ describe('next library', () => {
     const tsconfigTypes = readJson(appTree, 'my-lib/tsconfig.lib.json')
       .compilerOptions.types;
 
-    expect(tsconfigTypes).toContain('@nx/next/typings/image.d.ts');
+    expect(tsconfigTypes).toContain('@titan/next/typings/image.d.ts');
   });
 
   it('should add jsxImportSource in tsconfig.json for @emotion/styled', async () => {
@@ -111,7 +111,7 @@ describe('next library', () => {
     });
 
     expect(
-      readJson(appTree, 'package.json').devDependencies['@nx/cypress']
+      readJson(appTree, 'package.json').devDependencies['@titan/cypress']
     ).toBeUndefined();
     expect(
       readJson(appTree, 'package.json').devDependencies['cypress']

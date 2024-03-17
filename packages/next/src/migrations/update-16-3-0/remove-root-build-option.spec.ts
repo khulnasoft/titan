@@ -1,10 +1,10 @@
 import update from './remove-root-build-option';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import {
   addProjectConfiguration,
   readProjectConfiguration,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 describe('remove-root-build-option', () => {
   let tree: Tree;
@@ -13,12 +13,12 @@ describe('remove-root-build-option', () => {
     tree = createTreeWithEmptyWorkspace();
   });
 
-  it('should remove the root option from the build target for @nx/next:build executor', async () => {
+  it('should remove the root option from the build target for @titan/next:build executor', async () => {
     addProjectConfiguration(tree, 'my-app', {
       root: 'my-app',
       targets: {
         build: {
-          executor: '@nx/next:build',
+          executor: '@titan/next:build',
           options: {
             root: 'my-app',
           },

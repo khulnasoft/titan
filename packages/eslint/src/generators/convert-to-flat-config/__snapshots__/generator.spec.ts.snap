@@ -2,7 +2,7 @@
 
 exports[`convert-to-flat-config generator should add env configuration 1`] = `
 "const { FlatCompat } = require('@eslint/eslintrc');
-const nxEslintPlugin = require('@nx/eslint-plugin');
+const nxEslintPlugin = require('@titan/eslint-plugin');
 const globals = require('globals');
 const js = require('@eslint/js');
 
@@ -48,7 +48,7 @@ module.exports = [
 
 exports[`convert-to-flat-config generator should add global and env configuration 1`] = `
 "const { FlatCompat } = require('@eslint/eslintrc');
-const nxEslintPlugin = require('@nx/eslint-plugin');
+const nxEslintPlugin = require('@titan/eslint-plugin');
 const globals = require('globals');
 const js = require('@eslint/js');
 
@@ -98,7 +98,7 @@ module.exports = [
 
 exports[`convert-to-flat-config generator should add global configuration 1`] = `
 "const { FlatCompat } = require('@eslint/eslintrc');
-const nxEslintPlugin = require('@nx/eslint-plugin');
+const nxEslintPlugin = require('@titan/eslint-plugin');
 const js = require('@eslint/js');
 
 const compat = new FlatCompat({
@@ -143,7 +143,7 @@ module.exports = [
 
 exports[`convert-to-flat-config generator should add global eslintignores 1`] = `
 "const { FlatCompat } = require('@eslint/eslintrc');
-const nxEslintPlugin = require('@nx/eslint-plugin');
+const nxEslintPlugin = require('@titan/eslint-plugin');
 const js = require('@eslint/js');
 
 const compat = new FlatCompat({
@@ -188,7 +188,7 @@ module.exports = [
 
 exports[`convert-to-flat-config generator should add parser 1`] = `
 "const { FlatCompat } = require('@eslint/eslintrc');
-const nxEslintPlugin = require('@nx/eslint-plugin');
+const nxEslintPlugin = require('@titan/eslint-plugin');
 const typescriptEslintParser = require('@typescript-eslint/parser');
 const js = require('@eslint/js');
 
@@ -288,7 +288,7 @@ module.exports = [
 
 exports[`convert-to-flat-config generator should add settings 1`] = `
 "const { FlatCompat } = require('@eslint/eslintrc');
-const nxEslintPlugin = require('@nx/eslint-plugin');
+const nxEslintPlugin = require('@titan/eslint-plugin');
 const js = require('@eslint/js');
 
 const compat = new FlatCompat({
@@ -333,7 +333,7 @@ module.exports = [
 
 exports[`convert-to-flat-config generator should convert json successfully 1`] = `
 "const { FlatCompat } = require('@eslint/eslintrc');
-const nxEslintPlugin = require('@nx/eslint-plugin');
+const nxEslintPlugin = require('@titan/eslint-plugin');
 const js = require('@eslint/js');
 
 const compat = new FlatCompat({
@@ -398,7 +398,7 @@ module.exports = [
 
 exports[`convert-to-flat-config generator should convert yaml successfully 1`] = `
 "const { FlatCompat } = require('@eslint/eslintrc');
-const nxEslintPlugin = require('@nx/eslint-plugin');
+const nxEslintPlugin = require('@titan/eslint-plugin');
 const js = require('@eslint/js');
 
 const compat = new FlatCompat({
@@ -463,7 +463,7 @@ module.exports = [
 
 exports[`convert-to-flat-config generator should convert yml successfully 1`] = `
 "const { FlatCompat } = require('@eslint/eslintrc');
-const nxEslintPlugin = require('@nx/eslint-plugin');
+const nxEslintPlugin = require('@titan/eslint-plugin');
 const js = require('@eslint/js');
 
 const compat = new FlatCompat({

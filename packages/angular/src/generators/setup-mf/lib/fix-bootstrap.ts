@@ -1,5 +1,5 @@
-import type { Tree } from '@nx/devkit';
-import { joinPathFragments } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
+import { joinPathFragments } from '@titan/devkit';
 import type { Schema } from '../schema';
 
 export function fixBootstrap(tree: Tree, appRoot: string, options: Schema) {
@@ -13,7 +13,7 @@ export function fixBootstrap(tree: Tree, appRoot: string, options: Schema) {
 
   const bootstrapImportCode = `import('./bootstrap').catch(err => console.error(err))`;
 
-  const fetchMFManifestCode = `import { setRemoteDefinitions } from '@nx/angular/mf';
+  const fetchMFManifestCode = `import { setRemoteDefinitions } from '@titan/angular/mf';
 
 fetch('/assets/module-federation.manifest.json')
   .then((res) => res.json())

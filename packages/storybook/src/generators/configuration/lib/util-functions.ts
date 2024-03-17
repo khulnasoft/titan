@@ -16,9 +16,9 @@ import {
   updateProjectConfiguration,
   workspaceRoot,
   writeJson,
-} from '@nx/devkit';
-import { forEachExecutorOptions } from '@nx/devkit/src/generators/executor-options-utils';
-import { Linter } from '@nx/eslint';
+} from '@titan/devkit';
+import { forEachExecutorOptions } from '@titan/devkit/src/generators/executor-options-utils';
+import { Linter } from '@titan/eslint';
 import { join, relative } from 'path';
 import {
   dedupe,
@@ -28,8 +28,8 @@ import {
 import { StorybookConfigureSchema } from '../schema';
 import { UiFramework } from '../../../utils/models';
 import { nxVersion } from '../../../utils/versions';
-import { findEslintFile } from '@nx/eslint/src/generators/utils/eslint-file';
-import { useFlatConfig } from '@nx/eslint/src/utils/flat-config';
+import { findEslintFile } from '@titan/eslint/src/generators/utils/eslint-file';
+import { useFlatConfig } from '@titan/eslint/src/utils/flat-config';
 
 const DEFAULT_PORT = 4400;
 
@@ -685,7 +685,7 @@ export async function getE2EProjectName(
   const graph = await createProjectGraphAsync();
   forEachExecutorOptions(
     tree,
-    '@nx/cypress:cypress',
+    '@titan/cypress:cypress',
     (options, projectName) => {
       if (e2eProject) {
         return;

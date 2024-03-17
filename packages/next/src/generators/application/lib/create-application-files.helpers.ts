@@ -356,9 +356,9 @@ export function createAppJsx(name: string) {
             </summary>
             <pre>
               <span># Generate UI lib</span>
-              nx g @nx/next:library ui
+              nx g @titan/next:library ui
               <span># Add a component</span>
-              nx g @nx/next:component ui/src/lib/button
+              nx g @titan/next:component ui/src/lib/button
             </pre>
           </details>
           <details>

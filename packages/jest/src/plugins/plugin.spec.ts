@@ -1,10 +1,10 @@
-import { CreateNodesContext } from '@nx/devkit';
+import { CreateNodesContext } from '@titan/devkit';
 import { join } from 'path';
 
 import { createNodes } from './plugin';
 import { TempFs } from 'nx/src/internal-testing-utils/temp-fs';
 
-describe('@nx/jest/plugin', () => {
+describe('@titan/jest/plugin', () => {
   let createNodesFunction = createNodes[1];
   let context: CreateNodesContext;
   let tempFs: TempFs;

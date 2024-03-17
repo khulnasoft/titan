@@ -1,5 +1,5 @@
-import type { Tree } from '@nx/devkit';
-import { getProjects, updateProjectConfiguration } from '@nx/devkit';
+import type { Tree } from '@titan/devkit';
+import { getProjects, updateProjectConfiguration } from '@titan/devkit';
 
 export default function renameWebpackServer(tree: Tree) {
   const projects = getProjects(tree);

@@ -5,9 +5,9 @@ import {
   joinPathFragments,
   Tree,
   updateJson,
-} from '@nx/devkit';
-import { forEachExecutorOptionsInGraph } from '@nx/devkit/src/generators/executor-options-utils';
-import type { JestExecutorOptions } from '@nx/jest/src/executors/jest/schema';
+} from '@titan/devkit';
+import { forEachExecutorOptionsInGraph } from '@titan/devkit/src/generators/executor-options-utils';
+import type { JestExecutorOptions } from '@titan/jest/src/executors/jest/schema';
 
 export async function updateTestingTsconfigForJest(tree: Tree) {
   const graph = await createProjectGraphAsync();

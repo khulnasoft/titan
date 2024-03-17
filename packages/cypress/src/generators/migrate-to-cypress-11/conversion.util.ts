@@ -7,7 +7,7 @@ import {
   updateJson,
   visitNotIgnoredFiles,
   normalizePath,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { basename, dirname, extname, relative } from 'path';
 import type { StringLiteral } from 'typescript';
 import { ensureTypescript } from '@nx/js/src/utils/typescript/ensure-typescript';
@@ -324,7 +324,7 @@ export function writeNewConfig(
     cypressConfigPathTs,
     stripIndents`
 import { defineConfig } from 'cypress'
-import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
+import { nxE2EPreset } from '@titan/cypress/plugins/cypress-preset';
 ${pluginImport}
 
 const cypressJsonConfig = ${convertedConfig}

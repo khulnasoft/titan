@@ -61,7 +61,7 @@
     }
   },
   "dependencies": {
-    "@nx/devkit": "file:../devkit",
+    "@titan/devkit": "file:../devkit",
     "chalk": "^4.1.0",
     "enquirer": "~2.3.6",
     "tslib": "^2.3.0",

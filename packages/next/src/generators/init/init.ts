@@ -5,8 +5,8 @@ import {
   type GeneratorCallback,
   type Tree,
   readNxJson,
-} from '@nx/devkit';
-import { updatePackageScripts } from '@nx/devkit/src/utils/update-package-scripts';
+} from '@titan/devkit';
+import { updatePackageScripts } from '@titan/devkit/src/utils/update-package-scripts';
 import { reactDomVersion, reactVersion } from '@nx/react/src/utils/versions';
 import { addGitIgnoreEntry } from '../../utils/add-gitignore-entry';
 import { nextVersion, nxVersion } from '../../utils/versions';
@@ -16,7 +16,7 @@ import type { InitSchema } from './schema';
 function updateDependencies(host: Tree, schema: InitSchema) {
   const tasks: GeneratorCallback[] = [];
 
-  tasks.push(removeDependenciesFromPackageJson(host, ['@nx/next'], []));
+  tasks.push(removeDependenciesFromPackageJson(host, ['@titan/next'], []));
 
   tasks.push(
     addDependenciesToPackageJson(
@@ -27,7 +27,7 @@ function updateDependencies(host: Tree, schema: InitSchema) {
         'react-dom': reactDomVersion,
       },
       {
-        '@nx/next': nxVersion,
+        '@titan/next': nxVersion,
       },
       undefined,
       schema.keepExistingVersions

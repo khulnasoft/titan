@@ -1,12 +1,12 @@
 import { Tree } from 'nx/src/generators/tree';
-import { lintProjectGenerator, Linter } from '@nx/eslint';
+import { lintProjectGenerator, Linter } from '@titan/eslint';
 import { joinPathFragments } from 'nx/src/utils/path';
 import {
   GeneratorCallback,
   addDependenciesToPackageJson,
   runTasksInSerial,
   updateJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { editEslintConfigFiles } from '@nx/vue';
 import { nuxtEslintConfigVersion } from './versions';
 

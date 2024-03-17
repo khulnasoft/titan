@@ -1,4 +1,4 @@
-import { Tree, addProjectConfiguration } from '@nx/devkit';
+import { Tree, addProjectConfiguration } from '@titan/devkit';
 import { createTreeWithEmptyWorkspace } from 'nx/src/devkit-testing-exports';
 import addTypings from './update-16-7-0-add-typings';
 

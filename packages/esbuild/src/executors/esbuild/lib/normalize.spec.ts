@@ -1,5 +1,5 @@
 import { normalizeOptions } from './normalize';
-import { ExecutorContext } from '@nx/devkit';
+import { ExecutorContext } from '@titan/devkit';
 
 describe('normalizeOptions', () => {
   const context: ExecutorContext = {

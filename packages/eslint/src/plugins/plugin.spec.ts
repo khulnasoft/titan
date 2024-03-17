@@ -13,12 +13,12 @@ jest.mock(
   }
 );
 
-import { CreateNodesContext } from '@nx/devkit';
+import { CreateNodesContext } from '@titan/devkit';
 import { vol } from 'memfs';
 import { minimatch } from 'minimatch';
 import { createNodes } from './plugin';
 
-describe('@nx/eslint/plugin', () => {
+describe('@titan/eslint/plugin', () => {
   let context: CreateNodesContext;
 
   beforeEach(async () => {

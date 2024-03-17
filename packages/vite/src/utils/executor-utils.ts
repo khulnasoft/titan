@@ -1,7 +1,7 @@
 import { printDiagnostics, runTypeCheck } from '@nx/js';
 import { join } from 'path';
 import { ViteBuildExecutorOptions } from '../executors/build/schema';
-import { ExecutorContext } from '@nx/devkit';
+import { ExecutorContext } from '@titan/devkit';
 import { ViteDevServerExecutorOptions } from '../executors/dev-server/schema';
 import {
   calculateProjectBuildableDependencies,

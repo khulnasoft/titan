@@ -1,5 +1,5 @@
-import { Tree } from '@nx/devkit';
-import { determineProjectNameAndRootOptions } from '@nx/devkit/src/generators/project-name-and-root-utils';
+import { Tree } from '@titan/devkit';
+import { determineProjectNameAndRootOptions } from '@titan/devkit/src/generators/project-name-and-root-utils';
 import { CreatePackageSchema } from '../schema';
 
 export interface NormalizedSchema extends CreatePackageSchema {

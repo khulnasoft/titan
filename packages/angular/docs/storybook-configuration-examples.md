@@ -1,7 +1,7 @@
 This generator will set up Storybook for your **Angular** project. By default, starting Nx 16, Storybook v7 is used.
 
 ```bash
-nx g @nx/angular:storybook-configuration project-name
+nx g @titan/angular:storybook-configuration project-name
 ```
 
 You can read more about how this generator works, in the [Storybook for Angular overview page](/recipes/storybook/overview-angular#generate-storybook-configuration-for-an-angular-project).
@@ -23,7 +23,7 @@ There are a number of other options available. Let's take a look at some example
 ### Generate Storybook configuration
 
 ```bash
-nx g @nx/angular:storybook-configuration ui
+nx g @titan/angular:storybook-configuration ui
 ```
 
 This will generate Storybook configuration for the `ui` project using TypeScript for the Storybook configuration files (the files inside the `.storybook` directory, eg. `.storybook/main.ts`).
@@ -31,7 +31,7 @@ This will generate Storybook configuration for the `ui` project using TypeScript
 ### Ignore certain paths when generating stories
 
 ```bash
-nx g @nx/angular:storybook-configuration ui --generateStories=true --ignorePaths=libs/ui/src/not-stories/**,**/**/src/**/*.other.*,apps/my-app/**/*.something.ts
+nx g @titan/angular:storybook-configuration ui --generateStories=true --ignorePaths=libs/ui/src/not-stories/**,**/**/src/**/*.other.*,apps/my-app/**/*.something.ts
 ```
 
 This will generate a Storybook configuration for the `ui` project and generate stories for all components in the `libs/ui/src/lib` directory, except for the ones in the `libs/ui/src/not-stories` directory, and the ones in the `apps/my-app` directory that end with `.something.ts`, and also for components that their file name is of the pattern `*.other.*`.
@@ -49,7 +49,7 @@ but you can change this behaviour easily, as explained above.
 ### Generate Storybook configuration using JavaScript
 
 ```bash
-nx g @nx/angular:storybook-configuration ui --tsConfiguration=false
+nx g @titan/angular:storybook-configuration ui --tsConfiguration=false
 ```
 
 By default, our generator generates TypeScript Storybook configuration files. You can choose to use JavaScript for the Storybook configuration files of your project (the files inside the `.storybook` directory, eg. `.storybook/main.js`).

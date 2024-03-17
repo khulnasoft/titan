@@ -4,7 +4,7 @@ import {
   readJson,
   Tree,
   writeJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 export default function update(tree: Tree) {
   const projects = getProjects(tree);

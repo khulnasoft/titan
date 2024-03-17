@@ -1,5 +1,5 @@
-import type { ProjectConfiguration, Tree } from '@nx/devkit';
-import { formatFiles, joinPathFragments } from '@nx/devkit';
+import type { ProjectConfiguration, Tree } from '@titan/devkit';
+import { formatFiles, joinPathFragments } from '@titan/devkit';
 import { ensureTypescript } from '@nx/js/src/utils/typescript/ensure-typescript';
 import { dirname, relative, resolve } from 'path';
 import type { Identifier, Node, SourceFile, StringLiteral } from 'typescript';

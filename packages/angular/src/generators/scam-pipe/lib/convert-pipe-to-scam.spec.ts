@@ -1,5 +1,5 @@
-import { addProjectConfiguration } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { addProjectConfiguration } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { pipeGenerator } from '../../pipe/pipe';
 import { convertPipeToScam } from './convert-pipe-to-scam';
 

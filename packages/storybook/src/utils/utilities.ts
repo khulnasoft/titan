@@ -3,7 +3,7 @@ import {
   Tree,
   readNxJson,
   updateNxJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { CompilerOptions } from 'typescript';
 import { statSync } from 'fs';
 import { findNodes } from '@nx/js';
@@ -131,11 +131,11 @@ export function findStorybookAndBuildTargetsAndCompiler(targets: {
     '@nx/webpack:webpack',
     '@nx/rollup:rollup',
     '@nx/vite:build',
-    '@nx/angular:ng-packagr-lite',
-    '@nx/angular:package',
-    '@nx/angular:webpack-browser',
-    '@nx/esbuild:esbuild',
-    '@nx/next:build',
+    '@titan/angular:ng-packagr-lite',
+    '@titan/angular:package',
+    '@titan/angular:webpack-browser',
+    '@titan/esbuild:esbuild',
+    '@titan/next:build',
     '@nrwl/js:babel',
     '@nrwl/js:swc',
     '@nrwl/js:tsc',
@@ -163,10 +163,10 @@ export function findStorybookAndBuildTargetsAndCompiler(targets: {
         targets[target].executor === '@angular-devkit/build-angular:application'
       ) {
         /**
-         * Not looking for '@nx/angular:ng-packagr-lite' or any other
-         * @nx/angular:* executors.
+         * Not looking for '@titan/angular:ng-packagr-lite' or any other
+         * @titan/angular:* executors.
          * Only looking for '@angular-devkit/build-angular:browser'
-         * because the '@nx/angular:ng-packagr-lite' executor
+         * because the '@titan/angular:ng-packagr-lite' executor
          * (and maybe the other custom executors)
          * does not support styles and extra options, so the user
          * will be forced to switch to build-storybook to add extra options.

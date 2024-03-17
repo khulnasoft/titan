@@ -4,8 +4,8 @@ import {
   getProjects,
   joinPathFragments,
   logger,
-} from '@nx/devkit';
-import { forEachExecutorOptions } from '@nx/devkit/src/generators/executor-options-utils';
+} from '@titan/devkit';
+import { forEachExecutorOptions } from '@titan/devkit/src/generators/executor-options-utils';
 import { ViteBuildExecutorOptions } from '../../executors/build/schema';
 import { updateBuildOutDirAndRoot } from './lib/edit-build-config';
 import { updateTestConfig } from './lib/edit-test-config';

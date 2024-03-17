@@ -4,7 +4,7 @@ import {
   getPackageManagerVersion,
   isWorkspacesEnabled,
   output,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { execSync } from 'child_process';
 import { daemonClient } from 'nx/src/daemon/client/client';
 // eslint-disable-next-line @typescript-eslint/no-restricted-imports

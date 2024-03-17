@@ -1,1 +1,1 @@
-module.exports = require('@nx/jest/plugins/resolver');
+module.exports = require('@titan/jest/plugins/resolver');

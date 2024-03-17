@@ -1,5 +1,5 @@
 import * as ts from 'typescript';
-import { ExecutorContext } from '@nx/devkit';
+import { ExecutorContext } from '@titan/devkit';
 import type { TypeScriptCompilationOptions } from '@nx/workspace/src/utilities/typescript/compilation';
 import { CopyAssetsHandler } from '../../utils/assets/copy-assets-handler';
 import { checkDependencies } from '../../utils/check-dependencies';

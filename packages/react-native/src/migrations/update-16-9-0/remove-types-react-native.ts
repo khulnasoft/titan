@@ -2,7 +2,7 @@ import {
   formatFiles,
   removeDependenciesFromPackageJson,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 /**
  * Remove @types/react-native package since it is no longer required. It would be a part of react native package.

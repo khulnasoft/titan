@@ -63,8 +63,8 @@ nx g @nx/react:remote about --host=shell
 {% tab label="Angular" %}
 
 ```shell
-nx g @nx/angular:host shell --remotes=shop,cart
-nx g @nx/angular:remote about --host=shell
+nx g @titan/angular:host shell --remotes=shop,cart
+nx g @titan/angular:remote about --host=shell
 ```
 
 {% /tab %}

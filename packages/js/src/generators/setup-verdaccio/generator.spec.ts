@@ -1,5 +1,5 @@
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
-import { Tree, readJson, updateJson } from '@nx/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
+import { Tree, readJson, updateJson } from '@titan/devkit';
 
 import generator from './generator';
 import { SetupVerdaccioGeneratorSchema } from './schema';

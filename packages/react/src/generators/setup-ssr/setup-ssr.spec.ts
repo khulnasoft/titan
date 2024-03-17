@@ -1,18 +1,18 @@
-import * as devkit from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import * as devkit from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import {
   joinPathFragments,
   ProjectGraph,
   readCachedProjectGraph,
   readJson,
   Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import applicationGenerator from '../application/application';
 import setupSsrGenerator from './setup-ssr';
-import { Linter } from '@nx/eslint';
+import { Linter } from '@titan/eslint';
 
-jest.mock('@nx/devkit', () => {
-  const original = jest.requireActual('@nx/devkit');
+jest.mock('@titan/devkit', () => {
+  const original = jest.requireActual('@titan/devkit');
   return {
     ...original,
     readCachedProjectGraph: jest.fn().mockImplementation(

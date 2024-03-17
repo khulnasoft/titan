@@ -6,7 +6,7 @@ import {
   ProjectGraphProjectNode,
   readJsonFile,
   workspaceRoot,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { findProject, getSourceFilePath } from '../utils/runtime-lint-utils';
 import { existsSync } from 'fs';
 import { registerTsProject } from '@nx/js/src/internal';

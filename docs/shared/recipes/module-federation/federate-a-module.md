@@ -53,7 +53,7 @@ nx generate @nx/react:federate-module hello/src/index.ts --name=hello --remote=g
 {%tab label="Angular"%}
 
 ```shell
-nx generate @nx/angular:federate-module hello/src/index.ts --name=hello --remote=greeting --projectNameAndRootFormat=as-provided
+nx generate @titan/angular:federate-module hello/src/index.ts --name=hello --remote=greeting --projectNameAndRootFormat=as-provided
 ```
 
 {% /tab %}

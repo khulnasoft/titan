@@ -1,4 +1,4 @@
-import { applyChangesToString, ChangeType, Tree } from '@nx/devkit';
+import { applyChangesToString, ChangeType, Tree } from '@titan/devkit';
 import type {
   __String,
   CallExpression,

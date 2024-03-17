@@ -1,6 +1,6 @@
-## @nrwl/esbuild has been renamed to @nx/esbuild!
+## @nrwl/esbuild has been renamed to @titan/esbuild!
 
-@nrwl/esbuild has been renamed to [@nx/esbuild](https://www.npmjs.com/package/@nx/esbuild). Please use that instead.
+@nrwl/esbuild has been renamed to [@titan/esbuild](https://www.npmjs.com/package/@titan/esbuild). Please use that instead.
 
 [Read more here](https://nx.dev/recipes/other/rescope)
 

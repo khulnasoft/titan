@@ -5,8 +5,8 @@ import {
   readNxJson,
   Tree,
   updateNxJson,
-} from '@nx/devkit';
-import { updatePackageScripts } from '@nx/devkit/src/utils/update-package-scripts';
+} from '@titan/devkit';
+import { updatePackageScripts } from '@titan/devkit/src/utils/update-package-scripts';
 import { createNodes, WebpackPluginOptions } from '../../plugins/plugin';
 import { nxVersion, webpackCliVersion } from '../../utils/versions';
 import { Schema } from './schema';

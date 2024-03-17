@@ -1,5 +1,5 @@
-import { readJson, writeJson, type Tree } from '@nx/devkit';
-import { createTreeWithEmptyWorkspace } from '@nx/devkit/testing';
+import { readJson, writeJson, type Tree } from '@titan/devkit';
+import { createTreeWithEmptyWorkspace } from '@titan/devkit/testing';
 import { updateVsCodeRecommendedExtensions } from './update-vscode-recommended-extensions';
 
 describe('updateVsCodeRecommendedExtensions', () => {

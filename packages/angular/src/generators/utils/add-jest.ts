@@ -1,4 +1,4 @@
-import { ensurePackage, joinPathFragments, type Tree } from '@nx/devkit';
+import { ensurePackage, joinPathFragments, type Tree } from '@titan/devkit';
 import { jestPresetAngularVersion, nxVersion } from '../../utils/versions';
 import { addDependenciesToPackageJsonIfDontExist } from './version-utils';
 
@@ -23,8 +23,8 @@ export async function addJest(
     );
   }
 
-  const { configurationGenerator } = ensurePackage<typeof import('@nx/jest')>(
-    '@nx/jest',
+  const { configurationGenerator } = ensurePackage<typeof import('@titan/jest')>(
+    '@titan/jest',
     nxVersion
   );
   await configurationGenerator(tree, {

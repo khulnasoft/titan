@@ -5,7 +5,7 @@ import {
   runTasksInSerial,
   type GeneratorCallback,
   type Tree,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { nxVersion, reactDomVersion, reactVersion } from '../../utils/versions';
 import { InitSchema } from './schema';
 

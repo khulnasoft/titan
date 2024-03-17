@@ -1,5 +1,5 @@
 import { NormalizedSchema } from './normalize-options';
-import { Tree } from '@nx/devkit';
+import { Tree } from '@titan/devkit';
 
 export function updateJestConfig(host: Tree, options: NormalizedSchema) {
   if (options.unitTestRunner !== 'jest') {
@@ -15,6 +15,6 @@ export function updateJestConfig(host: Tree, options: NormalizedSchema) {
       'transform: {',
       "transform: {\n    '^(?!.*\\\\.(js|jsx|ts|tsx|css|json)$)': '@nx/react/plugins/jest',"
     )
-    .replace(`'babel-jest'`, `['babel-jest', { presets: ['@nx/next/babel'] }]`);
+    .replace(`'babel-jest'`, `['babel-jest', { presets: ['@titan/next/babel'] }]`);
   host.write(configPath, content);
 }

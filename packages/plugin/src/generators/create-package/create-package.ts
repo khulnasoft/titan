@@ -11,7 +11,7 @@ import {
   Tree,
   updateJson,
   updateProjectConfiguration,
-} from '@nx/devkit';
+} from '@titan/devkit';
 import { libraryGenerator as jsLibraryGenerator } from '@nx/js';
 import { nxVersion } from 'nx/src/utils/versions';
 import generatorGenerator from '../generator/generator';

@@ -1,5 +1,5 @@
-import type { GeneratorCallback, Tree } from '@nx/devkit';
-import { formatFiles } from '@nx/devkit';
+import type { GeneratorCallback, Tree } from '@titan/devkit';
+import { formatFiles } from '@titan/devkit';
 import {
   addExportsToBarrel,
   addImportsToModule,

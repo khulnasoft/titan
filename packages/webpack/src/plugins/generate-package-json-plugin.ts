@@ -11,7 +11,7 @@ import {
   detectPackageManager,
   type ProjectGraph,
   serializeJson,
-} from '@nx/devkit';
+} from '@titan/devkit';
 
 const pluginName = 'GeneratePackageJsonPlugin';
 

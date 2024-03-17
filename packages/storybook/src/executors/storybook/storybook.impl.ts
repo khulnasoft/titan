@@ -1,4 +1,4 @@
-import { ExecutorContext } from '@nx/devkit';
+import { ExecutorContext } from '@titan/devkit';
 import * as build from '@storybook/core-server';
 import {
   pleaseUpgrade,

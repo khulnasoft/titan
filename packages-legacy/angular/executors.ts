@@ -1,1 +1,1 @@
-export * from '@nx/angular/executors';
+export * from '@titan/angular/executors';

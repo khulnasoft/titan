@@ -1,7 +1,7 @@
 import { existsSync } from 'fs';
 import { ParsedCommandLine } from 'typescript';
 import { dirname, join } from 'path';
-import { workspaceRoot } from '@nx/devkit';
+import { workspaceRoot } from '@titan/devkit';
 
 let tsConfig: Map<string, ParsedCommandLine> = new Map();
 let tsPathMappings: Map<string, ParsedCommandLine['options']['paths']> =

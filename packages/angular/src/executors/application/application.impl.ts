@@ -1,4 +1,4 @@
-import type { ExecutorContext } from '@nx/devkit';
+import type { ExecutorContext } from '@titan/devkit';
 import type { DependentBuildableProjectNode } from '@nx/js/src/utils/buildable-libs-utils';
 import { createBuilderContext } from 'nx/src/adapter/ngcli-adapter';
 import { gte } from 'semver';
